@@ -7,6 +7,7 @@ from ingestion.parsers.bgsaxo_positions import BGSaxoPositionsParser, parse_bgsa
 try:
     from ingestion.parsers.bgsaxo_transactions import BGSaxoTransactionsPDFParser, parse_bgsaxo_transactions_pdf
     from ingestion.parsers.scalable_capital import ScalableCapitalPDFParser, parse_scalable_pdf, parse_all_scalable_pdfs
+    from ingestion.parsers.revolut import RevolutPDFParser, parse_revolut_pdf
     PDF_PARSING_AVAILABLE = True
 except ImportError:
     PDF_PARSING_AVAILABLE = False
@@ -19,5 +20,7 @@ __all__ = [
     'ScalableCapitalPDFParser',
     'parse_scalable_pdf',
     'parse_all_scalable_pdfs',
+    'RevolutPDFParser',
+    'parse_revolut_pdf',
     'PDF_PARSING_AVAILABLE',
 ]
