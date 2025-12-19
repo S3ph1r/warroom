@@ -10,6 +10,7 @@ try:
     from ingestion.parsers.revolut import RevolutPDFParser, parse_revolut_pdf
     from ingestion.parsers.traderepublic import TradeRepublicPDFParser, parse_trade_republic_pdf
     from ingestion.parsers.ibkr import IBKRCSVParser, parse_ibkr_csv
+    from ingestion.parsers.binance import BinanceCSVParser, parse_binance_csv, parse_all_binance_csvs
     PDF_PARSING_AVAILABLE = True
 except ImportError:
     PDF_PARSING_AVAILABLE = False
@@ -28,5 +29,8 @@ __all__ = [
     'parse_trade_republic_pdf',
     'IBKRCSVParser',
     'parse_ibkr_csv',
+    'BinanceCSVParser',
+    'parse_binance_csv',
+    'parse_all_binance_csvs',
     'PDF_PARSING_AVAILABLE',
 ]
