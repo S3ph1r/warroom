@@ -1,0 +1,58 @@
+# =============================================
+# WAR ROOM - Docker Compose Configuration
+# =============================================
+# Run with: docker-compose up -d
+# =============================================
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:16-alpine
+    container_name: warroom-postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-warroom_db}
+      POSTGRES_USER: ${POSTGRES_USER:-warroom}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-warroom_dev_password}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-warroom}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Ollama - Local AI Engine
+  ollama:
+    image: ollama/ollama:latest
+    container_name: warroom-ollama
+    volumes:
+      - ollama_models:/root/.ollama
+    ports:
+      - "11434:11434"
+    restart: unless-stopped
+    # Uncomment for GPU support (NVIDIA)
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+  # ChromaDB - Vector Database for RAG
+  chromadb:
+    image: chromadb/chroma:latest
+    container_name: warroom-chromadb
+    volumes:
+      - chroma_data:/chroma/chroma
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  ollama_models:
+  chroma_data:

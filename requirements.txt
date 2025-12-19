@@ -1,0 +1,58 @@
+# =============================================
+# WAR ROOM - Python Dependencies
+# =============================================
+
+# Core Framework
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+streamlit>=1.40.0
+
+# Database
+sqlalchemy>=2.0.36
+psycopg2-binary>=2.9.10
+alembic>=1.14.0
+
+# Data Processing
+pandas>=2.2.3
+numpy>=2.2.0
+
+# Financial Data
+yfinance>=0.2.50
+ccxt>=4.4.0
+
+# Intelligence & Scraping
+beautifulsoup4>=4.12.3
+feedparser>=6.0.11
+praw>=7.8.1
+pytrends>=4.9.3
+requests>=2.32.3
+
+# AI & ML
+chromadb>=0.5.23
+sentence-transformers>=3.3.1
+langchain>=0.3.13
+# Note: torch will be installed separately with CUDA support
+
+# Sentiment Analysis
+transformers>=4.47.0
+
+# Security & Auth
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+python-dotenv>=1.0.1
+
+# Telegram Bot
+python-telegram-bot>=21.9
+
+# Visualization
+plotly>=5.24.1
+
+# Utilities
+loguru>=0.7.3
+httpx>=0.28.1
+aiofiles>=24.1.0
+
+# Development & Testing
+pytest>=8.3.4
+pytest-asyncio>=0.24.0
+black>=24.10.0
