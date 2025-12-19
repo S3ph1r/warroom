@@ -113,36 +113,50 @@ class ScalableCapitalPDFParser:
             if line.startswith('Purchase') or line.startswith('Sale'):
                 operation = 'BUY' if 'Purchase' in line else 'SELL'
                 
-                # Next line should be product name
-                product_name = lines[i + 1].strip() if i + 1 < len(lines) else ''
+                # Format is:
+                # Purchase (or Sale)
+                # 62.27 -       <- amount
+                # IS MSCI BRAZ.U.ETF USD D   <- product name
+                # ISIN IE00B0M63516
+                # STK               3
                 
-                # Look for ISIN and quantity in following lines
+                amount = None
+                product_name = None
                 isin = None
                 quantity = None
-                amount = None
                 
-                for j in range(i, min(len(lines), i + 8)):
+                for j in range(i + 1, min(len(lines), i + 10)):
                     check_line = lines[j].strip()
+                    
+                    # Amount pattern (number followed by - for debit)
+                    if not amount:
+                        amount_match = re.match(r'^(\d+[.,]\d{2})\s*-?$', check_line)
+                        if amount_match:
+                            amount = self._parse_number(amount_match.group(1))
+                            continue
+                    
+                    # Product name (after amount, before ISIN)
+                    if amount and not product_name and not check_line.startswith('ISIN') and not check_line.startswith('STK'):
+                        if check_line and not re.match(r'^[\d.,\s-]+$', check_line) and 'Case No' not in check_line:
+                            product_name = check_line
+                            continue
                     
                     # ISIN pattern
                     isin_match = re.search(r'ISIN\s+([A-Z]{2}[A-Z0-9]{10})', check_line)
                     if isin_match:
                         isin = isin_match.group(1)
+                        continue
                     
                     # Quantity pattern (STK = Stück = pieces)
                     qty_match = re.search(r'STK\s+(\d+)', check_line)
                     if qty_match:
                         quantity = Decimal(qty_match.group(1))
-                    
-                    # Amount pattern (number followed by -)
-                    amount_match = re.search(r'(\d+[.,]\d{2})\s*-', check_line)
-                    if amount_match:
-                        amount = self._parse_number(amount_match.group(1))
+                        break  # We have all we need
                 
-                if product_name:
+                if product_name or isin:
                     transactions.append({
                         'timestamp': current_date,
-                        'product_name': product_name,
+                        'product_name': product_name or isin or 'Unknown',
                         'operation_type': operation,
                         'quantity': quantity or Decimal('1'),
                         'price_unit': (amount / quantity) if amount and quantity else Decimal('0'),
@@ -152,7 +166,7 @@ class ScalableCapitalPDFParser:
                         'status': 'VERIFIED',
                     })
                 
-                i += 5  # Skip parsed lines
+                i += 8  # Skip parsed lines
                 continue
             
             # Look for Dividend
