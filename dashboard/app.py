@@ -237,7 +237,7 @@ def main():
         df = df.sort_values("Value", ascending=False)
         
         # Display
-        display_cols = ["Broker", "Ticker", "Name", "Type", "Qty", "Value", "Source"]
+        display_cols = ["Ticker", "Name", "Type", "Broker", "Qty", "Value", "Source"]
         display_df = df[display_cols].copy()
         
         # Format

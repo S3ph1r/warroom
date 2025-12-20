@@ -46,7 +46,7 @@ class Holding(Base):
     purchase_date: Mapped[Optional[date]] = mapped_column(Date)  # First purchase date
     
     # Current valuation
-    current_price: Mapped[Optional[Decimal]] = mapped_column(DECIMAL(18, 8))
+    current_price: Mapped[Optional[Decimal]] = mapped_column(DECIMAL(18, 4))
     current_value: Mapped[Decimal] = mapped_column(DECIMAL(18, 2), nullable=False)  # quantity * current_price
     currency: Mapped[str] = mapped_column(String(3), default="EUR")
     
@@ -62,8 +62,9 @@ class Holding(Base):
     __table_args__ = (
         Index("idx_holdings_broker", "broker"),
         Index("idx_holdings_ticker", "ticker"),
-        Index("idx_holdings_broker_ticker", "broker", "ticker", unique=True),
+        Index("idx_holdings_broker_ticker", "broker", "ticker"),
     )
+
 
 
 # ============================================================
