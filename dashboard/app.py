@@ -1,11 +1,11 @@
 """
-🎯 WAR ROOM - Main Dashboard
+🎯 WAR ROOM - Main Dashboard v2
 Personal Investment Management System
+Uses the new holdings-based schema
 """
 import streamlit as st
 import pandas as pd
-from decimal import Decimal
-from datetime import datetime, date
+from datetime import datetime
 import plotly.express as px
 import plotly.graph_objects as go
 import sys
@@ -22,7 +22,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS for better styling
+# Custom CSS
 st.markdown("""
 <style>
     .main-header {
@@ -31,100 +31,62 @@ st.markdown("""
         color: #1f77b4;
         margin-bottom: 0.5rem;
     }
-    .metric-card {
-        background-color: #f0f2f6;
-        border-radius: 10px;
-        padding: 1rem;
+    .broker-card {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 15px;
+        padding: 1.5rem;
+        color: white;
+        margin-bottom: 1rem;
     }
     .positive { color: #28a745; }
     .negative { color: #dc3545; }
-    .broker-badge {
-        display: inline-block;
-        padding: 2px 8px;
-        border-radius: 12px;
-        font-size: 0.75rem;
-        margin: 2px;
-    }
 </style>
 """, unsafe_allow_html=True)
+
 
 # ============================================================
 # DATA FUNCTIONS
 # ============================================================
 
-@st.cache_data(ttl=300)
-def get_sample_portfolio_data():
-    """Return sample portfolio data for demonstration"""
-    return pd.DataFrame([
-        {"ticker": "AAPL", "name": "Apple Inc.", "quantity": 50, "avg_price": 150.00, "current_price": 178.50, "asset_class": "STOCK", "sector": "Technology", "platform": "Demo"},
-        {"ticker": "MSFT", "name": "Microsoft Corp.", "quantity": 30, "avg_price": 280.00, "current_price": 378.91, "asset_class": "STOCK", "sector": "Technology", "platform": "Demo"},
-        {"ticker": "GOOGL", "name": "Alphabet Inc.", "quantity": 20, "avg_price": 120.00, "current_price": 141.80, "asset_class": "STOCK", "sector": "Technology", "platform": "Demo"},
-        {"ticker": "BTC-USD", "name": "Bitcoin", "quantity": 0.5, "avg_price": 35000.00, "current_price": 42500.00, "asset_class": "CRYPTO", "sector": "Crypto", "platform": "Demo"},
-        {"ticker": "ETH-USD", "name": "Ethereum", "quantity": 3.0, "avg_price": 2000.00, "current_price": 2250.00, "asset_class": "CRYPTO", "sector": "Crypto", "platform": "Demo"},
-        {"ticker": "VWCE.DE", "name": "Vanguard FTSE All-World", "quantity": 100, "avg_price": 95.00, "current_price": 108.50, "asset_class": "ETF", "sector": "Global", "platform": "Demo"},
-    ])
-
-
 @st.cache_data(ttl=60)
-def get_real_portfolio_data():
-    """Get real portfolio data from database"""
+def get_portfolio_data():
+    """Get portfolio data from new holdings table."""
     try:
-        from services.portfolio_service import PortfolioService
+        from services.portfolio_service import get_portfolio_summary, get_all_holdings
         
-        service = PortfolioService()
-        if not service.connect():
-            return None
+        summary = get_portfolio_summary()
+        holdings = get_all_holdings()
         
-        try:
-            summary = service.get_portfolio_summary()
-            return summary
-        finally:
-            service.close()
+        return {
+            "summary": summary,
+            "holdings": holdings
+        }
     except Exception as e:
         st.error(f"Database error: {e}")
         return None
 
 
-def calculate_portfolio_metrics(df: pd.DataFrame) -> dict:
-    """Calculate portfolio KPIs from holdings dataframe"""
-    df = df.copy()
-    df["invested"] = df["quantity"] * df["avg_price"]
-    df["current_value"] = df["quantity"] * df["current_price"]
-    df["pnl"] = df["current_value"] - df["invested"]
-    df["pnl_pct"] = (df["pnl"] / df["invested"]) * 100
+def get_holdings_dataframe(holdings: list) -> pd.DataFrame:
+    """Convert holdings list to DataFrame."""
+    if not holdings:
+        return pd.DataFrame()
     
-    total_invested = df["invested"].sum()
-    total_value = df["current_value"].sum()
-    total_pnl = df["pnl"].sum()
-    pnl_pct = (total_pnl / total_invested) * 100 if total_invested > 0 else 0
+    df = pd.DataFrame(holdings)
     
-    return {
-        "total_invested": total_invested,
-        "total_value": total_value,
-        "total_pnl": total_pnl,
-        "pnl_pct": pnl_pct,
-        "positions": len(df),
-        "df": df
-    }
-
-
-def classify_asset(ticker: str) -> tuple:
-    """Classify asset by ticker into asset_class and sector"""
-    ticker_upper = ticker.upper()
+    # Rename columns for display
+    df = df.rename(columns={
+        "broker": "Broker",
+        "ticker": "Ticker",
+        "name": "Name",
+        "asset_type": "Type",
+        "quantity": "Qty",
+        "current_price": "Price",
+        "current_value": "Value",
+        "currency": "Currency",
+        "source_document": "Source"
+    })
     
-    # Crypto patterns
-    crypto_tokens = ['BTC', 'ETH', 'SOL', 'USDT', 'USDC', 'BNB', 'XRP', 'DOT', 'IOTA', 
-                     'ENA', 'FET', 'MATIC', 'MANA', 'SAND', 'GALA', 'XLM', 'ADA',
-                     'HMSTR', 'TON', 'DOGS', 'NOT', 'CATI', 'BB', 'LISTA']
-    if any(token in ticker_upper for token in crypto_tokens):
-        return 'CRYPTO', 'Crypto'
-    
-    # ETF patterns
-    if 'ETF' in ticker_upper or ticker_upper.endswith('.DE') or 'VWCE' in ticker_upper:
-        return 'ETF', 'Global'
-    
-    # Default to stock
-    return 'STOCK', 'Equity'
+    return df
 
 
 # ============================================================
@@ -137,64 +99,16 @@ def main():
     st.caption("Personal Investment Management System")
     st.divider()
     
-    # Sidebar - Data Source Selection
-    with st.sidebar:
-        st.header("⚙️ Settings")
-        
-        st.subheader("🔄 Data Source")
-        data_source = st.radio(
-            "Select source:",
-            ["Live Database", "Demo Data"],
-            index=0
-        )
-        
-        st.divider()
+    # Load data
+    with st.spinner("Loading portfolio data..."):
+        data = get_portfolio_data()
     
-    # Load data based on selection
-    if data_source == "Live Database":
-        with st.spinner("Loading data from database..."):
-            db_data = get_real_portfolio_data()
-        
-        if db_data and db_data.get('holdings'):
-            # Convert holdings to DataFrame
-            holdings_list = []
-            for h in db_data['holdings']:
-                asset_class, sector = classify_asset(h['ticker'])
-                holdings_list.append({
-                    "ticker": h['ticker'],
-                    "name": h['ticker'],  # Could enhance with asset registry
-                    "quantity": h['quantity'],
-                    "avg_price": h['avg_price'],
-                    "current_price": h['avg_price'],  # TODO: Fetch live prices
-                    "asset_class": asset_class,
-                    "sector": sector,
-                    "platform": ', '.join(h['platforms']) if h['platforms'] else 'Unknown'
-                })
-            
-            if holdings_list:
-                portfolio_df = pd.DataFrame(holdings_list)
-                metrics = calculate_portfolio_metrics(portfolio_df)
-                
-                # Add database stats
-                metrics['db_stats'] = {
-                    'total_transactions': db_data.get('total_transactions', 0),
-                    'by_platform': db_data.get('transactions_by_platform', {}),
-                    'by_type': db_data.get('transactions_by_type', {}),
-                    'first_tx': db_data.get('first_transaction'),
-                    'last_tx': db_data.get('last_transaction'),
-                    'total_dividends': db_data.get('total_dividends', 0),
-                }
-            else:
-                st.warning("⚠️ No holdings found in database. Run import first.")
-                portfolio_df = get_sample_portfolio_data()
-                metrics = calculate_portfolio_metrics(portfolio_df)
-        else:
-            st.warning("⚠️ Cannot connect to database or no data. Showing demo data.")
-            portfolio_df = get_sample_portfolio_data()
-            metrics = calculate_portfolio_metrics(portfolio_df)
-    else:
-        portfolio_df = get_sample_portfolio_data()
-        metrics = calculate_portfolio_metrics(portfolio_df)
+    if not data:
+        st.error("❌ Failed to load portfolio data. Check database connection.")
+        return
+    
+    summary = data["summary"]
+    holdings = data["holdings"]
     
     # ==================== KPI CARDS ====================
     st.subheader("📊 Portfolio Overview")
@@ -204,64 +118,50 @@ def main():
     with col1:
         st.metric(
             label="💰 Net Worth",
-            value=f"€{metrics['total_value']:,.2f}",
-            delta=f"{metrics['pnl_pct']:.2f}%"
+            value=f"€{summary['total_value']:,.2f}"
         )
     
     with col2:
         st.metric(
-            label="📥 Total Invested",
-            value=f"€{metrics['total_invested']:,.2f}"
+            label="📈 Holdings",
+            value=f"{summary['holdings_count']}"
         )
     
     with col3:
-        delta_color = "normal" if metrics['total_pnl'] >= 0 else "inverse"
         st.metric(
-            label="📊 Total P&L",
-            value=f"€{metrics['total_pnl']:,.2f}",
-            delta=f"{metrics['pnl_pct']:.2f}%",
-            delta_color=delta_color
+            label="🏦 Brokers",
+            value=f"{summary['brokers_count']}"
         )
     
     with col4:
-        st.metric(
-            label="📈 Positions",
-            value=f"{metrics['positions']}"
-        )
+        # Top asset type
+        if summary.get('by_asset_type'):
+            top_type = max(summary['by_asset_type'], key=summary['by_asset_type'].get)
+            top_value = summary['by_asset_type'][top_type]
+            st.metric(
+                label=f"📊 Top: {top_type}",
+                value=f"€{top_value:,.2f}"
+            )
     
-    # Show database stats if available
-    if 'db_stats' in metrics:
-        st.divider()
-        st.subheader("📈 Transaction Statistics")
+    st.divider()
+    
+    # ==================== BROKER BREAKDOWN ====================
+    st.subheader("🏦 Portfolio by Broker")
+    
+    broker_data = summary.get('by_broker', {})
+    if broker_data:
+        # Sort by value
+        sorted_brokers = sorted(broker_data.items(), key=lambda x: x[1], reverse=True)
         
-        col_a, col_b, col_c, col_d = st.columns(4)
-        
-        with col_a:
-            st.metric("Total Transactions", f"{metrics['db_stats']['total_transactions']:,}")
-        
-        with col_b:
-            st.metric("Total Dividends", f"€{metrics['db_stats']['total_dividends']:,.2f}")
-        
-        with col_c:
-            if metrics['db_stats']['first_tx']:
-                st.metric("First Transaction", metrics['db_stats']['first_tx'].strftime('%Y-%m-%d'))
-        
-        with col_d:
-            if metrics['db_stats']['last_tx']:
-                st.metric("Last Transaction", metrics['db_stats']['last_tx'].strftime('%Y-%m-%d'))
-        
-        # Platform breakdown
-        if metrics['db_stats']['by_platform']:
-            st.subheader("🏦 Transactions by Platform")
-            platform_df = pd.DataFrame([
-                {'Platform': k, 'Transactions': v} 
-                for k, v in metrics['db_stats']['by_platform'].items()
-            ])
-            
-            fig = px.pie(platform_df, values='Transactions', names='Platform', 
-                        hole=0.4, color_discrete_sequence=px.colors.qualitative.Set2)
-            fig.update_layout(margin=dict(t=0, l=0, r=0, b=0), height=300)
-            st.plotly_chart(fig, use_container_width=True)
+        cols = st.columns(len(sorted_brokers))
+        for i, (broker, value) in enumerate(sorted_brokers):
+            with cols[i]:
+                pct = (value / summary['total_value'] * 100) if summary['total_value'] > 0 else 0
+                st.metric(
+                    label=broker.replace("_", " "),
+                    value=f"€{value:,.2f}",
+                    delta=f"{pct:.1f}%"
+                )
     
     st.divider()
     
@@ -269,80 +169,102 @@ def main():
     col_chart1, col_chart2 = st.columns(2)
     
     with col_chart1:
-        st.subheader("🎯 Asset Allocation")
+        st.subheader("🎯 Allocation by Broker")
         
-        # Sunburst chart
-        allocation_df = metrics["df"].copy()
-        allocation_df["value"] = allocation_df["current_value"]
-        
-        fig = px.sunburst(
-            allocation_df,
-            path=["asset_class", "sector", "ticker"],
-            values="value",
-            color="pnl_pct",
-            color_continuous_scale="RdYlGn",
-            color_continuous_midpoint=0
-        )
-        fig.update_layout(margin=dict(t=0, l=0, r=0, b=0), height=400)
-        st.plotly_chart(fig, use_container_width=True)
+        if broker_data:
+            broker_df = pd.DataFrame([
+                {"Broker": k.replace("_", " "), "Value": v}
+                for k, v in broker_data.items()
+            ])
+            
+            fig = px.pie(
+                broker_df,
+                values="Value",
+                names="Broker",
+                hole=0.4,
+                color_discrete_sequence=px.colors.qualitative.Set2
+            )
+            fig.update_layout(margin=dict(t=0, l=0, r=0, b=0), height=350)
+            st.plotly_chart(fig, use_container_width=True)
     
     with col_chart2:
-        st.subheader("📊 Holdings by Value")
+        st.subheader("📊 Allocation by Asset Type")
         
-        # Bar chart for holdings by value
-        value_df = metrics["df"].sort_values("current_value", ascending=True).tail(15)
-        
-        fig = go.Figure(go.Bar(
-            x=value_df['current_value'],
-            y=value_df['ticker'],
-            orientation='h',
-            marker_color='#1f77b4',
-            text=[f"€{x:,.0f}" for x in value_df['current_value']],
-            textposition='outside'
-        ))
-        fig.update_layout(
-            margin=dict(t=0, l=0, r=0, b=0),
-            height=400,
-            xaxis_title="Value (€)",
-            yaxis_title=""
-        )
-        st.plotly_chart(fig, use_container_width=True)
+        type_data = summary.get('by_asset_type', {})
+        if type_data:
+            type_df = pd.DataFrame([
+                {"Type": k, "Value": v}
+                for k, v in type_data.items()
+            ])
+            
+            fig = px.bar(
+                type_df.sort_values("Value", ascending=True),
+                x="Value",
+                y="Type",
+                orientation='h',
+                color="Type",
+                color_discrete_sequence=px.colors.qualitative.Pastel
+            )
+            fig.update_layout(
+                margin=dict(t=0, l=0, r=0, b=0),
+                height=350,
+                showlegend=False,
+                xaxis_title="Value (€)"
+            )
+            st.plotly_chart(fig, use_container_width=True)
     
     st.divider()
     
-    # ==================== POSITIONS TABLE ====================
-    st.subheader("🏆 All Positions")
+    # ==================== HOLDINGS TABLE ====================
+    st.subheader("🏆 All Holdings")
     
-    display_df = metrics["df"][["ticker", "name", "quantity", "avg_price", "current_price", "pnl", "pnl_pct", "asset_class"]].copy()
-    if "platform" in metrics["df"].columns:
-        display_df["platform"] = metrics["df"]["platform"]
-    display_df.columns = ["Ticker", "Name", "Qty", "Avg Price", "Current", "P&L €", "P&L %", "Class"] + (["Platform"] if "platform" in metrics["df"].columns else [])
-    
-    # Format columns
-    format_dict = {
-        "Avg Price": "€{:.2f}",
-        "Current": "€{:.2f}",
-        "P&L €": "€{:,.2f}",
-        "P&L %": "{:.2f}%",
-        "Qty": "{:.4f}"
-    }
-    
-    st.dataframe(
-        display_df.style.format(format_dict).apply(
-            lambda x: ['background-color: #d4edda' if v > 0 else 'background-color: #f8d7da' if v < 0 else '' 
-                      for v in x] if x.name == "P&L €" else [''] * len(x),
-            axis=0
-        ),
-        use_container_width=True,
-        hide_index=True
+    # Broker filter
+    selected_broker = st.selectbox(
+        "Filter by broker:",
+        ["All Brokers"] + summary.get('brokers', []),
+        index=0
     )
     
-    # ==================== SIDEBAR CONTINUED ====================
+    # Create dataframe
+    df = get_holdings_dataframe(holdings)
+    
+    if not df.empty:
+        # Filter by broker
+        if selected_broker != "All Brokers":
+            df = df[df["Broker"] == selected_broker]
+        
+        # Sort by value
+        df = df.sort_values("Value", ascending=False)
+        
+        # Display
+        display_cols = ["Broker", "Ticker", "Name", "Type", "Qty", "Value", "Source"]
+        display_df = df[display_cols].copy()
+        
+        # Format
+        display_df["Value"] = display_df["Value"].apply(lambda x: f"€{x:,.2f}")
+        display_df["Qty"] = display_df["Qty"].apply(lambda x: f"{x:,.4f}" if x < 10 else f"{x:,.2f}")
+        
+        st.dataframe(
+            display_df,
+            use_container_width=True,
+            hide_index=True,
+            height=400
+        )
+        
+        # Summary below table
+        if selected_broker != "All Brokers":
+            broker_total = broker_data.get(selected_broker, 0)
+            st.info(f"**{selected_broker}**: €{broker_total:,.2f} ({len(df)} holdings)")
+    
+    # ==================== SIDEBAR ====================
     with st.sidebar:
+        st.header("⚙️ War Room")
+        
         st.subheader("📊 Quick Stats")
+        st.write(f"**Total Value:** €{summary['total_value']:,.2f}")
+        st.write(f"**Holdings:** {summary['holdings_count']}")
+        st.write(f"**Brokers:** {summary['brokers_count']}")
         st.write(f"**Last Updated:** {datetime.now().strftime('%H:%M:%S')}")
-        st.write(f"**Database:** PostgreSQL 16")
-        st.write(f"**AI Engine:** Ollama (pending)")
         
         st.divider()
         
@@ -352,14 +274,15 @@ def main():
         
         st.divider()
         
-        # Import button
-        if st.button("📥 Import New Data", use_container_width=True):
-            st.info("Run: python scripts/import_all_data.py")
+        st.subheader("🏦 Brokers")
+        for broker in summary.get('brokers', []):
+            value = broker_data.get(broker, 0)
+            st.write(f"• {broker.replace('_', ' ')}: €{value:,.2f}")
         
         st.divider()
         
-        st.caption("🎯 War Room v0.2.0")
-        st.caption("Made with Streamlit")
+        st.caption("🎯 War Room v2.0")
+        st.caption("Built with Streamlit + PostgreSQL")
 
 
 if __name__ == "__main__":

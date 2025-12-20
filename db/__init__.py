@@ -3,13 +3,9 @@ WAR ROOM - Database Package
 """
 from db.database import Base, engine, SessionLocal, get_db, init_db
 from db.models import (
+    Holding,
     Transaction,
-    AssetRegistry,
-    MarketIntelligence,
-    AIScenario,
-    PortfolioSnapshot,
-    Alert,
-    CSVImportLog
+    ImportLog
 )
 
 __all__ = [
@@ -18,11 +14,7 @@ __all__ = [
     "SessionLocal",
     "get_db",
     "init_db",
+    "Holding",
     "Transaction",
-    "AssetRegistry",
-    "MarketIntelligence",
-    "AIScenario",
-    "PortfolioSnapshot",
-    "Alert",
-    "CSVImportLog"
+    "ImportLog"
 ]
