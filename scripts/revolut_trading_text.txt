@@ -1,0 +1,765 @@
+Account Statement
+Generated on the 20 Dec 2025
+Roberto Guareschi
+Via Louis Armstrong 9
+Parma
+43124
+IT
+Period
+28 Dec 2019 - 20 Dec 2025
+Account name
+Roberto Guareschi
+Account number
+88070168
+USD Account summary
+Starting
+Ending
+Stocks value
+US$0
+US$1,127.26
+Cash value*
+US$0
+US$2.72
+Total
+US$0
+US$1,129.98
+*Cash value is the amount of cash in your stock trading account that has not been invested
+USD Portfolio breakdown
+Symbol
+Company
+ISIN
+Quantity
+Price
+Value
+% of Portfolio
+GOOGL
+Alphabet (Class A)
+US02079K3059
+2
+US$296.72
+US$593.44
+52.52%
+BIDU
+Baidu
+US0567521085
+3
+US$120.49
+US$361.47
+31.99%
+BP
+BP
+US0556221044
+5
+US$34.47
+US$172.35
+15.25%
+Stocks value
+US$1,127.26
+99.76%
+Cash value
+US$2.72
+0.24%
+Total
+US$1,129.98
+USD Transactions
+Date
+SymbolType
+Quantity
+Price
+SideValue
+Fees
+Commission
+28 Dec 2019 00:49:41 GMT
+Cash top-up
+US$50
+US$0
+US$0
+19 Jul 2022 13:31:37 GMT
+XPOA
+Trade - Market
+3.00902708
+US$9.97
+Buy US$30
+US$0
+US$0
+25 Jul 2022 17:33:49 GMT
+Cash top-up
+US$250
+US$0
+US$0
+25 Jul 2022 17:34:32 GMT
+AMZN Trade - Market
+2
+US$121.14 Buy US$243.30 US$0
+US$1.02
+31 Jul 2022 10:57:12 GMT
+Cash top-up
+US$250
+US$0
+US$0
+01 Aug 2022 13:30:07 GMT INTC
+Trade - Limit
+5
+US$36.07 Buy US$180.35 US$0
+US$0
+02 Aug 2022 09:27:47 GMT
+Cash top-up
+US$230
+US$0
+US$0
+02 Aug 2022 20:37:46 GMT
+Custody fee
+-US$0.03
+US$0
+US$0
+03 Aug 2022 14:00:00 GMT NIO
+Trade - Limit
+4
+US$19.50 Buy US$79.02
+US$0
+US$1.02
+04 Aug 2022 13:30:13 GMT GOOGLTrade - Limit
+2
+US$117.58 Buy US$236.17 US$0
+US$1.01
+09 Aug 2022 05:53:55 GMT XPOA
+Merger - stock
+-3.00902708
+US$0
+US$0
+US$0
+09 Aug 2022 05:53:55 GMT QBTS
+Merger - stock
+4.37552557
+US$0
+US$0
+US$0
+02 Sep 2022 04:18:35 GMT
+Custody fee
+-US$0.07
+US$0
+US$0
+02 Sep 2022 06:07:51 GMT INTC
+Dividend
+US$1.56
+US$0
+US$0
+05 Sep 2022 05:33:05 GMT
+Cash top-up
+US$200
+US$0
+US$0
+07 Sep 2022 13:30:04 GMT BP
+Trade - Limit
+5
+US$30.48 Buy US$152.40 US$0
+US$0
+12 Sep 2022 16:23:30 GMT
+QBTS
+Trade - Market
+7
+US$7.21
+Buy US$51.48
+US$0
+US$1.01
+22 Sep 2022 14:46:40 GMT
+Cash top-up
+US$300
+US$0
+US$0
+04 Oct 2022 07:56:24 GMT
+Custody fee
+-US$0.08
+US$0
+US$0
+06 Oct 2022 14:22:35 GMT
+MAXN Trade - Limit
+5
+US$24.50 Buy US$122.50 US$0
+US$0
+10 Oct 2022 13:30:07 GMT
+NIO
+Trade - Limit
+13
+US$13.66 Buy US$178.54 US$0
+US$0.96
+16 Oct 2022 15:05:10 GMT
+Cash top-up
+US$97.20
+US$0
+US$0
+21 Oct 2022 19:13:04 GMT
+QBTS
+Trade - Limit
+20
+US$4.80
+Buy US$96.97
+US$0
+US$0.97
+02 Nov 2022 04:23:13 GMT
+Custody fee
+-US$0.10
+US$0
+US$0
+\nDate
+SymbolType
+Quantity
+Price
+SideValue
+Fees
+Commission
+27 Nov 2022 20:00:22 GMT
+Cash top-up
+US$10
+US$0
+US$0
+28 Nov 2022 15:21:24 GMT
+QBTS
+Trade - Limit
+3
+US$2.50
+Buy US$7.50
+US$0
+US$0
+02 Dec 2022 06:16:50 GMT INTC
+Dividend
+US$1.56
+US$0
+US$0
+02 Dec 2022 09:53:21 GMT
+Custody fee
+-US$0.11
+US$0
+US$0
+14 Dec 2022 04:40:48 GMT
+Custody fee
+-US$0.11
+US$0
+US$0
+14 Dec 2022 15:31:20 GMT
+Custody fee reversal
+US$0.11
+US$0
+US$0
+21 Dec 2022 06:22:23 GMT BP
+Dividend
+US$1.78
+US$0
+US$0
+22 Dec 2022 06:41:08 GMT
+Cash top-up
+US$100
+US$0
+US$0
+22 Dec 2022 14:30:07 GMT QBTS
+Trade - Limit
+20
+US$2
+Buy US$41.06
+US$0
+US$1.06
+27 Dec 2022 17:56:17 GMT
+QBTS
+Trade - Limit
+10
+US$1.50
+Buy US$16.06
+US$0
+US$1.06
+28 Dec 2022 01:54:41 GMT
+Cash top-up
+US$115
+US$0
+US$0
+04 Jan 2023 04:44:35 GMT
+Custody fee
+-US$0.10
+US$0
+US$0
+25 Jan 2023 15:43:21 GMT
+Cash top-up
+US$150
+US$0
+US$0
+26 Jan 2023 15:07:51 GMT
+QBTS
+Trade - Market
+100
+US$1.22
+Buy US$122.93 US$0
+US$1.08
+30 Jan 2023 15:25:25 GMT
+Cash top-up
+US$200
+US$0
+US$0
+30 Jan 2023 15:25:37 GMT
+BIDU
+Trade - Market
+2
+US$139.45 Buy US$278.90 US$0
+US$0
+01 Feb 2023 00:28:33 GMT
+Cash withdrawal
+-US$75
+US$0
+US$0
+01 Feb 2023 07:46:51 GMT
+Custody fee
+-US$0.15
+US$0
+US$0
+09 Feb 2023 15:30:46 GMT
+Cash top-up
+US$0.79
+US$0
+US$0
+09 Feb 2023 15:31:41 GMT
+Cash top-up
+US$55
+US$0
+US$0
+09 Feb 2023 16:27:27 GMT QBTS
+Trade - Limit
+90
+US$1.10
+Buy US$100.07 US$0
+US$1.07
+14 Feb 2023 18:26:59 GMT
+Cash top-up
+US$93.53
+US$0
+US$0
+14 Feb 2023 18:27:07 GMT
+QBTS
+Trade - Market
+100
+US$0.88
+Buy US$89.45
+US$0
+US$1.07
+26 Feb 2023 22:18:46 GMT
+Cash top-up
+US$70.92
+US$0
+US$0
+27 Feb 2023 15:50:39 GMT QBTS
+Trade - Limit
+100
+US$0.75
+Buy US$75
+US$0
+US$0
+02 Mar 2023 03:38:02 GMT
+Custody fee
+-US$0.15
+US$0
+US$0
+02 Mar 2023 07:42:27 GMT INTC
+Dividend
+US$1.56
+US$0
+US$0
+04 Apr 2023 03:10:53 GMT
+Custody fee
+-US$0.17
+US$0
+US$0
+04 Apr 2023 08:29:18 GMT BP
+Dividend
+US$1.96
+US$0
+US$0
+02 May 2023 12:12:33 GMT
+Custody fee
+-US$0.15
+US$0
+US$0
+02 Jun 2023 05:27:53 GMT INTC
+Dividend
+US$0.54
+US$0
+US$0
+03 Jun 2023 06:11:59 GMT
+Custody fee
+-US$0.19
+US$0
+US$0
+27 Jun 2023 04:26:48 GMT BP
+Dividend
+US$1.96
+US$0
+US$0
+04 Jul 2023 08:26:56 GMT
+Custody fee
+-US$0.24
+US$0
+US$0
+02 Aug 2023 05:29:06 GMT
+Custody fee
+-US$0.25
+US$0
+US$0
+06 Aug 2023 09:09:52 GMT BP
+Transfer from Revolut Trading Ltd to Revolut Securities Europe UAB 5
+US$0
+US$0
+US$0
+06 Aug 2023 09:09:52 GMT NIO
+Transfer from Revolut Trading Ltd to Revolut Securities Europe UAB 17
+US$0
+US$0
+US$0
+06 Aug 2023 09:09:52 GMT INTC
+Transfer from Revolut Trading Ltd to Revolut Securities Europe UAB 5
+US$0
+US$0
+US$0
+06 Aug 2023 09:09:52 GMT BIDU
+Transfer from Revolut Trading Ltd to Revolut Securities Europe UAB 2
+US$0
+US$0
+US$0
+06 Aug 2023 09:09:52 GMT GOOGLTransfer from Revolut Trading Ltd to Revolut Securities Europe UAB 2
+US$0
+US$0
+US$0
+06 Aug 2023 09:09:52 GMT QBTS
+Transfer from Revolut Trading Ltd to Revolut Securities Europe UAB 454.37552557
+US$0
+US$0
+US$0
+06 Aug 2023 09:09:52 GMT AMZN Transfer from Revolut Trading Ltd to Revolut Securities Europe UAB 2
+US$0
+US$0
+US$0
+06 Aug 2023 09:09:52 GMT MAXN Transfer from Revolut Trading Ltd to Revolut Securities Europe UAB 5
+US$0
+US$0
+US$0
+06 Aug 2023 09:09:52 GMT
+Transfer from Revolut Bank UAB to Revolut Securities Europe UAB
+US$4.87
+US$0
+US$0
+01 Sep 2023 07:58:53 GMT
+Custody fee
+-US$0.20
+US$0
+US$0
+05 Sep 2023 10:55:19 GMT INTC
+Dividend
+US$0.54
+US$0
+US$0
+26 Sep 2023 10:46:24 GMT BP
+Dividend
+US$2.15
+US$0
+US$0
+01 Oct 2023 11:21:00 GMT
+Custody fee
+-US$0.18
+US$0
+US$0
+01 Nov 2023 03:37:42 GMT
+Custody fee
+-US$0.16
+US$0
+US$0
+30 Nov 2023 22:03:44 GMT
+Cash top-up
+US$134.98 US$0
+US$0
+30 Nov 2023 22:05:21 GMT
+Cash top-up
+US$2
+US$0
+US$0
+30 Nov 2023 22:06:02 GMT
+Cash top-up
+US$2
+US$0
+US$0
+01 Dec 2023 04:50:28 GMT
+Custody fee
+-US$0.17
+US$0
+US$0
+\nDate
+SymbolType
+Quantity
+Price
+SideValue
+Fees
+Commission
+01 Dec 2023 14:30:32 GMT NIO
+Trade - Market
+20.47685834 US$7.13
+Buy US$146
+US$0
+US$0
+04 Dec 2023 15:59:07 GMT INTC
+Dividend
+US$0.53
+US$0
+US$0
+21 Dec 2023 11:10:05 GMT
+BP
+Dividend
+US$2.15
+US$0
+US$0
+01 Jan 2024 10:57:10 GMT
+Custody fee
+-US$0.20
+US$0
+US$0
+01 Feb 2024 11:53:44 GMT
+Custody fee
+-US$0.18
+US$0
+US$0
+04 Mar 2024 15:25:23 GMT INTC
+Dividend
+US$0.53
+US$0
+US$0
+02 Apr 2024 17:49:19 GMT
+BP
+Dividend
+US$2.15
+US$0
+US$0
+03 May 2024 13:30:01 GMT QBTS
+Trade - Market
+254
+US$1.47
+Sell US$373.33 US$0.05
+US$0
+08 May 2024 16:08:40 GMT
+Cash withdrawal
+-US$370
+US$0
+US$0
+04 Jun 2024 09:43:23 GMT INTC
+Dividend
+US$0.53
+US$0
+US$0
+18 Jun 2024 12:27:14 GMT
+GOOGLDividend
+US$0.34
+US$0
+US$0
+02 Jul 2024 10:05:45 GMT
+BP
+Dividend
+US$2.15
+US$0
+US$0
+04 Sep 2024 09:05:27 GMT INTC
+Dividend
+US$0.53
+US$0
+US$0
+17 Sep 2024 10:28:16 GMT
+GOOGLDividend
+US$0.34
+US$0
+US$0
+17 Sep 2024 13:30:01 GMT
+MAXN Trade - Market
+5
+US$0.09
+Sell US$0.41
+US$0.02
+US$0
+23 Sep 2024 08:06:52 GMT BP
+Dividend
+US$2.37
+US$0
+US$0
+09 Nov 2024 00:34:29 GMT QBTS
+Trade - Limit
+200
+US$1.60
+Sell US$319.96 US$0.04
+US$0
+22 Nov 2024 19:56:28 GMT QBTS
+Trade - Market
+0.37552557
+US$2.85
+Sell US$1.05
+US$0.02
+US$0
+17 Dec 2024 12:51:18 GMT
+GOOGLDividend
+US$0.34
+US$0
+US$0
+23 Dec 2024 09:48:58 GMT BP
+Dividend
+US$2.37
+US$0
+US$0
+20 Feb 2025 20:09:49 GMT
+Cash withdrawal
+-US$335
+US$0
+US$0
+25 Feb 2025 16:05:38 GMT AMZN Trade - Stop
+2
+US$204.70Sell US$408.32 US$0.02
+US$1.05
+04 Mar 2025 12:31:18 GMT
+Cash withdrawal
+-US$411.85 US$0
+US$0
+18 Mar 2025 19:28:52 GMT
+GOOGLDividend
+US$0.34
+US$0
+US$0
+01 Apr 2025 07:59:24 GMT BP
+Dividend
+US$2.37
+US$0
+US$0
+17 Jun 2025 15:18:08 GMT
+GOOGLDividend
+US$0.36
+US$0
+US$0
+30 Jun 2025 14:19:07 GMT
+BP
+Dividend
+US$2.37
+US$0
+US$0
+02 Jul 2025 21:19:56 GMT
+GOOGLDividend tax (correction)
+-US$0.06
+US$0
+US$0
+02 Jul 2025 21:19:56 GMT
+GOOGLDividend tax (correction)
+US$0.06
+US$0
+US$0
+15 Sep 2025 15:27:08 GMT
+GOOGLDividend
+US$0.36
+US$0
+US$0
+17 Sep 2025 13:30:00 GMT INTC
+Trade - Market
+5
+US$25.05 Sell US$124.06 US$0.01
+US$1.18
+17 Sep 2025 13:31:50 GMT
+NIO
+Trade - Market
+37.47685834 US$7.23
+Sell US$270.95 US$0.01
+US$0
+17 Sep 2025 14:26:07 GMT
+BIDU
+Trade - Market
+1
+US$132.92 Buy US$134.10 US$0
+US$1.18
+19 Sep 2025 11:51:27 GMT
+BP
+Dividend
+US$2.47
+US$0
+US$0
+23 Sep 2025 07:39:54 GMT
+Cash withdrawal
+-US$269.18US$0
+US$0
+15 Dec 2025 16:43:53 GMT GOOGLDividend
+US$0.36
+US$0
+US$0
+19 Dec 2025 14:38:50 GMT BP
+Dividend
+US$2.47
+US$0
+US$0
+Get help directly In app
+Scan the QR code
+This statement is provided by Revolut Securities Europe UAB, represented in Switzerland by Revolut (Switzerland) AG ("Revolut", "we", "our") in respect of the orders you 
+submitted via the Revolut app which Revolut has transmitted to its third party brokers for execution.
+Given Revolut’s execution-only service, we don’t provide tax or financial planning advice. The tax treatment of your investments will depend on your individual circumstances. 
+The value of your investments can go up as well as down, and you may receive back less than your original investments. In case you need assistance in completing your tax 
+return, please seek independent financial advice.
+Revolut Securities Europe UAB LEI: 9845001DE7E84FF54124
+Revolut Securities Europe UAB is an authorised financial brokerage firm regulated by the Bank of Lithuania and represented in Switzerland by Revolut (Switzerland) AG. Our 
+registered office is Konstitucijos ave. 21B, Vilnius, 08130, the Republic of Lithuania, company number 305799582.
+© 2025 Revolut Securities Europe UAB
+\nAccount Statement
+Generated on the 20 Dec 2025
+Roberto Guareschi
+Via Louis Armstrong 9
+Parma
+43124
+IT
+Period
+28 Dec 2019 - 20 Dec 2025
+Account name
+Roberto Guareschi
+Account number
+88070168
+EUR Account summary
+Starting
+Ending
+Stocks value
+€0
+€0
+Cash value*
+€0
+€0
+Total
+€0
+€0
+*Cash value is the amount of cash in your stock trading account that has not been invested
+EUR Portfolio breakdown
+Symbol
+Company
+ISIN
+Quantity
+Price
+Value
+% of Portfolio
+Stocks value
+€0
+0%
+Cash value
+€0
+0%
+Total
+€0
+EUR Transactions
+Date
+Symbol
+Type
+Quantity
+Price
+Side
+Value
+Fees
+Commission
+Get help directly In app
+Scan the QR code
+This statement is provided by Revolut Securities Europe UAB, represented in Switzerland by Revolut (Switzerland) AG ("Revolut", "we", "our") in respect of the orders you 
+submitted via the Revolut app which Revolut has transmitted to its third party brokers for execution.
+Given Revolut’s execution-only service, we don’t provide tax or financial planning advice. The tax treatment of your investments will depend on your individual circumstances. 
+The value of your investments can go up as well as down, and you may receive back less than your original investments. In case you need assistance in completing your tax 
+return, please seek independent financial advice.
+Revolut Securities Europe UAB LEI: 9845001DE7E84FF54124
+Revolut Securities Europe UAB is an authorised financial brokerage firm regulated by the Bank of Lithuania and represented in Switzerland by Revolut (Switzerland) AG. Our 
+registered office is Konstitucijos ave. 21B, Vilnius, 08130, the Republic of Lithuania, company number 305799582.
+© 2025 Revolut Securities Europe UAB
+\n

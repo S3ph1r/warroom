@@ -1,160 +1,247 @@
-# 📋 Guida Utente - War Room
+# WAR ROOM - Guida Utente
+
+> Sistema di monitoraggio portafoglio multi-broker
+
+## 📋 Indice
+
+1. [Setup Iniziale](#setup-iniziale)
+2. [Documenti per Broker](#documenti-per-broker)
+3. [Ingestion Iniziale](#ingestion-iniziale)
+4. [Aggiornamento Mensile](#aggiornamento-mensile)
+5. [Dashboard](#dashboard)
+6. [Troubleshooting](#troubleshooting)
+
+---
 
 ## 🚀 Setup Iniziale
 
-Questa guida ti aiuta a configurare War Room per la prima volta e a mantenerlo aggiornato.
+### Requisiti
 
----
+- Python 3.10+
+- PostgreSQL database (Neon)
+- Virtual environment
 
-## 📁 PASSO 1: Prepara le Cartelle
-
-Crea la seguente struttura su Google Drive (o locale):
-
-```
-📁 WAR_ROOM_DATA/
-├── 📁 inbox/
-│   ├── 📁 bgsaxo/
-│   ├── 📁 scalable/
-│   ├── 📁 binance/
-│   ├── 📁 revolut/
-│   ├── 📁 traderepublic/
-│   └── 📁 ibkr/
-└── 📁 processed/
-```
-
----
-
-## 📥 PASSO 2: Scarica i Documenti dai Broker
-
-### BG Saxo ⭐
-1. Accedi a **SaxoTraderGO** o **SaxoInvestor**
-2. Vai su **Account** → **Reports** → **Positions**
-3. Esporta come **CSV**
-4. Salva in `inbox/bgsaxo/`
-
-**File richiesto**: `Posizioni_*.csv`
-
----
-
-### Scalable Capital ⭐
-1. Accedi all'app o web
-2. Vai su **Profilo** → **Documenti**
-3. Scarica **"Financial Status"** (Stato Finanziario)
-4. Salva in `inbox/scalable/`
-
-**File richiesto**: `Financial status*.pdf`
-
----
-
-### Binance ⭐
-1. Accedi a Binance
-2. Vai su **Wallet** → **Account Statement**
-3. Genera un **Account Statement** per il periodo desiderato
-4. Scarica il PDF (richiede password, solitamente quella del tuo account)
-5. Salva in `inbox/binance/`
-
-**File richiesto**: `AccountStatementPeriod_*.pdf`
-
----
-
-### Revolut
-
-#### Stocks ⭐
-1. Apri l'app Revolut → **Invest**
-2. Tocca **More (...)** → **Documents** → **Stocks**
-3. Seleziona **Account Statement**
-4. Scarica il PDF
-5. Salva in `inbox/revolut/`
-
-**File richiesto**: `trading-account-statement_*.pdf`
-
-#### Crypto e Commodities (Oro/Argento) ⚠️
-Revolut **NON** fornisce snapshot delle posizioni per crypto e commodities.
-
-**Soluzione**: Fai uno **screenshot** dalla app:
-1. Apri la sezione **Crypto** e fai screenshot
-2. Apri la sezione **Commodities** (Oro/Argento) e fai screenshot
-3. Salva gli screenshot in `inbox/revolut/`
-
----
-
-### Trade Republic ⚠️
-Trade Republic **NON** fornisce uno snapshot delle posizioni.
-
-**Soluzione**:
-1. Apri l'app Trade Republic
-2. Vai alla home page dove vedi tutti i tuoi titoli
-3. Fai uno **screenshot**
-4. Salva in `inbox/traderepublic/`
-
-**Opzionale**: Scarica anche `Estratto conto.pdf` per lo storico transazioni.
-
----
-
-### Interactive Brokers (IBKR) ⚠️
-Il report di default non include le posizioni aperte.
-
-**Configurazione una tantum**:
-1. Accedi a **Client Portal**
-2. Vai su **Performance & Reports** → **Statements**
-3. Clicca su **Custom Statements** → **Create**
-4. Seleziona:
-   - ✅ Open Positions
-   - ✅ Trades
-   - ✅ Cash Report
-5. Salva il template
-6. Esporta in **CSV**
-7. Salva in `inbox/ibkr/`
-
----
-
-## 🔄 PASSO 3: Importa i Dati
-
-Una volta scaricati tutti i documenti, esegui l'importazione:
+### Installazione
 
 ```bash
 cd warroom
-python scripts/import_all_data.py
+python -m venv venv
+.\venv\Scripts\activate  # Windows
+pip install -r requirements.txt
+```
+
+### Configurazione
+
+Crea file `.env` con:
+```
+DATABASE_URL=postgresql://user:pass@host/db
 ```
 
 ---
 
-## 📆 Aggiornamenti Mensili
+## 📁 Documenti per Broker
 
-Ogni mese (o trimestre), ripeti questi passaggi:
+### BG SAXO
 
-### Checklist Mensile
+| Documento | Nome File | Tipo | Obbligatorio |
+|-----------|-----------|:----:|:------------:|
+| **Posizioni** | `Posizioni_DD-mmm-YYYY_HH_MM_SS.csv` | CSV | ✅ Sì |
+| Transazioni | `Transactions_*.pdf` | PDF | ⭐ Opzionale |
 
-#### Download Automatici
-- [ ] **BG Saxo**: Scarica `Posizioni_*.csv`
-- [ ] **Scalable**: Scarica `Financial status.pdf`
-- [ ] **Binance**: Scarica `AccountStatementPeriod_*.pdf`
-- [ ] **Revolut Stocks**: Scarica `trading-account-statement_*.pdf`
-
-#### Screenshot Richiesti
-- [ ] **Revolut Crypto**: Screenshot sezione Crypto
-- [ ] **Revolut Commodities**: Screenshot sezione Oro/Argento
-- [ ] **Trade Republic**: Screenshot home page titoli
-
-#### Opzionali
-- [ ] **IBKR**: Esporta Activity Statement con Open Positions
+**Come esportare:**
+1. Accedi a BG Saxo → Portfolio → Posizioni
+2. Clicca "Esporta" → CSV
+3. Salva in `D:\Download\BGSAXO\`
 
 ---
 
-## ❓ FAQ
+### TRADE REPUBLIC
 
-### Perché alcuni broker richiedono screenshot?
-Alcuni "neobroker" (Revolut, Trade Republic) non forniscono documenti con le posizioni attuali. Gli screenshot sono l'unico modo per catturare questi dati.
+| Documento | Nome File | Tipo | Obbligatorio |
+|-----------|-----------|:----:|:------------:|
+| **Estratto Conto** | `Documento_*.pdf` | PDF | ✅ Sì |
 
-### Quanto spesso devo aggiornare?
-- **Consigliato**: Mensile
-- **Minimo**: Trimestrale
-
-### I miei dati sono al sicuro?
-Tutti i dati restano sul tuo computer. War Room non invia nulla a server esterni.
+**Come esportare:**
+1. App Trade Republic → Profilo → Documenti
+2. Scarica tutti gli estratti conto
+3. Salva in `D:\Download\Trade Repubblic\`
 
 ---
 
-## 🆘 Supporto
+### IBKR (Interactive Brokers)
 
-Se hai problemi con l'importazione di un broker specifico, apri una issue su GitHub.
+| Documento | Nome File | Tipo | Obbligatorio |
+|-----------|-----------|:----:|:------------:|
+| **Transaction History** | `U*.TRANSACTIONS.1Y.csv` | CSV | ✅ Sì |
+
+**Come esportare:**
+1. Client Portal → Performance & Reports → Transaction History
+2. Export → CSV (ultimo anno)
+3. Salva in `D:\Download\IBKR\`
+
+---
+
+### SCALABLE CAPITAL
+
+| Documento | Nome File | Tipo | Obbligatorio |
+|-----------|-----------|:----:|:------------:|
+| **Financial Status** | `YYYYMMDD Financial Status*.pdf` | PDF | ✅ Sì |
+| Monthly Statements | `YYYYMMDD Monthly account statement*.pdf` | PDF | ⭐ Opzionale |
+
+**Come esportare:**
+1. Scalable Capital → Documenti → Rendiconti
+2. Scarica "Financial Status" più recente
+3. Salva in `D:\Download\SCALABLE CAPITAL\`
+
+---
+
+### REVOLUT
+
+| Documento | Nome File | Tipo | Obbligatorio |
+|-----------|-----------|:----:|:------------:|
+| **Trading Statement** | `trading-account-statement_*.pdf` | PDF | ✅ Sì |
+| **Crypto Statement** | `crypto-account-statement_*.pdf` | PDF | ✅ Sì |
+
+**Come esportare:**
+1. Revolut App → Stocks → Statement → Generate
+2. Revolut App → Crypto → Statement → Generate
+3. Salva in `D:\Download\Revolut\`
+
+---
+
+### BINANCE
+
+| Documento | Nome File | Tipo | Obbligatorio |
+|-----------|-----------|:----:|:------------:|
+| **Transaction Export** | `YYYY_MM_DD_HH_MM_SS.csv` | CSV | ✅ Sì |
+
+**Come esportare:**
+1. Binance → Wallet → Transaction History → Export
+2. Seleziona periodo completo
+3. Salva in `D:\Download\Binance\`
+
+---
+
+## 🔄 Ingestion Iniziale
+
+### Prerequisiti
+
+1. Scarica **tutti i documenti obbligatori** per ogni broker
+2. Posizionali nelle cartelle corrette
+
+### Esecuzione
+
+```bash
+cd warroom
+.\venv\Scripts\activate
+
+# Esegui ingestion completa
+python scripts/initial_ingestion.py
+```
+
+### Risultato Atteso
+
+```
+✅ ALL INGESTION STEPS COMPLETED SUCCESSFULLY!
+  Holdings: ~111
+  Transactions: ~1,739
+  Total Value: ~€35,639
+```
+
+### In caso di errore
+
+```bash
+# Riprendi dal punto di fallimento
+python scripts/initial_ingestion.py --resume
+
+# Esegui solo uno step specifico
+python scripts/initial_ingestion.py --step 5
+```
+
+---
+
+## 📅 Aggiornamento Mensile
+
+### Documenti da Scaricare
+
+| Broker | Documento | Frequenza |
+|--------|-----------|:---------:|
+| BG Saxo | `Posizioni_*.csv` | Mensile |
+| Trade Republic | Nuovi estratti | Mensile |
+| IBKR | `U*.TRANSACTIONS.1Y.csv` | Mensile |
+| Scalable | `Financial Status*.pdf` | Mensile |
+| Revolut | Entrambi gli statements | Mensile |
+| Binance | Transaction export | Mensile |
+
+### Procedura
+
+1. Scarica i nuovi documenti
+2. Sostituisci i vecchi file (o aggiungi i nuovi)
+3. Esegui ingestion:
+
+```bash
+python scripts/initial_ingestion.py
+```
+
+---
+
+## 📊 Dashboard
+
+### Avvio
+
+```bash
+.\venv\Scripts\streamlit.exe run dashboard/app.py
+```
+
+### URL
+
+Apri [http://localhost:8501](http://localhost:8501)
+
+### Funzionalità
+
+- **Net Worth**: Valore totale portafoglio
+- **Breakdown per Broker**: Grafico a torta
+- **Holdings Table**: Lista di tutti gli asset
+- **Filtri**: Per broker, asset type
+
+---
+
+## 🔧 Troubleshooting
+
+### Errore Encoding (Windows)
+
+```
+UnicodeEncodeError: 'charmap' codec can't encode
+```
+
+**Soluzione**: Lo script usa già UTF-8 encoding. Se persiste, eseguire:
+```bash
+set PYTHONIOENCODING=utf-8
+python scripts/initial_ingestion.py
+```
+
+### Database Connection Error
+
+```
+could not connect to server
+```
+
+**Soluzione**: Verifica `.env` e connessione internet.
+
+### Parser Non Trova File
+
+```
+FileNotFoundError: No CSV files found
+```
+
+**Soluzione**: Verifica che i file siano nella cartella corretta con i nomi attesi.
+
+---
+
+## 📞 Supporto
+
+Per problemi tecnici, controllare i log dello script o contattare il supporto.
+
+---
+
+*Ultimo aggiornamento: Dicembre 2025*

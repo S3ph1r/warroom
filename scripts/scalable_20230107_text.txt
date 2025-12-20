@@ -1,0 +1,134 @@
+\n=== PAGE 1 ===\nScalable Capital GmbH
+Seitzstrasse 8e
+80538 Munich 
+service@scalable.capital
+Munich
+2023-01-06
+Roberto Guareschi
+Client ID: 2896105    Portfolio: 1
+Account No.: 2896105000
+IBAN: DE04 7003 3100 2896 1050 00
+BLZ: 700 331 00
+BIC: BDWBDEMM
+Transaction No.: 219276020
+Reference No.: 366702813
+KKTKK801-042.038
+Scalable Capital GmbH • Managing Directors: Erik Podzuweit, Florian Prucker, Martin Krebs, Peter Gaubatz, Dirk Urmoneit • HRB 217778, District Court Munich • VAT No. 
+DE300434774 • www.scalable.capital
+ 
+Publisher and responsible for the content is Baader Bank Aktiengesellschaft • Weihenstephaner Strasse 4 • 85716 Unterschleissheim • Germany
+Management Board: Nico Baader (CEO), Dietmar von Blücher, Oliver Riedel • Chairman of the Supervisory Board: Helmut Schreyer • Commercial Register HRB 121537 • 
+Principal Office: Unterschleissheim • TaxNo: 143/107/04009 • VAT ID: DE114123893 • LEI: 529900JFOPPEDUR61H13
+T 00800 00 586336* • service@baaderbank.de
+* Toll-free from (inter-) national landline networks. Charges may apply from other networks.
+ 
+Mr.
+Roberto Guareschi
+Via Louis Armstrong 9 Unknown
+43124 Provincia Di Parma
+ITALY
+Periodic Account Statement: EUR Account
+Account Statement No. 022002
+Description
+Posting
+Date
+Value Date
+Credit
+1.00
+Debit
+in EUR
+in EUR
+Account Balance in EUR on 2022-11-30
+2022-12-20
+2022-12-20
+200.00
+Direct Debit
+Roberto Guareschi
+IT48J0301503200000000388927
+FEBIITM1XXX
+Scalable Capital Broker deposito
+End to end Referenz:
+DY9SGSUQMAFOVSU7IA6P32
+Mandatsreferenz:
+TMQINQZTGNABT8B3SQIRDA
+Mandatsdatum:
+15.11.2022
+Gläubiger-ID:
+DE63MUC00001787612
+Case No.: 918764175
+2022-12-20
+2022-12-22
+Purchase
+62.27 -
+IS MSCI BRAZ.U.ETF USD D
+ISIN IE00B0M63516
+STK               3
+Case No.: WWUM 00155066660
+2022-12-20
+2022-12-22
+Purchase
+52.87 -
+ISHSII-MSCI TURKEY DLDIS
+ISIN IE00B1FZS574
+STK               3
+Case No.: WWUM 00155066853
+Balance:
+85.86
+Page 1/2
+\n=== PAGE 2 ===\nKKTKK801-042.038
+Scalable Capital GmbH • Managing Directors: Erik Podzuweit, Florian Prucker, Martin Krebs, Peter Gaubatz, Dirk Urmoneit • HRB 217778, District Court Munich • VAT No. 
+DE300434774 • www.scalable.capital
+ 
+Publisher and responsible for the content is Baader Bank Aktiengesellschaft • Weihenstephaner Strasse 4 • 85716 Unterschleissheim • Germany
+Management Board: Nico Baader (CEO), Dietmar von Blücher, Oliver Riedel • Chairman of the Supervisory Board: Helmut Schreyer • Commercial Register HRB 121537 • 
+Principal Office: Unterschleissheim • TaxNo: 143/107/04009 • VAT ID: DE114123893 • LEI: 529900JFOPPEDUR61H13
+T 00800 00 586336* • service@baaderbank.de
+* Toll-free from (inter-) national landline networks. Charges may apply from other networks.
+Periodic Account Statement: EUR Account
+Account Statement No. 022002
+Continued:
+Account No.: 2896105000   BLZ: 700 331 00   IBAN: DE04 7003 3100 2896 1050 00   BIC: BDWBDEMM
+Description
+Posting
+Date
+Value Date
+Debit
+Credit
+Balance:
+85.86
+in EUR
+in EUR
+2022-12-22
+2022-12-22
+Ordergebühr
+0.99 -
+ORDERGEBUEHR
+REF:SCAL5pAvfSUYCyU
+Case No.: SCAL5pAvfSUYCyU
+2022-12-22
+2022-12-22
+Ordergebühr
+0.99 -
+ORDERGEBUEHR
+REF:SCALW8y3y7fSXkW
+Case No.: SCALW8y3y7fSXkW
+2022-12-28
+2022-12-30
+Purchase
+78.50 -
+ISHSV-S+P500ENER.SECT.DLA
+ISIN IE00B42NKQ00
+STK              10
+Case No.: WWUM 00156179130
+2022-12-30
+2022-12-30
+Ordergebühr
+0.99 -
+ORDERGEBUEHR
+REF:SCALhqpuGZ73LpW
+Case No.: SCALhqpuGZ73LpW
+Account Balance in EUR on 2022-12-30
+4.39
+This document has been generated electronically and will not be signed.
+Please ensure your compliance with the German foreign trade reporting regulations to the German Bundesbank (AWV-Meldung).
+Page 2/2

@@ -1,0 +1,6281 @@
+\n=== PAGE 1 ===\nBG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 1 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Roberto Guareschi - 19807401
+Report transazione
+Periodo di rendicontazione: 26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025 06:39:19 18:39:19 (W. Europe Standard Time)
+Roberto Guareschi
+BG SAXO SIM - B2C 1 Cash
+Via Armstrong 9
+Corso Europa 22
+43124 PARMA
+20122 Milan
+PR
+Italy
+Italy
+\n=== PAGE 2 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 2 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+19-dic-2025
+Contrattazione
+Alphabet Inc. Class A
+Acquista 2 @ 301,93
+Pending
+-
+ID contrattazione
+5353555477
+ID contrattazione
+5353555477
+18-dic-2025
+-1.170,68
+1.362,01
+Contrattazione
+ServiceNow Inc.
+Acquista 1 @ 155,29 USD
+-133,51
+-
+Commissione
+-0,85 EUR
+Valore negoziato
+-132,66 EUR
+Costo di conversione valuta
+-0,33
+Costo totale
+-1,18 EUR
+Tasso di conversione
+0,854289
+ID contrattazione
+6517994499
+ISIN
+US81762P1021
+Contrattazione
+CRISPR Therapeutics Ltd
+Acquista 3 @ 55,88 USD
+-144,22
+-
+Commissione
+-0,86 EUR
+Valore negoziato
+-143,36 EUR
+Costo di conversione valuta
+-0,36
+Costo totale
+-1,21 EUR
+Tasso di conversione
+0,855182
+ID contrattazione
+6518073315
+ISIN
+CH0334081137
+\n=== PAGE 3 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 3 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Operazione sul capitale
+Qualcomm Inc.
+Dividendo in contanti
+0,96
+-
+Quantità idonea
+2
+Dividendo per azione
+0,89 USD
+Tasso di conversione
+0,851555
+Corporate Actions - Dividendi
+1,52 EUR
+Dividendi - ritenuta alla fonte
+-0,23 EUR
+Dividendi - ritenuta alla fonte (%)
+15%
+Dividendi - ritenuta italiana
+-0,33 EUR
+Dividendi - ritenuta italiana (%)
+26%
+Transaction description
+ID Evento 9449726
+ISIN
+US7475251036
+Contrattazione
+Canopy Growth Corp.
+Vendi -145 @ 2,90 CAD
+256,83
+-
+Commissione
+-3,09 EUR
+Valore negoziato
+259,92 EUR
+Costo di conversione valuta
+-0,64
+Costo totale
+-3,74 EUR
+Tasso di conversione
+0,618127
+ID contrattazione
+6518354062
+ISIN
+CA1380357048
+Contrattazione
+Teradyne Inc.
+Acquista 1 @ 190,26 USD
+-163,53
+-
+Commissione
+-0,86 EUR
+Valore negoziato
+-162,67 EUR
+Costo di conversione valuta
+-0,41
+Costo totale
+-1,26 EUR
+Tasso di conversione
+0,855003
+ID contrattazione
+6518059524
+ISIN
+US8807701029
+\n=== PAGE 4 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 4 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Viking Therapeutics Inc.
+Acquista 5 @ 34,74 USD
+-149,42
+-
+Commissione
+-0,86 EUR
+Valore negoziato
+-148,56 EUR
+Costo di conversione valuta
+-0,38
+Costo totale
+-1,23 EUR
+Tasso di conversione
+0,855157
+ID contrattazione
+6518090341
+ISIN
+US92686J1060
+Contrattazione
+AST SpaceMobile Inc.
+Acquista 2 @ 65,86 USD
+-113,52
+-
+Commissione
+-0,86 EUR
+Valore negoziato
+-112,66 EUR
+Costo di conversione valuta
+-0,30
+Costo totale
+-1,15 EUR
+Tasso di conversione
+0,855262
+ID contrattazione
+6518070781
+ISIN
+US00217D1000
+Contrattazione
+VanEck Uranium and Nuclear Technologies UCITS
+ETF
+Acquista 4 @ 44,10 EUR
+-178,38
+-
+Commissione
+-2,00 EUR
+Valore negoziato
+-176,38 EUR
+Costo totale
+-2,00 EUR
+Tasso di conversione
+1,000000
+ID contrattazione
+6517399727
+ISIN
+IE000M7V94E1
+\n=== PAGE 5 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 5 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Franklin FTSE India UCITS ETF
+Acquista 5 @ 37,83 EUR
+-191,15
+-
+Valore negoziato
+-189,15 EUR
+Commissione
+-2,00 EUR
+Costo totale
+-2,00 EUR
+Tasso di conversione
+1,000000
+ID contrattazione
+6517400401
+ISIN
+IE00BHZRQZ17
+Contrattazione
+Palo Alto Networks Inc.
+Acquista 1 @ 186,23 USD
+-160,13
+-
+Commissione
+-0,86 EUR
+Valore negoziato
+-159,27 EUR
+Costo di conversione valuta
+-0,41
+Costo totale
+-1,26 EUR
+Tasso di conversione
+0,855233
+ID contrattazione
+6518067185
+ISIN
+US6974351057
+Contrattazione
+Chevron Corp.
+Acquista 1 @ 148,85 USD
+-127,98
+-
+Commissione
+-0,85 EUR
+Valore negoziato
+-127,13 EUR
+Costo di conversione valuta
+-0,32
+Costo totale
+-1,17 EUR
+Tasso di conversione
+0,854064
+ID contrattazione
+6517863788
+ISIN
+US1667641005
+\n=== PAGE 6 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 6 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Oklo Inc.
+Acquista 1 @ 76,92 USD
+-66,63
+-
+Commissione
+-0,86 EUR
+Valore negoziato
+-65,77 EUR
+Costo di conversione valuta
+-0,17
+Costo totale
+-1,02 EUR
+Tasso di conversione
+0,855069
+ID contrattazione
+6518061918
+ISIN
+US02156V1098
+Operazione sul capitale
+Eutelsat Communications-Rights
+Scarico titoli
+0,00
+-
+Eutelsat Communications-Rights
+Vendita Alla chiusura -3 @ 0,00
+Transaction description
+ID Evento 9476254
+ISIN
+FR0014012K95
+17-dic-2025
+186,02
+2.532,69
+Contrattazione
+United States Antimony Corp.
+Acquista 28 @ 4,74 USD
+-114,08
+-
+Commissione
+-0,85 EUR
+Valore negoziato
+-113,23 EUR
+Costo di conversione valuta
+-0,28
+Costo totale
+-1,13 EUR
+Tasso di conversione
+0,853398
+ID contrattazione
+6516941402
+ISIN
+US9115491030
+\n=== PAGE 7 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 7 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Walmart Inc.
+Acquista 2 @ 116,23 USD
+-199,15
+-
+Commissione
+-0,85 EUR
+Valore negoziato
+-198,30 EUR
+Costo di conversione valuta
+-0,49
+Costo totale
+-1,34 EUR
+Tasso di conversione
+0,853061
+ID contrattazione
+6516960372
+ISIN
+US9311421039
+Contrattazione
+Alphabet Inc. Class A
+Vendi -2 @ 297,89 USD
+504,65
+-
+Commissione
+-0,85 EUR
+Valore negoziato
+505,50 EUR
+Costo di conversione valuta
+-1,27
+Costo totale
+-2,12 EUR
+Tasso di conversione
+0,848474
+ID contrattazione
+6516741930
+ISIN
+US02079K3059
+Operazione sul capitale
+Eutelsat Communications-Rights
+Opzione call su titoli intermedi
+-5,40
+-
+Corporate Actions - Share Amount
+-5,40 EUR
+Eutelsat Communications
+Acquisto In apertura 4 @ 1,35
+Transaction description
+ID Evento 9467005 Event manually booked
+due to system limitation
+ISIN
+FR0014012K95
+16-dic-2025
+50,25
+2.346,67
+\n=== PAGE 8 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 8 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Solid Power Inc.
+Vendi -19 @ 4,52 USD
+71,85
+-
+Commissione
+-0,85 EUR
+Valore negoziato
+72,70 EUR
+Costo di conversione valuta
+-0,18
+Costo totale
+-1,03 EUR
+Tasso di conversione
+0,846552
+ID contrattazione
+6515033794
+ISIN
+US83422N1054
+Operazione sul capitale
+Eutelsat Communications-Rights
+Opzione call su titoli intermedi
+0,00
+-
+Eutelsat Communications-Rights
+Vendita Alla chiusura -22 @ 0,00
+Transaction description
+ID Evento 9467005
+ISIN
+FR0014012K95
+Operazione sul capitale
+Eutelsat Communications-Rights
+Opzione call su titoli intermedi
+-21,60
+-
+Corporate Actions - Share Amount
+-21,60 EUR
+Eutelsat Communications
+Acquisto In apertura 16 @ 1,35
+Transaction description
+ID Evento 9467005
+ISIN
+FR0014012K95
+15-dic-2025
+-43,22
+2.296,42
+Contrattazione
+Amplifon
+Acquista 7 @ 13,98 EUR
+-99,92
+-
+Commissione
+-2,00 EUR
+Valore negoziato
+-97,82 EUR
+Tassazione transazioni finanziarie (Italia)
+-0,10 EUR
+Costo totale
+-2,10 EUR
+Tasso di conversione
+1,000000
+ID contrattazione
+6513068050
+ISIN
+IT0004056880
+\n=== PAGE 9 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 9 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Operazione sul capitale
+Alphabet Inc. Class A
+Dividendo in contanti
+0,23
+-
+Quantità idonea
+2
+Dividendo per azione
+0,21 USD
+Tasso di conversione
+0,852385
+Dividendi - ritenuta italiana
+-0,08 EUR
+Dividendi - ritenuta italiana (%)
+26%
+Dividendi - ritenuta alla fonte
+-0,05 EUR
+Dividendi - ritenuta alla fonte (%)
+15%
+Corporate Actions - Dividendi
+0,36 EUR
+Transaction description
+ID Evento 9459127
+ISIN
+US02079K3059
+Contrattazione
+Broadcom Inc.
+Vendi -2 @ 353,00 USD
+598,19
+-
+Commissione
+-0,85 EUR
+Valore negoziato
+599,04 EUR
+Costo di conversione valuta
+-1,50
+Costo totale
+-2,35 EUR
+Tasso di conversione
+0,848492
+ID contrattazione
+6513549616
+ISIN
+US11135F1012
+Contrattazione
+Toyota Motor Corp. - ADR
+Acquista 2 @ 215,81 USD
+-369,06
+-
+Commissione
+-0,85 EUR
+Valore negoziato
+-368,21 EUR
+Costo di conversione valuta
+-0,91
+Costo totale
+-1,76 EUR
+Tasso di conversione
+0,853097
+ID contrattazione
+6513477326
+ISIN
+US8923313071
+\n=== PAGE 10 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 10 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Novo Nordisk B A/S
+Acquista 4 @ 319,10 DKK
+-172,66
+-
+Commissione
+-1,34 EUR
+Valore negoziato
+-171,32 EUR
+Costo di conversione valuta
+-0,43
+Costo totale
+-1,77 EUR
+Tasso di conversione
+0,134218
+ID contrattazione
+6513054071
+ISIN
+DK0062498333
+11-dic-2025
+178,74
+2.339,64
+Contrattazione
+Oculus Inc.
+Vendi -7000 @ 0,05 CAD
+178,74
+-
+Commissione
+-15,41 EUR
+Valore negoziato
+194,15 EUR
+Costo di conversione valuta
+-0,45
+Costo totale
+-15,90 EUR
+Tasso di conversione
+0,616359
+ID contrattazione
+6511202189
+ISIN
+US67575Y1091
+10-dic-2025
+2.000,23
+2.160,90
+Trasferimento di liquidità
+Deposito
+2.000,00
+-
+Commento
+/OCMT/EUR2000,/19807401
+Deposit Type
+External
+Tasso di conversione
+1,000000
+Importo in contanti
+2.000,00 EUR
+\n=== PAGE 11 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 11 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Operazione sul capitale
+PayPal Holdings Inc.
+Dividendo in contanti
+0,23
+-
+Quantità idonea
+3
+Dividendo per azione
+0,14 USD
+Tasso di conversione
+0,859709
+Dividendi - ritenuta italiana
+-0,08 EUR
+Dividendi - ritenuta italiana (%)
+26%
+Corporate Actions - Dividendi
+0,36 EUR
+Dividendi - ritenuta alla fonte
+-0,05 EUR
+Dividendi - ritenuta alla fonte (%)
+15%
+Transaction description
+ID Evento 9452626
+ISIN
+US70450Y1038
+09-dic-2025
+0,00
+160,67
+Operazione sul capitale
+**See WMT:xnas (Walmart Inc.)
+Change
+0,00
+-
+**See WMT:xnas (Walmart Inc.)
+Vendita Alla chiusura -3 @ 92,82
+Transaction description
+ID Evento 9465519
+ISIN
+US9311421039
+Operazione sul capitale
+**See WMT:xnas (Walmart Inc.)
+Change
+0,00
+-
+Walmart Inc.
+Acquisto In apertura 3 @ 92,82
+Transaction description
+ID Evento 9465519
+ISIN
+US9311421039
+05-dic-2025
+-97,74
+160,67
+\n=== PAGE 12 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 12 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+CRISPR Therapeutics Ltd
+Acquista 2 @ 56,26 USD
+-97,74
+-
+Commissione
+-0,86 EUR
+Valore negoziato
+-96,88 EUR
+Costo di conversione valuta
+-0,24
+Costo totale
+-1,10 EUR
+Tasso di conversione
+0,860988
+ID contrattazione
+6505028731
+ISIN
+CH0334081137
+04-dic-2025
+-316,60
+258,41
+Contrattazione
+NVIDIA Corp.
+Acquista 2 @ 183,57 USD
+-316,60
+-
+Commissione
+-0,86 EUR
+Valore negoziato
+-315,74 EUR
+Costo di conversione valuta
+-0,78
+Costo totale
+-1,64 EUR
+Tasso di conversione
+0,860009
+ID contrattazione
+6502725109
+ISIN
+US67066G1040
+28-nov-2025
+-520,71
+575,01
+Contrattazione
+Qorvo Inc.
+Acquista 2 @ 85,55 USD
+-149,09
+-
+Valore negoziato
+-148,22 EUR
+Commissione
+-0,87 EUR
+Costo di conversione valuta
+-0,38
+Costo totale
+-1,24 EUR
+Tasso di conversione
+0,866300
+ID contrattazione
+6495991203
+ISIN
+US74736K1016
+\n=== PAGE 13 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 13 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+D-Wave Quantum Inc.
+Acquista 5 @ 22,75 USD
+-99,42
+-
+Commissione
+-0,87 EUR
+Valore negoziato
+-98,55 EUR
+Costo di conversione valuta
+-0,26
+Costo totale
+-1,12 EUR
+Tasso di conversione
+0,866341
+ID contrattazione
+6496004699
+ISIN
+US26740W1099
+Contrattazione
+Alibaba Group Holding Ltd - ADR
+Acquista 2 @ 134,60 EUR
+-272,20
+-
+Commissione
+-3,00 EUR
+Valore negoziato
+-269,20 EUR
+Costo totale
+-3,00 EUR
+Tasso di conversione
+1,000000
+ID contrattazione
+6495547543
+ISIN
+US01609W1027
+26-nov-2025
+0,00
+1.095,72
+Operazione sul capitale
+Eutelsat Communications
+Distribuzione titoli intermedi
+0,00
+-
+Eutelsat Communications
+Acquisto In apertura 25 @ 3,61
+Eutelsat Communications
+Vendita Alla chiusura -25 @ 4,64
+Transaction description
+ID Evento 9466861
+ISIN
+FR0010221234
+Operazione sul capitale
+Eutelsat Communications
+Distribuzione titoli intermedi
+0,00
+-
+Eutelsat Communications-Rights
+Acquisto In apertura 25 @ 1,02
+Transaction description
+ID Evento 9466861
+ISIN
+FR0010221234
+\n=== PAGE 14 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 14 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+25-nov-2025
+1.054,41
+1.095,72
+Contrattazione
+NVIDIA Corp.
+Vendi -7 @ 174,63 USD
+1.054,41
+-
+Commissione
+-0,86 EUR
+Valore negoziato
+1.055,27 EUR
+Costo di conversione valuta
+-2,64
+Costo totale
+-3,51 EUR
+Tasso di conversione
+0,863271
+ID contrattazione
+6492286013
+ISIN
+US67066G1040
+24-nov-2025
+-687,31
+41,31
+Contrattazione
+KULR Technology Group Inc
+Acquista 30 @ 2,34 USD
+-61,83
+-
+Commissione
+-0,87 EUR
+Valore negoziato
+-60,96 EUR
+Costo di conversione valuta
+-0,15
+Costo totale
+-1,02 EUR
+Tasso di conversione
+0,870230
+ID contrattazione
+6491322820
+ISIN
+US50125G3074
+Contrattazione
+CDT Environmental Technology Investment Hldngs
+Ltd
+Acquista 200 @ 0,38 USD
+-66,64
+-
+Commissione
+-0,87 EUR
+Valore negoziato
+-65,77 EUR
+Costo di conversione valuta
+-0,16
+Costo totale
+-1,03 EUR
+Tasso di conversione
+0,869984
+ID contrattazione
+6491312737
+ISIN
+KYG2030P1072
+\n=== PAGE 15 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 15 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Zhejiang Sanhua Intelligent Controls Co Ltd
+Acquista 100 @ 31,94 HKD
+-359,71
+-
+Imposta di bollo Hong Kong
+-0,45 EUR
+Commissione
+-1,68 EUR
+Valore negoziato
+-357,55 EUR
+Commissioni di Borsa
+-0,03 EUR
+Costo di conversione valuta
+-0,91
+Costo totale
+-3,06 EUR
+Tasso di conversione
+0,111943
+ID contrattazione
+6490246686
+ISIN
+CNE100006Z79
+Contrattazione
+Realbotix Corp
+Acquista 100 @ 0,40 CAD
+-27,45
+-
+Commissione
+-3,08 EUR
+Valore negoziato
+-24,37 EUR
+Costo di conversione valuta
+-0,06
+Costo totale
+-3,14 EUR
+Tasso di conversione
+0,616862
+ID contrattazione
+6491328472
+ISIN
+CA75604K1075
+Contrattazione
+Kraneshares SSE Star Market 50 UCITS ETF
+Acquista 10 @ 16,97 EUR
+-171,68
+-
+Commissione
+-2,00 EUR
+Valore negoziato
+-169,68 EUR
+Costo totale
+-2,00 EUR
+Tasso di conversione
+1,000000
+ID contrattazione
+6490378945
+ISIN
+IE00BKPJY541
+20-nov-2025
+-85,32
+742,10
+\n=== PAGE 16 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 16 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+VanEck Uranium and Nuclear Technologies UCITS
+ETF
+Acquista 6 @ 49,00 EUR
+-296,00
+-
+Commissione
+-2,00 EUR
+Valore negoziato
+-294,00 EUR
+Costo totale
+-2,00 EUR
+Tasso di conversione
+1,000000
+ID contrattazione
+6486729961
+ISIN
+IE000M7V94E1
+Contrattazione
+Joby Aviation Incorporation
+Vendi -20 @ 13,00 USD
+210,68
+-
+Commissione
+-0,87 EUR
+Valore negoziato
+225,03 EUR
+Imposta nazionale sulle plusvalenze
+-13,48 EUR
+Costo di conversione valuta
+-0,56
+Costo totale
+-1,43 EUR
+Tasso di conversione
+0,865424
+ID contrattazione
+6488261683
+ISIN
+KYG651631007
+19-nov-2025
+-483,42
+813,94
+Contrattazione
+Voyager Technologies Inc.
+Acquista 10 @ 18,15 USD
+-158,33
+-
+Commissione
+-0,87 EUR
+Valore negoziato
+-157,46 EUR
+Costo di conversione valuta
+-0,39
+Costo totale
+-1,26 EUR
+Tasso di conversione
+0,867567
+ID contrattazione
+6485821851
+ISIN
+US92892B1035
+\n=== PAGE 17 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 17 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+NVIDIA Corp.
+Acquista 2 @ 186,90 USD
+-325,09
+-
+Commissione
+-0,87 EUR
+Valore negoziato
+-324,22 EUR
+Costo di conversione valuta
+-0,80
+Costo totale
+-1,67 EUR
+Tasso di conversione
+0,867376
+ID contrattazione
+6485798637
+ISIN
+US67066G1040
+14-nov-2025
+232,98
+1.309,74
+Contrattazione
+CDT Environmental Technology Investment Hldngs
+Ltd
+Acquista 200 @ 0,35 USD
+-61,28
+-
+Commissione
+-0,86 EUR
+Valore negoziato
+-60,42 EUR
+Costo di conversione valuta
+-0,16
+Costo totale
+-1,02 EUR
+Tasso di conversione
+0,863323
+ID contrattazione
+6481296296
+ISIN
+KYG2030P1072
+Contrattazione
+Datadog Inc.
+Vendi -2 @ 179,31 USD
+294,26
+-
+Commissione
+-0,86 EUR
+Valore negoziato
+307,50 EUR
+Imposta nazionale sulle plusvalenze
+-12,38 EUR
+Costo di conversione valuta
+-0,77
+Costo totale
+-1,63 EUR
+Tasso di conversione
+0,857460
+ID contrattazione
+6480642555
+ISIN
+US23804L1035
+13-nov-2025
+-568,90
+1.064,38
+\n=== PAGE 18 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 18 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+iShares MSCI China Acc UCITS ETF
+Acquista 100 @ 5,66 EUR
+-568,90
+-
+Commissione
+-3,00 EUR
+Valore negoziato
+-565,90 EUR
+Costo totale
+-3,00 EUR
+Tasso di conversione
+1,000000
+ID contrattazione
+6478961175
+ISIN
+IE00BJ5JPG56
+12-nov-2025
+257,54
+1.650,00
+Contrattazione
+Alibaba Group Holding Ltd - ADR
+Vendi -2 @ 159,50 USD
+257,54
+-
+Commissione
+-0,86 EUR
+Valore negoziato
+275,12 EUR
+Imposta nazionale sulle plusvalenze
+-16,72 EUR
+Costo di conversione valuta
+-0,68
+Costo totale
+-1,54 EUR
+Tasso di conversione
+0,862431
+ID contrattazione
+6477244664
+ISIN
+US01609W1027
+11-nov-2025
+-345,44
+1.375,74
+Contrattazione
+Baidu.com Inc. - ADR
+Acquista 3 @ 132,92 USD
+-345,44
+-
+Commissione
+-0,86 EUR
+Valore negoziato
+-344,58 EUR
+Costo di conversione valuta
+-0,86
+Costo totale
+-1,72 EUR
+Tasso di conversione
+0,864116
+ID contrattazione
+6475880997
+ISIN
+US0567521085
+10-nov-2025
+-2.158,91
+1.721,18
+\n=== PAGE 19 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 19 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+NVIDIA Corp.
+Acquista 3 @ 195,00 USD
+-507,95
+-
+Commissione
+-0,87 EUR
+Valore negoziato
+-507,08 EUR
+Costo di conversione valuta
+-1,27
+Costo totale
+-2,13 EUR
+Tasso di conversione
+0,866806
+ID contrattazione
+6474428384
+ISIN
+US67066G1040
+Contrattazione
+D-Wave Quantum Inc.
+Acquista 5 @ 29,86 USD
+-130,33
+-
+Commissione
+-0,87 EUR
+Valore negoziato
+-129,46 EUR
+Costo di conversione valuta
+-0,33
+Costo totale
+-1,19 EUR
+Tasso di conversione
+0,867143
+ID contrattazione
+6474500271
+ISIN
+US26740W1099
+Contrattazione
+Arista Networks Inc.
+Acquista 2 @ 137,50 USD
+-239,24
+-
+Commissione
+-0,87 EUR
+Valore negoziato
+-238,37 EUR
+Costo di conversione valuta
+-0,60
+Costo totale
+-1,46 EUR
+Tasso di conversione
+0,866806
+ID contrattazione
+6474426648
+ISIN
+US0404132054
+\n=== PAGE 20 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 20 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Voyager Technologies Inc.
+Acquista 10 @ 24,11 USD
+-209,87
+-
+Commissione
+-0,87 EUR
+Valore negoziato
+-209,00 EUR
+Costo di conversione valuta
+-0,53
+Costo totale
+-1,39 EUR
+Tasso di conversione
+0,866847
+ID contrattazione
+6474434110
+ISIN
+US92892B1035
+Contrattazione
+VanEck Uranium and Nuclear Technologies UCITS
+ETF
+Acquista 3 @ 52,13 EUR
+-158,39
+-
+Commissione
+-2,00 EUR
+Valore negoziato
+-156,39 EUR
+Costo totale
+-2,00 EUR
+Tasso di conversione
+1,000000
+ID contrattazione
+6474128262
+ISIN
+IE000M7V94E1
+Contrattazione
+Oracle Corp.
+Acquista 2 @ 246,49 USD
+-428,22
+-
+Commissione
+-0,87 EUR
+Valore negoziato
+-427,35 EUR
+Costo di conversione valuta
+-1,07
+Costo totale
+-1,93 EUR
+Tasso di conversione
+0,866877
+ID contrattazione
+6474445597
+ISIN
+US68389X1054
+\n=== PAGE 21 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 21 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+TSMC - ADR
+Acquista 1 @ 295,00 USD
+-256,59
+-
+Commissione
+-0,87 EUR
+Valore negoziato
+-255,72 EUR
+Costo di conversione valuta
+-0,65
+Costo totale
+-1,51 EUR
+Tasso di conversione
+0,866843
+ID contrattazione
+6474430709
+ISIN
+US8740391003
+Contrattazione
+BYD Company Ltd - ADR
+Acquista 20 @ 13,12 USD
+-228,32
+-
+Commissione
+-0,87 EUR
+Valore negoziato
+-227,45 EUR
+Costo di conversione valuta
+-0,57
+Costo totale
+-1,43 EUR
+Tasso di conversione
+0,866825
+ID contrattazione
+6474409678
+ISIN
+US05606L1008
+07-nov-2025
+751,34
+3.918,33
+Contrattazione
+Microsoft Corp.
+Vendi -1 @ 493,83 USD
+421,65
+-
+Commissione
+-0,86 EUR
+Valore negoziato
+425,11 EUR
+Imposta nazionale sulle plusvalenze
+-2,60 EUR
+Costo di conversione valuta
+-1,07
+Costo totale
+-1,93 EUR
+Tasso di conversione
+0,860847
+ID contrattazione
+6472168721
+ISIN
+US5949181045
+\n=== PAGE 22 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 22 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Tesla Inc.
+Vendi -1 @ 424,83 USD
+329,69
+-
+Commissione
+-0,86 EUR
+Valore negoziato
+366,19 EUR
+Imposta nazionale sulle plusvalenze
+-35,64 EUR
+Costo di conversione valuta
+-0,92
+Costo totale
+-1,78 EUR
+Tasso di conversione
+0,861972
+ID contrattazione
+6471911729
+ISIN
+US88160R1014
+06-nov-2025
+2.453,89
+3.371,43
+Operazione sul capitale
+Baidu.com Inc. - ADR
+Altro evento
+-0,03
+-
+Depository Charges
+-0,03 EUR
+Transaction description
+ID Evento 9441077
+ISIN
+US0567521085
+Operazione sul capitale
+Nokia Oyj
+Dividendo in contanti
+1,15
+-
+Quantità idonea
+80
+Dividendo per azione
+0,03 EUR
+Tasso di conversione
+1,000000
+Dividendi - ritenuta alla fonte
+-0,84 EUR
+Dividendi - ritenuta alla fonte (%)
+35%
+Dividendi - ritenuta italiana
+-0,41 EUR
+Dividendi - ritenuta italiana (%)
+26%
+Corporate Actions - Dividendi
+2,40 EUR
+Transaction description
+ID Evento 9341376
+ISIN
+FI0009000681
+\n=== PAGE 23 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 23 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Palantir Technologies Inc.
+Vendi -4 @ 178,83 USD
+594,77
+-
+Commissione
+-0,86 EUR
+Valore negoziato
+618,34 EUR
+Imposta nazionale sulle plusvalenze
+-22,71 EUR
+Costo di conversione valuta
+-1,54
+Costo totale
+-2,41 EUR
+Tasso di conversione
+0,864430
+ID contrattazione
+6470276385
+ISIN
+US69608A1088
+Contrattazione
+KULR Technology Group Inc
+Acquista 22 @ 3,06 USD
+-59,32
+-
+Commissione
+-0,87 EUR
+Valore negoziato
+-58,45 EUR
+Costo di conversione valuta
+-0,15
+Costo totale
+-1,02 EUR
+Tasso di conversione
+0,869660
+ID contrattazione
+6470178633
+ISIN
+US50125G3074
+Contrattazione
+XPeng Inc. - ADR
+Acquista 5 @ 24,33 USD
+-106,60
+-
+Commissione
+-0,87 EUR
+Valore negoziato
+-105,73 EUR
+Costo di conversione valuta
+-0,26
+Costo totale
+-1,13 EUR
+Tasso di conversione
+0,869170
+ID contrattazione
+6470138581
+ISIN
+US98422D1054
+\n=== PAGE 24 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 24 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+NVIDIA Corp.
+Vendi -8 @ 193,03 USD
+1.251,54
+-
+Commissione
+-0,87 EUR
+Valore negoziato
+1.336,86 EUR
+Imposta nazionale sulle plusvalenze
+-84,45 EUR
+Costo di conversione valuta
+-3,35
+Costo totale
+-4,22 EUR
+Tasso di conversione
+0,865705
+ID contrattazione
+6469875161
+ISIN
+US67066G1040
+Contrattazione
+Solid Power Inc.
+Vendi -130 @ 8,08 USD
+772,38
+-
+Commissione
+-0,87 EUR
+Valore negoziato
+908,77 EUR
+Imposta nazionale sulle plusvalenze
+-135,52 EUR
+Costo di conversione valuta
+-2,28
+Costo totale
+-3,15 EUR
+Tasso di conversione
+0,865168
+ID contrattazione
+6469610821
+ISIN
+US83422N1054
+04-nov-2025
+525,22
+700,53
+Contrattazione
+KULR Technology Group Inc
+Acquista 20 @ 3,38 USD
+-59,91
+-
+Commissione
+-0,87 EUR
+Valore negoziato
+-59,04 EUR
+Costo di conversione valuta
+-0,15
+Costo totale
+-1,02 EUR
+Tasso di conversione
+0,873307
+ID contrattazione
+6465893527
+ISIN
+US50125G3074
+\n=== PAGE 25 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 25 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Broadcom Inc.
+Vendi -2 @ 351,94 USD
+585,13
+-
+Commissione
+-0,87 EUR
+Valore negoziato
+611,67 EUR
+Imposta nazionale sulle plusvalenze
+-25,67 EUR
+Costo di conversione valuta
+-1,53
+Costo totale
+-2,40 EUR
+Tasso di conversione
+0,869007
+ID contrattazione
+6466732928
+ISIN
+US11135F1012
+03-nov-2025
+-675,32
+149,64
+Contrattazione
+VanEck Uranium and Nuclear Technologies UCITS
+ETF
+Acquista 7 @ 57,51 EUR
+-404,57
+-
+Commissione
+-2,00 EUR
+Valore negoziato
+-402,57 EUR
+Costo totale
+-2,00 EUR
+Tasso di conversione
+1,000000
+ID contrattazione
+6463537512
+ISIN
+IE000M7V94E1
+Contrattazione
+Substrate Artificial Intelligence SA
+Acquista 1300 @ 0,09 EUR
+-122,00
+-
+Commissione
+-5,00 EUR
+Valore negoziato
+-117,00 EUR
+Costo totale
+-5,00 EUR
+Tasso di conversione
+1,000000
+ID contrattazione
+6463508445
+ISIN
+ES0105650008
+\n=== PAGE 26 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 26 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Arm Holdings Limited - ADR
+Acquista 1 @ 169,83 USD
+-148,75
+-
+Valore negoziato
+-147,88 EUR
+Commissione
+-0,87 EUR
+Costo di conversione valuta
+-0,37
+Costo totale
+-1,24 EUR
+Tasso di conversione
+0,870762
+ID contrattazione
+6464441283
+ISIN
+US0420682058
+31-ott-2025
+-248,20
+824,96
+Contrattazione
+D-Wave Quantum Inc.
+Acquista 5 @ 36,04 USD
+-157,32
+-
+Commissione
+-0,87 EUR
+Valore negoziato
+-156,45 EUR
+Costo di conversione valuta
+-0,39
+Costo totale
+-1,26 EUR
+Tasso di conversione
+0,868187
+ID contrattazione
+6462316538
+ISIN
+US26740W1099
+Contrattazione
+VNET Group Inc. - ADR
+Acquista 10 @ 10,37 USD
+-90,88
+-
+Commissione
+-0,87 EUR
+Valore negoziato
+-90,01 EUR
+Costo di conversione valuta
+-0,22
+Costo totale
+-1,09 EUR
+Tasso di conversione
+0,868022
+ID contrattazione
+6462295598
+ISIN
+US90138A1034
+30-ott-2025
+-213,94
+1.073,16
+\n=== PAGE 27 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 27 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Baidu.com Inc. - ADR
+Acquista 2 @ 122,95 USD
+-213,94
+-
+Commissione
+-0,87 EUR
+Valore negoziato
+-213,07 EUR
+Costo di conversione valuta
+-0,54
+Costo totale
+-1,40 EUR
+Tasso di conversione
+0,866503
+ID contrattazione
+6460610675
+ISIN
+US0567521085
+29-ott-2025
+-511,00
+1.287,10
+Contrattazione
+Alphabet Inc. Class A
+Acquista 1 @ 271,91 USD
+-234,59
+-
+Commissione
+-0,86 EUR
+Valore negoziato
+-233,73 EUR
+Costo di conversione valuta
+-0,58
+Costo totale
+-1,44 EUR
+Tasso di conversione
+0,859582
+ID contrattazione
+6459499690
+ISIN
+US02079K3059
+Contrattazione
+Arista Networks Inc.
+Acquista 2 @ 160,20 USD
+-276,41
+-
+Commissione
+-0,86 EUR
+Valore negoziato
+-275,55 EUR
+Costo di conversione valuta
+-0,69
+Costo totale
+-1,55 EUR
+Tasso di conversione
+0,860024
+ID contrattazione
+6459531962
+ISIN
+US0404132054
+27-ott-2025
+-59,12
+1.798,10
+\n=== PAGE 28 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 28 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Realbotix Corp
+Acquista 200 @ 0,46 CAD
+-59,12
+-
+Commissione
+-3,08 EUR
+Valore negoziato
+-56,04 EUR
+Costo di conversione valuta
+-0,15
+Costo totale
+-3,22 EUR
+Tasso di conversione
+0,615865
+ID contrattazione
+6455868883
+ISIN
+CA75604K1075
+23-ott-2025
+1,08
+1.857,22
+Operazione sul capitale
+Oracle Corp.
+Dividendo in contanti
+1,08
+-
+Quantità idonea
+4
+Dividendo per azione
+0,50 USD
+Tasso di conversione
+0,862388
+Corporate Actions - Dividendi
+1,72 EUR
+Dividendi - ritenuta alla fonte
+-0,26 EUR
+Dividendi - ritenuta alla fonte (%)
+15%
+Dividendi - ritenuta italiana
+-0,38 EUR
+Dividendi - ritenuta italiana (%)
+26%
+Transaction description
+ID Evento 9435698
+ISIN
+US68389X1054
+22-ott-2025
+822,80
+1.892,60
+\n=== PAGE 29 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 29 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+D-Wave Quantum Inc.
+Vendi -10 @ 28,98 USD
+217,55
+-
+Commissione
+-0,86 EUR
+Valore negoziato
+249,23 EUR
+Imposta nazionale sulle plusvalenze
+-30,82 EUR
+Costo di conversione valuta
+-0,62
+Costo totale
+-1,48 EUR
+Tasso di conversione
+0,860003
+ID contrattazione
+6451174682
+ISIN
+US26740W1099
+Contrattazione
+Realbotix Corp
+Vendi -2000 @ 0,51 CAD
+605,25
+-
+Commissione
+-15,35 EUR
+Valore negoziato
+626,24 EUR
+Imposta nazionale sulle plusvalenze
+-5,64 EUR
+Costo di conversione valuta
+-1,53
+Costo totale
+-16,92 EUR
+Tasso di conversione
+0,613958
+ID contrattazione
+6450977684
+ISIN
+CA75604K1075
+21-ott-2025
+651,01
+1.088,40
+Contrattazione
+Oracle Corp.
+Vendi -3 @ 274,33 USD
+651,01
+-
+Commissione
+-0,86 EUR
+Valore negoziato
+706,93 EUR
+Imposta nazionale sulle plusvalenze
+-55,06 EUR
+Costo di conversione valuta
+-1,77
+Costo totale
+-2,63 EUR
+Tasso di conversione
+0,858973
+ID contrattazione
+6449465324
+ISIN
+US68389X1054
+16-ott-2025
+268,34
+382,33
+\n=== PAGE 30 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 30 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Nio Inc. - ADR
+Vendi -50 @ 6,29 USD
+268,34
+-
+Commissione
+-0,86 EUR
+Valore negoziato
+269,20 EUR
+Costo di conversione valuta
+-0,67
+Costo totale
+-1,53 EUR
+Tasso di conversione
+0,855950
+ID contrattazione
+6444212149
+ISIN
+US62914V1061
+13-ott-2025
+-1.688,27
+223,18
+Contrattazione
+Voyager Technologies Inc.
+Acquista 10 @ 32,17 USD
+-279,64
+-
+Commissione
+-0,87 EUR
+Valore negoziato
+-278,77 EUR
+Costo di conversione valuta
+-0,70
+Costo totale
+-1,56 EUR
+Tasso di conversione
+0,866484
+ID contrattazione
+6438806777
+ISIN
+US92892B1035
+Contrattazione
+Nokia Oyj
+Acquista 40 @ 4,56 EUR
+-185,31
+-
+Commissione
+-3,00 EUR
+Valore negoziato
+-182,31 EUR
+Costo totale
+-3,00 EUR
+Tasso di conversione
+1,000000
+ID contrattazione
+6438820978
+ISIN
+FI0009000681
+\n=== PAGE 31 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 31 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Palantir Technologies Inc.
+Acquista 4 @ 176,84 USD
+-613,84
+-
+Commissione
+-0,87 EUR
+Valore negoziato
+-612,97 EUR
+Costo di conversione valuta
+-1,53
+Costo totale
+-2,39 EUR
+Tasso di conversione
+0,866566
+ID contrattazione
+6438791445
+ISIN
+US69608A1088
+Contrattazione
+Broadcom Inc.
+Acquista 2 @ 351,16 USD
+-609,48
+-
+Commissione
+-0,87 EUR
+Valore negoziato
+-608,61 EUR
+Costo di conversione valuta
+-1,53
+Costo totale
+-2,39 EUR
+Tasso di conversione
+0,866574
+ID contrattazione
+6438781962
+ISIN
+US11135F1012
+10-ott-2025
+1.788,20
+1.911,45
+Transazioni in Contanti
+Imposta di bollo sul deposito titoli
+-8,56
+-
+Tasso di conversione
+1,000000
+Imposta di bollo sul deposito titoli
+-8,56 EUR
+Commento
+Imposta di bollo dossier titoli - Q3 2025
+\n=== PAGE 32 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 32 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Novo Nordisk B A/S
+Acquista 2 @ 375,70 DKK
+-102,22
+-
+Valore negoziato
+-100,88 EUR
+Commissione
+-1,34 EUR
+Costo di conversione valuta
+-0,25
+Costo totale
+-1,59 EUR
+Tasso di conversione
+0,134258
+ID contrattazione
+6436105375
+ISIN
+DK0062498333
+Contrattazione
+Amazon.com Inc.
+Acquista 2 @ 226,08 USD
+-392,77
+-
+Valore negoziato
+-391,90 EUR
+Commissione
+-0,87 EUR
+Costo di conversione valuta
+-0,99
+Costo totale
+-1,85 EUR
+Tasso di conversione
+0,866731
+ID contrattazione
+6436301982
+ISIN
+US0231351067
+Contrattazione
+Palantir Technologies Inc.
+Vendi -4 @ 175,37 USD
+561,33
+-
+Valore negoziato
+602,57 EUR
+Commissione
+-0,86 EUR
+Imposta nazionale sulle plusvalenze
+-40,38 EUR
+Costo di conversione valuta
+-1,51
+Costo totale
+-2,37 EUR
+Tasso di conversione
+0,858982
+ID contrattazione
+6437644437
+ISIN
+US69608A1088
+Trasferimento di liquidità
+Deposito
+1.000,00
+-
+Commento
+/OCMT/EUR1000,/19807401
+Deposit Type
+External
+Tasso di conversione
+1,000000
+Importo in contanti
+1.000,00 EUR
+\n=== PAGE 33 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 33 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Nokia Oyj
+Acquista 40 @ 4,54 EUR
+-184,71
+-
+Valore negoziato
+-181,71 EUR
+Commissione
+-3,00 EUR
+Costo totale
+-3,00 EUR
+Tasso di conversione
+1,000000
+ID contrattazione
+6436155209
+ISIN
+FI0009000681
+Contrattazione
+Broadcom Inc.
+Vendi -3 @ 324,94 USD
+779,05
+-
+Valore negoziato
+837,21 EUR
+Commissione
+-0,86 EUR
+Imposta nazionale sulle plusvalenze
+-57,30 EUR
+Costo di conversione valuta
+-2,10
+Costo totale
+-2,96 EUR
+Tasso di conversione
+0,858837
+ID contrattazione
+6437573591
+ISIN
+US11135F1012
+Contrattazione
+Realbotix Corp
+Vendi -700 @ 0,60 CAD
+240,96
+-
+Valore negoziato
+258,94 EUR
+Commissione
+-6,47 EUR
+Imposta nazionale sulle plusvalenze
+-11,51 EUR
+Costo di conversione valuta
+-0,63
+Costo totale
+-7,12 EUR
+Tasso di conversione
+0,616527
+ID contrattazione
+6436433427
+ISIN
+CA75604K1075
+\n=== PAGE 34 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 34 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+United States Antimony Corp.
+Acquista 10 @ 12,00 USD
+-104,88
+-
+Valore negoziato
+-104,01 EUR
+Commissione
+-0,87 EUR
+Costo di conversione valuta
+-0,27
+Costo totale
+-1,13 EUR
+Tasso di conversione
+0,866727
+ID contrattazione
+6436286499
+ISIN
+US9115491030
+06-ott-2025
+-0,17
+14,06
+Operazione sul capitale
+XPeng Inc. - ADR
+Altro evento
+-0,17
+-
+Depository Charges
+-0,17 EUR
+Transaction description
+ID Evento 9398674
+ISIN
+US98422D1054
+02-ott-2025
+0,05
+14,23
+Operazione sul capitale
+NVIDIA Corp.
+Dividendo in contanti
+0,05
+-
+Quantità idonea
+10
+Dividendo per azione
+0,01 USD
+Tasso di conversione
+0,852025
+Corporate Actions - Dividendi
+0,09 EUR
+Dividendi - ritenuta alla fonte
+-0,02 EUR
+Dividendi - ritenuta alla fonte (%)
+15%
+Dividendi - ritenuta italiana
+-0,02 EUR
+Dividendi - ritenuta italiana (%)
+26%
+Transaction description
+ID Evento 9431640
+ISIN
+US67066G1040
+30-set-2025
+1,59
+14,18
+\n=== PAGE 35 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 35 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Operazione sul capitale
+Broadcom Inc.
+Dividendo in contanti
+1,59
+-
+Quantità idonea
+5
+Dividendo per azione
+0,59 USD
+Tasso di conversione
+0,852003
+Dividendi - ritenuta italiana
+-0,55 EUR
+Dividendi - ritenuta italiana (%)
+26%
+Dividendi - ritenuta alla fonte
+-0,37 EUR
+Dividendi - ritenuta alla fonte (%)
+15%
+Corporate Actions - Dividendi
+2,51 EUR
+Transaction description
+ID Evento 9435691
+ISIN
+US11135F1012
+29-set-2025
+0,28
+12,59
+Operazione sul capitale
+Meta Platforms Inc.
+Dividendo in contanti
+0,28
+-
+Quantità idonea
+1
+Dividendo per azione
+0,53 USD
+Tasso di conversione
+0,852430
+Corporate Actions - Dividendi
+0,45 EUR
+Dividendi - ritenuta alla fonte
+-0,07 EUR
+Dividendi - ritenuta alla fonte (%)
+15%
+Dividendi - ritenuta italiana
+-0,10 EUR
+Dividendi - ritenuta italiana (%)
+26%
+Transaction description
+ID Evento 9436948
+ISIN
+US30303M1027
+25-set-2025
+0,96
+12,31
+\n=== PAGE 36 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 36 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Operazione sul capitale
+Qualcomm Inc.
+Dividendo in contanti
+0,96
+-
+Quantità idonea
+2
+Dividendo per azione
+0,89 USD
+Tasso di conversione
+0,851756
+Corporate Actions - Dividendi
+1,52 EUR
+Dividendi - ritenuta italiana
+-0,33 EUR
+Dividendi - ritenuta italiana (%)
+26%
+Dividendi - ritenuta alla fonte
+-0,23 EUR
+Dividendi - ritenuta alla fonte (%)
+15%
+Transaction description
+ID Evento 9415447
+ISIN
+US7475251036
+18-set-2025
+-75,51
+11,35
+Contrattazione
+United States Antimony Corp.
+Acquista 7 @ 5,55 USD
+-33,97
+-
+Valore negoziato
+-33,12 EUR
+Commissione
+-0,85 EUR
+Costo di conversione valuta
+-0,08
+Costo totale
+-0,93 EUR
+Tasso di conversione
+0,852473
+ID contrattazione
+6406789932
+ISIN
+US9115491030
+Contrattazione
+Intel Corp.
+Acquista 20 @ 31,78 USD
+-541,54
+-
+Commissione
+-0,85 EUR
+Valore negoziato
+-540,69 EUR
+Costo di conversione valuta
+-1,35
+Costo totale
+-2,20 EUR
+Tasso di conversione
+0,850672
+ID contrattazione
+6406606382
+ISIN
+US4581401001
+\n=== PAGE 37 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 37 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Trasferimento di liquidità
+Deposito
+500,00
+-
+Commento
+/OCMT/EUR500,/19807401
+Deposit Type
+External
+Tasso di conversione
+1,000000
+Importo in contanti
+500,00 EUR
+17-set-2025
+-602,57
+86,86
+Contrattazione
+Nio Inc. - ADR
+Acquista 30 @ 7,23 USD
+-184,37
+-
+Commissione
+-0,85 EUR
+Valore negoziato
+-183,52 EUR
+Costo di conversione valuta
+-0,46
+Costo totale
+-1,30 EUR
+Tasso di conversione
+0,846117
+ID contrattazione
+6405072852
+ISIN
+US62914V1061
+Contrattazione
+Palantir Technologies Inc.
+Acquista 3 @ 164,44 USD
+-418,20
+-
+Commissione
+-0,85 EUR
+Valore negoziato
+-417,35 EUR
+Costo di conversione valuta
+-1,05
+Costo totale
+-1,89 EUR
+Tasso di conversione
+0,846002
+ID contrattazione
+6405329691
+ISIN
+US69608A1088
+16-set-2025
+-653,49
+689,43
+Operazione sul capitale
+PDD Holdings Inc - ADR
+Altro evento
+-0,03
+-
+Depository Charges
+-0,03 EUR
+Transaction description
+ID Evento 9427180
+ISIN
+US7223041028
+\n=== PAGE 38 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 38 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Meta Platforms Inc.
+Acquista 1 @ 769,70 USD
+-653,46
+-
+Commissione
+-0,85 EUR
+Valore negoziato
+-652,61 EUR
+Costo di conversione valuta
+-1,63
+Costo totale
+-2,48 EUR
+Tasso di conversione
+0,847873
+ID contrattazione
+6403846452
+ISIN
+US30303M1027
+15-set-2025
+0,11
+1.342,92
+Operazione sul capitale
+Alphabet Inc. Class A
+Dividendo in contanti
+0,11
+-
+Quantità idonea
+1
+Dividendo per azione
+0,21 USD
+Tasso di conversione
+0,852575
+Dividendi - ritenuta alla fonte
+-0,03 EUR
+Dividendi - ritenuta alla fonte (%)
+15%
+Dividendi - ritenuta italiana
+-0,04 EUR
+Dividendi - ritenuta italiana (%)
+26%
+Corporate Actions - Dividendi
+0,18 EUR
+Transaction description
+ID Evento 9416581
+ISIN
+US02079K3059
+11-set-2025
+0,46
+1.342,81
+\n=== PAGE 39 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 39 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Operazione sul capitale
+Microsoft Corp.
+Dividendo in contanti
+0,46
+-
+Quantità idonea
+1
+Dividendo per azione
+0,83 USD
+Tasso di conversione
+0,855016
+Dividendi - ritenuta alla fonte
+-0,10 EUR
+Dividendi - ritenuta alla fonte (%)
+15%
+Corporate Actions - Dividendi
+0,71 EUR
+Dividendi - ritenuta italiana
+-0,15 EUR
+Dividendi - ritenuta italiana (%)
+26%
+Transaction description
+ID Evento 9402078
+ISIN
+US5949181045
+02-set-2025
+-440,40
+1.342,35
+Operazione sul capitale
+**See WMT:xnas (Walmart Inc.)
+Dividendo in contanti
+0,38
+-
+Quantità idonea
+3
+Dividendo per azione
+0,24 USD
+Tasso di conversione
+0,855289
+Corporate Actions - Dividendi
+0,61 EUR
+Dividendi - ritenuta alla fonte
+-0,09 EUR
+Dividendi - ritenuta alla fonte (%)
+15%
+Dividendi - ritenuta italiana
+-0,14 EUR
+Dividendi - ritenuta italiana (%)
+26%
+Transaction description
+ID Evento 9344030
+ISIN
+US9311421039
+\n=== PAGE 40 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 40 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Oracle Corp.
+Acquista 1 @ 221,39 USD
+-191,56
+-
+Commissione
+-0,86 EUR
+Valore negoziato
+-190,70 EUR
+Costo di conversione valuta
+-0,47
+Costo totale
+-1,33 EUR
+Tasso di conversione
+0,861380
+ID contrattazione
+6386248628
+ISIN
+US68389X1054
+Contrattazione
+Broadcom Inc.
+Acquista 1 @ 288,34 USD
+-249,22
+-
+Valore negoziato
+-248,36 EUR
+Commissione
+-0,86 EUR
+Costo di conversione valuta
+-0,62
+Costo totale
+-1,48 EUR
+Tasso di conversione
+0,861358
+ID contrattazione
+6386229238
+ISIN
+US11135F1012
+01-set-2025
+1.441,98
+1.782,75
+Contrattazione
+Xtrackers AI & Big Data UCITS ETF
+Acquista 4 @ 139,01 EUR
+-558,02
+-
+Commissione
+-2,00 EUR
+Valore negoziato
+-556,02 EUR
+Costo totale
+-2,00 EUR
+Tasso di conversione
+1,000000
+ID contrattazione
+6384807122
+ISIN
+IE00BGV5VN51
+\n=== PAGE 41 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 41 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Trasferimento di liquidità
+Deposito
+2.000,00
+-
+Commento
+/OCMT/EUR2000,/19807401
+Deposit Type
+External
+Tasso di conversione
+1,000000
+Importo in contanti
+2.000,00 EUR
+19-ago-2025
+0,54
+340,77
+Operazione sul capitale
+Novo Nordisk B A/S
+Dividendo in contanti
+0,54
+-
+Quantità idonea
+2
+Dividendo per azione
+3,75 DKK
+Tasso di conversione
+0,133977
+Dividendi - ritenuta italiana
+-0,19 EUR
+Dividendi - ritenuta italiana (%)
+26%
+Dividendi - ritenuta alla fonte
+-0,27 EUR
+Dividendi - ritenuta alla fonte (%)
+27%
+Corporate Actions - Dividendi
+1,00 EUR
+Transaction description
+ID Evento 9421916
+ISIN
+DK0062498333
+01-ago-2025
+-376,60
+340,23
+Contrattazione
+Ferrari NV
+Acquista 1 @ 374,60 EUR
+-376,60
+-
+Commissione
+-2,00 EUR
+Valore negoziato
+-374,60 EUR
+Costo totale
+-2,00 EUR
+Tasso di conversione
+1,000000
+ID contrattazione
+6355803216
+ISIN
+NL0011585146
+31-lug-2025
+-207,95
+716,83
+\n=== PAGE 42 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 42 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Alibaba Group Holding Ltd - ADR
+Acquista 2 @ 117,82 USD
+-207,95
+-
+Commissione
+-0,88 EUR
+Valore negoziato
+-207,07 EUR
+Costo di conversione valuta
+-0,52
+Costo totale
+-1,40 EUR
+Tasso di conversione
+0,878754
+ID contrattazione
+6353695648
+ISIN
+US01609W1027
+30-lug-2025
+-143,71
+924,78
+Contrattazione
+Solid Power Inc.
+Acquista 50 @ 3,27 USD
+-143,71
+-
+Valore negoziato
+-142,84 EUR
+Commissione
+-0,87 EUR
+Costo di conversione valuta
+-0,35
+Costo totale
+-1,22 EUR
+Tasso di conversione
+0,873665
+ID contrattazione
+6352455375
+ISIN
+US83422N1054
+29-lug-2025
+255,15
+1.092,10
+Contrattazione
+Quantum Computing Inc
+Vendi -21 @ 15,39 USD
+255,15
+-
+Commissione
+-0,87 EUR
+Valore negoziato
+279,63 EUR
+Imposta nazionale sulle plusvalenze
+-23,61 EUR
+Costo di conversione valuta
+-0,70
+Costo totale
+-1,57 EUR
+Tasso di conversione
+0,865108
+ID contrattazione
+6350690308
+ISIN
+US74766W1080
+28-lug-2025
+-400,73
+813,34
+\n=== PAGE 43 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 43 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+First Trust Nasdaq Cyber Security UCTIS ETF
+Acquista 5 @ 40,29 EUR
+-203,47
+-
+Valore negoziato
+-201,47 EUR
+Commissione
+-2,00 EUR
+Costo totale
+-2,00 EUR
+Tasso di conversione
+1,000000
+ID contrattazione
+6348373219
+ISIN
+IE00BF16M727
+Contrattazione
+Solid Power Inc.
+Acquista 50 @ 4,56 USD
+-197,26
+-
+Valore negoziato
+-196,40 EUR
+Commissione
+-0,86 EUR
+Costo di conversione valuta
+-0,49
+Costo totale
+-1,35 EUR
+Tasso di conversione
+0,861395
+ID contrattazione
+6348838428
+ISIN
+US83422N1054
+24-lug-2025
+0,80
+1.214,07
+Operazione sul capitale
+Oracle Corp.
+Dividendo in contanti
+0,80
+-
+Quantità idonea
+3
+Dividendo per azione
+0,50 USD
+Tasso di conversione
+0,853060
+Dividendi - ritenuta alla fonte
+-0,20 EUR
+Dividendi - ritenuta alla fonte (%)
+15%
+Corporate Actions - Dividendi
+1,28 EUR
+Dividendi - ritenuta italiana
+-0,28 EUR
+Dividendi - ritenuta italiana (%)
+26%
+Transaction description
+ID Evento 9402096
+ISIN
+US68389X1054
+\n=== PAGE 44 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 44 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+14-lug-2025
+-235,00
+1.213,27
+Contrattazione
+Solid Power Inc.
+Acquista 50 @ 2,43 USD
+-105,17
+-
+Commissione
+-0,86 EUR
+Valore negoziato
+-104,31 EUR
+Costo di conversione valuta
+-0,26
+Costo totale
+-1,12 EUR
+Tasso di conversione
+0,858540
+ID contrattazione
+6334949288
+ISIN
+US83422N1054
+Contrattazione
+D-Wave Quantum Inc.
+Acquista 10 @ 15,02 USD
+-129,83
+-
+Valore negoziato
+-128,97 EUR
+Commissione
+-0,86 EUR
+Costo di conversione valuta
+-0,33
+Costo totale
+-1,19 EUR
+Tasso di conversione
+0,858632
+ID contrattazione
+6334981274
+ISIN
+US26740W1099
+10-lug-2025
+-5,44
+1.448,27
+Transazioni in Contanti
+Imposta di bollo sul deposito titoli
+-5,44
+-
+Tasso di conversione
+1,000000
+Imposta di bollo sul deposito titoli
+-5,44 EUR
+Commento
+Imposta di bollo dossier titoli Q2 2025
+07-lug-2025
+-551,25
+1.453,71
+\n=== PAGE 45 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 45 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Xtrackers AI & Big Data UCITS ETF
+Acquista 4 @ 137,31 EUR
+-551,25
+-
+Valore negoziato
+-549,25 EUR
+Commissione
+-2,00 EUR
+Costo totale
+-2,00 EUR
+Tasso di conversione
+1,000000
+ID contrattazione
+6327148495
+ISIN
+IE00BGV5VN51
+03-lug-2025
+0,04
+2.004,96
+Operazione sul capitale
+NVIDIA Corp.
+Dividendo in contanti
+0,04
+-
+Quantità idonea
+10
+Dividendo per azione
+0,01 USD
+Tasso di conversione
+0,846876
+Corporate Actions - Dividendi
+0,08 EUR
+Dividendi - ritenuta italiana
+-0,02 EUR
+Dividendi - ritenuta italiana (%)
+26%
+Dividendi - ritenuta alla fonte
+-0,02 EUR
+Dividendi - ritenuta alla fonte (%)
+15%
+Transaction description
+ID Evento 9397559
+ISIN
+US67066G1040
+01-lug-2025
+344,27
+2.023,40
+\n=== PAGE 46 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 46 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+United States Antimony Corp.
+Vendi -75 @ 2,09 USD
+123,90
+-
+Commissione
+-0,85 EUR
+Valore negoziato
+132,69 EUR
+Imposta nazionale sulle plusvalenze
+-7,94 EUR
+Costo di conversione valuta
+-0,33
+Costo totale
+-1,18 EUR
+Tasso di conversione
+0,845572
+ID contrattazione
+6322500294
+ISIN
+US9115491030
+Contrattazione
+Advanced Micro Devices Inc.
+Vendi -2 @ 137,00 USD
+220,37
+-
+Valore negoziato
+231,76 EUR
+Commissione
+-0,85 EUR
+Imposta nazionale sulle plusvalenze
+-10,54 EUR
+Costo di conversione valuta
+-0,58
+Costo totale
+-1,43 EUR
+Tasso di conversione
+0,845841
+ID contrattazione
+6322717081
+ISIN
+US0079031078
+30-giu-2025
+1,27
+1.660,65
+Operazione sul capitale
+Broadcom Inc.
+Dividendo in contanti
+1,27
+-
+Quantità idonea
+4
+Dividendo per azione
+0,59 USD
+Tasso di conversione
+0,852383
+Dividendi - ritenuta alla fonte
+-0,30 EUR
+Dividendi - ritenuta alla fonte (%)
+15%
+Corporate Actions - Dividendi
+2,01 EUR
+Dividendi - ritenuta italiana
+-0,44 EUR
+Dividendi - ritenuta italiana (%)
+26%
+Transaction description
+ID Evento 9401061
+ISIN
+US11135F1012
+\n=== PAGE 47 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 47 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+27-giu-2025
+3,48
+1.659,38
+Operazione sul capitale
+KULR Technology Group Inc
+Frazionamento azionario inverso
+3,48
+-
+Operazioni sul capitale - Frazioni
+3,48 EUR
+Transaction description
+ID Evento 9403687
+ISIN
+US50125G3074
+26-giu-2025
+0,96
+1.655,90
+Operazione sul capitale
+Qualcomm Inc.
+Dividendo in contanti
+0,96
+-
+Quantità idonea
+2
+Dividendo per azione
+0,89 USD
+Tasso di conversione
+0,856170
+Corporate Actions - Dividendi
+1,52 EUR
+Dividendi - ritenuta alla fonte
+-0,23 EUR
+Dividendi - ritenuta alla fonte (%)
+15%
+Dividendi - ritenuta italiana
+-0,33 EUR
+Dividendi - ritenuta italiana (%)
+26%
+Transaction description
+ID Evento 9377877
+ISIN
+US7475251036
+25-giu-2025
+0,77
+1.654,94
+Operazione sul capitale
+Leonardo
+Dividendo in contanti
+0,77
+-
+Quantità idonea
+2
+Dividendo per azione
+0,52 EUR
+Tasso di conversione
+1,000000
+Corporate Actions - Dividendi
+1,04 EUR
+Dividendi - ritenuta alla fonte
+-0,27 EUR
+Dividendi - ritenuta alla fonte (%)
+26%
+Transaction description
+ID Evento 9358280
+ISIN
+IT0003856405
+\n=== PAGE 48 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 48 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+23-giu-2025
+0,00
+1.654,17
+Operazione sul capitale
+KULR Technology Group Inc
+Frazionamento azionario inverso
+0,00
+-
+KULR Technology Group Inc
+Vendita Alla chiusura -70 @ 1,57
+KULR Technology Group Inc
+Acquisto In apertura 8 @ 12,56
+Transaction description
+ID Evento 9403687
+ISIN
+US50125G3074
+16-giu-2025
+0,11
+1.654,17
+Operazione sul capitale
+Alphabet Inc. Class A
+Dividendo in contanti
+0,11
+-
+Quantità idonea
+1
+Dividendo per azione
+0,21 USD
+Tasso di conversione
+0,866021
+Dividendi - ritenuta alla fonte
+-0,03 EUR
+Dividendi - ritenuta alla fonte (%)
+15%
+Corporate Actions - Dividendi
+0,18 EUR
+Dividendi - ritenuta italiana
+-0,04 EUR
+Dividendi - ritenuta italiana (%)
+26%
+Transaction description
+ID Evento 9379661
+ISIN
+US02079K3059
+12-giu-2025
+0,37
+1.654,06
+\n=== PAGE 49 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 49 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Operazione sul capitale
+Microsoft Corp.
+Dividendo in contanti
+0,37
+-
+Quantità idonea
+1
+Dividendo per azione
+0,83 USD
+Tasso di conversione
+0,867719
+Dividendi - ritenuta alla fonte
+-0,22 EUR
+Dividendi - ritenuta alla fonte (%)
+30%
+Corporate Actions - Dividendi
+0,72 EUR
+Dividendi - ritenuta italiana
+-0,13 EUR
+Dividendi - ritenuta italiana (%)
+26%
+Transaction description
+ID Evento 9358968
+ISIN
+US5949181045
+11-giu-2025
+-505,69
+1.653,69
+Contrattazione
+iShares Core MSCI World UCITS ETF
+Acquista 5 @ 100,74 EUR
+-505,69
+-
+Commissione
+-2,00 EUR
+Valore negoziato
+-503,69 EUR
+Costo totale
+-2,00 EUR
+Tasso di conversione
+1,000000
+ID contrattazione
+6301506862
+ISIN
+IE00B4L5Y983
+10-giu-2025
+2.000,00
+2.159,38
+Trasferimento di liquidità
+Deposito
+2.000,00
+-
+Commento
+/OCMT/EUR2000,/19807401
+Deposit Type
+External
+Tasso di conversione
+1,000000
+Importo in contanti
+2.000,00 EUR
+27-mag-2025
+144,72
+180,94
+\n=== PAGE 50 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 50 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Operazione sul capitale
+**See WMT:xnas (Walmart Inc.)
+Dividendo in contanti
+0,33
+-
+Quantità idonea
+3
+Dividendo per azione
+0,24 USD
+Tasso di conversione
+0,878196
+Dividendi - ritenuta alla fonte
+-0,18 EUR
+Dividendi - ritenuta alla fonte (%)
+30%
+Dividendi - ritenuta italiana
+-0,11 EUR
+Dividendi - ritenuta italiana (%)
+26%
+Corporate Actions - Dividendi
+0,62 EUR
+Transaction description
+ID Evento 9344029
+ISIN
+US9311421039
+Contrattazione
+D-Wave Quantum Inc.
+Vendi -11 @ 17,27 USD
+144,39
+-
+Valore negoziato
+166,83 EUR
+Commissione
+-0,88 EUR
+Imposta nazionale sulle plusvalenze
+-21,56 EUR
+Costo di conversione valuta
+-0,41
+Costo totale
+-1,29 EUR
+Tasso di conversione
+0,878166
+ID contrattazione
+6285093418
+ISIN
+US26740W1099
+21-mag-2025
+-47,97
+14,66
+Operazione sul capitale
+Webuild
+Dividendo in contanti
+5,99
+-
+Quantità idonea
+100
+Dividendo per azione
+0,08 EUR
+Tasso di conversione
+1,000000
+Dividendi - ritenuta alla fonte
+-2,11 EUR
+Dividendi - ritenuta alla fonte (%)
+26%
+Corporate Actions - Dividendi
+8,10 EUR
+Transaction description
+ID Evento 9359579
+ISIN
+IT0003865570
+\n=== PAGE 51 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 51 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Eutelsat Communications
+Acquista 15 @ 3,45 EUR
+-53,96
+-
+Commissione
+-2,00 EUR
+Tassazione transazioni finanziarie (Francia)
+-0,21 EUR
+Valore negoziato
+-51,75 EUR
+Costo totale
+-2,21 EUR
+Tasso di conversione
+1,000000
+ID contrattazione
+6279686017
+ISIN
+FR0010221234
+20-mag-2025
+-86,49
+62,63
+Contrattazione
+Oculus Inc.
+Acquista 2000 @ 0,06 CAD
+-86,49
+-
+Valore negoziato
+-70,47 EUR
+Commissione
+-16,02 EUR
+Costo di conversione valuta
+-0,22
+Costo totale
+-16,20 EUR
+Tasso di conversione
+0,640631
+ID contrattazione
+6278795415
+ISIN
+US67575Y1091
+16-mag-2025
+-151,36
+149,12
+Contrattazione
+Alphabet Inc. Class A
+Acquista 1 @ 167,96 USD
+-151,36
+-
+Valore negoziato
+-150,46 EUR
+Commissione
+-0,90 EUR
+Costo di conversione valuta
+-0,39
+Costo totale
+-1,28 EUR
+Tasso di conversione
+0,895805
+ID contrattazione
+6276024933
+ISIN
+US02079K3059
+13-mag-2025
+-273,63
+300,48
+\n=== PAGE 52 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 52 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Qualcomm Inc.
+Acquista 2 @ 151,69 USD
+-273,63
+-
+Valore negoziato
+-272,73 EUR
+Commissione
+-0,90 EUR
+Costo di conversione valuta
+-0,68
+Costo totale
+-1,58 EUR
+Tasso di conversione
+0,898962
+ID contrattazione
+6271119880
+ISIN
+US7475251036
+05-mag-2025
+-320,49
+574,11
+Contrattazione
+NVIDIA Corp.
+Acquista 1 @ 113,82 USD
+-101,34
+-
+Commissione
+-0,88 EUR
+Valore negoziato
+-100,46 EUR
+Costo di conversione valuta
+-0,25
+Costo totale
+-1,13 EUR
+Tasso di conversione
+0,882630
+ID contrattazione
+6260989541
+ISIN
+US67066G1040
+Contrattazione
+Palantir Technologies Inc.
+Acquista 2 @ 123,64 USD
+-219,15
+-
+Commissione
+-0,88 EUR
+Valore negoziato
+-218,27 EUR
+Costo di conversione valuta
+-0,54
+Costo totale
+-1,42 EUR
+Tasso di conversione
+0,882700
+ID contrattazione
+6260933487
+ISIN
+US69608A1088
+02-mag-2025
+-88,46
+894,60
+\n=== PAGE 53 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 53 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+XPeng Inc. - ADR
+Acquista 5 @ 19,83 USD
+-88,46
+-
+Valore negoziato
+-87,58 EUR
+Commissione
+-0,88 EUR
+Costo di conversione valuta
+-0,22
+Costo totale
+-1,10 EUR
+Tasso di conversione
+0,883322
+ID contrattazione
+6259409654
+ISIN
+US98422D1054
+25-apr-2025
+-467,24
+983,06
+Contrattazione
+iShares Core MSCI World UCITS ETF
+Acquista 5 @ 93,05 EUR
+-467,24
+-
+Commissione
+-2,00 EUR
+Valore negoziato
+-465,24 EUR
+Costo totale
+-2,00 EUR
+Tasso di conversione
+1,000000
+ID contrattazione
+6251406534
+ISIN
+IE00B4L5Y983
+23-apr-2025
+1.427,72
+1.450,30
+\n=== PAGE 54 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 54 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Operazione sul capitale
+Oracle Corp.
+Dividendo in contanti
+0,68
+-
+Quantità idonea
+3
+Dividendo per azione
+0,50 USD
+Tasso di conversione
+0,878306
+Dividendi - ritenuta alla fonte
+-0,40 EUR
+Dividendi - ritenuta alla fonte (%)
+30%
+Corporate Actions - Dividendi
+1,32 EUR
+Dividendi - ritenuta italiana
+-0,24 EUR
+Dividendi - ritenuta italiana (%)
+26%
+Transaction description
+ID Evento 9356668
+ISIN
+US68389X1054
+Contrattazione
+XPeng Inc. - ADR
+Acquista 4 @ 20,50 USD
+-72,96
+-
+Valore negoziato
+-72,08 EUR
+Commissione
+-0,88 EUR
+Costo di conversione valuta
+-0,18
+Costo totale
+-1,06 EUR
+Tasso di conversione
+0,879032
+ID contrattazione
+6249241556
+ISIN
+US98422D1054
+Trasferimento di liquidità
+Deposito
+1.500,00
+-
+Commento
+/OCMT/EUR1500,/19807401
+Deposit Type
+External
+Tasso di conversione
+1,000000
+Importo in contanti
+1.500,00 EUR
+10-apr-2025
+-6,82
+22,58
+\n=== PAGE 55 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 55 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Transazioni in Contanti
+Imposta di bollo sul deposito titoli
+-3,41
+-
+Tasso di conversione
+1,000000
+Imposta di bollo sul deposito titoli
+-3,41 EUR
+Commento
+Riaddebito imposta di bollo dossier titoli Q1
+2025
+Transazioni in Contanti
+Imposta di bollo sul deposito titoli
+-3,41
+-
+Tasso di conversione
+1,000000
+Imposta di bollo sul deposito titoli
+-3,41 EUR
+Commento
+Storno imposta di bollo dossier titoli Q1
+2025
+09-apr-2025
+3,41
+29,40
+Transazioni in Contanti
+Imposta di bollo sul deposito titoli
+3,41
+-
+Tasso di conversione
+1,000000
+Imposta di bollo sul deposito titoli
+3,41 EUR
+Commento
+Imposta di bollo dossier titoli Q1 2025
+07-apr-2025
+0,34
+25,99
+Operazione sul capitale
+**See WMT:xnas (Walmart Inc.)
+Dividendo in contanti
+0,34
+-
+Quantità idonea
+3
+Dividendo per azione
+0,23 USD
+Tasso di conversione
+0,912425
+Dividendi - ritenuta alla fonte
+-0,19 EUR
+Dividendi - ritenuta alla fonte (%)
+30%
+Corporate Actions - Dividendi
+0,65 EUR
+Dividendi - ritenuta italiana
+-0,12 EUR
+Dividendi - ritenuta italiana (%)
+26%
+Transaction description
+ID Evento 9344031
+ISIN
+US9311421039
+\n=== PAGE 56 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 56 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+02-apr-2025
+-235,50
+25,65
+Contrattazione
+First Trust Nasdaq Cyber Security UCTIS ETF
+Acquista 5 @ 36,96 EUR
+-186,78
+-
+Commissione
+-2,00 EUR
+Valore negoziato
+-184,78 EUR
+Costo totale
+-2,00 EUR
+Tasso di conversione
+1,000000
+ID contrattazione
+6221487152
+ISIN
+IE00BF16M727
+Operazione sul capitale
+NVIDIA Corp.
+Dividendo in contanti
+0,03
+-
+Quantità idonea
+9
+Dividendo per azione
+0,01 USD
+Tasso di conversione
+0,927420
+Corporate Actions - Dividendi
+0,08 EUR
+Dividendi - ritenuta italiana
+-0,02 EUR
+Dividendi - ritenuta italiana (%)
+26%
+Dividendi - ritenuta alla fonte
+-0,03 EUR
+Dividendi - ritenuta alla fonte (%)
+30%
+Transaction description
+ID Evento 9349595
+ISIN
+US67066G1040
+Contrattazione
+Canopy Growth Corp.
+Acquista 50 @ 1,41 CAD
+-48,75
+-
+Commissione
+-3,23 EUR
+Valore negoziato
+-45,52 EUR
+Costo di conversione valuta
+-0,13
+Costo totale
+-3,35 EUR
+Tasso di conversione
+0,645610
+ID contrattazione
+6221541714
+ISIN
+CA1380357048
+\n=== PAGE 57 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 57 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+01-apr-2025
+-189,24
+261,15
+Operazione sul capitale
+Novo Nordisk B A/S
+Dividendo in contanti
+1,15
+-
+Quantità idonea
+2
+Dividendo per azione
+7,90 DKK
+Tasso di conversione
+0,134023
+Corporate Actions - Dividendi
+2,12 EUR
+Dividendi - ritenuta italiana
+-0,40 EUR
+Dividendi - ritenuta italiana (%)
+26%
+Dividendi - ritenuta alla fonte
+-0,57 EUR
+Dividendi - ritenuta alla fonte (%)
+27%
+Transaction description
+ID Evento 9349472
+ISIN
+DK0062498333
+Contrattazione
+Advanced Micro Devices Inc.
+Acquista 2 @ 102,09 USD
+-190,39
+-
+Commissione
+-0,93 EUR
+Valore negoziato
+-189,46 EUR
+Costo di conversione valuta
+-0,48
+Costo totale
+-1,41 EUR
+Tasso di conversione
+0,927894
+ID contrattazione
+6220000484
+ISIN
+US0079031078
+31-mar-2025
+-351,61
+450,39
+\n=== PAGE 58 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 58 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Operazione sul capitale
+Broadcom Inc.
+Dividendo in contanti
+0,84
+-
+Quantità idonea
+3
+Dividendo per azione
+0,59 USD
+Tasso di conversione
+0,923693
+Dividendi - ritenuta italiana
+-0,30 EUR
+Dividendi - ritenuta italiana (%)
+26%
+Dividendi - ritenuta alla fonte
+-0,49 EUR
+Dividendi - ritenuta alla fonte (%)
+30%
+Corporate Actions - Dividendi
+1,63 EUR
+Transaction description
+ID Evento 9355834
+ISIN
+US11135F1012
+Contrattazione
+D-Wave Quantum Inc.
+Acquista 10 @ 7,53 USD
+-70,81
+-
+Commissione
+-0,93 EUR
+Valore negoziato
+-69,88 EUR
+Costo di conversione valuta
+-0,17
+Costo totale
+-1,10 EUR
+Tasso di conversione
+0,928034
+ID contrattazione
+6217960456
+ISIN
+US26740W1099
+Contrattazione
+Broadcom Inc.
+Acquista 1 @ 163,39 USD
+-152,60
+-
+Commissione
+-0,93 EUR
+Valore negoziato
+-151,67 EUR
+Costo di conversione valuta
+-0,37
+Costo totale
+-1,30 EUR
+Tasso di conversione
+0,928295
+ID contrattazione
+6217936666
+ISIN
+US11135F1012
+\n=== PAGE 59 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 59 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Oracle Corp.
+Acquista 1 @ 138,04 USD
+-129,04
+-
+Commissione
+-0,93 EUR
+Valore negoziato
+-128,11 EUR
+Costo di conversione valuta
+-0,31
+Costo totale
+-1,24 EUR
+Tasso di conversione
+0,928099
+ID contrattazione
+6217935213
+ISIN
+US68389X1054
+27-mar-2025
+-132,58
+802,00
+Contrattazione
+Realbotix Corp
+Acquista 600 @ 0,33 CAD
+-132,58
+-
+Commissione
+-5,85 EUR
+Valore negoziato
+-126,73 EUR
+Costo di conversione valuta
+-0,33
+Costo totale
+-6,16 EUR
+Tasso di conversione
+0,649906
+ID contrattazione
+6214331538
+ISIN
+CA75604K1075
+24-mar-2025
+616,38
+934,58
+Trasferimento di liquidità
+Deposito
+1.000,00
+-
+Commento
+/OCMT/EUR1000,/19807401
+Deposit Type
+External
+Tasso di conversione
+1,000000
+Importo in contanti
+1.000,00 EUR
+\n=== PAGE 60 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 60 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Xtrackers AI & Big Data UCITS ETF
+Acquista 3 @ 127,21 EUR
+-383,62
+-
+Valore negoziato
+-381,62 EUR
+Commissione
+-2,00 EUR
+Costo totale
+-2,00 EUR
+Tasso di conversione
+1,000000
+ID contrattazione
+6210024595
+ISIN
+IE00BGV5VN51
+20-mar-2025
+149,07
+329,00
+Contrattazione
+D-Wave Quantum Inc.
+Vendi -19 @ 9,20 USD
+149,07
+-
+Commissione
+-0,92 EUR
+Valore negoziato
+160,80 EUR
+Commissioni di Borsa
+-0,01 EUR
+Imposta nazionale sulle plusvalenze
+-10,80 EUR
+Costo di conversione valuta
+-0,40
+Costo totale
+-1,33 EUR
+Tasso di conversione
+0,919885
+ID contrattazione
+6208216342
+ISIN
+US26740W1099
+18-mar-2025
+79,49
+170,25
+\n=== PAGE 61 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 61 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+XPeng Inc. - ADR
+Vendi -4 @ 22,30 USD
+79,49
+-
+Commissione
+-0,91 EUR
+Valore negoziato
+81,53 EUR
+Commissioni di Borsa
+-0,01 EUR
+Imposta nazionale sulle plusvalenze
+-1,12 EUR
+Costo di conversione valuta
+-0,19
+Costo totale
+-1,12 EUR
+Tasso di conversione
+0,913979
+ID contrattazione
+6205175161
+ISIN
+US98422D1054
+13-mar-2025
+0,39
+89,64
+Operazione sul capitale
+Microsoft Corp.
+Dividendo in contanti
+0,39
+-
+Quantità idonea
+1
+Dividendo per azione
+0,83 USD
+Tasso di conversione
+0,919031
+Dividendi - ritenuta italiana
+-0,14 EUR
+Dividendi - ritenuta italiana (%)
+26%
+Dividendi - ritenuta alla fonte
+-0,23 EUR
+Dividendi - ritenuta alla fonte (%)
+30%
+Corporate Actions - Dividendi
+0,76 EUR
+Transaction description
+ID Evento 9309364
+ISIN
+US5949181045
+12-mar-2025
+-294,61
+89,25
+\n=== PAGE 62 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 62 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Tesla Inc.
+Acquista 1 @ 247,01 USD
+-228,27
+-
+Commissione
+-0,92 EUR
+Valore negoziato
+-227,35 EUR
+Costo di conversione valuta
+-0,57
+Costo totale
+-1,49 EUR
+Tasso di conversione
+0,920395
+ID contrattazione
+6199356527
+ISIN
+US88160R1014
+Contrattazione
+Eutelsat Communications
+Acquista 10 @ 6,42 EUR
+-66,34
+-
+Commissione
+-2,00 EUR
+Valore negoziato
+-64,15 EUR
+Tassazione transazioni finanziarie (Francia)
+-0,19 EUR
+Costo totale
+-2,19 EUR
+Tasso di conversione
+1,000000
+ID contrattazione
+6199042863
+ISIN
+FR0010221234
+10-mar-2025
+-530,67
+383,86
+Contrattazione
+Broadcom Inc.
+Acquista 1 @ 189,68 USD
+-176,26
+-
+Commissione
+-0,92 EUR
+Valore negoziato
+-175,34 EUR
+Costo di conversione valuta
+-0,44
+Costo totale
+-1,36 EUR
+Tasso di conversione
+0,924385
+ID contrattazione
+6195099478
+ISIN
+US11135F1012
+\n=== PAGE 63 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 63 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Intel Corp.
+Acquista 10 @ 20,21 USD
+-187,74
+-
+Commissione
+-0,92 EUR
+Valore negoziato
+-186,82 EUR
+Costo di conversione valuta
+-0,47
+Costo totale
+-1,39 EUR
+Tasso di conversione
+0,924385
+ID contrattazione
+6195099836
+ISIN
+US4581401001
+Contrattazione
+Quantum Computing Inc
+Acquista 20 @ 4,89 USD
+-91,33
+-
+Commissione
+-0,92 EUR
+Valore negoziato
+-90,41 EUR
+Costo di conversione valuta
+-0,22
+Costo totale
+-1,14 EUR
+Tasso di conversione
+0,924450
+ID contrattazione
+6195095782
+ISIN
+US74766W1080
+Contrattazione
+Realbotix Corp
+Acquista 300 @ 0,38 CAD
+-75,34
+-
+Commissione
+-3,21 EUR
+Valore negoziato
+-72,13 EUR
+Costo di conversione valuta
+-0,19
+Costo totale
+-3,39 EUR
+Tasso di conversione
+0,641194
+ID contrattazione
+6195087746
+ISIN
+CA75604K1075
+07-mar-2025
+894,09
+914,53
+\n=== PAGE 64 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 64 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+United States Antimony Corp.
+Acquista 80 @ 1,42 USD
+-105,91
+-
+Commissione
+-0,93 EUR
+Valore negoziato
+-104,98 EUR
+Costo di conversione valuta
+-0,27
+Costo totale
+-1,19 EUR
+Tasso di conversione
+0,925197
+ID contrattazione
+6193751067
+ISIN
+US9115491030
+Trasferimento di liquidità
+Deposito
+1.000,00
+-
+Commento
+19807401/BN/BG SAXO SIM S.P.A.
+Deposit Type
+External
+Tasso di conversione
+1,000000
+Importo in contanti
+1.000,00 EUR
+03-mar-2025
+-88,63
+20,44
+Contrattazione
+Leonardo
+Acquista 2 @ 43,27 EUR
+-88,63
+-
+Commissione
+-2,00 EUR
+Valore negoziato
+-86,54 EUR
+Tassazione transazioni finanziarie (Italia)
+-0,09 EUR
+Costo totale
+-2,09 EUR
+Tasso di conversione
+1,000000
+ID contrattazione
+6183044343
+ISIN
+IT0003856405
+28-feb-2025
+-298,94
+109,07
+\n=== PAGE 65 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 65 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Canopy Growth Corp.
+Acquista 50 @ 2,02 CAD
+-70,83
+-
+Commissione
+-3,34 EUR
+Valore negoziato
+-67,49 EUR
+Costo di conversione valuta
+-0,18
+Costo totale
+-3,51 EUR
+Tasso di conversione
+0,668246
+ID contrattazione
+6181558114
+ISIN
+CA1380357048
+Contrattazione
+NVIDIA Corp.
+Acquista 2 @ 117,94 USD
+-228,11
+-
+Commissione
+-0,96 EUR
+Valore negoziato
+-227,15 EUR
+Costo di conversione valuta
+-0,57
+Costo totale
+-1,53 EUR
+Tasso di conversione
+0,962981
+ID contrattazione
+6181107129
+ISIN
+US67066G1040
+27-feb-2025
+-106,53
+408,01
+Contrattazione
+KULR Technology Group Inc
+Acquista 70 @ 1,57 USD
+-106,53
+-
+Commissione
+-0,96 EUR
+Valore negoziato
+-105,57 EUR
+Costo di conversione valuta
+-0,26
+Costo totale
+-1,22 EUR
+Tasso di conversione
+0,960616
+ID contrattazione
+6179303119
+ISIN
+US50125G3074
+26-feb-2025
+-340,72
+514,54
+\n=== PAGE 66 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 66 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Realbotix Corp
+Acquista 300 @ 0,41 CAD
+-85,27
+-
+Commissione
+-3,33 EUR
+Valore negoziato
+-81,94 EUR
+Costo di conversione valuta
+-0,21
+Costo totale
+-3,53 EUR
+Tasso di conversione
+0,666201
+ID contrattazione
+6177780200
+ISIN
+CA75604K1075
+Contrattazione
+Palantir Technologies Inc.
+Acquista 3 @ 88,70 USD
+-255,45
+-
+Commissione
+-0,96 EUR
+Valore negoziato
+-254,49 EUR
+Costo di conversione valuta
+-0,65
+Costo totale
+-1,60 EUR
+Tasso di conversione
+0,956360
+ID contrattazione
+6178006674
+ISIN
+US69608A1088
+25-feb-2025
+-686,39
+855,26
+Contrattazione
+Dynatrace Inc.
+Acquista 3 @ 58,58 USD
+-168,48
+-
+Commissione
+-0,95 EUR
+Valore negoziato
+-167,53 EUR
+Costo di conversione valuta
+-0,42
+Costo totale
+-1,37 EUR
+Tasso di conversione
+0,953212
+ID contrattazione
+6176725023
+ISIN
+US2681501092
+\n=== PAGE 67 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 67 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Amazon.com Inc.
+Acquista 2 @ 212,94 USD
+-406,94
+-
+Commissione
+-0,95 EUR
+Valore negoziato
+-405,99 EUR
+Costo di conversione valuta
+-1,01
+Costo totale
+-1,96 EUR
+Tasso di conversione
+0,953302
+ID contrattazione
+6176713886
+ISIN
+US0231351067
+Contrattazione
+Datadog Inc.
+Acquista 1 @ 115,40 USD
+-110,97
+-
+Commissione
+-0,95 EUR
+Valore negoziato
+-110,02 EUR
+Costo di conversione valuta
+-0,27
+Costo totale
+-1,22 EUR
+Tasso di conversione
+0,953403
+ID contrattazione
+6176701589
+ISIN
+US23804L1035
+24-feb-2025
+1.500,00
+1.541,65
+Trasferimento di liquidità
+Deposito
+1.500,00
+-
+Commento
+/OCMT/EUR1500,/19807401
+Deposit Type
+External
+Tasso di conversione
+1,000000
+Importo in contanti
+1.500,00 EUR
+27-gen-2025
+-122,48
+41,65
+\n=== PAGE 68 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 68 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+NVIDIA Corp.
+Acquista 1 @ 127,47 USD
+-122,48
+-
+Commissione
+-0,95 EUR
+Valore negoziato
+-121,53 EUR
+Costo di conversione valuta
+-0,30
+Costo totale
+-1,25 EUR
+Tasso di conversione
+0,953408
+ID contrattazione
+6141367460
+ISIN
+US67066G1040
+23-gen-2025
+0,40
+164,13
+Operazione sul capitale
+Oracle Corp.
+Dividendo in contanti
+0,40
+-
+Quantità idonea
+2
+Dividendo per azione
+0,40 USD
+Tasso di conversione
+0,960596
+Dividendi - ritenuta italiana
+-0,14 EUR
+Dividendi - ritenuta italiana (%)
+26%
+Dividendi - ritenuta alla fonte
+-0,23 EUR
+Dividendi - ritenuta alla fonte (%)
+30%
+Corporate Actions - Dividendi
+0,77 EUR
+Transaction description
+ID Evento 9311306
+ISIN
+US68389X1054
+21-gen-2025
+-339,49
+163,73
+\n=== PAGE 69 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 69 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+PDD Holdings Inc - ADR
+Acquista 2 @ 108,00 USD
+-209,28
+-
+Commissione
+-0,96 EUR
+Valore negoziato
+-208,32 EUR
+Costo di conversione valuta
+-0,52
+Costo totale
+-1,48 EUR
+Tasso di conversione
+0,964465
+ID contrattazione
+6135377256
+ISIN
+US7223041028
+Contrattazione
+CDT Environmental Technology Investment Hldngs
+Ltd
+Acquista 100 @ 1,34 USD
+-130,21
+-
+Commissione
+-0,96 EUR
+Valore negoziato
+-129,25 EUR
+Costo di conversione valuta
+-0,33
+Costo totale
+-1,29 EUR
+Tasso di conversione
+0,964530
+ID contrattazione
+6135386098
+ISIN
+KYG2030P1072
+20-gen-2025
+-148,19
+503,22
+Contrattazione
+Realbotix Corp
+Acquista 500 @ 0,43 CAD
+-148,19
+-
+Commissione
+-5,05 EUR
+Valore negoziato
+-143,14 EUR
+Costo di conversione valuta
+-0,37
+Costo totale
+-5,41 EUR
+Tasso di conversione
+0,673600
+ID contrattazione
+6134648166
+ISIN
+CA75604K1075
+14-gen-2025
+-164,64
+651,41
+\n=== PAGE 70 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 70 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Canopy Growth Corp.
+Acquista 45 @ 3,23 CAD
+-101,95
+-
+Commissione
+-3,39 EUR
+Valore negoziato
+-98,56 EUR
+Costo di conversione valuta
+-0,26
+Costo totale
+-3,64 EUR
+Tasso di conversione
+0,678081
+ID contrattazione
+6129329412
+ISIN
+CA1380357048
+Contrattazione
+XPeng Inc. - ADR
+Acquista 5 @ 12,68 USD
+-62,69
+-
+Commissione
+-0,97 EUR
+Valore negoziato
+-61,72 EUR
+Costo di conversione valuta
+-0,16
+Costo totale
+-1,13 EUR
+Tasso di conversione
+0,973468
+ID contrattazione
+6129325198
+ISIN
+US98422D1054
+13-gen-2025
+-364,48
+816,05
+Contrattazione
+Realbotix Corp
+Acquista 1000 @ 0,65 CAD
+-453,13
+-
+Commissione
+-10,22 EUR
+Valore negoziato
+-442,91 EUR
+Costo di conversione valuta
+-1,13
+Costo totale
+-11,33 EUR
+Tasso di conversione
+0,681399
+ID contrattazione
+6127646430
+ISIN
+CA75604K1075
+\n=== PAGE 71 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 71 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Realbotix Corp
+Vendi -1000 @ 0,53 CAD
+349,07
+-
+Commissione
+-10,17 EUR
+Valore negoziato
+359,24 EUR
+Costo di conversione valuta
+-0,88
+Costo totale
+-11,07 EUR
+Tasso di conversione
+0,677806
+ID contrattazione
+6127414866
+ISIN
+CA75604K1075
+Contrattazione
+NVIDIA Corp.
+Acquista 2 @ 132,11 USD
+-260,42
+-
+Commissione
+-0,98 EUR
+Valore negoziato
+-259,44 EUR
+Costo di conversione valuta
+-0,64
+Costo totale
+-1,62 EUR
+Tasso di conversione
+0,981919
+ID contrattazione
+6127678729
+ISIN
+US67066G1040
+10-gen-2025
+-379,44
+1.180,53
+Contrattazione
+Realbotix Corp
+Acquista 1000 @ 0,36 CAD
+-254,86
+-
+Commissione
+-10,19 EUR
+Valore negoziato
+-244,67 EUR
+Costo di conversione valuta
+-0,63
+Costo totale
+-10,80 EUR
+Tasso di conversione
+0,679635
+ID contrattazione
+6125033893
+ISIN
+CA75604K1075
+\n=== PAGE 72 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 72 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+D-Wave Quantum Inc.
+Acquista 20 @ 6,32 USD
+-124,58
+-
+Commissione
+-0,98 EUR
+Valore negoziato
+-123,60 EUR
+Costo di conversione valuta
+-0,31
+Costo totale
+-1,29 EUR
+Tasso di conversione
+0,977818
+ID contrattazione
+6125081670
+ISIN
+US26740W1099
+09-gen-2025
+-101,32
+1.559,97
+Contrattazione
+Oculus Inc.
+Acquista 1500 @ 0,09 CAD
+-101,32
+-
+Commissione
+-15,20 EUR
+Valore negoziato
+-86,12 EUR
+Costo di conversione valuta
+-0,26
+Costo totale
+-15,42 EUR
+Tasso di conversione
+0,675439
+ID contrattazione
+6124090562
+ISIN
+US67575Y1091
+08-gen-2025
+133,98
+1.661,29
+Contrattazione
+D-Wave Quantum Inc.
+Vendi -22 @ 6,33 USD
+133,98
+-
+Commissione
+-0,97 EUR
+Valore negoziato
+134,96 EUR
+Commissioni di Borsa
+-0,01 EUR
+Costo di conversione valuta
+-0,34
+Costo totale
+-1,32 EUR
+Tasso di conversione
+0,969116
+ID contrattazione
+6122813144
+ISIN
+US26740W1099
+07-gen-2025
+1.452,39
+1.527,31
+\n=== PAGE 73 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 73 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+PayPal Holdings Inc.
+Acquista 3 @ 89,53 USD
+-259,96
+-
+Commissione
+-0,96 EUR
+Valore negoziato
+-259,00 EUR
+Costo di conversione valuta
+-0,65
+Costo totale
+-1,61 EUR
+Tasso di conversione
+0,964285
+ID contrattazione
+6121059018
+ISIN
+US70450Y1038
+Contrattazione
+Oculus Inc.
+Acquista 3500 @ 0,12 CAD
+-287,65
+-
+Valore negoziato
+-270,83 EUR
+Commissione
+-16,82 EUR
+Costo di conversione valuta
+-0,71
+Costo totale
+-17,49 EUR
+Tasso di conversione
+0,672873
+ID contrattazione
+6121057078
+ISIN
+US67575Y1091
+Trasferimento di liquidità
+Deposito
+2.000,00
+-
+Commento
+19807401/BN/BG SAXO SIM S.P.A.
+Deposit Type
+External
+Tasso di conversione
+1,000000
+Importo in contanti
+2.000,00 EUR
+06-gen-2025
+-967,16
+74,92
+\n=== PAGE 74 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 74 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+NVIDIA Corp.
+Acquista 2 @ 148,66 USD
+-288,02
+-
+Commissione
+-0,97 EUR
+Valore negoziato
+-287,05 EUR
+Costo di conversione valuta
+-0,72
+Costo totale
+-1,68 EUR
+Tasso di conversione
+0,965473
+ID contrattazione
+6119493874
+ISIN
+US67066G1040
+Operazione sul capitale
+**See WMT:xnas (Walmart Inc.)
+Dividendo in contanti
+0,31
+-
+Quantità idonea
+3
+Dividendo per azione
+0,21 USD
+Tasso di conversione
+0,969448
+Dividendi - ritenuta alla fonte
+-0,18 EUR
+Dividendi - ritenuta alla fonte (%)
+30%
+Dividendi - ritenuta italiana
+-0,11 EUR
+Dividendi - ritenuta italiana (%)
+26%
+Corporate Actions - Dividendi
+0,60 EUR
+Transaction description
+ID Evento 9189007
+ISIN
+US9311421039
+Contrattazione
+Microsoft Corp.
+Acquista 1 @ 428,06 USD
+-414,25
+-
+Commissione
+-0,97 EUR
+Valore negoziato
+-413,28 EUR
+Costo di conversione valuta
+-1,04
+Costo totale
+-2,00 EUR
+Tasso di conversione
+0,965483
+ID contrattazione
+6119498757
+ISIN
+US5949181045
+\n=== PAGE 75 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 75 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Nio Inc. - ADR
+Acquista 20 @ 4,82 USD
+-94,10
+-
+Commissione
+-0,97 EUR
+Valore negoziato
+-93,13 EUR
+Costo di conversione valuta
+-0,24
+Costo totale
+-1,20 EUR
+Tasso di conversione
+0,966094
+ID contrattazione
+6119518991
+ISIN
+US62914V1061
+Contrattazione
+Novo Nordisk B A/S
+Acquista 2 @ 631,50 DKK
+-171,10
+-
+Valore negoziato
+-169,76 EUR
+Commissione
+-1,34 EUR
+Costo di conversione valuta
+-0,43
+Costo totale
+-1,77 EUR
+Tasso di conversione
+0,134407
+ID contrattazione
+6118789802
+ISIN
+DK0062498333
+03-gen-2025
+-1,07
+1.042,08
+Transazioni in Contanti
+Imposta di bollo sul deposito titoli
+-1,07
+-
+Tasso di conversione
+1,000000
+Imposta di bollo sul deposito titoli
+-1,07 EUR
+Commento
+Imposta di bollo dossier titoli Q4 2024
+24-dic-2024
+1.000,00
+1.043,15
+Trasferimento di liquidità
+Deposito
+1.000,00
+-
+Commento
+19807401/BN/BG SAXO SIM S.P.A.
+Deposit Type
+External
+Tasso di conversione
+1,000000
+Importo in contanti
+1.000,00 EUR
+\n=== PAGE 76 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 76 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+23-dic-2024
+-1.174,03
+43,15
+Contrattazione
+D-Wave Quantum Inc.
+Acquista 20 @ 7,60 USD
+-147,33
+-
+Commissione
+-0,96 EUR
+Valore negoziato
+-146,37 EUR
+Costo di conversione valuta
+-0,36
+Costo totale
+-1,32 EUR
+Tasso di conversione
+0,962971
+ID contrattazione
+6110487283
+ISIN
+US26740W1099
+Contrattazione
+NVIDIA Corp.
+Acquista 2 @ 136,25 USD
+-263,59
+-
+Commissione
+-0,96 EUR
+Valore negoziato
+-262,63 EUR
+Costo di conversione valuta
+-0,66
+Costo totale
+-1,62 EUR
+Tasso di conversione
+0,963763
+ID contrattazione
+6110102761
+ISIN
+US67066G1040
+Contrattazione
+Quantum Computing Inc
+Acquista 10 @ 17,49 USD
+-169,58
+-
+Commissione
+-0,96 EUR
+Valore negoziato
+-168,62 EUR
+Costo di conversione valuta
+-0,42
+Costo totale
+-1,38 EUR
+Tasso di conversione
+0,964069
+ID contrattazione
+6110173764
+ISIN
+US74766W1080
+\n=== PAGE 77 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 77 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Datadog Inc.
+Acquista 1 @ 149,43 USD
+-145,03
+-
+Commissione
+-0,96 EUR
+Valore negoziato
+-144,07 EUR
+Costo di conversione valuta
+-0,35
+Costo totale
+-1,31 EUR
+Tasso di conversione
+0,964159
+ID contrattazione
+6110162880
+ISIN
+US23804L1035
+Contrattazione
+Broadcom Inc.
+Acquista 2 @ 232,47 USD
+-448,50
+-
+Valore negoziato
+-447,54 EUR
+Commissione
+-0,96 EUR
+Costo di conversione valuta
+-1,12
+Costo totale
+-2,08 EUR
+Tasso di conversione
+0,962570
+ID contrattazione
+6110494114
+ISIN
+US11135F1012
+19-dic-2024
+921,73
+1.295,68
+Contrattazione
+Quantum Computing Inc
+Vendi -19 @ 21,26 USD
+346,62
+-
+Commissione
+-0,96 EUR
+Valore negoziato
+387,51 EUR
+Commissioni di Borsa
+-0,02 EUR
+Imposta nazionale sulle plusvalenze
+-39,91 EUR
+Costo di conversione valuta
+-0,97
+Costo totale
+-1,95 EUR
+Tasso di conversione
+0,959321
+ID contrattazione
+6106690494
+ISIN
+US74766W1080
+\n=== PAGE 78 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 78 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+D-Wave Quantum Inc.
+Vendi -38 @ 8,21 USD
+259,64
+-
+Commissione
+-0,96 EUR
+Valore negoziato
+299,20 EUR
+Commissioni di Borsa
+-0,01 EUR
+Imposta nazionale sulle plusvalenze
+-38,59 EUR
+Costo di conversione valuta
+-0,75
+Costo totale
+-1,72 EUR
+Tasso di conversione
+0,959046
+ID contrattazione
+6106726018
+ISIN
+US26740W1099
+Contrattazione
+Strategy Inc.
+Vendi -1 @ 328,85 USD
+315,47
+-
+Commissione
+-0,96 EUR
+Valore negoziato
+316,44 EUR
+Commissioni di Borsa
+-0,01 EUR
+Costo di conversione valuta
+-0,79
+Costo totale
+-1,76 EUR
+Tasso di conversione
+0,962248
+ID contrattazione
+6107229377
+ISIN
+US5949724083
+18-dic-2024
+-325,00
+295,45
+Contrattazione
+Oracle Corp.
+Acquista 2 @ 169,53 USD
+-325,00
+-
+Commissione
+-0,96 EUR
+Valore negoziato
+-324,04 EUR
+Costo di conversione valuta
+-0,82
+Costo totale
+-1,77 EUR
+Tasso di conversione
+0,955703
+ID contrattazione
+6105077662
+ISIN
+US68389X1054
+\n=== PAGE 79 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 79 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+16-dic-2024
+-212,70
+620,45
+Contrattazione
+Quantum Computing Inc
+Acquista 20 @ 11,10 USD
+-212,70
+-
+Commissione
+-0,95 EUR
+Valore negoziato
+-211,75 EUR
+Costo di conversione valuta
+-0,53
+Costo totale
+-1,48 EUR
+Tasso di conversione
+0,953914
+ID contrattazione
+6103343334
+ISIN
+US74766W1080
+13-dic-2024
+-157,71
+833,15
+Contrattazione
+D-Wave Quantum Inc.
+Acquista 40 @ 4,10 USD
+-157,71
+-
+Commissione
+-0,96 EUR
+Valore negoziato
+-156,75 EUR
+Costo di conversione valuta
+-0,40
+Costo totale
+-1,35 EUR
+Tasso di conversione
+0,955773
+ID contrattazione
+6101689715
+ISIN
+US26740W1099
+10-dic-2024
+-346,44
+990,86
+Contrattazione
+Strategy Inc.
+Acquista 1 @ 362,00 USD
+-346,44
+-
+Commissione
+-0,95 EUR
+Valore negoziato
+-345,49 EUR
+Costo di conversione valuta
+-0,86
+Costo totale
+-1,81 EUR
+Tasso di conversione
+0,954385
+ID contrattazione
+6097919360
+ISIN
+US5949724083
+\n=== PAGE 80 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 80 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+09-dic-2024
+652,10
+1.385,86
+Contrattazione
+D-Wave Quantum Inc.
+Vendi -155 @ 4,80 USD
+652,10
+-
+Commissione
+-0,94 EUR
+Valore negoziato
+701,63 EUR
+Commissioni di Borsa
+-0,03 EUR
+Imposta nazionale sulle plusvalenze
+-48,56 EUR
+Costo di conversione valuta
+-1,75
+Costo totale
+-2,73 EUR
+Tasso di conversione
+0,943051
+ID contrattazione
+6096103488
+ISIN
+US26740W1099
+06-dic-2024
+659,09
+685,20
+Trasferimento di liquidità
+Deposito
+1.000,00
+-
+Commento
+19807401/BN/BG SAXO SIM S.P.A.
+Deposit Type
+External
+Tasso di conversione
+1,000000
+Importo in contanti
+1.000,00 EUR
+Contrattazione
+QuantumScape Corp.
+Acquista 20 @ 4,93 USD
+-94,48
+-
+Commissione
+-0,95 EUR
+Valore negoziato
+-93,53 EUR
+Costo di conversione valuta
+-0,23
+Costo totale
+-1,18 EUR
+Tasso di conversione
+0,949282
+ID contrattazione
+6095185899
+ISIN
+US74767V1098
+\n=== PAGE 81 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 81 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+D-Wave Quantum Inc.
+Acquista 65 @ 3,98 USD
+-246,43
+-
+Commissione
+-0,95 EUR
+Valore negoziato
+-245,48 EUR
+Costo di conversione valuta
+-0,62
+Costo totale
+-1,57 EUR
+Tasso di conversione
+0,948881
+ID contrattazione
+6094761127
+ISIN
+US26740W1099
+04-dic-2024
+-267,50
+26,11
+Contrattazione
+D-Wave Quantum Inc.
+Acquista 40 @ 3,11 USD
+-119,80
+-
+Valore negoziato
+-118,84 EUR
+Commissione
+-0,96 EUR
+Costo di conversione valuta
+-0,31
+Costo totale
+-1,26 EUR
+Tasso di conversione
+0,955292
+ID contrattazione
+6091931724
+ISIN
+US26740W1099
+Contrattazione
+D-Wave Quantum Inc.
+Acquista 50 @ 3,07 USD
+-147,70
+-
+Commissione
+-0,96 EUR
+Valore negoziato
+-146,74 EUR
+Costo di conversione valuta
+-0,38
+Costo totale
+-1,33 EUR
+Tasso di conversione
+0,955944
+ID contrattazione
+6091845011
+ISIN
+US26740W1099
+02-dic-2024
+-439,33
+293,61
+\n=== PAGE 82 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 82 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Contrattazione
+Joby Aviation Incorporation
+Acquista 20 @ 8,97 USD
+-172,34
+-
+Commissione
+-0,96 EUR
+Valore negoziato
+-171,38 EUR
+Costo di conversione valuta
+-0,44
+Costo totale
+-1,39 EUR
+Tasso di conversione
+0,955292
+ID contrattazione
+6089040401
+ISIN
+KYG651631007
+Contrattazione
+**See WMT:xnas (Walmart Inc.)
+Acquista 3 @ 92,82 USD
+-266,99
+-
+Commissione
+-0,96 EUR
+Valore negoziato
+-266,03 EUR
+Costo di conversione valuta
+-0,67
+Costo totale
+-1,62 EUR
+Tasso di conversione
+0,955377
+ID contrattazione
+6089026981
+ISIN
+US9311421039
+28-nov-2024
+-267,06
+732,94
+Contrattazione
+Webuild
+Acquista 100 @ 2,65 EUR
+-267,06
+-
+Commissione
+-2,00 EUR
+Valore negoziato
+-264,80 EUR
+Tassazione transazioni finanziarie (Italia)
+-0,26 EUR
+Costo totale
+-2,26 EUR
+Tasso di conversione
+1,000000
+ID contrattazione
+6086567859
+ISIN
+IT0003865570
+26-nov-2024
+1.000,00
+1.000,00
+\n=== PAGE 83 ===\nTransazioni, EUR
+Periodo di rendicontazione
+26-nov-2024 a 19-dic-2025
+BG SAXO SIM - B2C 1 Cash / Corso Europa 22 / 20122 Milan / Italy
+/ Email: supporto@bgsaxo.it
+Pagina 83 di 83
+Roberto Guareschi
+Valuta: EUR
+Conto/i: 65500/100461E00
+Periodo di rendicontazione
+26-nov-2024 - 19-dic-2025
+Generata il: 19-dic-2025
+Imposta di bollo assolta in modo virtuale ex art 15 del DPR n. 642/1972 su autorizzazione n. 188188/2024 del 12/06/2024 rilasciata dall’Ufficio Territoriale di Milano 2
+Tipo
+Nome prodotto
+Tipo
+Importo contabilizzato
+Contanti
+Trasferimento di liquidità
+Deposito
+1.000,00
+-
+Commento
+19807401/BN/BG SAXO SIM S.P.A.
+Deposit Type
+External
+Tasso di conversione
+1,000000
+Importo in contanti
+1.000,00 EUR
