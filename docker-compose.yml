@@ -46,8 +46,8 @@ services:
   chromadb:
     image: chromadb/chroma:latest
     container_name: warroom-chromadb
-    volumes:
-      - chroma_data:/chroma/chroma
+    # volumes:
+    #   - chroma_data:/chroma/chroma
     ports:
       - "8000:8000"
     restart: unless-stopped
