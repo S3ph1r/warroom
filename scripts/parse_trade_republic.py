@@ -235,7 +235,7 @@ def create_holdings_from_transactions(session):
                 name=data['ticker'],
                 asset_type='STOCK',
                 quantity=data['qty'],
-                current_value=data['qty'] * avg_price,  # Estimate
+                current_value=data['qty'] * avg_price,  # Estimate using purchase price
                 current_price=avg_price,
                 purchase_price=avg_price,
                 currency='EUR',
@@ -245,6 +245,50 @@ def create_holdings_from_transactions(session):
             session.add(holding)
             created += 1
             print(f"  [OK] {ticker:<8} | Qty: {data['qty']:>5} | Avg: EUR{avg_price:>8.2f}")
+    
+    # Extract and add cash balance from PDF summary
+    pdf_path = Path(r'D:\Download\Trade Repubblic\Estratto conto.pdf')
+    try:
+        import fitz
+        doc = fitz.open(pdf_path)
+        first_page = doc[0].get_text()
+        doc.close()
+        
+        # Look for "SALDO FINALE" pattern - last value in summary row for "Conto corrente"
+        # Format: "7,90 €" at end of row
+        saldo_match = re.search(r'Conto corrente.*?(\d+[.,]\d+)\s*€\s*$', first_page, re.MULTILINE | re.DOTALL)
+        if saldo_match:
+            cash_str = saldo_match.group(1).replace('.', '').replace(',', '.')
+            cash_balance = Decimal(cash_str)
+        else:
+            # Fallback: look for pattern like "7,90 €" followed by "TRANSAZIONI"
+            patterns = re.findall(r'(\d+[.,]\d+)\s*€', first_page)
+            # The cash balance is typically the 4th value (after initial, in, out, final)
+            if len(patterns) >= 4:
+                cash_str = patterns[3].replace('.', '').replace(',', '.')
+                cash_balance = Decimal(cash_str)
+            else:
+                cash_balance = Decimal('0')
+        
+        if cash_balance > 0:
+            cash_holding = Holding(
+                id=uuid.uuid4(),
+                broker='TRADE_REPUBLIC',
+                ticker='EUR_CASH',
+                name='Euro Cash Balance',
+                asset_type='CASH',
+                quantity=cash_balance,
+                current_value=cash_balance,
+                current_price=Decimal('1'),
+                currency='EUR',
+                source_document='Estratto conto.pdf',
+                last_updated=datetime.now()
+            )
+            session.add(cash_holding)
+            print(f"  [OK] CASH     | EUR {cash_balance:>8.2f}")
+            created += 1
+    except Exception as e:
+        print(f"  [WARN] Could not extract cash balance: {e}")
     
     session.commit()
     print(f"  Created {created} holdings from transactions")

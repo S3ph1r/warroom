@@ -1,0 +1,88 @@
+﻿.\venv\Scripts\python.exe : $XBOT: possibly delisted; no price data found  
+(period=1d) (Yahoo error = "No data found, symbol may be delisted")
+In riga:1 car:1
++ .\venv\Scripts\python.exe scripts/analyze_holdings.py 2>&1 | Out-File ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ($XBOT: possibly...y be delisted"):Stri 
+   ng) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+$SAI: possibly delisted; no price data found  (period=1d) (Yahoo error = "No data 
+found, symbol may be delisted")
+$AHLA: possibly delisted; no price data found  (period=1d) (Yahoo error = "No data 
+found, symbol may be delisted")
+$02050: possibly delisted; no price data found  (period=1d) (Yahoo error = "No data 
+found, symbol may be delisted")
+$ICGA: possibly delisted; no price data found  (period=1d)
+$FLXI: possibly delisted; no price data found  (period=1d) (Yahoo error = "No data 
+found, symbol may be delisted")
+$XBOT: possibly delisted; no price data found  (period=1d) (Yahoo error = "No data 
+found, symbol may be delisted")
+Fetching live prices (this may take a minute)...
+Done!
+
+===============================================================================================
+ANALISI DETTAGLIATA PER BROKER
+===============================================================================================
+
+### BG_SAXO ###
+Dashboard: EUR  20,554.08
+App:       EUR     19,379
+Diff:      EUR     +1,175 (+6.1%) [CLOSE]
+
+  Holdings problematici (P/L > 100% o < -80%):
+  Ticker     | ISIN            |      Qty |    Purch |     Live |      Value |     P/L
+  -------------------------------------------------------------------------------------
+  QS         | US74767V1098    |    20.00 |     4.93 |    10.86 |     217.17 |   +120%
+  NOVOB      | DK0062498333    |     8.00 |   411.35 |    41.54 |     332.32 |    -90%
+  BIDU       | US0567521085    |     5.00 |   128.93 |    14.26 |      71.28 |    -89%
+
+### TRADE_REPUBLIC ###
+Dashboard: EUR   2,832.58
+App:       EUR      2,834
+Diff:      EUR         -1 (-0.1%) [OK]
+
+  Holdings problematici (P/L > 100% o < -80%):
+  Ticker     | ISIN            |      Qty |    Purch |     Live |      Value |     P/L
+  -------------------------------------------------------------------------------------
+  BABA       | KYG017191142    |     5.00 |   104.59 |    17.44 |      87.18 |    -83%
+
+### SCALABLE ###
+Dashboard: EUR   5,645.99
+App:       EUR      4,471
+Diff:      EUR     +1,175 (+26.3%) [MISMATCH]
+
+### IBKR ###
+Dashboard: EUR     444.06
+App:       EUR        418
+Diff:      EUR        +26 (+6.2%) [CLOSE]
+
+### REVOLUT ###
+Dashboard: EUR   1,415.17
+App:       EUR      1,966
+Diff:      EUR       -551 (-28.0%) [MISMATCH]
+
+  Holdings problematici (P/L > 100% o < -80%):
+  Ticker     | ISIN            |      Qty |    Purch |     Live |      Value |     P/L
+  -------------------------------------------------------------------------------------
+  BIDU       | US0567521085    |     3.00 |   120.49 |    14.26 |      42.77 |    -88%
+
+### BINANCE ###
+Dashboard: EUR   6,913.92
+App:       EUR      3,331
+Diff:      EUR     +3,583 (+107.6%) [MISMATCH]
+
+===============================================================================================
+RIEPILOGO HOLDINGS CON P/L SOSPETTI (> 100%)
+===============================================================================================
+
+Broker       | Ticker     | ISIN            |    Purch |     Live |     P/L
+---------------------------------------------------------------------------
+BG_SAXO      | QS         | US74767V1098    |     4.93 |    10.86 |   +120%
+
+===============================================================================================
+CONCLUSIONI
+===============================================================================================
+SCALABLE: PROBLEMA - Dashboard EUR 5,646 vs App EUR 4,471 (+26%)
+REVOLUT: PROBLEMA - Dashboard EUR 1,415 vs App EUR 1,966 (-28%)
+BINANCE: PROBLEMA - Dashboard EUR 6,914 vs App EUR 3,331 (+108%)

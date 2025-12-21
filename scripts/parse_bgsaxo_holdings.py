@@ -100,15 +100,15 @@ def parse_bgsaxo_holdings(csv_path: str = None):
         reader = csv.DictReader(f, delimiter=',')
         
         for row in reader:
-            # Get ticker/symbol
-            ticker = row.get('Strumento', row.get('Symbol', row.get('Instrument', '')))
-            if not ticker or len(ticker.strip()) < 1:
+            # Get name from Strumento column
+            name = row.get('Strumento', row.get('Symbol', row.get('Instrument', '')))
+            if not name or len(name.strip()) < 1:
                 continue
             
-            ticker = ticker.strip()
+            name = name.strip()
             
             # Skip cash/totals rows
-            if ticker.lower() in ['totale', 'total', 'cash', 'contante', '']:
+            if name.lower() in ['totale', 'total', 'cash', 'contante', '']:
                 continue
             
             # Parse values - columns may vary
@@ -118,10 +118,29 @@ def parse_bgsaxo_holdings(csv_path: str = None):
             
             quantity = parse_european_number(quantity_str)
             
-            # Value column - actual column name
+            # Get ISIN (important for price lookup!)
+            isin = row.get('ISIN', '').strip()
+            
+            # Get currency from Valuta column
+            currency = row.get('Valuta', row.get('Currency', 'EUR')).strip().upper()
+            if not currency:
+                currency = 'EUR'
+            
+            # Get ticker from Ticker column (format: "ORCL:xnys" -> "ORCL")
+            raw_ticker = row.get('Ticker', '').strip()
+            if raw_ticker and ':' in raw_ticker:
+                ticker = raw_ticker.split(':')[0].upper()
+            elif raw_ticker:
+                ticker = raw_ticker.upper()
+            else:
+                # Fallback: use first word of name
+                ticker = name.split()[0][:10] if ' ' in name else name[:10]
+            
+            # Value column - already in EUR from "Valore di mercato (EUR)"
             value_str = row.get('Valore di mercato (EUR)', row.get('Valore Mkt', row.get('Value', '0')))
             value = parse_european_number(value_str)
             
+            # Price is in original currency
             price = parse_european_number(row.get('Prz. corrente', row.get('Prezzo', row.get('Price', '0'))))
             purchase_price = parse_european_number(row.get('Prezzo di apertura', row.get('Prezzo medio', '0')))
             
@@ -133,12 +152,11 @@ def parse_bgsaxo_holdings(csv_path: str = None):
             if price == 0 and value > 0 and quantity > 0:
                 price = safe_price(value, quantity)
             
-            # Create short ticker (first word or 15 chars max)
-            short_ticker = ticker.split()[0][:15] if ' ' in ticker else ticker[:15]
-            
             holdings.append({
-                'ticker': short_ticker,
-                'name': ticker[:100],
+                'ticker': ticker[:15],
+                'isin': isin if isin else None,
+                'name': name[:100],
+                'currency': currency,
                 'quantity': quantity,
                 'value': value,
                 'price': price,
@@ -156,13 +174,14 @@ def parse_bgsaxo_holdings(csv_path: str = None):
                 id=uuid.uuid4(),
                 broker='BG_SAXO',
                 ticker=h['ticker'],
+                isin=h['isin'],
                 name=h['name'],
                 asset_type='ETF' if 'ETF' in h['name'].upper() or 'UCITS' in h['name'].upper() else 'STOCK',
                 quantity=h['quantity'],
-                current_value=h['value'],
-                current_price=h['price'],
+                current_value=h['value'],  # Already in EUR from "Valore di mercato (EUR)"
+                current_price=h['price'],  # In original currency
                 purchase_price=h['purchase_price'],
-                currency='EUR',
+                currency=h['currency'],  # Original currency (EUR, USD, DKK, CAD, etc.)
                 source_document=Path(csv_path).name,
                 last_updated=datetime.now()
             )

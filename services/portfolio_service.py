@@ -66,6 +66,7 @@ class PortfolioService:
                 "asset_type": h.asset_type,
                 "quantity": float(h.quantity),
                 "current_price": float(h.current_price) if h.current_price else 0,
+                "purchase_price": float(h.purchase_price) if h.purchase_price else 0,
                 "current_value": float(h.current_value),
                 "currency": h.currency,
                 "source_document": h.source_document,

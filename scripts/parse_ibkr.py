@@ -55,8 +55,7 @@ def parse_ibkr_complete(csv_path: str):
     lines = content.strip().split('\n')
     
     cash_balance = Decimal('0')
-    transactions = []
-    holdings = {}  # symbol -> {qty, total_cost}
+    all_trades = []  # Collect all trades first
     
     for line in lines:
         parts = line.split(',')
@@ -83,54 +82,52 @@ def parse_ibkr_complete(csv_path: str):
             if tx_type in ['Forex Trade Component', 'Adjustment']:
                 continue
             
-            if tx_type == 'Deposit':
-                transactions.append({
+            # Collect all trades for later processing
+            if tx_type in ['Buy', 'Sell', 'Deposit']:
+                all_trades.append({
                     'date': tx_date,
-                    'type': 'DEPOSIT',
-                    'symbol': 'EUR_CASH',
+                    'type': tx_type.upper(),
+                    'symbol': symbol if tx_type != 'Deposit' else 'EUR_CASH',
                     'name': description,
-                    'qty': net,
-                    'price': Decimal('1'),
-                    'amount': net,
-                    'fees': Decimal('0')
+                    'qty': abs(qty) if tx_type != 'Deposit' else net,
+                    'price': abs(price) if tx_type != 'Deposit' else Decimal('1'),
+                    'gross': abs(gross) if tx_type != 'Deposit' else net,
+                    'commission': abs(commission) if tx_type != 'Deposit' else Decimal('0'),
+                    'net': abs(net) if tx_type == 'Buy' else net
                 })
-                print(f"  📥 {tx_date.strftime('%Y-%m-%d')} | DEPOSIT | €{net:.2f}")
-                
-            elif tx_type == 'Buy':
-                transactions.append({
-                    'date': tx_date,
-                    'type': 'BUY',
-                    'symbol': symbol,
-                    'name': description,
-                    'qty': abs(qty),
-                    'price': abs(price),
-                    'amount': abs(gross),
-                    'fees': abs(commission)
-                })
-                print(f"  📈 {tx_date.strftime('%Y-%m-%d')} | BUY  | {symbol:<6} | Qty: {abs(qty):>4} | €{abs(gross):>10.2f}")
-                
-                # Track holdings
-                if symbol not in holdings:
-                    holdings[symbol] = {'qty': Decimal('0'), 'total_cost': Decimal('0'), 'name': description}
-                holdings[symbol]['qty'] += abs(qty)
-                holdings[symbol]['total_cost'] += abs(net)
-                
-            elif tx_type == 'Sell':
-                transactions.append({
-                    'date': tx_date,
-                    'type': 'SELL',
-                    'symbol': symbol,
-                    'name': description,
-                    'qty': abs(qty),
-                    'price': abs(price),
-                    'amount': abs(gross),
-                    'fees': abs(commission)
-                })
-                print(f"  📉 {tx_date.strftime('%Y-%m-%d')} | SELL | {symbol:<6} | Qty: {abs(qty):>4} | €{abs(gross):>10.2f}")
-                
-                # Update holdings
-                if symbol in holdings:
-                    holdings[symbol]['qty'] -= abs(qty)
+    
+    # Sort trades by date (oldest first) to calculate positions correctly
+    all_trades.sort(key=lambda x: x['date'])
+    
+    # Now process trades in chronological order
+    transactions = []
+    holdings = {}  # symbol -> {qty, total_cost}
+    
+    for trade in all_trades:
+        tx_type = trade['type']
+        symbol = trade['symbol']
+        
+        if tx_type == 'DEPOSIT':
+            transactions.append(trade)
+            print(f"  📥 {trade['date'].strftime('%Y-%m-%d')} | DEPOSIT | €{trade['qty']:.2f}")
+            
+        elif tx_type == 'BUY':
+            transactions.append(trade)
+            print(f"  📈 {trade['date'].strftime('%Y-%m-%d')} | BUY  | {symbol:<6} | Qty: {trade['qty']:>4} | €{trade['gross']:>10.2f}")
+            
+            # Track holdings
+            if symbol not in holdings:
+                holdings[symbol] = {'qty': Decimal('0'), 'total_cost': Decimal('0'), 'name': trade['name']}
+            holdings[symbol]['qty'] += trade['qty']
+            holdings[symbol]['total_cost'] += trade['net']
+            
+        elif tx_type == 'SELL':
+            transactions.append(trade)
+            print(f"  📉 {trade['date'].strftime('%Y-%m-%d')} | SELL | {symbol:<6} | Qty: {trade['qty']:>4} | €{trade['gross']:>10.2f}")
+            
+            # Update holdings - subtract from position
+            if symbol in holdings:
+                holdings[symbol]['qty'] -= trade['qty']
     
     # Filter holdings (keep only non-zero positions)
     active_holdings = {k: v for k, v in holdings.items() if v['qty'] > 0}
@@ -192,9 +189,9 @@ def parse_ibkr_complete(csv_path: str):
                 operation=tx['type'],
                 quantity=tx['qty'],
                 price=tx['price'],
-                total_amount=tx['amount'],
+                total_amount=tx['gross'],  # Changed from 'amount' to 'gross'
                 currency='EUR',
-                fees=tx['fees'],
+                fees=tx['commission'],  # Changed from 'fees' to 'commission'
                 timestamp=tx['date'],
                 source_document=Path(csv_path).name,
                 notes=tx['name'][:100]

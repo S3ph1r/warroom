@@ -47,8 +47,9 @@ INGESTION_STEPS = [
     {'id': 8, 'name': 'revolut_stocks', 'description': 'Revolut Stocks', 'script': 'parse_revolut_stocks.py'},
     {'id': 9, 'name': 'revolut_crypto_holdings', 'description': 'Revolut Crypto Holdings', 'script': 'parse_revolut_crypto.py'},
     {'id': 10, 'name': 'revolut_crypto_transactions', 'description': 'Revolut Crypto Transactions', 'script': 'parse_revolut_crypto_transactions.py'},
-    {'id': 11, 'name': 'binance', 'description': 'Binance', 'script': 'parse_binance.py'},
-    {'id': 12, 'name': 'reconciliation', 'description': 'Generate Reconciliation Report'},
+    {'id': 11, 'name': 'revolut_commodities', 'description': 'Revolut Commodities (Gold/Silver)', 'script': 'parse_revolut_commodities.py'},
+    {'id': 12, 'name': 'binance', 'description': 'Binance', 'script': 'parse_binance.py'},
+    {'id': 13, 'name': 'reconciliation', 'description': 'Generate Reconciliation Report'},
 ]
 
 

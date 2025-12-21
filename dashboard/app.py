@@ -1,20 +1,23 @@
 """
-🎯 WAR ROOM - Main Dashboard v2
-Personal Investment Management System
-Uses the new holdings-based schema
+🎯 WAR ROOM - Dashboard v4
+Clean architecture using price_service_v5
+
+Data Flow:
+- DB: ticker, isin, quantity, broker, purchase_price, currency
+- API: live_price from Yahoo/CoinGecko
+- Calc: live_value = qty × live_price, P/L = live_value - cost_basis
 """
 import streamlit as st
 import pandas as pd
 from datetime import datetime
 import plotly.express as px
-import plotly.graph_objects as go
 import sys
 from pathlib import Path
+from decimal import Decimal
 
-# Add project root to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-# Page configuration
+# Page config
 st.set_page_config(
     page_title="War Room",
     page_icon="🎯",
@@ -28,140 +31,158 @@ st.markdown("""
     .main-header {
         font-size: 2.5rem;
         font-weight: bold;
-        color: #1f77b4;
-        margin-bottom: 0.5rem;
-    }
-    .broker-card {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        border-radius: 15px;
-        padding: 1.5rem;
-        color: white;
-        margin-bottom: 1rem;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
-    .positive { color: #28a745; }
-    .negative { color: #dc3545; }
+    .stMetric > div {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        border-radius: 10px;
+        padding: 0.8rem;
+        border: 1px solid #0f3460;
+    }
 </style>
 """, unsafe_allow_html=True)
 
 
 # ============================================================
-# DATA FUNCTIONS
+# DATA LOADING
 # ============================================================
 
 @st.cache_data(ttl=60)
-def get_portfolio_data():
-    """Get portfolio data from new holdings table."""
+def load_holdings():
+    """Load holdings from DB."""
     try:
-        from services.portfolio_service import get_portfolio_summary, get_all_holdings
-        
-        summary = get_portfolio_summary()
-        holdings = get_all_holdings()
-        
-        return {
-            "summary": summary,
-            "holdings": holdings
-        }
+        from services.portfolio_service import get_all_holdings
+        return get_all_holdings()
     except Exception as e:
-        st.error(f"Database error: {e}")
-        return None
+        st.error(f"DB Error: {e}")
+        return []
 
 
-def get_holdings_dataframe(holdings: list) -> pd.DataFrame:
-    """Convert holdings list to DataFrame."""
-    if not holdings:
-        return pd.DataFrame()
+def fetch_live_prices(holdings: list, use_cache: bool = True):
+    """Fetch live prices using price_service_v5 with OpenFIGI."""
+    try:
+        from services.price_service_v5 import get_live_values_for_holdings, clear_cache
+        if not use_cache:
+            clear_cache()
+        return get_live_values_for_holdings(holdings)
+    except Exception as e:
+        st.error(f"Price Error: {e}")
+        return {}
+
+
+def calculate_broker_totals(holdings: list, live_data: dict) -> dict:
+    """Calculate totals per broker using live values."""
+    totals = {}
+    for h in holdings:
+        broker = h['broker']
+        hid = h['id']
+        
+        if hid in live_data:
+            value = live_data[hid]['live_value']
+            cost = live_data[hid]['cost_basis']
+        else:
+            value = h['current_value']
+            cost = value
+        
+        if broker not in totals:
+            totals[broker] = {'value': 0, 'cost': 0}
+        
+        totals[broker]['value'] += value
+        totals[broker]['cost'] += cost
     
-    df = pd.DataFrame(holdings)
+    # Calculate P/L
+    for broker in totals:
+        v = totals[broker]['value']
+        c = totals[broker]['cost']
+        totals[broker]['pnl'] = v - c
+        totals[broker]['pnl_pct'] = ((v - c) / c * 100) if c > 0 else 0
     
-    # Rename columns for display
-    df = df.rename(columns={
-        "broker": "Broker",
-        "ticker": "Ticker",
-        "name": "Name",
-        "asset_type": "Type",
-        "quantity": "Qty",
-        "current_price": "Price",
-        "current_value": "Value",
-        "currency": "Currency",
-        "source_document": "Source"
-    })
-    
-    return df
+    return totals
 
 
 # ============================================================
-# MAIN DASHBOARD
+# MAIN
 # ============================================================
 
 def main():
     # Header
     st.markdown('<p class="main-header">🎯 THE WAR ROOM</p>', unsafe_allow_html=True)
-    st.caption("Personal Investment Management System")
-    st.divider()
+    st.caption(f"Last updated: {datetime.now().strftime('%H:%M:%S')}")
+    
+    # Sidebar
+    with st.sidebar:
+        st.header("⚙️ Settings")
+        use_live = st.toggle("💹 Live Prices", value=True)
+        
+        if st.button("🔄 Refresh All"):
+            st.cache_data.clear()
+            from services.price_service_v5 import clear_cache
+            clear_cache()
+            st.rerun()
     
     # Load data
-    with st.spinner("Loading portfolio data..."):
-        data = get_portfolio_data()
+    with st.spinner("Loading holdings..."):
+        holdings = load_holdings()
     
-    if not data:
-        st.error("❌ Failed to load portfolio data. Check database connection.")
+    if not holdings:
+        st.error("No holdings found. Run ingestion first.")
         return
     
-    summary = data["summary"]
-    holdings = data["holdings"]
+    # Fetch prices
+    live_data = {}
+    if use_live:
+        with st.spinner("Fetching live prices..."):
+            live_data = fetch_live_prices(holdings, use_cache=True)
+    
+    # Calculate broker totals
+    broker_totals = calculate_broker_totals(holdings, live_data)
+    
+    # Portfolio total
+    total_value = sum(b['value'] for b in broker_totals.values())
+    total_cost = sum(b['cost'] for b in broker_totals.values())
+    total_pnl = total_value - total_cost
+    total_pnl_pct = (total_pnl / total_cost * 100) if total_cost > 0 else 0
+    
+    st.divider()
     
     # ==================== KPI CARDS ====================
-    st.subheader("📊 Portfolio Overview")
-    
     col1, col2, col3, col4 = st.columns(4)
     
     with col1:
         st.metric(
-            label="💰 Net Worth",
-            value=f"€{summary['total_value']:,.2f}"
+            "💰 Portfolio Value",
+            f"€{total_value:,.2f}",
+            delta=f"€{total_pnl:,.0f} ({total_pnl_pct:+.1f}%)" if use_live else None
         )
     
     with col2:
-        st.metric(
-            label="📈 Holdings",
-            value=f"{summary['holdings_count']}"
-        )
+        pnl_icon = "🟢" if total_pnl >= 0 else "🔴"
+        st.metric(f"{pnl_icon} Total P/L", f"€{total_pnl:,.2f}" if use_live else "N/A")
     
     with col3:
-        st.metric(
-            label="🏦 Brokers",
-            value=f"{summary['brokers_count']}"
-        )
+        st.metric("📈 Holdings", f"{len(holdings)}")
     
     with col4:
-        # Top asset type
-        if summary.get('by_asset_type'):
-            top_type = max(summary['by_asset_type'], key=summary['by_asset_type'].get)
-            top_value = summary['by_asset_type'][top_type]
-            st.metric(
-                label=f"📊 Top: {top_type}",
-                value=f"€{top_value:,.2f}"
-            )
+        st.metric("🏦 Brokers", f"{len(broker_totals)}")
     
     st.divider()
     
     # ==================== BROKER BREAKDOWN ====================
     st.subheader("🏦 Portfolio by Broker")
     
-    broker_data = summary.get('by_broker', {})
-    if broker_data:
-        # Sort by value
-        sorted_brokers = sorted(broker_data.items(), key=lambda x: x[1], reverse=True)
-        
-        cols = st.columns(len(sorted_brokers))
-        for i, (broker, value) in enumerate(sorted_brokers):
-            with cols[i]:
-                pct = (value / summary['total_value'] * 100) if summary['total_value'] > 0 else 0
-                st.metric(
-                    label=broker.replace("_", " "),
-                    value=f"€{value:,.2f}",
-                    delta=f"{pct:.1f}%"
-                )
+    sorted_brokers = sorted(broker_totals.items(), key=lambda x: x[1]['value'], reverse=True)
+    cols = st.columns(len(sorted_brokers))
+    
+    for i, (broker, data) in enumerate(sorted_brokers):
+        with cols[i]:
+            pct = (data['value'] / total_value * 100) if total_value > 0 else 0
+            st.metric(
+                broker.replace("_", " "),
+                f"€{data['value']:,.2f}",
+                delta=f"{pct:.1f}%"
+            )
     
     st.divider()
     
@@ -170,119 +191,116 @@ def main():
     
     with col_chart1:
         st.subheader("🎯 Allocation by Broker")
-        
-        if broker_data:
-            broker_df = pd.DataFrame([
-                {"Broker": k.replace("_", " "), "Value": v}
-                for k, v in broker_data.items()
-            ])
-            
-            fig = px.pie(
-                broker_df,
-                values="Value",
-                names="Broker",
-                hole=0.4,
-                color_discrete_sequence=px.colors.qualitative.Set2
-            )
-            fig.update_layout(margin=dict(t=0, l=0, r=0, b=0), height=350)
-            st.plotly_chart(fig, use_container_width=True)
+        broker_df = pd.DataFrame([
+            {"Broker": k.replace("_", " "), "Value": v['value']}
+            for k, v in broker_totals.items()
+        ])
+        fig = px.pie(broker_df, values='Value', names='Broker', hole=0.4)
+        fig.update_layout(margin=dict(t=0, b=0, l=0, r=0), height=300)
+        st.plotly_chart(fig, use_container_width=True)
     
     with col_chart2:
-        st.subheader("📊 Allocation by Asset Type")
+        st.subheader("📊 Allocation by Type")
+        # Calculate by asset type
+        type_totals = {}
+        for h in holdings:
+            atype = h.get('asset_type', 'Other')
+            hid = h['id']
+            val = live_data[hid]['live_value'] if hid in live_data else h['current_value']
+            type_totals[atype] = type_totals.get(atype, 0) + val
         
-        type_data = summary.get('by_asset_type', {})
-        if type_data:
-            type_df = pd.DataFrame([
-                {"Type": k, "Value": v}
-                for k, v in type_data.items()
-            ])
-            
-            fig = px.bar(
-                type_df.sort_values("Value", ascending=True),
-                x="Value",
-                y="Type",
-                orientation='h',
-                color="Type",
-                color_discrete_sequence=px.colors.qualitative.Pastel
-            )
-            fig.update_layout(
-                margin=dict(t=0, l=0, r=0, b=0),
-                height=350,
-                showlegend=False,
-                xaxis_title="Value (€)"
-            )
-            st.plotly_chart(fig, use_container_width=True)
+        type_df = pd.DataFrame([
+            {"Type": k, "Value": v}
+            for k, v in type_totals.items()
+        ])
+        fig = px.pie(type_df, values='Value', names='Type', hole=0.4)
+        fig.update_layout(margin=dict(t=0, b=0, l=0, r=0), height=300)
+        st.plotly_chart(fig, use_container_width=True)
     
     st.divider()
     
     # ==================== HOLDINGS TABLE ====================
-    st.subheader("🏆 All Holdings")
+    st.subheader("📋 Holdings Details")
     
-    # Broker filter
-    selected_broker = st.selectbox(
-        "Filter by broker:",
-        ["All Brokers"] + summary.get('brokers', []),
-        index=0
-    )
+    # Filters
+    col_f1, col_f2 = st.columns([1, 1])
+    with col_f1:
+        broker_filter = st.selectbox("Filter Broker", ["All"] + list(broker_totals.keys()))
+    with col_f2:
+        type_filter = st.selectbox("Filter Type", ["All"] + list(type_totals.keys()))
     
-    # Create dataframe
-    df = get_holdings_dataframe(holdings)
+    # Build table
+    table_rows = []
+    for h in holdings:
+        broker = h['broker']
+        atype = h.get('asset_type', '')
+        
+        if broker_filter != "All" and broker != broker_filter:
+            continue
+        if type_filter != "All" and atype != type_filter:
+            continue
+        
+        hid = h['id']
+        qty = h['quantity']
+        purch_price = h.get('purchase_price') or h.get('current_price') or 0
+        
+        if hid in live_data:
+            ld = live_data[hid]
+            live_price = ld['live_price']
+            live_value = ld['live_value']
+            pnl = ld['pnl']
+            pnl_pct = ld['pnl_pct']
+            source = ld['source']
+        else:
+            live_price = purch_price
+            live_value = qty * purch_price
+            pnl = 0
+            pnl_pct = 0
+            source = "DB"
+        
+        table_rows.append({
+            'Broker': broker.replace('_', ' '),
+            'Ticker': h.get('ticker', ''),
+            'ISIN': h.get('isin', '') or '',
+            'Qty': qty,
+            'Live Price': live_price,
+            'Purch. Price': purch_price,
+            'Value': live_value,
+            'P/L': pnl,
+            'P/L %': pnl_pct,
+            'Source': source,
+        })
     
-    if not df.empty:
-        # Filter by broker
-        if selected_broker != "All Brokers":
-            df = df[df["Broker"] == selected_broker]
-        
-        # Sort by value
-        df = df.sort_values("Value", ascending=False)
-        
-        # Display
-        display_cols = ["Ticker", "Name", "Type", "Broker", "Qty", "Value", "Source"]
-        display_df = df[display_cols].copy()
-        
-        # Format
-        display_df["Value"] = display_df["Value"].apply(lambda x: f"€{x:,.2f}")
-        display_df["Qty"] = display_df["Qty"].apply(lambda x: f"{x:,.4f}" if x < 10 else f"{x:,.2f}")
+    if table_rows:
+        df = pd.DataFrame(table_rows)
+        df = df.sort_values('Value', ascending=False)
         
         st.dataframe(
-            display_df,
+            df.style.format({
+                'Qty': '{:.4f}',
+                'Live Price': '€{:.2f}',
+                'Purch. Price': '€{:.2f}',
+                'Value': '€{:,.2f}',
+                'P/L': '€{:,.2f}',
+                'P/L %': '{:.1f}%'
+            }).applymap(
+                lambda x: 'color: green' if isinstance(x, (int, float)) and x > 0 else 
+                         ('color: red' if isinstance(x, (int, float)) and x < 0 else ''),
+                subset=['P/L', 'P/L %']
+            ),
             use_container_width=True,
-            hide_index=True,
-            height=400
+            height=500
         )
         
-        # Summary below table
-        if selected_broker != "All Brokers":
-            broker_total = broker_data.get(selected_broker, 0)
-            st.info(f"**{selected_broker}**: €{broker_total:,.2f} ({len(df)} holdings)")
+        # Summary
+        total_shown = sum(r['Value'] for r in table_rows)
+        total_pnl_shown = sum(r['P/L'] for r in table_rows)
+        st.info(f"**Shown:** €{total_shown:,.2f} | **P/L:** €{total_pnl_shown:,.2f}")
     
-    # ==================== SIDEBAR ====================
-    with st.sidebar:
-        st.header("⚙️ War Room")
-        
-        st.subheader("📊 Quick Stats")
-        st.write(f"**Total Value:** €{summary['total_value']:,.2f}")
-        st.write(f"**Holdings:** {summary['holdings_count']}")
-        st.write(f"**Brokers:** {summary['brokers_count']}")
-        st.write(f"**Last Updated:** {datetime.now().strftime('%H:%M:%S')}")
-        
-        st.divider()
-        
-        if st.button("🔄 Refresh Data", use_container_width=True):
-            st.cache_data.clear()
-            st.rerun()
-        
-        st.divider()
-        
-        st.subheader("🏦 Brokers")
-        for broker in summary.get('brokers', []):
-            value = broker_data.get(broker, 0)
-            st.write(f"• {broker.replace('_', ' ')}: €{value:,.2f}")
-        
-        st.divider()
-        
-        st.caption("🎯 War Room v2.0")
-        st.caption("Built with Streamlit + PostgreSQL")
+    # Footer
+    st.divider()
+    mode = "Live prices" if use_live else "DB prices"
+    st.caption(f"🎯 War Room v4 • {mode} • {len(holdings)} holdings")
 
 
 if __name__ == "__main__":
