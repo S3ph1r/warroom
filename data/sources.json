@@ -1,0 +1,34 @@
+{
+    "youtube_channels": [
+        "@MarcoCasario",
+        "@BlackBoxStocks",
+        "@choramedia",
+        "@BloombergTechnology"
+    ],
+    "rss_feeds": [
+        [
+            "https://finance.yahoo.com/news/rssindex",
+            "Yahoo Finance (General)"
+        ],
+        [
+            "https://feeds.feedburner.com/TechCrunch/",
+            "TechCrunch (Tech Alpha)"
+        ],
+        [
+            "https://news.ycombinator.com/rss",
+            "Hacker News (Tech Frontier)"
+        ],
+        [
+            "https://www.coindesk.com/arc/outboundfeeds/rss/",
+            "CoinDesk (Crypto)"
+        ],
+        [
+            "http://feeds.bbci.co.uk/news/world/rss.xml",
+            "BBC World (Geopolitics)"
+        ],
+        [
+            "https://www.reddit.com/r/wallstreetbets/.rss?limit=10",
+            "Reddit: WSB"
+        ]
+    ]
+}

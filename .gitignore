@@ -1,65 +1,11 @@
-# Byte-compiled / optimized / DLL files
+node_modules/
+frontend/node_modules/
 __pycache__/
-*.py[cod]
-*$py.class
-
-# Virtual environment
+*.pyc
 venv/
-.venv/
-env/
-
-# Environment variables - NEVER COMMIT!
 .env
-.env.local
-.env.*.local
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS
 .DS_Store
-Thumbs.db
-desktop.ini
-
-# Logs
-logs/
-*.log
-
-# Database files (local backups)
-*.sql
-*.sql.gz
-backups/
-
-# ChromaDB local storage
-chroma_db/
-
-# Jupyter
-.ipynb_checkpoints/
-
-# Testing
-.pytest_cache/
-.coverage
-htmlcov/
-
-# Distribution / packaging
-dist/
-build/
-*.egg-info/
-
-# Secrets and credentials
-*.pem
-*.key
-credentials/
-secrets/
-
-# CSV inbox (personal data)
-inbox/
-processed/
-
-# PyTorch models cache
-*.pt
-*.pth
-models/
+data/*_snapshot.json
+.gemini/
+.idea/
+.vscode/

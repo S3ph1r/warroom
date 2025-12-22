@@ -159,6 +159,16 @@ st.markdown("""
         text-transform: uppercase;
         letter-spacing: 0.05em;
     }
+
+    .news-tag {
+        font-size: 0.7rem;
+        color: #00d4ff;
+        background: rgba(0, 212, 255, 0.1);
+        padding: 2px 6px;
+        border-radius: 4px;
+        margin-left: 6px;
+        font-family: 'Space Grotesk', monospace;
+    }
     
     /* Tabs Styling */
     .stTabs [data-baseweb="tab-list"] {
@@ -185,6 +195,73 @@ st.markdown("""
     .stMultiSelect [data-baseweb="tag"] {
         background: rgba(59, 130, 246, 0.2);
         border-color: rgba(59, 130, 246, 0.3);
+    }
+
+    /* =========================================
+       SIDEBAR & INPUTS - CYBERPUNK FLUO
+       ========================================= */
+    
+    /* Sidebar Background */
+    [data-testid="stSidebar"] {
+        background-color: #050507 !important;
+        border-right: 1px solid rgba(0, 212, 255, 0.1);
+    }
+    
+    /* Sidebar Titles */
+    [data-testid="stSidebar"] h1, [data-testid="stSidebar"] h2, [data-testid="stSidebar"] h3 {
+        font-family: 'Space Grotesk', sans-serif !important;
+        background: linear-gradient(90deg, #00d4ff, #ff006e);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: 0.05em;
+    }
+    
+    /* Tech Inputs */
+    .stTextInput input, .stSelectbox div[data-baseweb="select"] > div {
+        background-color: rgba(13, 13, 18, 0.8) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        color: #00d4ff !important;
+        border-radius: 8px !important;
+        font-family: 'Space Grotesk', monospace !important;
+        transition: all 0.3s ease;
+    }
+    
+    /* Focus State - NEON GLOW */
+    .stTextInput input:focus, .stSelectbox div[data-baseweb="select"] > div:focus-within {
+        border-color: #00d4ff !important;
+        box-shadow: 0 0 15px rgba(0, 212, 255, 0.2) !important;
+    }
+    
+    /* Neon Buttons */
+    .stButton button {
+        background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(255, 0, 110, 0.1));
+        border: 1px solid rgba(0, 212, 255, 0.3);
+        color: #f3f4f6;
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        border-radius: 8px;
+    }
+    .stButton button:hover {
+        border-color: #ff006e;
+        color: #ff006e;
+        box-shadow: 0 0 20px rgba(255, 0, 110, 0.3);
+        transform: translateY(-2px);
+    }
+    
+    /* Expander - Tech Panel */
+    .streamlit-expanderHeader {
+        background-color: rgba(255, 255, 255, 0.02) !important;
+        border: 1px solid rgba(255, 255, 255, 0.05) !important;
+        border-radius: 8px !important;
+        font-family: 'Space Grotesk', sans-serif !important;
+        color: #9ca3af !important;
+    }
+    .streamlit-expanderHeader:hover {
+        color: #00d4ff !important;
+        border-color: rgba(0, 212, 255, 0.3) !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -266,6 +343,39 @@ def main():
             from services.price_service_v5 import clear_cache
             clear_cache()
             st.rerun()
+            
+        st.divider()
+        
+        with st.expander("🛠️ Manage Sources"):
+            import json
+            source_path = "data/sources.json"
+            
+            # Load current
+            if Path(source_path).exists():
+                with open(source_path, 'r') as f:
+                    sources_cfg = json.load(f)
+            else:
+                sources_cfg = {"youtube_channels": []}
+                
+            current_channels = sources_cfg.get("youtube_channels", [])
+            
+            # Add new
+            new_channel = st.text_input("Add YouTube Channel (@handle)", placeholder="@Bloomberg")
+            if st.button("Add Channel"):
+                if new_channel and new_channel.startswith("@") and new_channel not in current_channels:
+                    current_channels.append(new_channel)
+                    sources_cfg["youtube_channels"] = current_channels
+                    with open(source_path, 'w') as f:
+                        json.dump(sources_cfg, f, indent=2)
+                    st.success(f"Added {new_channel}!")
+                    st.rerun()
+                elif not new_channel.startswith("@"):
+                    st.error("Handle must start with @")
+            
+            # List
+            st.caption("Active Channels:")
+            for ch in current_channels:
+                st.markdown(f"- {ch}")
     
     # Tabs
     tab_portfolio, tab_intelligence = st.tabs(["💰 Portfolio", "🧠 Intelligence"])
@@ -445,7 +555,7 @@ def main():
             total_shown = sum(r['Value'] for r in table_rows)
             total_pnl_shown = sum(r['P/L'] for r in table_rows)
             st.info(f"**Shown:** €{total_shown:,.2f} | **P/L:** €{total_pnl_shown:,.2f}")
-
+ 
     # ==================== INTELLIGENCE TAB ====================
     with tab_intelligence:
         st.markdown("### 🧠 The Filter (Intelligence Engine)")
@@ -517,11 +627,17 @@ def main():
                 source = meta.get('source', 'Unknown')
                 pub_date = meta.get('published_at', '')[:10] if meta.get('published_at') else ''
                 
+                # Tags
+                tags = meta.get('tags', [])
+                tags_html = ""
+                for tag in tags[:3]: # Limit to 3 tags
+                    tags_html += f'<span class="news-tag">#{tag}</span> '
+                
                 # Build tile HTML (no leading whitespace to avoid code block interpretation)
                 tile_html = f'''<div class="news-tile {strategy}">
 <div class="tile-title"><a href="{meta.get('link', '#')}" target="_blank">{title}</a> {video_badge}</div>
 <div class="tile-meta">{source} • {pub_date}</div>
-<div><span class="score-badge relevance">🛡️ {rel_score}/10</span><span class="score-badge magnitude">🌍 {mag_score}/10</span></div>
+<div><span class="score-badge relevance">🛡️ {rel_score}/10</span><span class="score-badge magnitude">🌍 {mag_score}/10</span> {tags_html}</div>
 <div class="tile-reason">{reason}</div>
 </div>'''
                 

@@ -17,6 +17,8 @@ from decimal import Decimal
 from datetime import datetime, timedelta
 import requests
 import logging
+import json
+import os
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
@@ -24,23 +26,64 @@ logging.basicConfig(level=logging.WARNING)
 logger = logging.getLogger(__name__)
 
 # ============================================================
-# CACHE (5 minutes TTL)
+# CACHE (10 minutes TTL, File Persistent)
 # ============================================================
-_price_cache = {}
-_figi_cache = {}  # ISIN to ticker cache
-_cache_ttl = timedelta(minutes=5)
+CACHE_FILE = os.path.join(str(Path(__file__).parent.parent), "data", "prices_cache.json")
+_cache_ttl = timedelta(minutes=10)
 
+def _load_cache_from_disk():
+    """Load cache from JSON file, converting types back."""
+    if os.path.exists(CACHE_FILE):
+        try:
+            with open(CACHE_FILE, 'r') as f:
+                data = json.load(f)
+                loaded = {}
+                for k, v in data.items():
+                    # Format: [value_float_or_str, timestamp_iso]
+                    val, ts_str = v
+                    # Convert back to Decimal and datetime
+                    loaded[k] = (Decimal(str(val)), datetime.fromisoformat(ts_str))
+                return loaded
+        except Exception as e:
+            logger.warning(f"Failed to load price cache: {e}")
+    return {}
+
+def _save_cache_to_disk(cache):
+    """Save cache to JSON file, serializing types."""
+    try:
+        data = {}
+        for k, v in cache.items():
+            val, ts = v
+            # Store as float for JSON, ISO for datetime
+            # We use float for JSON compatibility, Decimal reconstruction is safe enough for prices
+            data[k] = (float(val), ts.isoformat())
+        
+        # Ensure dir
+        os.makedirs(os.path.dirname(CACHE_FILE), exist_ok=True)
+        with open(CACHE_FILE, 'w') as f:
+            json.dump(data, f)
+    except Exception as e:
+        logger.warning(f"Failed to save price cache: {e}")
+
+_price_cache = _load_cache_from_disk()
+_figi_cache = {}  # Keep in-memory only for now
 
 def _get_cached(cache: dict, key: str):
     if key in cache:
         value, ts = cache[key]
         if datetime.now() - ts < _cache_ttl:
             return value
+        else:
+            # Expired, remove from cache (and eventually disk on next save)
+            del cache[key]
     return None
 
 
 def _set_cached(cache: dict, key: str, value):
     cache[key] = (value, datetime.now())
+    # Persist only price cache
+    if cache is _price_cache:
+        _save_cache_to_disk(cache)
 
 
 def clear_cache():

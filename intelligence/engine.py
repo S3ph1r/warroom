@@ -25,6 +25,14 @@ class IntelligenceEngine:
         self.rss_scraper = RSSScraper()
         self.yt_scraper = YoutubeScraper()
 
+    def _load_sources(self):
+        """Load sources from JSON config or return defaults."""
+        source_path = "data/sources.json"
+        if os.path.exists(source_path):
+            with open(source_path, 'r') as f:
+                return json.load(f)
+        return {"youtube_channels": [], "rss_feeds": []}
+
     def _generate_scoring_prompt(self, news_item):
         return f"""
         You are a Senior Financial Intelligence Analyst.
@@ -39,7 +47,7 @@ class IntelligenceEngine:
         Date: {news_item.get('published_at')}
 
         TASK:
-        Analyze this news/video and assign two scores (0-10).
+        Analyze this news/video and assign two scores (0-10) + extract relevant tags.
         CRITICAL: OUTPUT MUST BE IN ITALIAN LANGUAGE.
         
         1. RELEVANCE (Track A - Defense): 
@@ -50,25 +58,52 @@ class IntelligenceEngine:
            - How significant is this event globally or for the market?
            - 0 = Noise. 10 = Historical Event / Global Disruption.
 
+        3. TAGS:
+           - Extract 2-4 keywords/hashtags (e.g. ["Crypto", "Regulation", "Bitcoin"]).
+
         OUTPUT FORMAT (JSON ONLY):
         {{
             "relevance_score": <int 0-10>,
             "relevance_reason": "<BREVE spiegazione in ITALIANO>",
             "magnitude_score": <int 0-10>,
             "magnitude_reason": "<BREVE spiegazione in ITALIANO>",
-            "strategy": "<ALPHA|BETA|GAMMA|NOISE>"
+            "strategy": "<ALPHA|BETA|GAMMA|NOISE>",
+            "tags": ["Tag1", "Tag2", "Tag3"]
         }}
         """
 
     def analyze_news_batch(self, news_items):
         """
         Analyzes a batch of news items using the LLM.
+        Skips items that are already in memory.
         Returns list of processed items with scores.
         """
         analyzed_items = []
-        print(f"🧠 Analyzing {len(news_items)} news items...")
+        items_to_process = []
         
+        # 1. Filter out known items
+        print(f"🧠 Checking {len(news_items)} items against memory...")
         for item in news_items:
+            # Check if we already have this specific link analyzed
+            if self.memory.exists(item['link']):
+                # Ideally, we retrieve it from memory to show it, but for now 
+                # persistence means we don't re-analyze. 
+                # If we want to DISPLAY it, we should fetch it from memory.
+                # However, the `run_cycle` normally returns fresh analysis.
+                # To support "persistence", we should really return everything from memory + new stuff.
+                # But let's stick to "don't re-analyze" for efficiency first.
+                pass 
+            else:
+                items_to_process.append(item)
+                
+        print(f"   Note: {len(news_items) - len(items_to_process)} items skipped (already analyzed).")
+        
+        if not items_to_process:
+            return []
+
+        print(f"🧠 Analyzing {len(items_to_process)} NEW news items...")
+        
+        for item in items_to_process:
             prompt = self._generate_scoring_prompt(item)
             
             try:
@@ -81,6 +116,7 @@ class IntelligenceEngine:
                     item['analysis'] = analysis
                     item['relevance_score'] = analysis.get('relevance_score', 0)
                     item['magnitude_score'] = analysis.get('magnitude_score', 0)
+                    item['tags'] = analysis.get('tags', [])
                     
                     # Store only if interesting
                     if item['relevance_score'] >= 6 or item['magnitude_score'] >= 7:
@@ -102,19 +138,16 @@ class IntelligenceEngine:
     def run_cycle(self, sources=None, video_channels=None):
         """Full cycle: Scrape (RSS + YouTube) -> Analyze -> Store"""
         all_news = []
-
+        
+        # Load sources from config
+        config = self._load_sources()
+        
         # 1. RSS Sources
-        if not sources:
-            sources = [
-                ("https://finance.yahoo.com/news/rssindex", "Yahoo Finance (General)"),
-                ("https://feeds.feedburner.com/TechCrunch/", "TechCrunch (Tech Alpha)"),
-                ("https://news.ycombinator.com/rss", "Hacker News (Tech Frontier)"),
-                ("https://www.coindesk.com/arc/outboundfeeds/rss/", "CoinDesk (Crypto)"),
-                ("http://feeds.bbci.co.uk/news/world/rss.xml", "BBC World (Geopolitics)"),
-                ("https://www.reddit.com/r/wallstreetbets/.rss?limit=10", "Reddit: WSB"),
-            ]
+        configured_rss = config.get("rss_feeds", [])
+        if sources: 
+            configured_rss = sources # Override if provided
             
-        for url, name in sources:
+        for url, name in configured_rss:
             try:
                 items = self.rss_scraper.fetch(url, name)
                 all_news.extend(items)
@@ -122,19 +155,21 @@ class IntelligenceEngine:
                 print(f"Error RSS {name}: {e}")
 
         # 2. YouTube Sources
-        if not video_channels:
-            # Uses handles directly for the new reliable scraping method
-            video_channels = [
-                "@MarcoCasario",      # Italian Finance/Trading
-                "@BlackBoxStocks",    # US Options/Stocks
-                "@choramedia"         # Altri Orienti (Geopolitics)
-            ]
+        configured_channels = config.get("youtube_channels", [])
+        if video_channels:
+            configured_channels = video_channels # Override if provided
             
-        for handle in video_channels:
+        for handle in configured_channels:
             try:
-                items = self.yt_scraper.fetch_channel_updates(handle, limit=2) # Limit to 2 per channel to avoid overloading LLM
+                items = self.yt_scraper.fetch_channel_updates(handle, limit=2) 
                 all_news.extend(items)
             except Exception as e:
                 print(f"Error YouTube {handle}: {e}")
-            
-        return self.analyze_news_batch(all_news)
+        
+        # 3. Analyze new items and store them
+        new_items = self.analyze_news_batch(all_news)
+        
+        # 4. Return EVERYTHING from memory (last 3 days/limit 100) to the dashboard
+        # This ensures we see persisted items + new items
+        recent_memories = self.memory.get_recent(limit=100) 
+        return [m['metadata'] for m in recent_memories] # Return formatted for dashboard

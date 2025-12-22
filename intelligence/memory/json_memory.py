@@ -39,6 +39,13 @@ class JsonVectorMemory:
         with open(self.file_path, 'w', encoding='utf-8') as f:
             json.dump(self.data, f, ensure_ascii=False, indent=2)
 
+    def exists(self, link):
+        """Check if a link (URL) is already present in memory."""
+        for item in self.data:
+            if item['metadata'].get('link') == link:
+                return True
+        return False
+    
     def _get_embedding(self, text):
         """Get embedding from Ollama API"""
         try:
@@ -115,6 +122,13 @@ class JsonVectorMemory:
             print("Types: No new items to add (or duplicates).")
             
         return added_count
+
+    def get_recent(self, limit=50):
+        """Return the most recent N items."""
+        # Sort by created_at desc (or published_at if available and consistent)
+        # Using created_at for now as it's reliable
+        sorted_data = sorted(self.data, key=lambda x: x.get('created_at', ''), reverse=True)
+        return [{"score": 1.0, "metadata": doc['metadata']} for doc in sorted_data[:limit]]
 
     def search(self, query, n_results=5):
         """
