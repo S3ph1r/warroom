@@ -36,7 +36,9 @@ class YoutubeScraper:
             "@choramedia": "UCsYN70T0gqR5U_xmWnZKcTQ",
             "ChoraMedia": "UCsYN70T0gqR5U_xmWnZKcTQ",
             "@AltriOrienti": "UCsYN70T0gqR5U_xmWnZKcTQ", # Hosted on Chora Media
-            "AltriOrienti": "UCsYN70T0gqR5U_xmWnZKcTQ"
+            "AltriOrienti": "UCsYN70T0gqR5U_xmWnZKcTQ",
+            "@simopieranni": "UCB6Kw-s33Qj-gk0782v69XQ",
+            "simopieranni": "UCB6Kw-s33Qj-gk0782v69XQ"
         }
         
         if handle in KNOWN_ID_MAP:
@@ -128,7 +130,8 @@ class YoutubeScraper:
                 "title": entry.title,
                 "link": entry.link,
                 "published_at": entry.published,
-                "author": entry.author
+                "author": entry.author,
+                "description": entry.media_group[0]['media_description'] if 'media_group' in entry and len(entry.media_group) > 0 else entry.get('summary', '')
             })
         return videos
 
@@ -148,47 +151,79 @@ class YoutubeScraper:
             logger.warning(f"No transcript for {video_id}: {e}")
             return None
 
-    def fetch_channel_updates(self, handle, limit=1):
+    def fetch_channel_updates(self, handle, limit=5, filter_keyword=None, display_name=None):
         """
-        HIGH-LEVEL METHOD: Fetch latest video from a channel, get transcript, return as NewsItem.
-        Uses the RELIABLE direct scraping method instead of broken RSS feeds.
+        HIGH-LEVEL METHOD: Fetch latest videos, filter by keyword, get transcript.
         
         Args:
-            handle: Channel handle (e.g., "@MarcoCasario") or UC ID.
-            limit: Currently only fetches 1 video (most recent).
+            handle: Channel handle (e.g., "@MarcoCasario").
+            limit: Number of videos to scan (default 5).
+            filter_keyword: If set, only keep videos containing this string in title (case-insensitive).
+            display_name: Optional override for source name.
         Returns:
             List of news-item style dicts.
         """
-        print(f"📺 Scanning Channel: {handle}...")
+        print(f"📺 Scanning Channel: {handle} (Limit: {limit}, Filter: {filter_keyword})")
         
-        # Use new direct scraping method
-        video_id, title = self.get_latest_video_from_handle(handle)
-        
-        if not video_id:
-            print(f"   ❌ Could not find any video for {handle}")
+        # 1. Resolve ID
+        channel_id = self.get_channel_id(handle)
+        if not channel_id:
+            print(f"   ❌ Could not resolve ID for {handle}")
             return []
-        
-        print(f"   Found: {title[:50]}... (ID: {video_id})")
-        
-        # Get transcript
-        transcript = self.get_transcript(video_id)
-        if not transcript:
-            print(f"   ⚠️ No transcript available for this video.")
-            return []  # Skip if no subtitles
             
-        # Truncate for summary (2000 chars preview, full stored separately)
-        summary_preview = transcript[:2000] + ("..." if len(transcript) > 2000 else "")
+        # 2. Get Videos (RSS is better for lists than scraping /videos HTML which is complex)
+        # Note: HTML scraping /videos usually only gives the absolute latest easily.
+        # RSS gives last 15.
+        videos = self.get_latest_videos(channel_id, limit=15) # Fetch more to allow for filtering
         
-        item = {
-            "title": f"[VIDEO] {title}",
-            "summary": summary_preview,  # For LLM analysis
-            "link": f"https://www.youtube.com/watch?v={video_id}",
-            "published_at": "",  # Not easily available without RSS, could add later
-            "source": f"YouTube ({handle})",
-            "is_video": True,
-            "full_transcript": transcript
-        }
+        if not videos:
+            print(f"   ❌ No videos found for {handle}")
+            return []
+            
+        results = []
+        count = 0
         
-        print(f"   ✅ Transcript fetched ({len(transcript)} chars)")
-        return [item]
+        for video in videos:
+            if count >= limit:
+                break
+                
+            # Filter Logic
+            if filter_keyword:
+                if filter_keyword.lower() not in video['title'].lower():
+                    # print(f"   [Skip] '{video['title']}' does not match '{filter_keyword}'")
+                    continue
+            
+            print(f"   Found: {video['title'][:50]}... (ID: {video['video_id']})")
+            
+            # Get transcript
+            transcript = self.get_transcript(video['video_id'])
+            if not transcript:
+                print(f"   ⚠️ No transcript available. Trying fallback description.")
+                description = video.get('description', '')
+                if description and len(description) > 50:
+                     transcript = f"[DESCRIPTION ONLY] {description}"
+                else:
+                     print("   ❌ No meaningful description found. Skipping.")
+                     continue
+                
+            # Truncate for summary
+            summary_preview = transcript[:2000] + ("..." if len(transcript) > 2000 else "")
+            
+            item = {
+                "title": f"[VIDEO] {video['title']}",
+                "original_title": video['title'],
+                "summary": summary_preview,
+                "link": video['link'],
+                "published_at": video['published_at'],
+                "source": display_name if display_name else f"YouTube ({handle})",
+                "is_video": True,
+                "video_id": video['video_id'],
+                "full_transcript": transcript
+            }
+            results.append(item)
+            count += 1
+            print(f"   ✅ Processed ({len(transcript)} chars)")
+            
+        print(f"   🏁 Completed {handle}: {len(results)} videos.")
+        return results
 

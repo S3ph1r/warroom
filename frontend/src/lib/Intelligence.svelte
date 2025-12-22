@@ -13,9 +13,7 @@
     function getSources(data) {
         try {
             if (!Array.isArray(data)) return ["All"];
-            const unique = new Set(
-                data.map((i) => i?.metadata?.source).filter(Boolean),
-            );
+            const unique = new Set(data.map((i) => i?.source).filter(Boolean));
             return ["All", ...unique];
         } catch (e) {
             console.error("Error extracting sources:", e);
@@ -28,11 +26,9 @@
     $: filteredItems =
         selectedSource === "All"
             ? items || []
-            : (items || []).filter(
-                  (item) => item?.metadata?.source === selectedSource,
-              );
+            : (items || []).filter((item) => item?.source === selectedSource);
 
-    const API_BASE = "http://localhost:8200";
+    const API_BASE = "http://localhost:8201";
 
     async function loadData() {
         try {
@@ -42,9 +38,7 @@
             if (!res.ok) throw new Error("Failed to load intelligence");
             const data = await res.json();
             console.log("Intelligence RAW payload:", data); // DEBUG
-            items = Array.isArray(data)
-                ? data.filter((i) => i && i.metadata)
-                : [];
+            items = Array.isArray(data) ? data : [];
             console.log("Intelligence Items count:", items.length); // DEBUG
         } catch (e) {
             console.error("Error loading intelligence:", e);
@@ -59,6 +53,7 @@
             scanning = true;
             await fetch(`${API_BASE}/api/intelligence/scan`, {
                 method: "POST",
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ force: true }),
             });
             await loadData();
@@ -86,7 +81,7 @@
         </div>
 
         <!-- Source Filters -->
-        <div class="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+        <div class="flex flex-wrap gap-2 pb-2">
             {#each sources as source}
                 <button
                     class="whitespace-nowrap px-3 py-1 rounded-full text-xs font-medium border transition-all {selectedSource ===
@@ -121,35 +116,63 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {#each filteredItems as item}
                 <div
-                    class="bg-skin-card backdrop-blur-md border border-skin-border rounded-lg p-4 hover:border-skin-muted/50 transition-colors group flex flex-col h-full {item
-                        .metadata.strategy || 'noise'}"
+                    class="bg-skin-card backdrop-blur-md border border-skin-border rounded-lg p-4 hover:border-skin-muted/50 transition-colors group flex flex-col h-full {item.strategy ||
+                        'noise'}"
                 >
                     <!-- Header -->
-                    <div class="flex justify-between items-start mb-2 gap-3">
+                    <div class="mb-3">
                         <a
-                            href={item.metadata.link}
+                            href={item.link}
                             target="_blank"
-                            class="font-medium text-skin-text leading-snug hover:text-skin-accent transition-colors line-clamp-2 text-sm"
+                            class="block font-medium text-skin-text leading-snug hover:text-skin-accent transition-colors mb-1"
                         >
-                            {item.metadata.title}
+                            {#if item.is_video}
+                                <span
+                                    class="inline-flex items-center gap-2 text-skin-accent"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="w-4 h-4 text-skin-accent"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
+                                        />
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                                        />
+                                    </svg>
+                                    <span class="hover:underline"
+                                        >{item.title.replace(
+                                            "[VIDEO] ",
+                                            "",
+                                        )}</span
+                                    >
+                                </span>
+                            {:else}
+                                {item.title}
+                            {/if}
                         </a>
-                        {#if item.metadata.link.includes("youtube")}
+                        <div class="flex items-center gap-2 mt-2">
                             <span
-                                class="bg-skin-neg/10 text-skin-neg text-[10px] font-medium px-1.5 py-0.5 rounded flex shrink-0"
-                                >Video</span
+                                class="text-xs text-skin-muted font-medium px-2 py-0.5 rounded-full bg-skin-card-highlight border border-skin-border/50"
                             >
-                        {/if}
-                    </div>
-
-                    <!-- Context -->
-                    <div class="text-[11px] text-skin-muted mb-3 flex gap-2">
-                        <span>{item.metadata.source}</span>
-                        <span>•</span>
-                        <span
-                            >{item.metadata.published_at
-                                ? item.metadata.published_at.substring(0, 10)
-                                : ""}</span
-                        >
+                                {item.source}
+                            </span>
+                            <span class="text-xs text-skin-muted">
+                                • {item.published_at
+                                    ? item.published_at.substring(0, 10)
+                                    : ""}
+                            </span>
+                        </div>
                     </div>
 
                     <!-- Scores -->
@@ -158,29 +181,36 @@
                             class="flex items-center gap-1 px-1.5 py-0.5 rounded border border-skin-border text-skin-muted text-[10px] font-mono"
                         >
                             <Shield size={10} />
-                            R:{item.metadata.relevance_score || 0}
+                            R:{item.relevance_score || 0}
                         </div>
                         <div
                             class="flex items-center gap-1 px-1.5 py-0.5 rounded border border-skin-border text-skin-muted text-[10px] font-mono"
                         >
                             <Globe size={10} />
-                            M:{item.metadata.magnitude_score || 0}
+                            M:{item.magnitude_score || 0}
                         </div>
                     </div>
 
-                    <!-- Reason -->
+                    <!-- Summary / Reason -->
                     <div
                         class="text-xs text-skin-muted/80 line-clamp-3 flex-1 mb-3 leading-relaxed"
                     >
-                        {item.metadata.relevance_reason ||
-                            item.metadata.magnitude_reason}
+                        {#if item.is_video}
+                            <span
+                                class="text-[10px] font-bold text-skin-accent uppercase tracking-wider mr-1"
+                                >[AI Summary]</span
+                            >
+                        {/if}
+                        {item.summary ||
+                            item.relevance_reason ||
+                            item.magnitude_reason}
                     </div>
 
                     <!-- Tags -->
                     <div
                         class="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-skin-border"
                     >
-                        {#each (item.metadata.tags || []).slice(0, 3) as tag}
+                        {#each (item.tags || []).slice(0, 3) as tag}
                             <span
                                 class="text-[10px] text-skin-muted font-medium bg-skin-base px-1.5 py-0.5 rounded border border-skin-border"
                                 >#{tag}</span

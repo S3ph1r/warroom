@@ -236,7 +236,14 @@
                     class="flex items-center gap-2 text-xs text-skin-muted px-2 py-1 hover:text-skin-text transition-colors"
                   >
                     <Youtube size={12} />
-                    <span>{channel}</span>
+                    <span>
+                      {typeof channel === "string"
+                        ? channel
+                        : channel.handle +
+                          (channel.filter_keyword
+                            ? ` [${channel.filter_keyword}]`
+                            : "")}
+                    </span>
                   </div>
                 {/each}
               </div>

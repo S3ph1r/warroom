@@ -5,6 +5,7 @@ Orchestrates the analysis of news using the Dual Scoring System (Relevance + Mag
 import json
 import logging
 from datetime import datetime
+import os
 
 # Internal modules
 from .llm_wrapper import LLMWrapper
@@ -60,6 +61,9 @@ class IntelligenceEngine:
 
         3. TAGS:
            - Extract 2-4 keywords/hashtags (e.g. ["Crypto", "Regulation", "Bitcoin"]).
+           
+        4. SUMMARY:
+           - A concise 2-3 sentence summary in ITALIAN.
 
         OUTPUT FORMAT (JSON ONLY):
         {{
@@ -68,7 +72,15 @@ class IntelligenceEngine:
             "magnitude_score": <int 0-10>,
             "magnitude_reason": "<BREVE spiegazione in ITALIANO>",
             "strategy": "<ALPHA|BETA|GAMMA|NOISE>",
-            "tags": ["Tag1", "Tag2", "Tag3"]
+            "tags": ["Tag1", "Tag2", "Tag3"],
+            "relevance_score": <int 0-10>,
+            "relevance_reason": "<BREVE spiegazione in ITALIANO>",
+            "magnitude_score": <int 0-10>,
+            "magnitude_reason": "<BREVE spiegazione in ITALIANO>",
+            "strategy": "<ALPHA|BETA|GAMMA|NOISE>",
+            "tags": ["Tag1", "Tag2", "Tag3"],
+            "summary": "<Concise summary in Italian>",
+            "translated_title": "<Title translated to Italian>"
         }}
         """
 
@@ -118,20 +130,30 @@ class IntelligenceEngine:
                     item['magnitude_score'] = analysis.get('magnitude_score', 0)
                     item['tags'] = analysis.get('tags', [])
                     
-                    # Store only if interesting
-                    if item['relevance_score'] >= 6 or item['magnitude_score'] >= 7:
-                        analyzed_items.append(item)
-                        print(f"   [MATCH] R:{item['relevance_score']} M:{item['magnitude_score']} | {item['title'][:40]}...")
-                    else:
-                        print(f"   [Info]  R:{item['relevance_score']} M:{item['magnitude_score']} | Discarded.")
+                    # USE AI SUMMARY and TITLE if available
+                    if analysis.get('translated_title'):
+                        item['title'] = analysis.get('translated_title')
+                        
+                    if analysis.get('summary'):
+                        item['summary'] = analysis.get('summary')
+                    
+                    # ALWAYS Store analyzed items (Feed-First approach)
+                    # We still compute scores for filtering later, but we capture everything now.
+                    item['analysis'] = analysis # Ensure analysis is attached
+                    
+                    # Incremental Save
+                    self.memory.add_news([item])
+                    analyzed_items.append(item)
+                    print(f"   [SAVED] R:{item['relevance_score']} M:{item['magnitude_score']} | {item['title'][:40]}...")
                 
             except Exception as e:
                 print(f"Error analyzing {item['title'][:20]}: {e}")
                 continue
                 
-        # Bulk Memory Store for actionable items
+        # Bulk Memory Store (redundant if incremental, but safe)
         if analyzed_items:
-            self.memory.add_news(analyzed_items)
+            # self.memory.add_news(analyzed_items) # Already saved incrementally
+            pass
             
         return analyzed_items
 
@@ -157,12 +179,52 @@ class IntelligenceEngine:
         # 2. YouTube Sources
         configured_channels = config.get("youtube_channels", [])
         if video_channels:
-            configured_channels = video_channels # Override if provided
+            # Normalize override: support both list of strings and list of dicts
+            normalized = []
+            for item in video_channels:
+                if isinstance(item, str):
+                    normalized.append({"handle": item, "filter_keyword": None})
+                else:
+                    normalized.append(item)
+            configured_channels = normalized
             
-        for handle in configured_channels:
+        for ch_config in configured_channels:
+            # Handle both old string format (legacy safety) and new object format
+            if isinstance(ch_config, str):
+                handle = ch_config
+                keyword = None
+                display_name = None
+            else:
+                handle = ch_config.get("handle")
+                keyword = ch_config.get("filter_keyword")
+                display_name = ch_config.get("name")
+                
             try:
-                items = self.yt_scraper.fetch_channel_updates(handle, limit=2) 
-                all_news.extend(items)
+                # We need to fetch 5 items, but ONLY process them if not in memory.
+                # The scraper fetches metadata first, allowing us to filter before "get_transcript" 
+                # effectively SAVING QUOTA/TIME. 
+                # HOWEVER, `youtube_scraper` currently combines fetch+transcript.
+                # Optimization: We let it fetch, but since it returns quickly for 5 items, it's okay.
+                # Future: Split `get_videos` and `get_transcript` in engine.
+                
+                # Optimization: Check if we have ANY items from this handle in memory to decide fetch depth
+                # Check against display_name OR fallback format
+                target_source_name = display_name if display_name else f"YouTube ({handle})"
+                has_history = any(m['metadata'].get('source') == target_source_name for m in self.memory.data)
+                
+                fetch_limit = 5 if has_history else 1
+                
+                items = self.yt_scraper.fetch_channel_updates(handle, limit=fetch_limit, filter_keyword=keyword, display_name=display_name) 
+                
+                # Filter out items already in memory BEFORE analyzing
+                fresh_items = []
+                for item in items:
+                    if not self.memory.exists(item['link']):
+                        fresh_items.append(item)
+                    else:
+                        print(f"   [Cache Hit] Video already analyzed: {item['title'][:30]}...")
+                        
+                all_news.extend(fresh_items)
             except Exception as e:
                 print(f"Error YouTube {handle}: {e}")
         

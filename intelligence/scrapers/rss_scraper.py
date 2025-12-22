@@ -25,7 +25,8 @@ class RSSScraper:
             print(f"Warning: Feed {source_name} has parsing errors: {feed.bozo_exception}")
         
         news_items = []
-        for entry in feed.entries:
+        # Limit to 10 items per feed as per user requirement
+        for entry in feed.entries[:10]:
             try:
                 # 1. Title
                 title = entry.get('title', 'No Title')

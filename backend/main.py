@@ -123,39 +123,62 @@ def build_intelligence_data():
     memory = JsonVectorMemory()
     all_items = memory.data
     
-    # Filter for last 3 days
-    cutoff = datetime.now() - timedelta(days=3)
+    # Configuration
+    DAYS_LOOKBACK = 700 # Extended to capture very old content (2024 vs 2025)
+    MAX_PER_SOURCE = 10
+    
+    # Filter for last N days
+    cutoff = datetime.now() - timedelta(days=DAYS_LOOKBACK)
     recent_items = []
     
     for item in all_items:
-        # Parse dates (handle various formats if needed, assuming ISO for now as per JsonVectorMemory)
         try:
             pub_date_str = item['metadata'].get('published_at') or item.get('created_at')
             if pub_date_str:
-                # Simple ISO check, might need adjustment based on actual data
-                pub_date = datetime.fromisoformat(pub_date_str.replace('Z', '+00:00')) 
-                # Blindly handling timezone naive/aware comparison by stripping tz
+                if 'Z' in pub_date_str:
+                     pub_date = datetime.fromisoformat(pub_date_str.replace('Z', '+00:00'))
+                else:
+                     pub_date = datetime.fromisoformat(pub_date_str)
+
                 if pub_date.replace(tzinfo=None) > cutoff.replace(tzinfo=None):
-                    recent_items.append(item)
+                    # Attach parsed date object for sorting (removed before JSON)
+                    item['metadata']['_parsed_date'] = pub_date
+                    recent_items.append(item['metadata'])
         except Exception:
-            continue # Skip items with bad dates
+            continue
             
-    # Sort by impact
-    recent_items.sort(key=lambda x: (x['metadata'].get('relevance_score', 0) + x['metadata'].get('magnitude_score', 0)), reverse=True)
+    # Group by Source
+    grouped = {}
+    for item in recent_items:
+        source = item.get('source', 'Unknown')
+        if source not in grouped:
+            grouped[source] = []
+        grouped[source].append(item)
+        
+    # Sort and Slice per Source
+    final_items = []
+    for source, items in grouped.items():
+        # Sort by date descending
+        items.sort(key=lambda x: x.get('_parsed_date', datetime.min), reverse=True)
+        
+        # Take top N
+        top_items = items[:MAX_PER_SOURCE]
+        
+        # Clean up temporary key
+        for i in top_items:
+            if '_parsed_date' in i:
+                del i['_parsed_date']
+                
+        final_items.extend(top_items)
     
-    # Cap at 150 items for performance
-    final_items = recent_items[:150]
+    # Global Sort for Frontend (Mix sources chronologically)
+    # Re-parsing is expensive, but for <50 items it's fine. 
+    # Or we could have kept the list before flattening.
+    # Actually, let's just sort by published_at string which works well for ISO
+    final_items.sort(key=lambda x: x.get('published_at', ''), reverse=True)
     
-    # Strip embeddings for frontend (massive size reduction)
-    frontend_items = []
-    for item in final_items:
-        clean_item = item.copy()
-        if 'embedding' in clean_item:
-            del clean_item['embedding']
-        frontend_items.append(clean_item)
-    
-    _save_snapshot(INTELLIGENCE_SNAPSHOT, frontend_items)
-    return frontend_items
+    _save_snapshot(INTELLIGENCE_SNAPSHOT, final_items)
+    return final_items
 
 # --- PORTFOLIO ENDPOINTS ---
 
@@ -184,12 +207,22 @@ def refresh_data():
 
 # --- INTELLIGENCE ENDPOINTS ---
 
+# Logging setup
+import logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+import sys
+import os
+
 @app.get("/api/intelligence")
 def get_intelligence():
     try:
+        # data = _load_snapshot(INTELLIGENCE_SNAPSHOT)
+        # Debugging: Always try load, log result
         data = _load_snapshot(INTELLIGENCE_SNAPSHOT)
         if data:
-            return data
+             return data
         return build_intelligence_data()
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
@@ -244,4 +277,4 @@ def health_check():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8200, reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=8201, reload=True)

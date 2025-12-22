@@ -71,8 +71,12 @@ warroom/
 - ✅ Multi-broker CSV import with automatic reconciliation
 - ✅ Real-time portfolio tracking
 - ✅ AI-powered market intelligence (local LLM)
-- ✅ **YouTube Intelligence**: Auto-scrape & summarize videos from finance channels (transcripts analysis)
-- ✅ **Tech Dashboard**: Modern Dark Mode UI with glassmorphism & tile layout
+- ✅ **YouTube Intelligence 2.0**: 
+    - Auto-scrape & summarize videos from finance channels (transcripts analysis)
+    - **New Source**: "Altri Orienti" (Simone Pieranni) fully integrated.
+    - **Smart Fallback**: Uses video description if transcripts are missing (no more skipped content).
+    - **Localization**: Titles and Summaries automatically translated to **Italian**.
+- ✅ **Tech Dashboard**: Modern Dark Mode UI with glassmorphism, dynamic layouts, and wrapping filters.
 - ✅ Sentiment analysis from news & social media
 - ✅ Macro scenario generation
 - ✅ Mobile access via Cloudflare Tunnel

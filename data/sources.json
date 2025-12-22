@@ -1,34 +1,56 @@
 {
-    "youtube_channels": [
-        "@MarcoCasario",
-        "@BlackBoxStocks",
-        "@choramedia",
-        "@BloombergTechnology"
+  "youtube_channels": [
+    {
+      "handle": "@MarcoCasario",
+      "filter_keyword": null,
+      "name": "YouTube (@MarcoCasario)"
+    },
+    {
+      "handle": "@choramedia",
+      "filter_keyword": "Black Box",
+      "name": "Black Box"
+    },
+    {
+      "handle": "@choramedia",
+      "filter_keyword": "Altri Orienti",
+      "name": "Altri Orienti (Deprecated)"
+    },
+    {
+      "handle": "@BloombergTechnology",
+      "filter_keyword": null,
+      "name": "Bloomberg Tech"
+    },
+    {
+      "handle": "@simopieranni",
+      "filter_keyword": null,
+      "name": "Altri Orienti"
+    },
+    "@BBCWorld"
+  ],
+  "rss_feeds": [
+    [
+      "https://finance.yahoo.com/news/rssindex",
+      "Yahoo Finance (General)"
     ],
-    "rss_feeds": [
-        [
-            "https://finance.yahoo.com/news/rssindex",
-            "Yahoo Finance (General)"
-        ],
-        [
-            "https://feeds.feedburner.com/TechCrunch/",
-            "TechCrunch (Tech Alpha)"
-        ],
-        [
-            "https://news.ycombinator.com/rss",
-            "Hacker News (Tech Frontier)"
-        ],
-        [
-            "https://www.coindesk.com/arc/outboundfeeds/rss/",
-            "CoinDesk (Crypto)"
-        ],
-        [
-            "http://feeds.bbci.co.uk/news/world/rss.xml",
-            "BBC World (Geopolitics)"
-        ],
-        [
-            "https://www.reddit.com/r/wallstreetbets/.rss?limit=10",
-            "Reddit: WSB"
-        ]
+    [
+      "https://feeds.feedburner.com/TechCrunch/",
+      "TechCrunch (Tech Alpha)"
+    ],
+    [
+      "https://news.ycombinator.com/rss",
+      "Hacker News (Tech Frontier)"
+    ],
+    [
+      "https://www.coindesk.com/arc/outboundfeeds/rss/",
+      "CoinDesk (Crypto)"
+    ],
+    [
+      "http://feeds.bbci.co.uk/news/world/rss.xml",
+      "BBC World (Geopolitics)"
+    ],
+    [
+      "https://www.reddit.com/r/wallstreetbets/.rss?limit=10",
+      "Reddit: WSB"
     ]
+  ]
 }

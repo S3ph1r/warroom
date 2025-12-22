@@ -99,15 +99,20 @@ class JsonVectorMemory:
             vector = self._get_embedding(text_to_embed)
 
             if vector:
+                # Store all fields in metadata to preserve analysis (scores, reasons, tags)
+                metadata = news.copy()
+                # Ensure defaults for stability (though engine provides them)
+                metadata.update({
+                    "title": news['title'],
+                    "link": news['link'],
+                    "published_at": news.get('published_at'),
+                    "source": news.get('source', 'Unknown'),
+                    "summary": news.get('summary', '')
+                })
+
                 doc = {
                     "id": str(uuid.uuid4()),
-                    "metadata": {
-                        "title": news['title'],
-                        "link": news['link'],
-                        "published_at": news['published_at'],
-                        "source": news.get('source', 'Unknown'),
-                        "summary": news['summary']
-                    },
+                    "metadata": metadata,
                     "embedding": vector,  # Store 1024-dim vector
                     "created_at": datetime.now().isoformat()
                 }
@@ -158,3 +163,65 @@ class JsonVectorMemory:
             })
             
         return results
+
+    def archive_old_items(self, days=30):
+        """
+        Moves items older than 'days' to warroom_archive.json.
+        Keeps the active memory lean.
+        """
+        archive_path = os.path.join("data", "warroom_archive.json")
+        cutoff_date = datetime.now().timestamp() - (days * 86400)
+        
+        active_items = []
+        archive_items = []
+        
+        print(f"🧹 Checking for items older than {days} days...")
+        
+        for doc in self.data:
+            try:
+                # Support both created_at (ISO) and published_at (ISO)
+                date_str = doc.get('created_at') or doc['metadata'].get('published_at')
+                if not date_str:
+                    active_items.append(doc)
+                    continue
+                    
+                # Robust date parsing
+                if 'Z' in date_str:
+                    item_date = datetime.fromisoformat(date_str.replace('Z', '+00:00')).timestamp()
+                elif '+' in date_str:
+                     item_date = datetime.fromisoformat(date_str).timestamp()
+                else:
+                    item_date = datetime.fromisoformat(date_str).timestamp()
+                
+                if item_date < cutoff_date:
+                    archive_items.append(doc)
+                else:
+                    active_items.append(doc)
+            except Exception as e:
+                # Keep item if date parsing fails to avoid data loss
+                active_items.append(doc)
+                
+        if archive_items:
+            print(f"📦 Archiving {len(archive_items)} old items to {archive_path}...")
+            
+            # Load existing archive to append
+            existing_archive = []
+            if os.path.exists(archive_path):
+                try:
+                    with open(archive_path, 'r', encoding='utf-8') as f:
+                        existing_archive = json.load(f)
+                except Exception:
+                    existing_archive = []
+            
+            existing_archive.extend(archive_items)
+            
+            # Save Archive
+            with open(archive_path, 'w', encoding='utf-8') as f:
+                json.dump(existing_archive, f, ensure_ascii=False, indent=2)
+                
+            # Update Active Memory
+            self.data = active_items
+            self._save_data()
+            print(f"✅ Active memory reduced to {len(self.data)} items.")
+        else:
+            print("✨ No items to archive.")
