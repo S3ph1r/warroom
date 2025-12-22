@@ -235,3 +235,53 @@ class IntelligenceEngine:
         # This ensures we see persisted items + new items
         recent_memories = self.memory.get_recent(limit=100) 
         return [m['metadata'] for m in recent_memories] # Return formatted for dashboard
+
+    def generate_daily_briefing(self) -> str:
+        """
+        Generates a summary of the most important news items from Memory using Local Mistral.
+        This serves as the 'Market Context' for The Council.
+        """
+        # 1. Get high impact items (Relevance > 6 or Magnitude > 7)
+        # We fetch more and filter manually since get_recent is simple
+        recent_items = self.memory.get_recent(limit=50)
+        
+        top_news = []
+        for item in recent_items:
+            meta = item.get('metadata', {})
+            # Ensure safe access to scores
+            r_score = meta.get('relevance_score', 0)
+            m_score = meta.get('magnitude_score', 0)
+            
+            if r_score >= 6 or m_score >= 7:
+                top_news.append(f"- {meta.get('title')} (Source: {meta.get('source')})\n  Summary: {meta.get('summary')}")
+        
+        # Limit to top 10 to fit context window
+        context_items = top_news[:10]
+        
+        if not context_items:
+            return "No critical market news detected in the last 24h. Assume Status Quo."
+            
+        news_text = "\n".join(context_items)
+        
+        prompt = f"""
+        You are a Market Intelligence Officer.
+        Summarize the following top news items into a concise "Daily Market Briefing" (max 200 words).
+        Focus on potential risks and market drivers.
+        
+        NEWS ITEMS:
+        {news_text}
+        
+        INSTRUCTIONS:
+        - Write strictly in ITALIAN.
+        - Use professional financial terminology.
+        - Be objective and direct.
+        
+        OUTPUT (Italian):
+        """
+        
+        try:
+            summary = self.llm.chat([{"role": "user", "content": prompt}], json_mode=False)
+            return summary or "Failed to generate briefing."
+        except Exception as e:
+            logger.error(f"Generate Briefing Error: {e}")
+            return f"Error generating briefing: {str(e)}"

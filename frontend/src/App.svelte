@@ -2,6 +2,7 @@
   import Sidebar from "./lib/Sidebar.svelte";
   import Dashboard from "./lib/Dashboard.svelte";
   import Intelligence from "./lib/Intelligence.svelte";
+  import TheCouncil from "./lib/TheCouncil.svelte";
   import { themeState } from "./lib/stores/theme.js";
 
   let currentView = "portfolio"; // 'portfolio' | 'intelligence'
@@ -72,6 +73,8 @@
         <Dashboard {refreshTrigger} />
       {:else if currentView === "intelligence"}
         <Intelligence />
+      {:else if currentView === "council"}
+        <TheCouncil />
       {/if}
     </div>
   </div>

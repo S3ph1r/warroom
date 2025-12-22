@@ -19,6 +19,51 @@ class PortfolioService:
     
     def close(self):
         self.session.close()
+
+    def get_anonymous_portfolio_context(self) -> dict:
+        """
+        Generates an anonymized (percentage-based) portfolio summary for AI Council.
+        Masks absolute Euro values.
+        """
+        total_value = self.get_total_value()
+        if total_value == 0:
+            return {"error": "Portfolio is empty"}
+
+        holdings = self.session.query(Holding).all()
+        
+        # 1. Asset Allocation (by Type)
+        by_type_raw = self.get_value_by_asset_type()
+        allocation = {k: round(float(v / total_value) * 100, 2) for k, v in by_type_raw.items()}
+        
+        # 2. Top Positions (by Weight)
+        positions = []
+        for h in holdings:
+            weight = (h.current_value / total_value) * 100
+            positions.append({
+                "ticker": h.ticker,
+                "name": h.name,
+                "type": h.asset_type,
+                "weight_pct": round(float(weight), 2)
+            })
+        
+        # Sort by weight desc and take top 15
+        positions.sort(key=lambda x: x['weight_pct'], reverse=True)
+        top_positions = positions[:15]
+        
+        # 3. Currency Exposure
+        currencies = {}
+        for h in holdings:
+            curr = h.currency
+            currencies[curr] = currencies.get(curr, 0) + h.current_value
+        currency_exposure = {k: round(float(v / total_value) * 100, 2) for k, v in currencies.items()}
+
+        return {
+            "total_value_masked": "CONFIDENTIAL",
+            "allocation": allocation,
+            "currency_exposure": currency_exposure,
+            "top_holdings": top_positions,
+            "note": "Values are percentage weights of Total Portfolio."
+        }
     
     # =========================================
     # AGGREGATES
@@ -151,3 +196,11 @@ def get_holdings_by_broker(broker: str) -> List[dict]:
     holdings = service.get_holdings_by_broker(broker)
     service.close()
     return holdings
+
+def get_anonymous_portfolio_context() -> dict:
+    """Convenience function for Council Context."""
+    service = PortfolioService()
+    ctx = service.get_anonymous_portfolio_context()
+    service.close()
+    return ctx
+

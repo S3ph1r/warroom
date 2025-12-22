@@ -138,7 +138,37 @@ class ImportLog(Base):
     status: Mapped[str] = mapped_column(String(20), default="SUCCESS")  # SUCCESS, PARTIAL, FAILED
     errors: Mapped[Optional[dict]] = mapped_column(JSONB)
     
+
     __table_args__ = (
         Index("idx_import_log_broker", "broker"),
         Index("idx_import_log_filename", "filename"),
     )
+
+
+# ============================================================
+# COUNCIL SESSIONS - AI Strategic Consultations
+# ============================================================
+class CouncilSession(Base):
+    """
+    Stores historical sessions of The Council.
+    Used for backtesting verdicts and auditing AI advice.
+    """
+    __tablename__ = "council_sessions"
+    
+    id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True), primary_key=True, default=uuid.uuid4
+    )
+    
+    timestamp: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+    
+    # Input Data
+    context_snapshot: Mapped[dict] = mapped_column(JSONB, nullable=False) # The "Dossier" (Portfolio Agg + Market Brief)
+    
+    # Output Data
+    responses: Mapped[dict] = mapped_column(JSONB, nullable=False) # Raw JSON from 4 Advisors
+    consensus: Mapped[Optional[str]] = mapped_column(Text) # Synthesized verdict (optional)
+    
+    __table_args__ = (
+        Index("idx_council_timestamp", "timestamp"),
+    )
+

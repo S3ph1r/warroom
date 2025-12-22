@@ -1,7 +1,7 @@
 import { writable, derived } from 'svelte/store';
 
 export const currentBase = writable('glass'); // 'linear', 'cyberpunk', 'glass'
-export const currentPalette = writable('default'); // 'default', 'ocean', 'sunset'
+export const currentPalette = writable('nordic'); // 'default', 'ocean', 'sunset', 'nordic'
 export const currentScene = writable('nordic'); // 'clean', 'sahara', 'nordic', 'ocean', 'forest', 'cyber'
 
 export const scenes = {

@@ -71,6 +71,11 @@ warroom/
 - ✅ Multi-broker CSV import with automatic reconciliation
 - ✅ Real-time portfolio tracking
 - ✅ AI-powered market intelligence (local LLM)
+- ✅ **The Council 3.0 (Matrix Architecture)**:
+    - **Matrix Analysis**: 4 AI Models (Gemini, Claude, DeepSeek, Qwen) x 2 Roles (Historian, Strategist) = **8 Strategic Opinions**.
+    - **President's Consensus**: A local LLM (Mistral) synthesizes all 8 opinions into a unified Executive Summary and scores the models' depth/sentiment.
+    - **Granular Control**: "Sync" individual advisors to refresh specific opinions without re-running the full council.
+    - **Smart Caching**: Daily session persistence to minimize API costs and latency.
 - ✅ **YouTube Intelligence 2.0**: 
     - Auto-scrape & summarize videos from finance channels (transcripts analysis)
     - **New Source**: "Altri Orienti" (Simone Pieranni) fully integrated.

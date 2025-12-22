@@ -14,7 +14,9 @@ sys.path.insert(0, str(PROJECT_ROOT))
 from services.portfolio_service import get_all_holdings
 from services.price_service_v5 import get_live_values_for_holdings, clear_cache
 from intelligence.engine import IntelligenceEngine
+from intelligence.engine import IntelligenceEngine
 from intelligence.memory.json_memory import JsonVectorMemory
+from services.council import council # Singleton instance
 
 app = FastAPI(title="War Room API")
 
@@ -33,6 +35,9 @@ class SourceUpdate(BaseModel):
 
 class IntelligenceScanRequest(BaseModel):
     force: bool = False
+
+class CouncilRequest(BaseModel):
+    query: Optional[str] = None
 
 # --- PERSISTENCE HELPERS ---
 PORTFOLIO_SNAPSHOT = PROJECT_ROOT / "data" / "portfolio_snapshot.json"
@@ -278,3 +283,34 @@ def health_check():
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("main:app", host="0.0.0.0", port=8201, reload=True)
+
+from pydantic import BaseModel
+from typing import Optional
+
+class CouncilRequest(BaseModel):
+    query: Optional[str] = None
+    force_refresh: bool = False
+
+@app.post("/api/council/consult")
+async def consult_council(request: CouncilRequest):
+    """
+    Triggers a strategic consultation with The Council (Gemini + Claude + DeepSeek + Qwen).
+    """
+    try:
+        result = await council.convene_council(user_query=request.query, force_refresh=request.force_refresh)
+        return result
+    except Exception as e:
+        logger.error(f"Council Error: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+class RefreshItemRequest(BaseModel):
+    item_id: str
+
+@app.post("/api/council/refresh-item")
+async def refresh_council_item(request: RefreshItemRequest):
+    try:
+        updated_item = await council.refresh_council_item(request.item_id)
+        return updated_item
+    except Exception as e:
+        logger.error(f"Refresh Item Error: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
