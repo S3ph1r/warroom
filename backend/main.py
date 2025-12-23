@@ -18,6 +18,32 @@ from intelligence.engine import IntelligenceEngine
 from intelligence.memory.json_memory import JsonVectorMemory
 from services.council import council # Singleton instance
 
+import logging
+from collections import deque
+
+# --- LOGGING SETUP ---
+log_buffer = deque(maxlen=100)  # Keep last 100 logs
+
+class BufferHandler(logging.Handler):
+    def emit(self, record):
+        try:
+            msg = self.format(record)
+            # Add simple timestamp if not present
+            timestamp = datetime.now().strftime("%H:%M:%S")
+            log_entry = f"[{timestamp}] {msg}"
+            log_buffer.append(log_entry)
+        except Exception:
+            self.handleError(record)
+
+# Configure Root Logger to use our Buffer
+buffer_handler = BufferHandler()
+formatter = logging.Formatter('%(levelname)s: %(message)s')
+buffer_handler.setFormatter(formatter)
+logging.getLogger().addHandler(buffer_handler)
+logging.getLogger().setLevel(logging.INFO)
+
+# Also capture 'intelligence' specifically if needed, but root covers it.
+
 app = FastAPI(title="War Room API")
 
 # CORS for Svelte Dev Server
@@ -29,9 +55,91 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/api/logs")
+def get_logs():
+    return {"logs": list(log_buffer)}
+
+@app.delete("/api/logs")
+def clear_logs():
+    log_buffer.clear()
+    return {"status": "cleared"}
+
+from scripts.inspect_source import audit_channel_strategy
+
 # Models
 class SourceUpdate(BaseModel):
-    handle: str
+    handle: Optional[str] = None
+    url: Optional[str] = None
+
+@app.post("/api/sources")
+def add_source(source: SourceUpdate):
+    source_path = PROJECT_ROOT / "data" / "sources.json"
+    if source_path.exists():
+        with open(source_path, 'r') as f:
+            data = json.load(f)
+    else:
+        data = {"youtube_channels": []}
+        
+    new_entry = None
+    
+    # CASE 1: Full Discovery via URL
+    if source.url:
+        logger.info(f"Running discovery for: {source.url}")
+        new_entry = audit_channel_strategy(source.url)
+        if not new_entry:
+            raise HTTPException(status_code=400, detail="Could not discover channel from URL. Is it valid?")
+            
+    # CASE 2: Manual Handle (Legacy)
+    elif source.handle:
+        new_entry = {
+            "handle": source.handle,
+            "name": source.handle,
+            "strategy": "STRATEGY_HYBRID",
+            "filter_keyword": None
+        }
+    else:
+         raise HTTPException(status_code=400, detail="Must provide 'url' or 'handle'")
+
+    # Check for duplicates (by handle)
+    # Filter out existing with same handle
+    existing_handles = []
+    normalized_list = []
+    
+    for item in data.get("youtube_channels", []):
+        if isinstance(item, str):
+            normalized_list.append({"handle": item, "name": item, "strategy": "STRATEGY_HYBRID"})
+            existing_handles.append(item)
+        else:
+            normalized_list.append(item)
+            existing_handles.append(item.get("handle"))
+            
+    if new_entry['handle'] in existing_handles:
+        # Update existing
+        logger.info(f"Updating existing source: {new_entry['handle']}")
+        final_list = []
+        for item in normalized_list:
+            if item['handle'] == new_entry['handle']:
+                final_list.append(new_entry) # Replace with new discovery
+            else:
+                final_list.append(item)
+        data["youtube_channels"] = final_list
+    else:
+        # Add new
+        logger.info(f"Adding new source: {new_entry['handle']}")
+        data.setdefault("youtube_channels", [])
+        # We need to ensure we don't break the mix of strings/dicts if any strings left, 
+        # but better to normalize all if we can. 
+        # For safety, just append.
+        # But wait, we reconstructed 'normalized_list' above but didn't assign it back to data if no dupes?
+        # Let's fix.
+        if isinstance(data["youtube_channels"], list):
+             # Just append object. Engine handles mixed types.
+             data["youtube_channels"].append(new_entry)
+
+    with open(source_path, 'w') as f:
+        json.dump(data, f, indent=2)
+            
+    return data
 
 class IntelligenceScanRequest(BaseModel):
     force: bool = False
@@ -64,49 +172,71 @@ def build_portfolio_data():
     # Calculate Totals
     broker_totals = {}
     processed_holdings = []
-    
+    total_day_pl = 0
+
     for h in holdings:
-        hid = h['id']
+        hid = h["id"]
         ld = live_data.get(hid, {})
-        
+
         # Merge live data into holding
         h_data = {
             **h,
-            "live_price": ld.get('live_price', h.get('current_price')),
-            "current_value": ld.get('live_value', h.get('current_value')),
-            "pnl": ld.get('pnl', 0),
-            "pnl_pct": ld.get('pnl_pct', 0),
-            "source": ld.get('source', 'DB')
+            "quantity": float(h.get("quantity", 0) or 0),
+            "live_price": ld.get("live_price") or h.get("current_price") or 0,
+            "current_value": ld.get("live_value") or h.get("current_value") or 0,
+            "pnl": ld.get("pnl") or 0,
+            "pnl_pct": ld.get("pnl_pct") or 0,
+            "day_pl": ld.get("day_pl") or 0,
+            "day_change_pct": ld.get("day_change_pct") or 0,
+            "source": ld.get("source", "DB"),
         }
         processed_holdings.append(h_data)
-        
+        total_day_pl += h_data["day_pl"]
+
         # Aggregation
-        broker = h['broker']
+        broker = h["broker"]
         if broker not in broker_totals:
-            broker_totals[broker] = {"value": 0, "cost": 0}
-        
+            broker_totals[broker] = {"value": 0, "cost": 0, "day_pl": 0}
+
         broker_totals[broker]["value"] += h_data["current_value"]
-        
+        broker_totals[broker]["day_pl"] += h_data["day_pl"]
+
         # Use pre-calculated cost basis from service (handles FX)
-        cost = ld.get('cost_basis', 0)
-        if cost == 0 and h['quantity'] and h['purchase_price']:
-                cost = h['quantity'] * h['purchase_price']
-        
+        cost = ld.get("cost_basis", 0)
+        if cost == 0 and h["quantity"] and h["purchase_price"]:
+            cost = h["quantity"] * h["purchase_price"]
+
         broker_totals[broker]["cost"] += cost
 
-    total_value = sum(b['value'] for b in broker_totals.values())
-    total_cost = sum(b['cost'] for b in broker_totals.values())
+    total_value = sum(b["value"] for b in broker_totals.values())
+    total_cost = sum(b["cost"] for b in broker_totals.values())
     total_pnl = total_value - total_cost
     total_pnl_pct = (total_pnl / total_cost * 100) if total_cost > 0 else 0
+    total_day_change_pct = (
+        (total_day_pl / (total_value - total_day_pl) * 100)
+        if (total_value - total_day_pl) > 0
+        else 0
+    )
+
+    # Post-process Broker Totals for Percentages
+    for bname, bstats in broker_totals.items():
+        bstats["pnl"] = bstats["value"] - bstats["cost"]
+        bstats["pnl_pct"] = (
+            (bstats["pnl"] / bstats["cost"] * 100) if bstats["cost"] > 0 else 0
+        )
+        prev_value = bstats["value"] - bstats["day_pl"]
+        bstats["day_change_pct"] = (
+            (bstats["day_pl"] / prev_value * 100) if prev_value > 0 else 0
+        )
 
     # Asset Allocation
     asset_totals = {}
     for h in processed_holdings:
-        atype = h.get('asset_type', 'Unknown')
+        atype = h.get("asset_type", "Unknown")
         if atype not in asset_totals:
             asset_totals[atype] = 0
-        asset_totals[atype] += h['current_value']
-    
+        asset_totals[atype] += h["current_value"]
+
     data = {
         "holdings": processed_holdings,
         "broker_totals": broker_totals,
@@ -115,8 +245,10 @@ def build_portfolio_data():
         "total_cost": total_cost,
         "total_pnl": total_pnl,
         "total_pnl_pct": total_pnl_pct,
+        "total_day_pl": total_day_pl,
+        "total_day_change_pct": total_day_change_pct,
         "count": len(holdings),
-        "last_updated": "Just now"
+        "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
     }
     _save_snapshot(PORTFOLIO_SNAPSHOT, data)
     return data
@@ -260,21 +392,37 @@ def get_sources():
             return json.load(f)
     return {"youtube_channels": []}
 
-@app.post("/api/sources")
-def add_source(source: SourceUpdate):
+
+
+@app.delete("/api/sources")
+def delete_source(handle: str):
+    logger.info(f"🗑️ Request to delete source: '{handle}'")
     source_path = PROJECT_ROOT / "data" / "sources.json"
     if source_path.exists():
         with open(source_path, 'r') as f:
             data = json.load(f)
-    else:
-        data = {"youtube_channels": []}
-        
-    if source.handle not in data["youtube_channels"]:
-        data["youtube_channels"].append(source.handle)
-        with open(source_path, 'w') as f:
-            json.dump(data, f, indent=2)
             
-    return data
+        original_len = len(data.get("youtube_channels", []))
+        
+        # Filter out the handle
+        new_list = []
+        for item in data.get("youtube_channels", []):
+            item_handle = item if isinstance(item, str) else item.get("handle")
+            # Debug log for comparison
+            # logger.info(f"   Comparing '{item_handle}' vs '{handle}'")
+            if item_handle != handle:
+                new_list.append(item)
+                
+        if len(new_list) < original_len:
+            data["youtube_channels"] = new_list
+            with open(source_path, 'w') as f:
+                json.dump(data, f, indent=2)
+            logger.info(f"✅ Deleted {handle}")
+            return {"status": "deleted", "handle": handle}
+        else:
+            logger.warning(f"❌ Handle '{handle}' not found in sources.")
+            
+    raise HTTPException(status_code=404, detail="Source not found")
 
 @app.get("/api/status")
 def health_check():

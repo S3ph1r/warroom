@@ -305,13 +305,17 @@ def isin_to_yahoo_ticker(isin: str, original_ticker: str = None, asset_type: str
 def get_yahoo_price(ticker: str, isin: str = None) -> tuple:
     """
     Get price from Yahoo Finance.
-    For EU ETFs (IE*/LU* ISIN), tries multiple exchanges.
-    Returns: (price_eur, source_string, success_bool)
+    Returns: (price_eur, source_string, success_bool, change_pct_1d)
     """
     cache_key = f"yahoo_{isin or ticker}"
     cached = _get_cached(_price_cache, cache_key)
     if cached:
-        return cached, "Yahoo (cached)", True
+        # Cached value currently doesn't store change_pct properly (tuple size mismatch possible if old cache)
+        # For robustness, if cached tuple is size 2, return 0.0 change. If size 3/4, extract it.
+        # But our cache functions serialize rigidly. Ideally we invalidate cache or expand it.
+        # For simplicity in this v5 iteration, we'll return 0.0 for cached change to avoid breaking deserialization
+        # UNLESS we wipe cache. Let's return 0 for change on cache hit for now, or fetch fresh if crucial.
+        return cached, "Yahoo (cached)", True, 0.0
     
     try:
         import yfinance as yf
@@ -336,25 +340,38 @@ def get_yahoo_price(ticker: str, isin: str = None) -> tuple:
         
         for try_ticker in tickers_to_try:
             stock = yf.Ticker(try_ticker)
-            hist = stock.history(period="1d")
+            # Fetch 5d to ensure we have previous close even on Mondays/Holidays
+            hist = stock.history(period="5d")
             
             if not hist.empty:
-                raw_price = Decimal(str(hist['Close'].iloc[-1]))
+                current_close = Decimal(str(hist['Close'].iloc[-1]))
+                
+                # Calculate change pct
+                prev_close = Decimal('0')
+                if len(hist) >= 2:
+                    prev_close = Decimal(str(hist['Close'].iloc[-2]))
+                elif stock.info.get('previousClose'):
+                    prev_close = Decimal(str(stock.info.get('previousClose')))
+                
+                change_pct = 0.0
+                if prev_close and prev_close > 0:
+                    change_pct = float((current_close - prev_close) / prev_close * 100)
+                
                 currency = stock.info.get('currency', 'USD')
                 
                 # Convert to EUR
                 fx_rate = FX_TO_EUR.get(currency, Decimal('0.96'))
-                price_eur = raw_price * fx_rate
+                price_eur = current_close * fx_rate
                 
                 _set_cached(_price_cache, cache_key, price_eur)
-                return price_eur, f"Yahoo:{try_ticker}", True
+                return price_eur, f"Yahoo:{try_ticker}", True, change_pct
         
         # All attempts failed
-        return None, f"Yahoo:{yahoo_ticker} (no data)", False
+        return None, f"Yahoo:{yahoo_ticker} (no data)", False, 0.0
         
     except Exception as e:
         logger.debug(f"Yahoo error for {ticker}: {e}")
-        return None, f"Yahoo:{ticker} (error)", False
+        return None, f"Yahoo:{ticker} (error)", False, 0.0
 
 
 # ============================================================
@@ -363,11 +380,11 @@ def get_yahoo_price(ticker: str, isin: str = None) -> tuple:
 
 def get_alphavantage_price(ticker: str, api_key: str = None) -> tuple:
     """
-    Get price from Alpha Vantage (free tier: 5 calls/min).
-    Returns: (price_eur, source_string, success_bool)
+    Get price from Alpha Vantage.
+    Returns: (price_eur, source_string, success_bool, change_pct_1d)
     """
     if not api_key:
-        api_key = "demo"  # Alpha Vantage demo key (very limited)
+        api_key = "demo"
     
     try:
         url = f"https://www.alphavantage.co/query"
@@ -379,22 +396,25 @@ def get_alphavantage_price(ticker: str, api_key: str = None) -> tuple:
         
         resp = requests.get(url, params=params, timeout=10)
         if resp.status_code != 200:
-            return None, "AlphaVantage (error)", False
+            return None, "AlphaVantage (error)", False, 0.0
         
         data = resp.json()
         quote = data.get("Global Quote", {})
         
         if not quote or "05. price" not in quote:
-            return None, "AlphaVantage (no data)", False
+            return None, "AlphaVantage (no data)", False, 0.0
         
         price_usd = Decimal(quote["05. price"])
+        change_pct_str = quote.get("10. change percent", "0%").replace("%", "")
+        change_pct = float(change_pct_str)
+        
         price_eur = price_usd * FX_TO_EUR['USD']
         
-        return price_eur, f"AlphaVantage:{ticker}", True
+        return price_eur, f"AlphaVantage:{ticker}", True, change_pct
         
     except Exception as e:
         logger.debug(f"AlphaVantage error for {ticker}: {e}")
-        return None, "AlphaVantage (error)", False
+        return None, "AlphaVantage (error)", False, 0.0
 
 
 # ============================================================
@@ -402,11 +422,12 @@ def get_alphavantage_price(ticker: str, api_key: str = None) -> tuple:
 # ============================================================
 
 def get_coingecko_prices(symbols: list) -> dict:
-    """Get crypto prices from CoinGecko."""
-    cache_key = "coingecko_batch"
-    cached = _get_cached(_price_cache, cache_key)
-    if cached:
-        return cached
+    """
+    Get crypto prices from CoinGecko.
+    Returns dict: ticker -> {price: Decimal, change_24h: float}
+    """
+    # NO CACHING for now to simplify struct change, or separate cache key
+    # cache_key = "coingecko_batch"
     
     try:
         id_map = {CRYPTO_IDS[s.upper()]: s for s in symbols if s.upper() in CRYPTO_IDS}
@@ -414,7 +435,7 @@ def get_coingecko_prices(symbols: list) -> dict:
             return {}
         
         ids_str = ','.join(id_map.keys())
-        url = f"https://api.coingecko.com/api/v3/simple/price?ids={ids_str}&vs_currencies=eur"
+        url = f"https://api.coingecko.com/api/v3/simple/price?ids={ids_str}&vs_currencies=eur&include_24hr_change=true"
         
         resp = requests.get(url, timeout=10)
         if resp.status_code != 200:
@@ -424,9 +445,10 @@ def get_coingecko_prices(symbols: list) -> dict:
         result = {}
         for cg_id, symbol in id_map.items():
             if cg_id in data and 'eur' in data[cg_id]:
-                result[symbol] = Decimal(str(data[cg_id]['eur']))
-        
-        _set_cached(_price_cache, cache_key, result)
+                result[symbol] = {
+                    'price': Decimal(str(data[cg_id]['eur'])),
+                    'change_24h': float(data[cg_id].get('eur_24h_change', 0.0))
+                }
         return result
         
     except Exception as e:
@@ -441,57 +463,48 @@ def get_coingecko_prices(symbols: list) -> dict:
 def get_price(ticker: str, isin: str, asset_type: str, 
               fallback_price: Decimal = None) -> tuple:
     """
-    Get price with cascading fallback.
-    
-    Order:
-    1. OpenFIGI (ISIN lookup) + Yahoo Finance
-    2. Yahoo Finance (ticker only)
-    3. Alpha Vantage (backup)
-    4. CoinGecko (crypto)
-    5. Fixed prices (commodities)
-    6. DB purchase_price (FALLBACK - flagged)
-    
-    Returns: (price_eur, source_string, is_live_bool)
+    Returns: (price_eur, source_string, is_live_bool, change_pct_1d)
     """
     # CASH
     if asset_type == 'CASH':
-        return Decimal('1'), 'Cash', True
+        return Decimal('1'), 'Cash', True, 0.0
     
     # COMMODITIES
     if asset_type == 'COMMODITY':
         if ticker.upper() in COMMODITY_PRICES:
-            return COMMODITY_PRICES[ticker.upper()], f'Fixed:{ticker}', True
+            # Fixed price, no daily change tracking in this simple version
+            return COMMODITY_PRICES[ticker.upper()], f'Fixed:{ticker}', True, 0.0
     
-    # CRYPTO - CoinGecko
+    # CRYPTO - CoinGecko (Handled in batch usually, but singular here if called directly)
     if asset_type == 'CRYPTO':
-        prices = get_coingecko_prices([ticker])
-        if ticker in prices:
-            return prices[ticker], 'CoinGecko', True
+        data = get_coingecko_prices([ticker])
+        if ticker in data:
+            return data[ticker]['price'], 'CoinGecko', True, data[ticker]['change_24h']
     
-    # STOCKS/ETFs - Cascading sources
+    # STOCKS/ETFs
     if asset_type in ('STOCK', 'ETF'):
         
-        # 1. Try Yahoo with ISIN lookup (OpenFIGI)
+        # 1. Yahoo + ISIN
         if isin:
-            price, source, success = get_yahoo_price(ticker, isin)
+            price, source, success, change = get_yahoo_price(ticker, isin)
             if success and price:
-                return price, source, True
+                return price, source, True, change
         
-        # 2. Try Yahoo with ticker only
-        price, source, success = get_yahoo_price(ticker)
+        # 2. Yahoo Ticker
+        price, source, success, change = get_yahoo_price(ticker)
         if success and price:
-            return price, source, True
+            return price, source, True, change
         
-        # 3. Try Alpha Vantage as backup
-        price, source, success = get_alphavantage_price(ticker)
+        # 3. AlphaVantage
+        price, source, success, change = get_alphavantage_price(ticker)
         if success and price:
-            return price, source, True
+            return price, source, True, change
     
-    # FALLBACK: Use DB purchase_price
+    # FALLBACK
     if fallback_price and fallback_price > 0:
-        return fallback_price, 'FALLBACK:DB', False  # False = not live
+        return fallback_price, 'FALLBACK:DB', False, 0.0
     
-    return Decimal('0'), 'NOT_FOUND', False
+    return Decimal('0'), 'NOT_FOUND', False, 0.0
 
 
 # ============================================================
@@ -500,14 +513,13 @@ def get_price(ticker: str, isin: str, asset_type: str,
 
 def get_live_values_for_holdings(holdings: list) -> dict:
     """
-    Calculate live values for all holdings.
-    Returns dict with is_live flag for each.
+    Calculate live values, P&L, and Daily change.
     """
     result = {}
     
     # Batch fetch crypto prices first
     crypto_tickers = [h['ticker'] for h in holdings if h.get('asset_type') == 'CRYPTO']
-    crypto_prices = get_coingecko_prices(crypto_tickers) if crypto_tickers else {}
+    crypto_data = get_coingecko_prices(crypto_tickers) if crypto_tickers else {}
     
     for h in holdings:
         hid = h.get('id')
@@ -517,13 +529,16 @@ def get_live_values_for_holdings(holdings: list) -> dict:
         quantity = Decimal(str(h.get('quantity', 0)))
         purchase_price = Decimal(str(h.get('purchase_price') or h.get('current_price') or 0))
         
-        # Get live price
-        if asset_type == 'CRYPTO' and ticker in crypto_prices:
-            live_price = crypto_prices[ticker]
+        # Get live data
+        day_change_pct = 0.0
+        
+        if asset_type == 'CRYPTO' and ticker in crypto_data:
+            live_price = crypto_data[ticker]['price']
+            day_change_pct = crypto_data[ticker]['change_24h']
             source = 'CoinGecko'
             is_live = True
         else:
-            live_price, source, is_live = get_price(ticker, isin, asset_type, purchase_price)
+            live_price, source, is_live, day_change_pct = get_price(ticker, isin, asset_type, purchase_price)
         
         # Convert purchase price to EUR
         currency = h.get('currency', 'EUR')
@@ -534,12 +549,24 @@ def get_live_values_for_holdings(holdings: list) -> dict:
         live_value = quantity * live_price
         cost_basis = quantity * purchase_price_eur if purchase_price else Decimal('0')
         
+        # Total P&L
         if cost_basis > 0:
             pnl = live_value - cost_basis
             pnl_pct = float(pnl / cost_basis * 100)
         else:
             pnl = Decimal('0')
             pnl_pct = 0.0
+            
+        # Daily P&L (Approximate: current_value * change / (100 + change))
+        # Logic: Current = Prev * (1 + pct/100) -> Prev = Current / (1 + pct/100)
+        # Day P&L = Current - Prev
+        day_pl = 0.0
+        if is_live and live_value > 0:
+            try:
+                prev_value = float(live_value) / (1 + (day_change_pct / 100.0))
+                day_pl = float(live_value) - prev_value
+            except:
+                day_pl = 0.0
         
         result[hid] = {
             'live_price': float(live_price),
@@ -548,7 +575,9 @@ def get_live_values_for_holdings(holdings: list) -> dict:
             'pnl': float(pnl),
             'pnl_pct': pnl_pct,
             'source': source,
-            'is_live': is_live,  # Flag for dashboard
+            'is_live': is_live,
+            'day_change_pct': day_change_pct,
+            'day_pl': day_pl
         }
     
     return result

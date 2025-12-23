@@ -151,7 +151,7 @@ class YoutubeScraper:
             logger.warning(f"No transcript for {video_id}: {e}")
             return None
 
-    def fetch_channel_updates(self, handle, limit=5, filter_keyword=None, display_name=None):
+    def fetch_channel_updates(self, handle, limit=5, filter_keyword=None, display_name=None, strategy="STRATEGY_HYBRID"):
         """
         HIGH-LEVEL METHOD: Fetch latest videos, filter by keyword, get transcript.
         
@@ -160,15 +160,16 @@ class YoutubeScraper:
             limit: Number of videos to scan (default 5).
             filter_keyword: If set, only keep videos containing this string in title (case-insensitive).
             display_name: Optional override for source name.
+            strategy: Extraction strategy ("STRATEGY_FULL_TRANSCRIPT", "STRATEGY_METADATA_ONLY", "STRATEGY_HYBRID")
         Returns:
             List of news-item style dicts.
         """
-        print(f"📺 Scanning Channel: {handle} (Limit: {limit}, Filter: {filter_keyword})")
+        logger.info(f"📺 Scanning Channel: {handle} (Limit: {limit}, Filter: {filter_keyword}, Strategy: {strategy})")
         
         # 1. Resolve ID
         channel_id = self.get_channel_id(handle)
         if not channel_id:
-            print(f"   ❌ Could not resolve ID for {handle}")
+            logger.error(f"   ❌ Could not resolve ID for {handle}")
             return []
             
         # 2. Get Videos (RSS is better for lists than scraping /videos HTML which is complex)
@@ -177,7 +178,7 @@ class YoutubeScraper:
         videos = self.get_latest_videos(channel_id, limit=15) # Fetch more to allow for filtering
         
         if not videos:
-            print(f"   ❌ No videos found for {handle}")
+            logger.warning(f"   ❌ No videos found for {handle}")
             return []
             
         results = []
@@ -190,22 +191,44 @@ class YoutubeScraper:
             # Filter Logic
             if filter_keyword:
                 if filter_keyword.lower() not in video['title'].lower():
-                    # print(f"   [Skip] '{video['title']}' does not match '{filter_keyword}'")
+                    # logger.debug(f"   [Skip] '{video['title']}' does not match '{filter_keyword}'")
                     continue
             
-            print(f"   Found: {video['title'][:50]}... (ID: {video['video_id']})")
+            logger.info(f"   Found: {video['title'][:50]}... (ID: {video['video_id']})")
             
-            # Get transcript
-            transcript = self.get_transcript(video['video_id'])
-            if not transcript:
-                print(f"   ⚠️ No transcript available. Trying fallback description.")
+            transcript = None
+            
+            # --- STRATEGY EXECUTION ---
+            if strategy == "STRATEGY_METADATA_ONLY":
+                logger.info("   ℹ️ Strategy METADATA_ONLY: Skipping transcript fetch.")
                 description = video.get('description', '')
                 if description and len(description) > 50:
-                     transcript = f"[DESCRIPTION ONLY] {description}"
+                    transcript = f"[DESCRIPTION ONLY] {description}"
                 else:
-                     print("   ❌ No meaningful description found. Skipping.")
-                     continue
-                
+                    logger.warning("   ❌ Description too short. Skipping.")
+                    continue
+                    
+            elif strategy == "STRATEGY_FULL_TRANSCRIPT":
+                transcript = self.get_transcript(video['video_id'])
+                if not transcript:
+                    logger.warning("   ❌ No transcript found (FULL_TRANSCRIPT enforced). Skipping.")
+                    continue
+                    
+            else: # STRATEGY_HYBRID (Default)
+                transcript = self.get_transcript(video['video_id'])
+                if not transcript:
+                    logger.warning(f"   ⚠️ No transcript available for {video['title']}. Trying fallback description.")
+                    description = video.get('description', '')
+                    if description and len(description) > 50:
+                         transcript = f"[DESCRIPTION ONLY] {description}"
+                         logger.info("   ✅ Fallback to Description successful.")
+                    else:
+                         logger.warning("   ❌ No meaningful description found. Skipping video.")
+                         continue
+            
+            if not transcript:
+                continue
+
             # Truncate for summary
             summary_preview = transcript[:2000] + ("..." if len(transcript) > 2000 else "")
             
@@ -222,8 +245,8 @@ class YoutubeScraper:
             }
             results.append(item)
             count += 1
-            print(f"   ✅ Processed ({len(transcript)} chars)")
+            logger.info(f"   ✅ Processed ({len(transcript)} chars)")
             
-        print(f"   🏁 Completed {handle}: {len(results)} videos.")
+        logger.info(f"   🏁 Completed {handle}: {len(results)} videos.")
         return results
 

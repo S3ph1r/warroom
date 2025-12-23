@@ -9,6 +9,7 @@
     Palette,
     Monitor,
     Globe,
+    Minus,
   } from "lucide-svelte";
   import {
     currentBase,
@@ -22,24 +23,43 @@
   export let activeView = "portfolio";
 
   const dispatch = createEventDispatcher();
-  const API_BASE = "http://localhost:8200";
+  const API_BASE = "http://localhost:8000";
 
   let sourcesExpanded = true;
   let newChannel = "";
   let channels = [];
   let loadingSources = false;
 
+  // Hover state for categories
+  let youtubeExpanded = false;
+
   async function fetchSources() {
     try {
       const res = await fetch(`${API_BASE}/api/sources`);
       if (res.ok) {
         const data = await res.json();
-        console.log("Sidebar loaded sources:", data);
         channels = data.youtube_channels || [];
-        console.log("Sidebar processed channels:", channels.length);
+        console.log("Sources loaded:", channels.length);
       }
     } catch (e) {
       console.error("Failed to load sources", e);
+    }
+  }
+
+  async function removeSource(handle) {
+    if (!confirm(`Are you sure you want to remove ${handle}?`)) return;
+    try {
+      const res = await fetch(
+        `${API_BASE}/api/sources?handle=${encodeURIComponent(handle)}`,
+        {
+          method: "DELETE",
+        },
+      );
+      if (res.ok) {
+        fetchSources();
+      }
+    } catch (e) {
+      console.error("Failed to delete", e);
     }
   }
 
@@ -47,10 +67,20 @@
     if (!newChannel) return;
     try {
       loadingSources = true;
+      const payload = {};
+      if (
+        newChannel.includes("youtube.com") ||
+        newChannel.includes("youtu.be")
+      ) {
+        payload.url = newChannel;
+      } else {
+        payload.handle = newChannel;
+      }
+
       await fetch(`${API_BASE}/api/sources`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ handle: newChannel }),
+        body: JSON.stringify(payload),
       });
       newChannel = "";
       fetchSources();
@@ -229,59 +259,131 @@
           </div>
         </div>
       {:else if activeView === "intelligence"}
-        <!-- INTELLIGENCE CONTROLS -->
-        <div class="animate-in slide-in-from-left-2 fade-in duration-300">
-          <button
-            class="flex items-center justify-between w-full text-[11px] font-medium text-skin-muted uppercase tracking-wider mb-2 px-2 hover:text-skin-text transition-colors"
-            on:click={() => (sourcesExpanded = !sourcesExpanded)}
-          >
-            <span>Manage Sources</span>
-            <Plus
-              size={12}
-              class="transition-transform duration-200 {sourcesExpanded
-                ? 'rotate-45'
-                : ''}"
-            />
-          </button>
+        <button
+          class="flex items-center justify-between w-full text-[11px] font-medium text-skin-muted uppercase tracking-wider mb-2 px-2 hover:text-skin-text transition-colors"
+          on:click={() => (sourcesExpanded = !sourcesExpanded)}
+        >
+          <span>Manage Sources</span>
+          <Plus
+            size={12}
+            class="transition-transform duration-200 {sourcesExpanded
+              ? 'rotate-45'
+              : ''}"
+          />
+        </button>
 
-          {#if sourcesExpanded}
-            <div class="space-y-2 mb-6">
-              <div class="flex gap-2">
-                <input
-                  type="text"
-                  bind:value={newChannel}
-                  placeholder="@Handle"
-                  class="bg-skin-card border border-skin-border rounded px-2 py-1 text-xs w-full focus:outline-none focus:border-skin-accent/50 transition-all font-mono text-skin-text placeholder:text-skin-muted"
-                />
-                <button
-                  on:click={addSource}
-                  disabled={!newChannel || loadingSources}
-                  class="bg-skin-card border border-skin-border rounded px-2 hover:bg-skin-card hover:border-skin-muted transition-all disabled:opacity-50 text-skin-text"
-                >
-                  <Plus size={12} />
-                </button>
-              </div>
-
-              <div class="space-y-0.5 max-h-48 overflow-y-auto scrollbar-hide">
-                {#each channels as channel}
+        {#if sourcesExpanded}
+          <div class="space-y-4 mb-6">
+            <!-- ADD INPUT -->
+            <div class="flex gap-2">
+              <input
+                type="text"
+                bind:value={newChannel}
+                placeholder="Ispeziona URL YouTube..."
+                class="bg-skin-card border border-skin-border rounded px-2 py-1 text-xs w-full focus:outline-none focus:border-skin-accent/50 transition-all font-mono text-skin-text placeholder:text-skin-muted"
+                on:keydown={(e) => e.key === "Enter" && addSource()}
+              />
+              <button
+                on:click={addSource}
+                disabled={!newChannel || loadingSources}
+                class="bg-skin-card border border-skin-border rounded px-2 hover:bg-skin-card hover:border-skin-muted transition-all disabled:opacity-50 text-skin-text"
+              >
+                {#if loadingSources}
                   <div
-                    class="flex items-center gap-2 text-xs text-skin-muted px-2 py-1 hover:text-skin-text transition-colors"
-                  >
-                    <Youtube size={12} />
-                    <span>
-                      {typeof channel === "string"
-                        ? channel
-                        : channel.handle +
-                          (channel.filter_keyword
-                            ? ` [${channel.filter_keyword}]`
-                            : "")}
-                    </span>
-                  </div>
-                {/each}
-              </div>
+                    class="w-3 h-3 border-2 border-skin-text border-t-transparent rounded-full animate-spin"
+                  ></div>
+                {:else}
+                  <Plus size={12} />
+                {/if}
+              </button>
             </div>
-          {/if}
-        </div>
+
+            <!-- YOUTUBE GROUP -->
+            <div
+              class="group relative"
+              on:mouseenter={() => (youtubeExpanded = true)}
+              on:mouseleave={() => (youtubeExpanded = false)}
+              role="group"
+              aria-label="YouTube Sources"
+            >
+              <div
+                class="flex items-center gap-2 px-2 py-1 text-xs font-semibold text-skin-text bg-skin-card/50 rounded border border-transparent group-hover:border-skin-border cursor-default transition-colors"
+              >
+                <Youtube size={12} class="text-red-500" />
+                <span>YouTube Sources</span>
+                <span class="ml-auto text-skin-muted text-[10px]"
+                  >{channels.length}</span
+                >
+              </div>
+
+              {#if youtubeExpanded}
+                <div
+                  class="w-full bg-skin-sidebar/50 border-l-2 border-skin-border ml-2 pl-2 mt-1 space-y-0.5 animate-in slide-in-from-top-1 fade-in duration-200"
+                >
+                  {#each channels as channel}
+                    <div
+                      class="group/item flex items-center justify-between gap-2 text-xs text-skin-muted px-2 py-1 hover:text-skin-text hover:bg-white/5 rounded transition-colors"
+                    >
+                      <span
+                        class="truncate"
+                        title={typeof channel === "string"
+                          ? channel
+                          : channel.handle}
+                      >
+                        {typeof channel === "string"
+                          ? channel
+                          : channel.name || channel.handle}
+                      </span>
+
+                      <div
+                        class="flex items-center gap-1 opacity-0 group-hover/item:opacity-100 transition-opacity"
+                      >
+                        {#if typeof channel !== "string" && channel.strategy}
+                          <span
+                            class="text-[9px] px-1 py-0.5 rounded border border-skin-border font-mono opacity-50"
+                            title={channel.strategy}
+                          >
+                            {channel.strategy
+                              .replace("STRATEGY_", "")
+                              .substring(0, 4)}
+                          </span>
+                        {/if}
+                        <button
+                          on:click|stopPropagation={() =>
+                            removeSource(
+                              typeof channel === "string"
+                                ? channel
+                                : channel.handle,
+                            )}
+                          class="text-skin-muted hover:text-red-400 p-0.5 transition-colors"
+                          title="Remove Source"
+                        >
+                          <Minus size={10} />
+                        </button>
+                      </div>
+                    </div>
+                  {/each}
+                  {#if channels.length === 0}
+                    <div
+                      class="px-2 py-2 text-center text-[10px] text-skin-muted"
+                    >
+                      Nessun canale
+                    </div>
+                  {/if}
+                </div>
+              {/if}
+            </div>
+
+            <!-- RSS GROUP (Future) -->
+            <!-- Just a placeholder to show structure -->
+            <div
+              class="px-2 py-1 text-xs text-skin-muted opacity-50 flex items-center gap-2"
+            >
+              <Globe size={12} />
+              <span>RSS Feeds (Static)</span>
+            </div>
+          </div>
+        {/if}
       {/if}
     </div>
   </div>

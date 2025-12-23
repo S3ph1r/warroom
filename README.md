@@ -35,23 +35,31 @@ docker-compose up -d
 # Initialize database
 python scripts/init_db.py
 
-# Run dashboard
-streamlit run dashboard/app.py
+# Start Backend (FastAPI)
+cd backend
+uvicorn main:app --reload --port 8000
+
+# Start Frontend (Svelte)
+cd ../frontend
+npm install
+npm run dev
 ```
 
 ## 📁 Project Structure
 
 ```
 warroom/
-├── api/              # FastAPI REST endpoints
-├── dashboard/        # Streamlit UI
-├── ingestion/        # CSV parsers for brokers
-├── intelligence/     # News & sentiment scrapers
-├── ai/               # Ollama & RAG integration
-├── db/               # Database models & migrations
-├── config/           # Settings & configuration
-├── scripts/          # Utility scripts
-└── tests/            # Unit tests
+├── backend/           # FastAPI REST endpoints
+├── frontend/          # Svelte/Vite UI
+├── dashboard/         # Legacy Streamlit UI
+├── ingestion/         # CSV parsers for brokers
+├── intelligence/      # News & sentiment scrapers
+├── ai/                # Ollama & RAG integration
+├── db/                # Database models & migrations
+├── config/            # Settings & configuration
+├── scripts/           # Utility scripts
+├── services/          # Real-time price services
+└── tests/             # Unit tests
 ```
 
 ## 🏦 Supported Brokers
@@ -81,7 +89,12 @@ warroom/
     - **New Source**: "Altri Orienti" (Simone Pieranni) fully integrated.
     - **Smart Fallback**: Uses video description if transcripts are missing (no more skipped content).
     - **Localization**: Titles and Summaries automatically translated to **Italian**.
-- ✅ **Tech Dashboard**: Modern Dark Mode UI with glassmorphism, dynamic layouts, and wrapping filters.
+- ✅ **v5 Dashboard (Svelte/FastAPI)**: 
+    - **6-Tile Grid**: Assets automatically categorized (Stocks, ETFs, Bonds, Crypto, Commodities, Cash).
+    - **Interactive Filtering**: Real-time broker filter bar (IBKR, BG SAXO, etc.) that updates all asset tiles.
+    - **Advanced Metrics**: Daily P&L (€ and %) integrated into KPI tiles and broker breakdown.
+    - **Data-Dense Layout**: Full-width compact tables with interactive sorting (asc/desc) on all columns.
+    - **Modern UI**: Dark Mode with glassmorphism, responsive single-column stack layout.
 - ✅ Sentiment analysis from news & social media
 - ✅ Macro scenario generation
 - ✅ Mobile access via Cloudflare Tunnel

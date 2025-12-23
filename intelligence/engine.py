@@ -194,37 +194,34 @@ class IntelligenceEngine:
                 handle = ch_config
                 keyword = None
                 display_name = None
+                strategy = "STRATEGY_HYBRID"
             else:
                 handle = ch_config.get("handle")
                 keyword = ch_config.get("filter_keyword")
                 display_name = ch_config.get("name")
+                strategy = ch_config.get("strategy", "STRATEGY_HYBRID")
                 
             try:
-                # We need to fetch 5 items, but ONLY process them if not in memory.
-                # The scraper fetches metadata first, allowing us to filter before "get_transcript" 
-                # effectively SAVING QUOTA/TIME. 
-                # HOWEVER, `youtube_scraper` currently combines fetch+transcript.
-                # Optimization: We let it fetch, but since it returns quickly for 5 items, it's okay.
-                # Future: Split `get_videos` and `get_transcript` in engine.
+                # Deduplication optimization check (optional)
                 
-                # Optimization: Check if we have ANY items from this handle in memory to decide fetch depth
-                # Check against display_name OR fallback format
-                target_source_name = display_name if display_name else f"YouTube ({handle})"
-                has_history = any(m['metadata'].get('source') == target_source_name for m in self.memory.data)
+                video_items = self.yt_scraper.fetch_channel_updates(
+                    handle, 
+                    limit=5, 
+                    filter_keyword=keyword, 
+                    display_name=display_name,
+                    strategy=strategy
+                )
                 
-                fetch_limit = 5 if has_history else 1
-                
-                items = self.yt_scraper.fetch_channel_updates(handle, limit=fetch_limit, filter_keyword=keyword, display_name=display_name) 
-                
-                # Filter out items already in memory BEFORE analyzing
-                fresh_items = []
-                for item in items:
-                    if not self.memory.exists(item['link']):
-                        fresh_items.append(item)
+                # Deduplication check
+                new_videos = []
+                for v in video_items:
+                    if not self.memory.exists(v['link']):
+                        new_videos.append(v)
                     else:
-                        print(f"   [Cache Hit] Video already analyzed: {item['title'][:30]}...")
+                        # print(f"   [Cache] Skipping already analyzed video: {v['title'][:30]}...")
+                        pass
                         
-                all_news.extend(fresh_items)
+                all_news.extend(new_videos)
             except Exception as e:
                 print(f"Error YouTube {handle}: {e}")
         

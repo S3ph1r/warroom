@@ -3,6 +3,7 @@
     import Chart from "chart.js/auto";
     import { themeState } from "./stores/theme.js";
     import { BarChart3, PieChart } from "lucide-svelte";
+    import AssetTable from "./components/AssetTable.svelte";
 
     export let refreshTrigger = 0;
 
@@ -13,8 +14,9 @@
 
     // Chart Preference State
     let chartType = "doughnut"; // 'doughnut' | 'bar'
+    let selectedBroker = "All";
 
-    const API_BASE = "http://localhost:8200";
+    const API_BASE = "http://localhost:8000";
 
     async function fetchData() {
         try {
@@ -199,6 +201,24 @@
 
     $: if (refreshTrigger) fetchData();
     onMount(fetchData);
+
+    // Grouping Logic for AssetTable keys
+    $: filteredHoldings = data
+        ? selectedBroker === "All"
+            ? data.holdings
+            : data.holdings.filter((h) => h.broker === selectedBroker)
+        : [];
+
+    $: groups = {
+        stocks: filteredHoldings.filter((h) => h.asset_type === "STOCK"),
+        etfs: filteredHoldings.filter((h) => h.asset_type === "ETF"),
+        bonds: filteredHoldings.filter((h) => h.asset_type === "BOND"),
+        crypto: filteredHoldings.filter((h) => h.asset_type === "CRYPTO"),
+        commodities: filteredHoldings.filter(
+            (h) => h.asset_type === "COMMODITY",
+        ),
+        cash: filteredHoldings.filter((h) => h.asset_type === "CASH"),
+    };
 </script>
 
 {#if error}
@@ -246,12 +266,33 @@
                     Total Value
                 </div>
                 <div
-                    class="text-2xl font-semibold text-skin-text tracking-tight"
+                    class="text-2xl font-semibold text-skin-text tracking-tight mb-2"
                 >
                     €{data.total_value.toLocaleString(undefined, {
-                        minimumFractionDigits: 2,
-                        maximumFractionDigits: 2,
+                        minimumFractionDigits: 0,
+                        maximumFractionDigits: 0,
                     })}
+                </div>
+                <!-- Mini P&L info -->
+                <div class="flex items-center gap-3 text-xs font-medium">
+                    <div
+                        class={(data.total_day_pl || 0) >= 0
+                            ? "text-skin-pos"
+                            : "text-skin-neg"}
+                    >
+                        1D: {(data.total_day_change_pct || 0) >= 0 ? "+" : ""}{(
+                            data.total_day_change_pct || 0
+                        ).toFixed(2)}%
+                    </div>
+                    <div
+                        class={(data.total_pnl || 0) >= 0
+                            ? "text-skin-pos"
+                            : "text-skin-neg"}
+                    >
+                        Net: {(data.total_pnl_pct || 0) >= 0 ? "+" : ""}{(
+                            data.total_pnl_pct || 0
+                        ).toFixed(2)}%
+                    </div>
                 </div>
             </div>
 
@@ -279,13 +320,13 @@
                         })}
                     </div>
                     <span
-                        class="text-xs font-medium {data.total_pnl >= 0
-                            ? 'text-skin-pos/80'
-                            : 'text-skin-neg/80'}"
+                        class={(data.total_pnl || 0) >= 0
+                            ? "text-skin-pos/80"
+                            : "text-skin-neg/80"}
                     >
-                        {data.total_pnl >= 0
-                            ? "+"
-                            : ""}{data.total_pnl_pct.toFixed(2)}%
+                        {(data.total_pnl || 0) >= 0 ? "+" : ""}{(
+                            data.total_pnl_pct || 0
+                        ).toFixed(2)}%
                     </span>
                 </div>
             </div>
@@ -333,7 +374,11 @@
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
             {#each Object.entries(data.broker_totals).sort((a, b) => b[1].value - a[1].value) as [broker, val]}
                 <div
-                    class="p-3 bg-skin-card backdrop-blur-sm border border-skin-border rounded-lg hover:border-skin-accent/50 transition-colors"
+                    class="p-3 bg-skin-card backdrop-blur-sm border border-skin-border rounded-lg {selectedBroker ===
+                    broker
+                        ? 'border-skin-accent ring-1 ring-skin-accent/20'
+                        : 'hover:border-skin-accent/50'} transition-all cursor-pointer"
+                    on:click={() => (selectedBroker = broker)}
                 >
                     <div
                         class="text-[10px] font-mono text-skin-muted mb-1 truncate"
@@ -341,15 +386,44 @@
                     >
                         {broker.replace("_", " ")}
                     </div>
-                    <div
-                        class="text-lg font-semibold text-skin-text tracking-tight"
-                    >
-                        €{val.value.toLocaleString(undefined, {
-                            maximumFractionDigits: 0,
-                        })}
+                    <div class="flex items-end justify-between gap-2">
+                        <div
+                            class="text-lg font-semibold text-skin-text tracking-tight leading-none"
+                        >
+                            €{val.value.toLocaleString(undefined, {
+                                maximumFractionDigits: 0,
+                            })}
+                        </div>
+                        <!-- Mini P&L Metrics next to total -->
+                        <div class="flex flex-col text-right leading-tight">
+                            <div
+                                class="text-[9px] font-bold {(val.day_change_pct ||
+                                    0) >= 0
+                                    ? 'text-skin-pos'
+                                    : 'text-skin-neg'}"
+                            >
+                                {(val.day_change_pct || 0) >= 0 ? "+" : ""}{(
+                                    val.day_change_pct || 0
+                                ).toFixed(1)}%
+                            </div>
+                            <div
+                                class="text-[9px] font-bold {(val.pnl_pct ||
+                                    0) >= 0
+                                    ? 'text-skin-pos'
+                                    : 'text-skin-neg'}"
+                            >
+                                {(val.pnl_pct || 0) >= 0 ? "+" : ""}{(
+                                    val.pnl_pct || 0
+                                ).toFixed(1)}%
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-xs font-medium text-skin-accent">
-                        {((val.value / data.total_value) * 100).toFixed(1)}%
+                    <!-- Allocation % below -->
+                    <div
+                        class="text-[10px] text-skin-muted/70 mt-1.5 font-medium"
+                    >
+                        {((val.value / data.total_value) * 100).toFixed(1)}% of
+                        total
                     </div>
                 </div>
             {/each}
@@ -419,84 +493,72 @@
             </div>
         </div>
 
-        <!-- Holdings Table -->
-        <div
-            class="border border-skin-border rounded-lg overflow-hidden bg-skin-card backdrop-blur-md"
-        >
-            <div
-                class="px-4 py-3 border-b border-skin-border flex justify-between items-center"
+        <!-- HOLDINGS GRID (6 TILES) -->
+        <div class="flex items-center justify-between mt-8 mb-2">
+            <h2
+                class="text-sm font-medium text-skin-muted uppercase tracking-wider"
             >
-                <h3 class="text-sm font-medium text-skin-text">
-                    Holdings Details
-                </h3>
-                <span class="text-xs text-skin-muted">{data.count} items</span>
-            </div>
-            <div class="overflow-x-auto">
-                <table class="w-full text-left text-sm">
-                    <thead
-                        class="bg-skin-base/50 text-skin-muted border-b border-skin-border"
+                Portfolio Holdings
+            </h2>
+
+            <!-- BROKER FILTER BAR -->
+            <div
+                class="flex items-center gap-1 bg-skin-base/30 p-1 rounded-md border border-skin-border"
+            >
+                <button
+                    class="px-2 py-1 text-[11px] font-medium rounded {selectedBroker ===
+                    'All'
+                        ? 'bg-skin-card text-skin-text shadow-sm'
+                        : 'text-skin-muted hover:text-skin-text'}"
+                    on:click={() => (selectedBroker = "All")}
+                >
+                    All
+                </button>
+                {#each Object.keys(data.broker_totals).sort() as broker}
+                    <button
+                        class="px-2 py-1 text-[11px] font-medium rounded {selectedBroker ===
+                        broker
+                            ? 'bg-skin-card text-skin-text shadow-sm'
+                            : 'text-skin-muted hover:text-skin-text'}"
+                        on:click={() => (selectedBroker = broker)}
                     >
-                        <tr>
-                            <th
-                                class="px-4 py-2 font-medium text-[11px] uppercase tracking-wider"
-                                >Ticker</th
-                            >
-                            <th
-                                class="px-4 py-2 font-medium text-[11px] uppercase tracking-wider"
-                                >Broker</th
-                            >
-                            <th
-                                class="px-4 py-2 font-medium text-[11px] uppercase tracking-wider text-right"
-                                >Qty</th
-                            >
-                            <th
-                                class="px-4 py-2 font-medium text-[11px] uppercase tracking-wider text-right"
-                                >Value</th
-                            >
-                            <th
-                                class="px-4 py-2 font-medium text-[11px] uppercase tracking-wider text-right"
-                                >P/L</th
-                            >
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-skin-border">
-                        {#each data.holdings as h}
-                            <tr
-                                class="hover:bg-skin-base/30 transition-colors group"
-                            >
-                                <td class="px-4 py-2 font-medium text-skin-text"
-                                    >{h.ticker}</td
-                                >
-                                <td class="px-4 py-2 text-skin-muted text-xs"
-                                    >{h.broker.replace("_", " ")}</td
-                                >
-                                <td
-                                    class="px-4 py-2 text-right font-mono text-skin-muted text-xs"
-                                    >{h.quantity.toFixed(4)}</td
-                                >
-                                <td
-                                    class="px-4 py-2 text-right font-mono text-skin-text"
-                                    >€{h.current_value.toLocaleString(
-                                        undefined,
-                                        {
-                                            minimumFractionDigits: 2,
-                                            maximumFractionDigits: 2,
-                                        },
-                                    )}</td
-                                >
-                                <td
-                                    class="px-4 py-2 text-right font-mono {h.pnl >=
-                                    0
-                                        ? 'text-skin-pos'
-                                        : 'text-skin-neg'}"
-                                >
-                                    {h.pnl >= 0 ? "+" : ""}€{h.pnl.toFixed(2)}
-                                </td>
-                            </tr>
-                        {/each}
-                    </tbody>
-                </table>
+                        {broker.replace("_", " ")}
+                    </button>
+                {/each}
             </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6">
+            <AssetTable
+                title="Stocks"
+                items={groups.stocks}
+                color="text-skin-accent"
+            />
+            <AssetTable
+                title="ETFs"
+                items={groups.etfs}
+                color="text-skin-pos"
+            />
+            <AssetTable
+                title="Bonds"
+                items={groups.bonds}
+                color="text-yellow-400"
+            />
+            <AssetTable
+                title="Crypto"
+                items={groups.crypto}
+                color="text-purple-400"
+            />
+            <AssetTable
+                title="Commodities"
+                items={groups.commodities}
+                color="text-orange-400"
+            />
+            <AssetTable
+                title="Cash"
+                items={groups.cash}
+                color="text-skin-muted"
+            />
         </div>
     </div>
 {/if}

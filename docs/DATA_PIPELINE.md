@@ -49,23 +49,30 @@ The heart of the system. It fetches live prices with a **cascading fallback stra
 
 ---
 
-## 3. 📊 Dashboard & P/L Calculation (`dashboard/app.py`)
+## 3. 📊 Dashboard Layer (v5 - Svelte & FastAPI)
 
-The dashboard displays the data using the following logic:
+The dashboard now follows a modern decoupled architecture.
 
-### P/L Formula
-```python
-Live Value (EUR)    = Quantity × Live Price (EUR)
-Cost Basis (EUR)    = Quantity × Purchase Price (Native) × FX_Rate(Native->EUR)
-P/L (EUR)           = Live Value - Cost Basis
-P/L %               = (P/L / Cost Basis) * 100
-```
-> **Note**: The `FX_Rate` is critical. If ignored, comparing `USD Cost` vs `EUR Value` leads to massive fake losses.
+### Data Flow
+1. **Frontend (Svelte)**: Polls `/api/portfolio` from the FastAPI backend.
+2. **Backend (FastAPI)**: 
+    - Fetches holdings from DB.
+    - Calls `PriceService` for real-time prices and **Daily P&L**.
+    - Aggregates data by **Broker** and **Asset Type**.
+    - Calculates global KPIs (Total value, Net P&L%, Day P&L%).
+3. **Frontend Rendering**:
+    - **AssetTable.svelte**: Dedicated component for the 6-tile layout.
+    - **Reactive Filtering**: Svelte reactive statements ($:) filter data by `selectedBroker` without new API calls.
+    - **Sorting**: Client-side sorting on all columns (Ticker, Value, P&L, etc.).
+
+### Day P&L Logic
+The `price_service_v5.py` fetches the **previous close** for all assets (Stocks/ETFs via Yahoo, Crypto via CoinGecko).
+- `day_change_pct` = ((Live Price - Prev Close) / Prev Close) * 100
+- `day_pl` = (Live Price - Prev Close) * Quantity
 
 ### Caching
-*   **Streamlit Cache**: `st.cache_data` stores loaded holdings.
-*   **Price Service Interior Cache**: `_price_cache` stores API results for 1 hour to avoid rate limits.
-*   **Refresh Button**: Clears BOTH caches to force fresh data.
+- **Backend Memory Cache**: `PriceService` caches prices for 1 hour.
+- **Frontend State**: Svelte stores the portfolio data in local variables until manual refresh.
 
 ---
 

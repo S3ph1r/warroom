@@ -1,6 +1,6 @@
 <script>
-    import { onMount } from "svelte";
-    import { Shield, Globe } from "lucide-svelte";
+    import { onMount, onDestroy } from "svelte";
+    import { Shield, Globe, Terminal } from "lucide-svelte";
 
     let items = [];
     let loading = true;
@@ -8,6 +8,11 @@
     let error = null;
 
     let selectedSource = "All";
+
+    // Log Overlay State
+    let showLogs = false;
+    let logs = [];
+    let logInterval = null;
 
     // Safe source extraction
     function getSources(data) {
@@ -28,7 +33,7 @@
             ? items || []
             : (items || []).filter((item) => item?.source === selectedSource);
 
-    const API_BASE = "http://localhost:8201";
+    const API_BASE = "http://localhost:8000";
 
     async function loadData() {
         try {
@@ -37,9 +42,7 @@
             const res = await fetch(`${API_BASE}/api/intelligence`);
             if (!res.ok) throw new Error("Failed to load intelligence");
             const data = await res.json();
-            console.log("Intelligence RAW payload:", data); // DEBUG
             items = Array.isArray(data) ? data : [];
-            console.log("Intelligence Items count:", items.length); // DEBUG
         } catch (e) {
             console.error("Error loading intelligence:", e);
             error = e.message;
@@ -48,9 +51,42 @@
         }
     }
 
+    // Polling Logs
+    async function fetchLogs() {
+        try {
+            const res = await fetch(`${API_BASE}/api/logs`);
+            if (res.ok) {
+                const data = await res.json();
+                logs = data.logs || [];
+                // Auto-scroll logic if needed
+            }
+        } catch (e) {
+            console.error("Log fetch failed:", e);
+        }
+    }
+
+    function startLogPolling() {
+        showLogs = true;
+        logs = [];
+        // Clear backend logs first not strictly needed as endpoint clears log_buffer
+        // but nice to have empty UI state
+        if (logInterval) clearInterval(logInterval);
+        logInterval = setInterval(fetchLogs, 500);
+    }
+
+    function stopLogPolling() {
+        if (logInterval) clearInterval(logInterval);
+        fetchLogs(); // one last fetch
+        setTimeout(() => {
+            showLogs = false;
+        }, 3000); // Hide after delay
+    }
+
     async function runScan() {
         try {
             scanning = true;
+            startLogPolling();
+
             await fetch(`${API_BASE}/api/intelligence/scan`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -59,25 +95,38 @@
             await loadData();
         } finally {
             scanning = false;
+            stopLogPolling();
         }
     }
 
     onMount(loadData);
+    onDestroy(() => {
+        if (logInterval) clearInterval(logInterval);
+    });
 </script>
 
-<div class="space-y-6">
+<div class="space-y-6 relative h-full">
     <div class="flex flex-col gap-4 pb-4 border-b border-skin-border">
         <div class="flex items-center justify-between">
             <h2 class="text-xl font-medium text-skin-text tracking-tight">
                 Intelligence Feed
             </h2>
-            <button
-                on:click={runScan}
-                disabled={scanning}
-                class="bg-skin-card border border-skin-border hover:border-skin-muted text-skin-text px-3 py-1.5 rounded-md text-sm font-medium transition-all disabled:opacity-50 shadow-sm"
-            >
-                {scanning ? "Scanning..." : "Run Analysis"}
-            </button>
+            <div class="flex gap-2">
+                <button
+                    on:click={() => (showLogs = !showLogs)}
+                    class="p-2 text-skin-muted hover:text-skin-text transition-colors"
+                    title="Toggle Logs"
+                >
+                    <Terminal size={18} />
+                </button>
+                <button
+                    on:click={runScan}
+                    disabled={scanning}
+                    class="bg-skin-card border border-skin-border hover:border-skin-muted text-skin-text px-3 py-1.5 rounded-md text-sm font-medium transition-all disabled:opacity-50 shadow-sm"
+                >
+                    {scanning ? "Scanning..." : "Run Analysis"}
+                </button>
+            </div>
         </div>
 
         <!-- Source Filters -->
@@ -96,13 +145,46 @@
         </div>
     </div>
 
+    <!-- LOG OVERLAY -->
+    {#if showLogs}
+        <div
+            class="fixed bottom-6 right-6 w-96 max-h-80 bg-black/90 backdrop-blur border border-skin-border rounded-lg shadow-2xl p-4 z-50 overflow-hidden flex flex-col font-mono text-xs"
+        >
+            <div
+                class="flex items-center justify-between border-b border-white/10 pb-2 mb-2"
+            >
+                <span class="text-green-400 font-bold flex items-center gap-2">
+                    {#if scanning}<span class="animate-pulse">●</span>{/if}
+                    Execution Logs
+                </span>
+                <span class="text-white/40 text-[10px]"
+                    >{logs.length} lines</span
+                >
+            </div>
+            <div class="overflow-y-auto flex-1 scrollbar-hide space-y-1">
+                {#if logs.length === 0}
+                    <div class="text-white/30 italic">
+                        Waiting for process...
+                    </div>
+                {/if}
+                {#each logs.slice().reverse() as log}
+                    <div
+                        class="text-gray-300 break-all border-l-2 border-transparent hover:border-white/20 pl-2"
+                    >
+                        {log}
+                    </div>
+                {/each}
+            </div>
+        </div>
+    {/if}
+
     {#if error}
         <div
             class="p-4 bg-skin-neg/10 border border-skin-neg/20 text-skin-neg rounded-md text-sm text-center"
         >
             {error}
         </div>
-    {:else if loading}
+    {:else if loading && !scanning}
         <div class="flex justify-center py-20">
             <div
                 class="w-5 h-5 border-2 border-skin-muted border-t-transparent rounded-full animate-spin"
@@ -113,7 +195,7 @@
             No intelligence data found. Run a scan.
         </div>
     {:else}
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-20">
             {#each filteredItems as item}
                 <div
                     class="bg-skin-card backdrop-blur-md border border-skin-border rounded-lg p-4 hover:border-skin-muted/50 transition-colors group flex flex-col h-full {item.strategy ||
@@ -235,5 +317,14 @@
     }
     .noise {
         border-left: 3px solid #374151;
+    }
+
+    /* Scrollbar Hide for Log Window */
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
     }
 </style>

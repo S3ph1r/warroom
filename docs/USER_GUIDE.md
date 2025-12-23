@@ -188,21 +188,29 @@ python scripts/initial_ingestion.py
 ## 📊 Dashboard
 
 ### Avvio
-
 ```bash
-.\venv\Scripts\streamlit.exe run dashboard/app.py
+# Backend (Port 8000)
+cd backend
+uvicorn main:app --reload --port 8000
+
+# Frontend (Port 5200)
+cd ../frontend
+npm run dev
 ```
 
 ### URL
 
-Apri [http://localhost:8501](http://localhost:8501)
+Apri [http://localhost:5200](http://localhost:5200) (Frontend)
+Interfaccia API: [http://localhost:8000/docs](http://localhost:8000/docs)
 
 ### Funzionalità
 
-- **Net Worth**: Valore totale portafoglio
-- **Breakdown per Broker**: Grafico a torta
-- **Holdings Table**: Lista di tutti gli asset
-- **Filtri**: Per broker, asset type
+- **KPI Totali**: Net Worth, P&L Netto e P&L Giornaliero (1D).
+- **Broker Allocation**: Tile interattive per broker con valore, % peso, e performance (1D/Net).
+- **Filtro Broker**: Barra superiore per isolare i dati di un singolo broker in tempo reale.
+- **Asset Table (6 Tile)**: Tabella dedicata per Stocks, ETFs, Bonds, Crypto, Commodities, Cash.
+- **Ordinamento**: Clicca sulle intestazioni per ordinare ogni tabella per qualsiasi valore.
+- **Charts**: Allocazione visuale per Asset e per Broker.
 
 ---
 

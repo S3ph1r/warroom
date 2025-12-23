@@ -1,31 +1,29 @@
 {
   "youtube_channels": [
     {
-      "handle": "@MarcoCasario",
-      "filter_keyword": null,
-      "name": "YouTube (@MarcoCasario)"
-    },
-    {
       "handle": "@choramedia",
       "filter_keyword": "Black Box",
-      "name": "Black Box"
+      "name": "Black Box",
+      "strategy": "STRATEGY_HYBRID"
     },
     {
       "handle": "@choramedia",
       "filter_keyword": "Altri Orienti",
-      "name": "Altri Orienti (Deprecated)"
+      "name": "Altri Orienti (Deprecated)",
+      "strategy": "STRATEGY_METADATA_ONLY"
     },
     {
       "handle": "@BloombergTechnology",
       "filter_keyword": null,
-      "name": "Bloomberg Tech"
+      "name": "Bloomberg Tech",
+      "strategy": "STRATEGY_HYBRID"
     },
     {
       "handle": "@simopieranni",
       "filter_keyword": null,
-      "name": "Altri Orienti"
-    },
-    "@BBCWorld"
+      "name": "Altri Orienti",
+      "strategy": "STRATEGY_METADATA_ONLY"
+    }
   ],
   "rss_feeds": [
     [

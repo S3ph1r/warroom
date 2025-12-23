@@ -27,7 +27,7 @@
         error = null;
         try {
             const res = await fetch(
-                "http://localhost:8201/api/council/consult",
+                "http://localhost:8000/api/council/consult",
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
@@ -51,7 +51,7 @@
         refreshingItems[itemId] = true;
         try {
             const res = await fetch(
-                "http://localhost:8201/api/council/refresh-item",
+                "http://localhost:8000/api/council/refresh-item",
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
