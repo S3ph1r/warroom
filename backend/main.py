@@ -2,10 +2,14 @@ import sys
 from pathlib import Path
 import json
 from typing import List, Optional
+import feedparser
 from datetime import datetime, timedelta
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+import threading
+import time
+import logging
 
 # Add project root to path
 PROJECT_ROOT = Path(__file__).parent.parent
@@ -59,6 +63,34 @@ app.add_middleware(
 def get_logs():
     return {"logs": list(log_buffer)}
 
+# --- BACKGROUND REFRESHER ---
+def background_price_refresher():
+    """Background task to keep the price cache fresh every 15 minutes."""
+    logger.info("🚀 Background price refresher thread started.")
+    while True:
+        try:
+            # Wait for any initial startup activity to settle
+            logger.info("🔄 Starting periodic price refresh...")
+            holdings = get_all_holdings()
+            if holdings:
+                # This call updates the persistent JSON cache internally
+                get_live_values_for_holdings(holdings)
+                logger.info(f"✅ Background refresh completed for {len(holdings)} holdings.")
+            else:
+                logger.info("ℹ️ No holdings found to refresh.")
+            
+            # Sleep for 15 minutes
+            time.sleep(15 * 60)
+        except Exception as e:
+            logger.error(f"⚠️ Error in background price refresher: {e}")
+            time.sleep(60) # Wait a minute before retrying
+
+@app.on_event("startup")
+def startup_event():
+    # Start the background thread
+    thread = threading.Thread(target=background_price_refresher, daemon=True)
+    thread.start()
+
 @app.delete("/api/logs")
 def clear_logs():
     log_buffer.clear()
@@ -81,9 +113,20 @@ def add_source(source: SourceUpdate):
         data = {"youtube_channels": []}
         
     new_entry = None
+    is_rss = False
     
-    # CASE 1: Full Discovery via URL
+    # CASE 0: Check for RSS Feed before YouTube
     if source.url:
+        logger.info(f"Probing URL for RSS: {source.url}")
+        f = feedparser.parse(source.url)
+        if not f.bozo and len(f.entries) > 0:
+            logger.info("✅ RSS Feed detected!")
+            is_rss = True
+            feed_title = f.feed.get('title', 'Unknown RSS Feed')
+            new_entry = [source.url, feed_title]
+    
+    # CASE 1: Full Discovery via URL (YouTube fallback)
+    if not is_rss and source.url:
         logger.info(f"Running discovery for: {source.url}")
         new_entry = audit_channel_strategy(source.url)
         if not new_entry:
@@ -100,41 +143,51 @@ def add_source(source: SourceUpdate):
     else:
          raise HTTPException(status_code=400, detail="Must provide 'url' or 'handle'")
 
-    # Check for duplicates (by handle)
-    # Filter out existing with same handle
-    existing_handles = []
-    normalized_list = []
-    
-    for item in data.get("youtube_channels", []):
-        if isinstance(item, str):
-            normalized_list.append({"handle": item, "name": item, "strategy": "STRATEGY_HYBRID"})
-            existing_handles.append(item)
-        else:
-            normalized_list.append(item)
-            existing_handles.append(item.get("handle"))
-            
-    if new_entry['handle'] in existing_handles:
-        # Update existing
-        logger.info(f"Updating existing source: {new_entry['handle']}")
-        final_list = []
-        for item in normalized_list:
-            if item['handle'] == new_entry['handle']:
-                final_list.append(new_entry) # Replace with new discovery
+    # CASE 3: Handle Verification & Storage
+    if is_rss and new_entry:
+        # --- RSS FLOW ---
+        logger.info(f"Adding/Updating RSS source: {new_entry[1]}")
+        data.setdefault("rss_feeds", [])
+        
+        # Deduplication for RSS (by URL)
+        updated = False
+        for i, feed in enumerate(data["rss_feeds"]):
+            if feed[0] == new_entry[0]:
+                data["rss_feeds"][i] = new_entry
+                updated = True
+                break
+        if not updated:
+            data["rss_feeds"].append(new_entry)
+
+    elif new_entry:
+        # --- YOUTUBE FLOW ---
+        # Check for duplicates (by handle)
+        existing_handles = []
+        normalized_list = []
+        
+        for item in data.get("youtube_channels", []):
+            if isinstance(item, str):
+                normalized_list.append({"handle": item, "name": item, "strategy": "STRATEGY_HYBRID"})
+                existing_handles.append(item)
             else:
-                final_list.append(item)
-        data["youtube_channels"] = final_list
-    else:
-        # Add new
-        logger.info(f"Adding new source: {new_entry['handle']}")
-        data.setdefault("youtube_channels", [])
-        # We need to ensure we don't break the mix of strings/dicts if any strings left, 
-        # but better to normalize all if we can. 
-        # For safety, just append.
-        # But wait, we reconstructed 'normalized_list' above but didn't assign it back to data if no dupes?
-        # Let's fix.
-        if isinstance(data["youtube_channels"], list):
-             # Just append object. Engine handles mixed types.
-             data["youtube_channels"].append(new_entry)
+                normalized_list.append(item)
+                existing_handles.append(item.get("handle"))
+                
+        if new_entry['handle'] in existing_handles:
+            # Update existing
+            logger.info(f"Updating existing source: {new_entry['handle']}")
+            final_list = []
+            for item in normalized_list:
+                if item['handle'] == new_entry['handle']:
+                    final_list.append(new_entry) # Replace with new discovery
+                else:
+                    final_list.append(item)
+            data["youtube_channels"] = final_list
+        else:
+            # Add new
+            logger.info(f"Adding new source: {new_entry['handle']}")
+            data.setdefault("youtube_channels", [])
+            data["youtube_channels"].append(new_entry)
 
     with open(source_path, 'w') as f:
         json.dump(data, f, indent=2)
@@ -178,18 +231,30 @@ def build_portfolio_data():
         hid = h["id"]
         ld = live_data.get(hid, {})
 
+        # Calculate fallback cost basis from DB
+        db_cost = float(h.get("quantity", 0) or 0) * float(h.get("purchase_price", 0) or 0)
+        
         # Merge live data into holding
         h_data = {
             **h,
             "quantity": float(h.get("quantity", 0) or 0),
             "live_price": ld.get("live_price") or h.get("current_price") or 0,
             "current_value": ld.get("live_value") or h.get("current_value") or 0,
-            "pnl": ld.get("pnl") or 0,
-            "pnl_pct": ld.get("pnl_pct") or 0,
-            "day_pl": ld.get("day_pl") or 0,
-            "day_change_pct": ld.get("day_change_pct") or 0,
+            "cost_basis": ld.get("cost_basis") or db_cost,
             "source": ld.get("source", "DB"),
         }
+        
+        # Recalculate P&L if not in ld or if we had to fallback to DB cost
+        if "pnl" in ld:
+            h_data["pnl"] = ld["pnl"]
+            h_data["pnl_pct"] = ld["pnl_pct"]
+        else:
+            h_data["pnl"] = h_data["current_value"] - h_data["cost_basis"]
+            h_data["pnl_pct"] = (h_data["pnl"] / h_data["cost_basis"] * 100) if h_data["cost_basis"] > 0 else 0
+
+        h_data["day_pl"] = ld.get("day_pl") or 0
+        h_data["day_change_pct"] = ld.get("day_change_pct") or 0
+        
         processed_holdings.append(h_data)
         total_day_pl += h_data["day_pl"]
 

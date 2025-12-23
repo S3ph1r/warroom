@@ -23,6 +23,12 @@
       "filter_keyword": null,
       "name": "Altri Orienti",
       "strategy": "STRATEGY_METADATA_ONLY"
+    },
+    {
+      "handle": "UCZp2KqGRkO1goEAaxX5Huyg",
+      "strategy": "STRATEGY_METADATA_ONLY",
+      "name": "Marco Casario",
+      "filter_keyword": null
     }
   ],
   "rss_feeds": [

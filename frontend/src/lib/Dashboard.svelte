@@ -16,7 +16,7 @@
     let chartType = "doughnut"; // 'doughnut' | 'bar'
     let selectedBroker = "All";
 
-    const API_BASE = "http://localhost:8000";
+    const API_BASE = "http://127.0.0.1:8000";
 
     async function fetchData() {
         try {
@@ -315,18 +315,30 @@
                         {data.total_pnl >= 0 ? "+" : ""}€{Math.abs(
                             data.total_pnl,
                         ).toLocaleString(undefined, {
-                            minimumFractionDigits: 2,
-                            maximumFractionDigits: 2,
+                            minimumFractionDigits: 0,
+                            maximumFractionDigits: 0,
                         })}
                     </div>
+                </div>
+                <!-- 1D P/L Row -->
+                <div class="flex items-center gap-2 mt-1 text-sm font-medium">
                     <span
-                        class={(data.total_pnl || 0) >= 0
-                            ? "text-skin-pos/80"
-                            : "text-skin-neg/80"}
+                        class="text-skin-muted text-[10px] uppercase tracking-wider"
+                        >1D:</span
                     >
-                        {(data.total_pnl || 0) >= 0 ? "+" : ""}{(
-                            data.total_pnl_pct || 0
-                        ).toFixed(2)}%
+                    <span
+                        class={(data.total_day_pl || 0) >= 0
+                            ? "text-skin-pos"
+                            : "text-skin-neg"}
+                    >
+                        {(data.total_day_pl || 0) >= 0 ? "+" : "-"}€{Math.abs(
+                            data.total_day_pl || 0,
+                        ).toLocaleString(undefined, {
+                            maximumFractionDigits: 0,
+                        })}
+                        ({(data.total_day_change_pct || 0) >= 0 ? "+" : ""}{(
+                            data.total_day_change_pct || 0
+                        ).toFixed(2)}%)
                     </span>
                 </div>
             </div>

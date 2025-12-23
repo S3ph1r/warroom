@@ -125,9 +125,10 @@ def audit_channel_strategy(url):
             logger.info(f"🎯 Recommended Strategy: {strategy} ({confidence})")
 
             # 4. JSON Object
-            # Handle needs to start with @
-            handle = f"@{channel_name}" if channel_name else "@Unknown"
-            if not handle.startswith("@"): handle = "@" + handle
+            # Use Channel ID as handle if available, it's the most stable
+            handle = channel_id if channel_id else f"@{channel_name}"
+            # Ensure no spaces in fallback handle
+            if handle: handle = handle.replace(" ", "")
             
             source_obj = {
                 "handle": handle,

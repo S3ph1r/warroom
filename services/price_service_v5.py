@@ -39,10 +39,13 @@ def _load_cache_from_disk():
                 data = json.load(f)
                 loaded = {}
                 for k, v in data.items():
-                    # Format: [value_float_or_str, timestamp_iso]
-                    val, ts_str = v
-                    # Convert back to Decimal and datetime
-                    loaded[k] = (Decimal(str(val)), datetime.fromisoformat(ts_str))
+                    # Format: [value_float, timestamp_iso, change_pct_float]
+                    # Backwards compatibility: if list len is 2, change_pct = 0.0
+                    val = v[0]
+                    ts_str = v[1]
+                    change_pct = v[2] if len(v) > 2 else 0.0
+                    
+                    loaded[k] = (Decimal(str(val)), datetime.fromisoformat(ts_str), float(change_pct))
                 return loaded
         except Exception as e:
             logger.warning(f"Failed to load price cache: {e}")
@@ -53,10 +56,9 @@ def _save_cache_to_disk(cache):
     try:
         data = {}
         for k, v in cache.items():
-            val, ts = v
+            val, ts, change_pct = v
             # Store as float for JSON, ISO for datetime
-            # We use float for JSON compatibility, Decimal reconstruction is safe enough for prices
-            data[k] = (float(val), ts.isoformat())
+            data[k] = (float(val), ts.isoformat(), float(change_pct))
         
         # Ensure dir
         os.makedirs(os.path.dirname(CACHE_FILE), exist_ok=True)
@@ -70,17 +72,17 @@ _figi_cache = {}  # Keep in-memory only for now
 
 def _get_cached(cache: dict, key: str):
     if key in cache:
-        value, ts = cache[key]
+        value, ts, change_pct = cache[key]
         if datetime.now() - ts < _cache_ttl:
-            return value
+            return value, change_pct
         else:
-            # Expired, remove from cache (and eventually disk on next save)
+            # Expired
             del cache[key]
-    return None
+    return None, 0.0
 
 
-def _set_cached(cache: dict, key: str, value):
-    cache[key] = (value, datetime.now())
+def _set_cached(cache: dict, key: str, value, change_pct=0.0):
+    cache[key] = (value, datetime.now(), change_pct)
     # Persist only price cache
     if cache is _price_cache:
         _save_cache_to_disk(cache)
@@ -159,9 +161,9 @@ def get_ticker_from_isin(isin: str) -> dict:
         return None
     
     # Check cache
-    cached = _get_cached(_figi_cache, isin)
-    if cached:
-        return cached
+    cached_data, _ = _get_cached(_figi_cache, isin)
+    if cached_data:
+        return cached_data
     
     try:
         url = "https://api.openfigi.com/v3/mapping"
@@ -308,14 +310,9 @@ def get_yahoo_price(ticker: str, isin: str = None) -> tuple:
     Returns: (price_eur, source_string, success_bool, change_pct_1d)
     """
     cache_key = f"yahoo_{isin or ticker}"
-    cached = _get_cached(_price_cache, cache_key)
-    if cached:
-        # Cached value currently doesn't store change_pct properly (tuple size mismatch possible if old cache)
-        # For robustness, if cached tuple is size 2, return 0.0 change. If size 3/4, extract it.
-        # But our cache functions serialize rigidly. Ideally we invalidate cache or expand it.
-        # For simplicity in this v5 iteration, we'll return 0.0 for cached change to avoid breaking deserialization
-        # UNLESS we wipe cache. Let's return 0 for change on cache hit for now, or fetch fresh if crucial.
-        return cached, "Yahoo (cached)", True, 0.0
+    cached_price, cached_change = _get_cached(_price_cache, cache_key)
+    if cached_price:
+        return cached_price, "Yahoo (cached)", True, cached_change
     
     try:
         import yfinance as yf
@@ -350,8 +347,12 @@ def get_yahoo_price(ticker: str, isin: str = None) -> tuple:
                 prev_close = Decimal('0')
                 if len(hist) >= 2:
                     prev_close = Decimal(str(hist['Close'].iloc[-2]))
-                elif stock.info.get('previousClose'):
-                    prev_close = Decimal(str(stock.info.get('previousClose')))
+                
+                # Fallback to stock.info if hist only has 1 row (market just opened) or hist prev is missing
+                if not prev_close or prev_close <= 0:
+                    info_prev = stock.info.get('regularMarketPreviousClose') or stock.info.get('previousClose')
+                    if info_prev:
+                        prev_close = Decimal(str(info_prev))
                 
                 change_pct = 0.0
                 if prev_close and prev_close > 0:
@@ -363,7 +364,7 @@ def get_yahoo_price(ticker: str, isin: str = None) -> tuple:
                 fx_rate = FX_TO_EUR.get(currency, Decimal('0.96'))
                 price_eur = current_close * fx_rate
                 
-                _set_cached(_price_cache, cache_key, price_eur)
+                _set_cached(_price_cache, cache_key, price_eur, change_pct)
                 return price_eur, f"Yahoo:{try_ticker}", True, change_pct
         
         # All attempts failed

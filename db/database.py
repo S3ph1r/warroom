@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://warroom:warroom@localhost:5432/warroom_db")
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://warroom:warroom_dev_password@localhost:5432/warroom_db")
 
 engine = create_engine(DATABASE_URL, echo=False)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)

@@ -1,5 +1,8 @@
 <script>
   import { createEventDispatcher } from "svelte";
+
+  // Sidebar visibility state
+  let sidebarOpen = true;
   import {
     LayoutDashboard,
     BrainCircuit,
@@ -23,15 +26,17 @@
   export let activeView = "portfolio";
 
   const dispatch = createEventDispatcher();
-  const API_BASE = "http://localhost:8000";
+  const API_BASE = "http://127.0.0.1:8000";
 
   let sourcesExpanded = true;
   let newChannel = "";
   let channels = [];
+  let rssFeeds = [];
   let loadingSources = false;
 
   // Hover state for categories
   let youtubeExpanded = false;
+  let rssExpanded = false;
 
   async function fetchSources() {
     try {
@@ -39,7 +44,8 @@
       if (res.ok) {
         const data = await res.json();
         channels = data.youtube_channels || [];
-        console.log("Sources loaded:", channels.length);
+        rssFeeds = data.rss_feeds || [];
+        console.log("Sources loaded:", channels.length, rssFeeds.length);
       }
     } catch (e) {
       console.error("Failed to load sources", e);
@@ -104,8 +110,22 @@
   $: console.log("Sidebar activeView:", activeView);
 </script>
 
+<div
+  class="fixed top-1/2 -translate-y-1/2 z-50 transition-all duration-300 {sidebarOpen
+    ? 'left-64'
+    : 'left-0'}"
+>
+  <button
+    class="p-2 bg-skin-card border border-skin-border rounded-r-md shadow-md text-skin-text hover:bg-skin-accent/10"
+    on:click={() => (sidebarOpen = !sidebarOpen)}
+    >{sidebarOpen ? "←" : "→"}</button
+  >
+</div>
+
 <aside
-  class="w-64 h-full border-r border-skin-border bg-skin-sidebar flex flex-col shrink-0 z-20 transition-colors duration-300 backdrop-blur-md"
+  class="{sidebarOpen
+    ? 'w-64'
+    : 'w-0'} h-full border-r border-skin-border bg-skin-sidebar flex flex-col shrink-0 z-20 transition-all duration-300 overflow-hidden backdrop-blur-md"
 >
   <div class="px-5 py-6">
     <div class="flex items-center gap-2 mb-8">
@@ -374,13 +394,62 @@
               {/if}
             </div>
 
-            <!-- RSS GROUP (Future) -->
-            <!-- Just a placeholder to show structure -->
+            <!-- RSS GROUP -->
             <div
-              class="px-2 py-1 text-xs text-skin-muted opacity-50 flex items-center gap-2"
+              class="group relative"
+              on:mouseenter={() => (rssExpanded = true)}
+              on:mouseleave={() => (rssExpanded = false)}
+              role="group"
+              aria-label="RSS Sources"
             >
-              <Globe size={12} />
-              <span>RSS Feeds (Static)</span>
+              <div
+                class="flex items-center gap-2 px-2 py-1 text-xs font-semibold text-skin-text bg-skin-card/50 rounded border border-transparent group-hover:border-skin-border cursor-default transition-colors"
+              >
+                <Globe size={12} class="text-blue-500" />
+                <span>RSS Feeds</span>
+                <span class="ml-auto text-skin-muted text-[10px]"
+                  >{rssFeeds.length}</span
+                >
+              </div>
+
+              {#if rssExpanded}
+                <div
+                  class="w-full bg-skin-sidebar/50 border-l-2 border-skin-border ml-2 pl-2 mt-1 space-y-0.5 animate-in slide-in-from-top-1 fade-in duration-200"
+                >
+                  {#each rssFeeds as feed}
+                    <div
+                      class="group/item flex items-center justify-between gap-2 text-xs text-skin-muted px-2 py-1 hover:text-skin-text hover:bg-white/5 rounded transition-colors"
+                    >
+                      <span
+                        class="truncate"
+                        title={Array.isArray(feed) ? feed[0] : feed}
+                      >
+                        {Array.isArray(feed) ? feed[1] || feed[0] : feed}
+                      </span>
+
+                      <div
+                        class="flex items-center gap-1 opacity-0 group-hover/item:opacity-100 transition-opacity"
+                      >
+                        <button
+                          on:click|stopPropagation={() =>
+                            removeSource(Array.isArray(feed) ? feed[0] : feed)}
+                          class="text-skin-muted hover:text-red-400 p-0.5 transition-colors"
+                          title="Remove Source"
+                        >
+                          <Minus size={10} />
+                        </button>
+                      </div>
+                    </div>
+                  {/each}
+                  {#if rssFeeds.length === 0}
+                    <div
+                      class="px-2 py-2 text-center text-[10px] text-skin-muted"
+                    >
+                      Nessun feed
+                    </div>
+                  {/if}
+                </div>
+              {/if}
             </div>
           </div>
         {/if}

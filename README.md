@@ -27,7 +27,21 @@ copy .env.example .env
 # Edit .env with your API keys and passwords
 ```
 
-### 3. Start Services
+### 3. Start Services (One-Click) 🟢
+Simply double-click the `Start_WarRoom.bat` file in the root directory.
+It automatically:
+- Checks for free ports
+- Starts Docker containers (Postgres & Chroma)
+- Launches Ollama (WSL)
+- Activates Python Environment & Starts Backend
+- Launches Svelte Frontend
+
+### 4. Shutdown (One-Click) 🔴
+Double-click `Shutdown_WarRoom.bat` to safely stop all services and free up ports.
+
+---
+
+### Alternative: Manual Start
 ```bash
 # Start PostgreSQL + Ollama + ChromaDB
 docker-compose up -d
