@@ -7,6 +7,11 @@
         AlertTriangle,
         Globe,
         RefreshCw,
+        History,
+        Cpu,
+        Terminal,
+        X,
+        Calendar,
     } from "lucide-svelte";
 
     let loading = false;
@@ -14,17 +19,98 @@
     let error = null;
     let userQuery = "";
 
+    // History State
+    let historyDates = [];
+    let selectedDate = ""; // "" means Today (Live)
+
+    // AI Model State
+    let availableModels = [];
+    let selectedModel = "mistral-nemo:latest"; // Default
+
     // Track loading state for individual items
     let refreshingItems = {}; // { 'consensus': true, 'google_historian': false }
 
+    // Log Overlay State
+    let showLogs = false;
+    let logs = [];
+    let logInterval = null;
+
     // Auto-load session if exists
-    onMount(() => {
-        callTheCouncil(false); // Default: check cache
+    onMount(async () => {
+        // 1. Load available models
+        await loadAvailableModels();
+        // 2. Load History Dates
+        await loadHistoryDates();
+        // 3. Load cached or live session
+        callTheCouncil(false);
     });
 
-    async function callTheCouncil(force = true) {
+    async function loadAvailableModels() {
+        try {
+            const res = await fetch("http://localhost:8000/api/council/models");
+            if (res.ok) {
+                const models = await res.json();
+                availableModels = models;
+                // Auto-select mistral-nemo if available, else first one
+                if (!models.includes(selectedModel) && models.length > 0) {
+                    selectedModel = models[0];
+                }
+            }
+        } catch (e) {
+            console.error("Failed to load models:", e);
+        }
+    }
+
+    async function loadHistoryDates() {
+        try {
+            const res = await fetch(
+                "http://localhost:8000/api/council/history",
+            );
+            if (res.ok) {
+                historyDates = await res.json();
+            }
+        } catch (e) {
+            console.error("Failed to load history:", e);
+        }
+    }
+
+    async function loadSessionByDate(date) {
+        if (!date) {
+            // Selected "Today"
+            selectedDate = "";
+            callTheCouncil(false);
+            return;
+        }
+
+        selectedDate = date;
         loading = true;
         error = null;
+        try {
+            const res = await fetch(
+                `http://localhost:8000/api/council/session/${date}`,
+            );
+            if (!res.ok) throw new Error("Could not load archived session");
+            opinions = await res.json();
+        } catch (e) {
+            error = e.message;
+            opinions = null;
+        } finally {
+            loading = false;
+        }
+    }
+
+    async function callTheCouncil(force = true) {
+        // If we are viewing history, force switch back to today first
+        if (selectedDate !== "") {
+            selectedDate = "";
+        }
+
+        loading = true;
+        error = null;
+
+        // Start polling logs
+        if (force) startLogPolling();
+
         try {
             const res = await fetch(
                 "http://localhost:8000/api/council/consult",
@@ -34,20 +120,71 @@
                     body: JSON.stringify({
                         query: userQuery,
                         force_refresh: force,
+                        model: selectedModel,
                     }),
                 },
             );
             if (!res.ok) throw new Error("Council connection failed");
             opinions = await res.json();
-            console.log(opinions);
+            console.log("DEBUG: Council Opinions Received:", opinions);
+
+            // Refresh history list if we just created a new session
+            if (!force) loadHistoryDates();
+
+            // Update selected model to what was returned (in case cache was used)
+            if (opinions && opinions.consensus_model) {
+                selectedModel = opinions.consensus_model;
+            }
         } catch (e) {
             error = e.message;
         } finally {
             loading = false;
+            // Stop polling after a small delay to catch final logs
+            if (force) setTimeout(stopLogPolling, 2000);
+        }
+    }
+
+    async function fetchLogs() {
+        try {
+            const res = await fetch("http://localhost:8000/api/logs");
+            if (res.ok) {
+                const data = await res.json();
+                logs = data.logs;
+            }
+        } catch (e) {
+            console.error("Log fetch failed", e);
+        }
+    }
+
+    function startLogPolling() {
+        showLogs = true;
+        fetchLogs();
+        if (logInterval) clearInterval(logInterval);
+        logInterval = setInterval(fetchLogs, 1500);
+    }
+
+    function stopLogPolling() {
+        // We keep the window open so user can read, but stop traffic
+        if (logInterval) {
+            clearInterval(logInterval);
+            logInterval = null;
+        }
+    }
+
+    function toggleLogs() {
+        showLogs = !showLogs;
+        if (showLogs) {
+            fetchLogs();
+        } else {
+            stopLogPolling();
         }
     }
 
     async function refreshItem(itemId) {
+        if (selectedDate !== "") {
+            alert("Cannot refresh items in historical view.");
+            return;
+        }
         refreshingItems[itemId] = true;
         try {
             const res = await fetch(
@@ -100,7 +237,7 @@
 <div class="space-y-8 pb-12">
     <!-- Header Controls -->
     <div
-        class="flex items-center justify-between border-b border-skin-border pb-4"
+        class="flex flex-col md:flex-row md:items-center justify-between border-b border-skin-border pb-4 gap-4"
     >
         <div>
             <h2
@@ -108,6 +245,13 @@
             >
                 <Brain class="w-5 h-5 text-purple-400" />
                 The Council (Matrix)
+                {#if selectedDate}
+                    <span
+                        class="text-sm font-normal text-skin-muted bg-skin-base px-2 py-0.5 rounded border border-skin-border ml-2 flex items-center gap-1"
+                    >
+                        <History class="w-3 h-3" /> Archive: {selectedDate}
+                    </span>
+                {/if}
             </h2>
             <p class="text-sm text-skin-muted hidden sm:block">
                 8-Core Strategic Analysis & Consensus Engine.
@@ -115,15 +259,60 @@
         </div>
 
         <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+            <!-- Model Selector -->
+            <div class="relative group min-w-[160px]">
+                <Cpu
+                    class="w-4 h-4 text-skin-muted absolute left-2.5 top-2.5 pointer-events-none"
+                />
+                <select
+                    class="appearance-none bg-skin-card border border-skin-border rounded-lg pl-9 pr-8 py-2 text-sm w-full focus:outline-none focus:border-purple-500/50 cursor-pointer text-skin-muted hover:text-skin-text transition-colors"
+                    bind:value={selectedModel}
+                    on:change={() => callTheCouncil(false)}
+                    disabled={selectedDate !== ""}
+                >
+                    {#each availableModels as model}
+                        <option value={model}>{model}</option>
+                    {/each}
+                </select>
+                <div
+                    class="absolute right-2.5 top-2.5 pointer-events-none text-skin-muted text-xs"
+                >
+                    ▼
+                </div>
+            </div>
+
+            <!-- Time Travel Dropdown -->
+            <div class="relative group">
+                <select
+                    class="appearance-none bg-skin-card border border-skin-border rounded-lg px-3 py-2 pr-8 text-sm w-full focus:outline-none focus:border-purple-500/50 cursor-pointer text-skin-muted hover:text-skin-text transition-colors"
+                    on:change={(e) => loadSessionByDate(e.target.value)}
+                    value={selectedDate}
+                >
+                    <option value="">Live Session (Today)</option>
+                    {#each historyDates as date}
+                        <option value={date}>{date}</option>
+                    {/each}
+                </select>
+                <History
+                    class="w-4 h-4 text-skin-muted absolute right-2.5 top-2.5 pointer-events-none"
+                />
+            </div>
+
+            <div class="h-6 w-px bg-skin-border hidden sm:block mx-1"></div>
+
             <input
                 type="text"
                 bind:value={userQuery}
-                placeholder="Specific question... (Force refresh)"
-                class="bg-skin-card border border-skin-border rounded-lg px-3 py-2 text-sm w-full sm:w-64 focus:outline-none focus:border-purple-500/50 transition-all placeholder:text-skin-muted"
+                disabled={selectedDate !== ""}
+                placeholder={selectedDate
+                    ? "Read-only mode"
+                    : "Specific question..."}
+                class="bg-skin-card border border-skin-border rounded-lg px-3 py-2 text-sm w-full sm:w-64 focus:outline-none focus:border-purple-500/50 transition-all placeholder:text-skin-muted disabled:opacity-50 disabled:cursor-not-allowed"
             />
+
             <button
                 on:click={() => callTheCouncil(true)}
-                disabled={loading}
+                disabled={loading || selectedDate !== ""}
                 class="bg-purple-600/20 hover:bg-purple-600/30 border border-purple-500/50 text-purple-300 px-4 py-2 rounded-lg text-sm font-medium transition-all disabled:opacity-50 shadow-sm flex items-center justify-center gap-2"
             >
                 {#if loading}
@@ -133,6 +322,20 @@
                     Summoning...
                 {:else}
                     Convene Council
+                {/if}
+            </button>
+
+            <!-- Log Toggle Button -->
+            <button
+                on:click={toggleLogs}
+                class="p-2 rounded-lg border border-skin-border hover:bg-skin-card text-skin-muted hover:text-skin-text transition-all relative"
+                title="View AI Logs"
+            >
+                <Terminal class="w-5 h-5" />
+                {#if logInterval}
+                    <span
+                        class="absolute top-1 right-1 w-2 h-2 bg-green-500 rounded-full animate-pulse"
+                    ></span>
                 {/if}
             </button>
         </div>
@@ -172,11 +375,33 @@
             </button>
 
             <h3
-                class="text-lg font-medium text-purple-300 mb-4 flex items-center gap-2"
+                class="text-lg font-medium text-purple-300 mb-2 flex items-center gap-2"
             >
                 <Brain class="w-5 h-5" />
                 President's Consensus
             </h3>
+
+            <!-- Session Metadata -->
+            <div
+                class="flex items-center gap-3 text-xs text-skin-muted mb-4 pb-4 border-b border-skin-border/30"
+            >
+                <div class="flex items-center gap-1">
+                    <Calendar class="w-3 h-3" />
+                    Session: {new Date(opinions.timestamp).toLocaleString()}
+                    {#if opinions.from_cache}<span class="text-skin-muted/70"
+                            >(Cached)</span
+                        >{/if}
+                </div>
+                <div
+                    class="flex items-center gap-1 px-2 py-0.5 rounded bg-skin-base/50 border border-skin-border/50"
+                >
+                    <Cpu class="w-3 h-3" />
+                    Model:
+                    <span class="text-purple-300"
+                        >{opinions.consensus_model || "Unknown"}</span
+                    >
+                </div>
+            </div>
 
             {#if opinions.consensus}
                 {@const consensus =
@@ -196,7 +421,7 @@
                 <div
                     class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-skin-border/50"
                 >
-                    {#each Object.entries(consensus.scores) as [model, score]}
+                    {#each Object.entries(consensus.scores || {}) as [model, score]}
                         <div class="bg-skin-base/30 rounded-lg p-3 text-center">
                             <div
                                 class="text-xs text-skin-muted uppercase font-bold tracking-wider mb-1"
@@ -236,10 +461,6 @@
                     </button>
                 </div>
             {/if}
-            <div class="mt-2 text-xs text-skin-muted text-right">
-                Session: {new Date(opinions.timestamp).toLocaleString()}
-                {#if opinions.from_cache}(Cached){/if}
-            </div>
         </div>
 
         <!-- 2. MATRIX ROWS (4 Models x 2 Opinions) -->
@@ -378,12 +599,63 @@
                 </div>
             {/each}
         </div>
-    {:else if !loading}
+    {/if}
+
+    <!-- LOG OVERLAY TERMINAL -->
+    {#if showLogs}
         <div
-            class="text-center py-12 text-skin-muted bg-skin-card/50 rounded-xl border border-dashed border-skin-border"
+            class="fixed bottom-6 right-6 w-[450px] max-w-[90vw] h-[300px] bg-[#0d1117] border border-skin-border rounded-xl shadow-2xl flex flex-col z-[100] overflow-hidden antialiased"
         >
-            <Brain class="w-12 h-12 mx-auto mb-3 opacity-20" />
-            <p>The Council is waiting to be summoned.</p>
+            <!-- Terminal Header -->
+            <div
+                class="flex items-center justify-between px-4 py-2 bg-skin-card/50 border-b border-skin-border"
+            >
+                <div class="flex items-center gap-2">
+                    <Terminal class="w-4 h-4 text-green-400" />
+                    <span class="text-xs font-mono font-bold text-skin-text/80"
+                        >LLM_ADVISOR_LOGS</span
+                    >
+                </div>
+                <button
+                    on:click={() => (showLogs = false)}
+                    class="text-skin-muted hover:text-white"
+                >
+                    <X class="w-4 h-4" />
+                </button>
+            </div>
+
+            <!-- Terminal Body -->
+            <div
+                class="flex-1 overflow-y-auto p-3 font-mono text-[11px] leading-relaxed text-green-400/90 scrollbar-thin scrollbar-thumb-skin-border"
+            >
+                {#if logs.length === 0}
+                    <div class="text-skin-muted opacity-50 italic">
+                        Waiting for logs...
+                    </div>
+                {:else}
+                    {#each logs as line}
+                        <div class="mb-1">
+                            <span class="text-blue-400 opacity-70">>></span>
+                            {line}
+                        </div>
+                    {/each}
+                {/if}
+            </div>
+
+            <!-- Terminal Footer -->
+            <div
+                class="px-3 py-1 bg-skin-card/30 border-t border-skin-border text-[10px] text-skin-muted flex justify-between items-center"
+            >
+                <span>Polling: {logInterval ? "ACTIVE" : "IDLE"}</span>
+                <span class="flex items-center gap-1">
+                    <div
+                        class="w-1.5 h-1.5 rounded-full {logInterval
+                            ? 'bg-green-500 animate-pulse'
+                            : 'bg-red-500'}"
+                    ></div>
+                    {logInterval ? "Listening" : "Paused"}
+                </span>
+            </div>
         </div>
     {/if}
 </div>

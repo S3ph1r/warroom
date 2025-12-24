@@ -95,22 +95,9 @@ def clear_cache():
 
 
 # ============================================================
-# FX RATES TO EUR (calibrated to BG Saxo rates)
+# FX RATES TO EUR (Dynamic via Forex Service)
 # ============================================================
-FX_TO_EUR = {
-    'EUR': Decimal('1.0'),
-    'USD': Decimal('0.853'),     # BG Saxo rate (GOOGL 2sh $614 → €524)
-    'GBP': Decimal('1.06'),      # ~0.94 GBP/EUR
-    'GBp': Decimal('0.0106'),    # Pence to EUR
-    'HKD': Decimal('0.11'),
-    'CNY': Decimal('0.12'),
-    'DKK': Decimal('0.134'),
-    'SEK': Decimal('0.087'),
-    'NOK': Decimal('0.084'),
-    'CHF': Decimal('0.94'),
-    'CAD': Decimal('0.60'),
-    'JPY': Decimal('0.0056'),
-}
+from services.forex_service import get_exchange_rate, get_rates_for_currencies
 
 # CoinGecko IDs
 CRYPTO_IDS = {
@@ -360,8 +347,8 @@ def get_yahoo_price(ticker: str, isin: str = None) -> tuple:
                 
                 currency = stock.info.get('currency', 'USD')
                 
-                # Convert to EUR
-                fx_rate = FX_TO_EUR.get(currency, Decimal('0.96'))
+                # Convert to EUR using Forex Service
+                fx_rate = get_exchange_rate(currency, 'EUR')
                 price_eur = current_close * fx_rate
                 
                 _set_cached(_price_cache, cache_key, price_eur, change_pct)
@@ -409,7 +396,9 @@ def get_alphavantage_price(ticker: str, api_key: str = None) -> tuple:
         change_pct_str = quote.get("10. change percent", "0%").replace("%", "")
         change_pct = float(change_pct_str)
         
-        price_eur = price_usd * FX_TO_EUR['USD']
+        # Convert from USD to EUR
+        fx_rate = get_exchange_rate('USD', 'EUR')
+        price_eur = price_usd * fx_rate
         
         return price_eur, f"AlphaVantage:{ticker}", True, change_pct
         
@@ -508,6 +497,27 @@ def get_price(ticker: str, isin: str, asset_type: str,
     return Decimal('0'), 'NOT_FOUND', False, 0.0
 
 
+def get_live_price_for_ticker(ticker: str, asset_type: str = "STOCK") -> dict:
+    """
+    Simple helper for alert engine - get live price for a single ticker.
+    Returns: {"price": float, "change_pct": float, "source": str} or None
+    """
+    try:
+        price, source, is_live, change_pct = get_price(ticker, None, asset_type, None)
+        
+        if price and price > 0:
+            return {
+                "price": float(price),
+                "change_pct": change_pct,
+                "source": source,
+                "is_live": is_live
+            }
+    except Exception as e:
+        logger.error(f"get_live_price_for_ticker error for {ticker}: {e}")
+    
+    return None
+
+
 # ============================================================
 # BATCH PROCESSING FOR DASHBOARD
 # ============================================================
@@ -521,6 +531,10 @@ def get_live_values_for_holdings(holdings: list) -> dict:
     # Batch fetch crypto prices first
     crypto_tickers = [h['ticker'] for h in holdings if h.get('asset_type') == 'CRYPTO']
     crypto_data = get_coingecko_prices(crypto_tickers) if crypto_tickers else {}
+    
+    # Pre-fetch exchange rates for all holding currencies
+    all_currencies = list(set([h.get('currency', 'EUR') for h in holdings]))
+    fx_rates = get_rates_for_currencies(all_currencies)
     
     for h in holdings:
         hid = h.get('id')
@@ -541,9 +555,15 @@ def get_live_values_for_holdings(holdings: list) -> dict:
         else:
             live_price, source, is_live, day_change_pct = get_price(ticker, isin, asset_type, purchase_price)
         
-        # Convert purchase price to EUR
-        currency = h.get('currency', 'EUR')
-        fx_rate = FX_TO_EUR.get(currency, Decimal('1.0'))
+        # Convert purchase price to EUR using batch loaded rates
+        h_currency = h.get('currency', 'EUR')
+        fx_rate = fx_rates.get(h_currency, Decimal('1.0'))
+        
+        # Handle GBp special case here if needed (though forex_service handles it per request, batch might be tricky)
+        # Our batch service returns 'GBp' if GBP was requested.
+        if h_currency == 'GBp' and 'GBp' not in fx_rates and 'GBP' in fx_rates:
+             fx_rate = fx_rates['GBP'] / 100
+        
         purchase_price_eur = purchase_price * fx_rate
 
         # Calculate values
@@ -578,7 +598,11 @@ def get_live_values_for_holdings(holdings: list) -> dict:
             'source': source,
             'is_live': is_live,
             'day_change_pct': day_change_pct,
-            'day_pl': day_pl
+            'day_pl': day_pl,
+            # Multi-currency support
+            'native_current_value': float(live_value / fx_rate) if fx_rate and fx_rate > 0 else float(live_value),
+            'exchange_rate_used': float(fx_rate),
+            'currency': h_currency
         }
     
     return result
@@ -589,7 +613,7 @@ def get_live_values_for_holdings(holdings: list) -> dict:
 # ============================================================
 
 if __name__ == "__main__":
-    print("Testing Price Service v5 with OpenFIGI...")
+    print("Testing Price Service v5 with Dynamic Forex...")
     print("=" * 60)
     
     # Test OpenFIGI lookup
@@ -599,7 +623,7 @@ if __name__ == "__main__":
         ('US0231351067', 'AMZN', 'Amazon'),
     ]
     
-    print("\nOpenFIGI ISIN Lookup:")
+    print("\n[1] OpenFIGI ISIN Lookup:")
     for isin, ticker, name in test_isins:
         result = get_ticker_from_isin(isin)
         if result:
@@ -607,9 +631,9 @@ if __name__ == "__main__":
         else:
             print(f"  {isin} -> NOT FOUND")
     
-    print("\nYahoo Price Fetch:")
+    print("\n[2] Yahoo Price Fetch (with FX conversion):")
     for isin, ticker, name in test_isins:
-        price, source, success = get_yahoo_price(ticker, isin)
+        price, source, success, change = get_yahoo_price(ticker, isin)
         status = "OK" if success else "FAIL"
         price_str = f"{price:.2f}" if price else "0"
         print(f"  {name}: EUR {price_str} [{source}] {status}")

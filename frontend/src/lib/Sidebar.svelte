@@ -13,6 +13,8 @@
     Monitor,
     Globe,
     Minus,
+    Bell,
+    BarChart3,
   } from "lucide-svelte";
   import {
     currentBase,
@@ -196,6 +198,28 @@
           >
           <span>The Council</span>
         </div>
+      </button>
+
+      <button
+        class="w-full flex items-center gap-3 px-3 py-1.5 rounded-md text-sm transition-all duration-200 font-medium {activeView ===
+        'alerts'
+          ? 'bg-skin-card text-skin-text border border-skin-border shadow-sm'
+          : 'text-skin-muted hover:text-skin-text hover:bg-skin-card/50'}"
+        on:click={() => dispatch("navigate", "alerts")}
+      >
+        <Bell size={14} />
+        <span>Alerts</span>
+      </button>
+
+      <button
+        class="w-full flex items-center gap-3 px-3 py-1.5 rounded-md text-sm transition-all duration-200 font-medium {activeView ===
+        'analytics'
+          ? 'bg-skin-card text-skin-text border border-skin-border shadow-sm'
+          : 'text-skin-muted hover:text-skin-text hover:bg-skin-card/50'}"
+        on:click={() => dispatch("navigate", "analytics")}
+      >
+        <BarChart3 size={14} />
+        <span>Analytics</span>
       </button>
     </nav>
   </div>

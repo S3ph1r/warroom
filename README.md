@@ -109,10 +109,29 @@ warroom/
     - **Advanced Metrics**: Daily P&L (€ and %) integrated into KPI tiles and broker breakdown.
     - **Data-Dense Layout**: Full-width compact tables with interactive sorting (asc/desc) on all columns.
     - **Modern UI**: Dark Mode with glassmorphism, responsive single-column stack layout.
+    - **Export CSV**: One-click portfolio export with all holdings data.
 - ✅ Sentiment analysis from news & social media
 - ✅ Macro scenario generation
 - ✅ Mobile access via Cloudflare Tunnel
-- ✅ Telegram bot for quick trades & alerts
+- ✅ **Price Alert System**:
+    - Set target price alerts (above/below thresholds)
+    - Automated 5-minute checks during market hours (08:00-22:00 CET)
+    - UI manager for creating, viewing, and deleting alerts
+- ✅ **Telegram Bot Integration**:
+    - Push notifications when price alerts trigger
+    - Real-time alerts to your phone
+    - Easy setup via @BotFather
+- ✅ **Scheduled Intelligence Scans**:
+    - Morning scan (08:00 CET) & Evening scan (18:00 CET)
+    - APScheduler integration with FastAPI
+    - API endpoints for manual triggers
+- ✅ **Analytics & Metrics v1**:
+    - Daily Portfolio Snapshots (22:00 CET)
+    - Performance Chart vs Benchmarks (S&P500, NASDAQ, MSCI)
+    - Risk Analysis (Sharpe Ratio, Volatility, Drawdown)
+- ✅ **Multi-Currency Engine v2**:
+    - Robust `GBp` (Pence) handling for LSE stocks
+    - Auto-conversion for USD, HKD, DKK, CHF -> EUR
 
 ## 🔒 Security
 

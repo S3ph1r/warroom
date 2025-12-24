@@ -4,7 +4,8 @@ import asyncio
 import logging
 import json
 from datetime import datetime
-from sqlalchemy import func
+import requests
+from sqlalchemy import func, cast, Date
 from dotenv import load_dotenv
 
 from intelligence.llm_wrapper import LLMWrapper
@@ -29,12 +30,13 @@ class TheCouncil:
         # Initialize Models (The Engines)
         self.models = {}
         
-        # 1. Google (Gemini Flash Latest)
+        # 1. Google (Gemini Flash)
         try:
+            # Switch back to direct Google Provider as requested by user
             self.models['google'] = LLMWrapper(
                 provider="google", 
                 api_key=self.google_key,
-                model="gemini-flash-latest"
+                model="gemini-1.5-pro" 
             )
         except Exception as e:
             logger.error(f"Failed to init Google Model: {e}")
@@ -68,6 +70,44 @@ class TheCouncil:
             )
         except Exception as e:
             logger.error(f"Failed to init Qwen Model: {e}")
+
+        # 5. Resilience Check
+        self.verify_ollama_access()
+
+    def verify_ollama_access(self):
+        """
+        Proactively checks if Ollama is reachable.
+        If running in WSL, localhost might not work without OLLAMA_HOST=0.0.0.0.
+        """
+        host = os.getenv("OLLAMA_HOST", "localhost")
+        port = "11434"
+        
+        # If host is 0.0.0.0, we check via localhost from here
+        check_host = "localhost" if host == "0.0.0.0" else host
+        
+        # Determine base URL
+        if check_host.startswith("http"):
+            base_url = check_host
+        else:
+            base_url = f"http://{check_host}"
+            
+        # Add port if not present
+        if ":" not in base_url.replace("http://", "").replace("https://", ""):
+            base_url = f"{base_url}:{port}"
+
+        url = f"{base_url}/api/tags"
+        try:
+            logger.info(f"🔍 Checking Ollama connectivity at {url}...")
+            response = requests.get(url, timeout=2)
+            if response.status_code == 200:
+                logger.info("✅ Ollama is reachable and ready.")
+                return True
+        except Exception as e:
+            logger.warning(f"⚠️  OLLAMA CONNECTION WARNING: Could not connect to {url}")
+            logger.warning(f"   Error: {e}")
+            logger.warning("   HINT: If Mistral is in WSL, run 'export OLLAMA_HOST=0.0.0.0' inside WSL.")
+            return False
+        return False
 
     def _get_system_prompt(self, persona):
         base = "Sei un membro de IL CONSIGLIO, un board strategico finanziario d'élite."
@@ -105,40 +145,88 @@ class TheCouncil:
                  return {"role": role_id, "error": "Empty response from LLM"}
 
             try:
-                # Clean markdown blocks if present
-                clean_text = response_text.replace("```json", "").replace("```", "").strip()
+                # Robustly extract JSON if embedded in markdown
+                clean_text = response_text
+                if "```json" in clean_text:
+                    clean_text = clean_text.split("```json")[-1].split("```")[0].strip()
+                elif "```" in clean_text:
+                    clean_text = clean_text.split("```")[-1].split("```")[0].strip()
+                else:
+                    clean_text = clean_text.strip()
+                
+                # Check for direct error strings
+                if clean_text.startswith("Error:"):
+                     raise ValueError(clean_text)
+
                 data = json.loads(clean_text)
+                
+                # Add default fields if missing
+                data.setdefault('verdict', 'Neutral')
+                data.setdefault('confidence', 50)
+                data.setdefault('reasoning', 'Analisi non disponibile.')
+                data.setdefault('actionable_advice', [])
+
                 data['role'] = role_id
                 data['model'] = model_name
                 data['persona'] = persona
                 return data
-            except json.JSONDecodeError:
-                logger.error(f"[{role_id}] JSON Parse Error. Text: {response_text}")
-                return {"role": role_id, "verdict": "Error", "reasoning": "Failed to parse JSON", "raw": response_text[:100]}
+            except (json.JSONDecodeError, ValueError, Exception) as je:
+                logger.error(f"[{role_id}] Parse/Logic Error: {je}. Raw Text: {response_text}")
+                return {
+                    "role": role_id, 
+                    "verdict": "Error", 
+                    "reasoning": f"Errore nell'analisi del parere: {str(je)}", 
+                    "raw_text": response_text[:200]
+                }
         except Exception as e:
             logger.error(f"[{role_id}] Critical Error: {e}")
             return {"role": role_id, "error": str(e)}
 
-    def get_todays_session(self):
-        """Checks if a session already exists for today."""
+    def get_todays_session(self, model: str = None):
+        """Checks if a session already exists for today. Optionally filters by model."""
+        return self.get_session_by_date(datetime.now().date(), model)
+
+    def get_session_by_date(self, target_date, model: str = None):
+        """Retrieves a Council Session for a specific date and optional model."""
         try:
             db = SessionLocal()
-            today = datetime.now().date()
-            # Query for sessions created today
-            session = db.query(CouncilSession).filter(
-                func.date(CouncilSession.timestamp) == today
-            ).order_by(CouncilSession.timestamp.desc()).first()
+            query = db.query(CouncilSession).filter(
+                cast(CouncilSession.timestamp, Date) == target_date
+            )
+            
+            # If model is specified, filter by it.
+            # If not specified (old behavior), just get the latest regardless.
+            if model:
+                query = query.filter(CouncilSession.consensus_model == model)
+            
+            session = query.order_by(CouncilSession.timestamp.desc()).first()
             db.close()
             return session
         except Exception as e:
-            logger.error(f"DB Cache Check Failed: {e}")
+            logger.error(f"DB Retrieval Failed for {target_date}: {e}")
             return None
 
-    def generate_consensus(self, results_dict):
+    def get_session_history(self):
+        """Returns a list of dates containing Council Sessions."""
+        try:
+            db = SessionLocal()
+            # Select distinct dates
+            dates = db.query(cast(CouncilSession.timestamp, Date)).distinct().order_by(
+                cast(CouncilSession.timestamp, Date).desc()
+            ).all()
+            db.close()
+            # Unpack tuples keys
+            return [d[0].isoformat() for d in dates]
+        except Exception as e:
+            logger.error(f"History Retrieval Failed: {e}")
+            return []
+
+    def generate_consensus(self, results_dict, model: str = "mistral-nemo:latest"):
         """
-        Uses Local Mistral to generate a unified consensus and score the models.
+        Uses Local Ollama to generate a unified consensus and score the models.
+        Returns: tuple(consensus_json, model_name) or (None, model_name) on failure.
         """
-        logger.info("Generating Council Consensus via Mistral...")
+        logger.info(f"Generating Council Consensus via Ollama ({model})...")
         try:
             # Prepare input for Mistral
             opinions_text = ""
@@ -169,14 +257,14 @@ class TheCouncil:
             }}
             """
             
-            # Use Ollama Helper
-            mistral = LLMWrapper(provider="ollama", model="mistral-nemo:latest")
-            response = mistral.chat([{"role": "user", "content": prompt}], json_mode=True)
-            return response
+            # Use Ollama Helper with configurable model
+            ollama_model = LLMWrapper(provider="ollama", model=model)
+            response = ollama_model.chat([{"role": "user", "content": prompt}], json_mode=True)
+            return response, model
             
         except Exception as e:
             logger.error(f"Consensus Generation Failed: {e}")
-            return None
+            return None, model
 
     async def refresh_council_item(self, item_id: str):
         """
@@ -241,27 +329,82 @@ class TheCouncil:
                 logger.error(f"DB Update Failed: {e}")
                 raise
 
-    async def convene_council(self, user_query: str = None, force_refresh: bool = False):
+    async def convene_council(self, user_query: str = None, force_refresh: bool = False, model: str = "mistral-nemo:latest"):
         """
-        Consults all advisors. Checks cache first unless force_refresh is True.
+        Consults all advisors. Checks cache first.
+        Smart Refresh: If data exists but has missing/errored items, repair them instead of re-running everything.
         """
         # 0. Check Cache (Daily)
-        if not force_refresh:
-            cached = self.get_todays_session()
-            if cached:
-                logger.info("Returning CACHED Council Session.")
-                # Return immediately, do NOT block for self-healing. 
-                # Frontend will handle missing pieces via discrete refresh calls.
-                return {
-                    "from_cache": True,
-                    "timestamp": cached.timestamp.isoformat(),
-                    "responses": cached.responses,
-                    "consensus": cached.consensus, 
-                    "context": cached.context_snapshot
-                }
+        cached = self.get_todays_session(model)
+        
+        if cached and not force_refresh:
+            logger.info(f"Found existing Council Session for model {model}. Checking for missing data...")
+            
+            responses = dict(cached.responses)
+            target_models = ['google', 'anthropic', 'deepseek', 'qwen']
+            target_personas = ['historian', 'strategist']
+            
+            missing_tasks = []
+            context_str = json.dumps(cached.context_snapshot)
+            
+            for m in target_models:
+                for p in target_personas:
+                    role_id = f"{m}_{p}"
+                    resp = responses.get(role_id)
+                    # Check if missing or has error
+                    if not resp or resp.get('error') or resp.get('verdict') == 'Error':
+                        logger.info(f"Repairing missing/errored advisor: {role_id}")
+                        missing_tasks.append(self.consult_model_persona(m, p, context_str))
+            
+            if missing_tasks:
+                new_results = await asyncio.gather(*missing_tasks)
+                for r in new_results:
+                    responses[r['role']] = r
+                
+                # Update DB
+                try:
+                    db = SessionLocal()
+                    s = db.query(CouncilSession).filter(CouncilSession.id == cached.id).first()
+                    s.responses = responses
+                    
+                    # Re-generate consensus if opinions were repaired
+                    logger.info("Regenerating consensus with repaired opinions...")
+                    consensus_json, consensus_model = await asyncio.to_thread(self.generate_consensus, responses, model)
+                    s.consensus = consensus_json
+                    
+                    from sqlalchemy.orm.attributes import flag_modified
+                    flag_modified(s, "responses")
+                    
+                    db.commit()
+                    db.refresh(s)
+                    db.close()
+                    
+                    # Return the updated version
+                    return {
+                        "from_cache": True,
+                        "repaired": True,
+                        "timestamp": s.timestamp.isoformat(),
+                        "responses": s.responses,
+                        "consensus": s.consensus,
+                        "consensus_model": s.consensus_model,
+                        "context": s.context_snapshot
+                    }
+                except Exception as e:
+                    logger.error(f"Failed to save repaired session: {e}")
+            
+            # If all were already present or repair failed, return what we have
+            logger.info(f"Returning CACHED Council Session.")
+            return {
+                "from_cache": True,
+                "timestamp": cached.timestamp.isoformat(),
+                "responses": cached.responses,
+                "consensus": cached.consensus,
+                "consensus_model": cached.consensus_model,
+                "context": cached.context_snapshot
+            }
 
-        # 1. Gather Data (The Dossier)
-        logger.info("Gathering Council Dossier...")
+        # 1. Gather Data (The Dossier) - ONLY if no session or force_refresh
+        logger.info("Gathering Council Dossier for a fresh session...")
         portfolio = get_anonymous_portfolio_context()
         
         # News Context (Mistral)
@@ -291,7 +434,7 @@ class TheCouncil:
         results_dict = {r['role']: r for r in results_list}
         
         # 3. Generate Consensus
-        consensus_json = await asyncio.to_thread(self.generate_consensus, results_dict)
+        consensus_json, consensus_model = await asyncio.to_thread(self.generate_consensus, results_dict, model)
         
         # 4. Persist Session
         try:
@@ -299,12 +442,13 @@ class TheCouncil:
             session_record = CouncilSession(
                 context_snapshot=dossier,
                 responses=results_dict,
-                consensus=consensus_json 
+                consensus=consensus_json,
+                consensus_model=consensus_model
             )
             db.add(session_record)
             db.commit()
             db.close()
-            logger.info(f"Council Session saved to DB with {len(results_dict)} opinions.")
+            logger.info(f"Council Session saved to DB with {len(results_dict)} opinions. Model: {consensus_model}")
         except Exception as e:
             logger.error(f"Failed to save session: {e}")
             
@@ -314,8 +458,31 @@ class TheCouncil:
             "timestamp": dossier['timestamp'],
             "responses": results_dict,
             "consensus": consensus_json,
+            "consensus_model": consensus_model,
             "context": dossier
         }
+
+    def get_available_ollama_models(self):
+        """
+        Queries Ollama API to get list of available models.
+        """
+        try:
+            # We assume Ollama is at the standard port or bridge port
+            ollama_host = os.getenv("OLLAMA_HOST", "http://127.0.0.1:11434")
+            # Clean up host string if needed
+            if not ollama_host.startswith("http"):
+                ollama_host = f"http://{ollama_host}"
+                
+            res = requests.get(f"{ollama_host}/api/tags", timeout=2)
+            if res.status_code == 200:
+                data = res.json()
+                # Extract model names
+                models = [m['name'] for m in data.get('models', [])]
+                return models
+            return []
+        except Exception as e:
+            logger.error(f"Failed to fetch Ollama models: {e}")
+            return []
 
 # Singleton instance
 council = TheCouncil()

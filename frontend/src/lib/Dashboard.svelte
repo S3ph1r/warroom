@@ -2,7 +2,7 @@
     import { onMount, tick } from "svelte";
     import Chart from "chart.js/auto";
     import { themeState } from "./stores/theme.js";
-    import { BarChart3, PieChart } from "lucide-svelte";
+    import { BarChart3, PieChart, Download } from "lucide-svelte";
     import AssetTable from "./components/AssetTable.svelte";
 
     export let refreshTrigger = 0;
@@ -14,7 +14,60 @@
 
     // Chart Preference State
     let chartType = "doughnut"; // 'doughnut' | 'bar'
+    // Broker Filter State
     let selectedBroker = "All";
+
+    // Currency State
+    let selectedCurrency = "EUR";
+    $: currencySymbol = selectedCurrency === "USD" ? "$" : "€";
+    $: fxRate =
+        data && data.fx_rates ? data.fx_rates[selectedCurrency] || 1.0 : 1.0;
+
+    // Derived Display Data (converted by FX Rate)
+    $: displayData = convertData(data, fxRate);
+
+    function convertData(sourceData, rate) {
+        if (!sourceData) return null;
+        if (rate === 1.0) return sourceData;
+
+        // Deepish clone structure that needs modification
+        const d = { ...sourceData };
+
+        d.total_value = (sourceData.total_value || 0) * rate;
+        d.total_cost = (sourceData.total_cost || 0) * rate;
+        d.total_pnl = (sourceData.total_pnl || 0) * rate;
+        d.total_day_pl = (sourceData.total_day_pl || 0) * rate;
+
+        // Broker Totals
+        d.broker_totals = {};
+        for (const [k, v] of Object.entries(sourceData.broker_totals)) {
+            d.broker_totals[k] = {
+                ...v,
+                value: v.value * rate,
+                cost: v.cost * rate,
+                day_pl: v.day_pl * rate,
+            };
+        }
+
+        // Asset Totals
+        d.asset_totals = {};
+        for (const [k, v] of Object.entries(sourceData.asset_totals)) {
+            d.asset_totals[k] = v * rate;
+        }
+
+        // Holdings
+        d.holdings = sourceData.holdings.map((h) => ({
+            ...h,
+            current_value: h.current_value * rate,
+            cost_basis: h.cost_basis * rate,
+            live_price: (h.live_price || 0) * rate,
+            day_pl: h.day_pl * rate,
+            pnl: h.pnl * rate,
+            // purchase_price if needed locally? usually just cost_basis matters for overview
+        }));
+
+        return d;
+    }
 
     const API_BASE = "http://127.0.0.1:8000";
 
@@ -25,6 +78,9 @@
             if (!res.ok) throw new Error("Failed to fetch portfolio");
             data = await res.json();
 
+            // Set default toggle based on locale? or just stick to EUR
+            // If data.fx_rates is missing, fallback to 1.0 logic handled above
+
             await tick();
             renderCharts();
         } catch (e) {
@@ -32,8 +88,12 @@
         }
     }
 
+    function exportCSV() {
+        window.open(`${API_BASE}/api/portfolio/export-csv`, "_blank");
+    }
+
     function renderCharts() {
-        if (!data) return;
+        if (!displayData) return;
         if (chartInstance) chartInstance.destroy();
         if (assetChartInstance) assetChartInstance.destroy();
 
@@ -68,7 +128,7 @@
                     displayColors: true,
                     callbacks: {
                         label: (ctx) =>
-                            ` ${ctx.label}: €${ctx.raw.toLocaleString()}`,
+                            ` ${ctx.label}: ${currencySymbol}${ctx.raw.toLocaleString(undefined, { maximumFractionDigits: 0 })}`,
                     },
                 },
             },
@@ -121,7 +181,10 @@
                     .trim();
                 ctx.fillStyle = colorVar || "#ffffff";
 
-                var text = "€" + (data.total_value / 1000).toFixed(1) + "k",
+                var text =
+                        currencySymbol +
+                        (displayData.total_value / 1000).toFixed(1) +
+                        "k",
                     textX = Math.round(
                         (width - ctx.measureText(text).width) / 2,
                     ),
@@ -138,8 +201,8 @@
 
         const ctx = document.getElementById("brokerChart");
         if (ctx) {
-            const brokers = Object.keys(data.broker_totals);
-            const values = Object.values(data.broker_totals).map(
+            const brokers = Object.keys(displayData.broker_totals);
+            const values = Object.values(displayData.broker_totals).map(
                 (b) => b.value,
             );
 
@@ -165,8 +228,8 @@
 
         const ctx2 = document.getElementById("assetChart");
         if (ctx2) {
-            const assets = Object.keys(data.asset_totals);
-            const values = Object.values(data.asset_totals);
+            const assets = Object.keys(displayData.asset_totals);
+            const values = Object.values(displayData.asset_totals);
 
             assetChartInstance = new Chart(ctx2, {
                 type: chartType,
@@ -190,12 +253,17 @@
     }
 
     // Re-render charts when theme changes to update border colors
-    $: if ($themeState && data) {
+    $: if ($themeState && displayData) {
         renderCharts();
     }
 
     // React to chart type toggle
-    $: if (chartType && data) {
+    $: if (chartType && displayData) {
+        renderCharts();
+    }
+
+    // React to data or currency change
+    $: if (displayData) {
         renderCharts();
     }
 
@@ -203,10 +271,10 @@
     onMount(fetchData);
 
     // Grouping Logic for AssetTable keys
-    $: filteredHoldings = data
+    $: filteredHoldings = displayData
         ? selectedBroker === "All"
-            ? data.holdings
-            : data.holdings.filter((h) => h.broker === selectedBroker)
+            ? displayData.holdings
+            : displayData.holdings.filter((h) => h.broker === selectedBroker)
         : [];
 
     $: groups = {
@@ -242,7 +310,36 @@
             <h1 class="text-xl font-medium text-skin-text tracking-tight">
                 Portfolio Overview
             </h1>
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-2">
+                <!-- Currency Toggle -->
+                <div
+                    class="flex bg-skin-card border border-skin-border rounded overflow-hidden"
+                >
+                    <button
+                        class="px-2 py-1 text-xs font-medium transition-colors {selectedCurrency ===
+                        'EUR'
+                            ? 'bg-skin-text text-skin-bg'
+                            : 'text-skin-muted hover:text-skin-text'}"
+                        on:click={() => (selectedCurrency = "EUR")}>EUR</button
+                    >
+                    <button
+                        class="px-2 py-1 text-xs font-medium transition-colors {selectedCurrency ===
+                        'USD'
+                            ? 'bg-skin-text text-skin-bg'
+                            : 'text-skin-muted hover:text-skin-text'}"
+                        on:click={() => (selectedCurrency = "USD")}>USD</button
+                    >
+                </div>
+
+                <!-- Export CSV Button -->
+                <button
+                    on:click={exportCSV}
+                    class="flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium text-skin-muted bg-skin-card border border-skin-border rounded hover:text-skin-text hover:border-skin-accent/50 transition-colors"
+                    title="Export to CSV"
+                >
+                    <Download size={14} />
+                    Export
+                </button>
                 <div
                     class="flex items-center gap-2 text-xs text-skin-muted bg-skin-card px-2 py-1 rounded border border-skin-border"
                 >
@@ -268,30 +365,35 @@
                 <div
                     class="text-2xl font-semibold text-skin-text tracking-tight mb-2"
                 >
-                    €{data.total_value.toLocaleString(undefined, {
-                        minimumFractionDigits: 0,
-                        maximumFractionDigits: 0,
-                    })}
+                    {currencySymbol}{displayData.total_value.toLocaleString(
+                        undefined,
+                        {
+                            minimumFractionDigits: 0,
+                            maximumFractionDigits: 0,
+                        },
+                    )}
                 </div>
                 <!-- Mini P&L info -->
                 <div class="flex items-center gap-3 text-xs font-medium">
                     <div
-                        class={(data.total_day_pl || 0) >= 0
+                        class={(displayData.total_day_pl || 0) >= 0
                             ? "text-skin-pos"
                             : "text-skin-neg"}
                     >
-                        1D: {(data.total_day_change_pct || 0) >= 0 ? "+" : ""}{(
-                            data.total_day_change_pct || 0
+                        1D: {(displayData.total_day_change_pct || 0) >= 0
+                            ? "+"
+                            : ""}{(
+                            displayData.total_day_change_pct || 0
                         ).toFixed(2)}%
                     </div>
                     <div
-                        class={(data.total_pnl || 0) >= 0
+                        class={(displayData.total_pnl || 0) >= 0
                             ? "text-skin-pos"
                             : "text-skin-neg"}
                     >
-                        Net: {(data.total_pnl_pct || 0) >= 0 ? "+" : ""}{(
-                            data.total_pnl_pct || 0
-                        ).toFixed(2)}%
+                        Net: {(displayData.total_pnl_pct || 0) >= 0
+                            ? "+"
+                            : ""}{(displayData.total_pnl_pct || 0).toFixed(2)}%
                     </div>
                 </div>
             </div>
@@ -307,13 +409,15 @@
                 </div>
                 <div class="flex items-baseline gap-2">
                     <div
-                        class="text-2xl font-semibold tracking-tight {data.total_pnl >=
+                        class="text-2xl font-semibold tracking-tight {displayData.total_pnl >=
                         0
                             ? 'text-skin-pos'
                             : 'text-skin-neg'}"
                     >
-                        {data.total_pnl >= 0 ? "+" : ""}€{Math.abs(
-                            data.total_pnl,
+                        {displayData.total_pnl >= 0
+                            ? "+"
+                            : ""}{currencySymbol}{Math.abs(
+                            displayData.total_pnl,
                         ).toLocaleString(undefined, {
                             minimumFractionDigits: 0,
                             maximumFractionDigits: 0,
@@ -327,17 +431,21 @@
                         >1D:</span
                     >
                     <span
-                        class={(data.total_day_pl || 0) >= 0
+                        class={(displayData.total_day_pl || 0) >= 0
                             ? "text-skin-pos"
                             : "text-skin-neg"}
                     >
-                        {(data.total_day_pl || 0) >= 0 ? "+" : "-"}€{Math.abs(
-                            data.total_day_pl || 0,
+                        {(displayData.total_day_pl || 0) >= 0
+                            ? "+"
+                            : "-"}{currencySymbol}{Math.abs(
+                            displayData.total_day_pl || 0,
                         ).toLocaleString(undefined, {
                             maximumFractionDigits: 0,
                         })}
-                        ({(data.total_day_change_pct || 0) >= 0 ? "+" : ""}{(
-                            data.total_day_change_pct || 0
+                        ({(displayData.total_day_change_pct || 0) >= 0
+                            ? "+"
+                            : ""}{(
+                            displayData.total_day_change_pct || 0
                         ).toFixed(2)}%)
                     </span>
                 </div>
@@ -355,7 +463,7 @@
                 <div
                     class="text-2xl font-semibold text-skin-text tracking-tight"
                 >
-                    {data.count}
+                    {displayData.count}
                 </div>
             </div>
 
@@ -371,7 +479,7 @@
                 <div
                     class="text-2xl font-semibold text-skin-text tracking-tight"
                 >
-                    {Object.keys(data.broker_totals).length}
+                    {Object.keys(displayData.broker_totals).length}
                 </div>
             </div>
         </div>
@@ -384,7 +492,7 @@
         </h2>
         <!-- Tiles Loop -->
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
-            {#each Object.entries(data.broker_totals).sort((a, b) => b[1].value - a[1].value) as [broker, val]}
+            {#each Object.entries(displayData.broker_totals).sort((a, b) => b[1].value - a[1].value) as [broker, val]}
                 <div
                     class="p-3 bg-skin-card backdrop-blur-sm border border-skin-border rounded-lg {selectedBroker ===
                     broker
@@ -402,9 +510,12 @@
                         <div
                             class="text-lg font-semibold text-skin-text tracking-tight leading-none"
                         >
-                            €{val.value.toLocaleString(undefined, {
-                                maximumFractionDigits: 0,
-                            })}
+                            {currencySymbol}{val.value.toLocaleString(
+                                undefined,
+                                {
+                                    maximumFractionDigits: 0,
+                                },
+                            )}
                         </div>
                         <!-- Mini P&L Metrics next to total -->
                         <div class="flex flex-col text-right leading-tight">
@@ -434,8 +545,9 @@
                     <div
                         class="text-[10px] text-skin-muted/70 mt-1.5 font-medium"
                     >
-                        {((val.value / data.total_value) * 100).toFixed(1)}% of
-                        total
+                        {((val.value / displayData.total_value) * 100).toFixed(
+                            1,
+                        )}% of total
                     </div>
                 </div>
             {/each}
@@ -526,7 +638,7 @@
                 >
                     All
                 </button>
-                {#each Object.keys(data.broker_totals).sort() as broker}
+                {#each Object.keys(displayData.broker_totals).sort() as broker}
                     <button
                         class="px-2 py-1 text-[11px] font-medium rounded {selectedBroker ===
                         broker

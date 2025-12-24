@@ -47,7 +47,9 @@ class Holding(Base):
     
     # Current valuation
     current_price: Mapped[Optional[Decimal]] = mapped_column(DECIMAL(18, 4))
-    current_value: Mapped[Decimal] = mapped_column(DECIMAL(18, 2), nullable=False)  # quantity * current_price
+    current_value: Mapped[Decimal] = mapped_column(DECIMAL(18, 2), nullable=False)  # quantity * current_price (in EUR)
+    native_current_value: Mapped[Optional[Decimal]] = mapped_column(DECIMAL(18, 2))  # Value in native currency
+    exchange_rate_used: Mapped[Optional[Decimal]] = mapped_column(DECIMAL(18, 6))  # Rate used for conversion to EUR
     currency: Mapped[str] = mapped_column(String(3), default="EUR")
     
     # Tracking
@@ -167,8 +169,91 @@ class CouncilSession(Base):
     # Output Data
     responses: Mapped[dict] = mapped_column(JSONB, nullable=False) # Raw JSON from 4 Advisors
     consensus: Mapped[Optional[str]] = mapped_column(Text) # Synthesized verdict (optional)
+    consensus_model: Mapped[Optional[str]] = mapped_column(String(100)) # Ollama model used for consensus
     
     __table_args__ = (
         Index("idx_council_timestamp", "timestamp"),
     )
 
+
+# ============================================================
+# PRICE ALERTS - User-defined price notifications
+# ============================================================
+class PriceAlert(Base):
+    """
+    Stores price alerts set by users.
+    When price crosses threshold, alert is triggered and notification sent.
+    """
+    __tablename__ = "price_alerts"
+    
+    id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True), primary_key=True, default=uuid.uuid4
+    )
+    
+    # Target asset
+    ticker: Mapped[str] = mapped_column(String(20), nullable=False, index=True)
+    name: Mapped[Optional[str]] = mapped_column(String(255))
+    
+    # Alert configuration
+    target_price: Mapped[Decimal] = mapped_column(DECIMAL(18, 4), nullable=False)
+    direction: Mapped[str] = mapped_column(String(10), nullable=False)  # "above" or "below"
+    
+    # Status
+    is_active: Mapped[bool] = mapped_column(default=True)
+    triggered_at: Mapped[Optional[datetime]] = mapped_column(DateTime(timezone=True))
+    triggered_price: Mapped[Optional[Decimal]] = mapped_column(DECIMAL(18, 4))
+    
+    # Notification settings
+    notify_telegram: Mapped[bool] = mapped_column(default=True)
+    notify_email: Mapped[bool] = mapped_column(default=False)
+    
+    # Metadata
+    notes: Mapped[Optional[str]] = mapped_column(Text)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+    
+    __table_args__ = (
+        Index("idx_alerts_ticker", "ticker"),
+        Index("idx_alerts_active", "is_active"),
+    )
+
+
+# ============================================================
+# PORTFOLIO SNAPSHOTS - Daily portfolio value tracking
+# ============================================================
+class PortfolioSnapshot(Base):
+    """
+    Daily snapshot of portfolio value for historical tracking.
+    Used for performance charts and analytics.
+    """
+    __tablename__ = "portfolio_snapshots"
+    
+    id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True), primary_key=True, default=uuid.uuid4
+    )
+    
+    # Snapshot date (unique per day)
+    snapshot_date: Mapped[date] = mapped_column(Date, unique=True, index=True)
+    
+    # Portfolio totals
+    total_value: Mapped[Decimal] = mapped_column(DECIMAL(18, 2), nullable=False)
+    total_cost: Mapped[Decimal] = mapped_column(DECIMAL(18, 2), default=Decimal("0"))
+    pnl_net: Mapped[Decimal] = mapped_column(DECIMAL(18, 2), default=Decimal("0"))
+    pnl_pct: Mapped[Decimal] = mapped_column(DECIMAL(10, 4), default=Decimal("0"))
+    
+    # Breakdown by broker (JSONB)
+    # Format: {"IBKR": 15000.00, "BG SAXO": 8000.00, ...}
+    broker_breakdown: Mapped[Optional[dict]] = mapped_column(JSONB)
+    
+    # Breakdown by asset type (JSONB)
+    # Format: {"STOCK": 12000.00, "ETF": 5000.00, "CRYPTO": 3000.00, ...}
+    asset_breakdown: Mapped[Optional[dict]] = mapped_column(JSONB)
+    
+    # Holdings count
+    holdings_count: Mapped[int] = mapped_column(Integer, default=0)
+    
+    # Metadata
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+    
+    __table_args__ = (
+        Index("idx_snapshot_date", "snapshot_date"),
+    )

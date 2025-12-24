@@ -87,9 +87,22 @@ def background_price_refresher():
 
 @app.on_event("startup")
 def startup_event():
-    # Start the background thread
+    # Start the background thread for price refresh
     thread = threading.Thread(target=background_price_refresher, daemon=True)
     thread.start()
+    
+    try:
+        import services.forex_service
+        logger.info(f"FOREX SERVICE LOADED FROM: {services.forex_service.__file__}")
+    except Exception as e:
+        logger.error(f"Failed to log forex service path: {e}")
+    
+    # Start the APScheduler for automated scans
+    try:
+        from services.scheduler_service import start_scheduler
+        start_scheduler()
+    except Exception as e:
+        logger.warning(f"Scheduler failed to start: {e}")
 
 @app.delete("/api/logs")
 def clear_logs():
@@ -242,6 +255,8 @@ def build_portfolio_data():
             "current_value": ld.get("live_value") or h.get("current_value") or 0,
             "cost_basis": ld.get("cost_basis") or db_cost,
             "source": ld.get("source", "DB"),
+            "native_current_value": ld.get("native_current_value"),
+            "exchange_rate_used": ld.get("exchange_rate_used"),
         }
         
         # Recalculate P&L if not in ld or if we had to fallback to DB cost
@@ -302,6 +317,25 @@ def build_portfolio_data():
             asset_totals[atype] = 0
         asset_totals[atype] += h["current_value"]
 
+    # Fetch latest FX rates for frontend currency toggle
+    try:
+        from services.forex_service import get_exchange_rate
+        usd_rate = get_exchange_rate("EUR", "USD")
+        gbp_rate = get_exchange_rate("EUR", "GBP")
+        chf_rate = get_exchange_rate("EUR", "CHF")
+        print(f"DEBUG_MAIN: FX Rates fetched: USD={usd_rate}, GBP={gbp_rate}, CHF={chf_rate}")
+        fx_rates = {
+            "EUR": 1.0,
+            "USD": float(usd_rate),
+            "GBP": float(gbp_rate),
+            "CHF": float(chf_rate)
+        }
+    except Exception as e:
+        import traceback
+        print(f"FX Rate fetch error: {e}")
+        traceback.print_exc()
+        fx_rates = {"EUR": 1.0, "USD": 1.05} # Fallback
+
     data = {
         "holdings": processed_holdings,
         "broker_totals": broker_totals,
@@ -314,6 +348,7 @@ def build_portfolio_data():
         "total_day_change_pct": total_day_change_pct,
         "count": len(holdings),
         "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "fx_rates": fx_rates,
     }
     _save_snapshot(PORTFOLIO_SNAPSHOT, data)
     return data
@@ -406,6 +441,60 @@ def refresh_data():
         return {"status": "Refreshed", "portfolio_count": p_data['count']}
     except Exception as e:
          raise HTTPException(status_code=500, detail=str(e))
+
+from fastapi.responses import StreamingResponse
+import io
+import csv
+
+@app.get("/api/portfolio/export-csv")
+def export_portfolio_csv():
+    """Export portfolio holdings as CSV file."""
+    try:
+        data = _load_snapshot(PORTFOLIO_SNAPSHOT)
+        if not data:
+            data = build_portfolio_data()
+        
+        holdings = data.get("holdings", [])
+        
+        # Create CSV in memory
+        output = io.StringIO()
+        writer = csv.writer(output)
+        
+        # Header row
+        writer.writerow([
+            "Ticker", "Name", "Asset Type", "Broker", "Quantity", 
+            "Purchase Price", "Live Price", "Current Value", 
+            "Cost Basis", "P&L", "P&L %", "Day P&L", "Day Change %"
+        ])
+        
+        # Data rows
+        for h in holdings:
+            writer.writerow([
+                h.get("ticker", ""),
+                h.get("name", ""),
+                h.get("asset_type", ""),
+                h.get("broker", ""),
+                h.get("quantity", 0),
+                h.get("purchase_price", 0),
+                h.get("live_price", 0),
+                h.get("current_value", 0),
+                h.get("cost_basis", 0),
+                h.get("pnl", 0),
+                h.get("pnl_pct", 0),
+                h.get("day_pl", 0),
+                h.get("day_change_pct", 0)
+            ])
+        
+        output.seek(0)
+        
+        # Return as downloadable CSV
+        return StreamingResponse(
+            iter([output.getvalue()]),
+            media_type="text/csv",
+            headers={"Content-Disposition": f"attachment; filename=portfolio_{datetime.now().strftime('%Y%m%d')}.csv"}
+        )
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 # --- INTELLIGENCE ENDPOINTS ---
 
@@ -503,6 +592,7 @@ from typing import Optional
 class CouncilRequest(BaseModel):
     query: Optional[str] = None
     force_refresh: bool = False
+    model: Optional[str] = "mistral-nemo:latest"
 
 @app.post("/api/council/consult")
 async def consult_council(request: CouncilRequest):
@@ -510,7 +600,12 @@ async def consult_council(request: CouncilRequest):
     Triggers a strategic consultation with The Council (Gemini + Claude + DeepSeek + Qwen).
     """
     try:
-        result = await council.convene_council(user_query=request.query, force_refresh=request.force_refresh)
+        # Pass the selected model to the council service
+        result = await council.convene_council(
+            user_query=request.query, 
+            force_refresh=request.force_refresh,
+            model=request.model
+        )
         return result
     except Exception as e:
         logger.error(f"Council Error: {e}")
@@ -526,4 +621,169 @@ async def refresh_council_item(request: RefreshItemRequest):
         return updated_item
     except Exception as e:
         logger.error(f"Refresh Item Error: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/council/history")
+async def get_council_history():
+    """Returns a list of dates ("YYYY-MM-DD") that have archived Council Sessions."""
+    return council.get_session_history()
+
+@app.get("/api/council/models")
+async def get_council_models():
+    """Returns a list of available AI models from Ollama."""
+    return council.get_available_ollama_models()
+
+@app.get("/api/council/session/{date_str}")
+async def get_council_session_by_date(date_str: str):
+    """Returns the Council Session for a specific date (YYYY-MM-DD)."""
+    try:
+        from datetime import date
+        target_date = date.fromisoformat(date_str)
+        session = council.get_session_by_date(target_date)
+        
+        if not session:
+             raise HTTPException(status_code=404, detail="No session found for this date")
+             
+        # Reconstruct the response format to match live session
+        return {
+            "from_cache": True,
+            "timestamp": session.timestamp.isoformat(),
+            "responses": session.responses,
+            "consensus": session.consensus, 
+            "consensus_model": session.consensus_model,
+            "context": session.context_snapshot
+        }
+    except ValueError:
+        raise HTTPException(status_code=400, detail="Invalid date format. Use YYYY-MM-DD")
+    except Exception as e:
+        logger.error(f"History Fetch Error: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+# --- SCHEDULER ENDPOINTS ---
+
+@app.get("/api/scheduler/jobs")
+def get_scheduled_jobs():
+    """Returns list of scheduled jobs and their next run times."""
+    try:
+        from services.scheduler_service import get_scheduled_jobs
+        return get_scheduled_jobs()
+    except Exception as e:
+        return {"error": str(e), "jobs": []}
+
+@app.post("/api/scheduler/run-now")
+async def run_scan_now():
+    """Manually trigger an intelligence scan immediately."""
+    try:
+        from services.scheduler_service import scheduled_intelligence_scan
+        count = await scheduled_intelligence_scan()
+        return {"status": "completed", "new_items": count}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+# --- ALERT ENDPOINTS ---
+
+class AlertCreateRequest(BaseModel):
+    ticker: str
+    target_price: float
+    direction: str  # "above" or "below"
+    name: Optional[str] = None
+    notify_telegram: bool = True
+
+@app.get("/api/alerts")
+def list_alerts():
+    """Returns all active price alerts."""
+    try:
+        from services.alert_engine import get_active_alerts
+        return get_active_alerts()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/alerts")
+def create_alert(request: AlertCreateRequest):
+    """Creates a new price alert."""
+    try:
+        from services.alert_engine import create_alert
+        if request.direction not in ["above", "below"]:
+            raise HTTPException(status_code=400, detail="Direction must be 'above' or 'below'")
+        return create_alert(
+            ticker=request.ticker,
+            target_price=request.target_price,
+            direction=request.direction,
+            name=request.name,
+            notify_telegram=request.notify_telegram
+        )
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.delete("/api/alerts/{alert_id}")
+def remove_alert(alert_id: str):
+    """Deletes an alert by ID."""
+    try:
+        from services.alert_engine import delete_alert
+        success = delete_alert(alert_id)
+        if success:
+            return {"status": "deleted", "id": alert_id}
+        raise HTTPException(status_code=404, detail="Alert not found")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/alerts/check")
+async def check_alerts_now():
+    """Manually triggers alert checking."""
+    try:
+        from services.alert_engine import check_alerts
+        triggered = await check_alerts()
+        return {"status": "checked", "triggered": triggered}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+# --- ANALYTICS ENDPOINTS ---
+
+@app.post("/api/analytics/snapshot")
+def save_snapshot():
+    """Manually save a portfolio snapshot for today."""
+    try:
+        from services.analytics_service import save_daily_snapshot
+        return save_daily_snapshot()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/analytics/history")
+def get_portfolio_history_endpoint(days: int = 30):
+    """Get portfolio value history for the last N days."""
+    try:
+        from services.analytics_service import get_portfolio_history
+        return get_portfolio_history(days)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/analytics/benchmarks")
+def get_benchmarks_endpoint(days: int = 30):
+    """Get benchmark performance (S&P500, NASDAQ100, MSCI World) for comparison."""
+    try:
+        from services.analytics_service import get_benchmark_history
+        return get_benchmark_history(days)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/analytics/risk-metrics")
+def get_risk_metrics_endpoint():
+    """Get risk metrics: Sharpe ratio, volatility, max drawdown."""
+    try:
+        from services.analytics_service import calculate_risk_metrics
+        return calculate_risk_metrics()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/analytics/latest")
+def get_latest_snapshot_endpoint():
+    """Get the most recent portfolio snapshot."""
+    try:
+        from services.analytics_service import get_latest_snapshot
+        snapshot = get_latest_snapshot()
+        if not snapshot:
+            return {"message": "No snapshots yet. Create one with POST /api/analytics/snapshot"}
+        return snapshot
+    except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

@@ -54,51 +54,65 @@ class OllamaProvider(BaseLLMProvider):
             return None
 
 class GoogleProvider(BaseLLMProvider):
-    """
-    Uses the new `google-genai` SDK.
-    """
     def __init__(self, api_key, model="gemini-1.5-flash"):
         if not genai:
-            raise ImportError("Run `pip install google-genai`")
-        self.client = genai.Client(api_key=api_key)
+            raise ImportError("Run `pip install google-generativeai`")
+        
+        genai.configure(api_key=api_key)
         self.model_name = model
-        
+
     def chat(self, messages, json_mode=False):
-        system_instruction = None
-        contents = []
-        
-        # Parse messages into new SDK format
-        for m in messages:
-            if m['role'] == 'system':
-                system_instruction = m['content']
-            elif m['role'] == 'user':
-                contents.append(types.Content(role='user', parts=[types.Part.from_text(text=m['content'])]))
-            elif m['role'] in ['model', 'assistant']:
-                 contents.append(types.Content(role='model', parts=[types.Part.from_text(text=m['content'])]))
-        
-        # Config with Safety Settings (BLOCK_NONE)
-        config = types.GenerateContentConfig(
-            temperature=0.7,
-            response_mime_type="application/json" if json_mode else "text/plain",
-            system_instruction=system_instruction,
-            safety_settings=[
-                types.SafetySetting(category='HARM_CATEGORY_HARASSMENT', threshold='BLOCK_NONE'),
-                types.SafetySetting(category='HARM_CATEGORY_HATE_SPEECH', threshold='BLOCK_NONE'),
-                types.SafetySetting(category='HARM_CATEGORY_SEXUALLY_EXPLICIT', threshold='BLOCK_NONE'),
-                types.SafetySetting(category='HARM_CATEGORY_DANGEROUS_CONTENT', threshold='BLOCK_NONE'),
-            ]
-        )
-        
         try:
-            response = self.client.models.generate_content(
-                model=self.model_name,
-                contents=contents,
-                config=config
+            # Extract system instruction
+            system_instruction = None
+            chat_history = []
+            
+            for m in messages:
+                if m['role'] == 'system':
+                    system_instruction = m['content']
+                elif m['role'] == 'user':
+                    chat_history.append({'role': 'user', 'parts': [m['content']]})
+                elif m['role'] in ['assistant', 'model']:
+                    chat_history.append({'role': 'model', 'parts': [m['content']]})
+
+            # Instantiate model with system instruction
+            model = genai.GenerativeModel(
+                model_name=self.model_name,
+                system_instruction=system_instruction
             )
+
+            # Config
+            generation_config = genai.types.GenerationConfig(
+                temperature=0.7,
+                response_mime_type="application/json" if json_mode else "text/plain"
+            )
+
+            # Safety Settings
+            safety_settings = {
+                HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
+                HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
+                HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE,
+                HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
+            }
+
+            response = model.generate_content(
+                chat_history,
+                generation_config=generation_config,
+                safety_settings=safety_settings
+            )
+
+            if not response.parts:
+                 # Check for safety blocks if no parts are returned
+                if response.prompt_feedback:
+                     logger.warning(f"Gemini Blocked: {response.prompt_feedback}")
+                     return f"Error: Content blocked ({response.prompt_feedback})"
+                return "Error: Empty response"
+
             return response.text
+
         except Exception as e:
             logger.error(f"Gemini SDK Error: {e}")
-            return None
+            return f"Error: {str(e)}"
 
 class OpenRouterProvider(BaseLLMProvider):
     def __init__(self, api_key, model, site_url="http://localhost", site_name="WarRoom"):
@@ -117,6 +131,10 @@ class OpenRouterProvider(BaseLLMProvider):
 
     def chat(self, messages, json_mode=False):
         try:
+            # Ensure messages is a list
+            if isinstance(messages, str):
+                messages = [{"role": "user", "content": messages}]
+
             resp = self.client.chat.completions.create(
                 extra_headers=self.extra_headers,
                 model=self.model,

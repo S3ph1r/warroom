@@ -3,9 +3,11 @@
   import Dashboard from "./lib/Dashboard.svelte";
   import Intelligence from "./lib/Intelligence.svelte";
   import TheCouncil from "./lib/TheCouncil.svelte";
+  import AlertManager from "./lib/AlertManager.svelte";
+  import Analytics from "./lib/Analytics.svelte";
   import { themeState } from "./lib/stores/theme.js";
 
-  let currentView = "portfolio"; // 'portfolio' | 'intelligence'
+  let currentView = "portfolio"; // 'portfolio' | 'intelligence' | 'council' | 'alerts' | 'analytics'
   let refreshTrigger = 0;
 
   function handleNavigate(event) {
@@ -75,6 +77,10 @@
         <Intelligence />
       {:else if currentView === "council"}
         <TheCouncil />
+      {:else if currentView === "alerts"}
+        <AlertManager />
+      {:else if currentView === "analytics"}
+        <Analytics />
       {/if}
     </div>
   </div>

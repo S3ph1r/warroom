@@ -1,0 +1,12 @@
+--- COMPARAZIONE MODELLI GOOGLE ---
+Prompt: 'Spiega l'inflazione a un bambino di 5 anni in una frase semplice e divertente.'
+
+>> Test Modello: gemini-1.5-pro
+   Errore: 404 models/gemini-1.5-pro is not found for API version v1beta, or is not supported for generateConte...
+------------------------------------------------------------
+>> Test Modello: gemini-1.5-flash
+   Errore: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateCon...
+------------------------------------------------------------
+>> Test Modello: gemini-2.0-flash-exp
+   Errore: 429 You exceeded your current quota, please check your plan and billing details. For more informatio...
+------------------------------------------------------------

@@ -211,6 +211,194 @@ Interfaccia API: [http://localhost:8000/docs](http://localhost:8000/docs)
 - **Asset Table (6 Tile)**: Tabella dedicata per Stocks, ETFs, Bonds, Crypto, Commodities, Cash.
 - **Ordinamento**: Clicca sulle intestazioni per ordinare ogni tabella per qualsiasi valore.
 - **Charts**: Allocazione visuale per Asset e per Broker.
+- **Export CSV**: Pulsante nella toolbar per esportare tutte le holdings in formato CSV.
+
+---
+
+## 📰 Intelligence & RSS Feeds
+
+### Fonti Supportate
+
+Il sistema supporta due tipi di fonti per l'intelligence:
+
+| Tipo | Esempio | Dati Estratti |
+|------|---------|---------------|
+| **YouTube** | @PaoloColetti | Trascrizioni → Riassunti AI |
+| **RSS Feed** | Yahoo Finance | Titoli + Link articoli |
+
+### RSS Feeds Preconfigurati
+
+- Yahoo Finance (Market News)
+- Bloomberg Markets
+- CNBC Business
+- Reuters Business
+
+### Gestione Fonti
+
+1. Vai in **Intelligence** dalla sidebar
+2. Espandi **Manage Sources**
+3. Incolla URL YouTube o RSS Feed
+4. Clicca **+** per aggiungere
+
+---
+
+## ⏰ Scansioni Automatiche (Scheduler)
+
+### Jobs Configurati
+
+Il sistema esegue automaticamente queste scansioni:
+
+| Job | Orario | Descrizione |
+|-----|--------|-------------|
+| `morning_scan` | 08:00 CET | Intelligence scan completo |
+| `evening_scan` | 18:00 CET | Intelligence scan completo |
+| `alert_check` | Ogni 5 min (08-22) | Controllo price alerts |
+
+### API Endpoint
+
+- **Lista Jobs**: `GET /api/scheduler/jobs`
+- **Trigger Manuale**: `POST /api/scheduler/run-now`
+
+---
+
+## 🔔 Sistema di Alert
+
+### Cos'è
+
+Il sistema di Alert ti permette di impostare notifiche automatiche quando un ticker raggiunge un prezzo target.
+
+### Come Usarlo
+
+1. **Vai in Alerts** dalla sidebar (icona campanello)
+2. **Clicca "New Alert"**
+3. **Compila il form**:
+   - **Ticker**: Simbolo (es. AAPL, TSLA, BTC-USD)
+   - **Target Price**: Prezzo obiettivo
+   - **Direction**: `Above` (≥) o `Below` (≤)
+4. **Clicca "Create Alert"**
+
+### Notifiche
+
+Quando un alert viene triggerato:
+- ✅ Viene segnato come `triggered` nel database
+- ✅ Notifica Telegram inviata (se configurato)
+- ✅ Alert rimosso dalla lista attivi
+
+### API Endpoints
+
+| Metodo | Endpoint | Descrizione |
+|--------|----------|-------------|
+| GET | `/api/alerts` | Lista alerts attivi |
+| POST | `/api/alerts` | Crea nuovo alert |
+| DELETE | `/api/alerts/{id}` | Elimina alert |
+| POST | `/api/alerts/check` | Controllo manuale |
+
+---
+
+## 📈 Analytics & Performance
+
+La nuova sezione **Analytics** (Fase 3) offre strumenti avanzati per monitorare l'andamento del portfolio nel tempo e valutare il rischio.
+
+### Dashboard Analytics
+Accessibile tramite il pulsante 📊 nella sidebar (sotto Alerts).
+
+**Funzionalità principali:**
+1.  **Performance Chart**: Grafico interattivo che mostra l'andamento percentuale del portfolio.
+    *   **Periodi**: 7D, 30D, 90D, 1Y.
+    *   **Confronto Benchmark**: Puoi attivare/disattivare il confronto con S&P 500, NASDAQ 100 e MSCI World.
+2.  **Risk Metrics**:
+    *   **Sharpe Ratio**: Misura il rendimento corretto per il rischio.
+    *   **Volatility**: Volatilità annualizzata del portfolio.
+    *   **Max Drawdown**: La massima perdita registrata da un picco precedente.
+3.  **Net Worth Tracker**: Valore totale del portfolio aggiornato all'ultimo snapshot.
+
+### Portfolio Snapshots
+Il sistema salva automaticamente uno "snapshot" del valore del portfolio ogni giorno alle **22:00 CET** (dopo la chiusura dei mercati USA).
+
+*   **Salvataggio Manuale**: Puoi forzare un salvataggio in qualsiasi momento cliccando il pulsante "Save Snapshot" nella pagina Analytics.
+*   **Nota**: I grafici e le metriche di rischio inizieranno a popolare i dati solo dopo aver accumulato almeno 2 snapshot giornalieri (minimo 2 giorni).
+
+### API Endpoints
+Endpoints per accedere ai dati analytics:
+
+| Metodo | Endpoint | Descrizione |
+|--------|----------|-------------|
+| `POST` | `/api/analytics/snapshot` | Crea manualmente uno snapshot giornaliero |
+| `GET` | `/api/analytics/history` | Recupera la serie storica (`?days=30`) |
+| `GET` | `/api/analytics/benchmarks` | Recupera i dati di confronto benchmark |
+| `GET` | `/api/analytics/risk-metrics` | Calcola Sharpe, Volatilità, Drawdown |
+
+---
+
+## 🤖 Telegram Bot
+
+### Cos'è
+
+Il bot Telegram invia notifiche push quando i tuoi price alerts vengono attivati.
+
+### Configurazione
+
+1. **Crea il Bot**:
+   - Apri Telegram → cerca `@BotFather`
+   - Invia `/newbot` e segui le istruzioni
+   - Copia il **Bot Token**
+
+2. **Ottieni Chat ID**:
+   - Cerca `@userinfobot` su Telegram
+   - Invia qualsiasi messaggio
+   - Copia il tuo **Chat ID**
+
+3. **Configura .env**:
+   ```env
+   TELEGRAM_BOT_TOKEN=123456789:ABCdefGHIjklMNOpqrSTUvwxYZ
+   TELEGRAM_CHAT_ID=987654321
+   ```
+
+### Formato Notifiche
+
+```
+🔔 PRICE ALERT TRIGGERED!
+
+📈 AAPL
+Target: ≥ $200.00
+Current: $205.50
+
+⏰ 2025-12-24 10:30:00
+```
+
+### Test Connessione
+
+```bash
+# Invia messaggio di test
+curl -X POST "https://api.telegram.org/bot<TOKEN>/sendMessage" \
+  -d "chat_id=<CHAT_ID>&text=Test War Room"
+```
+
+---
+
+## 📤 Export CSV Holdings
+
+### Come Esportare
+
+1. Vai nella **Dashboard** (Portfolio)
+2. Clicca il pulsante **📥 Export CSV** nella toolbar superiore
+3. Il file CSV viene scaricato automaticamente
+
+### Formato CSV
+
+```csv
+ticker,name,broker,type,quantity,current_price,current_value,pct_change_1d,pnl_net,weight
+AAPL,Apple Inc,IBKR,STOCK,10,195.50,1955.00,1.25,+350.00,5.5%
+...
+```
+
+### API Endpoint
+
+```bash
+GET /api/portfolio/export-csv
+```
+
+Restituisce direttamente il file CSV con `Content-Disposition: attachment`.
 
 ---
 
@@ -243,6 +431,42 @@ FileNotFoundError: No CSV files found
 ```
 
 **Soluzione**: Verifica che i file siano nella cartella corretta con i nomi attesi.
+
+### Telegram Bot Non Funziona
+
+```
+Telegram notification failed: Unauthorized
+```
+
+**Soluzione**: Verifica che `TELEGRAM_BOT_TOKEN` e `TELEGRAM_CHAT_ID` siano corretti nel file `.env`.
+
+### Scheduler Non Parte
+
+```
+Scheduler failed to start
+```
+
+**Soluzione**: Verifica che APScheduler sia installato (`pip install apscheduler`).
+
+### Valori Gonfiati (10x o 100x)
+
+Se un titolo (es. su borsa di Londra/LSE) mostra un valore assurdo:
+
+**Causa**: Il titolo è quotato in **Pence (GBp)** ma il sistema lo leggeva come **Sterline (GBP)**.
+**Soluzione**: Il fix automatico è stato applicato. Se persiste, cancella la cache:
+```bash
+del data/forex_cache.json
+```
+e riavvia il backend.
+
+### Dashboard Mostra Dati Vecchi
+
+Se i totali non tornano (es. 18k invece di 4k) dopo una correzione:
+
+**Soluzione**: Esegui un refresh forzato dello snapshot API o attendi le 22:00.
+```bash
+curl -X POST http://localhost:8000/api/refresh
+```
 
 ---
 
