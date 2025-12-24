@@ -9,10 +9,12 @@ from abc import ABC, abstractmethod
 
 # Dependencies
 try:
-    from google import genai
-    from google.genai import types
+    import google.generativeai as genai
+    from google.generativeai.types import HarmCategory, HarmBlockThreshold
 except ImportError:
     genai = None
+    HarmCategory = None
+    HarmBlockThreshold = None
 
 try:
     from openai import OpenAI
@@ -81,11 +83,11 @@ class GoogleProvider(BaseLLMProvider):
                 system_instruction=system_instruction
             )
 
-            # Config
-            generation_config = genai.types.GenerationConfig(
-                temperature=0.7,
-                response_mime_type="application/json" if json_mode else "text/plain"
-            )
+            # Config - use direct dict for GenerationConfig
+            generation_config = {
+                "temperature": 0.7,
+                "response_mime_type": "application/json" if json_mode else "text/plain"
+            }
 
             # Safety Settings
             safety_settings = {

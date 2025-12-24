@@ -1,55 +1,31 @@
-import requests
-import json
+
 import sys
+import os
+from pathlib import Path
 
-BASE_URL = "http://127.0.0.1:8000/api/analytics"
+# Add project root
+PROJECT_ROOT = Path(__file__).parent.parent
+sys.path.insert(0, str(PROJECT_ROOT))
 
-def test_save_snapshot():
-    print("\n--- Testing POST /snapshot ---")
+# Setup logging
+import logging
+logging.basicConfig(level=logging.INFO)
+
+from services.analytics_service import get_benchmark_history
+
+def test_benchmark_fetching():
+    print("Testing get_benchmark_history()...")
     try:
-        response = requests.post(f"{BASE_URL}/snapshot")
-        print(f"Status Code: {response.status_code}")
-        print(f"Response: {json.dumps(response.json(), indent=2)}")
-        if response.status_code == 200:
-            return True
+        data = get_benchmark_history(days=30)
+        print(f"Data keys: {list(data.keys())}")
+        for k, v in data.items():
+            print(f"Benchmark: {k}, Points: {len(v)}")
+            if len(v) > 0:
+                print(f"  Sample: {v[0]}")
     except Exception as e:
-        print(f"Error: {e}")
-    return False
-
-def test_get_latest():
-    print("\n--- Testing GET /latest ---")
-    try:
-        response = requests.get(f"{BASE_URL}/latest")
-        print(f"Status Code: {response.status_code}")
-        print(f"Response: {json.dumps(response.json(), indent=2)}")
-    except Exception as e:
-        print(f"Error: {e}")
-
-def test_get_history():
-    print("\n--- Testing GET /history ---")
-    try:
-        response = requests.get(f"{BASE_URL}/history?days=30")
-        print(f"Status Code: {response.status_code}")
-        data = response.json()
-        print(f"History items: {len(data)}")
-        if len(data) > 0:
-            print(f"First item: {data[0]}")
-    except Exception as e:
-        print(f"Error: {e}")
-
-def test_get_risk_metrics():
-    print("\n--- Testing GET /risk-metrics ---")
-    try:
-        response = requests.get(f"{BASE_URL}/risk-metrics")
-        print(f"Status Code: {response.status_code}")
-        print(f"Response: {json.dumps(response.json(), indent=2)}")
-    except Exception as e:
-        print(f"Error: {e}")
+        print(f"TEST FAILED: {e}")
+        import traceback
+        traceback.print_exc()
 
 if __name__ == "__main__":
-    if test_save_snapshot():
-        test_get_latest()
-        test_get_history()
-        test_get_risk_metrics()
-    else:
-        print("Skipping subsequent tests due to snapshot failure.")
+    test_benchmark_fetching()

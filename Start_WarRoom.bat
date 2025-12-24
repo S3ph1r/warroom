@@ -55,7 +55,7 @@ if %errorlevel%==0 (
     echo    - Frontend is ALREADY RUNNING. Skipping start.
 ) else (
     echo    - Port 5173 free. Starting Svelte...
-    cmd /c start "WarRoom_Frontend" /D "%~dp0frontend" npm.cmd run dev
+    start "WarRoom_Frontend" /D "%~dp0frontend" cmd /k npm.cmd run dev
 )
 
 echo.

@@ -30,13 +30,13 @@ class TheCouncil:
         # Initialize Models (The Engines)
         self.models = {}
         
-        # 1. Google (Gemini Flash)
+        # 1. Google (Gemini)
         try:
             # Switch back to direct Google Provider as requested by user
             self.models['google'] = LLMWrapper(
                 provider="google", 
                 api_key=self.google_key,
-                model="gemini-1.5-pro" 
+                model="gemini-2.5-flash"  # Tested and working
             )
         except Exception as e:
             logger.error(f"Failed to init Google Model: {e}")
