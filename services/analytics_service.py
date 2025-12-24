@@ -6,6 +6,7 @@ import logging
 from datetime import date, datetime, timedelta
 from decimal import Decimal
 from typing import Dict, List, Optional
+import pandas as pd
 import yfinance as yf
 import numpy as np
 
@@ -152,7 +153,8 @@ def get_benchmark_history(days: int = 30) -> Dict[str, List[Dict]]:
                 ticker,
                 start=start_date,
                 end=end_date,
-                progress=False
+                progress=False,
+                auto_adjust=True
             )
             
             if data.empty:
@@ -160,21 +162,46 @@ def get_benchmark_history(days: int = 30) -> Dict[str, List[Dict]]:
                 continue
             
             # Get closing prices
-            closes = data["Close"].dropna()
+            closes = data["Close"]
+            
+            # Handle DataFrame vs Series (yfinance update fix)
+            if isinstance(closes, pd.DataFrame):
+                closes = closes.iloc[:, 0]
+                
+            closes = closes.dropna()
             if len(closes) == 0:
                 continue
                 
             # Normalize to percentage change from first value
-            first_value = float(closes.iloc[0])
+            # Handle potential scale/series issues
+            first_val = closes.iloc[0]
+            if hasattr(first_val, 'item'):
+                first_value = float(first_val.item())
+            else:
+                first_value = float(first_val)
+                
+            result[name] = []
             
-            result[name] = [
-                {
-                    "date": str(idx.date()),
-                    "value": float(price),
-                    "pct_change": ((float(price) / first_value) - 1) * 100
-                }
-                for idx, price in closes.items()
-            ]
+            for idx, price in closes.items():
+                # Safe extraction of value
+                if hasattr(price, 'item'):
+                    price_val = float(price.item())
+                else:
+                    price_val = float(price)
+                
+                # Normalize date
+                # idx is likely a Timestamp, so .date() is valid
+                # If idx is wrong type, we catch it
+                if hasattr(idx, 'date'):
+                    date_str = str(idx.date())
+                else:
+                    date_str = str(idx).split(" ")[0]
+                
+                result[name].append({
+                    "date": date_str,
+                    "value": price_val,
+                    "pct_change": ((price_val / first_value) - 1) * 100
+                })
             
         except Exception as e:
             logger.error(f"[ANALYTICS] Error fetching {name}: {e}")
