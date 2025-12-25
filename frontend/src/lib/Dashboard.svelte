@@ -2,8 +2,15 @@
     import { onMount, tick } from "svelte";
     import Chart from "chart.js/auto";
     import { themeState } from "./stores/theme.js";
-    import { BarChart3, PieChart, Download } from "lucide-svelte";
+    import {
+        BarChart3,
+        PieChart,
+        Download,
+        FileText,
+        Plus,
+    } from "lucide-svelte";
     import AssetTable from "./components/AssetTable.svelte";
+    import TransactionModal from "./components/TransactionModal.svelte";
 
     export let refreshTrigger = 0;
 
@@ -11,6 +18,71 @@
     let error = null;
     let chartInstance = null;
     let assetChartInstance = null;
+
+    // Modal State
+    let showModal = false;
+    let modalMode = "BUY";
+    let modalData = null;
+
+    function openNewTransaction() {
+        modalMode = "BUY";
+        modalData = null;
+        showModal = true;
+    }
+
+    function handleBuy(event) {
+        modalMode = "BUY";
+        modalData = event.detail; // holding object
+        showModal = true;
+    }
+
+    function handleSell(event) {
+        modalMode = "SELL";
+        modalData = event.detail; // holding object
+        showModal = true;
+    }
+
+    async function handleSaveTransaction(event) {
+        const { mode, data } = event.detail;
+        console.log("Saving Transaction:", mode, data);
+
+        try {
+            const payload = {
+                mode,
+                broker: data.broker,
+                ticker:
+                    data.ticker ||
+                    (["DEPOSIT", "WITHDRAW"].includes(mode)
+                        ? data.currency
+                        : ""),
+                asset_type: data.asset_type || "STOCK",
+                quantity: parseFloat(data.quantity),
+                price: parseFloat(data.price || 1),
+                currency: data.currency,
+                date: data.date,
+                fees: 0,
+            };
+
+            const res = await fetch(`${API_BASE}/api/transactions`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload),
+            });
+
+            if (!res.ok) {
+                const err = await res.json();
+                throw new Error(err.detail || "Transaction failed");
+            }
+
+            // Success
+            showModal = false;
+            // Refresh Data to see new Cash/Holdings
+            await fetchData();
+            // Optional: trigger check alerts
+        } catch (e) {
+            alert("Error saving transaction: " + e.message);
+        }
+    }
 
     // Chart Preference State
     let chartType = "doughnut"; // 'doughnut' | 'bar'
@@ -27,18 +99,15 @@
     $: displayData = convertData(data, fxRate);
 
     function convertData(sourceData, rate) {
+        // ... (convertData logic same as before, no changes needed inside) ...
         if (!sourceData) return null;
         if (rate === 1.0) return sourceData;
-
-        // Deepish clone structure that needs modification
         const d = { ...sourceData };
-
         d.total_value = (sourceData.total_value || 0) * rate;
         d.total_cost = (sourceData.total_cost || 0) * rate;
         d.total_pnl = (sourceData.total_pnl || 0) * rate;
         d.total_day_pl = (sourceData.total_day_pl || 0) * rate;
 
-        // Broker Totals
         d.broker_totals = {};
         for (const [k, v] of Object.entries(sourceData.broker_totals)) {
             d.broker_totals[k] = {
@@ -48,14 +117,10 @@
                 day_pl: v.day_pl * rate,
             };
         }
-
-        // Asset Totals
         d.asset_totals = {};
         for (const [k, v] of Object.entries(sourceData.asset_totals)) {
             d.asset_totals[k] = v * rate;
         }
-
-        // Holdings
         d.holdings = sourceData.holdings.map((h) => ({
             ...h,
             current_value: h.current_value * rate,
@@ -63,9 +128,7 @@
             live_price: (h.live_price || 0) * rate,
             day_pl: h.day_pl * rate,
             pnl: h.pnl * rate,
-            // purchase_price if needed locally? usually just cost_basis matters for overview
         }));
-
         return d;
     }
 
@@ -77,10 +140,6 @@
             const res = await fetch(`${API_BASE}/api/portfolio`);
             if (!res.ok) throw new Error("Failed to fetch portfolio");
             data = await res.json();
-
-            // Set default toggle based on locale? or just stick to EUR
-            // If data.fx_rates is missing, fallback to 1.0 logic handled above
-
             await tick();
             renderCharts();
         } catch (e) {
@@ -91,6 +150,12 @@
     function exportCSV() {
         window.open(`${API_BASE}/api/portfolio/export-csv`, "_blank");
     }
+
+    function exportPDF() {
+        window.open(`${API_BASE}/api/reports/pdf`, "_blank");
+    }
+
+    // ... (rest of functions) ...
 
     function renderCharts() {
         if (!displayData) return;
@@ -311,6 +376,15 @@
                 Portfolio Overview
             </h1>
             <div class="flex items-center gap-2">
+                <!-- New Transaction Button -->
+                <button
+                    on:click={openNewTransaction}
+                    class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-skin-primary text-skin-inverted hover:opacity-90 transition-all shadow-lg shadow-skin-primary/20 text-xs font-bold uppercase tracking-wider"
+                >
+                    <Plus size={14} />
+                    New
+                </button>
+
                 <!-- Currency Toggle -->
                 <div
                     class="flex bg-skin-card border border-skin-border rounded overflow-hidden"
@@ -330,6 +404,16 @@
                         on:click={() => (selectedCurrency = "USD")}>USD</button
                     >
                 </div>
+
+                <!-- Export PDF Button -->
+                <button
+                    on:click={exportPDF}
+                    class="flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium text-skin-muted bg-skin-card border border-skin-border rounded hover:text-skin-text hover:border-skin-accent/50 transition-colors"
+                    title="Export to PDF"
+                >
+                    <FileText size={14} />
+                    PDF
+                </button>
 
                 <!-- Export CSV Button -->
                 <button
@@ -626,29 +710,40 @@
             </h2>
 
             <!-- BROKER FILTER BAR -->
-            <div
-                class="flex items-center gap-1 bg-skin-base/30 p-1 rounded-md border border-skin-border"
-            >
-                <button
-                    class="px-2 py-1 text-[11px] font-medium rounded {selectedBroker ===
-                    'All'
-                        ? 'bg-skin-card text-skin-text shadow-sm'
-                        : 'text-skin-muted hover:text-skin-text'}"
-                    on:click={() => (selectedBroker = "All")}
+            <div class="flex items-center gap-2">
+                <div
+                    class="flex items-center gap-1 bg-skin-base/30 p-1 rounded-md border border-skin-border"
                 >
-                    All
-                </button>
-                {#each Object.keys(displayData.broker_totals).sort() as broker}
                     <button
                         class="px-2 py-1 text-[11px] font-medium rounded {selectedBroker ===
-                        broker
+                        'All'
                             ? 'bg-skin-card text-skin-text shadow-sm'
                             : 'text-skin-muted hover:text-skin-text'}"
-                        on:click={() => (selectedBroker = broker)}
+                        on:click={() => (selectedBroker = "All")}
                     >
-                        {broker.replace("_", " ")}
+                        All
                     </button>
-                {/each}
+                    {#each Object.keys(displayData.broker_totals).sort() as broker}
+                        <button
+                            class="px-2 py-1 text-[11px] font-medium rounded {selectedBroker ===
+                            broker
+                                ? 'bg-skin-card text-skin-text shadow-sm'
+                                : 'text-skin-muted hover:text-skin-text'}"
+                            on:click={() => (selectedBroker = broker)}
+                        >
+                            {broker.replace("_", " ")}
+                        </button>
+                    {/each}
+                </div>
+
+                <!-- Quick New Asset Button -->
+                <button
+                    on:click={openNewTransaction}
+                    class="p-1.5 rounded-md bg-skin-primary/10 text-skin-primary hover:bg-skin-primary/20 border border-skin-primary/20 transition-colors"
+                    title="Add New Asset"
+                >
+                    <Plus size={16} />
+                </button>
             </div>
         </div>
 
@@ -657,32 +752,56 @@
                 title="Stocks"
                 items={groups.stocks}
                 color="text-skin-accent"
+                on:buy={handleBuy}
+                on:sell={handleSell}
             />
             <AssetTable
                 title="ETFs"
                 items={groups.etfs}
                 color="text-skin-pos"
+                on:buy={handleBuy}
+                on:sell={handleSell}
             />
             <AssetTable
                 title="Bonds"
                 items={groups.bonds}
                 color="text-yellow-400"
+                on:buy={handleBuy}
+                on:sell={handleSell}
             />
             <AssetTable
                 title="Crypto"
                 items={groups.crypto}
                 color="text-purple-400"
+                on:buy={handleBuy}
+                on:sell={handleSell}
             />
             <AssetTable
                 title="Commodities"
                 items={groups.commodities}
                 color="text-orange-400"
+                on:buy={handleBuy}
+                on:sell={handleSell}
             />
             <AssetTable
                 title="Cash"
                 items={groups.cash}
                 color="text-skin-muted"
+                on:buy={handleBuy}
+                on:sell={handleSell}
             />
         </div>
     </div>
+
+    <TransactionModal
+        isOpen={showModal}
+        mode={modalMode}
+        initialData={modalData}
+        fxRates={data?.fx_rates}
+        availableBrokers={data?.broker_totals
+            ? Object.keys(data.broker_totals)
+            : []}
+        on:close={() => (showModal = false)}
+        on:save={handleSaveTransaction}
+    />
 {/if}

@@ -14,16 +14,21 @@ echo [1/4] 🛑 Stopping Docker Services...
 docker-compose down
 
 echo [2/4] 🔪 Killing User Interfaces (Node/Frontend)...
-:: Killing via node.exe usually catches Vite
+:: Kill via process name
 taskkill /F /IM node.exe /T >nul 2>&1
+:: Kill via Window Title
+taskkill /F /FI "WINDOWTITLE eq WarRoom_Frontend*" /T >nul 2>&1
 if %errorlevel%==0 ( echo    - Frontend Stopped. ) else ( echo    - Frontend already clean. )
 
 echo [3/4] 🔪 Killing Backend (Python/Uvicorn)...
+:: Kill the Python process
 taskkill /F /IM uvicorn.exe /T >nul 2>&1
-taskkill /F /IM python.exe /FI "WINDOWTITLE eq WarRoom_Backend*" /T >nul 2>&1
-:: Hard cleanup of port 8000
-for /f "tokens=5" %%a in ('netstat -aon ^| find ":8000" ^| find "LISTENING"') do taskkill /f /pid %%a >nul 2>&1
-if %errorlevel%==0 ( echo    - Backend Stopped. ) else ( echo    - Backend clean. )
+:: Kill the specific window (cmd.exe holding it open)
+taskkill /F /FI "WINDOWTITLE eq WarRoom_Backend*" /T >nul 2>&1
+
+:: Robust Port 8000 Kill using PowerShell
+powershell -Command "Get-NetTCPConnection -LocalPort 8000 -ErrorAction SilentlyContinue | Select-Object -ExpandProperty OwningProcess | Select-Object -Unique | ForEach-Object { Stop-Process -Id $_ -Force -ErrorAction SilentlyContinue }"
+echo    - Cleanup of port 8000 complete.
 
 echo [4/4] 🦙 Stopping Ollama...
 :: Ollama in WSL is tricky to kill from CMD, usually we leave it or kill via wsl

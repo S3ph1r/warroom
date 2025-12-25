@@ -9,6 +9,8 @@
         Calendar,
     } from "lucide-svelte";
     import Chart from "chart.js/auto";
+    import CorrelationHeatmap from "./components/CorrelationHeatmap.svelte";
+    import AllocationTreemap from "./components/AllocationTreemap.svelte";
 
     const API_BASE = "http://127.0.0.1:8000";
 
@@ -194,10 +196,19 @@
         });
     }
 
-    $: if (daysRange || showSP500 || showNASDAQ || showMSCI) {
+    function safeLoad() {
         if (!loading && chartCanvas) {
             loadAnalytics();
         }
+    }
+
+    // Trigger update when parameters change (but don't react to 'loading' changes)
+    $: {
+        daysRange;
+        showSP500;
+        showNASDAQ;
+        showMSCI;
+        safeLoad();
     }
 
     onMount(loadAnalytics);
@@ -380,4 +391,15 @@
             days
         </div>
     {/if}
+
+    <!-- Advanced Analytics Grid -->
+    <div
+        class="grid grid-cols-1 lg:grid-cols-2 gap-6 pt-4 border-t border-skin-border mt-6"
+    >
+        <!-- Correlation Heatmap -->
+        <CorrelationHeatmap />
+
+        <!-- Allocation Treemap -->
+        <AllocationTreemap />
+    </div>
 </div>

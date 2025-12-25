@@ -1,5 +1,8 @@
 <script>
     import { ChevronUp, ChevronDown } from "lucide-svelte";
+    import { createEventDispatcher } from "svelte";
+
+    const dispatch = createEventDispatcher();
 
     export let title = "Holdings";
     export let items = [];
@@ -150,6 +153,19 @@
                             </div>
                         </th>
 
+                        <!-- NEW: Net P&L (Value) Header -->
+                        <th
+                            class="px-1.5 py-1 font-medium tracking-tight text-right cursor-pointer hover:text-skin-text transition-colors"
+                            on:click={() => toggleSort("pnl")}
+                        >
+                            <div class="flex items-center justify-end gap-0.5">
+                                {#if sortKey === "pnl"}
+                                    {sortDir === 1 ? "↑" : "↓"}
+                                {/if}
+                                Net
+                            </div>
+                        </th>
+
                         <th
                             class="px-1.5 py-1 font-medium tracking-tight text-right cursor-pointer hover:text-skin-text transition-colors"
                             on:click={() => toggleSort("current_value")}
@@ -171,6 +187,13 @@
                                 {/if}
                                 1D±
                             </div>
+                        </th>
+
+                        <!-- NEW: Actions Header -->
+                        <th
+                            class="px-1.5 py-1 font-medium tracking-tight text-right text-skin-muted/50"
+                        >
+                            Act
                         </th>
                     </tr>
                 </thead>
@@ -257,6 +280,20 @@
                                 ).toFixed(1)}%
                             </td>
 
+                            <!-- NEW: Net P&L (Value) -->
+                            <td
+                                class="px-1.5 py-1 text-right font-mono text-[10px] {(h.pnl ||
+                                    0) >= 0
+                                    ? 'text-skin-pos'
+                                    : 'text-skin-neg'}"
+                            >
+                                {(h.pnl || 0) > 0 ? "+" : ""}{(
+                                    h.pnl || 0
+                                ).toLocaleString(undefined, {
+                                    maximumFractionDigits: 0,
+                                })}
+                            </td>
+
                             <!-- Market Value -->
                             <td
                                 class="px-1.5 py-1 text-right font-mono text-skin-text font-medium text-[10px]"
@@ -281,6 +318,24 @@
                                 ).toLocaleString(undefined, {
                                     maximumFractionDigits: 0,
                                 })}
+                            </td>
+
+                            <!-- NEW: Actions -->
+                            <td class="px-1.5 py-1 text-right">
+                                <div class="flex justify-end gap-1">
+                                    <button
+                                        class="px-1.5 py-0.5 rounded text-[9px] font-bold bg-green-500/20 text-green-400 hover:bg-green-500/30 transition-colors"
+                                        title="Buy"
+                                        on:click|stopPropagation={() =>
+                                            dispatch("buy", h)}>B</button
+                                    >
+                                    <button
+                                        class="px-1.5 py-0.5 rounded text-[9px] font-bold bg-red-500/20 text-red-400 hover:bg-red-500/30 transition-colors"
+                                        title="Sell"
+                                        on:click|stopPropagation={() =>
+                                            dispatch("sell", h)}>S</button
+                                    >
+                                </div>
                             </td>
                         </tr>
                     {/each}

@@ -32,10 +32,24 @@ pip install -r requirements.txt
 
 ### Configurazione
 
+### Configurazione
+
 Crea file `.env` con:
 ```
 DATABASE_URL=postgresql://user:pass@host/db
+
+# Telegram (Opzionale)
+TELEGRAM_BOT_TOKEN=123456789:ABCdefGHIjklMNOpqrsTUVwxyz
+TELEGRAM_CHAT_ID=987654321
 ```
+
+#### 🤖 Setup Telegram Bot
+1. Apri Telegram e cerca **@BotFather**.
+2. Invia `/newbot` e segui le istruzioni per creare un bot.
+3. Copia il **Token API** fornito.
+4. Cerca **@userinfobot** (o simili) e invia un messaggio per ottenere il tuo **ID numerico** (Chat ID).
+5. Inserisci entrambi nel file `.env`.
+6. **Importante:** Invia un primo messaggio "Ciao" al tuo nuovo bot per inizializzare la chat.
 
 ---
 

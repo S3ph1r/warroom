@@ -46,7 +46,7 @@ if %errorlevel%==0 (
     echo    - Backend is ALREADY RUNNING. Skipping start.
 ) else (
     echo    - Port 8000 free. Starting FastAPI...
-    cmd /c start "WarRoom_Backend" /D "%~dp0" venv\Scripts\python.exe -m uvicorn backend.main:app --reload --port 8000 --host 127.0.0.1
+    start "WarRoom_Backend" /D "%~dp0" cmd /k venv\Scripts\python.exe -m uvicorn backend.main:app --reload --port 8000 --host 127.0.0.1
 )
 
 echo [4/4] 🎨 Checking Frontend (Port 5173)...

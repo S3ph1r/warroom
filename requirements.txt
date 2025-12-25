@@ -49,6 +49,7 @@ python-telegram-bot>=21.9
 
 # Visualization
 plotly>=5.24.1
+xhtml2pdf>=0.2.16
 
 # Utilities
 loguru>=0.7.3

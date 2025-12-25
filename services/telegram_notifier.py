@@ -76,3 +76,45 @@ async def send_council_alert(summary: str) -> bool:
 <i>War Room Council</i>
 """
     return await send_telegram_message(message)
+
+
+async def send_daily_portfolio_report(
+    net_worth: float,
+    daily_pnl: float,
+    daily_pnl_pct: float,
+    top_mover_ticker: str = None,
+    top_mover_pct: float = None,
+    holdings_count: int = 0
+) -> bool:
+    """
+    Sends the daily morning portfolio report.
+    Called by scheduler at 08:00 CET.
+    """
+    # Format P&L with color emoji
+    if daily_pnl >= 0:
+        pnl_emoji = "🟢"
+        pnl_sign = "+"
+    else:
+        pnl_emoji = "🔴"
+        pnl_sign = ""
+    
+    # Format top mover
+    if top_mover_ticker and top_mover_pct is not None:
+        mover_emoji = "📈" if top_mover_pct >= 0 else "📉"
+        mover_sign = "+" if top_mover_pct >= 0 else ""
+        top_mover_line = f"\n<b>Top Mover:</b> {top_mover_ticker} ({mover_sign}{top_mover_pct:.1f}%) {mover_emoji}"
+    else:
+        top_mover_line = ""
+    
+    message = f"""
+📊 <b>WAR ROOM Daily Report</b> 📊
+
+<b>Net Worth:</b> €{net_worth:,.0f}
+<b>Daily P&L:</b> {pnl_sign}€{abs(daily_pnl):,.0f} ({pnl_sign}{daily_pnl_pct:.2f}%) {pnl_emoji}{top_mover_line}
+<b>Holdings:</b> {holdings_count} assets
+
+━━━━━━━━━━━━━━━━━━━━
+<i>Buona giornata di trading! 🚀</i>
+"""
+    return await send_telegram_message(message)
+

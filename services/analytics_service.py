@@ -154,7 +154,9 @@ def get_benchmark_history(days: int = 30) -> Dict[str, List[Dict]]:
                 start=start_date,
                 end=end_date,
                 progress=False,
-                auto_adjust=True
+                auto_adjust=True,
+                threads=False,
+                timeout=10
             )
             
             if data.empty:
@@ -208,6 +210,134 @@ def get_benchmark_history(days: int = 30) -> Dict[str, List[Dict]]:
     
     return result
 
+
+def normalize_ticker(ticker: str, asset_type: str) -> Optional[str]:
+    """Normalize ticker for Yahoo Finance."""
+    if not ticker:
+        return None
+        
+    ticker = ticker.strip().upper()
+    
+    # Skip ISINs (12 chars, 2 letters start)
+    if len(ticker) == 12 and ticker[:2].isalpha() and ticker[2].isdigit():
+        return None
+        
+    # Crypto
+    if asset_type == 'CRYPTO':
+        # Common mapping
+        if ticker in ['BTC', 'ETH', 'SOL', 'XRP', 'ADA', 'DOT', 'DOGE', 'SHIB', 'LTC', 'TRX', 'MATIC', 'BNB', 'HBAR', 'IOTA', 'FET', 'TON', 'FF', 'ENA', 'POL', '1INCH', 'AVAX']:
+             return f"{ticker}-USD"
+        if not ticker.endswith('-USD') and '-' not in ticker:
+             return f"{ticker}-USD"
+             
+    # Stocks/ETFs
+    # Heuristic: If it looks like a US ticker (letters only, <5 chars), keep it.
+    # Global tickers might need suffixes (e.g. .DE, .L, .HK) which we don't have easily.
+    # We try as is.
+    
+    return ticker
+
+
+def calculate_correlation_matrix(top_n: int = 15) -> Dict:
+    """
+    Calculate correlation matrix for the top N holdings.
+    Returns ticker list and correlation matrix values.
+    """
+    try:
+        from services.portfolio_service import get_all_holdings
+        import yfinance as yf
+        
+        # 1. Get Top Holdings
+        holdings = get_all_holdings()
+        
+        # Filter and Normalize
+        valid_holdings = []
+        for h in holdings:
+            if not h.get('current_value'): continue
+            
+            mapped_ticker = normalize_ticker(h.get('ticker'), h.get('asset_type'))
+            if mapped_ticker:
+                # Store mapped ticker but keep display name?
+                # For correlation, we need unique tickers.
+                h['yf_ticker'] = mapped_ticker
+                valid_holdings.append(h)
+        
+        # Sort desc by value
+        valid_holdings.sort(key=lambda x: float(x.get('current_value', 0)), reverse=True)
+        top_holdings = valid_holdings[:top_n]
+        
+        if not top_holdings:
+            return {"tickers": [], "matrix": []}
+            
+        # Extract unique tickers (preserve order)
+        tickers_map = {} # yf_ticker -> display_ticker
+        yf_tickers = []
+        
+        for h in top_holdings:
+            yf_t = h['yf_ticker']
+            if yf_t not in yf_tickers:
+                yf_tickers.append(yf_t)
+                tickers_map[yf_t] = h.get('ticker')
+        
+        # 2. Fetch History (last 1 year)
+        end_date = datetime.now()
+        start_date = end_date - timedelta(days=365)
+        
+        # Use valid tickers only
+        data = yf.download(
+            yf_tickers, 
+            start=start_date, 
+            end=end_date, 
+            progress=False,
+            auto_adjust=True,
+            threads=False, # Critical for backend stability
+            timeout=10
+        )["Close"]
+        
+        if data.empty:
+             return {"tickers": [], "matrix": []}
+             
+        # Handle single ticker case (returns Series)
+        if isinstance(data, pd.Series):
+             return {
+                 "tickers": [tickers_map[yf_tickers[0]]],
+                 "matrix": [[1.0]]
+             }
+             
+        # 3. Compute Returns & Correlation
+        returns = data.pct_change().dropna()
+        # Keep only columns that have enough data?
+        # Determine valid columns
+        valid_cols = [c for c in returns.columns if not returns[c].isna().all()]
+        returns = returns[valid_cols]
+        
+        if returns.empty:
+             return {"tickers": [], "matrix": []}
+
+        corr_matrix = returns.corr(method='pearson')
+        
+        # 4. Format for Frontend
+        cols = corr_matrix.columns.tolist()
+        matrix_values = []
+        display_labels = []
+        
+        for r in cols:
+            display_labels.append(tickers_map.get(r, r))
+            row_vals = []
+            for c in cols:
+                val = corr_matrix.loc[r, c]
+                if pd.isna(val): val = 0
+                row_vals.append(round(float(val), 2))
+            matrix_values.append(row_vals)
+            
+        return {
+            "tickers": display_labels,
+            "matrix": matrix_values
+        }
+
+    except Exception as e:
+        logger.error(f"Correlation Matrix Error: {e}")
+        return {"error": str(e), "tickers": [], "matrix": []}
 
 def calculate_risk_metrics() -> Dict:
     """

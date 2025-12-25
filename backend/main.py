@@ -4,7 +4,7 @@ import json
 from typing import List, Optional
 import feedparser
 from datetime import datetime, timedelta
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Response
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import threading
@@ -419,6 +419,59 @@ def build_intelligence_data():
 
 # --- PORTFOLIO ENDPOINTS ---
 
+# --- TRANSACTIONS ---
+
+class TransactionRequest(BaseModel):
+    mode: str # BUY, SELL, DEPOSIT, WITHDRAW
+    broker: str
+    ticker: Optional[str] = None
+    asset_type: Optional[str] = "STOCK"
+    quantity: float
+    price: Optional[float] = 0.0
+    currency: Optional[str] = "EUR"
+    date: str # YYYY-MM-DD
+    fees: Optional[float] = 0.0
+
+@app.post("/api/transactions")
+def create_transaction_endpoint(request: TransactionRequest):
+    """Log a new transaction and update portfolio."""
+    try:
+        from services.transaction_service import log_transaction
+        result = log_transaction(request.dict())
+        
+        # Invalidate Portfolio Snapshot to force rebuild on next fetch
+        if PORTFOLIO_SNAPSHOT.exists():
+            try:
+                PORTFOLIO_SNAPSHOT.unlink()
+                logger.info("Invalidated portfolio snapshot")
+            except Exception as e:
+                logger.warning(f"Failed to delete snapshot: {e}")
+
+        return result
+    except Exception as e:
+        logger.error(f"Transaction Error: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+# --- MARKET DATA ---
+
+@app.get("/api/market/search")
+def search_market_endpoint(q: str):
+    """Search for assets by ticker, name or ISIN."""
+    try:
+        from services.market_data_service import search_market_symbol
+        return search_market_symbol(q)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/market/details")
+def get_asset_details_endpoint(ticker: str):
+    """Get details (price, currency, name) for a ticker."""
+    try:
+        from services.market_data_service import get_asset_details
+        return get_asset_details(ticker)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
 @app.get("/api/portfolio")
 def get_portfolio():
     try:
@@ -786,4 +839,37 @@ def get_latest_snapshot_endpoint():
             return {"message": "No snapshots yet. Create one with POST /api/analytics/snapshot"}
         return snapshot
     except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+# --- REPORTS ---
+
+@app.get("/api/reports/pdf")
+def generate_pdf_report_endpoint():
+    """Generates and downloads a PDF report of the portfolio."""
+    try:
+        from services.report_service import generate_pdf_report
+        pdf_bytes = generate_pdf_report()
+        if not pdf_bytes:
+            raise HTTPException(status_code=500, detail="PDF Generation failed")
+        
+        filename = f"WarRoom_Report_{datetime.now().strftime('%Y%m%d')}.pdf"
+        return Response(
+            content=pdf_bytes, 
+            media_type="application/pdf", 
+            headers={"Content-Disposition": f"attachment; filename={filename}"}
+        )
+    except Exception as e:
+        logger.error(f"Report Endpoint Error: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/api/analytics/correlation")
+def get_correlation_matrix_endpoint():
+    """Get correlation matrix of top holdings."""
+    try:
+        from services.analytics_service import calculate_correlation_matrix
+        return calculate_correlation_matrix()
+    except Exception as e:
+        logger.error(f"Correlation Endpoint Error: {e}")
         raise HTTPException(status_code=500, detail=str(e))
