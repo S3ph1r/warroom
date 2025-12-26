@@ -1,0 +1,70 @@
+{
+  "source": "D:\\Download\\SCALABLE CAPITAL\\20250804 Monthly account statement Baader Bank.pdf",
+  "last_processed_page": 1,
+  "total_pages": 2,
+  "transactions": [
+    {
+      "date": "2025-01-06",
+      "type": "SELL",
+      "asset": "NOVO-NORDISK AS B",
+      "isin": "DK0062498333",
+      "quantity": -3,
+      "amount": 251.88,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-06",
+      "type": "SELL",
+      "asset": "TENCENT HLDGS HD-",
+      "isin": "KYG875721634",
+      "quantity": -10,
+      "amount": 466.75,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-08",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-08",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-10",
+      "type": "BUY",
+      "asset": "TENCENT HLDGS HD-",
+      "isin": "KYG875721634",
+      "quantity": 5,
+      "amount": -231.15,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-13",
+      "type": "BUY",
+      "asset": "UBER TECH. DL-",
+      "isin": "US90353T1007",
+      "quantity": 4,
+      "amount": -258.64,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-29",
+      "type": "SELL",
+      "asset": "TESLA INC. DL ",
+      "isin": "US88160R1014",
+      "quantity": -3,
+      "amount": 1096.5,
+      "currency": "EUR"
+    }
+  ]
+}

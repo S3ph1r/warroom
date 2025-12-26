@@ -1,0 +1,76 @@
+{
+  "transazioni": [
+    {
+      "data": "25/10/2025",
+      "tipo": "Contrattazione",
+      "nome_prodotto": "NVIDIA Corp.",
+      "importo_contabilizzato": "-507,95",
+      "valuta": "USD"
+    },
+    {
+      "data": "25/10/2025",
+      "tipo": "Contrattazione",
+      "nome_prodotto": "D-Wave Quantum Inc.",
+      "importo_contabilizzato": "-130,33",
+      "valuta": "USD"
+    },
+    {
+      "data": "25/10/2025",
+      "tipo": "Contrattazione",
+      "nome_prodotto": "Arista Networks Inc.",
+      "importo_contabilizzato": "-239,24",
+      "valuta": "USD"
+    },
+    {
+      "data": "25/10/2025",
+      "tipo": "Contrattazione",
+      "nome_prodotto": "Voyager Technologies Inc.",
+      "importo_contabilizzato": "-209,87",
+      "valuta": "USD"
+    },
+    {
+      "data": "25/10/2025",
+      "tipo": "Contrattazione",
+      "nome_prodotto": "VanEck Uranium and Nuclear Technologies UCITS ETF",
+      "importo_contabilizzato": "-158,39",
+      "valuta": "EUR"
+    },
+    {
+      "data": "25/10/2025",
+      "tipo": "Contrattazione",
+      "nome_prodotto": "Oracle Corp.",
+      "importo_contabilizzato": "-428,22",
+      "valuta": "USD"
+    },
+    {
+      "data": "25/10/2025",
+      "tipo": "Contrattazione",
+      "nome_prodotto": "TSMC - ADR",
+      "importo_contabilizzato": "-256,59",
+      "valuta": "USD"
+    },
+    {
+      "data": "25/10/2025",
+      "tipo": "Contrattazione",
+      "nome_prodotto": "BYD Company Ltd - ADR",
+      "importo_contabilizzato": "-228,32",
+      "valuta": "USD"
+    },
+    {
+      "data": "28/10/2025",
+      "tipo": "Contrattazione",
+      "nome_prodotto": "Microsoft Corp.",
+      "importo_contabilizzato": "421,65",
+      "valuta": "USD"
+    },
+    {
+      "data": "28/10/2025",
+      "tipo": "Contrattazione",
+      "nome_prodotto": "Tesla Inc.",
+      "importo_contabilizzato": "329,69",
+      "valuta": "USD"
+    }
+  ],
+  "_source_file": "D:\\Download\\BGSAXO\\Transactions_19807401_2025-01-01_2025-12-19.pdf",
+  "_processed_at": "2025-12-26T14:43:59.400831"
+}

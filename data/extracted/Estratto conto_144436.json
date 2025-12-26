@@ -1,0 +1,76 @@
+{
+  "transactions": [
+    {
+      "date": "2025-02-24",
+      "type": "Sell",
+      "description": "VanEck UCITS ETFs plc - VanEck Uranium and Nuclear Technologies UCITS ETF, quantity: 5",
+      "income": 144.0,
+      "outcome": 297.84
+    },
+    {
+      "date": "2025-03-01",
+      "type": "Interest payment",
+      "description": "",
+      "income": 0.38,
+      "outcome": 298.22
+    },
+    {
+      "date": "2025-06-01",
+      "type": "Interest payment",
+      "description": "",
+      "income": 0.07,
+      "outcome": 51.39
+    },
+    {
+      "date": "2025-07-03",
+      "type": "Rendimento Cash Dividend for ISIN KYG017191142",
+      "description": "",
+      "income": 7.87,
+      "outcome": 59.33
+    },
+    {
+      "date": "2025-08-01",
+      "type": "Interest payment",
+      "description": "",
+      "income": 0.07,
+      "outcome": 60.76
+    },
+    {
+      "date": "2025-10-21",
+      "type": "Commercio Sell trade US68389X1054 ORACLE CORP. DL-,01, quantity: 6",
+      "description": "",
+      "income": 1374.01,
+      "outcome": 1432.14
+    },
+    {
+      "date": "2025-10-23",
+      "type": "Bonifico Outgoing transfer for Roberto Guareschi",
+      "description": "",
+      "income": 1200.0,
+      "outcome": 232.14
+    },
+    {
+      "date": "2025-11-01",
+      "type": "Interest payment",
+      "description": "",
+      "income": 0.19,
+      "outcome": 233.96
+    },
+    {
+      "date": "2025-11-24",
+      "type": "Commercio Sell trade KYG017191142 ALIBABA GROUP HLDG LTD, quantity: 45",
+      "description": "",
+      "income": 661.02,
+      "outcome": 896.99
+    },
+    {
+      "date": "2025-11-24",
+      "type": "Bonifico Outgoing transfer for Roberto Guareschi",
+      "description": "",
+      "income": 890.0,
+      "outcome": 6.99
+    }
+  ],
+  "_source_file": "D:\\Download\\Trade Repubblic\\Estratto conto.pdf",
+  "_processed_at": "2025-12-26T14:44:36.146648"
+}

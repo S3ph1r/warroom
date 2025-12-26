@@ -129,6 +129,9 @@ MANUAL_TICKER_MAP = {
     'ETL': 'ETL.PA',          # Eutelsat
     'NOKIA': 'NOKIA.HE',      # Nokia Helsinki
     '02050': '2050.HK',       # Zhejiang Sanhua
+    'RACE': 'RACE.MI',        # Ferrari (Milan)
+    'STLA': 'STLA.MI',        # Stellantis (Milan)
+    'IE00B0M63516': 'ISBR.L', # iShares MSCI Brazil (London)
     # BP uses NYSE ADR (USD) for Revolut, not BP.L (London GBp)
 }
 
@@ -547,28 +550,43 @@ def get_live_values_for_holdings(holdings: list) -> dict:
         # Get live data
         day_change_pct = 0.0
         
-        if asset_type == 'CRYPTO' and ticker in crypto_data:
+        # Get FX Rate first
+        h_currency = h.get('currency', 'EUR')
+        fx_rate = fx_rates.get(h_currency, Decimal('1.0'))
+        
+        # Handle GBp special case
+        if h_currency == 'GBp' and 'GBp' not in fx_rates and 'GBP' in fx_rates:
+             fx_rate = fx_rates['GBP'] / 100
+             
+        # Logic dispatcher
+        if asset_type == 'CASH':
+            # CASH: Cost = Value = Quantity * FX Rate (in EUR)
+            # Price of 1 unit is the FX rate
+            live_price = float(fx_rate)
+            live_value = quantity * fx_rate
+            cost_basis = live_value # Cash has 0 P&L by definition in this model (or we track currency P&L separately?)
+                                    # User wants "Net Invested", so Cash is Invested Capital. Cost = Value.
+            source = "FX_RATE"
+            is_live = True
+            day_change_pct = 0.0 # Could be improved with FX daily change
+            purchase_price = Decimal('1') # Nominal
+            
+        elif asset_type == 'CRYPTO' and ticker in crypto_data:
             live_price = crypto_data[ticker]['price']
             day_change_pct = crypto_data[ticker]['change_24h']
             source = 'CoinGecko'
             is_live = True
+            
+            live_value = quantity * live_price
+            purchase_price_eur = purchase_price * fx_rate
+            cost_basis = quantity * purchase_price_eur if purchase_price else Decimal('0')
+            
         else:
             live_price, source, is_live, day_change_pct = get_price(ticker, isin, asset_type, purchase_price)
-        
-        # Convert purchase price to EUR using batch loaded rates
-        h_currency = h.get('currency', 'EUR')
-        fx_rate = fx_rates.get(h_currency, Decimal('1.0'))
-        
-        # Handle GBp special case here if needed (though forex_service handles it per request, batch might be tricky)
-        # Our batch service returns 'GBp' if GBP was requested.
-        if h_currency == 'GBp' and 'GBp' not in fx_rates and 'GBP' in fx_rates:
-             fx_rate = fx_rates['GBP'] / 100
-        
-        purchase_price_eur = purchase_price * fx_rate
-
-        # Calculate values
-        live_value = quantity * live_price
-        cost_basis = quantity * purchase_price_eur if purchase_price else Decimal('0')
+            
+            live_value = quantity * live_price
+            purchase_price_eur = purchase_price * fx_rate
+            cost_basis = quantity * purchase_price_eur if purchase_price else Decimal('0')
         
         # Total P&L
         if cost_basis > 0:

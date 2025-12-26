@@ -1,0 +1,1147 @@
+{
+  "report": [
+    {
+      "asset": "DE000ZAL1111",
+      "holding_qty": 0.0,
+      "history_net": 0.0,
+      "diff": 0.0,
+      "status": "OK"
+    },
+    {
+      "asset": "IE00B1FZS574",
+      "holding_qty": 0.0,
+      "history_net": 3.0,
+      "diff": -3.0,
+      "status": "ADJUST"
+    },
+    {
+      "asset": "US90353T1007",
+      "holding_qty": 5.0,
+      "history_net": 6.0,
+      "diff": -1.0,
+      "status": "ADJUST"
+    },
+    {
+      "asset": "IE00B0M63516/EUR",
+      "holding_qty": 0.0,
+      "history_net": 0.0,
+      "diff": 0.0,
+      "status": "OK"
+    },
+    {
+      "asset": "Baidu A",
+      "holding_qty": 0.0,
+      "history_net": 9.0,
+      "diff": -9.0,
+      "status": "ADJUST"
+    },
+    {
+      "asset": "KYG875721634",
+      "holding_qty": 10.0,
+      "history_net": -2.0,
+      "diff": 12.0,
+      "status": "ADJUST"
+    },
+    {
+      "asset": "Tencent Holdings (KYG875721634)",
+      "holding_qty": 0.0,
+      "history_net": 5.0,
+      "diff": -5.0,
+      "status": "ADJUST"
+    },
+    {
+      "asset": "US88160R1014",
+      "holding_qty": 1.0,
+      "history_net": 15.0,
+      "diff": -14.0,
+      "status": "ADJUST"
+    },
+    {
+      "asset": "US67066G1040",
+      "holding_qty": 0.0,
+      "history_net": 17.0,
+      "diff": -17.0,
+      "status": "ADJUST"
+    },
+    {
+      "asset": "IE00B0M63516",
+      "holding_qty": 0.0,
+      "history_net": 3.0,
+      "diff": -3.0,
+      "status": "ADJUST"
+    },
+    {
+      "asset": "KYG070341048",
+      "holding_qty": 17.0,
+      "history_net": 8.0,
+      "diff": 9.0,
+      "status": "ADJUST"
+    },
+    {
+      "asset": "Alibaba Group Hldg (KYG017191142)",
+      "holding_qty": 0.0,
+      "history_net": 20.0,
+      "diff": -20.0,
+      "status": "ADJUST"
+    },
+    {
+      "asset": "IE00B42NKQ00",
+      "holding_qty": 0.0,
+      "history_net": 10.0,
+      "diff": -10.0,
+      "status": "ADJUST"
+    },
+    {
+      "asset": "DK0062498333",
+      "holding_qty": 0.0,
+      "history_net": -3.0,
+      "diff": 3.0,
+      "status": "ADJUST"
+    },
+    {
+      "asset": "ORDERGEBUEHR",
+      "holding_qty": 0.0,
+      "history_net": 0.0,
+      "diff": 0.0,
+      "status": "OK"
+    },
+    {
+      "asset": "US26740W1099",
+      "holding_qty": 25.0,
+      "history_net": 35.0,
+      "diff": -10.0,
+      "status": "ADJUST"
+    },
+    {
+      "asset": "US76954A1034",
+      "holding_qty": 0.0,
+      "history_net": 3.0,
+      "diff": -3.0,
+      "status": "ADJUST"
+    },
+    {
+      "asset": "ISIN KYG875721634",
+      "holding_qty": 0.0,
+      "history_net": 7.0,
+      "diff": -7.0,
+      "status": "ADJUST"
+    },
+    {
+      "asset": "US2972842007",
+      "holding_qty": 6.0,
+      "history_net": 4.0,
+      "diff": 2.0,
+      "status": "ADJUST"
+    },
+    {
+      "asset": "KYG017191142",
+      "holding_qty": 20.0,
+      "history_net": 0.0,
+      "diff": 20.0,
+      "status": "ADJUST"
+    },
+    {
+      "asset": "KYG9830T1067",
+      "holding_qty": 120.0,
+      "history_net": 0.0,
+      "diff": 120.0,
+      "status": "ADJUST"
+    },
+    {
+      "asset": "IE00B1FZS574/EUR",
+      "holding_qty": 0.0,
+      "history_net": 0.0,
+      "diff": 0.0,
+      "status": "OK"
+    },
+    {
+      "asset": "US05606L1008",
+      "holding_qty": 12.0,
+      "history_net": 2.0,
+      "diff": 10.0,
+      "status": "ADJUST"
+    },
+    {
+      "asset": "CNE100006M58",
+      "holding_qty": 20.0,
+      "history_net": 20.0,
+      "diff": 0.0,
+      "status": "OK"
+    },
+    {
+      "asset": "Xiaomi (KYG9830T1067)",
+      "holding_qty": 0.0,
+      "history_net": 30.0,
+      "diff": -30.0,
+      "status": "ADJUST"
+    }
+  ],
+  "adjustments": [
+    {
+      "type": "RECONCILIATION",
+      "asset": "ISHSII-MSCI TURKEY DLDIS",
+      "isin": "IE00B1FZS574",
+      "quantity": -3.0,
+      "date": "2025-01-01",
+      "note": "Auto-generated to match snapshot. History=3.0, Snapshot=0.0"
+    },
+    {
+      "type": "RECONCILIATION",
+      "asset": "UBER TECH. DL-,00001",
+      "isin": "US90353T1007",
+      "quantity": -1.0,
+      "date": "2025-01-01",
+      "note": "Auto-generated to match snapshot. History=6.0, Snapshot=5.0"
+    },
+    {
+      "type": "RECONCILIATION",
+      "asset": "Baidu A",
+      "isin": "Baidu A",
+      "quantity": -9.0,
+      "date": "2025-01-01",
+      "note": "Auto-generated to match snapshot. History=9.0, Snapshot=0.0"
+    },
+    {
+      "type": "RECONCILIATION",
+      "asset": "TENCENT HLDGS HD-",
+      "isin": "KYG875721634",
+      "quantity": 12.0,
+      "date": "2025-01-01",
+      "note": "Auto-generated to match snapshot. History=-2.0, Snapshot=10.0"
+    },
+    {
+      "type": "RECONCILIATION",
+      "asset": "Tencent Holdings (KYG875721634)",
+      "isin": "Tencent Holdings (KYG875721634)",
+      "quantity": -5.0,
+      "date": "2025-01-01",
+      "note": "Auto-generated to match snapshot. History=5.0, Snapshot=0.0"
+    },
+    {
+      "type": "RECONCILIATION",
+      "asset": "TESLA INC.",
+      "isin": "US88160R1014",
+      "quantity": -14.0,
+      "date": "2025-01-01",
+      "note": "Auto-generated to match snapshot. History=15.0, Snapshot=1.0"
+    },
+    {
+      "type": "RECONCILIATION",
+      "asset": "NVIDIA CORP.",
+      "isin": "US67066G1040",
+      "quantity": -17.0,
+      "date": "2025-01-01",
+      "note": "Auto-generated to match snapshot. History=17.0, Snapshot=0.0"
+    },
+    {
+      "type": "RECONCILIATION",
+      "asset": "IS MSCI BRAZ.U.ETF USD D",
+      "isin": "IE00B0M63516",
+      "quantity": -3.0,
+      "date": "2025-01-01",
+      "note": "Auto-generated to match snapshot. History=3.0, Snapshot=0.0"
+    },
+    {
+      "type": "RECONCILIATION",
+      "asset": "BAIDU INC. O.N.",
+      "isin": "KYG070341048",
+      "quantity": 9.0,
+      "date": "2025-01-01",
+      "note": "Auto-generated to match snapshot. History=8.0, Snapshot=17.0"
+    },
+    {
+      "type": "RECONCILIATION",
+      "asset": "Alibaba Group Hldg (KYG017191142)",
+      "isin": "Alibaba Group Hldg (KYG017191142)",
+      "quantity": -20.0,
+      "date": "2025-01-01",
+      "note": "Auto-generated to match snapshot. History=20.0, Snapshot=0.0"
+    },
+    {
+      "type": "RECONCILIATION",
+      "asset": "ISHSV-S+P500ENER.SECT.DLA",
+      "isin": "IE00B42NKQ00",
+      "quantity": -10.0,
+      "date": "2025-01-01",
+      "note": "Auto-generated to match snapshot. History=10.0, Snapshot=0.0"
+    },
+    {
+      "type": "RECONCILIATION",
+      "asset": "NOVO-NORDISK AS B",
+      "isin": "DK0062498333",
+      "quantity": 3.0,
+      "date": "2025-01-01",
+      "note": "Auto-generated to match snapshot. History=-3.0, Snapshot=0.0"
+    },
+    {
+      "type": "RECONCILIATION",
+      "asset": "D-WAVE QUANTUM DL-,0001",
+      "isin": "US26740W1099",
+      "quantity": -10.0,
+      "date": "2025-01-01",
+      "note": "Auto-generated to match snapshot. History=35.0, Snapshot=25.0"
+    },
+    {
+      "type": "RECONCILIATION",
+      "asset": "RIVIAN AUTOMOT.A",
+      "isin": "US76954A1034",
+      "quantity": -3.0,
+      "date": "2025-01-01",
+      "note": "Auto-generated to match snapshot. History=3.0, Snapshot=0.0"
+    },
+    {
+      "type": "RECONCILIATION",
+      "asset": "TENCENT HLDGS HD-,00002",
+      "isin": "ISIN KYG875721634",
+      "quantity": -7.0,
+      "date": "2025-01-01",
+      "note": "Auto-generated to match snapshot. History=7.0, Snapshot=0.0"
+    },
+    {
+      "type": "RECONCILIATION",
+      "asset": "ESSILORLUXOTTICA 1/2/O.N.",
+      "isin": "US2972842007",
+      "quantity": 2.0,
+      "date": "2025-01-01",
+      "note": "Auto-generated to match snapshot. History=4.0, Snapshot=6.0"
+    },
+    {
+      "type": "RECONCILIATION",
+      "asset": "Alibaba Group Hldg",
+      "isin": "KYG017191142",
+      "quantity": 20.0,
+      "date": "2025-01-01",
+      "note": "Auto-generated to match snapshot. History=0.0, Snapshot=20.0"
+    },
+    {
+      "type": "RECONCILIATION",
+      "asset": "KYG9830T1067",
+      "isin": "KYG9830T1067",
+      "quantity": 120.0,
+      "date": "2025-01-01",
+      "note": "Auto-generated to match snapshot. History=0.0, Snapshot=120.0"
+    },
+    {
+      "type": "RECONCILIATION",
+      "asset": "BYD Co., Ltd.",
+      "isin": "US05606L1008",
+      "quantity": 10.0,
+      "date": "2025-01-01",
+      "note": "Auto-generated to match snapshot. History=2.0, Snapshot=12.0"
+    },
+    {
+      "type": "RECONCILIATION",
+      "asset": "Xiaomi (KYG9830T1067)",
+      "isin": "Xiaomi (KYG9830T1067)",
+      "quantity": -30.0,
+      "date": "2025-01-01",
+      "note": "Auto-generated to match snapshot. History=30.0, Snapshot=0.0"
+    }
+  ],
+  "consolidated_ledger": [
+    {
+      "date": "2022-12-20",
+      "type": "BUY",
+      "asset": "IS MSCI BRAZ.U.ETF USD D",
+      "quantity": 3.0,
+      "amount": -62.27,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2023-03-29",
+      "type": "DIVIDEND",
+      "asset": "IS MSCI BRAZ.U.ETF USD D",
+      "quantity": 0.0,
+      "amount": 4.39,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2023-06-28",
+      "type": "DIVIDEND",
+      "asset": "IS MSCI BRAZ.U.ETF USD D",
+      "quantity": 0.0,
+      "amount": 1.36,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2023-08-31",
+      "type": "DIVIDEND",
+      "asset": "IS MSCI BRAZ.U.ETF USD D",
+      "quantity": 0.0,
+      "amount": 7.46,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2024-01-05",
+      "type": "DIVIDEND",
+      "asset": "IS MSCI BRAZ.U.ETF USD D",
+      "quantity": 0.0,
+      "amount": 0.8,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2024-06-26",
+      "type": "DIVIDEND",
+      "asset": "IS MSCI BRAZ.U.ETF USD D",
+      "quantity": 0.0,
+      "amount": 1.55,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2024-09-26",
+      "type": "DIVIDEND",
+      "asset": "IS MSCI BRAZ.U.ETF USD D",
+      "quantity": 0.0,
+      "amount": 1.05,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2025-03-27",
+      "type": "DIVIDEND",
+      "asset": "IS MSCI BRAZ.U.ETF USD D",
+      "quantity": 0.0,
+      "amount": 8.52,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2025-06-30",
+      "type": "DIVIDEND",
+      "asset": "IS MSCI BRAZ.U.ETF USD D",
+      "quantity": 0.0,
+      "amount": 8.27,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2025-09-24",
+      "type": "DIVIDEND",
+      "asset": "IS MSCI BRAZ.U.ETF USD D",
+      "quantity": 0.0,
+      "amount": 0.78,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2022-12-20",
+      "type": "BUY",
+      "asset": "ISHSII-MSCI TURKEY DLDIS",
+      "quantity": 3.0,
+      "amount": -52.87,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2023-05-30",
+      "type": "DIVIDEND",
+      "asset": "ISHSII-MSCI TURKEY DLDIS",
+      "quantity": 3.0,
+      "amount": 4.89,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2022-12-28",
+      "type": "BUY",
+      "asset": "ISHSV-S+P500ENER.SECT.DLA",
+      "quantity": 10.0,
+      "amount": -78.5,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2023-01-04",
+      "type": "BUY",
+      "asset": "ZALANDO SE",
+      "quantity": -1.0,
+      "amount": 37.04,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2024-09-19",
+      "type": "SELL",
+      "asset": "ZALANDO SE",
+      "quantity": -1.0,
+      "amount": 14.94,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2023-12-28",
+      "type": "BUY",
+      "asset": "TENCENT HLDGS HD-,00002",
+      "quantity": 7.0,
+      "amount": -235.55,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2024-01-09",
+      "type": "BUY",
+      "asset": "BYD Co., Ltd.",
+      "quantity": 2.0,
+      "amount": -98.4,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2024-08-15",
+      "type": "DIVIDEND",
+      "asset": "BYD Co., Ltd.",
+      "quantity": 2.0,
+      "amount": 33366523.0,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2024-08-15",
+      "type": "DIVIDEND",
+      "asset": "BYD Co., Ltd.",
+      "quantity": 2.0,
+      "amount": 33366523.0,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2025-08-13",
+      "type": "DIVIDEND",
+      "asset": "BYD Co., Ltd.",
+      "quantity": 0.0,
+      "amount": 1.53,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2023-03-29",
+      "type": "DIVIDEND",
+      "asset": "iShs MSCI Brazil U.ETF USD(D)",
+      "quantity": 0.0,
+      "amount": 0.36,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2023-06-28",
+      "type": "DIVIDEND",
+      "asset": "iShs MSCI Brazil U.ETF USD(D)",
+      "quantity": 0.0,
+      "amount": 0.96,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2023-09-27",
+      "type": "DIVIDEND",
+      "asset": "iShs MSCI Brazil U.ETF USD(D)",
+      "quantity": 0.0,
+      "amount": 1.01,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2023-12-29",
+      "type": "DIVIDEND",
+      "asset": "iShs MSCI Brazil U.ETF USD(D)",
+      "quantity": 0.0,
+      "amount": 0.8,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2023-05-30",
+      "type": "DIVIDEND",
+      "asset": "iShsII-MSCI Turkey UCITS ETF",
+      "quantity": 0.0,
+      "amount": 1.21,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2023-11-29",
+      "type": "DIVIDEND",
+      "asset": "iShsII-MSCI Turkey UCITS ETF",
+      "quantity": 0.0,
+      "amount": 0.32,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2024-06-27",
+      "type": "DIVIDEND",
+      "asset": "TENCENT HLDGS HD-",
+      "quantity": 0.0,
+      "amount": 2.84,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2024-11-18",
+      "type": "BUY",
+      "asset": "TENCENT HLDGS HD-",
+      "quantity": 3.0,
+      "amount": -146.85,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2025-06-03",
+      "type": "DIVIDEND",
+      "asset": "TENCENT HLDGS HD-",
+      "quantity": 0.0,
+      "amount": 2.51,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2025-06-30",
+      "type": "DIVIDEND",
+      "asset": "TENCENT HLDGS HD-",
+      "quantity": 0.0,
+      "amount": 0.72,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2025-01-06",
+      "type": "SELL",
+      "asset": "TENCENT HLDGS HD-",
+      "quantity": -10.0,
+      "amount": 466.75,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2025-01-10",
+      "type": "BUY",
+      "asset": "TENCENT HLDGS HD-",
+      "quantity": 5.0,
+      "amount": -231.15,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2024-07-25",
+      "type": "BUY",
+      "asset": "TESLA INC.",
+      "quantity": 2.0,
+      "amount": -460.3,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2024-07-25",
+      "type": "BUY",
+      "asset": "TESLA INC.",
+      "quantity": 2.0,
+      "amount": -410.1,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2024-07-25",
+      "type": "BUY",
+      "asset": "TESLA INC.",
+      "quantity": 2.0,
+      "amount": -460.3,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2024-07-25",
+      "type": "BUY",
+      "asset": "TESLA INC.",
+      "quantity": 2.0,
+      "amount": -410.1,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2024-08-12",
+      "type": "BUY",
+      "asset": "TESLA INC.",
+      "quantity": 2.0,
+      "amount": -365.52,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2024-08-12",
+      "type": "BUY",
+      "asset": "TESLA INC.",
+      "quantity": 2.0,
+      "amount": -365.52,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2024-11-15",
+      "type": "BUY",
+      "asset": "TESLA INC.",
+      "quantity": 4.0,
+      "amount": -146.85,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2024-11-18",
+      "type": "BUY",
+      "asset": "TESLA INC.",
+      "quantity": 2.0,
+      "amount": -634.1,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2025-01-29",
+      "type": "SELL",
+      "asset": "TESLA INC.",
+      "quantity": -3.0,
+      "amount": 1096.5,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2024-07-25",
+      "type": "FEE",
+      "asset": "ORDERGEBUEHR",
+      "quantity": 0.0,
+      "amount": -0.99,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2024-11-18",
+      "type": "FEE",
+      "asset": "ORDERGEBUEHR",
+      "quantity": 0.0,
+      "amount": -0.99,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2024-08-12",
+      "type": "BUY",
+      "asset": "NVIDIA CORP.",
+      "quantity": 5.0,
+      "amount": -472.5,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2024-08-12",
+      "type": "BUY",
+      "asset": "NVIDIA CORP.",
+      "quantity": 5.0,
+      "amount": -472.5,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2024-10-08",
+      "type": "BUY",
+      "asset": "NVIDIA CORP.",
+      "quantity": -5.0,
+      "amount": 39.0,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2024-11-18",
+      "type": "BUY",
+      "asset": "NVIDIA CORP.",
+      "quantity": 2.0,
+      "amount": -265.68,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2024-08-20",
+      "type": "BUY",
+      "asset": "ESSILORLUXOTTICA 1/2/O.N.",
+      "quantity": -2.0,
+      "amount": -214.64,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2024-08-20",
+      "type": "BUY",
+      "asset": "ESSILORLUXOTTICA 1/2/O.N.",
+      "quantity": -2.0,
+      "amount": -214.64,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2024-08-28",
+      "type": "BUY",
+      "asset": "UBER TECH. DL-,00001",
+      "quantity": -1.0,
+      "amount": -64.59,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2024-08-30",
+      "type": "BUY",
+      "asset": "UBER TECH. DL-,00001",
+      "quantity": -1.0,
+      "amount": -64.59,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2025-01-13",
+      "type": "BUY",
+      "asset": "UBER TECH. DL-,00001",
+      "quantity": 4.0,
+      "amount": -258.64,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2024-10-10",
+      "type": "BUY",
+      "asset": "RIVIAN AUTOMOT.A",
+      "quantity": -3.0,
+      "amount": 28.95,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2024-11-18",
+      "type": "BUY",
+      "asset": "D-WAVE QUANTUM DL-,0001",
+      "quantity": 35.0,
+      "amount": -48.79,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2025-05-07",
+      "type": "BUY",
+      "asset": "Xiaomi (KYG9830T1067)",
+      "quantity": -30.0,
+      "amount": -171.75,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2025-05-07",
+      "type": "BUY",
+      "asset": "Tencent Holdings (KYG875721634)",
+      "quantity": -5.0,
+      "amount": -275.45,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2025-05-07",
+      "type": "BUY",
+      "asset": "Alibaba Group Hldg (KYG017191142)",
+      "quantity": -20.0,
+      "amount": -273.36,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2025-05-14",
+      "type": "BUY",
+      "asset": "Midea Group Co",
+      "quantity": -20.0,
+      "amount": -179.0,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2025-07-24",
+      "type": "DIVIDEND",
+      "asset": "Midea Group Co",
+      "quantity": 0.0,
+      "amount": 6.62,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2025-11-18",
+      "type": "DIVIDEND",
+      "asset": "Midea Group Co",
+      "quantity": 0.0,
+      "amount": -6.62,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2025-11-18",
+      "type": "DIVIDEND",
+      "asset": "Midea Group Co",
+      "quantity": 0.0,
+      "amount": 7.44,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2025-11-20",
+      "type": "DIVIDEND",
+      "asset": "Midea Group Co",
+      "quantity": 0.0,
+      "amount": 1.09,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2025-05-09",
+      "type": "BUY",
+      "asset": "BAIDU INC. O.N.",
+      "quantity": 8.0,
+      "amount": -76.3,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2025-06-04",
+      "type": "BUY",
+      "asset": "Baidu A",
+      "quantity": -9.0,
+      "amount": -84.38,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2025-01-06",
+      "type": "SELL",
+      "asset": "NOVO-NORDISK AS B",
+      "quantity": -3.0,
+      "amount": 251.88,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2025-07-01",
+      "type": "DIVIDEND",
+      "asset": "Alibaba Group Hldg",
+      "quantity": 0.0,
+      "amount": 2.23,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2025-07-01",
+      "type": "DIVIDEND",
+      "asset": "Alibaba Group Hldg",
+      "quantity": 0.0,
+      "amount": 2.02,
+      "currency": "EUR",
+      "source": "TRANSACTION_HISTORY"
+    },
+    {
+      "date": "2025-01-01",
+      "type": "RECONCILIATION",
+      "asset": "ISHSII-MSCI TURKEY DLDIS",
+      "quantity": -3.0,
+      "amount": 0.0,
+      "currency": "EUR",
+      "source": "SYSTEM_ADJUSTMENT",
+      "note": "Auto-generated to match snapshot. History=3.0, Snapshot=0.0"
+    },
+    {
+      "date": "2025-01-01",
+      "type": "RECONCILIATION",
+      "asset": "UBER TECH. DL-,00001",
+      "quantity": -1.0,
+      "amount": 0.0,
+      "currency": "EUR",
+      "source": "SYSTEM_ADJUSTMENT",
+      "note": "Auto-generated to match snapshot. History=6.0, Snapshot=5.0"
+    },
+    {
+      "date": "2025-01-01",
+      "type": "RECONCILIATION",
+      "asset": "Baidu A",
+      "quantity": -9.0,
+      "amount": 0.0,
+      "currency": "EUR",
+      "source": "SYSTEM_ADJUSTMENT",
+      "note": "Auto-generated to match snapshot. History=9.0, Snapshot=0.0"
+    },
+    {
+      "date": "2025-01-01",
+      "type": "RECONCILIATION",
+      "asset": "TENCENT HLDGS HD-",
+      "quantity": 12.0,
+      "amount": 0.0,
+      "currency": "EUR",
+      "source": "SYSTEM_ADJUSTMENT",
+      "note": "Auto-generated to match snapshot. History=-2.0, Snapshot=10.0"
+    },
+    {
+      "date": "2025-01-01",
+      "type": "RECONCILIATION",
+      "asset": "Tencent Holdings (KYG875721634)",
+      "quantity": -5.0,
+      "amount": 0.0,
+      "currency": "EUR",
+      "source": "SYSTEM_ADJUSTMENT",
+      "note": "Auto-generated to match snapshot. History=5.0, Snapshot=0.0"
+    },
+    {
+      "date": "2025-01-01",
+      "type": "RECONCILIATION",
+      "asset": "TESLA INC.",
+      "quantity": -14.0,
+      "amount": 0.0,
+      "currency": "EUR",
+      "source": "SYSTEM_ADJUSTMENT",
+      "note": "Auto-generated to match snapshot. History=15.0, Snapshot=1.0"
+    },
+    {
+      "date": "2025-01-01",
+      "type": "RECONCILIATION",
+      "asset": "NVIDIA CORP.",
+      "quantity": -17.0,
+      "amount": 0.0,
+      "currency": "EUR",
+      "source": "SYSTEM_ADJUSTMENT",
+      "note": "Auto-generated to match snapshot. History=17.0, Snapshot=0.0"
+    },
+    {
+      "date": "2025-01-01",
+      "type": "RECONCILIATION",
+      "asset": "IS MSCI BRAZ.U.ETF USD D",
+      "quantity": -3.0,
+      "amount": 0.0,
+      "currency": "EUR",
+      "source": "SYSTEM_ADJUSTMENT",
+      "note": "Auto-generated to match snapshot. History=3.0, Snapshot=0.0"
+    },
+    {
+      "date": "2025-01-01",
+      "type": "RECONCILIATION",
+      "asset": "BAIDU INC. O.N.",
+      "quantity": 9.0,
+      "amount": 0.0,
+      "currency": "EUR",
+      "source": "SYSTEM_ADJUSTMENT",
+      "note": "Auto-generated to match snapshot. History=8.0, Snapshot=17.0"
+    },
+    {
+      "date": "2025-01-01",
+      "type": "RECONCILIATION",
+      "asset": "Alibaba Group Hldg (KYG017191142)",
+      "quantity": -20.0,
+      "amount": 0.0,
+      "currency": "EUR",
+      "source": "SYSTEM_ADJUSTMENT",
+      "note": "Auto-generated to match snapshot. History=20.0, Snapshot=0.0"
+    },
+    {
+      "date": "2025-01-01",
+      "type": "RECONCILIATION",
+      "asset": "ISHSV-S+P500ENER.SECT.DLA",
+      "quantity": -10.0,
+      "amount": 0.0,
+      "currency": "EUR",
+      "source": "SYSTEM_ADJUSTMENT",
+      "note": "Auto-generated to match snapshot. History=10.0, Snapshot=0.0"
+    },
+    {
+      "date": "2025-01-01",
+      "type": "RECONCILIATION",
+      "asset": "NOVO-NORDISK AS B",
+      "quantity": 3.0,
+      "amount": 0.0,
+      "currency": "EUR",
+      "source": "SYSTEM_ADJUSTMENT",
+      "note": "Auto-generated to match snapshot. History=-3.0, Snapshot=0.0"
+    },
+    {
+      "date": "2025-01-01",
+      "type": "RECONCILIATION",
+      "asset": "D-WAVE QUANTUM DL-,0001",
+      "quantity": -10.0,
+      "amount": 0.0,
+      "currency": "EUR",
+      "source": "SYSTEM_ADJUSTMENT",
+      "note": "Auto-generated to match snapshot. History=35.0, Snapshot=25.0"
+    },
+    {
+      "date": "2025-01-01",
+      "type": "RECONCILIATION",
+      "asset": "RIVIAN AUTOMOT.A",
+      "quantity": -3.0,
+      "amount": 0.0,
+      "currency": "EUR",
+      "source": "SYSTEM_ADJUSTMENT",
+      "note": "Auto-generated to match snapshot. History=3.0, Snapshot=0.0"
+    },
+    {
+      "date": "2025-01-01",
+      "type": "RECONCILIATION",
+      "asset": "TENCENT HLDGS HD-,00002",
+      "quantity": -7.0,
+      "amount": 0.0,
+      "currency": "EUR",
+      "source": "SYSTEM_ADJUSTMENT",
+      "note": "Auto-generated to match snapshot. History=7.0, Snapshot=0.0"
+    },
+    {
+      "date": "2025-01-01",
+      "type": "RECONCILIATION",
+      "asset": "ESSILORLUXOTTICA 1/2/O.N.",
+      "quantity": 2.0,
+      "amount": 0.0,
+      "currency": "EUR",
+      "source": "SYSTEM_ADJUSTMENT",
+      "note": "Auto-generated to match snapshot. History=4.0, Snapshot=6.0"
+    },
+    {
+      "date": "2025-01-01",
+      "type": "RECONCILIATION",
+      "asset": "Alibaba Group Hldg",
+      "quantity": 20.0,
+      "amount": 0.0,
+      "currency": "EUR",
+      "source": "SYSTEM_ADJUSTMENT",
+      "note": "Auto-generated to match snapshot. History=0.0, Snapshot=20.0"
+    },
+    {
+      "date": "2025-01-01",
+      "type": "RECONCILIATION",
+      "asset": "KYG9830T1067",
+      "quantity": 120.0,
+      "amount": 0.0,
+      "currency": "EUR",
+      "source": "SYSTEM_ADJUSTMENT",
+      "note": "Auto-generated to match snapshot. History=0.0, Snapshot=120.0"
+    },
+    {
+      "date": "2025-01-01",
+      "type": "RECONCILIATION",
+      "asset": "BYD Co., Ltd.",
+      "quantity": 10.0,
+      "amount": 0.0,
+      "currency": "EUR",
+      "source": "SYSTEM_ADJUSTMENT",
+      "note": "Auto-generated to match snapshot. History=2.0, Snapshot=12.0"
+    },
+    {
+      "date": "2025-01-01",
+      "type": "RECONCILIATION",
+      "asset": "Xiaomi (KYG9830T1067)",
+      "quantity": -30.0,
+      "amount": 0.0,
+      "currency": "EUR",
+      "source": "SYSTEM_ADJUSTMENT",
+      "note": "Auto-generated to match snapshot. History=30.0, Snapshot=0.0"
+    }
+  ],
+  "timestamp": "2025-12-26T18:18:28.913918"
+}

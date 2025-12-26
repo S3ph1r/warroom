@@ -1,0 +1,31 @@
+{
+  "broker": "SCALABLE",
+  "document_type": "holdings",
+  "extraction_date": "2025-12-26",
+  "holdings": [
+    {
+      "ticker": "ORCL:xnys",
+      "name": "Oracle Corporation",
+      "quantity": 0.0,
+      "purchase_price": null,
+      "currency": "EUR"
+    },
+    {
+      "ticker": "ORCL:xnys",
+      "name": "Oracle Corporation",
+      "quantity": 3.0,
+      "purchase_price": 222.53,
+      "currency": "EUR"
+    }
+  ],
+  "cash_positions": [
+    {
+      "currency": "EUR",
+      "amount": 133.1
+    }
+  ],
+  "confidence": 0.95,
+  "notes": "",
+  "_source_file": "D:\\Download\\SCALABLE CAPITAL\\20251219 Financial status Scalable Capital.pdf",
+  "_processed_at": "2025-12-26T15:07:40.210395"
+}

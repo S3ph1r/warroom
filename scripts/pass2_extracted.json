@@ -1,0 +1,554 @@
+{
+  "holdings": [
+    {
+      "name": "Long",
+      "ticker": "-0.469178",
+      "isin": "Eutelsat Comm.",
+      "quantity": 0,
+      "purchase_price": 1.628,
+      "current_price": -43.69,
+      "currency": "45",
+      "asset_type": "-3 EUR"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.417375",
+      "isin": "PayPal Hldgs",
+      "quantity": 0,
+      "purchase_price": 59.8,
+      "current_price": -33.21,
+      "currency": "3",
+      "asset_type": "1 USD"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.35096",
+      "isin": "Arm Hldng",
+      "quantity": 0,
+      "purchase_price": 114.78,
+      "current_price": -32.41,
+      "currency": "1",
+      "asset_type": "1 USD"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.262814",
+      "isin": "Novo Nordisk",
+      "quantity": 0,
+      "purchase_price": 310,
+      "current_price": -24.64,
+      "currency": "8",
+      "asset_type": "46 DKK"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.337273",
+      "isin": "Dynatrace",
+      "quantity": 0,
+      "purchase_price": 44.18,
+      "current_price": -24.58,
+      "currency": "3",
+      "asset_type": "0 USD"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.252663",
+      "isin": "CDT Environ",
+      "quantity": 0,
+      "purchase_price": 0.4451,
+      "current_price": -20.4,
+      "currency": "500",
+      "asset_type": "12 USD"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.228076",
+      "isin": "US Antimony",
+      "quantity": 0,
+      "purchase_price": 4.77,
+      "current_price": -20.13,
+      "currency": "50",
+      "asset_type": "14 USD"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.296978",
+      "isin": "Realbotix",
+      "quantity": 0,
+      "purchase_price": 0.355,
+      "current_price": -18.39,
+      "currency": "300",
+      "asset_type": "3 CAD"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.192056",
+      "isin": "KULR Technology",
+      "quantity": 0,
+      "purchase_price": 3.2,
+      "current_price": -16.16,
+      "currency": "80",
+      "asset_type": "18 USD"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.192201",
+      "isin": "VNET Grp",
+      "quantity": 0,
+      "purchase_price": 8.74,
+      "current_price": -15.72,
+      "currency": "10",
+      "asset_type": "2 USD"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.149226",
+      "isin": "Ferrari",
+      "quantity": 0,
+      "purchase_price": 322.7,
+      "current_price": -13.85,
+      "currency": "1",
+      "asset_type": "5 EUR"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.132376",
+      "isin": "Meta Platforms",
+      "quantity": 0,
+      "purchase_price": 667.16,
+      "current_price": -13.32,
+      "currency": "1",
+      "asset_type": "3 USD"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.148078",
+      "isin": "Arista Networks",
+      "quantity": 0,
+      "purchase_price": 129.34,
+      "current_price": -13.11,
+      "currency": "4",
+      "asset_type": "19 USD"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.182958",
+      "isin": "Oracle",
+      "quantity": 0,
+      "purchase_price": 193.41,
+      "current_price": -13.09,
+      "currency": "3",
+      "asset_type": "40 USD"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.207692",
+      "isin": "Subs Art Intell",
+      "quantity": 0,
+      "purchase_price": 0.079,
+      "current_price": -12.22,
+      "currency": "1300",
+      "asset_type": "-1 EUR"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.13945",
+      "isin": "D-Wave Quantum",
+      "quantity": 0,
+      "purchase_price": 26.18,
+      "current_price": -11.4,
+      "currency": "15",
+      "asset_type": "19 USD"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.107013",
+      "isin": "BYD",
+      "quantity": 0,
+      "purchase_price": 12.0313,
+      "current_price": -8.3,
+      "currency": "20",
+      "asset_type": "0 USD"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.0930091",
+      "isin": "XPeng",
+      "quantity": 0,
+      "purchase_price": 20.06,
+      "current_price": -4.62,
+      "currency": "15",
+      "asset_type": "22 USD"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.0668648",
+      "isin": "Alibaba Grp",
+      "quantity": 0,
+      "purchase_price": 128.6,
+      "current_price": -4.46,
+      "currency": "2",
+      "asset_type": "3 EUR"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.0535461",
+      "isin": "Baidu",
+      "quantity": 0,
+      "purchase_price": 124.61,
+      "current_price": -3.35,
+      "currency": "5",
+      "asset_type": "21 USD"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.0648129",
+      "isin": "Amplifon",
+      "quantity": 0,
+      "purchase_price": 13.655,
+      "current_price": -2.29,
+      "currency": "EUR",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.0349338",
+      "isin": "NVIDIA",
+      "quantity": 0,
+      "purchase_price": 179.98,
+      "current_price": -1.96,
+      "currency": "USD",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.0376193",
+      "isin": "Taiwan Semicon",
+      "quantity": 0,
+      "purchase_price": 291.12,
+      "current_price": -1.32,
+      "currency": "USD",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.0242272",
+      "isin": "Chevron",
+      "quantity": 0,
+      "purchase_price": 147.74,
+      "current_price": -0.75,
+      "currency": "USD",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.0146992",
+      "isin": "ServiceNow",
+      "quantity": 0,
+      "purchase_price": 155.555,
+      "current_price": 0.17,
+      "currency": "USD",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.0215895",
+      "isin": "Qorvo",
+      "quantity": 0,
+      "purchase_price": 86.19,
+      "current_price": 0.75,
+      "currency": "USD",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.00722044",
+      "isin": "Palo Alto Net",
+      "quantity": 0,
+      "purchase_price": 187.76,
+      "current_price": 0.82,
+      "currency": "USD",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.00936563",
+      "isin": "CRISPR Therap",
+      "quantity": 0,
+      "purchase_price": 56.52,
+      "current_price": 0.87,
+      "currency": "USD",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "0.0038955",
+      "isin": "Alphabet",
+      "quantity": 0,
+      "purchase_price": 305.26,
+      "current_price": 1.1,
+      "currency": "USD",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "0.0115695",
+      "isin": "Toyota Motor",
+      "quantity": 0,
+      "purchase_price": 219.78,
+      "current_price": 1.84,
+      "currency": "USD",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "0.00700805",
+      "isin": "Teradyne",
+      "quantity": 0,
+      "purchase_price": 194.45,
+      "current_price": 2.2,
+      "currency": "USD",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "0.00928918",
+      "isin": "Viking Therap",
+      "quantity": 0,
+      "purchase_price": 35.63,
+      "current_price": 2.55,
+      "currency": "USD",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.100758",
+      "isin": "Pinduoduo",
+      "quantity": 0,
+      "purchase_price": 111.1,
+      "current_price": 2.87,
+      "currency": "USD",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.0290892",
+      "isin": "Amazon.com",
+      "quantity": 0,
+      "purchase_price": 228.3,
+      "current_price": 4.0,
+      "currency": "USD",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "0.0531887",
+      "isin": "Voyager Tech",
+      "quantity": 0,
+      "purchase_price": 26.7464,
+      "current_price": 7.8,
+      "currency": "USD",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "0.052636",
+      "isin": "Zj Sanhua Intel",
+      "quantity": 0,
+      "purchase_price": 34.8,
+      "current_price": 8.95,
+      "currency": "HKD",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "0.0592976",
+      "isin": "Oklo",
+      "quantity": 0,
+      "purchase_price": 83.85,
+      "current_price": 9.01,
+      "currency": "USD",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "0.0764246",
+      "isin": "AST SpaceMobile",
+      "quantity": 0,
+      "purchase_price": 72.23,
+      "current_price": 9.67,
+      "currency": "USD",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "0.106449",
+      "isin": "Walmart",
+      "quantity": 0,
+      "purchase_price": 114.15,
+      "current_price": 11.71,
+      "currency": "USD",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "0.0932517",
+      "isin": "Leonardo",
+      "quantity": 0,
+      "purchase_price": 49.35,
+      "current_price": 14.05,
+      "currency": "EUR",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "0.096359",
+      "isin": "Qualcomm",
+      "quantity": 0,
+      "purchase_price": 176.66,
+      "current_price": 16.46,
+      "currency": "2",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "0.0228867",
+      "isin": "Quantum Comptng",
+      "quantity": 0,
+      "purchase_price": 10.775,
+      "current_price": 17.7,
+      "currency": "10",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "0.174738",
+      "isin": "Nokia",
+      "quantity": 0,
+      "purchase_price": 5.458,
+      "current_price": 19.95,
+      "currency": "80",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "0.206842",
+      "isin": "Palantir Tchnlg",
+      "quantity": 0,
+      "purchase_price": 190.61,
+      "current_price": 25.95,
+      "currency": "4",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "0.297356",
+      "isin": "Webuild",
+      "quantity": 0,
+      "purchase_price": 3.478,
+      "current_price": 31.34,
+      "currency": "100",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "0.308834",
+      "isin": "Intel",
+      "quantity": 0,
+      "purchase_price": 37.39,
+      "current_price": 33.9,
+      "currency": "30",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.817568",
+      "isin": "Solid Power",
+      "quantity": 0,
+      "purchase_price": 4.67,
+      "current_price": 36.55,
+      "currency": "1",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "1.08211",
+      "isin": "QuantumScape",
+      "quantity": 0,
+      "purchase_price": 11.54,
+      "current_price": 134.24,
+      "currency": "20",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.0933025",
+      "isin": "VanEck Ura",
+      "quantity": 0,
+      "purchase_price": 47.165,
+      "current_price": -8.36,
+      "currency": "20",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.0733345",
+      "isin": "iShares MSCI Ch",
+      "quantity": 0,
+      "purchase_price": 5.304,
+      "current_price": -6.27,
+      "currency": "100",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.00735294",
+      "isin": "FT Nas ETF",
+      "quantity": 0,
+      "purchase_price": 38.94,
+      "current_price": 0.82,
+      "currency": "10",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.0152051",
+      "isin": "KS SSE STAR 50",
+      "quantity": 0,
+      "purchase_price": 17.11,
+      "current_price": 0.84,
+      "currency": "10",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "-0.00290775",
+      "isin": "Frnkln FTSE Ida",
+      "quantity": 0,
+      "purchase_price": 38.52,
+      "current_price": 1.82,
+      "currency": "5",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "0.124959",
+      "isin": "Xtr Art Intell",
+      "quantity": 0,
+      "purchase_price": 152.79,
+      "current_price": 13.03,
+      "currency": "11",
+      "asset_type": "Long"
+    },
+    {
+      "name": "Long",
+      "ticker": "0.138887",
+      "isin": "iShs Cr MSCI Wd",
+      "quantity": 0,
+      "purchase_price": 110.95,
+      "current_price": 14.51,
+      "currency": "10",
+      "asset_type": "Long"
+    }
+  ]
+}

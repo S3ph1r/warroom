@@ -1,0 +1,97 @@
+{
+  "source": "D:\\Download\\SCALABLE CAPITAL\\20241207 Monthly account statement Baader Bank.pdf",
+  "last_processed_page": 1,
+  "total_pages": 2,
+  "transactions": [
+    {
+      "date": "2024-11-15",
+      "type": "BUY",
+      "asset": "TESLA INC. DL -,001",
+      "isin": "US88160R1014",
+      "quantity": 4,
+      "amount": -146.85,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-18",
+      "type": "BUY",
+      "asset": "TENCENT HLDGS HD-,00002",
+      "isin": "KYG875721634",
+      "quantity": 3,
+      "amount": -146.85,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-18",
+      "type": "FEE",
+      "asset": "ORDERGEBUEHR",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-18",
+      "type": "BUY",
+      "asset": "TESLA INC. DL -,001",
+      "isin": "US88160R1014",
+      "quantity": 2,
+      "amount": -634.1,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-18",
+      "type": "BUY",
+      "asset": "D-WAVE QUANTUM DL-,0001",
+      "isin": "US26740W1099",
+      "quantity": 35,
+      "amount": -48.79,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-18",
+      "type": "BUY",
+      "asset": "NVIDIA CORP.",
+      "isin": "US67066G1040",
+      "quantity": 2,
+      "amount": -265.68,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-19",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-20",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-20",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-20",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    }
+  ]
+}

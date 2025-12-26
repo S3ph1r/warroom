@@ -1,0 +1,16 @@
+{
+  "source": "D:\\Download\\SCALABLE CAPITAL\\20230603 Monthly account statement Baader Bank.pdf",
+  "last_processed_page": 0,
+  "total_pages": 1,
+  "transactions": [
+    {
+      "date": "2023-05-30",
+      "type": "DIVIDEND",
+      "asset": "ISHSII-MSCI TURKEY DLDIS",
+      "isin": "IE00B1FZS574",
+      "quantity": 3,
+      "amount": 4.89,
+      "currency": "EUR"
+    }
+  ]
+}

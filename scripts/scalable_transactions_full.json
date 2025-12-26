@@ -1,0 +1,823 @@
+{
+  "transactions": [
+    {
+      "date": "2022-12-20",
+      "type": "BUY",
+      "asset": "IS MSCI BRAZ.U.ETF USD D",
+      "isin": "IE00B0M63516",
+      "quantity": 3,
+      "amount": -62.27,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-12-20",
+      "type": "BUY",
+      "asset": "ISHSII-MSCI TURKEY DLDIS",
+      "isin": "IE00B1FZS574",
+      "quantity": 3,
+      "amount": -52.87,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-12-28",
+      "type": "BUY",
+      "asset": "ISHSV-S+P500ENER.SECT.DLA",
+      "isin": "IE00B42NKQ00",
+      "quantity": 10,
+      "amount": -78.5,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-12-22",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-01-04",
+      "type": "BUY",
+      "asset": "ZALANDO SE",
+      "isin": "DE000ZAL1111",
+      "quantity": -1,
+      "amount": 37.04,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-03-29",
+      "type": "DIVIDEND",
+      "asset": "IS MSCI BRAZ.U.ETF USD D",
+      "isin": "IE00B0M63516",
+      "quantity": 0,
+      "amount": 4.39,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-05-30",
+      "type": "DIVIDEND",
+      "asset": "ISHSII-MSCI TURKEY DLDIS",
+      "isin": "IE00B1FZS574",
+      "quantity": 3,
+      "amount": 4.89,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-06-28",
+      "type": "DIVIDEND",
+      "asset": "IS MSCI BRAZ.U.ETF USD D",
+      "isin": "IE00B0M63516",
+      "quantity": 0,
+      "amount": 1.36,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-08-31",
+      "type": "DIVIDEND",
+      "asset": "IS MSCI BRAZ.U.ETF USD D",
+      "isin": "IE00B0M63516",
+      "quantity": 0,
+      "amount": 7.46,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-12-28",
+      "type": "BUY",
+      "asset": "TENCENT HLDGS HD-,00002",
+      "isin": "ISIN KYG875721634",
+      "quantity": 7,
+      "amount": -235.55,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-01-02",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-01-05",
+      "type": "DIVIDEND",
+      "asset": "iShares MSCI Brazil UCITS ETF USD",
+      "isin": "IE00B0M63516",
+      "quantity": 0,
+      "amount": 0.8,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-01-09",
+      "type": "BUY",
+      "asset": "BYD Co., Ltd.",
+      "isin": "US05606L1008",
+      "quantity": 2,
+      "amount": -98.4,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-01-09",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-03-29",
+      "type": "DIVIDEND",
+      "asset": "iShs MSCI Brazil U.ETF USD(D)",
+      "isin": "IE00B0M63516/EUR",
+      "quantity": 0,
+      "amount": 0.36,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-06-28",
+      "type": "DIVIDEND",
+      "asset": "iShs MSCI Brazil U.ETF USD(D)",
+      "isin": "IE00B0M63516/EUR",
+      "quantity": 0,
+      "amount": 0.96,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-09-27",
+      "type": "DIVIDEND",
+      "asset": "iShs MSCI Brazil U.ETF USD(D)",
+      "isin": "IE00B0M63516/EUR",
+      "quantity": 0,
+      "amount": 1.01,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-12-29",
+      "type": "DIVIDEND",
+      "asset": "iShs MSCI Brazil U.ETF USD(D)",
+      "isin": "IE00B0M63516/EUR",
+      "quantity": 0,
+      "amount": 0.8,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-05-30",
+      "type": "DIVIDEND",
+      "asset": "iShsII-MSCI Turkey UCITS ETF",
+      "isin": "IE00B1FZS574/EUR",
+      "quantity": 0,
+      "amount": 1.21,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-11-29",
+      "type": "DIVIDEND",
+      "asset": "iShsII-MSCI Turkey UCITS ETF",
+      "isin": "IE00B1FZS574/EUR",
+      "quantity": 0,
+      "amount": 0.32,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-06-27",
+      "type": "DIVIDEND",
+      "asset": "TENCENT HLDGS HD-",
+      "isin": "KYG875721634",
+      "quantity": 0,
+      "amount": 2.84,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-06-26",
+      "type": "DIVIDEND",
+      "asset": "IS MSCI BRAZ.U.ETF USD D",
+      "isin": "IE00B0M63516",
+      "quantity": 0,
+      "amount": 1.55,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-07-25",
+      "type": "BUY",
+      "asset": "TESLA INC.",
+      "isin": "US88160R1014",
+      "quantity": 2,
+      "amount": "-460.30",
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-07-25",
+      "type": "FEE",
+      "asset": "ORDERGEBUEHR",
+      "isin": "",
+      "quantity": 0,
+      "amount": "-0.99",
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-07-25",
+      "type": "BUY",
+      "asset": "TESLA INC.",
+      "isin": "US88160R1014",
+      "quantity": 2,
+      "amount": -410.1,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-07-29",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-07-25",
+      "type": "BUY",
+      "asset": "TESLA INC.",
+      "isin": "US88160R1014",
+      "quantity": 2,
+      "amount": -460.3,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-07-25",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-07-25",
+      "type": "BUY",
+      "asset": "TESLA INC.",
+      "isin": "US88160R1014",
+      "quantity": 2,
+      "amount": -410.1,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-07-29",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-08-12",
+      "type": "BUY",
+      "asset": "NVIDIA CORP.",
+      "isin": "US67066G1040",
+      "quantity": 5,
+      "amount": -472.5,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-08-12",
+      "type": "BUY",
+      "asset": "TESLA INC.",
+      "isin": "US88160R1014",
+      "quantity": 2,
+      "amount": -365.52,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-08-12",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-08-15",
+      "type": "DIVIDEND",
+      "asset": "BYD CO. LTD ADR/2 YC 1",
+      "isin": "US05606L1008",
+      "quantity": 2,
+      "amount": 33366523,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-08-20",
+      "type": "BUY",
+      "asset": "ESSILORLUXOTTICA 1/2/O.N.",
+      "isin": "US2972842007",
+      "quantity": -2,
+      "amount": -214.64,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-08-28",
+      "type": "BUY",
+      "asset": "UBER TECH. DL-,00001",
+      "isin": "US90353T1007",
+      "quantity": -1,
+      "amount": -64.59,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-08-30",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-08-12",
+      "type": "BUY",
+      "asset": "NVIDIA CORP.",
+      "isin": "US67066G1040",
+      "quantity": 5,
+      "amount": -472.5,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-08-12",
+      "type": "BUY",
+      "asset": "TESLA INC.",
+      "isin": "US88160R1014",
+      "quantity": 2,
+      "amount": -365.52,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-08-12",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-08-15",
+      "type": "DIVIDEND",
+      "asset": "BYD CO. LTD ADR/2 YC 1",
+      "isin": "US05606L1008",
+      "quantity": 2,
+      "amount": 33366523,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-08-20",
+      "type": "BUY",
+      "asset": "ESSILORLUXOTTICA 1/2/O.N.",
+      "isin": "US2972842007",
+      "quantity": -2,
+      "amount": -214.64,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-08-28",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-08-30",
+      "type": "BUY",
+      "asset": "UBER TECH. DL-,00001",
+      "isin": "US90353T1007",
+      "quantity": -1,
+      "amount": -64.59,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-09-19",
+      "type": "SELL",
+      "asset": "ZALANDO SE",
+      "isin": "DE000ZAL1111",
+      "quantity": -1,
+      "amount": 14.94,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-09-19",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-09-26",
+      "type": "DIVIDEND",
+      "asset": "iShares MSCI Brazil UCITS ETF USD",
+      "isin": "IE00B0M63516",
+      "quantity": 0,
+      "amount": 1.05,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-10-08",
+      "type": "BUY",
+      "asset": "NVIDIA CORP.",
+      "isin": "US67066G1040",
+      "quantity": -5,
+      "amount": 39.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-10-10",
+      "type": "BUY",
+      "asset": "RIVIAN AUTOMOT.A",
+      "isin": "US76954A1034",
+      "quantity": -3,
+      "amount": 28.95,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-10-10",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-15",
+      "type": "BUY",
+      "asset": "TESLA INC. DL -,001",
+      "isin": "US88160R1014",
+      "quantity": 4,
+      "amount": -146.85,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-18",
+      "type": "BUY",
+      "asset": "TENCENT HLDGS HD-,00002",
+      "isin": "KYG875721634",
+      "quantity": 3,
+      "amount": -146.85,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-18",
+      "type": "FEE",
+      "asset": "ORDERGEBUEHR",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-18",
+      "type": "BUY",
+      "asset": "TESLA INC. DL -,001",
+      "isin": "US88160R1014",
+      "quantity": 2,
+      "amount": -634.1,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-18",
+      "type": "BUY",
+      "asset": "D-WAVE QUANTUM DL-,0001",
+      "isin": "US26740W1099",
+      "quantity": 35,
+      "amount": -48.79,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-18",
+      "type": "BUY",
+      "asset": "NVIDIA CORP.",
+      "isin": "US67066G1040",
+      "quantity": 2,
+      "amount": -265.68,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-19",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-20",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-20",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-20",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-03-27",
+      "type": "DIVIDEND",
+      "asset": "IS MSCI BRAZ.U.ETF USD D",
+      "isin": "IE00B0M63516",
+      "quantity": 0,
+      "amount": 8.52,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-05-07",
+      "type": "BUY",
+      "asset": "Xiaomi (KYG9830T1067)",
+      "isin": "",
+      "quantity": -30,
+      "amount": -171.75,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-05-07",
+      "type": "BUY",
+      "asset": "Tencent Holdings (KYG875721634)",
+      "isin": "",
+      "quantity": -5,
+      "amount": -275.45,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-05-07",
+      "type": "BUY",
+      "asset": "Alibaba Group Hldg (KYG017191142)",
+      "isin": "",
+      "quantity": -20,
+      "amount": -273.36,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-05-07",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-05-07",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-05-14",
+      "type": "BUY",
+      "asset": "Midea Group Co",
+      "isin": "CNE100006M58",
+      "quantity": -20,
+      "amount": -179.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-05-14",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-05-09",
+      "type": "BUY",
+      "asset": "BAIDU INC. O.N.",
+      "isin": "KYG070341048",
+      "quantity": 8,
+      "amount": -76.3,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-05-09",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-06-03",
+      "type": "DIVIDEND",
+      "asset": "Tencent Holdings",
+      "isin": "KYG875721634",
+      "quantity": 0,
+      "amount": 2.51,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-06-04",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-06-04",
+      "type": "BUY",
+      "asset": "Baidu A",
+      "isin": "",
+      "quantity": -9.0,
+      "amount": -84.38,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-06-30",
+      "type": "DIVIDEND",
+      "asset": "TENCENT HLDGS HD-",
+      "isin": "KYG875721634",
+      "quantity": 0,
+      "amount": 0.72,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-06-30",
+      "type": "DIVIDEND",
+      "asset": "IS MSCI BRAZ.U.ETF USD D",
+      "isin": "IE00B0M63516",
+      "quantity": 0,
+      "amount": 8.27,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-06",
+      "type": "SELL",
+      "asset": "NOVO-NORDISK AS B",
+      "isin": "DK0062498333",
+      "quantity": -3,
+      "amount": 251.88,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-06",
+      "type": "SELL",
+      "asset": "TENCENT HLDGS HD-",
+      "isin": "KYG875721634",
+      "quantity": -10,
+      "amount": 466.75,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-08",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-08",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-10",
+      "type": "BUY",
+      "asset": "TENCENT HLDGS HD-",
+      "isin": "KYG875721634",
+      "quantity": 5,
+      "amount": -231.15,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-13",
+      "type": "BUY",
+      "asset": "UBER TECH. DL-",
+      "isin": "US90353T1007",
+      "quantity": 4,
+      "amount": -258.64,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-29",
+      "type": "SELL",
+      "asset": "TESLA INC. DL ",
+      "isin": "US88160R1014",
+      "quantity": -3,
+      "amount": 1096.5,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-07-01",
+      "type": "DIVIDEND",
+      "asset": "Alibaba Group Hldg",
+      "isin": "KYG017191142",
+      "quantity": 0,
+      "amount": 2.23,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-07-01",
+      "type": "DIVIDEND",
+      "asset": "Alibaba Group Hldg",
+      "isin": "KYG017191142",
+      "quantity": 0,
+      "amount": 2.02,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-07-24",
+      "type": "DIVIDEND",
+      "asset": "Midea Group Co",
+      "isin": "CNE100006M58",
+      "quantity": 0,
+      "amount": 6.62,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-08-13",
+      "type": "DIVIDEND",
+      "asset": "BYD CO. LTD ADR/1 YC 1",
+      "isin": "US05606L1008",
+      "quantity": 0,
+      "amount": 1.53,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-09-24",
+      "type": "DIVIDEND",
+      "asset": "IS MSCI BRAZ.U.ETF USD D",
+      "isin": "IE00B0M63516",
+      "quantity": 0,
+      "amount": 0.78,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-18",
+      "type": "DIVIDEND",
+      "asset": "Midea Group Co",
+      "isin": "CNE100006M58",
+      "quantity": 0,
+      "amount": -6.62,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-18",
+      "type": "DIVIDEND",
+      "asset": "Midea Group Co",
+      "isin": "CNE100006M58",
+      "quantity": 0,
+      "amount": 7.44,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-20",
+      "type": "DIVIDEND",
+      "asset": "Midea Group Co",
+      "isin": "CNE100006M58",
+      "quantity": 0,
+      "amount": 1.09,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-29",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -25.0,
+      "currency": "EUR"
+    }
+  ]
+}

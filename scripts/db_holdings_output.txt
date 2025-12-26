@@ -1,0 +1,65 @@
+﻿BG SAXO HOLDINGS IN DATABASE
+======================================================================
+Total: 58 holdings
+
+ 1. ASML                      | ASML     | N/A |     0.00 |  1065.52
+ 2. AST SpaceMobile Inc.      | ASTS     | US00217D1000 |     2.00 |    65.86
+ 3. Alibaba Group Holding Ltd | AHLA     | US01609W1027 |     2.00 |    10.46
+ 4. Alphabet Inc. Class A     | GOOGL    | US02079K3059 |     2.00 |   301.93
+ 5. Amazon.com Inc.           | AMZN     | US0231351067 |     4.00 |   219.51
+ 6. Amplifon                  | AMP      | IT0004056880 |     7.00 |    13.97
+ 7. Arista Networks Inc.      | ANET     | US0404132054 |     4.00 |   148.85
+ 8. Arm Holdings Limited - AD | ARM      | US0420682058 |     1.00 |   169.83
+ 9. BYD Company Ltd - ADR     | BYDDY    | US05606L1008 |    20.00 |    13.12
+10. Baidu.com Inc. - ADR      | BIDU     | US0567521085 |     5.00 |   128.93
+11. CDT Environmental Technol | CDTG     | KYG2030P1072 |   500.00 |     0.56
+12. CRISPR Therapeutics Ltd   | CRSP     | CH0334081137 |     5.00 |    56.03
+13. Cash (EUR)                | CASH     | N/A |   845.18 |     1.00
+14. Cash (USD)                | USD      | N/A |  -447.47 |     1.00
+15. Chevron Corp.             | CVX      | US1667641005 |     1.00 |   148.85
+16. D-Wave Quantum Inc.       | QBTS     | US26740W1099 |    15.00 |    29.55
+17. Dynatrace Inc.            | DT       | US2681501092 |     3.00 |    58.58
+18. Eutelsat Communications   | ETL      | FR0010221234 |    45.00 |     2.89
+19. Ferrari NV                | RACE     | NL0011585146 |     1.00 |   444.00
+20. First Trust Nasdaq Cyber  | CIBR     | IE00BF16M727 |    10.00 |    38.62
+21. Franklin FTSE India UCITS | FLXI     | IE00BHZRQZ17 |     5.00 |    37.83
+22. Intel Corp.               | INTC     | US4581401001 |    30.00 |    27.92
+23. KULR Technology Group Inc | KULR     | US50125G3074 |    80.00 |     3.82
+24. Kraneshares SSE Star Mark | KSTR     | IE00BKPJY541 |    10.00 |    16.97
+25. Leonardo                  | LDO      | IT0003856405 |     2.00 |    43.27
+26. Meta Platforms Inc.       | META     | US30303M1027 |     1.00 |   769.70
+27. NVIDIA Corp.              | NVDA     | US67066G1040 |     2.00 |   187.77
+28. Nokia Oyj                 | NOKIA    | FI0009000681 |    80.00 |     4.55
+29. Novo Nordisk B A/S        | NOVOB    | DK0062498333 |     8.00 |   411.35
+30. Oklo Inc.                 | OKLO     | US02156V1098 |     1.00 |    76.92
+31. Oracle Corp.              | ORCL     | US68389X1054 |     3.00 |   222.53
+32. PDD Holdings Inc - ADR    | PDD      | US7223041028 |     2.00 |   108.00
+33. Palantir Technologies Inc | PLTR     | US69608A1088 |     4.00 |   151.34
+34. Palo Alto Networks Inc.   | PANW     | US6974351057 |     1.00 |   186.23
+35. PayPal Holdings Inc.      | PYPL     | US70450Y1038 |     3.00 |    89.53
+36. Qorvo Inc.                | QRVO     | US74736K1016 |     2.00 |    85.55
+37. Qualcomm Inc.             | QCOM     | US7475251036 |     2.00 |   151.69
+38. Quantum Computing Inc     | QUBT     | US74766W1080 |    10.00 |     9.15
+39. QuantumScape Corp.        | QS       | US74767V1098 |    20.00 |     4.93
+40. Realbotix Corp            | XBOT     | CA75604K1075 |   300.00 |     0.43
+41. ServiceNow Inc.           | NOW      | US81762P1021 |     1.00 |   155.29
+42. Solid Power Inc.          | SLDP     | US83422N1054 |     1.00 |     3.42
+43. Substrate Artificial Inte | SAI      | ES0105650008 |  1300.00 |     0.09
+44. TSMC - ADR                | TSM      | US8740391003 |     1.00 |   295.00
+45. Teradyne Inc.             | TER      | US8807701029 |     1.00 |   190.26
+46. Toyota Motor Corp. - ADR  | TM       | US8923313071 |     2.00 |   215.81
+47. United States Antimony Co | UAMY     | US9115491030 |    50.00 |     5.97
+48. VNET Group Inc. - ADR     | VNET     | US90138A1034 |    10.00 |    10.37
+49. VanEck Uranium and Nuclea | NUCL     | IE000M7V94E1 |    20.00 |    51.47
+50. Viking Therapeutics Inc.  | VKTX     | US92686J1060 |     5.00 |    34.74
+51. Voyager Technologies Inc. | VOYG     | US92892B1035 |    30.00 |    24.81
+52. Walmart Inc.              | WMT      | US9311421039 |     5.00 |   102.18
+53. Webuild                   | WBD      | IT0003865570 |   100.00 |     2.65
+54. XPeng Inc. - ADR          | XPEV     | US98422D1054 |    15.00 |    21.03
+55. Xtrackers AI & Big Data U | XAIX     | IE00BGV5VN51 |    11.00 |   135.17
+56. Zhejiang Sanhua Intellige | 02050    | CNE100006Z79 |   100.00 |    31.94
+57. iShares Core MSCI World U | SWDA     | IE00B4L5Y983 |    10.00 |    96.89
+58. iShares MSCI China Acc UC | ICGA     | IE00BJ5JPG56 |   100.00 |     5.66
+
+======================================================================
+TOTALS: 58 assets | 3352.71 units | 26143.75 EUR

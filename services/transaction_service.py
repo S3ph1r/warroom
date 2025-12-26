@@ -59,6 +59,8 @@ class TransactionService:
             currency = data.get("currency", "EUR")
             date_obj = datetime.strptime(data.get("date"), "%Y-%m-%d").date()
             
+            status = data.get("status", "COMPLETED")
+
             # 1. Create Transaction Record
             total_amount = qty * price
             
@@ -66,13 +68,13 @@ class TransactionService:
                 broker=broker,
                 ticker=ticker,
                 operation=mode,
+                status=status,
                 quantity=qty,
                 price=price,
                 total_amount=total_amount,
                 fees=fees,
                 currency=currency,
-                timestamp=datetime.now(), # Use current time for log, date for record usage? Model has timestamp.
-                # If we want to support backdating we need to handle that. currently timestamp is datetime.
+                timestamp=datetime.now(), 
             )
             self.db.add(tx)
             
@@ -84,12 +86,19 @@ class TransactionService:
             elif mode == "SELL":
                 cash_delta = total_amount - fees
             elif mode == "DEPOSIT":
-                cash_delta = qty # In deposit, qty usually represents amount
-                # For consistency with modal, if modal sends quantity as amount
+                cash_delta = qty 
             elif mode == "WITHDRAW":
                 cash_delta = -qty
+            elif mode == "BALANCE":
+                # Balance initialization does not affect other cash flows usually
+                # If it's a CASH balance, we set the delta to qty (conceptually a Deposit)
+                # If it's a STOCK balance, we don't touch cash.
+                if data.get("asset_type") == "CASH":
+                    cash_delta = qty
+                else:
+                    cash_delta = 0
 
-            if mode in ["DEPOSIT", "WITHDRAW"]:
+            if mode in ["DEPOSIT", "WITHDRAW"] or (mode == "BALANCE" and data.get("asset_type") == "CASH"):
                 # For cash movements, we update the CASH holding directly.
                 # Ticker in data for deposit/withdraw from modal might be empty or same as currency.
                 cash_holding = self._get_or_create_cash_holding(broker, currency)

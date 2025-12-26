@@ -1,0 +1,91 @@
+﻿PASS 1 IMPROVED: COMPLETE STRUCTURE ANALYSIS
+======================================================================
+Total columns in CSV: 41
+
+ALL COLUMN NAMES:
+   1. Strumento
+   2. Long/Short
+   3. Valuta
+   4. QuantitÓ
+   5. Prezzo di apertura
+   6. Prz. corrente
+   7. % prezzo
+   8. % 1 giorno
+   9. P&L netto EUR
+  10. Valore di mercato (EUR)
+  11. P&L giornaliero
+  12. Stato
+  13. Esposizione (EUR)
+  14. Interesse maturato
+  15. Scadenza
+  16. Valore originale (EUR)
+  17. Prz. costo totale
+  18. P&L lordo (EUR)
+  19. P&L lordo
+  20. Ticker
+  21. % utile lordo
+  22. % utile lordo.1
+  23. Conto
+  24. Categoria attivitÓ
+  25. Bid/Ask
+  26. Esposizione
+  27. Ultimo aggiornamento
+  28. Stato del mercato
+  29. Valore di mercato
+  30. MorningstarÖ
+  31. Data/ora apertura
+  32. P&L netto
+  33. Pip/tick
+  34. Portfolio %
+  35. SostenibilitÓ
+  36. Data valuta
+  37. ISIN
+  38. Emittente
+  39. Tipo attivitÓ
+  40. P&L giornaliero (EUR)
+  41. Interesse maturato (EUR)
+
+Sample: 3 rows, 3749 chars
+
+Calling Mistral with improved prompt...
+Prompt length: 5250 chars
+
+Status: 200
+
+MISTRAL RESPONSE:
+----------------------------------------------------------------------
+{
+  "column_mapping": {
+    "Strumento": "name",
+    "Ticker": "ticker",
+    "ISIN": "isin",
+    "QuantitÓ": "quantity",
+    "Prezzo di apertura": "purchase_price",
+    "Prz. corrente": "current_price",
+    "Valuta": "currency",
+    "Tipo attivitÓ": "asset_type",
+    "Valore di mercato (EUR)": "market_value"
+  },
+  "columns_found": 9,
+  "sample_row": {
+    "name": "nan",
+    "ticker": "ETL:xpar",
+    "isin": "FR0010221234",
+    "quantity": 2.89108
+  }
+}
+----------------------------------------------------------------------
+
+COLUMN MAPPING COMPLETO:
+  Strumento                      -> name
+  Ticker                         -> ticker
+  ISIN                           -> isin
+  QuantitÓ                       -> quantity
+  Prezzo di apertura             -> purchase_price
+  Prz. corrente                  -> current_price
+  Valuta                         -> currency
+  Tipo attivitÓ                  -> asset_type
+  Valore di mercato (EUR)        -> market_value
+
+Columns found: 9
+Sample row: {'name': 'nan', 'ticker': 'ETL:xpar', 'isin': 'FR0010221234', 'quantity': 2.89108}

@@ -1,0 +1,25 @@
+{
+  "source": "D:\\Download\\SCALABLE CAPITAL\\20250712 Monthly account statement Baader Bank.pdf",
+  "last_processed_page": 0,
+  "total_pages": 1,
+  "transactions": [
+    {
+      "date": "2025-06-30",
+      "type": "DIVIDEND",
+      "asset": "TENCENT HLDGS HD-",
+      "isin": "KYG875721634",
+      "quantity": 0,
+      "amount": 0.72,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-06-30",
+      "type": "DIVIDEND",
+      "asset": "IS MSCI BRAZ.U.ETF USD D",
+      "isin": "IE00B0M63516",
+      "quantity": 0,
+      "amount": 8.27,
+      "currency": "EUR"
+    }
+  ]
+}

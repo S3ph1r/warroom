@@ -1,0 +1,16 @@
+{
+  "source": "D:\\Download\\SCALABLE CAPITAL\\20240112 Monthly account statement Baader Bank.pdf",
+  "last_processed_page": 0,
+  "total_pages": 1,
+  "transactions": [
+    {
+      "date": "2023-12-28",
+      "type": "BUY",
+      "asset": "TENCENT HLDGS HD-,00002",
+      "isin": "ISIN KYG875721634",
+      "quantity": 7,
+      "amount": -235.55,
+      "currency": "EUR"
+    }
+  ]
+}

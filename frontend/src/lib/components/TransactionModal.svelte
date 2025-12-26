@@ -185,7 +185,11 @@
                 class="px-5 py-4 border-b border-skin-border flex justify-between items-center bg-skin-base/40"
             >
                 <h2 class="text-lg font-semibold text-skin-text tracking-tight">
-                    Record Transaction
+                    {mode === "DEPOSIT"
+                        ? "Deposit Cash"
+                        : mode === "WITHDRAW"
+                          ? "Withdraw Cash"
+                          : "Record Transaction"}
                 </h2>
                 <button
                     on:click={close}

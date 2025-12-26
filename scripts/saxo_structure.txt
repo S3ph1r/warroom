@@ -1,0 +1,108 @@
+﻿============================================================
+BG SAXO CSV ANALYSIS
+============================================================
+Total Rows: 57
+Total Columns: 41
+
+ALL COLUMNS:
+   1. Strumento
+   2. Long/Short
+   3. Valuta
+   4. QuantitÓ
+   5. Prezzo di apertura
+   6. Prz. corrente
+   7. % prezzo
+   8. % 1 giorno
+   9. P&L netto EUR
+  10. Valore di mercato (EUR)
+  11. P&L giornaliero
+  12. Stato
+  13. Esposizione (EUR)
+  14. Interesse maturato
+  15. Scadenza
+  16. Valore originale (EUR)
+  17. Prz. costo totale
+  18. P&L lordo (EUR)
+  19. P&L lordo
+  20. Ticker
+  21. % utile lordo
+  22. % utile lordo.1
+  23. Conto
+  24. Categoria attivitÓ
+  25. Bid/Ask
+  26. Esposizione
+  27. Ultimo aggiornamento
+  28. Stato del mercato
+  29. Valore di mercato
+  30. MorningstarÖ
+  31. Data/ora apertura
+  32. P&L netto
+  33. Pip/tick
+  34. Portfolio %
+  35. SostenibilitÓ
+  36. Data valuta
+  37. ISIN
+  38. Emittente
+  39. Tipo attivitÓ
+  40. P&L giornaliero (EUR)
+  41. Interesse maturato (EUR)
+
+============================================================
+SAMPLE DATA (First Row):
+============================================================
+  Strumento: nan
+  Long/Short: nan
+  Valuta: nan
+  QuantitÓ: nan
+  Prezzo di apertura: nan
+  Prz. corrente: nan
+  % prezzo: nan
+  % 1 giorno: nan
+  P&L netto EUR: -461.10999999999984
+  Valore di mercato (EUR): nan
+  P&L giornaliero: nan
+  Stato: nan
+  Esposizione (EUR): 13485.6060489261
+  Interesse maturato: nan
+  Scadenza: nan
+  Valore originale (EUR): 13798.269999999997
+  Prz. costo totale: nan
+  P&L lordo (EUR): nan
+  P&L lordo: nan
+  Ticker: nan
+  % utile lordo: nan
+  % utile lordo.1: nan
+  Conto: nan
+  Categoria attivitÓ: nan
+  Bid/Ask: nan
+  Esposizione: nan
+  Ultimo aggiornamento: nan
+  Stato del mercato: nan
+  Valore di mercato: nan
+  MorningstarÖ: nan
+  Data/ora apertura: nan
+  P&L netto: nan
+  Pip/tick: nan
+  Portfolio %: 0.6969375307859763
+  SostenibilitÓ: nan
+  Data valuta: nan
+  ISIN: nan
+  Emittente: nan
+  Tipo attivitÓ: nan
+  P&L giornaliero (EUR): 402.06334634045
+  Interesse maturato (EUR): nan
+
+============================================================
+KEY FIELDS FOR INGESTION:
+============================================================
+                                                    Strumento  Valuta   QuantitÓ  Prezzo di apertura Prz. corrente             ISIN Emittente  Tipo attivitÓ
+Azioni (48)                                               NaN     NaN        NaN                 NaN           NaN              NaN       NaN            NaN
+Eutelsat Communications                                  Long    45.0    2.89108              1.6280       -43,69%   Eutelsat Comm.    Azione      -2.970000
+PayPal Holdings Inc.                                     Long     3.0   89.53000             59.8000       -33,21%     PayPal Hldgs    Azione       0.990496
+Arm Holdings Limited - ADR                               Long     1.0  169.83000            114.7800       -32,41%        Arm Hldng    Azione       1.122118
+Novo Nordisk B A/S                                       Long     8.0  411.35000            310.0000       -24,64%     Novo Nordisk    Azione       6.170145
+Dynatrace Inc.                                           Long     3.0   58.58240             44.1800       -24,58%        Dynatrace    Azione       0.052883
+CDT Environmental Technology Investment Hldngs Ltd       Long   500.0    0.55916              0.4451       -20,40%      CDT Environ    Azione      10.897074
+United States Antimony Corp.                             Long    50.0    5.97240              4.7700       -20,13%      US Antimony    Azione      12.769895
+Realbotix Corp                                           Long   300.0    0.43500              0.3550       -18,39%        Realbotix    Azione       1.853392
+KULR Technology Group Inc                                Long    80.0    3.81675              3.2000       -16,16%  KULR Technology    Azione      15.444469

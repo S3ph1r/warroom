@@ -493,7 +493,93 @@ def refresh_data():
         i_data = build_intelligence_data()
         return {"status": "Refreshed", "portfolio_count": p_data['count']}
     except Exception as e:
-         raise HTTPException(status_code=500, detail=str(e))
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/debug/cleanup")
+def debug_cleanup():
+    """Temporary endpoint to cleanup test data."""
+    try:
+        from db.database import SessionLocal
+        from db.models import Transaction, Holding
+        
+        db = SessionLocal()
+        logs = []
+        try:
+            # 1. Revert BUY NVDA 10 @ 100
+            tx_buy = db.query(Transaction).filter(
+                Transaction.ticker == "NVDA",
+                Transaction.operation == "BUY",
+                Transaction.quantity == 10
+            ).order_by(Transaction.timestamp.desc()).first()
+
+            if tx_buy:
+                logs.append(f"Found BUY: {tx_buy.id}")
+                # Revert Holding
+                holding = db.query(Holding).filter(
+                    Holding.broker == tx_buy.broker,
+                    Holding.ticker == tx_buy.ticker
+                ).first()
+                if holding:
+                    holding.quantity -= tx_buy.quantity
+                    # Simplify: just set to 0 if close
+                    if holding.quantity <= 0:
+                         db.delete(holding)
+                         logs.append("Deleted NVDA holding")
+                    else:
+                         logs.append(f"Reduced NVDA to {holding.quantity}")
+                
+                 # Revert Cash (Buy reduced cash, so we add it back? NO, we just delete the buy. 
+                 # BUT we need to fix the cash holding that was reduced by the buy.)
+                cash_holding = db.query(Holding).filter(
+                    Holding.broker == tx_buy.broker,
+                    Holding.asset_type == "CASH",
+                    Holding.currency == tx_buy.currency
+                ).first()
+                if cash_holding:
+                    amount = tx_buy.total_amount + tx_buy.fees
+                    cash_holding.quantity += amount
+                    cash_holding.current_value = cash_holding.quantity
+                    logs.append(f"Restored {amount} to Cash from BUY revert")
+
+                db.delete(tx_buy)
+                logs.append("Deleted BUY transaction")
+
+            # 2. Revert DEPOSIT 10000
+            tx_dep = db.query(Transaction).filter(
+                Transaction.operation == "DEPOSIT",
+                Transaction.quantity == 10000
+            ).order_by(Transaction.timestamp.desc()).first()
+
+            if tx_dep:
+                logs.append(f"Found DEPOSIT: {tx_dep.id}")
+                cash_holding = db.query(Holding).filter(
+                    Holding.broker == tx_dep.broker,
+                    Holding.asset_type == "CASH",
+                    Holding.currency == tx_dep.currency
+                ).first()
+                if cash_holding:
+                    cash_holding.quantity -= tx_dep.quantity
+                    cash_holding.current_value = cash_holding.quantity
+                    logs.append(f"Removed {tx_dep.quantity} from Cash for DEPOSIT revert")
+                
+                db.delete(tx_dep)
+                logs.append("Deleted DEPOSIT transaction")
+
+            db.commit()
+            
+            # Invalidate Snapshot
+            if PORTFOLIO_SNAPSHOT.exists():
+                PORTFOLIO_SNAPSHOT.unlink()
+                logs.append("Snapshot deleted")
+            
+            return {"status": "Cleaned", "logs": logs}
+        except Exception as e:
+            db.rollback()
+            raise e
+        finally:
+            db.close()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 from fastapi.responses import StreamingResponse
 import io

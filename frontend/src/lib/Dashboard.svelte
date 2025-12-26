@@ -31,14 +31,24 @@
     }
 
     function handleBuy(event) {
-        modalMode = "BUY";
-        modalData = event.detail; // holding object
+        const holding = event.detail;
+        if (holding.asset_type === "CASH") {
+            modalMode = "DEPOSIT";
+        } else {
+            modalMode = "BUY";
+        }
+        modalData = holding;
         showModal = true;
     }
 
     function handleSell(event) {
-        modalMode = "SELL";
-        modalData = event.detail; // holding object
+        const holding = event.detail;
+        if (holding.asset_type === "CASH") {
+            modalMode = "WITHDRAW";
+        } else {
+            modalMode = "SELL";
+        }
+        modalData = holding;
         showModal = true;
     }
 
@@ -132,7 +142,7 @@
         return d;
     }
 
-    const API_BASE = "http://127.0.0.1:8000";
+    const API_BASE = "http://127.0.0.1:8201";
 
     async function fetchData() {
         try {
@@ -246,10 +256,18 @@
                     .trim();
                 ctx.fillStyle = colorVar || "#ffffff";
 
+                // Calculate filtered total based on selectedBroker
+                let totalValue = displayData.total_value;
+                if (
+                    selectedBroker !== "All" &&
+                    displayData.broker_totals[selectedBroker]
+                ) {
+                    totalValue =
+                        displayData.broker_totals[selectedBroker].value;
+                }
+
                 var text =
-                        currencySymbol +
-                        (displayData.total_value / 1000).toFixed(1) +
-                        "k",
+                        currencySymbol + (totalValue / 1000).toFixed(1) + "k",
                     textX = Math.round(
                         (width - ctx.measureText(text).width) / 2,
                     ),
@@ -266,10 +284,20 @@
 
         const ctx = document.getElementById("brokerChart");
         if (ctx) {
-            const brokers = Object.keys(displayData.broker_totals);
-            const values = Object.values(displayData.broker_totals).map(
-                (b) => b.value,
-            );
+            let brokers, values;
+            if (selectedBroker === "All") {
+                // Show all brokers
+                brokers = Object.keys(displayData.broker_totals);
+                values = Object.values(displayData.broker_totals).map(
+                    (b) => b.value,
+                );
+            } else {
+                // Show only selected broker (single bar/slice)
+                brokers = [selectedBroker];
+                values = [
+                    displayData.broker_totals[selectedBroker]?.value || 0,
+                ];
+            }
 
             chartInstance = new Chart(ctx, {
                 type: chartType,
@@ -293,8 +321,23 @@
 
         const ctx2 = document.getElementById("assetChart");
         if (ctx2) {
-            const assets = Object.keys(displayData.asset_totals);
-            const values = Object.values(displayData.asset_totals);
+            // Compute asset totals from filteredHoldings
+            const assetTotals = {};
+            const holdings =
+                selectedBroker === "All"
+                    ? displayData.holdings
+                    : displayData.holdings.filter(
+                          (h) => h.broker === selectedBroker,
+                      );
+
+            for (const h of holdings) {
+                const type = h.asset_type || "OTHER";
+                assetTotals[type] =
+                    (assetTotals[type] || 0) + (h.current_value || 0);
+            }
+
+            const assets = Object.keys(assetTotals);
+            const values = Object.values(assetTotals);
 
             assetChartInstance = new Chart(ctx2, {
                 type: chartType,
@@ -331,6 +374,13 @@
     $: if (displayData) {
         renderCharts();
     }
+
+    // React to broker filter change - explicit dependency tracking
+    $: selectedBroker,
+        displayData,
+        (() => {
+            if (displayData) renderCharts();
+        })();
 
     $: if (refreshTrigger) fetchData();
     onMount(fetchData);
@@ -436,10 +486,16 @@
         </div>
 
         <!-- KPIs Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
             <!-- Total Value -->
             <div
-                class="p-4 bg-skin-card backdrop-blur-md border border-skin-border rounded-lg shadow-sm hover:border-skin-muted/50 transition-colors"
+                class="p-4 bg-skin-card backdrop-blur-md border border-skin-border rounded-lg shadow-sm hover:border-skin-muted/50 transition-colors cursor-pointer group"
+                on:click={() => (selectedBroker = "All")}
+                on:keydown={(e) =>
+                    e.key === "Enter" && (selectedBroker = "All")}
+                role="button"
+                tabindex="0"
+                title="Reset Filter (Show All)"
             >
                 <div
                     class="text-[11px] font-medium text-skin-muted uppercase tracking-wider mb-1"
@@ -470,15 +526,37 @@
                             displayData.total_day_change_pct || 0
                         ).toFixed(2)}%
                     </div>
-                    <div
-                        class={(displayData.total_pnl || 0) >= 0
-                            ? "text-skin-pos"
-                            : "text-skin-neg"}
-                    >
-                        Net: {(displayData.total_pnl_pct || 0) >= 0
-                            ? "+"
-                            : ""}{(displayData.total_pnl_pct || 0).toFixed(2)}%
-                    </div>
+                </div>
+            </div>
+
+            <!-- Liquidity (New) -->
+            <div
+                class="p-4 bg-skin-card backdrop-blur-md border border-skin-border rounded-lg shadow-sm hover:border-skin-muted/50 transition-colors"
+            >
+                <div
+                    class="text-[11px] font-medium text-skin-muted uppercase tracking-wider mb-1"
+                >
+                    Liquidity
+                </div>
+                <div
+                    class="text-2xl font-semibold text-skin-text tracking-tight mb-2"
+                >
+                    {currencySymbol}{groups.cash
+                        .reduce((sum, h) => sum + h.current_value, 0)
+                        .toLocaleString(undefined, {
+                            minimumFractionDigits: 0,
+                            maximumFractionDigits: 0,
+                        })}
+                </div>
+                <div class="text-xs text-skin-muted font-medium">
+                    {(
+                        (groups.cash.reduce(
+                            (sum, h) => sum + h.current_value,
+                            0,
+                        ) /
+                            (displayData.total_value || 1)) *
+                        100
+                    ).toFixed(1)}% of Portfolio
                 </div>
             </div>
 
@@ -507,6 +585,13 @@
                             maximumFractionDigits: 0,
                         })}
                     </div>
+                </div>
+                <!-- Net Invested Display -->
+                <div class="text-[10px] text-skin-muted font-medium mt-0.5">
+                    Net Invested: {currencySymbol}{displayData.total_cost.toLocaleString(
+                        undefined,
+                        { maximumFractionDigits: 0 },
+                    )}
                 </div>
                 <!-- 1D P/L Row -->
                 <div class="flex items-center gap-2 mt-1 text-sm font-medium">
@@ -582,7 +667,15 @@
                     broker
                         ? 'border-skin-accent ring-1 ring-skin-accent/20'
                         : 'hover:border-skin-accent/50'} transition-all cursor-pointer"
-                    on:click={() => (selectedBroker = broker)}
+                    on:click={() =>
+                        (selectedBroker =
+                            selectedBroker === broker ? "All" : broker)}
+                    on:keydown={(e) =>
+                        e.key === "Enter" &&
+                        (selectedBroker =
+                            selectedBroker === broker ? "All" : broker)}
+                    role="button"
+                    tabindex="0"
                 >
                     <div
                         class="text-[10px] font-mono text-skin-muted mb-1 truncate"

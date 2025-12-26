@@ -1,0 +1,43 @@
+{
+  "source": "D:\\Download\\SCALABLE CAPITAL\\20240806 Monthly account statement Baader Bank.pdf",
+  "last_processed_page": 1,
+  "total_pages": 2,
+  "transactions": [
+    {
+      "date": "2024-07-25",
+      "type": "BUY",
+      "asset": "TESLA INC.",
+      "isin": "US88160R1014",
+      "quantity": 2,
+      "amount": "-460.30",
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-07-25",
+      "type": "FEE",
+      "asset": "ORDERGEBUEHR",
+      "isin": "",
+      "quantity": 0,
+      "amount": "-0.99",
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-07-25",
+      "type": "BUY",
+      "asset": "TESLA INC.",
+      "isin": "US88160R1014",
+      "quantity": 2,
+      "amount": -410.1,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-07-29",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    }
+  ]
+}

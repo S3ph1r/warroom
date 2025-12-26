@@ -1,0 +1,16 @@
+{
+  "source": "D:\\Download\\SCALABLE CAPITAL\\20250904 Monthly account statement Baader Bank.pdf",
+  "last_processed_page": 0,
+  "total_pages": 1,
+  "transactions": [
+    {
+      "date": "2025-08-13",
+      "type": "DIVIDEND",
+      "asset": "BYD CO. LTD ADR/1 YC 1",
+      "isin": "US05606L1008",
+      "quantity": 0,
+      "amount": 1.53,
+      "currency": "EUR"
+    }
+  ]
+}

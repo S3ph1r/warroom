@@ -1,0 +1,74 @@
+{
+  "holdings": [
+    {
+      "name": "Midea Group Co",
+      "isin": "CNE100006M58",
+      "quantity": 20.0,
+      "market_value": 188.0,
+      "purchase_price": 0.0
+    },
+    {
+      "name": "Tesla",
+      "isin": "US88160R1014",
+      "quantity": 1.0,
+      "market_value": 411.35,
+      "purchase_price": 0.0
+    },
+    {
+      "name": "Baidu A",
+      "isin": "KYG070341048",
+      "quantity": 17.0,
+      "market_value": 214.84117647058824,
+      "purchase_price": 0.0
+    },
+    {
+      "name": "Uber Technologies",
+      "isin": "US90353T1007",
+      "quantity": 5.0,
+      "market_value": 339.8,
+      "purchase_price": 0.0
+    },
+    {
+      "name": "Alibaba Group Hldg",
+      "isin": "KYG017191142",
+      "quantity": 20.0,
+      "market_value": 315.6,
+      "purchase_price": 0.0
+    },
+    {
+      "name": "BYD Co. ADR",
+      "isin": "US05606L1008",
+      "quantity": 12.0,
+      "market_value": 124.8,
+      "purchase_price": 0.0
+    },
+    {
+      "name": "D-Wave Quantum",
+      "isin": "US26740W1099",
+      "quantity": 25.0,
+      "market_value": 528.75,
+      "purchase_price": 0.0
+    },
+    {
+      "name": "Xiaomi",
+      "isin": "KYG9830T1067",
+      "quantity": 120.0,
+      "market_value": 531.6,
+      "purchase_price": 0.0
+    },
+    {
+      "name": "Tencent Holdings",
+      "isin": "KYG875721634",
+      "quantity": 10.0,
+      "market_value": 663.0,
+      "purchase_price": 0.0
+    },
+    {
+      "name": "EssilorLuxottica",
+      "isin": "US2972842007",
+      "quantity": 6.0,
+      "market_value": 828.0,
+      "purchase_price": 0.0
+    }
+  ]
+}

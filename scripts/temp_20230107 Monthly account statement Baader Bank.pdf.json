@@ -1,0 +1,43 @@
+{
+  "source": "D:\\Download\\SCALABLE CAPITAL\\20230107 Monthly account statement Baader Bank.pdf",
+  "last_processed_page": 1,
+  "total_pages": 2,
+  "transactions": [
+    {
+      "date": "2022-12-20",
+      "type": "BUY",
+      "asset": "IS MSCI BRAZ.U.ETF USD D",
+      "isin": "IE00B0M63516",
+      "quantity": 3,
+      "amount": -62.27,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-12-20",
+      "type": "BUY",
+      "asset": "ISHSII-MSCI TURKEY DLDIS",
+      "isin": "IE00B1FZS574",
+      "quantity": 3,
+      "amount": -52.87,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-12-28",
+      "type": "BUY",
+      "asset": "ISHSV-S+P500ENER.SECT.DLA",
+      "isin": "IE00B42NKQ00",
+      "quantity": 10,
+      "amount": -78.5,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-12-22",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    }
+  ]
+}

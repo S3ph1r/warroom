@@ -89,7 +89,8 @@ class Transaction(Base):
     isin: Mapped[Optional[str]] = mapped_column(String(12))  # Nullable for crypto
     
     # Transaction details
-    operation: Mapped[str] = mapped_column(String(20), nullable=False)  # BUY, SELL, DIVIDEND, DEPOSIT, WITHDRAW, FEE, INTEREST
+    operation: Mapped[str] = mapped_column(String(20), nullable=False)  # BUY, SELL, BALANCE, DIVIDEND, DEPOSIT, WITHDRAW, FEE, INTEREST
+    status: Mapped[str] = mapped_column(String(20), default="COMPLETED") # COMPLETED, PENDING, CANCELLED
     quantity: Mapped[Decimal] = mapped_column(DECIMAL(18, 8), nullable=False)
     price: Mapped[Decimal] = mapped_column(DECIMAL(18, 8), nullable=False)
     total_amount: Mapped[Decimal] = mapped_column(DECIMAL(18, 2), nullable=False)
@@ -257,3 +258,16 @@ class PortfolioSnapshot(Base):
     __table_args__ = (
         Index("idx_snapshot_date", "snapshot_date"),
     )
+
+
+class IngestionBatch(Base):
+    __tablename__ = "ingestion_batches"
+
+    id: Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
+    broker: Mapped[str] = mapped_column(String(50))
+    source_file: Mapped[str] = mapped_column(String(255))
+    ingested_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+    status: Mapped[str] = mapped_column(String(20), default="PENDING")  # PENDING, PROCESSED, APPLIED, ERROR
+    raw_data: Mapped[Optional[dict]] = mapped_column(JSONB, nullable=True)  # Output from LLM
+    validation_errors: Mapped[Optional[list]] = mapped_column(JSONB, nullable=True)
+    notes: Mapped[Optional[str]] = mapped_column(Text, nullable=True)

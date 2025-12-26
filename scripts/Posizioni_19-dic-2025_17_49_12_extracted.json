@@ -1,0 +1,368 @@
+{
+  "holdings": [
+    {
+      "name": "Eutelsat Communications ",
+      "currency": "EUR",
+      "quantity": 45.0,
+      "purchase_price": 2.89107972
+    },
+    {
+      "name": "PayPal Holdings Inc. ",
+      "currency": "USD",
+      "quantity": 3.0,
+      "purchase_price": 89.53
+    },
+    {
+      "name": "Arm Holdings Limited - ADR ",
+      "currency": "USD",
+      "quantity": 1.0,
+      "purchase_price": 169.83
+    },
+    {
+      "name": "Novo Nordisk B A/S ",
+      "currency": "DKK",
+      "quantity": 8.0,
+      "purchase_price": 411.35
+    },
+    {
+      "name": "Dynatrace Inc. ",
+      "currency": "USD",
+      "quantity": 3.0,
+      "purchase_price": 58.5824
+    },
+    {
+      "name": "CDT Environmental Technology Investment Hldngs Ltd ",
+      "currency": "USD",
+      "quantity": 500.0,
+      "purchase_price": 0.55916
+    },
+    {
+      "name": "United States Antimony Corp. ",
+      "currency": "USD",
+      "quantity": 50.0,
+      "purchase_price": 5.9724
+    },
+    {
+      "name": "Realbotix Corp ",
+      "currency": "CAD",
+      "quantity": 300.0,
+      "purchase_price": 0.435
+    },
+    {
+      "name": "KULR Technology Group Inc ",
+      "currency": "USD",
+      "quantity": 80.0,
+      "purchase_price": 3.81675
+    },
+    {
+      "name": "VNET Group Inc. - ADR ",
+      "currency": "USD",
+      "quantity": 10.0,
+      "purchase_price": 10.37
+    },
+    {
+      "name": "Ferrari NV ",
+      "currency": "EUR",
+      "quantity": 1.0,
+      "purchase_price": 374.595
+    },
+    {
+      "name": "Meta Platforms Inc. ",
+      "currency": "USD",
+      "quantity": 1.0,
+      "purchase_price": 769.7
+    },
+    {
+      "name": "Arista Networks Inc. ",
+      "currency": "USD",
+      "quantity": 4.0,
+      "purchase_price": 148.85
+    },
+    {
+      "name": "Oracle Corp. ",
+      "currency": "USD",
+      "quantity": 3.0,
+      "purchase_price": 222.53416667
+    },
+    {
+      "name": "Substrate Artificial Intelligence SA ",
+      "currency": "EUR",
+      "quantity": 1300.0,
+      "purchase_price": 0.09
+    },
+    {
+      "name": "D-Wave Quantum Inc. ",
+      "currency": "USD",
+      "quantity": 15.0,
+      "purchase_price": 29.55
+    },
+    {
+      "name": "BYD Company Ltd - ADR ",
+      "currency": "USD",
+      "quantity": 20.0,
+      "purchase_price": 13.12
+    },
+    {
+      "name": "XPeng Inc. - ADR ",
+      "currency": "USD",
+      "quantity": 15.0,
+      "purchase_price": 21.032
+    },
+    {
+      "name": "Alibaba Group Holding Ltd - ADR ",
+      "currency": "EUR",
+      "quantity": 2.0,
+      "purchase_price": 134.6
+    },
+    {
+      "name": "Baidu.com Inc. - ADR ",
+      "currency": "USD",
+      "quantity": 5.0,
+      "purchase_price": 128.932
+    },
+    {
+      "name": "Amplifon ",
+      "currency": "EUR",
+      "quantity": 7.0,
+      "purchase_price": 13.975
+    },
+    {
+      "name": "NVIDIA Corp. ",
+      "currency": "USD",
+      "quantity": 2.0,
+      "purchase_price": 183.57
+    },
+    {
+      "name": "TSMC - ADR ",
+      "currency": "USD",
+      "quantity": 1.0,
+      "purchase_price": 295.0
+    },
+    {
+      "name": "Chevron Corp. ",
+      "currency": "USD",
+      "quantity": 1.0,
+      "purchase_price": 148.85
+    },
+    {
+      "name": "ServiceNow Inc. ",
+      "currency": "USD",
+      "quantity": 1.0,
+      "purchase_price": 155.29
+    },
+    {
+      "name": "Qorvo Inc. ",
+      "currency": "USD",
+      "quantity": 2.0,
+      "purchase_price": 85.55
+    },
+    {
+      "name": "Palo Alto Networks Inc. ",
+      "currency": "USD",
+      "quantity": 1.0,
+      "purchase_price": 186.23
+    },
+    {
+      "name": "CRISPR Therapeutics Ltd ",
+      "currency": "USD",
+      "quantity": 5.0,
+      "purchase_price": 56.03188
+    },
+    {
+      "name": "Alphabet Inc. Class A ",
+      "currency": "USD",
+      "quantity": 2.0,
+      "purchase_price": 301.93
+    },
+    {
+      "name": "Toyota Motor Corp. - ADR ",
+      "currency": "USD",
+      "quantity": 2.0,
+      "purchase_price": 215.81
+    },
+    {
+      "name": "Teradyne Inc. ",
+      "currency": "USD",
+      "quantity": 1.0,
+      "purchase_price": 190.26
+    },
+    {
+      "name": "Viking Therapeutics Inc. ",
+      "currency": "USD",
+      "quantity": 5.0,
+      "purchase_price": 34.744
+    },
+    {
+      "name": "PDD Holdings Inc - ADR ",
+      "currency": "USD",
+      "quantity": 2.0,
+      "purchase_price": 108.0
+    },
+    {
+      "name": "Amazon.com Inc. ",
+      "currency": "USD",
+      "quantity": 4.0,
+      "purchase_price": 219.51
+    },
+    {
+      "name": "Voyager Technologies Inc. ",
+      "currency": "USD",
+      "quantity": 30.0,
+      "purchase_price": 24.81103333
+    },
+    {
+      "name": "Zhejiang Sanhua Intelligent Controls Co Ltd ",
+      "currency": "HKD",
+      "quantity": 100.0,
+      "purchase_price": 31.94
+    },
+    {
+      "name": "Oklo Inc. ",
+      "currency": "USD",
+      "quantity": 1.0,
+      "purchase_price": 76.92
+    },
+    {
+      "name": "AST SpaceMobile Inc. ",
+      "currency": "USD",
+      "quantity": 2.0,
+      "purchase_price": 65.86
+    },
+    {
+      "name": "Walmart Inc. ",
+      "currency": "USD",
+      "quantity": 5.0,
+      "purchase_price": 102.184
+    },
+    {
+      "name": "Leonardo ",
+      "currency": "EUR",
+      "quantity": 2.0,
+      "purchase_price": 43.27
+    },
+    {
+      "name": "Qualcomm Inc. ",
+      "currency": "USD",
+      "quantity": 2.0,
+      "purchase_price": 151.69
+    },
+    {
+      "name": "Quantum Computing Inc ",
+      "currency": "USD",
+      "quantity": 10.0,
+      "purchase_price": 9.15480968
+    },
+    {
+      "name": "Nokia Oyj ",
+      "currency": "EUR",
+      "quantity": 80.0,
+      "purchase_price": 4.550325
+    },
+    {
+      "name": "Palantir Technologies Inc. ",
+      "currency": "USD",
+      "quantity": 4.0,
+      "purchase_price": 151.33875
+    },
+    {
+      "name": "Webuild ",
+      "currency": "EUR",
+      "quantity": 100.0,
+      "purchase_price": 2.648
+    },
+    {
+      "name": "Intel Corp. ",
+      "currency": "USD",
+      "quantity": 30.0,
+      "purchase_price": 27.92333333
+    },
+    {
+      "name": "Solid Power Inc. ",
+      "currency": "USD",
+      "quantity": 1.0,
+      "purchase_price": 3.42
+    },
+    {
+      "name": "QuantumScape Corp. ",
+      "currency": "USD",
+      "quantity": 20.0,
+      "purchase_price": 4.9266
+    },
+    {
+      "name": "VanEck Uranium and Nuclear Technologies UCITS ETF ",
+      "currency": "EUR",
+      "quantity": 20.0,
+      "purchase_price": 51.467
+    },
+    {
+      "name": "iShares MSCI China Acc UCITS ETF ",
+      "currency": "EUR",
+      "quantity": 100.0,
+      "purchase_price": 5.659
+    },
+    {
+      "name": "First Trust Nasdaq Cyber Security UCTIS ETF ",
+      "currency": "EUR",
+      "quantity": 10.0,
+      "purchase_price": 38.6244
+    },
+    {
+      "name": "Kraneshares SSE Star Market 50 UCITS ETF ",
+      "currency": "EUR",
+      "quantity": 10.0,
+      "purchase_price": 16.968
+    },
+    {
+      "name": "Franklin FTSE India UCITS ETF ",
+      "currency": "EUR",
+      "quantity": 5.0,
+      "purchase_price": 37.83
+    },
+    {
+      "name": "Xtrackers AI & Big Data UCITS ETF ",
+      "currency": "EUR",
+      "quantity": 11.0,
+      "purchase_price": 135.17154545
+    },
+    {
+      "name": "iShares Core MSCI World UCITS ETF ",
+      "currency": "EUR",
+      "quantity": 10.0,
+      "purchase_price": 96.8925
+    }
+  ],
+  "instructions": {
+    "file_type": "csv",
+    "encoding": "utf-8-sig",
+    "instructions": {
+      "header_row": 0,
+      "skip_rows": [
+        1
+      ],
+      "data_start_row": 2,
+      "rows_per_asset": 1
+    },
+    "column_mapping": {
+      "0": "name",
+      "1": "direction",
+      "2": "currency",
+      "3": "quantity",
+      "4": "purchase_price"
+    },
+    "column_names": {
+      "name": "Strumento",
+      "currency": "Valuta",
+      "quantity": "Quantità",
+      "purchase_price": "Prezzo di apertura"
+    },
+    "validation": {
+      "expected_assets": 48,
+      "first_asset_name": "Eutelsat Communications",
+      "sample_values": {
+        "name": "Eutelsat Communications",
+        "quantity": 45,
+        "purchase_price": 2.89
+      }
+    }
+  }
+}
