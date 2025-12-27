@@ -1,0 +1,236 @@
+=== INGESTION COMPARISON REPORT ===
+Old Holdings Count: 107
+New Holdings Count: 136
+
+--- ADDED (117) ---
+  [+] BG SAXO | AST SpaceMobile Inc.: -2.0
+  [+] BG SAXO | Advanced Micro Devic: -4.0
+  [+] BG SAXO | Alibaba Group Holdin: -6.0
+  [+] BG SAXO | Alphabet Inc. Class : -5.0
+  [+] BG SAXO | Amazon.com Inc.: -4.0
+  [+] BG SAXO | Amplifon: 7.0
+  [+] BG SAXO | Arista Networks Inc.: -4.0
+  [+] BG SAXO | Arm Holdings Limited: -1.0
+  [+] BG SAXO | BYD Company Ltd - AD: -20.0
+  [+] BG SAXO | Baidu.com Inc. - ADR: 1.0
+  [+] BG SAXO | Broadcom Inc.: 3.0
+  [+] BG SAXO | CDT Environmental Te: -100.0
+  [+] BG SAXO | CRISPR Therapeutics : -5.0
+  [+] BG SAXO | Canopy Growth Corp.: -290.0
+  [+] BG SAXO | Chevron Corp.: -1.0
+  [+] BG SAXO | D-Wave Quantum Inc.: -62.0
+  [+] BG SAXO | Datadog Inc.: 1.0
+  [+] BG SAXO | Dynatrace Inc.: -3.0
+  [+] BG SAXO | Eutelsat Communicati: 70.0
+  [+] BG SAXO | Ferrari NV: -1.0
+  [+] BG SAXO | First Trust Nasdaq C: -10.0
+  [+] BG SAXO | Franklin FTSE India : -5.0
+  [+] BG SAXO | Intel Corp.: -30.0
+  [+] BG SAXO | Joby Aviation Incorp: -20.0
+  [+] BG SAXO | KULR Technology Grou: 2.0
+  [+] BG SAXO | Kraneshares SSE Star: -10.0
+  [+] BG SAXO | Leonardo: -2.0
+  [+] BG SAXO | Meta Platforms Inc.: 1.0
+  [+] BG SAXO | Microsoft Corp.: 3.0
+  [+] BG SAXO | NVIDIA Corp.: -18.0
+  [+] BG SAXO | Nio Inc. - ADR: -10.0
+  [+] BG SAXO | Nokia Oyj: -80.0
+  [+] BG SAXO | Oracle Corp.: -6.0
+  [+] BG SAXO | PDD Holdings Inc - A: -2.0
+  [+] BG SAXO | Palantir Technologie: -12.0
+  [+] BG SAXO | Palo Alto Networks I: -1.0
+  [+] BG SAXO | PayPal Holdings Inc.: -3.0
+  [+] BG SAXO | Qorvo Inc.: -2.0
+  [+] BG SAXO | Quantum Computing In: 1.0
+  [+] BG SAXO | Realbotix Corp: -3800.0
+  [+] BG SAXO | Realbotix Corp.: -3900.0
+  [+] BG SAXO | ServiceNow Inc.: -1.0
+  [+] BG SAXO | Solid Power Inc.: -280.0
+  [+] BG SAXO | Substrate Artificial: 1300.0
+  [+] BG SAXO | TSMC - ADR: -1.0
+  [+] BG SAXO | Teradyne Inc.: 1.0
+  [+] BG SAXO | Tesla Inc.: -2.0
+  [+] BG SAXO | Toyota Motor Corp. -: 2.0
+  [+] BG SAXO | United States Antimo: -200.0
+  [+] BG SAXO | VNET Group Inc. - AD: -10.0
+  [+] BG SAXO | VanEck Uranium and N: 6.0
+  [+] BG SAXO | Viking Therapeutics : -5.0
+  [+] BG SAXO | Voyager Technologies: -10.0
+  [+] BG SAXO | XPeng Inc.: -4.0
+  [+] BG SAXO | XPeng Inc. - ADR: -9.0
+  [+] BG SAXO | Xtrackers AI & Big D: -5.0
+  [+] BG SAXO | Zhejiang Sanhua Inte: -100.0
+  [+] BG SAXO | iShares Core MSCI Wo: -10.0
+  [+] BG SAXO | iShares MSCI China A: 100.0
+  [+] BINANCE | 1000CAT: 64.17886804
+  [+] BINANCE | AGIX: -93.105
+  [+] BINANCE | BB: 6.69988032
+  [+] BINANCE | BIO: 1.54759771
+  [+] BINANCE | BNSOL: -2.985
+  [+] BINANCE | GAS: -0.00579919
+  [+] BINANCE | IO: 1.27332026
+  [+] BINANCE | MOVE: 12.08481092
+  [+] BINANCE | PENGU: 149.73062064
+  [+] BINANCE | PNUT: 50.0
+  [+] BINANCE | SC: -1129.67150754
+  [+] BINANCE | THE: 1.26773539
+  [+] BINANCE | USDT: -1548.60411217
+  [+] BINANCE | USUAL: 22.17319852
+  [+] BINANCE | VANA: 0.1987394
+  [+] REVOLUT | AMZN: 2.0
+  [+] REVOLUT | BTC: 0.0233854
+  [+] REVOLUT | Cash: -1.0
+  [+] REVOLUT | ETH: 0.18853771
+  [+] REVOLUT | INTC: 5.0
+  [+] REVOLUT | MANA: -199.83577347
+  [+] REVOLUT | MATIC: 89.0140164
+  [+] REVOLUT | MAXN: 5.0
+  [+] REVOLUT | NIO: 17.0
+  [+] REVOLUT | QBTS: 677.37552557
+  [+] REVOLUT | SAND: 2.24104524
+  [+] REVOLUT | XLM: -45.3379006
+  [+] SCALABLE CAPITAL | Alibaba Group Hldg (: -20.0
+  [+] SCALABLE CAPITAL | BAIDU INC. O.N.: 8.0
+  [+] SCALABLE CAPITAL | BYD CO. LTD ADR/2 YC: 4.0
+  [+] SCALABLE CAPITAL | BYD Co., Ltd.: 2.0
+  [+] SCALABLE CAPITAL | Baidu A: -9.0
+  [+] SCALABLE CAPITAL | D-WAVE QUANTUM DL-,0: 35.0
+  [+] SCALABLE CAPITAL | ESSILORLUXOTTICA 1/2: -4.0
+  [+] SCALABLE CAPITAL | IS MSCI BRAZ.U.ETF U: 3.0
+  [+] SCALABLE CAPITAL | ISHSII-MSCI TURKEY D: 6.0
+  [+] SCALABLE CAPITAL | ISHSV-S+P500ENER.SEC: 10.0
+  [+] SCALABLE CAPITAL | Midea Group Co: -20.0
+  [+] SCALABLE CAPITAL | NOVO-NORDISK AS B: -3.0
+  [+] SCALABLE CAPITAL | NVIDIA CORP.: 7.0
+  [+] SCALABLE CAPITAL | RIVIAN AUTOMOT.A: -3.0
+  [+] SCALABLE CAPITAL | TENCENT HLDGS HD-: -5.0
+  [+] SCALABLE CAPITAL | TENCENT HLDGS HD-,00: 10.0
+  [+] SCALABLE CAPITAL | TESLA INC.: 12.0
+  [+] SCALABLE CAPITAL | TESLA INC. DL: -3.0
+  [+] SCALABLE CAPITAL | TESLA INC. DL -,001: 6.0
+  [+] SCALABLE CAPITAL | Tencent Holdings (KY: -5.0
+  [+] SCALABLE CAPITAL | UBER TECH. DL-: 4.0
+  [+] SCALABLE CAPITAL | UBER TECH. DL-,00001: -2.0
+  [+] SCALABLE CAPITAL | Xiaomi (KYG9830T1067: -30.0
+  [+] SCALABLE CAPITAL | ZALANDO SE: -2.0
+  [+] TRADE REPUBLIC | ALIBABA GROUP HLDG L: -1.0
+  [+] TRADE REPUBLIC | ASML HOLDING: 1.0
+  [+] TRADE REPUBLIC | CARL ZEISS MEDITEC: 2.0
+  [+] TRADE REPUBLIC | THALES S.A.: 1.0
+  [+] TRADE REPUBLIC | VanEck UCITS ETFs pl: -5.0
+  [+] TRADE REPUBLIC | XIAOMI CORP.: -20.0
+  [+] TRADE REPUBLIC | iShares IV plc - iSh: 20.0
+
+--- REMOVED (88) ---
+  [-] BG_SAXO | 02050: 100.0
+  [-] BG_SAXO | AHLA: 2.0
+  [-] BG_SAXO | AMP: 7.0
+  [-] BG_SAXO | AMZN: 4.0
+  [-] BG_SAXO | ANET: 4.0
+  [-] BG_SAXO | ARM: 1.0
+  [-] BG_SAXO | ASML: 0.0
+  [-] BG_SAXO | ASTS: 2.0
+  [-] BG_SAXO | BIDU: 5.0
+  [-] BG_SAXO | BYDDY: 20.0
+  [-] BG_SAXO | CASH: 845.18
+  [-] BG_SAXO | CDTG: 500.0
+  [-] BG_SAXO | CIBR: 10.0
+  [-] BG_SAXO | CRSP: 5.0
+  [-] BG_SAXO | CVX: 1.0
+  [-] BG_SAXO | DT: 3.0
+  [-] BG_SAXO | ETL: 45.0
+  [-] BG_SAXO | FLXI: 5.0
+  [-] BG_SAXO | GOOGL: 2.0
+  [-] BG_SAXO | ICGA: 100.0
+  [-] BG_SAXO | INTC: 30.0
+  [-] BG_SAXO | KSTR: 10.0
+  [-] BG_SAXO | KULR: 80.0
+  [-] BG_SAXO | LDO: 2.0
+  [-] BG_SAXO | META: 1.0
+  [-] BG_SAXO | NOKIA: 80.0
+  [-] BG_SAXO | NOVOB: 8.0
+  [-] BG_SAXO | NOW: 1.0
+  [-] BG_SAXO | NUCL: 20.0
+  [-] BG_SAXO | NVDA: 2.0
+  [-] BG_SAXO | OKLO: 1.0
+  [-] BG_SAXO | ORCL: 3.0
+  [-] BG_SAXO | PANW: 1.0
+  [-] BG_SAXO | PDD: 2.0
+  [-] BG_SAXO | PLTR: 4.0
+  [-] BG_SAXO | PYPL: 3.0
+  [-] BG_SAXO | QBTS: 15.0
+  [-] BG_SAXO | QCOM: 2.0
+  [-] BG_SAXO | QRVO: 2.0
+  [-] BG_SAXO | QS: 20.0
+  [-] BG_SAXO | QUBT: 10.0
+  [-] BG_SAXO | RACE: 1.0
+  [-] BG_SAXO | SAI: 1300.0
+  [-] BG_SAXO | SLDP: 1.0
+  [-] BG_SAXO | SWDA: 10.0
+  [-] BG_SAXO | TER: 1.0
+  [-] BG_SAXO | TM: 2.0
+  [-] BG_SAXO | TSM: 1.0
+  [-] BG_SAXO | UAMY: 50.0
+  [-] BG_SAXO | USD: -447.46572998
+  [-] BG_SAXO | VKTX: 5.0
+  [-] BG_SAXO | VNET: 10.0
+  [-] BG_SAXO | VOYG: 30.0
+  [-] BG_SAXO | WBD: 100.0
+  [-] BG_SAXO | WMT: 5.0
+  [-] BG_SAXO | XAIX: 11.0
+  [-] BG_SAXO | XBOT: 300.0
+  [-] BG_SAXO | XPEV: 15.0
+  [-] BINANCE | FF: 11.93472616
+  [-] IBKR | 3CP: 50.0
+  [-] IBKR | CASH: 133.09913329
+  [-] IBKR | RGTI: 3.0
+  [-] REVOLUT | 1INCH: 4.96871634
+  [-] REVOLUT | AVAX: 0.03860133
+  [-] REVOLUT | POL: 136.6432338
+  [-] REVOLUT | USD_CASH: 2.72
+  [-] REVOLUT | XAG: 3.353581
+  [-] SCALABLE | CASH: 17.56
+  [-] SCALABLE | CNE100006M58: 20.0
+  [-] SCALABLE | IE00B0M63516: 3.0
+  [-] SCALABLE | IE00B42NKQ00: 10.0
+  [-] SCALABLE | IE00BMYDM794: 17.0
+  [-] SCALABLE | KYG017191142: 20.0
+  [-] SCALABLE | KYG070341048: 17.0
+  [-] SCALABLE | KYG875721634: 10.0
+  [-] SCALABLE | KYG9830T1067: 120.0
+  [-] SCALABLE | US05606L1008: 12.0
+  [-] SCALABLE | US26740W1099: 25.0
+  [-] SCALABLE | US2972842007: 6.0
+  [-] SCALABLE | US88160R1014: 1.0
+  [-] SCALABLE | US90353T1007: 5.0
+  [-] TRADE_REPUBLIC | AFX: 3.0
+  [-] TRADE_REPUBLIC | ASML: 2.0
+  [-] TRADE_REPUBLIC | BABA: 5.0
+  [-] TRADE_REPUBLIC | EUR: 0.0
+  [-] TRADE_REPUBLIC | HO: 1.0
+  [-] TRADE_REPUBLIC | RACE: 1.0
+  [-] TRADE_REPUBLIC | RBOT: 20.0
+
+--- CHANGED (16) ---
+  [*] BINANCE | BNB: Old=1.32636288 -> New=0.88350917 (Diff: -0.4429)
+  [*] BINANCE | BTC: Old=0.005 -> New=0.03536468 (Diff: +0.0304)
+  [*] BINANCE | ENA: Old=12.95572156 -> New=12.50555115 (Diff: -0.4502)
+  [*] BINANCE | ETH: Old=0.21840415 -> New=0.1359 (Diff: -0.0825)
+  [*] BINANCE | EUR: Old=5.90890955 -> New=2.695984 (Diff: -3.2129)
+  [*] BINANCE | FET: Old=111.16659955 -> New=0.79279066 (Diff: -110.3738)
+  [*] BINANCE | HBAR: Old=794.494 -> New=289.0 (Diff: -505.4940)
+  [*] BINANCE | IOTA: Old=807.07431186 -> New=165.15057977 (Diff: -641.9237)
+  [*] BINANCE | SOL: Old=2.05578801 -> New=3.99702072 (Diff: +1.9412)
+  [*] BINANCE | TRX: Old=127.74608762 -> New=125.0 (Diff: -2.7461)
+  [*] BINANCE | USDC: Old=856.07331611 -> New=0.0472614 (Diff: -856.0261)
+  [*] BINANCE | XRP: Old=157.56655958 -> New=156.905 (Diff: -0.6616)
+  [*] REVOLUT | BIDU: Old=3.0 -> New=102.0 (Diff: +99.0000)
+  [*] REVOLUT | DOT: Old=5.35463688 -> New=-19.78365491 (Diff: -25.1383)
+  [*] REVOLUT | SOL: Old=0.045149 -> New=-9.99 (Diff: -10.0351)
+  [*] REVOLUT | XAU: Old=0.19123 -> New=-1.941263 (Diff: -2.1325)
+
+--- UNCHANGED (3) ---
+  (Listing first 10)
+  [=] BINANCE | TON: 10.3753279
+  [=] REVOLUT | BP: 5.0
+  [=] REVOLUT | GOOGL: 2.0

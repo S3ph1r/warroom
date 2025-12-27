@@ -1,0 +1,142 @@
+{
+  "source": "D:\\Download\\Revolut\\trading-account-statement_2019-12-28_2025-12-26_it-it_e34cc5.pdf",
+  "last_processed_page": 3,
+  "total_pages": 4,
+  "transactions": [
+    {
+      "date": "2022-11-28",
+      "type": "BUY",
+      "asset": "QBTS",
+      "isin": "",
+      "quantity": 3.0,
+      "amount": 7.5,
+      "currency": "USD"
+    },
+    {
+      "date": "2022-12-22",
+      "type": "BUY",
+      "asset": "QBTS",
+      "isin": "",
+      "quantity": 20.0,
+      "amount": 41.06,
+      "currency": "USD"
+    },
+    {
+      "date": "2022-12-27",
+      "type": "BUY",
+      "asset": "QBTS",
+      "isin": "",
+      "quantity": 10.0,
+      "amount": 16.06,
+      "currency": "USD"
+    },
+    {
+      "date": "2023-01-26",
+      "type": "BUY",
+      "asset": "QBTS",
+      "isin": "",
+      "quantity": 90.0,
+      "amount": 100.07,
+      "currency": "USD"
+    },
+    {
+      "date": "2023-02-27",
+      "type": "BUY",
+      "asset": "QBTS",
+      "isin": "",
+      "quantity": 100.0,
+      "amount": 75.0,
+      "currency": "USD"
+    },
+    {
+      "date": "2023-06-06",
+      "type": "BUY",
+      "asset": "BP",
+      "isin": "",
+      "quantity": 5.0,
+      "amount": 98.0,
+      "currency": "USD"
+    },
+    {
+      "date": "2023-06-06",
+      "type": "BUY",
+      "asset": "NIO",
+      "isin": "",
+      "quantity": 17.0,
+      "amount": 2485.9,
+      "currency": "USD"
+    },
+    {
+      "date": "2023-06-06",
+      "type": "BUY",
+      "asset": "INTC",
+      "isin": "",
+      "quantity": 5.0,
+      "amount": 784.91,
+      "currency": "USD"
+    },
+    {
+      "date": "2023-06-06",
+      "type": "BUY",
+      "asset": "BIDU",
+      "isin": "",
+      "quantity": 2.0,
+      "amount": 278.9,
+      "currency": "USD"
+    },
+    {
+      "date": "2023-06-06",
+      "type": "BUY",
+      "asset": "GOOGL",
+      "isin": "",
+      "quantity": 2.0,
+      "amount": 478.9,
+      "currency": "USD"
+    },
+    {
+      "date": "2023-06-06",
+      "type": "BUY",
+      "asset": "QBTS",
+      "isin": "",
+      "quantity": 454.37552557,
+      "amount": 5891.94,
+      "currency": "USD"
+    },
+    {
+      "date": "2023-06-06",
+      "type": "BUY",
+      "asset": "AMZN",
+      "isin": "",
+      "quantity": 2.0,
+      "amount": 478.9,
+      "currency": "USD"
+    },
+    {
+      "date": "2023-06-06",
+      "type": "BUY",
+      "asset": "MAXN",
+      "isin": "",
+      "quantity": 5.0,
+      "amount": 784.91,
+      "currency": "USD"
+    },
+    {
+      "date": "2023-06-06",
+      "type": "BUY",
+      "asset": "Cash",
+      "isin": "",
+      "quantity": -1.0,
+      "amount": 487.0,
+      "currency": "USD"
+    },
+    {
+      "date": "2023-06-27",
+      "type": "BUY",
+      "asset": "BIDU",
+      "isin": "",
+      "quantity": 100.0,
+      "amount": 13945.0,
+      "currency": "USD"
+    }
+  ]
+}

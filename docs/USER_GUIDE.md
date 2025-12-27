@@ -416,6 +416,29 @@ Restituisce direttamente il file CSV con `Content-Disposition: attachment`.
 
 ---
 
+## 🔄 Universal Ingestion (Reset DB)
+
+### Funzionalità
+Il sistema permette di **ricaricare completamente il database** partendo dai file sorgente processati. Questa operazione:
+1.  **CANCELLA** tutte le transazioni e le holdings attuali.
+2.  **RICARICA** i dati dai file JSON verificati in `scripts/`.
+3.  **RICALCOLA** il portafoglio da zero.
+
+### Quando Usarlo
+- Dopo aver aggiunto nuovi documenti mensili (processati prima dagli script di ingestion).
+- Se si notano disallineamenti o dati corrotti.
+- Per allineare il DB dopo aver modificato le logiche di calcolo.
+
+### Come Eseguire
+1.  Vai nella **Dashboard**.
+2.  Clicca il pulsante rosso **RESET DB** (in alto a destra).
+3.  Conferma l'avviso di sicurezza.
+4.  Attendi il messaggio "Ingestion Completa!".
+
+**⚠️ ATTENZIONE:** Tutte le modifiche manuali (es. depositi fittizi aggiunti via UI) verranno PERSE se non sono state salvate nei file JSON sorgente.
+
+---
+
 ## 🔧 Troubleshooting
 
 ### Errore Encoding (Windows)

@@ -585,6 +585,36 @@ from fastapi.responses import StreamingResponse
 import io
 import csv
 
+@app.post("/api/ingest/run")
+def run_ingestion():
+    """Trigger the Universal Ingestion process (Wipes DB & Reloads)."""
+    import subprocess
+    logger.info("Universal Ingestion Triggered via API")
+    script_path = PROJECT_ROOT / "scripts" / "ingest_all_to_db.py"
+    
+    try:
+        # Run script as subprocess
+        result = subprocess.run(
+            [sys.executable, str(script_path)],
+            capture_output=True,
+            text=True,
+            check=True
+        )
+        logger.info(f"Ingestion Output: {result.stdout}")
+        
+        # Invalidate Portfolio Snapshot
+        if PORTFOLIO_SNAPSHOT.exists():
+            PORTFOLIO_SNAPSHOT.unlink()
+            
+        return {"status": "success", "logs": result.stdout}
+        
+    except subprocess.CalledProcessError as e:
+        logger.error(f"Ingestion Failed: {e.stderr}")
+        raise HTTPException(status_code=500, detail=f"Ingestion Failed: {e.stderr}")
+    except Exception as e:
+        logger.error(f"Ingestion Error: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
 @app.get("/api/portfolio/export-csv")
 def export_portfolio_csv():
     """Export portfolio holdings as CSV file."""

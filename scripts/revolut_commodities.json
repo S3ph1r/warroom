@@ -1,0 +1,2929 @@
+{
+  "source": "D:\\Download\\Revolut\\account-statement_2017-12-26_2025-12-26_it-it_3726b9.pdf",
+  "last_processed_page": 24,
+  "total_pages": 25,
+  "transactions": [
+    {
+      "date": "2017-12-28",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": -1,
+      "amount": 50.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2017-12-28",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": -1,
+      "amount": 6.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2018-02-16",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": -1,
+      "amount": 20.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2018-04-20",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": -1,
+      "amount": 4.4,
+      "currency": "EUR"
+    },
+    {
+      "date": "2019-09-19",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": -1,
+      "amount": 100.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2019-12-28",
+      "type": "CONVERSION",
+      "asset": "USD",
+      "isin": "",
+      "quantity": -1,
+      "amount": 44.97,
+      "currency": "EUR"
+    },
+    {
+      "date": "2020-02-11",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": -1,
+      "amount": 1500.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2020-02-15",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -251.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2020-02-25",
+      "type": "BUY",
+      "asset": "Eurospin",
+      "isin": "",
+      "quantity": 0,
+      "amount": -17.44,
+      "currency": "EUR"
+    },
+    {
+      "date": "2020-02-27",
+      "type": "BUY",
+      "asset": "L'ora Del Caffe'",
+      "isin": "",
+      "quantity": 0,
+      "amount": -21.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2020-02-29",
+      "type": "BUY",
+      "asset": "Bellavista Cafe E Lou",
+      "isin": "",
+      "quantity": 0,
+      "amount": -9.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2020-03-02",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -110.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2020-03-03",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -243.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2020-03-03",
+      "type": "BUY",
+      "asset": "Veronika Pub Mpos",
+      "isin": "",
+      "quantity": 0,
+      "amount": -11.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2020-03-04",
+      "type": "BUY",
+      "asset": "Expedia",
+      "isin": "",
+      "quantity": 0,
+      "amount": -4.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2020-03-04",
+      "type": "BUY",
+      "asset": "Expedia",
+      "isin": "",
+      "quantity": 0,
+      "amount": -52.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2020-03-04",
+      "type": "BUY",
+      "asset": "Expedia",
+      "isin": "",
+      "quantity": 0,
+      "amount": -138.55,
+      "currency": "EUR"
+    },
+    {
+      "date": "2020-03-04",
+      "type": "BUY",
+      "asset": "EasyJet",
+      "isin": "",
+      "quantity": 0,
+      "amount": -19.96,
+      "currency": "EUR"
+    },
+    {
+      "date": "2020-03-04",
+      "type": "BUY",
+      "asset": "EasyJet",
+      "isin": "",
+      "quantity": 0,
+      "amount": -219.96,
+      "currency": "EUR"
+    },
+    {
+      "date": "2020-03-09",
+      "type": "BUY",
+      "asset": "EasyJet",
+      "isin": "",
+      "quantity": 0,
+      "amount": -151.96,
+      "currency": "EUR"
+    },
+    {
+      "date": "2020-03-09",
+      "type": "BUY",
+      "asset": "Expedia",
+      "isin": "",
+      "quantity": 0,
+      "amount": -32.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2020-03-09",
+      "type": "BUY",
+      "asset": "EasyJet",
+      "isin": "",
+      "quantity": 0,
+      "amount": -158.98,
+      "currency": "EUR"
+    },
+    {
+      "date": "2020-03-09",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -122.4,
+      "currency": "EUR"
+    },
+    {
+      "date": "2020-03-10",
+      "type": "BUY",
+      "asset": "Villa Mirco",
+      "isin": "",
+      "quantity": 0,
+      "amount": -12.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2020-04-05",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 170.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2020-04-06",
+      "type": "BUY",
+      "asset": "chufee.com",
+      "isin": "",
+      "quantity": -1,
+      "amount": 1.4,
+      "currency": "EUR"
+    },
+    {
+      "date": "2020-04-06",
+      "type": "SELL",
+      "asset": "chufee.com",
+      "isin": "",
+      "quantity": 1,
+      "amount": 168.98,
+      "currency": "EUR"
+    },
+    {
+      "date": "2020-04-07",
+      "type": "BUY",
+      "asset": "YouTube",
+      "isin": "",
+      "quantity": -1,
+      "amount": 9.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2020-06-23",
+      "type": "BUY",
+      "asset": "LORENA BUNETTO",
+      "isin": "",
+      "quantity": -1,
+      "amount": 1.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2020-06-23",
+      "type": "SELL",
+      "asset": "LORENA BUNETTO",
+      "isin": "",
+      "quantity": 1,
+      "amount": 80.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2020-06-23",
+      "type": "SELL",
+      "asset": "LORENA BUNETTO",
+      "isin": "",
+      "quantity": 1,
+      "amount": 60.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2020-06-23",
+      "type": "SELL",
+      "asset": "LORENA BUNETTO",
+      "isin": "",
+      "quantity": 1,
+      "amount": 100.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2020-06-24",
+      "type": "BUY",
+      "asset": "Roberto Guareschi",
+      "isin": "",
+      "quantity": -1,
+      "amount": 350.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2020-07-28",
+      "type": "BUY",
+      "asset": "Roberto Guareschi",
+      "isin": "",
+      "quantity": -1,
+      "amount": 45.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-06-30",
+      "type": "WITHDRAWAL",
+      "amount": "-2.99",
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-06-30",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -2.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-07-20",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -10.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-07-21",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -1000.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-07-22",
+      "type": "BUY",
+      "asset": "XLM",
+      "isin": "",
+      "quantity": 963.99,
+      "amount": -49.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-07-25",
+      "type": "BUY",
+      "asset": "USD",
+      "isin": "",
+      "quantity": 719.24,
+      "amount": -244.75,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-07-26",
+      "type": "BUY",
+      "asset": "MANA",
+      "isin": "",
+      "quantity": 674.24,
+      "amount": -45.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-07-26",
+      "type": "BUY",
+      "asset": "XAU",
+      "isin": "",
+      "quantity": 0.058737,
+      "amount": -100.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-07-31",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -247.31,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-08-01",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 301.93,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-08-02",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -77.21,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-08-08",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 52.21,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-08-14",
+      "type": "BUY",
+      "asset": "MATIC",
+      "isin": "",
+      "quantity": -1,
+      "amount": -2.21,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-08-17",
+      "type": "SELL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -700.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-08-22",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 677.21,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-08-29",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 652.21,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-08-31",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 645.21,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-09-02",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -15.3,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-09-05",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -427.35,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-09-06",
+      "type": "BUY",
+      "asset": "ETH",
+      "isin": "",
+      "quantity": -1,
+      "amount": -302.35,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-09-12",
+      "type": "BUY",
+      "asset": "MANA",
+      "isin": "",
+      "quantity": -1,
+      "amount": -80.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-09-12",
+      "type": "BUY",
+      "asset": "MATIC",
+      "isin": "",
+      "quantity": -1,
+      "amount": -100.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-09-14",
+      "type": "BUY",
+      "asset": "DOT",
+      "isin": "",
+      "quantity": -1,
+      "amount": -30.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-09-20",
+      "type": "SELL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -500.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-09-21",
+      "type": "BUY",
+      "asset": "ETH",
+      "isin": "",
+      "quantity": -1,
+      "amount": -417.35,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-09-26",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -305.57,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-10-03",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -268.78,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-10-05",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -150.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-10-14",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -18.78,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-11-27",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.1,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-12-06",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -709.04,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-12-07",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 300.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-12-07",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 300.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-12-08",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 300.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-12-18",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 200.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-12-21",
+      "type": "BUY",
+      "asset": "BTC",
+      "isin": "",
+      "quantity": 0,
+      "amount": -109.04,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-12-23",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -515.05,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-01-16",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 50.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-01-25",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -74.89,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-01-30",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -154.64,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-02-01",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -28.97,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-02-01",
+      "type": "BUY",
+      "asset": "BTC",
+      "isin": "",
+      "quantity": 0,
+      "amount": -4.37,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-02-02",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 204.37,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-02-02",
+      "type": "BUY",
+      "asset": "GALA",
+      "isin": "",
+      "quantity": 0,
+      "amount": -54.37,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-02-09",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -51.36,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-02-09",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 51.09,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-02-09",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -2.54,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-02-14",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 302.54,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-02-14",
+      "type": "BUY",
+      "asset": "SAND",
+      "isin": "",
+      "quantity": -1.0,
+      "amount": -87.15,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-02-21",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 1.0,
+      "amount": -40.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-02-25",
+      "type": "BUY",
+      "asset": "BTC",
+      "isin": "",
+      "quantity": -1.0,
+      "amount": -75.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-03-12",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 1.0,
+      "amount": 300.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-03-13",
+      "type": "BUY",
+      "asset": "BTC",
+      "isin": "",
+      "quantity": -1.0,
+      "amount": -97.33,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-03-20",
+      "type": "BUY",
+      "asset": "BTC",
+      "isin": "",
+      "quantity": -1.0,
+      "amount": -100.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-03-22",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 1.0,
+      "amount": 200.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-03-24",
+      "type": "BUY",
+      "asset": "XAU",
+      "isin": "",
+      "quantity": -1.0,
+      "amount": -91.86,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-03-27",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 1.0,
+      "amount": -21.5,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-03-30",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 1.0,
+      "amount": 100.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-04-03",
+      "type": "BUY",
+      "asset": "XAU",
+      "isin": "",
+      "quantity": -1.0,
+      "amount": -45.9,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-04-10",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 1.0,
+      "amount": 200.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-04-11",
+      "type": "BUY",
+      "asset": "Simplex",
+      "isin": "",
+      "quantity": -1,
+      "amount": -53.46,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-04-13",
+      "type": "BUY",
+      "asset": "BTC",
+      "isin": "",
+      "quantity": 1,
+      "amount": -153.85,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-04-13",
+      "type": "BUY",
+      "asset": "ETH",
+      "isin": "",
+      "quantity": 1,
+      "amount": -153.85,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-04-13",
+      "type": "WITHDRAWAL",
+      "asset": "Pocket",
+      "isin": "",
+      "quantity": -1,
+      "amount": -30.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-04-23",
+      "type": "BUY",
+      "asset": "Simplex",
+      "isin": "",
+      "quantity": -1,
+      "amount": -73.68,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-05-11",
+      "type": "SELL",
+      "asset": "GALA",
+      "isin": "",
+      "quantity": 1,
+      "amount": 73.26,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-05-25",
+      "type": "BUY",
+      "asset": "BTC",
+      "isin": "",
+      "quantity": 1,
+      "amount": -100.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-05-25",
+      "type": "BUY",
+      "asset": "ETH",
+      "isin": "",
+      "quantity": 1,
+      "amount": -50.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-06-28",
+      "type": "BUY",
+      "asset": "Bitget",
+      "isin": "",
+      "quantity": -1,
+      "amount": -100.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-06-30",
+      "type": "BUY",
+      "asset": "BTC",
+      "isin": "",
+      "quantity": 1,
+      "amount": -100.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-07-16",
+      "type": "BUY",
+      "asset": "ETH",
+      "isin": "",
+      "quantity": 1,
+      "amount": -100.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-07-28",
+      "type": "WITHDRAWAL",
+      "asset": "Pocket",
+      "isin": "",
+      "quantity": -1,
+      "amount": -10.5,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-08-08",
+      "type": "BUY",
+      "asset": "MANA",
+      "isin": "",
+      "quantity": 1,
+      "amount": -30.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-08-18",
+      "type": "BUY",
+      "asset": "BTC",
+      "isin": "",
+      "quantity": 1,
+      "amount": -150.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-10-01",
+      "type": "DEPOSIT",
+      "asset": "EUR Savings",
+      "isin": "",
+      "quantity": 1,
+      "amount": 10.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-10-02",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -40.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-10-10",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 200.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-10-10",
+      "type": "BUY",
+      "asset": "BTC",
+      "isin": "",
+      "quantity": 0,
+      "amount": -100.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-10-24",
+      "type": "BUY",
+      "asset": "BTC",
+      "isin": "",
+      "quantity": 0,
+      "amount": -100.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-11-09",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 1100.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-11-09",
+      "type": "BUY",
+      "asset": "BTC",
+      "isin": "",
+      "quantity": 0,
+      "amount": -500.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-11-17",
+      "type": "BUY",
+      "asset": "ETH",
+      "isin": "",
+      "quantity": 0,
+      "amount": -200.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-12-09",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -255.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-12-09",
+      "type": "BUY",
+      "asset": "BTC",
+      "isin": "",
+      "quantity": 0,
+      "amount": -255.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-12-10",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 600.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-12-11",
+      "type": "BUY",
+      "asset": "BTC",
+      "isin": "",
+      "quantity": 0,
+      "amount": -100.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-12-12",
+      "type": "BUY",
+      "asset": "BTC",
+      "isin": "",
+      "quantity": 0,
+      "amount": -100.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-02-11",
+      "type": "BUY",
+      "asset": "ETH",
+      "isin": "",
+      "quantity": 0,
+      "amount": -100.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-08-07",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -45.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-08-07",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -19.9,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-09-17",
+      "type": "SELL",
+      "asset": "ETH",
+      "isin": "",
+      "quantity": -1,
+      "amount": -996.77,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-09-18",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 10.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-09-19",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 10.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-09-20",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -1000.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-10-05",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -2.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-10-09",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -1500.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-10-09",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 1500.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-10-25",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -10.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-10",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -3.6,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-10",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 8.1,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-11",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -4.19,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-17",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -12.1,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-18",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.01,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-20",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 0.01,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-12-09",
+      "type": "SELL",
+      "asset": "XLM",
+      "isin": "",
+      "quantity": -1,
+      "amount": -185.03,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-12-09",
+      "type": "SELL",
+      "asset": "MANA",
+      "isin": "",
+      "quantity": -1,
+      "amount": -86.57,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-12-09",
+      "type": "SELL",
+      "asset": "SAND",
+      "isin": "",
+      "quantity": -1,
+      "amount": -86.57,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-12-09",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -8.36,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-12-12",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -6.1,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-12-13",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -1.39,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-12-16",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -61.02,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-05",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -4.86,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-10",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -5.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-11",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -5.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-13",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -3.3,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-14",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -4.67,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-15",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -2.55,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-24",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -54.8,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-29",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -4.59,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-30",
+      "type": "SELL",
+      "asset": "N-and Italia Srl",
+      "isin": "",
+      "quantity": -1.0,
+      "amount": 405.83,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-02-01",
+      "type": "BUY",
+      "asset": "Accredita EUR Risparmi da EUR",
+      "isin": "",
+      "quantity": 1.0,
+      "amount": 6.7,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-02-02",
+      "type": "SELL",
+      "asset": "Deliveroo",
+      "isin": "",
+      "quantity": -1.0,
+      "amount": 4.33,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-02-04",
+      "type": "BUY",
+      "asset": "Accredita EUR Risparmi da EUR",
+      "isin": "",
+      "quantity": 1.0,
+      "amount": 10.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-02-05",
+      "type": "SELL",
+      "asset": "N-and Italia Srl",
+      "isin": "",
+      "quantity": -1.0,
+      "amount": 5.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-02-14",
+      "type": "BUY",
+      "asset": "Accredita EUR Risparmi da EUR",
+      "isin": "",
+      "quantity": 1.0,
+      "amount": 10.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-02-15",
+      "type": "SELL",
+      "asset": "N-and Italia Srl",
+      "isin": "",
+      "quantity": -1.0,
+      "amount": 5.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-02-19",
+      "type": "BUY",
+      "asset": "Accredita EUR Risparmi da EUR",
+      "isin": "",
+      "quantity": 1.0,
+      "amount": 10.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-02-20",
+      "type": "SELL",
+      "asset": "N-and Italia Srl",
+      "isin": "",
+      "quantity": -1.0,
+      "amount": 5.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-02-21",
+      "type": "BUY",
+      "asset": "Accredita EUR Risparmi da EUR",
+      "isin": "",
+      "quantity": 1.0,
+      "amount": 10.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-02-22",
+      "type": "SELL",
+      "asset": "Ipergrow",
+      "isin": "",
+      "quantity": -1.0,
+      "amount": 58.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-02-25",
+      "type": "WITHDRAWAL",
+      "asset": "Pocket",
+      "isin": "",
+      "quantity": -1.0,
+      "amount": 70.8,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-02-27",
+      "type": "BUY",
+      "asset": "Accredita EUR Risparmi da EUR",
+      "isin": "",
+      "quantity": 1.0,
+      "amount": 2.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-02-28",
+      "type": "SELL",
+      "asset": "Deliveroo",
+      "isin": "",
+      "quantity": -1.0,
+      "amount": 18.8,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-03-01",
+      "type": "BUY",
+      "asset": "Accredita EUR Risparmi da EUR",
+      "isin": "",
+      "quantity": 1.0,
+      "amount": 9.2,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-03-04",
+      "type": "BUY",
+      "asset": "Accredita EUR Risparmi da EUR",
+      "isin": "",
+      "quantity": 1.0,
+      "amount": 10.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-03-04",
+      "type": "WITHDRAWAL",
+      "asset": "Pocket",
+      "isin": "",
+      "quantity": -1.0,
+      "amount": 21.2,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-03-04",
+      "type": "BUY",
+      "asset": "Roberto Guareschi",
+      "isin": "",
+      "quantity": 1.0,
+      "amount": 800.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-03-05",
+      "type": "SELL",
+      "asset": "N-and Italia Srl",
+      "isin": "",
+      "quantity": -1.0,
+      "amount": 5.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-03-08",
+      "type": "BUY",
+      "asset": "Accredita EUR Risparmi da EUR",
+      "isin": "",
+      "quantity": 1.0,
+      "amount": 10.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-03-10",
+      "type": "WITHDRAWAL",
+      "asset": "N-and Italia Srl",
+      "isin": "",
+      "quantity": -1,
+      "amount": 5.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-03-10",
+      "type": "DEPOSIT",
+      "asset": "N-and Italia Srl",
+      "isin": "",
+      "quantity": 1,
+      "amount": 219.96,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-03-17",
+      "type": "DEPOSIT",
+      "asset": "Accredita EUR Risparmi da EUR",
+      "isin": "",
+      "quantity": 1,
+      "amount": 10.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-03-18",
+      "type": "WITHDRAWAL",
+      "asset": "N-and Italia Srl",
+      "isin": "",
+      "quantity": -1,
+      "amount": 5.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-03-23",
+      "type": "DEPOSIT",
+      "asset": "Accredita EUR Risparmi da EUR",
+      "isin": "",
+      "quantity": 1,
+      "amount": 5.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-03-24",
+      "type": "WITHDRAWAL",
+      "asset": "Roadhouse",
+      "isin": "",
+      "quantity": -1,
+      "amount": 30.5,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-03-26",
+      "type": "DEPOSIT",
+      "asset": "Accredita EUR Risparmi da EUR",
+      "isin": "",
+      "quantity": 1,
+      "amount": 10.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-03-27",
+      "type": "WITHDRAWAL",
+      "asset": "N-and Italia Srl",
+      "isin": "",
+      "quantity": -1,
+      "amount": 5.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-04-03",
+      "type": "WITHDRAWAL",
+      "asset": "N-and Italia Srl",
+      "isin": "",
+      "quantity": -1,
+      "amount": 5.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-04-08",
+      "type": "WITHDRAWAL",
+      "asset": "N-and Italia Srl",
+      "isin": "",
+      "quantity": -1,
+      "amount": 5.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-04-13",
+      "type": "WITHDRAWAL",
+      "asset": "N-and Italia Srl",
+      "isin": "",
+      "quantity": -1,
+      "amount": 5.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-04-17",
+      "type": "WITHDRAWAL",
+      "asset": "N-and Italia Srl",
+      "isin": "",
+      "quantity": -1,
+      "amount": 5.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-04-18",
+      "type": "WITHDRAWAL",
+      "asset": "N-and Italia Srl",
+      "isin": "",
+      "quantity": -1,
+      "amount": 5.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-04-18",
+      "type": "WITHDRAWAL",
+      "asset": "Accredita EUR Risparmi da EUR",
+      "isin": "",
+      "quantity": -1,
+      "amount": 5.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-04-18",
+      "type": "WITHDRAWAL",
+      "asset": "Accredita EUR Risparmi da EUR",
+      "isin": "",
+      "quantity": -1,
+      "amount": 8.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-04-19",
+      "type": "WITHDRAWAL",
+      "asset": "Glovo",
+      "isin": "",
+      "quantity": -1,
+      "amount": 20.2,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-04-19",
+      "type": "DEPOSIT",
+      "asset": "Accredita EUR Risparmi da EUR",
+      "isin": "",
+      "quantity": 1,
+      "amount": 8.6,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-04-20",
+      "type": "WITHDRAWAL",
+      "asset": "Glovo",
+      "isin": "",
+      "quantity": -1,
+      "amount": 1.14,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-04-22",
+      "type": "DEPOSIT",
+      "asset": "Accredita EUR Risparmi da EUR",
+      "isin": "",
+      "quantity": 1,
+      "amount": 10.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-04-23",
+      "type": "WITHDRAWAL",
+      "asset": "N-and Italia Srl",
+      "isin": "",
+      "quantity": -1,
+      "amount": 5.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-04-23",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -143.12,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-04-30",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 133.12,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-05-06",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -30.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-05-18",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -10.1,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-05-29",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -10.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-08-19",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -100.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-08-19",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -1.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-09-25",
+      "type": "SELL",
+      "asset": "EBAY S.A.R.L.",
+      "isin": "",
+      "quantity": -1,
+      "amount": 198.25,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-10-03",
+      "type": "BUY",
+      "asset": "Franzoni Angela",
+      "isin": "",
+      "quantity": 1,
+      "amount": -30.5,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-10-05",
+      "type": "BUY",
+      "asset": "Ipergrow Srl",
+      "isin": "",
+      "quantity": 1,
+      "amount": -85.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-10-05",
+      "type": "BUY",
+      "asset": "Amazon.it*vo3bj9is5, Www.amazon.it",
+      "isin": "",
+      "quantity": 1,
+      "amount": -23.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-10-07",
+      "type": "BUY",
+      "asset": "Revolut Ltd",
+      "isin": "",
+      "quantity": 1,
+      "amount": -100.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-10-07",
+      "type": "BUY",
+      "asset": "N-and Italia Srl",
+      "isin": "",
+      "quantity": 1,
+      "amount": -5.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-10-07",
+      "type": "BUY",
+      "asset": "Medi Saluser S.r.l.",
+      "isin": "",
+      "quantity": 1,
+      "amount": -67.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-10-07",
+      "type": "BUY",
+      "asset": "Cav. Alinovi Guido",
+      "isin": "",
+      "quantity": 1,
+      "amount": -13.92,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-08",
+      "type": "BUY",
+      "asset": "EUR",
+      "isin": "",
+      "quantity": -1,
+      "amount": 28.03,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-09",
+      "type": "BUY",
+      "asset": "EUR",
+      "isin": "",
+      "quantity": -1,
+      "amount": 19.43,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-10",
+      "type": "BUY",
+      "asset": "Glovo",
+      "isin": "",
+      "quantity": -1,
+      "amount": 17.29,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-10",
+      "type": "BUY",
+      "asset": "N-and Italia Srl",
+      "isin": "",
+      "quantity": -1,
+      "amount": 12.29,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-13",
+      "type": "BUY",
+      "asset": "N-and Italia Srl",
+      "isin": "",
+      "quantity": -1,
+      "amount": 7.29,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-13",
+      "type": "WITHDRAWAL",
+      "asset": "Pocket",
+      "isin": "",
+      "quantity": -18.6,
+      "amount": 25.89,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-17",
+      "type": "BUY",
+      "asset": "EUR",
+      "isin": "",
+      "quantity": -1,
+      "amount": 15.89,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-17",
+      "type": "WITHDRAWAL",
+      "asset": "Pocket",
+      "isin": "",
+      "quantity": -10,
+      "amount": 25.89,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-18",
+      "type": "BUY",
+      "asset": "EUR",
+      "isin": "",
+      "quantity": -1,
+      "amount": 15.89,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-18",
+      "type": "BUY",
+      "asset": "N-and Italia Srl",
+      "isin": "",
+      "quantity": -1,
+      "amount": 10.89,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-19",
+      "type": "BUY",
+      "asset": "Glovo",
+      "isin": "",
+      "quantity": -1,
+      "amount": 7.17,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-19",
+      "type": "BUY",
+      "asset": "N-and Italia Srl",
+      "isin": "",
+      "quantity": -1,
+      "amount": 2.17,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-20",
+      "type": "WITHDRAWAL",
+      "asset": "Pocket",
+      "isin": "",
+      "quantity": -10,
+      "amount": 12.17,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-20",
+      "type": "BUY",
+      "asset": "EUR",
+      "isin": "",
+      "quantity": -1,
+      "amount": 4.27,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-20",
+      "type": "WITHDRAWAL",
+      "asset": "Pocket",
+      "isin": "",
+      "quantity": -7.9,
+      "amount": 12.17,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-21",
+      "type": "BUY",
+      "asset": "Glovo",
+      "isin": "",
+      "quantity": -1,
+      "amount": 9.96,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-26",
+      "type": "BUY",
+      "asset": "N-and Italia Srl",
+      "isin": "",
+      "quantity": -1,
+      "amount": 4.96,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-29",
+      "type": "DEPOSIT",
+      "asset": "Google Pay",
+      "isin": "",
+      "quantity": 1,
+      "amount": 104.96,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-29",
+      "type": "BUY",
+      "asset": "EUR",
+      "isin": "",
+      "quantity": -1,
+      "amount": 94.96,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-01",
+      "type": "BUY",
+      "asset": "Glovo",
+      "isin": "",
+      "quantity": -1,
+      "amount": 92.87,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-01",
+      "type": "BUY",
+      "asset": "N-and Italia Srl",
+      "isin": "",
+      "quantity": -1,
+      "amount": 87.87,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-01",
+      "type": "BUY",
+      "asset": "EUR",
+      "isin": "",
+      "quantity": -1,
+      "amount": 77.77,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-01",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -20.2,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-02",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 5.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-08",
+      "type": "BUY",
+      "asset": "Amazon.it*z14cp8r94, Www.amazon.it",
+      "isin": "",
+      "quantity": -1,
+      "amount": -28.5,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-13",
+      "type": "BUY",
+      "asset": "Amzn Mktp It*ze0gu1314, Amzn.com/bill",
+      "isin": "",
+      "quantity": -1,
+      "amount": -8.91,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-22",
+      "type": "BUY",
+      "asset": "Openrouter, Inc, Openrouter.ai, NY",
+      "isin": "",
+      "quantity": -1,
+      "amount": -4.97,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-08-05",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": -1,
+      "amount": 207.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-04-13",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": -1,
+      "amount": 30.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-07-28",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": -1,
+      "amount": 10.5,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-01-09",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": -1,
+      "amount": 19.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-03-11",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 19.7
+    },
+    {
+      "date": "2024-03-14",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 22.7
+    },
+    {
+      "date": "2024-03-15",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -22.7
+    },
+    {
+      "date": "2024-04-04",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 3
+    },
+    {
+      "date": "2024-04-10",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 12
+    },
+    {
+      "date": "2024-04-14",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 22
+    },
+    {
+      "date": "2024-05-03",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -22
+    },
+    {
+      "date": "2024-06-05",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 11.2
+    },
+    {
+      "date": "2024-06-18",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 17.62
+    },
+    {
+      "date": "2024-07-05",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 23.88
+    },
+    {
+      "date": "2024-06-06",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -23.88
+    },
+    {
+      "date": "2024-06-06",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 9.9
+    },
+    {
+      "date": "2024-06-06",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 19.9
+    },
+    {
+      "date": "2024-07-07",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -19.9
+    },
+    {
+      "date": "2024-09-19",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 10
+    },
+    {
+      "date": "2024-10-25",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -10
+    },
+    {
+      "date": "2024-11-09",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 4
+    },
+    {
+      "date": "2024-11-10",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 12.1
+    },
+    {
+      "date": "2024-11-11",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -12.1
+    },
+    {
+      "date": "2024-12-12",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 6.1
+    },
+    {
+      "date": "2025-01-05",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 7.5
+    },
+    {
+      "date": "2025-01-10",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 17
+    },
+    {
+      "date": "2025-01-10",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 27
+    },
+    {
+      "date": "2025-01-13",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 30.3
+    },
+    {
+      "date": "2025-01-13",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 40.3
+    },
+    {
+      "date": "2025-01-14",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 44.8
+    },
+    {
+      "date": "2025-01-20",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 54.8
+    },
+    {
+      "date": "2025-01-24",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -54.8
+    },
+    {
+      "date": "2025-01-24",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 10
+    },
+    {
+      "date": "2025-01-28",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 14.1
+    },
+    {
+      "date": "2025-01-29",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 24.1
+    },
+    {
+      "date": "2025-02-01",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 30.8
+    },
+    {
+      "date": "2025-02-04",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 40.8
+    },
+    {
+      "date": "2025-02-14",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 50.8
+    },
+    {
+      "date": "2025-02-19",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 60.8
+    },
+    {
+      "date": "2025-02-21",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 70.8
+    },
+    {
+      "date": "2025-02-25",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -70.8
+    },
+    {
+      "date": "2025-02-27",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 2
+    },
+    {
+      "date": "2025-03-01",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 11.2
+    },
+    {
+      "date": "2025-03-04",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 21.2
+    },
+    {
+      "date": "2025-03-04",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -21.2
+    },
+    {
+      "date": "2025-03-08",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 10
+    },
+    {
+      "date": "2025-03-17",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 20
+    },
+    {
+      "date": "2025-03-23",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 25
+    },
+    {
+      "date": "2025-03-26",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 35
+    },
+    {
+      "date": "2025-04-02",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 45
+    },
+    {
+      "date": "2025-04-08",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 55
+    },
+    {
+      "date": "2025-04-13",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 65
+    },
+    {
+      "date": "2025-04-17",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 75
+    },
+    {
+      "date": "2025-04-18",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 80
+    },
+    {
+      "date": "2025-04-18",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 88
+    },
+    {
+      "date": "2025-04-19",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 96.6
+    },
+    {
+      "date": "2025-04-22",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 106.6
+    },
+    {
+      "date": "2025-04-23",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -106.6
+    },
+    {
+      "date": "2025-04-30",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 1,
+      "amount": 10.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-05-06",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 1,
+      "amount": 10.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-05-09",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 1,
+      "amount": 10.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-05-14",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 1,
+      "amount": 10.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-05-18",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 1,
+      "amount": 10.1,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-05-23",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 1,
+      "amount": 10.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-06-08",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 1,
+      "amount": 9.7,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-06-08",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 1,
+      "amount": 10.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-06-08",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 1,
+      "amount": 0.8,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-06-08",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 1,
+      "amount": 9.5,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-06-08",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 1,
+      "amount": 10.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-06-08",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 1,
+      "amount": 5.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-06-08",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 1,
+      "amount": 1.5,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-06-08",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 1,
+      "amount": 10.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-10-11",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 1,
+      "amount": 10.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-10-15",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 1,
+      "amount": 10.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-10-20",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 1,
+      "amount": 0.1,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-10-22",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 1,
+      "amount": 10.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-10-25",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 1,
+      "amount": 10.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-10-27",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": -1,
+      "amount": 111.8,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-10-28",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 1,
+      "amount": 10.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-04",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 1,
+      "amount": 7.5,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-05",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 27.5
+    },
+    {
+      "date": "2025-11-08",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -27.5
+    },
+    {
+      "date": "2025-11-08",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 10
+    },
+    {
+      "date": "2025-11-09",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 8.6
+    },
+    {
+      "date": "2025-11-13",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -18.6
+    },
+    {
+      "date": "2025-11-17",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 10
+    },
+    {
+      "date": "2025-11-17",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -10
+    },
+    {
+      "date": "2025-11-18",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 10
+    },
+    {
+      "date": "2025-11-20",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -10
+    },
+    {
+      "date": "2025-11-20",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 7.9
+    },
+    {
+      "date": "2025-11-20",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -7.9
+    },
+    {
+      "date": "2025-11-29",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 10
+    },
+    {
+      "date": "2025-11-30",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 0.1
+    },
+    {
+      "date": "2025-12-01",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 10.1
+    },
+    {
+      "date": "2025-12-01",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -20.2
+    },
+    {
+      "date": "2025-12-02",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 5
+    },
+    {
+      "date": "2025-12-12",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 0.9
+    },
+    {
+      "date": "2025-12-22",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 0.3
+    }
+  ]
+}

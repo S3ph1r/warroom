@@ -132,15 +132,13 @@ warroom/
 - ✅ **Multi-Currency Engine v2**:
     - Robust `GBp` (Pence) handling for LSE stocks
     - Auto-conversion for USD, HKD, DKK, CHF -> EUR
-- ✅ **AI Document Ingestion (Universal Parser) 🤖**:
-    - **Agent-Agnostic**: One parser for all brokers (BG Saxo, Scalable, etc.)
-    - **Mistral PDF Loop**: Intelligent page-by-page transaction extraction for complex PDF reports.
-    - **Semantic Understanding**: Distinguishes "Holdings" vs "Transactions" based on content, not filenames.
-    - **Auto-Reconciliation Engine**:
-        - Rebuilds asset history from transactions (2022-Today).
-        - Compares calculated history vs bank snapshot.
-        - Automatically generates "Initial Balance" entries to fix gaps.
-        - **Verified**: Matches bank totals perfectly (e.g. Scalable € 4,145.74 verified).
+- ✅ **Universal Ingestion System 2.0 (New) 🤖**:
+    - **One-Click Ingestion**: "Reset DB & Reload" button directly in Dashboard.
+    - **5 Brokers Connected**: Full support for BG Saxo, Scalable, Revolut (Stocks+Crypto), Trade Republic, Binance.
+    - **Hybrid Parsing**: Mistral LLM for Unstructured PDFs + Deterministic scripts for CSVs.
+    - **Report & Compare**: Generates detailed comparison reports (Old vs New DB) to verify data integrity.
+    - **Clean Data**: Standardized Tickers/Names, verified history, and calculated P&L.
+    - **Auto-Reconciliation**: Rebuilds portfolio state from thousands of historical transactions.
 
 ## 🔒 Security
 

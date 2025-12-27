@@ -8,6 +8,7 @@
         Download,
         FileText,
         Plus,
+        Database,
     } from "lucide-svelte";
     import AssetTable from "./components/AssetTable.svelte";
     import TransactionModal from "./components/TransactionModal.svelte";
@@ -163,6 +164,30 @@
 
     function exportPDF() {
         window.open(`${API_BASE}/api/reports/pdf`, "_blank");
+    }
+
+    async function handleIngest() {
+        if (
+            !confirm(
+                "⚠️ ATTENZIONE ⚠️\n\nQuesta operazione AZZERERÀ il database (Holdings & Transazioni) e ricaricherà tutto dai file processati.\n\nSei sicuro di voler procedere?",
+            )
+        ) {
+            return;
+        }
+        try {
+            const res = await fetch(`${API_BASE}/api/ingest/run`, {
+                method: "POST",
+            });
+            if (!res.ok) {
+                const err = await res.json();
+                throw new Error(err.detail || "Ingestion Failed");
+            }
+            const result = await res.json();
+            alert("✅ Ingestion Completa!\n\nDati ricaricati con successo.");
+            await fetchData();
+        } catch (e) {
+            alert("❌ Errore Ingestion: " + e.message);
+        }
     }
 
     // ... (rest of functions) ...
@@ -426,6 +451,16 @@
                 Portfolio Overview
             </h1>
             <div class="flex items-center gap-2">
+                <!-- Ingest Button -->
+                <button
+                    on:click={handleIngest}
+                    class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-red-600 text-white hover:bg-red-700 transition-all shadow-lg shadow-red-900/20 text-xs font-bold uppercase tracking-wider mr-2"
+                    title="Reset DB & Reload Data"
+                >
+                    <Database size={14} />
+                    Reset DB
+                </button>
+
                 <!-- New Transaction Button -->
                 <button
                     on:click={openNewTransaction}

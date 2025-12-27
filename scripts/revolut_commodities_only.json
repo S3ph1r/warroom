@@ -1,0 +1,31 @@
+{
+  "transactions": [
+    {
+      "date": "2022-07-26",
+      "type": "BUY",
+      "asset": "XAU",
+      "isin": "",
+      "quantity": 0.058737,
+      "amount": -100.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-03-24",
+      "type": "BUY",
+      "asset": "XAU",
+      "isin": "",
+      "quantity": -1.0,
+      "amount": -91.86,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-04-03",
+      "type": "BUY",
+      "asset": "XAU",
+      "isin": "",
+      "quantity": -1.0,
+      "amount": -45.9,
+      "currency": "EUR"
+    }
+  ]
+}

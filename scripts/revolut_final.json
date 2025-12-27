@@ -1,0 +1,709 @@
+{
+  "transactions": [
+    {
+      "date": "2022-11-28",
+      "type": "BUY",
+      "asset": "QBTS",
+      "isin": "",
+      "quantity": 3.0,
+      "amount": 7.5,
+      "currency": "USD"
+    },
+    {
+      "date": "2022-12-22",
+      "type": "BUY",
+      "asset": "QBTS",
+      "isin": "",
+      "quantity": 20.0,
+      "amount": 41.06,
+      "currency": "USD"
+    },
+    {
+      "date": "2022-12-27",
+      "type": "BUY",
+      "asset": "QBTS",
+      "isin": "",
+      "quantity": 10.0,
+      "amount": 16.06,
+      "currency": "USD"
+    },
+    {
+      "date": "2023-01-26",
+      "type": "BUY",
+      "asset": "QBTS",
+      "isin": "",
+      "quantity": 90.0,
+      "amount": 100.07,
+      "currency": "USD"
+    },
+    {
+      "date": "2023-02-27",
+      "type": "BUY",
+      "asset": "QBTS",
+      "isin": "",
+      "quantity": 100.0,
+      "amount": 75.0,
+      "currency": "USD"
+    },
+    {
+      "date": "2023-06-06",
+      "type": "BUY",
+      "asset": "BP",
+      "isin": "",
+      "quantity": 5.0,
+      "amount": 98.0,
+      "currency": "USD"
+    },
+    {
+      "date": "2023-06-06",
+      "type": "BUY",
+      "asset": "NIO",
+      "isin": "",
+      "quantity": 17.0,
+      "amount": 2485.9,
+      "currency": "USD"
+    },
+    {
+      "date": "2023-06-06",
+      "type": "BUY",
+      "asset": "INTC",
+      "isin": "",
+      "quantity": 5.0,
+      "amount": 784.91,
+      "currency": "USD"
+    },
+    {
+      "date": "2023-06-06",
+      "type": "BUY",
+      "asset": "BIDU",
+      "isin": "",
+      "quantity": 2.0,
+      "amount": 278.9,
+      "currency": "USD"
+    },
+    {
+      "date": "2023-06-06",
+      "type": "BUY",
+      "asset": "GOOGL",
+      "isin": "",
+      "quantity": 2.0,
+      "amount": 478.9,
+      "currency": "USD"
+    },
+    {
+      "date": "2023-06-06",
+      "type": "BUY",
+      "asset": "QBTS",
+      "isin": "",
+      "quantity": 454.37552557,
+      "amount": 5891.94,
+      "currency": "USD"
+    },
+    {
+      "date": "2023-06-06",
+      "type": "BUY",
+      "asset": "AMZN",
+      "isin": "",
+      "quantity": 2.0,
+      "amount": 478.9,
+      "currency": "USD"
+    },
+    {
+      "date": "2023-06-06",
+      "type": "BUY",
+      "asset": "MAXN",
+      "isin": "",
+      "quantity": 5.0,
+      "amount": 784.91,
+      "currency": "USD"
+    },
+    {
+      "date": "2023-06-06",
+      "type": "BUY",
+      "asset": "Cash",
+      "isin": "",
+      "quantity": -1.0,
+      "amount": 487.0,
+      "currency": "USD"
+    },
+    {
+      "date": "2023-06-27",
+      "type": "BUY",
+      "asset": "BIDU",
+      "isin": "",
+      "quantity": 100.0,
+      "amount": 13945.0,
+      "currency": "USD"
+    },
+    {
+      "date": "2022-09-12",
+      "type": "BUY",
+      "asset": "MATIC",
+      "isin": "",
+      "quantity": 89.0140164,
+      "amount": -80.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-09-12",
+      "type": "BUY",
+      "asset": "ETH",
+      "isin": "",
+      "quantity": 0.05915141,
+      "amount": -100.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-09-14",
+      "type": "BUY",
+      "asset": "DOT",
+      "isin": "",
+      "quantity": 4.20134774,
+      "amount": -30.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-09-21",
+      "type": "BUY",
+      "asset": "ETH",
+      "isin": "",
+      "quantity": 0.0743933,
+      "amount": -100.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2022-12-21",
+      "type": "BUY",
+      "asset": "BTC",
+      "isin": "",
+      "quantity": 0.0062744,
+      "amount": -100.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-02-01",
+      "type": "BUY",
+      "asset": "BTC",
+      "isin": "",
+      "quantity": 0.004707,
+      "amount": -100.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-02-02",
+      "type": "BUY",
+      "asset": "GALA",
+      "isin": "",
+      "quantity": 2856.6194265,
+      "amount": -150.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-02-25",
+      "type": "BUY",
+      "asset": "SAND",
+      "isin": "",
+      "quantity": 112.80429013,
+      "amount": -75.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-03-12",
+      "type": "BUY",
+      "asset": "BTC",
+      "isin": "",
+      "quantity": 0.004956,
+      "amount": -100.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-03-20",
+      "type": "BUY",
+      "asset": "BTC",
+      "isin": "",
+      "quantity": 0.003814,
+      "amount": -100.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-04-13",
+      "type": "BUY",
+      "asset": "BTC",
+      "isin": "",
+      "quantity": 0.003634,
+      "amount": -100.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-04-13",
+      "type": "BUY",
+      "asset": "ETH",
+      "isin": "",
+      "quantity": 0.054993,
+      "amount": -100.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-05-11",
+      "type": "SELL",
+      "asset": "GALA",
+      "isin": "",
+      "quantity": -2856.6194265,
+      "amount": 150.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-05-17",
+      "type": "BUY",
+      "asset": "MATIC",
+      "isin": "",
+      "quantity": 136.6432338,
+      "amount": -23.5,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-05-17",
+      "type": "SELL",
+      "asset": "MATIC",
+      "isin": "",
+      "quantity": -136.6432338,
+      "amount": 23.29,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-05-17",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.21,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-24",
+      "type": "SELL",
+      "asset": "XLM",
+      "isin": "",
+      "quantity": -22.6689503,
+      "amount": 9.85,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-12-09",
+      "type": "SELL",
+      "asset": "MANA",
+      "isin": "",
+      "quantity": -199.83577347,
+      "amount": 129.5,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-12-09",
+      "type": "SELL",
+      "asset": "SAND",
+      "isin": "",
+      "quantity": -110.56324489,
+      "amount": 88.06,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-12-09",
+      "type": "SELL",
+      "asset": "XLM",
+      "isin": "",
+      "quantity": -22.6689503,
+      "amount": 9.85,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-06",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -40.87,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-06",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-07",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.08,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-02-11",
+      "type": "BUY",
+      "asset": "DOT",
+      "isin": "",
+      "quantity": -1,
+      "amount": 0.0006992,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-02-11",
+      "type": "BUY",
+      "asset": "DOT",
+      "isin": "",
+      "quantity": -1,
+      "amount": 0.00015007,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-02-11",
+      "type": "BUY",
+      "asset": "DOT",
+      "isin": "",
+      "quantity": -1,
+      "amount": 0.0002473,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-02-12",
+      "type": "BUY",
+      "asset": "DOT",
+      "isin": "",
+      "quantity": -1,
+      "amount": 0.00057602,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-02-12",
+      "type": "BUY",
+      "asset": "DOT",
+      "isin": "",
+      "quantity": -1,
+      "amount": 0.00070095,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-02-12",
+      "type": "BUY",
+      "asset": "DOT",
+      "isin": "",
+      "quantity": -1,
+      "amount": 0.00014081,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-02-12",
+      "type": "BUY",
+      "asset": "DOT",
+      "isin": "",
+      "quantity": -1,
+      "amount": 0.00034046,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-02-12",
+      "type": "BUY",
+      "asset": "DOT",
+      "isin": "",
+      "quantity": -1,
+      "amount": 0.00070085,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-02-13",
+      "type": "BUY",
+      "asset": "DOT",
+      "isin": "",
+      "quantity": -1,
+      "amount": 0.00046233,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-02-13",
+      "type": "BUY",
+      "asset": "DOT",
+      "isin": "",
+      "quantity": -1,
+      "amount": 1.136e-05,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-02-13",
+      "type": "BUY",
+      "asset": "DOT",
+      "isin": "",
+      "quantity": -1,
+      "amount": 0.00017636,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-02-13",
+      "type": "BUY",
+      "asset": "DOT",
+      "isin": "",
+      "quantity": -1,
+      "amount": 0.0001738,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-02-13",
+      "type": "BUY",
+      "asset": "DOT",
+      "isin": "",
+      "quantity": -1,
+      "amount": 0.00012814,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-02-13",
+      "type": "BUY",
+      "asset": "DOT",
+      "isin": "",
+      "quantity": -1,
+      "amount": 0.00048748,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-02-14",
+      "type": "BUY",
+      "asset": "DOT",
+      "isin": "",
+      "quantity": -1,
+      "amount": 0.00069986,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-02-14",
+      "type": "BUY",
+      "asset": "DOT",
+      "isin": "",
+      "quantity": -1,
+      "amount": 0.00070752,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-02-14",
+      "type": "BUY",
+      "asset": "DOT",
+      "isin": "",
+      "quantity": -1,
+      "amount": 0.00031177,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-02-14",
+      "type": "BUY",
+      "asset": "DOT",
+      "isin": "",
+      "quantity": -1,
+      "amount": 0.00048278,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-02-14",
+      "type": "BUY",
+      "asset": "DOT",
+      "isin": "",
+      "quantity": -1,
+      "amount": 0.00015946,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-02-15",
+      "type": "BUY",
+      "asset": "DOT",
+      "isin": "",
+      "quantity": -1,
+      "amount": 0.00071084,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-02-15",
+      "type": "BUY",
+      "asset": "DOT",
+      "isin": "",
+      "quantity": -1,
+      "amount": 0.0004105,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-02-15",
+      "type": "BUY",
+      "asset": "DOT",
+      "isin": "",
+      "quantity": -1,
+      "amount": 8.049e-05,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-02-15",
+      "type": "BUY",
+      "asset": "DOT",
+      "isin": "",
+      "quantity": -1,
+      "amount": 0.00040835,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-02-16",
+      "type": "BUY",
+      "asset": "DOT",
+      "isin": "",
+      "quantity": -1,
+      "amount": 0.00040835,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-25",
+      "type": "DIVIDEND",
+      "asset": "DOT",
+      "quantity": 0.00100274,
+      "amount": 0.00100274,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-27",
+      "type": "DIVIDEND",
+      "asset": "DOT",
+      "quantity": 0.00093769,
+      "amount": 0.00093769,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-27",
+      "type": "DIVIDEND",
+      "asset": "DOT",
+      "quantity": 0.00094879,
+      "amount": 0.00094879,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-28",
+      "type": "DIVIDEND",
+      "asset": "DOT",
+      "quantity": 0.00096731,
+      "amount": 0.00096731,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-30",
+      "type": "DIVIDEND",
+      "asset": "DOT",
+      "quantity": 0.00101413,
+      "amount": 0.00101413,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-30",
+      "type": "DIVIDEND",
+      "asset": "DOT",
+      "quantity": 0.00100791,
+      "amount": 0.00100791,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-12-02",
+      "type": "DIVIDEND",
+      "asset": "DOT",
+      "quantity": 0.00098834,
+      "amount": 0.00098834,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-12-03",
+      "type": "DIVIDEND",
+      "asset": "DOT",
+      "quantity": 0.00102983,
+      "amount": 0.00102983,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-12-04",
+      "type": "DIVIDEND",
+      "asset": "DOT",
+      "quantity": 0.00097903,
+      "amount": 0.00097903,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-12-05",
+      "type": "DIVIDEND",
+      "asset": "DOT",
+      "quantity": 0.00100799,
+      "amount": 0.00100799,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-12-06",
+      "type": "DIVIDEND",
+      "asset": "DOT",
+      "quantity": 0.00102375,
+      "amount": 0.00102375,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-12-06",
+      "type": "DIVIDEND",
+      "asset": "DOT",
+      "quantity": 0.00103245,
+      "amount": 0.00103245,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-12-08",
+      "type": "DIVIDEND",
+      "asset": "DOT",
+      "quantity": 0.00100048,
+      "amount": 0.00100048,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-12-09",
+      "type": "DIVIDEND",
+      "asset": "DOT",
+      "quantity": 0.00103271,
+      "amount": 0.00103271,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-12-10",
+      "type": "DIVIDEND",
+      "asset": "DOT",
+      "quantity": 0.0010242,
+      "amount": 0.0010242,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-11-17",
+      "type": "BUY",
+      "asset": "SOL",
+      "isin": "",
+      "quantity": -9.99,
+      "amount": 9.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-08-22",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": -0.01,
+      "amount": 0.01,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-08-22",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0.01,
+      "amount": 0.01,
+      "currency": "EUR"
+    }
+  ]
+}

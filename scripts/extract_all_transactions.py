@@ -35,20 +35,48 @@ ISTRUZIONI:
    - amount: Importo netto in EUR
    - currency: Valuta originale (es. USD, CAD)
 
-Rispondi SOLO con JSON:
-{{
-  "transactions": [
-    {{
-      "date": "2025-12-19",
-      "type": "DIVIDEND",
-      "asset": "Qualcomm Inc.",
-      "isin": "US...",
-      "quantity": 0,
-      "amount": 0.96,
-      "currency": "USD"
-    }}
-  ]
-}}
+Rispondi SOLO con
+    - For "Account Statement" or "PnL" documents:
+      If a row has BOTH "Date Acquired" and "Date Sold" (or similar):
+      Create TWO transaction objects.
+    
+    - For Revolut Trading/Account Statements:
+      - Look for "XAU" (Gold) and "XAG" (Silver).
+      - "Scambio da EUR a XAU" -> BUY XAU.
+      - "Scambio da XAU a EUR" -> SELL XAU.
+      - "Exchange to XAU" -> BUY XAU.
+      - "Gold" or "Silver" may be used as Asset Name.
+      - Look for: "AMZN Trade - Market ... 2 ... US$121.14 Buy US$243.30"
+      - Or: "INTC Dividend ... US$1.56"
+      - Extract:
+        - Date: From timestamp line (e.g. "25 Jul 2022")
+        - Asset: Symbol (e.g. "AMZN", "XAU", "XAG")
+        - Type: "BUY" or "SELL" (from "Buy/Sell" text) or "DIVIDEND"
+        - Quantity: Number (e.g. 2, 0.5)
+        - Amount: Value (e.g. 243.30). Make Cost negative.
+        
+    - For Trade Republic (Italian/English mixed):
+      - "Buy trade [ISIN] [Name], quantity: [N]" -> BUY.
+      - "Cash Dividend for ISIN [ISIN]" -> DIVIDEND.
+      - "Sell trade ..." -> SELL.
+      - Dates: "22 gencio" -> 22 Jan. "febcio" -> Feb. "mar" -> Mar. 
+      - Extract:
+        - Date: Combine Day/Month with nearest Year (e.g. 2024 line above).
+        - Asset: Name (e.g. "ALIBABA GROUP").
+        - ISIN: (e.g. KYG017191142).
+        - Quantity: From "quantity: X".
+        - Amount: The EUR value associated. Custody fees are negative.
+        
+    - OUTPUT FORMAT: JSON list of objects.
+    - {{
+        "date": "YYYY-MM-DD",
+        "type": "BUY/SELL/DIVIDEND/FEE/TAX",
+        "asset": "Name of stock/ETF",
+        "isin": "ISIN if available",
+        "quantity": 10.0,
+        "amount": 1000.00,
+        "currency": "EUR/USD"
+       }}
 Se non ci sono transazioni, restituisci: {{"transactions": []}}"""
 
     try:
@@ -98,7 +126,13 @@ def run_extraction(pdf_path, output_file):
     
     for i in range(start_page, end_page):
         page = doc[i]
-        text = page.get_text("text")
+        # Sort blocks by Y (vertical), then X (horizontal) to ensure reading order
+        blocks = page.get_text("blocks")
+        blocks.sort(key=lambda b: (b[1], b[0]))
+        text = "\n".join([b[4] for b in blocks])
+        
+        # Debug: Print a snippet
+        # print(f"DEBUG PAGE TEXT: {text[:200]}")
         
         # Skip empty pages or cover pages heuristics
         if len(text) < 100 or "Pagina" not in text and "Page" not in text: # Added "Page" for English docs
@@ -128,8 +162,20 @@ def run_extraction(pdf_path, output_file):
     return all_transactions
 
 if __name__ == "__main__":
-    # Default to BG Saxo if run directly for backward compat
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--pdf", help="Path to input PDF", required=False)
+    parser.add_argument("--output", help="Path to output JSON", required=False)
+    args = parser.parse_args()
+    
+    # Defaults (BG Saxo) if no args provided
     default_path = r"D:\Download\BGSAXO\Transactions_19807401_2025-01-01_2025-12-19.pdf"
     default_out = "scripts/bgsaxo_transactions_full.json"
-    if Path(default_path).exists():
+    
+    if args.pdf and args.output:
+        run_extraction(args.pdf, args.output)
+    elif Path(default_path).exists():
+        print("No args provided. Using default BG Saxo path.")
         run_extraction(default_path, default_out)
+    else:
+        print("Please provide --pdf and --output arguments.")

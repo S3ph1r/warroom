@@ -2,28 +2,36 @@
 
 This document describes the end-to-end data flow for the War Room dashboard, including ingestion, price fetching, and P/L calculations.
 
-## 1. 📥 Ingestion Layer
+## 1. 📥 Ingestion Layer (Universal System 2.0)
 
-The ingestion process reads broker documents from `G:\Il mio Drive\WAR_ROOM_DATA\inbox` and inserts them into the `holdings` database table.
+The new **Universal Ingestion System** consolidates data from all 5 brokers into a normalized database structure, enabling accurate P&L tracking and historical reconciliation.
+
+### Data Flow
+1.  **Source Documents**: PDFs (Revolut, Trade Republic, Scalable), CSVs (Binance, Scalable, Saxo), or Excel.
+2.  **Extraction**: 
+    - **Mistral LLM**: Used for complex/unstructured PDFs (e.g., Revolut Statements, Trade Republic Notes).
+    - **Deterministic Parsers**: Used for structured CSVs (Binance, Saxo).
+3.  **Normalization**: All transactions are converted to a standard JSON format (`date`, `type`, `asset`, `quantity`, `amount`) and saved in `scripts/`.
+4.  **Ingestion (`ingest_all_to_db.py`)**:
+    - Truncates existing `transactions` and `holdings` tables.
+    - Loads verified JSON files (`bgsaxo_transactions_full.json`, `scalable_transactions_full.json`, `revolut_full_reconciled.json`, `tr_final.json`, `binance_final.json`).
+    - **Reconciles History**: Rebuilds current holdings by aggregating entire transaction history (Buy/Sell/Split).
+    - **Single Source of Truth**: The Database is the final authority.
 
 ### Brokers & Parsers
 
-| Broker | Parser File | Logic |
-|--------|-------------|-------|
-| **BG Saxo** | `bgsaxo_transactions.py` | Calculates holdings from Excel transaction history (Buy/Sell/Split/Merger). Calculates weighted average cost. |
-| **Trade Republic** | `trade_republic.py` | Reads current positions directly from CSV export. Includes purchase price. |
-| **Scalable** | `scalable_capital.py` | Reads current positions from WUM CSV. Includes purchase price. |
-| **IBKR** | `ibkr.py` | Reads positions from XML Flex Query. Cost basis available. |
-| **Revolut** | `revolut.py` | Reads holdings from CSV statement. **Limitation**: Does not provide historical cost, so P/L is relative to current period or 0. |
-| **Binance** | `insert_binance.py` | **Manual Ingestion** (temporary). Inserts SPOT+EARN holdings from user-provided data. |
+| Broker | Parser Strategy | Status |
+|--------|-----------------|--------|
+| **BG Saxo** | Excel -> JSON (Mistral) | ✅ Full History |
+| **Trade Republic** | PDF (Estratto Conto) -> JSON (Mistral) | ✅ Verified (Partial History Sep 24 on) |
+| **Scalable** | PDF/CSV -> JSON (Universal Parser) | ✅ Full History |
+| **Revolut** | PDF (Statement) -> JSON (Mistral) | ✅ Stocks & Crypto Reconciled |
+| **Binance** | CSV -> JSON (Deterministic) | ✅ Full History (2000+ Txns) |
 
-### Data Schema (`holdings` table)
-- `ticker`: Asset symbol (e.g., AAPL)
-- `isin`: Unique ID (e.g., US0378331005)
-- `quantity`: Number of shares/units
-- `purchase_price`: Cost per unit (in native `currency`)
-- `currency`: Currency of the asset (USD, EUR, DKK, etc.)
-- `broker`: Source broker name
+### Manual Corrections
+Since the core logic is "History-Based", any missing history (e.g. pre-2024 Trade Republic) results in negative balances.
+**Fix:** Use the Dashboard's **"New Transaction"** button to insert `DEPOSIT` or `BUY` operations to correct the starting balance.
+**Note:** A "Reset DB" will wipe these manual corrections unless they are backed up to the JSON source files.
 
 ---
 
