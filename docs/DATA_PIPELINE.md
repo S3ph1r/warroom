@@ -22,7 +22,7 @@ The new **Universal Ingestion System** consolidates data from all 5 brokers into
 
 | Broker | Parser Strategy | Status |
 |--------|-----------------|--------|
-| **BG Saxo** | Excel -> JSON (Mistral) | ✅ Full History |
+| **BG Saxo** | Hybrid (LLM Discovery + Regex Block Parsing) | ✅ Full History (Reconciled) |
 | **Trade Republic** | PDF (Estratto Conto) -> JSON (Mistral) | ✅ Verified (Partial History Sep 24 on) |
 | **Scalable** | PDF/CSV -> JSON (Universal Parser) | ✅ Full History |
 | **Revolut** | PDF (Statement) -> JSON (Mistral) | ✅ Stocks & Crypto Reconciled |
