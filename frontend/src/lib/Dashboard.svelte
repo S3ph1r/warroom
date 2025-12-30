@@ -143,7 +143,7 @@
         return d;
     }
 
-    const API_BASE = "http://127.0.0.1:8201";
+    const API_BASE = ""; // Use relative path through proxy
 
     async function fetchData() {
         try {

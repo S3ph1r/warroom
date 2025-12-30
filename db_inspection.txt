@@ -1,0 +1,38 @@
+--- SAMPLE TRANSACTION RECORD ---
+id              : 163ffc7d-b156-43a9-9f1a-257e7e1d7e0b
+broker          : BG_SAXO
+ticker          : UNKNOWN
+isin            : US81762P1021
+operation       : TRADE
+status          : COMPLETED
+quantity        : 1.00000000
+price           : 155.00000000
+total_amount    : 155.00
+currency        : EUR
+fees            : 0.00
+timestamp       : 2025-12-18 00:00:00+00:00
+source_document : G:\Il mio Drive\WAR_ROOM_DATA\inbox\bgsaxo\Transactions_19807401_2024-11-26_2025-12-19.pdf
+source_page     : None
+notes           : None
+created_at      : 2025-12-29 13:42:55.846718+00:00
+
+--- SAMPLE HOLDING RECORD ---
+id                   : 5a4bb6af-d5cc-4bc9-bb06-81a0d935a66f
+broker               : BG_SAXO
+ticker               : EUTELSAT
+isin                 : FR0010221234
+name                 : EUTELSAT
+asset_type           : STOCK
+quantity             : 45.00000000
+purchase_price       : None
+purchase_date        : None
+current_price        : 0.0000
+current_value        : 0.00
+native_current_value : None
+exchange_rate_used   : None
+currency             : EUR
+last_updated         : 2025-12-29 14:42:21.933992+00:00
+source_document      : G:\Il mio Drive\WAR_ROOM_DATA\inbox\bgsaxo\Posizioni_19-dic-2025_17_49_12.csv
+notes                : None
+created_at           : 2025-12-29 13:42:21.972430+00:00
+updated_at           : 2025-12-29 13:42:21.972430+00:00

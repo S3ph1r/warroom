@@ -15,11 +15,19 @@ Column Mapping (from header analysis):
 - 36: ISIN
 """
 
+import json
+import sys
 import csv
 import re
-import json
 from pathlib import Path
 from tabulate import tabulate
+
+# Add project root to path for utils
+project_root = Path(__file__).resolve().parent.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
+from utils.parsing import robust_parse_decimal
 
 def parse_bgsaxo_holdings(filepath):
     """Parse BG SAXO Posizioni CSV into structured holdings list."""
@@ -58,12 +66,9 @@ def parse_bgsaxo_holdings(filepath):
             
             # Parse Data Row
             try:
-                # Handle italian number format (comma as decimal)
-                qty_str = quantity_col.replace('.', '').replace(',', '.')
-                qty = float(qty_str) if qty_str else 0
-                
-                price_str = row[5].replace('.', '').replace(',', '.') if row[5] else '0'
-                price = float(price_str) if price_str else 0
+                # Use robust numeric parser for all quantities and prices
+                qty = float(robust_parse_decimal(quantity_col))
+                price = float(robust_parse_decimal(row[5])) if row[5] else 0
                 
                 item = {
                     "name": first_col[:80],  # Truncate long names

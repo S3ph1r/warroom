@@ -1,25 +1,31 @@
-
-import fitz
+import pdfplumber
+import sys
 from pathlib import Path
 
-pdf = Path(r"D:\Download\Trade Repubblic\Estratto conto.pdf")
+# Force UTF-8 for print
+sys.stdout.reconfigure(encoding='utf-8')
 
-if pdf.exists():
+PDF_PATH = r"d:\Download\Trade Repubblic\Estratto conto.pdf"
+
+def inspect_pdf():
+    print(f"--- INSPECTING: {Path(PDF_PATH).name} ---")
     try:
-        doc = fitz.open(pdf)
-        print(f"Pages: {len(doc)}")
-        text = doc[0].get_text("text")
-        print("--- HEADER ---")
-        print(text[:500])
-        
-        if "Trade Republic" in text:
-            print("VERDICT: Trade Republic Document")
-        elif "Revolut" in text:
-            print("VERDICT: Revolut Document (Misplaced?)")
-        else:
-            print("VERDICT: Unknown Vendor")
+        with pdfplumber.open(PDF_PATH) as pdf:
+            print(f"TOTAL PAGES: {len(pdf.pages)}")
+            print("-" * 30)
             
+            # Extract first 3 pages
+            for i, page in enumerate(pdf.pages[:3]):
+                print(f"--- PAGE {i+1} (LAYOUT=TRUE) ---")
+                text = page.extract_text(layout=True)
+                if text:
+                    print(text)
+                else:
+                    print("[NO TEXT EXTRACTED]")
+                print("-" * 30)
+                
     except Exception as e:
-        print(f"Error: {e}")
-else:
-    print("File not found")
+        print(f"ERROR: {e}")
+
+if __name__ == "__main__":
+    inspect_pdf()

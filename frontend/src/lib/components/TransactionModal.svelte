@@ -11,7 +11,7 @@
     export let availableBrokers = []; // From DB
 
     const dispatch = createEventDispatcher();
-    const API_BASE = "http://127.0.0.1:8000";
+    const API_BASE = "";
 
     // Form State
     let formData = {

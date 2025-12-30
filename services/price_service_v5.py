@@ -119,21 +119,102 @@ COMMODITY_PRICES = {
     'XAG': Decimal('56.72'),  # Silver (Revolut rate)
 }
 
-# Manual ticker overrides (when OpenFIGI doesn't work)
+# Manual ticker overrides (when OpenFIGI doesn't work or returns suboptimal results)
 MANUAL_TICKER_MAP = {
-    'AHLA': 'BABA',           # BG Saxo Alibaba alias
-    'NOVOB': 'NOVO-B.CO',     # Novo Nordisk
+    # Italian stocks
     'AMP': 'AMP.MI',          # Amplifon
+    'Amplifon': 'AMP.MI',
+    'AMPLIFON': 'AMP.MI',
     'LDO': 'LDO.MI',          # Leonardo
-    'WBD': 'WBD.MI',          # Webuild
-    'ETL': 'ETL.PA',          # Eutelsat
-    'NOKIA': 'NOKIA.HE',      # Nokia Helsinki
-    '02050': '2050.HK',       # Zhejiang Sanhua
+    'Leonardo': 'LDO.MI',
+    'LEONARDO': 'LDO.MI',
     'RACE': 'RACE.MI',        # Ferrari (Milan)
-    'STLA': 'STLA.MI',        # Stellantis (Milan)
+    'Ferrari NV': 'RACE',
+    'FERRARI NV': 'RACE',
+    'WBD': 'WBD.MI',          # Webuild
+    'CARL ZEISS MEDITEC': 'AFX.DE',
+    
+    # French stocks
+    'ETL': 'ETL.PA',          # Eutelsat
+    'ESSILORLUXOTTICA 1/2': 'EL.PA',
+    'EL': 'EL.PA',            # EssilorLuxottica
+    'THALES S.A.': 'HO.PA',
+    
+    # US stocks with weird names
+    'RIVIAN AUTOMOT.A': 'RIVN',
+    'RIVN': 'RIVN',
+    'UBER TECH. DL-': 'UBER',
+    'UBER TECH. DL-,00001': 'UBER',
+    'SERVICENOW INC.': 'NOW',
+    'ServiceNow Inc.': 'NOW',
+    'TESLA INC.': 'TSLA',
+    'TESLA INC. DL -,001': 'TSLA',
+    'TESLA INC. DL': 'TSLA',
+    'NVIDIA CORP.': 'NVDA',
+    'NVIDIA Corp.': 'NVDA',
+    
+    # Chinese ADRs
+    'AHLA': 'BABA',           # BG Saxo Alibaba alias
+    'ALIBABA GROUP HLDG L': 'BABA',
+    'TENCENT HLDGS HD-': 'TCEHY',
+    'TENCENT HLDGS HD-,00': 'TCEHY',
+    'BAIDU INC. O.N.': 'BIDU',
+    'BYD CO. LTD ADR/2 YC': 'BYDDY',
+    'BYD COMPANY LTD - AD': 'BYDDY',
+    
+    # European stocks
+    'NOVOB': 'NOVO-B.CO',     # Novo Nordisk
+    'NVO': 'NVO',
+    'NOKIA': 'NOKIA.HE',      # Nokia Helsinki
+    'Nokia Oyj': 'NOKIA.HE',
+    'ZALANDO SE': 'ZAL.DE',
+    
+    # Hong Kong
+    '02050': '2050.HK',       # Zhejiang Sanhua
+    
+    # ETFs
     'IE00B0M63516': 'ISBR.L', # iShares MSCI Brazil (London)
-    # BP uses NYSE ADR (USD) for Revolut, not BP.L (London GBp)
+    'ISHSV-S+P500ENER.SEC': 'IXC', # iShares Energy ETF
+    'iShares IV plc - iSh': 'IWDA.AS', # Guess for iShares World
+    
+    # Special cases
+    'STLA': 'STLA.MI',        # Stellantis (Milan)
+    'SWDA': 'SWDA.MI',        # iShares Core MSCI World
+    'IWDA': 'IWDA.AS',
+    'QRVO': 'QRVO',           # Qorvo (clean)
+    'PANW': 'PANW',           # Palo Alto (clean)
+    'CRSP': 'CRSP',           # CRISPR (clean)
+    'PDD': 'PDD',             # Pinduoduo
+    'VNET': 'VNET',           # VNET Group
 }
+
+
+def clean_ticker(ticker: str) -> str:
+    """
+    Remove MIC suffixes, exchange prefixes and noise from tickers.
+    Examples:
+        'ETL:xpar' -> 'ETL'
+        'PYPL:xnas' -> 'PYPL'
+        'NOVO NORDISK B A/S' -> 'NOVO-B' (manual map will catch the rest)
+    """
+    if not ticker:
+        return ""
+    
+    # 1. Strip colon suffixes (MIC codes like :xnas, :xpar, :xmce)
+    if ':' in ticker:
+        ticker = ticker.split(':')[0]
+    
+    # 2. Strip leading $ (Saxo artifact)
+    ticker = ticker.lstrip('$')
+    
+    # 3. Strip common trailing noise
+    noise = [" DL-", " DL", " A/S", " O.N.", " ADR", " - ADR", " -", " CLASS ", " INC."]
+    cleaned = ticker.strip()
+    for n in noise:
+        if cleaned.upper().endswith(n):
+            cleaned = cleaned[: -len(n)].strip()
+            
+    return cleaned
 
 
 # ============================================================
@@ -210,27 +291,61 @@ def isin_to_yahoo_ticker(isin: str, original_ticker: str = None, asset_type: str
     """
     Convert ISIN to Yahoo Finance ticker format.
     
-    Strategy:
+    ENHANCED Strategy (ISIN-first):
     1. Check manual overrides first
-    2. For EU ETFs (IE*/LU*): try .MI, .DE, .L suffixes (EUR preferred)
-    3. For Italian stocks (IT*): use .MI
-    4. For German stocks (DE*): use .DE
-    5. Use OpenFIGI as fallback
+    2. If ISIN present: Use OpenFIGI to get proper ticker (PRIORITY)
+    3. Fallback: Derive from ISIN country prefix + original ticker
+    4. Last resort: Return original ticker as-is
     """
     # Check manual overrides first
     if original_ticker and original_ticker in MANUAL_TICKER_MAP:
         return MANUAL_TICKER_MAP[original_ticker]
     
+    # If no ISIN, return original ticker
     if not isin:
         return original_ticker
     
-    # Derive exchange from ISIN country prefix
+    # *** PRIORITY: Try OpenFIGI first when ISIN is available ***
+    figi_result = get_ticker_from_isin(isin)
+    if figi_result and figi_result.get('ticker'):
+        ticker = figi_result['ticker']
+        exchange = figi_result.get('exchange', '')
+        
+        exchange_suffixes = {
+            'IM': '.MI', 'MI': '.MI', # Milan
+            'GY': '.DE', 'DE': '.DE', 'ET': '.DE', # Germany
+            'LN': '.L',  'LO': '.L', # London
+            'PA': '.PA', 'FP': '.PA', # Paris
+            'AS': '.AS', 'NA': '.AS', # Amsterdam
+            'MC': '.MC', 'SM': '.MC', # Madrid
+            'SW': '.SW', 'VX': '.SW', # Swiss
+            'HK': '.HK', # Hong Kong
+            'TK': '.T',  'JP': '.T', # Tokyo
+            'CO': '.CO', 'DC': '.CO', # Copenhagen
+            'ST': '.ST', 'SS': '.ST', # Stockholm
+            'OL': '.OL', 'NO': '.OL', # Oslo
+            'HE': '.HE', 'FH': '.HE', # Helsinki
+        }
+        
+        # US exchanges don't need suffix in Yahoo
+        if exchange in ['US', 'UN', 'UQ', 'UA', 'UW', 'NA', 'OQ']:
+            if exchange == 'NA' and isin.startswith('NL'):
+                # Handle edge case where NA is Amsterdam but OpenFIGI mapped as North America (rare)
+                pass 
+            else:
+                logger.debug(f"ISIN {isin} -> {ticker} via OpenFIGI (US/NA)")
+                return ticker
+        
+        suffix = exchange_suffixes.get(exchange.upper(), '')
+        resolved = f"{ticker}{suffix}" if suffix else ticker
+        logger.debug(f"ISIN {isin} -> {resolved} via OpenFIGI (Exch: {exchange})")
+        return resolved
+    
+    # Fallback: Derive exchange from ISIN country prefix
     isin_prefix = isin[:2].upper() if isin else ''
     
     # EU ETFs (Ireland/Luxembourg) - prefer EUR-denominated exchanges
     if isin_prefix in ['IE', 'LU']:
-        # Try ticker with EUR exchanges first
-        # Most BG Saxo ETFs are listed on MI (Italy) or DE (Germany)
         return f"{original_ticker}.MI" if original_ticker else original_ticker
     
     # Italian stocks
@@ -269,25 +384,34 @@ def isin_to_yahoo_ticker(isin: str, original_ticker: str = None, asset_type: str
     if isin_prefix == 'DK':
         return f"{original_ticker}.CO" if original_ticker else original_ticker
     
-    # Fallback: use OpenFIGI
-    figi_result = get_ticker_from_isin(isin)
-    if figi_result:
-        ticker = figi_result['ticker']
-        exchange = figi_result['exchange']
-        
-        exchange_suffixes = {
-            'IM': '.MI', 'GY': '.DE', 'LN': '.L', 'PA': '.PA',
-            'AS': '.AS', 'MC': '.MC', 'SW': '.SW', 'HK': '.HK',
-            'TK': '.T', 'CO': '.CO', 'ST': '.ST', 'OL': '.OL', 'HE': '.HE',
-        }
-        
-        if exchange in ['US', 'UN', 'UQ', 'UA', 'UW']:
-            return ticker
-        
-        suffix = exchange_suffixes.get(exchange, '')
-        return f"{ticker}{suffix}" if suffix else ticker
-    
     return original_ticker
+
+
+def resolve_asset_info(isin: str, original_ticker: str = None) -> dict:
+    """
+    Resolve both name and Yahoo-compatible ticker for an asset.
+    Used during ingestion to normalize data.
+    """
+    if not isin:
+        return {"ticker": original_ticker, "name": "Unknown"}
+        
+    # Get proper ticker from our enhanced logic
+    yahoo_ticker = isin_to_yahoo_ticker(isin, original_ticker)
+    
+    # Get name from OpenFIGI (cached)
+    figi_data = get_ticker_from_isin(isin)
+    resolved_name = figi_data.get('name', 'Unknown') if figi_data else "Unknown"
+    
+    # Clean up name (remove Bloomberg noise if any)
+    if resolved_name and resolved_name != "Unknown":
+        noise = ["-UNSP ADR", " ADR"]
+        for n in noise:
+            resolved_name = resolved_name.replace(n, "").strip()
+
+    return {
+        "ticker": yahoo_ticker,
+        "name": resolved_name
+    }
 
 
 # ============================================================
@@ -317,13 +441,23 @@ def get_yahoo_price(ticker: str, isin: str = None) -> tuple:
         # Try primary ticker first
         tickers_to_try = [yahoo_ticker]
         
+        # Clean ticker fallback (if original had junk like :xnas)
+        cleaned_base = clean_ticker(ticker)
+        if cleaned_base and cleaned_base != ticker:
+            # Let logic re-resolve cleaned ticker
+            cleaned_yahoo = isin_to_yahoo_ticker(isin, cleaned_base)
+            if cleaned_yahoo not in tickers_to_try:
+                tickers_to_try.append(cleaned_yahoo)
+
         # For EU ETFs, add fallback exchanges
         if is_eu_etf:
-            base_ticker = ticker.split('.')[0]  # Remove any existing suffix
+            base_ticker = cleaned_base.split('.')[0]
             for suffix in ['.MI', '.DE', '.L', '.AS']:
                 fallback = f"{base_ticker}{suffix}"
-                if fallback != yahoo_ticker and fallback not in tickers_to_try:
+                if fallback not in tickers_to_try:
                     tickers_to_try.append(fallback)
+        
+        logger.info(f"Fetching {isin or ticker}: attempting {tickers_to_try}")
         
         for try_ticker in tickers_to_try:
             stock = yf.Ticker(try_ticker)
@@ -583,6 +717,10 @@ def get_live_values_for_holdings(holdings: list) -> dict:
             
         else:
             live_price, source, is_live, day_change_pct = get_price(ticker, isin, asset_type, purchase_price)
+            
+            # If fallback (DB Price), convert to EUR (as get_price handles live but not fallback conversion)
+            if 'FALLBACK' in source and fx_rate != 1:
+                live_price = live_price * fx_rate
             
             live_value = quantity * live_price
             purchase_price_eur = purchase_price * fx_rate

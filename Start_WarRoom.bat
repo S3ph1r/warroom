@@ -40,23 +40,19 @@ if %errorlevel% neq 0 (
     pause
 )
 
-echo [3/4] 🚀 Checking Backend (Port 8000)...
-netstat -ano | find "8000" >nul
+echo [3/4] 🚀 Checking Backend (Port 8201)...
+netstat -ano | findstr /C:":8201 " >nul
 if %errorlevel%==0 (
     echo    - Backend is ALREADY RUNNING. Skipping start.
 ) else (
-    echo    - Port 8000 free. Starting FastAPI...
-    start "WarRoom_Backend" /D "%~dp0" cmd /k venv\Scripts\python.exe -m uvicorn backend.main:app --reload --port 8000 --host 127.0.0.1
+    echo    - Port 8201 free. Starting FastAPI...
+    :: Use absolute path to venv python for stability
+    start "WarRoom_Backend" /D "%~dp0" cmd /k venv\Scripts\python.exe -m uvicorn backend.main:app --reload --port 8201 --host 127.0.0.1
 )
 
-echo [4/4] 🎨 Checking Frontend (Port 5173)...
-netstat -ano | find "5173" >nul
-if %errorlevel%==0 (
-    echo    - Frontend is ALREADY RUNNING. Skipping start.
-) else (
-    echo    - Port 5173 free. Starting Svelte...
+echo [4/4] 🎨 Check/Start Frontend (Port 5173)...
+    echo    - Attempting to start Svelte...
     start "WarRoom_Frontend" /D "%~dp0frontend" cmd /k npm.cmd run dev
-)
 
 echo.
 echo ===================================================

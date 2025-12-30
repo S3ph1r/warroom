@@ -12,7 +12,7 @@
     import CorrelationHeatmap from "./components/CorrelationHeatmap.svelte";
     import AllocationTreemap from "./components/AllocationTreemap.svelte";
 
-    const API_BASE = "http://127.0.0.1:8000";
+    const API_BASE = "";
 
     let portfolioHistory = [];
     let benchmarks = {};
@@ -22,6 +22,10 @@
     let error = null;
     let chartInstance = null;
     let chartCanvas;
+
+    let investedHistory = [];
+    let investedChartInstance = null;
+    let investedChartCanvas;
 
     // UI State
     let daysRange = 30;
@@ -33,7 +37,7 @@
         loading = true;
         error = null;
         try {
-            const [historyRes, benchRes, riskRes, latestRes] =
+            const [historyRes, benchRes, riskRes, latestRes, investedRes] =
                 await Promise.all([
                     fetch(
                         `${API_BASE}/api/analytics/history?days=${daysRange}`,
@@ -43,14 +47,17 @@
                     ),
                     fetch(`${API_BASE}/api/analytics/risk-metrics`),
                     fetch(`${API_BASE}/api/analytics/latest`),
+                    fetch(`${API_BASE}/api/analytics/invested-history`),
                 ]);
 
             portfolioHistory = await historyRes.json();
             benchmarks = await benchRes.json();
             riskMetrics = await riskRes.json();
             latestSnapshot = await latestRes.json();
+            investedHistory = await investedRes.json();
 
             renderChart();
+            renderInvestedChart();
         } catch (e) {
             error = e.message;
         } finally {
@@ -196,6 +203,92 @@
         });
     }
 
+    function renderInvestedChart() {
+        if (!investedChartCanvas) return;
+        if (investedChartInstance) investedChartInstance.destroy();
+
+        // 1. Prepare Data
+        // X-Axis: All dates from invested history
+        // Invested Line: The cumulative values
+
+        // Optimize: If history is huge (>100 points), dampen it?
+        // Chart.js handles it okay, but let's see.
+
+        const labels = investedHistory.map((d) => d.date);
+        const dataInvested = investedHistory.map((d) => d.invested);
+
+        // Portfolio Value logic:
+        // We only have snapshots for recent days.
+        // We can try to align them.
+        // Create a map of Date -> Value from portfolioHistory
+        const valueMap = {};
+        portfolioHistory.forEach((p) => {
+            valueMap[p.date] = p.value;
+        });
+
+        const dataValue = labels.map((d) => valueMap[d] || null); // Null for missing points
+
+        investedChartInstance = new Chart(investedChartCanvas, {
+            type: "line",
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: "Net Invested Capital",
+                        data: dataInvested,
+                        borderColor: "rgba(255, 99, 132, 0.8)",
+                        backgroundColor: "rgba(255, 99, 132, 0.1)",
+                        borderWidth: 2,
+                        borderDash: [5, 5],
+                        fill: false,
+                        pointRadius: 0,
+                        tension: 0.1,
+                    },
+                    {
+                        label: "Portfolio Value",
+                        data: dataValue,
+                        borderColor: "rgba(75, 192, 192, 1)",
+                        backgroundColor: "rgba(75, 192, 192, 0.2)",
+                        borderWidth: 2,
+                        fill: true,
+                        pointRadius: 3,
+                        tension: 0.2,
+                    },
+                ],
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                interaction: { intersect: false, mode: "index" },
+                plugins: {
+                    legend: {
+                        labels: { color: "rgba(255,255,255,0.7)" },
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) =>
+                                `${ctx.dataset.label}: €${ctx.parsed.y.toLocaleString()}`,
+                        },
+                    },
+                },
+                scales: {
+                    x: {
+                        display: true, // Hide x labels if too many?
+                        ticks: {
+                            color: "rgba(255,255,255,0.5)",
+                            maxTicksLimit: 10,
+                        },
+                        grid: { color: "rgba(255,255,255,0.05)" },
+                    },
+                    y: {
+                        ticks: { color: "rgba(255,255,255,0.5)" },
+                        grid: { color: "rgba(255,255,255,0.05)" },
+                    },
+                },
+            },
+        });
+    }
+
     function safeLoad() {
         if (!loading && chartCanvas) {
             loadAnalytics();
@@ -214,6 +307,7 @@
     onMount(loadAnalytics);
     onDestroy(() => {
         if (chartInstance) chartInstance.destroy();
+        if (investedChartInstance) investedChartInstance.destroy();
     });
 </script>
 
@@ -358,10 +452,20 @@
         </div>
     </div>
 
-    <!-- Performance Chart -->
-    <div class="p-4 bg-skin-card border border-skin-border rounded-lg">
+    <!-- NEW: Invested vs Value Chart (Full Width) -->
+    <div class="p-4 bg-skin-card border border-skin-border rounded-lg mt-6">
         <h3 class="text-sm font-medium text-skin-text mb-4">
-            Performance vs Benchmarks
+            Capital Growth (Invested vs Value)
+        </h3>
+        <div class="h-80">
+            <canvas bind:this={investedChartCanvas}></canvas>
+        </div>
+    </div>
+
+    <!-- Performance Chart -->
+    <div class="p-4 bg-skin-card border border-skin-border rounded-lg mt-6">
+        <h3 class="text-sm font-medium text-skin-text mb-4">
+            Recent Performance vs Benchmarks
         </h3>
         {#if loading}
             <div class="h-80 flex items-center justify-center text-skin-muted">
@@ -372,10 +476,8 @@
                 class="h-80 flex flex-col items-center justify-center text-skin-muted"
             >
                 <Activity size={40} class="mb-3 opacity-50" />
-                <p>No portfolio history yet</p>
-                <p class="text-xs mt-1">
-                    Click "Save Snapshot" to start tracking
-                </p>
+                <p>No recent history yet</p>
+                <p class="text-xs mt-1">Snapshot required</p>
             </div>
         {:else}
             <div class="h-80">

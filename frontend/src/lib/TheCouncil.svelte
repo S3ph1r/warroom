@@ -47,7 +47,7 @@
 
     async function loadAvailableModels() {
         try {
-            const res = await fetch("http://localhost:8000/api/council/models");
+            const res = await fetch("/api/council/models");
             if (res.ok) {
                 const models = await res.json();
                 availableModels = models;
@@ -63,9 +63,7 @@
 
     async function loadHistoryDates() {
         try {
-            const res = await fetch(
-                "http://localhost:8000/api/council/history",
-            );
+            const res = await fetch("/api/council/history");
             if (res.ok) {
                 historyDates = await res.json();
             }
@@ -86,9 +84,7 @@
         loading = true;
         error = null;
         try {
-            const res = await fetch(
-                `http://localhost:8000/api/council/session/${date}`,
-            );
+            const res = await fetch(`/api/council/session/${date}`);
             if (!res.ok) throw new Error("Could not load archived session");
             opinions = await res.json();
         } catch (e) {
@@ -112,18 +108,15 @@
         if (force) startLogPolling();
 
         try {
-            const res = await fetch(
-                "http://localhost:8000/api/council/consult",
-                {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({
-                        query: userQuery,
-                        force_refresh: force,
-                        model: selectedModel,
-                    }),
-                },
-            );
+            const res = await fetch("/api/council/consult", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    query: userQuery,
+                    force_refresh: force,
+                    model: selectedModel,
+                }),
+            });
             if (!res.ok) throw new Error("Council connection failed");
             opinions = await res.json();
             console.log("DEBUG: Council Opinions Received:", opinions);
@@ -146,7 +139,7 @@
 
     async function fetchLogs() {
         try {
-            const res = await fetch("http://localhost:8000/api/logs");
+            const res = await fetch("/api/logs");
             if (res.ok) {
                 const data = await res.json();
                 logs = data.logs;
@@ -187,14 +180,11 @@
         }
         refreshingItems[itemId] = true;
         try {
-            const res = await fetch(
-                "http://localhost:8000/api/council/refresh-item",
-                {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ item_id: itemId }),
-                },
-            );
+            const res = await fetch("/api/council/refresh-item", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ item_id: itemId }),
+            });
             if (!res.ok) throw new Error("Refresh failed");
             const result = await res.json();
 

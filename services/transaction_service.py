@@ -57,6 +57,7 @@ class TransactionService:
             price = Decimal(str(data.get("price") or 0)) # For Dep/With price is usually 1 or amount
             fees = Decimal(str(data.get("fees") or 0))
             currency = data.get("currency", "EUR")
+            isin = data.get("isin") # NEW
             date_obj = datetime.strptime(data.get("date"), "%Y-%m-%d").date()
             
             status = data.get("status", "COMPLETED")
@@ -75,6 +76,9 @@ class TransactionService:
                 fees=fees,
                 currency=currency,
                 timestamp=datetime.now(), 
+                # Note: Transaction model might not have ISIN column, but Holding does.
+                # If Transaction has it, we should add it here too.
+                # Assuming Transaction doesn't have it for now to avoid migration issues.
             )
             self.db.add(tx)
             
@@ -90,22 +94,15 @@ class TransactionService:
             elif mode == "WITHDRAW":
                 cash_delta = -qty
             elif mode == "BALANCE":
-                # Balance initialization does not affect other cash flows usually
-                # If it's a CASH balance, we set the delta to qty (conceptually a Deposit)
-                # If it's a STOCK balance, we don't touch cash.
                 if data.get("asset_type") == "CASH":
                     cash_delta = qty
                 else:
                     cash_delta = 0
 
             if mode in ["DEPOSIT", "WITHDRAW"] or (mode == "BALANCE" and data.get("asset_type") == "CASH"):
-                # For cash movements, we update the CASH holding directly.
-                # Ticker in data for deposit/withdraw from modal might be empty or same as currency.
                 cash_holding = self._get_or_create_cash_holding(broker, currency)
                 cash_holding.quantity += cash_delta
-                cash_holding.current_value = cash_holding.quantity # Assuming 1:1 for base currency
-                # If non-base currency, current_value should be converted. 
-                # For now assuming EUR base or simplistic multi-currency.
+                cash_holding.current_value = cash_holding.quantity 
             
             else:
                 # TRADING (BUY/SELL)
@@ -127,16 +124,21 @@ class TransactionService:
                         holding = Holding(
                             broker=broker,
                             ticker=ticker,
-                            name=ticker, # Placeholder name, maybe fetch from YF later?
+                            name=ticker, 
                             asset_type=data.get("asset_type", "STOCK"),
                             quantity=qty,
-                            purchase_price=price, # Initial Cost Basis
-                            current_value=total_amount, # Initial Value
+                            purchase_price=price, 
+                            current_value=total_amount, 
                             currency=currency,
-                            purchase_date=date_obj
+                            purchase_date=date_obj,
+                            isin=isin # NEW
                         )
                         self.db.add(holding)
                     else:
+                        # Existing: Update Weigthed Average
+                        # Also update ISIN if missing
+                        if not holding.isin and isin:
+                            holding.isin = isin
                         # Existing: Update Weigthed Average Price
                         # New Avg = ((Old Qty * Old Avg) + (New Qty * New Price)) / (Old Qty + New Qty)
                         old_qty = holding.quantity

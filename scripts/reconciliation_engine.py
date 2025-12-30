@@ -1,211 +1,210 @@
-"""
-RECONCILIATION ENGINE
-=====================
-Performs the final validation and adjustment after ALL documents have been ingested.
-
-LOGIC:
-1. Load Final Holdings Snapshot (from CSV extraction)
-2. Load Full Transaction History (aggregated from all PDF extractions)
-3. For each asset:
-    Calculated_Qty = Sum(BUYs) - Sum(SELLs) + Sum(TRANSFERS)
-    Diff = Final_Holding_Qty - Calculated_Qty
-    If Diff != 0:
-        Generate RECONCILIATION transaction (Type: INITIAL_BALANCE / ADJUSTMENT)
-4. Output verified ledger ready for DB
-"""
 import json
+import logging
 from pathlib import Path
-from collections import defaultdict
-from datetime import datetime
+from datetime import datetime, timedelta
+import pandas as pd
 
-def load_holdings(holdings_path: str) -> dict:
-    """Load holdings snapshot. Returns dict: {isin_or_name: quantity}"""
-    if not Path(holdings_path).exists():
-        return {}
-    
-    with open(holdings_path, 'r', encoding='utf-8') as f:
-        data = json.load(f)
-        
-    holdings = {}
-    for h in data.get('holdings', []):
-        # Prefer ISIN as key, fallback to Name
-        key = h.get('isin') if h.get('isin') and len(str(h.get('isin'))) > 5 else h.get('name')
-        if key:
-            try:
-                qty = float(h.get('quantity', 0))
-                holdings[key] = qty
-            except:
-                pass
-    return holdings
+# Paths
+DATA_DIR = Path(__file__).resolve().parent.parent / 'data' / 'extracted'
+FINAL_DIR = Path(__file__).resolve().parent.parent / 'data' / 'clean'
+FINAL_DIR.mkdir(parents=True, exist_ok=True)
 
-def aggregate_transactions(transaction_files: list) -> dict:
+logging.basicConfig(level=logging.INFO, format='%(message)s')
+logger = logging.getLogger(__name__)
+
+def load_extracted_data(broker_name):
     """
-    Load transactions from multiple files and aggregate by asset.
-    Returns: {isin_or_name: {'buys': qty, 'sells': qty, 'events': []}}
+    Loads all JSONs for a broker and separates them into Holdings and Transactions.
     """
-    aggregated = defaultdict(lambda: {'buys': 0.0, 'sells': 0.0, 'net_qty': 0.0, 'events': []})
-    
-    for file_path in transaction_files:
-        if not Path(file_path).exists():
-            continue
-            
-        with open(file_path, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-            
-        # Assuming the transaction parser outputs a list of transactions
-        # If the structure is different, adjust here. 
-        # Based on previous steps, we might need to standardise the output format first.
-        # For this engine, we expect a standard structure.
-        
-        transactions = data.get('transactions', []) # Standardize this key in parser!
-        
-        for txn in transactions:
-            # Prefer ISIN, fallback to Asset Name
-            key = txn.get('isin') if txn.get('isin') and len(str(txn.get('isin'))) > 5 else txn.get('asset')
-            if not key:
-                continue
+    broker_dir = DATA_DIR / broker_name
+    if not broker_dir.exists():
+        logger.error(f"Directory not found: {broker_dir}")
+        return [], []
+
+    holdings = []
+    transactions = []
+
+    for f in broker_dir.glob("*.json"):
+        try:
+            with open(f, 'r', encoding='utf-8') as json_file:
+                data = json.load(json_file)
                 
-            qty = float(txn.get('quantity', 0))
-            type_ = txn.get('type', '').upper()
-            
-            # Update aggregates
-            if type_ in ['BUY', 'ACQUISTO']:
-                aggregated[key]['buys'] += abs(qty)
-                aggregated[key]['net_qty'] += abs(qty)
-            elif type_ in ['SELL', 'VENDITA']:
-                aggregated[key]['sells'] += abs(qty)
-                aggregated[key]['net_qty'] -= abs(qty)
-            
-            aggregated[key]['events'].append(txn)
-            
-    return aggregated
+                # Check document type
+                # Some files might be lists wrapped in dict, or just lists
+                # The extractors return { "data": [...], "document_type": "..." }
+                
+                doc_type = data.get("document_type", "UNKNOWN")
+                items = data.get("data", [])
+                
+                # If extractors created generic lists without wrapper (legacy), try to guess
+                # But our new extractors use the wrapper
+                
+                if doc_type == "HOLDING" or doc_type == "HOLDINGS":
+                    holdings.extend(items)
+                elif doc_type == "TRANSACTIONS" or doc_type == "TRANSACTION":
+                    transactions.extend(items)
+                else:
+                    # Fallback heuristic: check fields
+                    if items and 'quantity' in items[0]:
+                        if 'date' in items[0] and ('type' in items[0] or 'Type' in items[0]):
+                             transactions.extend(items)
+                        else:
+                             holdings.extend(items)
+        except Exception as e:
+            logger.error(f"Error loading {f.name}: {e}")
 
-def run_reconciliation(holdings_file: str, transaction_files: list):
-    print("="*70)
-    print("RECONCILIATION ENGINE STARTED")
-    print("="*70)
+    return holdings, transactions
+
+def normalize_ticker(ticker):
+    """
+    Normalize ticker strings (trim, uppercase).
+    Future: Mapping table.
+    """
+    if not ticker: return "UNKNOWN"
+    return str(ticker).strip().upper()
+
+def reconcile_broker(broker_name):
+    logger.info(f"⚖️ RECONCILIATION STARTED: {broker_name}")
     
     # 1. Load Data
-    print(f"Loading holdings from: {Path(holdings_file).name}")
-    holdings_map = load_holdings(holdings_file)
-    print(f"  Assets in Snapshot: {len(holdings_map)}")
+    holdings_list, transactions_list = load_extracted_data(broker_name)
+    logger.info(f"   Loaded {len(holdings_list)} Holdings targets.")
+    logger.info(f"   Loaded {len(transactions_list)} Transactions history.")
     
-    print(f"Loading transactions from {len(transaction_files)} files...")
-    history_map = aggregate_transactions(transaction_files)
-    print(f"  Assets with History: {len(history_map)}")
-    print()
-    
-    reconciliation_report = []
-    generated_transactions = []
-    
-    # 2. Compare Holdings vs History
-    all_keys = set(holdings_map.keys()) | set(history_map.keys())
-    
-    print(f"{'ASSET (ISIN/Name)':<35} | {'HOLDING':>10} | {'HISTORY':>10} | {'DIFF':>10} | {'ACTION':<15}")
-    print("-" * 90)
-    
-    for key in all_keys:
-        final_qty = holdings_map.get(key, 0.0)
-        hist_qty = history_map[key]['net_qty']
-        diff = final_qty - hist_qty
-        
-        action = "OK"
-        if abs(diff) > 0.001: # Float tolerance
-            action = "ADJUST"
-            
-            # Verify if this is a known asset
-            asset_name = key
-            # Try to find a better name from history events
-            if history_map[key]['events']:
-                asset_name = history_map[key]['events'][0].get('asset', key)
-                
-            # Generate Adjustment Transaction
-            adj_txn = {
-                "type": "RECONCILIATION",
-                "asset": asset_name,
-                "isin": key if len(key) > 5 else None, # Heuristic
-                "quantity": diff,
-                "date": "2025-01-01", # Default to start of period
-                "note": f"Auto-generated to match snapshot. History={hist_qty}, Snapshot={final_qty}"
-            }
-            generated_transactions.append(adj_txn)
-            
-        print(f"{str(key)[:35]:<35} | {final_qty:>10.2f} | {hist_qty:>10.2f} | {diff:>10.2f} | {action:<15}")
-        
-        reconciliation_report.append({
-            "asset": key,
-            "holding_qty": final_qty,
-            "history_net": hist_qty,
-            "diff": diff,
-            "status": action
-        })
+    if not holdings_list:
+        logger.warning(f"   No holdings found for {broker_name}. Skipping reconciliation.")
+        return
 
-    print("-" * 90)
-    print()
-    print(f"Reconciliation Complete.")
-    print(f"  Matched: {len([r for r in reconciliation_report if r['status'] == 'OK'])}")
-    print(f"  Adjustments Generated: {len(generated_transactions)}")
+def safe_float(val):
+    if val is None: return 0.0
+    if isinstance(val, (int, float)): return float(val)
+    try:
+        # Handle "1.234,56" vs "1,234.56"
+        # Simple heuristic: remove thousands sep, fix decimal
+        s = str(val).strip().replace('EUR','').replace('USD','').strip()
+        if ',' in s and '.' in s:
+            # Ambiguous. Assume last one is decimal if logic allows, or just standard replace
+            pass 
+        return float(s.replace(',', '.')) 
+    except:
+        return 0.0
+
+def reconcile_broker(broker_name):
+    logger.info(f"⚖️ RECONCILIATION STARTED: {broker_name}")
     
-    # 3. BUILD CONSOLIDATED LEDGER (The Truth Source)
-    ledger = []
+    # 1. Load Data
+    holdings_list, transactions_list = load_extracted_data(broker_name)
+    logger.info(f"   Loaded {len(holdings_list)} Holdings targets.")
+    logger.info(f"   Loaded {len(transactions_list)} Transactions history.")
     
-    # Process history events
-    for key, data in history_map.items():
-        base_asset = data['events'][0].get('asset', key) if data['events'] else key
+    if not holdings_list:
+        logger.warning(f"   No holdings found for {broker_name}. Skipping reconciliation.")
+        return
+
+    # 2. Build Target Map {Ticker: Quantity} and {Ticker: ISIN}
+    target_map = {}
+    ticker_isin_map = {}
+    
+    for h in holdings_list:
+        tick = normalize_ticker(h.get('ticker', ''))
         
-        # Add historical events
-        for event in data['events']:
-            ledger.append({
-                "date": event.get('date', 'Unknown'),
-                "type": event.get('type', 'UNKNOWN'),
-                "asset": base_asset,
-                "quantity": float(event.get('quantity', 0)),
-                "amount": float(event.get('amount', 0)),
-                "currency": event.get('currency', 'EUR'),
-                "source": "TRANSACTION_HISTORY"
-            })
+        # Fix: CSV extracted json might have keys lowercase.
+        # Check quantity key variants
+        raw_qty = h.get('quantity') or h.get('Quantity') or h.get('Quantità')
+        qty = safe_float(raw_qty)
+        
+        # Capture ISIN
+        isin = h.get('isin') or h.get('ISIN')
+        if isin and len(isin) > 5: # Basic valid check
+             ticker_isin_map[tick] = isin
+        
+        target_map[tick] = target_map.get(tick, 0) + qty
+
+    # 3. Process Transactions
+    tx_by_ticker = {}
+    global_min_date = "2099-12-31"
+    clean_transactions = []
+
+    for tx in transactions_list:
+        tick = normalize_ticker(tx.get('ticker', ''))
+        
+        raw_qty = tx.get('quantity')
+        qty = safe_float(raw_qty)
+        
+        op_type = tx.get('type', 'BUY').upper()
+        
+        # Adjust sign if needed based on type
+        if "SELL" in op_type or "VENDITA" in op_type:
+             if qty > 0: qty = -qty
+        elif "BUY" in op_type or "ACQUISTO" in op_type:
+             if qty < 0: qty = abs(qty) # Force positive for buy
+        
+        # Store standardized tx
+        std_tx = tx.copy()
+        std_tx['quantity'] = qty
+        std_tx['ticker'] = tick
+        std_tx['broker'] = broker_name
+        
+        # Inject ISIN if missing in Tx but present in Holding
+        current_isin = std_tx.get('isin')
+        if not current_isin or len(current_isin) < 5:
+            if tick in ticker_isin_map:
+                std_tx['isin'] = ticker_isin_map[tick]
+        
+        # Date tracking
+        d = tx.get('date', '2099-12-31')
+        if d < global_min_date: global_min_date = d
+        
+        clean_transactions.append(std_tx)
+        
+        # Sum for reconciliation
+        if op_type in ['BUY', 'SELL', 'DEPOSIT', 'WITHDRAW', 'TRANSFER']:
+            tx_by_ticker[tick] = tx_by_ticker.get(tick, 0) + qty
+
+    # 4. Reconciliation Loop
+    final_history = list(clean_transactions)
+    
+    # Calculate synthetic date (Oldest - 1 day)
+    try:
+        dt = datetime.strptime(global_min_date, "%Y-%m-%d")
+        synthetic_date = (dt - timedelta(days=1)).strftime("%Y-%m-%d")
+    except:
+        synthetic_date = "2020-01-01" # Default if date parsing fails
+
+    logger.info(f"   Reconciliation Date: {synthetic_date}")
+
+    for ticker, target_qty in target_map.items():
+        hist_qty = tx_by_ticker.get(ticker, 0)
+        diff = target_qty - hist_qty
+        
+        if abs(diff) > 0.000001: # Float epsilon
+            logger.info(f"   🔧 Fixing {ticker}: Target={target_qty}, History={hist_qty}, Diff={diff}")
             
-    # Add reconciliation events
-    for adj in generated_transactions:
-        ledger.append({
-            "date": adj['date'],
-            "type": "RECONCILIATION",
-            "asset": adj['asset'],
-            "quantity": adj['quantity'],
-            "amount": 0.0,
-            "currency": "EUR",
-            "source": "SYSTEM_ADJUSTMENT",
-            "note": adj.get('note', '')
-        })
-        
-    output = {
-        "report": reconciliation_report,
-        "adjustments": generated_transactions,
-        "consolidated_ledger": ledger,
-        "timestamp": datetime.now().isoformat()
-    }
-    
-    with open("scripts/reconciliation_result.json", "w", encoding="utf-8") as f:
-        json.dump(output, f, indent=2, ensure_ascii=False)
-        
-    print("Saved results to scripts/reconciliation_result.json")
-    print(f"Generated Consolidated Ledger with {len(ledger)} entries.")
-    return output
+            # Create SYNTHETIC TRANSACTION
+            rec_tx = {
+                "date": synthetic_date,
+                "type": "RECONCILIATION", # Special tag
+                "ticker": ticker,
+                "isin": ticker_isin_map.get(ticker), # INJECT ISIN
+                "quantity": diff,
+                "price": 0.0,
+                "total_amount": 0.0,
+                "currency": "EUR", # Default? Or infer from holding?
+                "broker": broker_name,
+                "notes": "Generated by WarRoom Reconciliation Engine"
+            }
+            final_history.append(rec_tx)
+        else:
+            # logger.info(f"   ✅ {ticker} matches.")
+            pass
+
+    # 5. Save Global Clean History for Broker
+    out_file = FINAL_DIR / f"{broker_name}_history.json"
+    with open(out_file, 'w', encoding='utf-8') as f:
+        json.dump(final_history, f, indent=2)
+
+    logger.info(f"✅ Saved {out_file.name} with {len(final_history)} records.")
 
 if __name__ == "__main__":
-    import argparse
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--holdings", help="Path to holdings JSON")
-    parser.add_argument("--transactions", help="Path to aggregated transactions JSON")
-    args = parser.parse_args()
-
-    # Default to BG Saxo if no args
-    h_file = args.holdings or "scripts/Posizioni_19-dic-2025_17_49_12_extracted.json"
-    t_file = args.transactions or "scripts/bgsaxo_transactions_full.json"
-    
-    t_files = [t_file]
-    
-    if Path(h_file).exists() and Path(t_files[0]).exists():
-        run_reconciliation(h_file, t_files)
-    else:
-        print(f"Files not found: {h_file} or {t_file}")
+    # Test run
+    reconcile_broker("bgsaxo")

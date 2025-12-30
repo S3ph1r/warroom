@@ -22,10 +22,40 @@ def reconcile():
         
         for h in holdings:
             # 1. Sum up all existing transactions for this holding
-            txs = db.query(Transaction).filter(
+            # 1. Sum up all existing transactions for this holding
+            # Robust Matching: Match by Ticker OR ISIN
+            # This handles cases where DB has ISIN as ticker (from PDF) vs Holdings Ticker
+            txs = []
+            
+            # Primary Match: Ticker vs Ticker (Case Insensitive)
+            txs_ticker = db.query(Transaction).filter(
                 Transaction.broker == h.broker,
-                Transaction.ticker == h.ticker
+                Transaction.ticker.ilike(h.ticker)
             ).all()
+            
+            # Secondary Match: ISIN vs ISIN (if available)
+            txs_isin = []
+            if h.isin:
+                txs_isin = db.query(Transaction).filter(
+                    Transaction.broker == h.broker,
+                    Transaction.isin == h.isin
+                ).all()
+                
+            # Tertiary Match: Ticker field in DB holds the ISIN (common in current loader fallback)
+            txs_ticker_is_isin = []
+            if h.isin:
+                 txs_ticker_is_isin = db.query(Transaction).filter(
+                    Transaction.broker == h.broker,
+                    Transaction.ticker == h.isin
+                ).all()
+            
+            # Combine Unique Transactions
+            seen_ids = set()
+            txs = []
+            for t in txs_ticker + txs_isin + txs_ticker_is_isin:
+                if t.id not in seen_ids:
+                    txs.append(t)
+                    seen_ids.add(t.id)
             
             total_qty_tx = sum(t.quantity if t.operation in ['BUY', 'DEPOSIT', 'BALANCE'] else -t.quantity for t in txs)
             
@@ -85,6 +115,7 @@ def reconcile():
                 currency=h.currency,
                 timestamp=datetime(2024, 1, 1), # Default start of history or similar
                 status="RECONCILED",
+                source_document="RECONCILIATION_ENGINE",
                 notes=f"Auto-generated reconciliation. Delta: {delta}"
             )
             

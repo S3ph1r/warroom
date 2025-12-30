@@ -1,50 +1,32 @@
 """
 WAR ROOM - Ingestion Package
-"""
-from ingestion.parsers import (
-    BGSaxoPositionsParser,
-    parse_bgsaxo_positions,
-    PDF_PARSING_AVAILABLE,
-)
+New IDP Pipeline Architecture.
 
-if PDF_PARSING_AVAILABLE:
-    from ingestion.parsers import (
-        BGSaxoTransactionsPDFParser,
-        parse_bgsaxo_transactions_pdf,
-        ScalableCapitalPDFParser,
-        parse_scalable_pdf,
-        parse_all_scalable_pdfs,
-        RevolutPDFParser,
-        parse_revolut_pdf,
-        TradeRepublicPDFParser,
-        parse_trade_republic_pdf,
-        IBKRCSVParser,
-        parse_ibkr_csv,
-        BinanceCSVParser,
-        parse_binance_csv,
-        parse_all_binance_csvs,
-    )
+Note: Old parsers in ingestion/parsers/ are deprecated.
+Use the new pipeline modules instead:
+    from ingestion.pipeline import IDPPipeline
+"""
+
+# New IDP Pipeline exports
+from ingestion.pipeline.gatekeeper import Gatekeeper, validate_file, get_broker_from_path
+from ingestion.pipeline.router import DocumentRouter, DocumentType, ClassificationResult
+from ingestion.pipeline.parser_registry import ParserRegistry, compute_fingerprint
+from ingestion.pipeline.extraction_engine import ExtractionEngine
+from ingestion.pipeline.data_loader import DataLoader
 
 __all__ = [
-    'BGSaxoPositionsParser',
-    'parse_bgsaxo_positions',
-    'PDF_PARSING_AVAILABLE',
+    # Pipeline modules
+    'Gatekeeper',
+    'validate_file',
+    'get_broker_from_path',
+    'DocumentRouter',
+    'DocumentType',
+    'ClassificationResult',
+    'ParserRegistry',
+    'compute_fingerprint',
+    'ExtractionEngine',
+    'DataLoader',
 ]
 
-if PDF_PARSING_AVAILABLE:
-    __all__.extend([
-        'BGSaxoTransactionsPDFParser',
-        'parse_bgsaxo_transactions_pdf',
-        'ScalableCapitalPDFParser',
-        'parse_scalable_pdf',
-        'parse_all_scalable_pdfs',
-        'RevolutPDFParser',
-        'parse_revolut_pdf',
-        'TradeRepublicPDFParser',
-        'parse_trade_republic_pdf',
-        'IBKRCSVParser',
-        'parse_ibkr_csv',
-        'BinanceCSVParser',
-        'parse_binance_csv',
-        'parse_all_binance_csvs',
-    ])
+# Legacy compatibility flag
+PDF_PARSING_AVAILABLE = True  # pdfplumber is the new standard

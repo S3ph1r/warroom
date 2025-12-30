@@ -1,0 +1,2013 @@
+
+--- PAGE 1 ---
+Roberto Guareschi - 19807401
+Report transazione
+Periodo di rendicontazione: 26-nov-2024 - 19-dic-2025
+Generatail:19-dic-202506:39:1918:39:19(W.EuropeStandardTime)
+RobertoGuareschi BGSAXOSIM-B2C1Cash
+ViaArmstrong9 CorsoEuropa22
+43124PARMA 20122Milan
+PR Italy
+Italy
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina1di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 2 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+19-dic-2025
+Contrattazione AlphabetInc.ClassA Acquista2@301,93 Pending -
+IDcontrattazione IDcontrattazione
+5353555477 5353555477
+18-dic-2025 -1.170,68 1.362,01
+Contrattazione ServiceNowInc. Acquista1@155,29USD -133,51 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,85EUR -132,66EUR -0,33 -1,18EUR
+Tassodiconversione IDcontrattazione ISIN
+0,854289 6517994499 US81762P1021
+Contrattazione CRISPRTherapeuticsLtd Acquista3@55,88USD -144,22 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,86EUR -143,36EUR -0,36 -1,21EUR
+Tassodiconversione IDcontrattazione ISIN
+0,855182 6518073315 CH0334081137
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina2di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 3 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Operazionesulcapitale QualcommInc. Dividendoincontanti 0,96 -
+Quantitàidonea Dividendoperazione Tassodiconversione CorporateActions-Dividendi
+2 0,89USD 0,851555 1,52EUR
+Dividendi-ritenutaallafonte Dividendi-ritenutaallafonte(%) Dividendi-ritenutaitaliana Dividendi-ritenutaitaliana(%)
+-0,23EUR 15% -0,33EUR 26%
+Transactiondescription ISIN
+IDEvento9449726 US7475251036
+Contrattazione CanopyGrowthCorp. Vendi-145@2,90CAD 256,83 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-3,09EUR 259,92EUR -0,64 -3,74EUR
+Tassodiconversione IDcontrattazione ISIN
+0,618127 6518354062 CA1380357048
+Contrattazione TeradyneInc. Acquista1@190,26USD -163,53 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,86EUR -162,67EUR -0,41 -1,26EUR
+Tassodiconversione IDcontrattazione ISIN
+0,855003 6518059524 US8807701029
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina3di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 4 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione VikingTherapeuticsInc. Acquista5@34,74USD -149,42 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,86EUR -148,56EUR -0,38 -1,23EUR
+Tassodiconversione IDcontrattazione ISIN
+0,855157 6518090341 US92686J1060
+Contrattazione ASTSpaceMobileInc. Acquista2@65,86USD -113,52 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,86EUR -112,66EUR -0,30 -1,15EUR
+Tassodiconversione IDcontrattazione ISIN
+0,855262 6518070781 US00217D1000
+VanEckUraniumandNuclearTechnologiesUCITS
+Contrattazione Acquista4@44,10EUR -178,38 -
+ETF
+Commissione Valorenegoziato Costototale Tassodiconversione
+-2,00EUR -176,38EUR -2,00EUR 1,000000
+IDcontrattazione ISIN
+6517399727 IE000M7V94E1
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina4di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 5 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione FranklinFTSEIndiaUCITSETF Acquista5@37,83EUR -191,15 -
+Valorenegoziato Commissione Costototale Tassodiconversione
+-189,15EUR -2,00EUR -2,00EUR 1,000000
+IDcontrattazione ISIN
+6517400401 IE00BHZRQZ17
+Contrattazione PaloAltoNetworksInc. Acquista1@186,23USD -160,13 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,86EUR -159,27EUR -0,41 -1,26EUR
+Tassodiconversione IDcontrattazione ISIN
+0,855233 6518067185 US6974351057
+Contrattazione ChevronCorp. Acquista1@148,85USD -127,98 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,85EUR -127,13EUR -0,32 -1,17EUR
+Tassodiconversione IDcontrattazione ISIN
+0,854064 6517863788 US1667641005
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina5di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 6 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione OkloInc. Acquista1@76,92USD -66,63 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,86EUR -65,77EUR -0,17 -1,02EUR
+Tassodiconversione IDcontrattazione ISIN
+0,855069 6518061918 US02156V1098
+Operazionesulcapitale EutelsatCommunications-Rights Scaricotitoli 0,00 -
+EutelsatCommunications-Rights Transactiondescription ISIN
+VenditaAllachiusura-3@0,00 IDEvento9476254 FR0014012K95
+17-dic-2025 186,02 2.532,69
+Contrattazione UnitedStatesAntimonyCorp. Acquista28@4,74USD -114,08 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,85EUR -113,23EUR -0,28 -1,13EUR
+Tassodiconversione IDcontrattazione ISIN
+0,853398 6516941402 US9115491030
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina6di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 7 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione WalmartInc. Acquista2@116,23USD -199,15 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,85EUR -198,30EUR -0,49 -1,34EUR
+Tassodiconversione IDcontrattazione ISIN
+0,853061 6516960372 US9311421039
+Contrattazione AlphabetInc.ClassA Vendi-2@297,89USD 504,65 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,85EUR 505,50EUR -1,27 -2,12EUR
+Tassodiconversione IDcontrattazione ISIN
+0,848474 6516741930 US02079K3059
+Operazionesulcapitale EutelsatCommunications-Rights Opzionecallsutitoliintermedi -5,40 -
+Transactiondescription
+CorporateActions-ShareAmount EutelsatCommunications ISIN
+IDEvento9467005Eventmanuallybooked
+-5,40EUR AcquistoInapertura4@1,35 FR0014012K95
+duetosystemlimitation
+16-dic-2025 50,25 2.346,67
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina7di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 8 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione SolidPowerInc. Vendi-19@4,52USD 71,85 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,85EUR 72,70EUR -0,18 -1,03EUR
+Tassodiconversione IDcontrattazione ISIN
+0,846552 6515033794 US83422N1054
+Operazionesulcapitale EutelsatCommunications-Rights Opzionecallsutitoliintermedi 0,00 -
+EutelsatCommunications-Rights Transactiondescription ISIN
+VenditaAllachiusura-22@0,00 IDEvento9467005 FR0014012K95
+Operazionesulcapitale EutelsatCommunications-Rights Opzionecallsutitoliintermedi -21,60 -
+CorporateActions-ShareAmount EutelsatCommunications Transactiondescription ISIN
+-21,60EUR AcquistoInapertura16@1,35 IDEvento9467005 FR0014012K95
+15-dic-2025 -43,22 2.296,42
+Contrattazione Amplifon Acquista7@13,98EUR -99,92 -
+Commissione Valorenegoziato Tassazionetransazionifinanziarie(Italia) Costototale
+-2,00EUR -97,82EUR -0,10EUR -2,10EUR
+Tassodiconversione IDcontrattazione ISIN
+1,000000 6513068050 IT0004056880
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina8di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 9 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Operazionesulcapitale AlphabetInc.ClassA Dividendoincontanti 0,23 -
+Quantitàidonea Dividendoperazione Tassodiconversione Dividendi-ritenutaitaliana
+2 0,21USD 0,852385 -0,08EUR
+Dividendi-ritenutaitaliana(%) Dividendi-ritenutaallafonte Dividendi-ritenutaallafonte(%) CorporateActions-Dividendi
+26% -0,05EUR 15% 0,36EUR
+Transactiondescription ISIN
+IDEvento9459127 US02079K3059
+Contrattazione BroadcomInc. Vendi-2@353,00USD 598,19 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,85EUR 599,04EUR -1,50 -2,35EUR
+Tassodiconversione IDcontrattazione ISIN
+0,848492 6513549616 US11135F1012
+Contrattazione ToyotaMotorCorp.-ADR Acquista2@215,81USD -369,06 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,85EUR -368,21EUR -0,91 -1,76EUR
+Tassodiconversione IDcontrattazione ISIN
+0,853097 6513477326 US8923313071
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina9di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 10 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione NovoNordiskBA/S Acquista4@319,10DKK -172,66 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-1,34EUR -171,32EUR -0,43 -1,77EUR
+Tassodiconversione IDcontrattazione ISIN
+0,134218 6513054071 DK0062498333
+11-dic-2025 178,74 2.339,64
+Contrattazione OculusInc. Vendi-7000@0,05CAD 178,74 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-15,41EUR 194,15EUR -0,45 -15,90EUR
+Tassodiconversione IDcontrattazione ISIN
+0,616359 6511202189 US67575Y1091
+10-dic-2025 2.000,23 2.160,90
+Trasferimentodiliquidità Deposito 2.000,00 -
+Commento DepositType Tassodiconversione Importoincontanti
+/OCMT/EUR2000,/19807401 External 1,000000 2.000,00EUR
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina10di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 11 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Operazionesulcapitale PayPalHoldingsInc. Dividendoincontanti 0,23 -
+Quantitàidonea Dividendoperazione Tassodiconversione Dividendi-ritenutaitaliana
+3 0,14USD 0,859709 -0,08EUR
+Dividendi-ritenutaitaliana(%) CorporateActions-Dividendi Dividendi-ritenutaallafonte Dividendi-ritenutaallafonte(%)
+26% 0,36EUR -0,05EUR 15%
+Transactiondescription ISIN
+IDEvento9452626 US70450Y1038
+09-dic-2025 0,00 160,67
+Operazionesulcapitale **SeeWMT:xnas(WalmartInc.) Change 0,00 -
+**SeeWMT:xnas(WalmartInc.) Transactiondescription ISIN
+VenditaAllachiusura-3@92,82 IDEvento9465519 US9311421039
+Operazionesulcapitale **SeeWMT:xnas(WalmartInc.) Change 0,00 -
+WalmartInc. Transactiondescription ISIN
+AcquistoInapertura3@92,82 IDEvento9465519 US9311421039
+05-dic-2025 -97,74 160,67
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina11di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 12 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione CRISPRTherapeuticsLtd Acquista2@56,26USD -97,74 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,86EUR -96,88EUR -0,24 -1,10EUR
+Tassodiconversione IDcontrattazione ISIN
+0,860988 6505028731 CH0334081137
+04-dic-2025 -316,60 258,41
+Contrattazione NVIDIACorp. Acquista2@183,57USD -316,60 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,86EUR -315,74EUR -0,78 -1,64EUR
+Tassodiconversione IDcontrattazione ISIN
+0,860009 6502725109 US67066G1040
+28-nov-2025 -520,71 575,01
+Contrattazione QorvoInc. Acquista2@85,55USD -149,09 -
+Valorenegoziato Commissione Costodiconversionevaluta Costototale
+-148,22EUR -0,87EUR -0,38 -1,24EUR
+Tassodiconversione IDcontrattazione ISIN
+0,866300 6495991203 US74736K1016
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina12di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 13 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione D-WaveQuantumInc. Acquista5@22,75USD -99,42 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,87EUR -98,55EUR -0,26 -1,12EUR
+Tassodiconversione IDcontrattazione ISIN
+0,866341 6496004699 US26740W1099
+Contrattazione AlibabaGroupHoldingLtd-ADR Acquista2@134,60EUR -272,20 -
+Commissione Valorenegoziato Costototale Tassodiconversione
+-3,00EUR -269,20EUR -3,00EUR 1,000000
+IDcontrattazione ISIN
+6495547543 US01609W1027
+26-nov-2025 0,00 1.095,72
+Operazionesulcapitale EutelsatCommunications Distribuzionetitoliintermedi 0,00 -
+EutelsatCommunications EutelsatCommunications Transactiondescription ISIN
+AcquistoInapertura25@3,61 VenditaAllachiusura-25@4,64 IDEvento9466861 FR0010221234
+Operazionesulcapitale EutelsatCommunications Distribuzionetitoliintermedi 0,00 -
+EutelsatCommunications-Rights Transactiondescription ISIN
+AcquistoInapertura25@1,02 IDEvento9466861 FR0010221234
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina13di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 14 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+25-nov-2025 1.054,41 1.095,72
+Contrattazione NVIDIACorp. Vendi-7@174,63USD 1.054,41 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,86EUR 1.055,27EUR -2,64 -3,51EUR
+Tassodiconversione IDcontrattazione ISIN
+0,863271 6492286013 US67066G1040
+24-nov-2025 -687,31 41,31
+Contrattazione KULRTechnologyGroupInc Acquista30@2,34USD -61,83 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,87EUR -60,96EUR -0,15 -1,02EUR
+Tassodiconversione IDcontrattazione ISIN
+0,870230 6491322820 US50125G3074
+CDTEnvironmentalTechnologyInvestmentHldngs
+Contrattazione Acquista200@0,38USD -66,64 -
+Ltd
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,87EUR -65,77EUR -0,16 -1,03EUR
+Tassodiconversione IDcontrattazione ISIN
+0,869984 6491312737 KYG2030P1072
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina14di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 15 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione ZhejiangSanhuaIntelligentControlsCoLtd Acquista100@31,94HKD -359,71 -
+ImpostadibolloHongKong Commissione Valorenegoziato CommissionidiBorsa
+-0,45EUR -1,68EUR -357,55EUR -0,03EUR
+Costodiconversionevaluta Costototale Tassodiconversione IDcontrattazione
+-0,91 -3,06EUR 0,111943 6490246686
+ISIN
+CNE100006Z79
+Contrattazione RealbotixCorp Acquista100@0,40CAD -27,45 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-3,08EUR -24,37EUR -0,06 -3,14EUR
+Tassodiconversione IDcontrattazione ISIN
+0,616862 6491328472 CA75604K1075
+Contrattazione KranesharesSSEStarMarket50UCITSETF Acquista10@16,97EUR -171,68 -
+Commissione Valorenegoziato Costototale Tassodiconversione
+-2,00EUR -169,68EUR -2,00EUR 1,000000
+IDcontrattazione ISIN
+6490378945 IE00BKPJY541
+20-nov-2025 -85,32 742,10
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina15di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 16 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+VanEckUraniumandNuclearTechnologiesUCITS
+Contrattazione Acquista6@49,00EUR -296,00 -
+ETF
+Commissione Valorenegoziato Costototale Tassodiconversione
+-2,00EUR -294,00EUR -2,00EUR 1,000000
+IDcontrattazione ISIN
+6486729961 IE000M7V94E1
+Contrattazione JobyAviationIncorporation Vendi-20@13,00USD 210,68 -
+Commissione Valorenegoziato Impostanazionalesulleplusvalenze Costodiconversionevaluta
+-0,87EUR 225,03EUR -13,48EUR -0,56
+Costototale Tassodiconversione IDcontrattazione ISIN
+-1,43EUR 0,865424 6488261683 KYG651631007
+19-nov-2025 -483,42 813,94
+Contrattazione VoyagerTechnologiesInc. Acquista10@18,15USD -158,33 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,87EUR -157,46EUR -0,39 -1,26EUR
+Tassodiconversione IDcontrattazione ISIN
+0,867567 6485821851 US92892B1035
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina16di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 17 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione NVIDIACorp. Acquista2@186,90USD -325,09 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,87EUR -324,22EUR -0,80 -1,67EUR
+Tassodiconversione IDcontrattazione ISIN
+0,867376 6485798637 US67066G1040
+14-nov-2025 232,98 1.309,74
+CDTEnvironmentalTechnologyInvestmentHldngs
+Contrattazione Acquista200@0,35USD -61,28 -
+Ltd
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,86EUR -60,42EUR -0,16 -1,02EUR
+Tassodiconversione IDcontrattazione ISIN
+0,863323 6481296296 KYG2030P1072
+Contrattazione DatadogInc. Vendi-2@179,31USD 294,26 -
+Commissione Valorenegoziato Impostanazionalesulleplusvalenze Costodiconversionevaluta
+-0,86EUR 307,50EUR -12,38EUR -0,77
+Costototale Tassodiconversione IDcontrattazione ISIN
+-1,63EUR 0,857460 6480642555 US23804L1035
+13-nov-2025 -568,90 1.064,38
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina17di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 18 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione iSharesMSCIChinaAccUCITSETF Acquista100@5,66EUR -568,90 -
+Commissione Valorenegoziato Costototale Tassodiconversione
+-3,00EUR -565,90EUR -3,00EUR 1,000000
+IDcontrattazione ISIN
+6478961175 IE00BJ5JPG56
+12-nov-2025 257,54 1.650,00
+Contrattazione AlibabaGroupHoldingLtd-ADR Vendi-2@159,50USD 257,54 -
+Commissione Valorenegoziato Impostanazionalesulleplusvalenze Costodiconversionevaluta
+-0,86EUR 275,12EUR -16,72EUR -0,68
+Costototale Tassodiconversione IDcontrattazione ISIN
+-1,54EUR 0,862431 6477244664 US01609W1027
+11-nov-2025 -345,44 1.375,74
+Contrattazione Baidu.comInc.-ADR Acquista3@132,92USD -345,44 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,86EUR -344,58EUR -0,86 -1,72EUR
+Tassodiconversione IDcontrattazione ISIN
+0,864116 6475880997 US0567521085
+10-nov-2025 -2.158,91 1.721,18
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina18di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 19 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione NVIDIACorp. Acquista3@195,00USD -507,95 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,87EUR -507,08EUR -1,27 -2,13EUR
+Tassodiconversione IDcontrattazione ISIN
+0,866806 6474428384 US67066G1040
+Contrattazione D-WaveQuantumInc. Acquista5@29,86USD -130,33 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,87EUR -129,46EUR -0,33 -1,19EUR
+Tassodiconversione IDcontrattazione ISIN
+0,867143 6474500271 US26740W1099
+Contrattazione AristaNetworksInc. Acquista2@137,50USD -239,24 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,87EUR -238,37EUR -0,60 -1,46EUR
+Tassodiconversione IDcontrattazione ISIN
+0,866806 6474426648 US0404132054
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina19di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 20 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione VoyagerTechnologiesInc. Acquista10@24,11USD -209,87 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,87EUR -209,00EUR -0,53 -1,39EUR
+Tassodiconversione IDcontrattazione ISIN
+0,866847 6474434110 US92892B1035
+VanEckUraniumandNuclearTechnologiesUCITS
+Contrattazione Acquista3@52,13EUR -158,39 -
+ETF
+Commissione Valorenegoziato Costototale Tassodiconversione
+-2,00EUR -156,39EUR -2,00EUR 1,000000
+IDcontrattazione ISIN
+6474128262 IE000M7V94E1
+Contrattazione OracleCorp. Acquista2@246,49USD -428,22 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,87EUR -427,35EUR -1,07 -1,93EUR
+Tassodiconversione IDcontrattazione ISIN
+0,866877 6474445597 US68389X1054
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina20di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 21 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione TSMC-ADR Acquista1@295,00USD -256,59 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,87EUR -255,72EUR -0,65 -1,51EUR
+Tassodiconversione IDcontrattazione ISIN
+0,866843 6474430709 US8740391003
+Contrattazione BYDCompanyLtd-ADR Acquista20@13,12USD -228,32 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,87EUR -227,45EUR -0,57 -1,43EUR
+Tassodiconversione IDcontrattazione ISIN
+0,866825 6474409678 US05606L1008
+07-nov-2025 751,34 3.918,33
+Contrattazione MicrosoftCorp. Vendi-1@493,83USD 421,65 -
+Commissione Valorenegoziato Impostanazionalesulleplusvalenze Costodiconversionevaluta
+-0,86EUR 425,11EUR -2,60EUR -1,07
+Costototale Tassodiconversione IDcontrattazione ISIN
+-1,93EUR 0,860847 6472168721 US5949181045
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina21di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 22 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione TeslaInc. Vendi-1@424,83USD 329,69 -
+Commissione Valorenegoziato Impostanazionalesulleplusvalenze Costodiconversionevaluta
+-0,86EUR 366,19EUR -35,64EUR -0,92
+Costototale Tassodiconversione IDcontrattazione ISIN
+-1,78EUR 0,861972 6471911729 US88160R1014
+06-nov-2025 2.453,89 3.371,43
+Operazionesulcapitale Baidu.comInc.-ADR Altroevento -0,03 -
+DepositoryCharges Transactiondescription ISIN
+-0,03EUR IDEvento9441077 US0567521085
+Operazionesulcapitale NokiaOyj Dividendoincontanti 1,15 -
+Quantitàidonea Dividendoperazione Tassodiconversione Dividendi-ritenutaallafonte
+80 0,03EUR 1,000000 -0,84EUR
+Dividendi-ritenutaallafonte(%) Dividendi-ritenutaitaliana Dividendi-ritenutaitaliana(%) CorporateActions-Dividendi
+35% -0,41EUR 26% 2,40EUR
+Transactiondescription ISIN
+IDEvento9341376 FI0009000681
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina22di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 23 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione PalantirTechnologiesInc. Vendi-4@178,83USD 594,77 -
+Commissione Valorenegoziato Impostanazionalesulleplusvalenze Costodiconversionevaluta
+-0,86EUR 618,34EUR -22,71EUR -1,54
+Costototale Tassodiconversione IDcontrattazione ISIN
+-2,41EUR 0,864430 6470276385 US69608A1088
+Contrattazione KULRTechnologyGroupInc Acquista22@3,06USD -59,32 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,87EUR -58,45EUR -0,15 -1,02EUR
+Tassodiconversione IDcontrattazione ISIN
+0,869660 6470178633 US50125G3074
+Contrattazione XPengInc.-ADR Acquista5@24,33USD -106,60 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,87EUR -105,73EUR -0,26 -1,13EUR
+Tassodiconversione IDcontrattazione ISIN
+0,869170 6470138581 US98422D1054
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina23di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 24 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione NVIDIACorp. Vendi-8@193,03USD 1.251,54 -
+Commissione Valorenegoziato Impostanazionalesulleplusvalenze Costodiconversionevaluta
+-0,87EUR 1.336,86EUR -84,45EUR -3,35
+Costototale Tassodiconversione IDcontrattazione ISIN
+-4,22EUR 0,865705 6469875161 US67066G1040
+Contrattazione SolidPowerInc. Vendi-130@8,08USD 772,38 -
+Commissione Valorenegoziato Impostanazionalesulleplusvalenze Costodiconversionevaluta
+-0,87EUR 908,77EUR -135,52EUR -2,28
+Costototale Tassodiconversione IDcontrattazione ISIN
+-3,15EUR 0,865168 6469610821 US83422N1054
+04-nov-2025 525,22 700,53
+Contrattazione KULRTechnologyGroupInc Acquista20@3,38USD -59,91 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,87EUR -59,04EUR -0,15 -1,02EUR
+Tassodiconversione IDcontrattazione ISIN
+0,873307 6465893527 US50125G3074
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina24di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 25 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione BroadcomInc. Vendi-2@351,94USD 585,13 -
+Commissione Valorenegoziato Impostanazionalesulleplusvalenze Costodiconversionevaluta
+-0,87EUR 611,67EUR -25,67EUR -1,53
+Costototale Tassodiconversione IDcontrattazione ISIN
+-2,40EUR 0,869007 6466732928 US11135F1012
+03-nov-2025 -675,32 149,64
+VanEckUraniumandNuclearTechnologiesUCITS
+Contrattazione Acquista7@57,51EUR -404,57 -
+ETF
+Commissione Valorenegoziato Costototale Tassodiconversione
+-2,00EUR -402,57EUR -2,00EUR 1,000000
+IDcontrattazione ISIN
+6463537512 IE000M7V94E1
+Contrattazione SubstrateArtificialIntelligenceSA Acquista1300@0,09EUR -122,00 -
+Commissione Valorenegoziato Costototale Tassodiconversione
+-5,00EUR -117,00EUR -5,00EUR 1,000000
+IDcontrattazione ISIN
+6463508445 ES0105650008
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina25di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 26 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione ArmHoldingsLimited-ADR Acquista1@169,83USD -148,75 -
+Valorenegoziato Commissione Costodiconversionevaluta Costototale
+-147,88EUR -0,87EUR -0,37 -1,24EUR
+Tassodiconversione IDcontrattazione ISIN
+0,870762 6464441283 US0420682058
+31-ott-2025 -248,20 824,96
+Contrattazione D-WaveQuantumInc. Acquista5@36,04USD -157,32 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,87EUR -156,45EUR -0,39 -1,26EUR
+Tassodiconversione IDcontrattazione ISIN
+0,868187 6462316538 US26740W1099
+Contrattazione VNETGroupInc.-ADR Acquista10@10,37USD -90,88 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,87EUR -90,01EUR -0,22 -1,09EUR
+Tassodiconversione IDcontrattazione ISIN
+0,868022 6462295598 US90138A1034
+30-ott-2025 -213,94 1.073,16
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina26di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 27 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione Baidu.comInc.-ADR Acquista2@122,95USD -213,94 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,87EUR -213,07EUR -0,54 -1,40EUR
+Tassodiconversione IDcontrattazione ISIN
+0,866503 6460610675 US0567521085
+29-ott-2025 -511,00 1.287,10
+Contrattazione AlphabetInc.ClassA Acquista1@271,91USD -234,59 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,86EUR -233,73EUR -0,58 -1,44EUR
+Tassodiconversione IDcontrattazione ISIN
+0,859582 6459499690 US02079K3059
+Contrattazione AristaNetworksInc. Acquista2@160,20USD -276,41 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,86EUR -275,55EUR -0,69 -1,55EUR
+Tassodiconversione IDcontrattazione ISIN
+0,860024 6459531962 US0404132054
+27-ott-2025 -59,12 1.798,10
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina27di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 28 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione RealbotixCorp Acquista200@0,46CAD -59,12 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-3,08EUR -56,04EUR -0,15 -3,22EUR
+Tassodiconversione IDcontrattazione ISIN
+0,615865 6455868883 CA75604K1075
+23-ott-2025 1,08 1.857,22
+Operazionesulcapitale OracleCorp. Dividendoincontanti 1,08 -
+Quantitàidonea Dividendoperazione Tassodiconversione CorporateActions-Dividendi
+4 0,50USD 0,862388 1,72EUR
+Dividendi-ritenutaallafonte Dividendi-ritenutaallafonte(%) Dividendi-ritenutaitaliana Dividendi-ritenutaitaliana(%)
+-0,26EUR 15% -0,38EUR 26%
+Transactiondescription ISIN
+IDEvento9435698 US68389X1054
+22-ott-2025 822,80 1.892,60
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina28di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 29 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione D-WaveQuantumInc. Vendi-10@28,98USD 217,55 -
+Commissione Valorenegoziato Impostanazionalesulleplusvalenze Costodiconversionevaluta
+-0,86EUR 249,23EUR -30,82EUR -0,62
+Costototale Tassodiconversione IDcontrattazione ISIN
+-1,48EUR 0,860003 6451174682 US26740W1099
+Contrattazione RealbotixCorp Vendi-2000@0,51CAD 605,25 -
+Commissione Valorenegoziato Impostanazionalesulleplusvalenze Costodiconversionevaluta
+-15,35EUR 626,24EUR -5,64EUR -1,53
+Costototale Tassodiconversione IDcontrattazione ISIN
+-16,92EUR 0,613958 6450977684 CA75604K1075
+21-ott-2025 651,01 1.088,40
+Contrattazione OracleCorp. Vendi-3@274,33USD 651,01 -
+Commissione Valorenegoziato Impostanazionalesulleplusvalenze Costodiconversionevaluta
+-0,86EUR 706,93EUR -55,06EUR -1,77
+Costototale Tassodiconversione IDcontrattazione ISIN
+-2,63EUR 0,858973 6449465324 US68389X1054
+16-ott-2025 268,34 382,33
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina29di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 30 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione NioInc.-ADR Vendi-50@6,29USD 268,34 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,86EUR 269,20EUR -0,67 -1,53EUR
+Tassodiconversione IDcontrattazione ISIN
+0,855950 6444212149 US62914V1061
+13-ott-2025 -1.688,27 223,18
+Contrattazione VoyagerTechnologiesInc. Acquista10@32,17USD -279,64 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,87EUR -278,77EUR -0,70 -1,56EUR
+Tassodiconversione IDcontrattazione ISIN
+0,866484 6438806777 US92892B1035
+Contrattazione NokiaOyj Acquista40@4,56EUR -185,31 -
+Commissione Valorenegoziato Costototale Tassodiconversione
+-3,00EUR -182,31EUR -3,00EUR 1,000000
+IDcontrattazione ISIN
+6438820978 FI0009000681
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina30di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 31 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione PalantirTechnologiesInc. Acquista4@176,84USD -613,84 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,87EUR -612,97EUR -1,53 -2,39EUR
+Tassodiconversione IDcontrattazione ISIN
+0,866566 6438791445 US69608A1088
+Contrattazione BroadcomInc. Acquista2@351,16USD -609,48 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,87EUR -608,61EUR -1,53 -2,39EUR
+Tassodiconversione IDcontrattazione ISIN
+0,866574 6438781962 US11135F1012
+10-ott-2025 1.788,20 1.911,45
+TransazioniinContanti Impostadibollosuldepositotitoli -8,56 -
+Tassodiconversione Impostadibollosuldepositotitoli Commento
+1,000000 -8,56EUR Impostadibollodossiertitoli-Q32025
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina31di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 32 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione NovoNordiskBA/S Acquista2@375,70DKK -102,22 -
+Valorenegoziato Commissione Costodiconversionevaluta Costototale
+-100,88EUR -1,34EUR -0,25 -1,59EUR
+Tassodiconversione IDcontrattazione ISIN
+0,134258 6436105375 DK0062498333
+Contrattazione Amazon.comInc. Acquista2@226,08USD -392,77 -
+Valorenegoziato Commissione Costodiconversionevaluta Costototale
+-391,90EUR -0,87EUR -0,99 -1,85EUR
+Tassodiconversione IDcontrattazione ISIN
+0,866731 6436301982 US0231351067
+Contrattazione PalantirTechnologiesInc. Vendi-4@175,37USD 561,33 -
+Valorenegoziato Commissione Impostanazionalesulleplusvalenze Costodiconversionevaluta
+602,57EUR -0,86EUR -40,38EUR -1,51
+Costototale Tassodiconversione IDcontrattazione ISIN
+-2,37EUR 0,858982 6437644437 US69608A1088
+Trasferimentodiliquidità Deposito 1.000,00 -
+Commento DepositType Tassodiconversione Importoincontanti
+/OCMT/EUR1000,/19807401 External 1,000000 1.000,00EUR
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina32di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 33 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione NokiaOyj Acquista40@4,54EUR -184,71 -
+Valorenegoziato Commissione Costototale Tassodiconversione
+-181,71EUR -3,00EUR -3,00EUR 1,000000
+IDcontrattazione ISIN
+6436155209 FI0009000681
+Contrattazione BroadcomInc. Vendi-3@324,94USD 779,05 -
+Valorenegoziato Commissione Impostanazionalesulleplusvalenze Costodiconversionevaluta
+837,21EUR -0,86EUR -57,30EUR -2,10
+Costototale Tassodiconversione IDcontrattazione ISIN
+-2,96EUR 0,858837 6437573591 US11135F1012
+Contrattazione RealbotixCorp Vendi-700@0,60CAD 240,96 -
+Valorenegoziato Commissione Impostanazionalesulleplusvalenze Costodiconversionevaluta
+258,94EUR -6,47EUR -11,51EUR -0,63
+Costototale Tassodiconversione IDcontrattazione ISIN
+-7,12EUR 0,616527 6436433427 CA75604K1075
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina33di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 34 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione UnitedStatesAntimonyCorp. Acquista10@12,00USD -104,88 -
+Valorenegoziato Commissione Costodiconversionevaluta Costototale
+-104,01EUR -0,87EUR -0,27 -1,13EUR
+Tassodiconversione IDcontrattazione ISIN
+0,866727 6436286499 US9115491030
+06-ott-2025 -0,17 14,06
+Operazionesulcapitale XPengInc.-ADR Altroevento -0,17 -
+DepositoryCharges Transactiondescription ISIN
+-0,17EUR IDEvento9398674 US98422D1054
+02-ott-2025 0,05 14,23
+Operazionesulcapitale NVIDIACorp. Dividendoincontanti 0,05 -
+Quantitàidonea Dividendoperazione Tassodiconversione CorporateActions-Dividendi
+10 0,01USD 0,852025 0,09EUR
+Dividendi-ritenutaallafonte Dividendi-ritenutaallafonte(%) Dividendi-ritenutaitaliana Dividendi-ritenutaitaliana(%)
+-0,02EUR 15% -0,02EUR 26%
+Transactiondescription ISIN
+IDEvento9431640 US67066G1040
+30-set-2025 1,59 14,18
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina34di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 35 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Operazionesulcapitale BroadcomInc. Dividendoincontanti 1,59 -
+Quantitàidonea Dividendoperazione Tassodiconversione Dividendi-ritenutaitaliana
+5 0,59USD 0,852003 -0,55EUR
+Dividendi-ritenutaitaliana(%) Dividendi-ritenutaallafonte Dividendi-ritenutaallafonte(%) CorporateActions-Dividendi
+26% -0,37EUR 15% 2,51EUR
+Transactiondescription ISIN
+IDEvento9435691 US11135F1012
+29-set-2025 0,28 12,59
+Operazionesulcapitale MetaPlatformsInc. Dividendoincontanti 0,28 -
+Quantitàidonea Dividendoperazione Tassodiconversione CorporateActions-Dividendi
+1 0,53USD 0,852430 0,45EUR
+Dividendi-ritenutaallafonte Dividendi-ritenutaallafonte(%) Dividendi-ritenutaitaliana Dividendi-ritenutaitaliana(%)
+-0,07EUR 15% -0,10EUR 26%
+Transactiondescription ISIN
+IDEvento9436948 US30303M1027
+25-set-2025 0,96 12,31
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina35di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 36 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Operazionesulcapitale QualcommInc. Dividendoincontanti 0,96 -
+Quantitàidonea Dividendoperazione Tassodiconversione CorporateActions-Dividendi
+2 0,89USD 0,851756 1,52EUR
+Dividendi-ritenutaitaliana Dividendi-ritenutaitaliana(%) Dividendi-ritenutaallafonte Dividendi-ritenutaallafonte(%)
+-0,33EUR 26% -0,23EUR 15%
+Transactiondescription ISIN
+IDEvento9415447 US7475251036
+18-set-2025 -75,51 11,35
+Contrattazione UnitedStatesAntimonyCorp. Acquista7@5,55USD -33,97 -
+Valorenegoziato Commissione Costodiconversionevaluta Costototale
+-33,12EUR -0,85EUR -0,08 -0,93EUR
+Tassodiconversione IDcontrattazione ISIN
+0,852473 6406789932 US9115491030
+Contrattazione IntelCorp. Acquista20@31,78USD -541,54 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,85EUR -540,69EUR -1,35 -2,20EUR
+Tassodiconversione IDcontrattazione ISIN
+0,850672 6406606382 US4581401001
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina36di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 37 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Trasferimentodiliquidità Deposito 500,00 -
+Commento DepositType Tassodiconversione Importoincontanti
+/OCMT/EUR500,/19807401 External 1,000000 500,00EUR
+17-set-2025 -602,57 86,86
+Contrattazione NioInc.-ADR Acquista30@7,23USD -184,37 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,85EUR -183,52EUR -0,46 -1,30EUR
+Tassodiconversione IDcontrattazione ISIN
+0,846117 6405072852 US62914V1061
+Contrattazione PalantirTechnologiesInc. Acquista3@164,44USD -418,20 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,85EUR -417,35EUR -1,05 -1,89EUR
+Tassodiconversione IDcontrattazione ISIN
+0,846002 6405329691 US69608A1088
+16-set-2025 -653,49 689,43
+Operazionesulcapitale PDDHoldingsInc-ADR Altroevento -0,03 -
+DepositoryCharges Transactiondescription ISIN
+-0,03EUR IDEvento9427180 US7223041028
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina37di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 38 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione MetaPlatformsInc. Acquista1@769,70USD -653,46 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,85EUR -652,61EUR -1,63 -2,48EUR
+Tassodiconversione IDcontrattazione ISIN
+0,847873 6403846452 US30303M1027
+15-set-2025 0,11 1.342,92
+Operazionesulcapitale AlphabetInc.ClassA Dividendoincontanti 0,11 -
+Quantitàidonea Dividendoperazione Tassodiconversione Dividendi-ritenutaallafonte
+1 0,21USD 0,852575 -0,03EUR
+Dividendi-ritenutaallafonte(%) Dividendi-ritenutaitaliana Dividendi-ritenutaitaliana(%) CorporateActions-Dividendi
+15% -0,04EUR 26% 0,18EUR
+Transactiondescription ISIN
+IDEvento9416581 US02079K3059
+11-set-2025 0,46 1.342,81
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina38di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 39 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Operazionesulcapitale MicrosoftCorp. Dividendoincontanti 0,46 -
+Quantitàidonea Dividendoperazione Tassodiconversione Dividendi-ritenutaallafonte
+1 0,83USD 0,855016 -0,10EUR
+Dividendi-ritenutaallafonte(%) CorporateActions-Dividendi Dividendi-ritenutaitaliana Dividendi-ritenutaitaliana(%)
+15% 0,71EUR -0,15EUR 26%
+Transactiondescription ISIN
+IDEvento9402078 US5949181045
+02-set-2025 -440,40 1.342,35
+Operazionesulcapitale **SeeWMT:xnas(WalmartInc.) Dividendoincontanti 0,38 -
+Quantitàidonea Dividendoperazione Tassodiconversione CorporateActions-Dividendi
+3 0,24USD 0,855289 0,61EUR
+Dividendi-ritenutaallafonte Dividendi-ritenutaallafonte(%) Dividendi-ritenutaitaliana Dividendi-ritenutaitaliana(%)
+-0,09EUR 15% -0,14EUR 26%
+Transactiondescription ISIN
+IDEvento9344030 US9311421039
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina39di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 40 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione OracleCorp. Acquista1@221,39USD -191,56 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,86EUR -190,70EUR -0,47 -1,33EUR
+Tassodiconversione IDcontrattazione ISIN
+0,861380 6386248628 US68389X1054
+Contrattazione BroadcomInc. Acquista1@288,34USD -249,22 -
+Valorenegoziato Commissione Costodiconversionevaluta Costototale
+-248,36EUR -0,86EUR -0,62 -1,48EUR
+Tassodiconversione IDcontrattazione ISIN
+0,861358 6386229238 US11135F1012
+01-set-2025 1.441,98 1.782,75
+Contrattazione XtrackersAI&BigDataUCITSETF Acquista4@139,01EUR -558,02 -
+Commissione Valorenegoziato Costototale Tassodiconversione
+-2,00EUR -556,02EUR -2,00EUR 1,000000
+IDcontrattazione ISIN
+6384807122 IE00BGV5VN51
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina40di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 41 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Trasferimentodiliquidità Deposito 2.000,00 -
+Commento DepositType Tassodiconversione Importoincontanti
+/OCMT/EUR2000,/19807401 External 1,000000 2.000,00EUR
+19-ago-2025 0,54 340,77
+Operazionesulcapitale NovoNordiskBA/S Dividendoincontanti 0,54 -
+Quantitàidonea Dividendoperazione Tassodiconversione Dividendi-ritenutaitaliana
+2 3,75DKK 0,133977 -0,19EUR
+Dividendi-ritenutaitaliana(%) Dividendi-ritenutaallafonte Dividendi-ritenutaallafonte(%) CorporateActions-Dividendi
+26% -0,27EUR 27% 1,00EUR
+Transactiondescription ISIN
+IDEvento9421916 DK0062498333
+01-ago-2025 -376,60 340,23
+Contrattazione FerrariNV Acquista1@374,60EUR -376,60 -
+Commissione Valorenegoziato Costototale Tassodiconversione
+-2,00EUR -374,60EUR -2,00EUR 1,000000
+IDcontrattazione ISIN
+6355803216 NL0011585146
+31-lug-2025 -207,95 716,83
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina41di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 42 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione AlibabaGroupHoldingLtd-ADR Acquista2@117,82USD -207,95 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,88EUR -207,07EUR -0,52 -1,40EUR
+Tassodiconversione IDcontrattazione ISIN
+0,878754 6353695648 US01609W1027
+30-lug-2025 -143,71 924,78
+Contrattazione SolidPowerInc. Acquista50@3,27USD -143,71 -
+Valorenegoziato Commissione Costodiconversionevaluta Costototale
+-142,84EUR -0,87EUR -0,35 -1,22EUR
+Tassodiconversione IDcontrattazione ISIN
+0,873665 6352455375 US83422N1054
+29-lug-2025 255,15 1.092,10
+Contrattazione QuantumComputingInc Vendi-21@15,39USD 255,15 -
+Commissione Valorenegoziato Impostanazionalesulleplusvalenze Costodiconversionevaluta
+-0,87EUR 279,63EUR -23,61EUR -0,70
+Costototale Tassodiconversione IDcontrattazione ISIN
+-1,57EUR 0,865108 6350690308 US74766W1080
+28-lug-2025 -400,73 813,34
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina42di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 43 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione FirstTrustNasdaqCyberSecurityUCTISETF Acquista5@40,29EUR -203,47 -
+Valorenegoziato Commissione Costototale Tassodiconversione
+-201,47EUR -2,00EUR -2,00EUR 1,000000
+IDcontrattazione ISIN
+6348373219 IE00BF16M727
+Contrattazione SolidPowerInc. Acquista50@4,56USD -197,26 -
+Valorenegoziato Commissione Costodiconversionevaluta Costototale
+-196,40EUR -0,86EUR -0,49 -1,35EUR
+Tassodiconversione IDcontrattazione ISIN
+0,861395 6348838428 US83422N1054
+24-lug-2025 0,80 1.214,07
+Operazionesulcapitale OracleCorp. Dividendoincontanti 0,80 -
+Quantitàidonea Dividendoperazione Tassodiconversione Dividendi-ritenutaallafonte
+3 0,50USD 0,853060 -0,20EUR
+Dividendi-ritenutaallafonte(%) CorporateActions-Dividendi Dividendi-ritenutaitaliana Dividendi-ritenutaitaliana(%)
+15% 1,28EUR -0,28EUR 26%
+Transactiondescription ISIN
+IDEvento9402096 US68389X1054
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina43di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 44 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+14-lug-2025 -235,00 1.213,27
+Contrattazione SolidPowerInc. Acquista50@2,43USD -105,17 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,86EUR -104,31EUR -0,26 -1,12EUR
+Tassodiconversione IDcontrattazione ISIN
+0,858540 6334949288 US83422N1054
+Contrattazione D-WaveQuantumInc. Acquista10@15,02USD -129,83 -
+Valorenegoziato Commissione Costodiconversionevaluta Costototale
+-128,97EUR -0,86EUR -0,33 -1,19EUR
+Tassodiconversione IDcontrattazione ISIN
+0,858632 6334981274 US26740W1099
+10-lug-2025 -5,44 1.448,27
+TransazioniinContanti Impostadibollosuldepositotitoli -5,44 -
+Tassodiconversione Impostadibollosuldepositotitoli Commento
+1,000000 -5,44EUR ImpostadibollodossiertitoliQ22025
+07-lug-2025 -551,25 1.453,71
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina44di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 45 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione XtrackersAI&BigDataUCITSETF Acquista4@137,31EUR -551,25 -
+Valorenegoziato Commissione Costototale Tassodiconversione
+-549,25EUR -2,00EUR -2,00EUR 1,000000
+IDcontrattazione ISIN
+6327148495 IE00BGV5VN51
+03-lug-2025 0,04 2.004,96
+Operazionesulcapitale NVIDIACorp. Dividendoincontanti 0,04 -
+Quantitàidonea Dividendoperazione Tassodiconversione CorporateActions-Dividendi
+10 0,01USD 0,846876 0,08EUR
+Dividendi-ritenutaitaliana Dividendi-ritenutaitaliana(%) Dividendi-ritenutaallafonte Dividendi-ritenutaallafonte(%)
+-0,02EUR 26% -0,02EUR 15%
+Transactiondescription ISIN
+IDEvento9397559 US67066G1040
+01-lug-2025 344,27 2.023,40
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina45di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 46 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione UnitedStatesAntimonyCorp. Vendi-75@2,09USD 123,90 -
+Commissione Valorenegoziato Impostanazionalesulleplusvalenze Costodiconversionevaluta
+-0,85EUR 132,69EUR -7,94EUR -0,33
+Costototale Tassodiconversione IDcontrattazione ISIN
+-1,18EUR 0,845572 6322500294 US9115491030
+Contrattazione AdvancedMicroDevicesInc. Vendi-2@137,00USD 220,37 -
+Valorenegoziato Commissione Impostanazionalesulleplusvalenze Costodiconversionevaluta
+231,76EUR -0,85EUR -10,54EUR -0,58
+Costototale Tassodiconversione IDcontrattazione ISIN
+-1,43EUR 0,845841 6322717081 US0079031078
+30-giu-2025 1,27 1.660,65
+Operazionesulcapitale BroadcomInc. Dividendoincontanti 1,27 -
+Quantitàidonea Dividendoperazione Tassodiconversione Dividendi-ritenutaallafonte
+4 0,59USD 0,852383 -0,30EUR
+Dividendi-ritenutaallafonte(%) CorporateActions-Dividendi Dividendi-ritenutaitaliana Dividendi-ritenutaitaliana(%)
+15% 2,01EUR -0,44EUR 26%
+Transactiondescription ISIN
+IDEvento9401061 US11135F1012
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina46di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 47 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+27-giu-2025 3,48 1.659,38
+Operazionesulcapitale KULRTechnologyGroupInc Frazionamentoazionarioinverso 3,48 -
+Operazionisulcapitale-Frazioni Transactiondescription ISIN
+3,48EUR IDEvento9403687 US50125G3074
+26-giu-2025 0,96 1.655,90
+Operazionesulcapitale QualcommInc. Dividendoincontanti 0,96 -
+Quantitàidonea Dividendoperazione Tassodiconversione CorporateActions-Dividendi
+2 0,89USD 0,856170 1,52EUR
+Dividendi-ritenutaallafonte Dividendi-ritenutaallafonte(%) Dividendi-ritenutaitaliana Dividendi-ritenutaitaliana(%)
+-0,23EUR 15% -0,33EUR 26%
+Transactiondescription ISIN
+IDEvento9377877 US7475251036
+25-giu-2025 0,77 1.654,94
+Operazionesulcapitale Leonardo Dividendoincontanti 0,77 -
+Quantitàidonea Dividendoperazione Tassodiconversione CorporateActions-Dividendi
+2 0,52EUR 1,000000 1,04EUR
+Dividendi-ritenutaallafonte Dividendi-ritenutaallafonte(%) Transactiondescription ISIN
+-0,27EUR 26% IDEvento9358280 IT0003856405
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina47di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 48 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+23-giu-2025 0,00 1.654,17
+Operazionesulcapitale KULRTechnologyGroupInc Frazionamentoazionarioinverso 0,00 -
+KULRTechnologyGroupInc KULRTechnologyGroupInc Transactiondescription ISIN
+VenditaAllachiusura-70@1,57 AcquistoInapertura8@12,56 IDEvento9403687 US50125G3074
+16-giu-2025 0,11 1.654,17
+Operazionesulcapitale AlphabetInc.ClassA Dividendoincontanti 0,11 -
+Quantitàidonea Dividendoperazione Tassodiconversione Dividendi-ritenutaallafonte
+1 0,21USD 0,866021 -0,03EUR
+Dividendi-ritenutaallafonte(%) CorporateActions-Dividendi Dividendi-ritenutaitaliana Dividendi-ritenutaitaliana(%)
+15% 0,18EUR -0,04EUR 26%
+Transactiondescription ISIN
+IDEvento9379661 US02079K3059
+12-giu-2025 0,37 1.654,06
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina48di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 49 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Operazionesulcapitale MicrosoftCorp. Dividendoincontanti 0,37 -
+Quantitàidonea Dividendoperazione Tassodiconversione Dividendi-ritenutaallafonte
+1 0,83USD 0,867719 -0,22EUR
+Dividendi-ritenutaallafonte(%) CorporateActions-Dividendi Dividendi-ritenutaitaliana Dividendi-ritenutaitaliana(%)
+30% 0,72EUR -0,13EUR 26%
+Transactiondescription ISIN
+IDEvento9358968 US5949181045
+11-giu-2025 -505,69 1.653,69
+Contrattazione iSharesCoreMSCIWorldUCITSETF Acquista5@100,74EUR -505,69 -
+Commissione Valorenegoziato Costototale Tassodiconversione
+-2,00EUR -503,69EUR -2,00EUR 1,000000
+IDcontrattazione ISIN
+6301506862 IE00B4L5Y983
+10-giu-2025 2.000,00 2.159,38
+Trasferimentodiliquidità Deposito 2.000,00 -
+Commento DepositType Tassodiconversione Importoincontanti
+/OCMT/EUR2000,/19807401 External 1,000000 2.000,00EUR
+27-mag-2025 144,72 180,94
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina49di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 50 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Operazionesulcapitale **SeeWMT:xnas(WalmartInc.) Dividendoincontanti 0,33 -
+Quantitàidonea Dividendoperazione Tassodiconversione Dividendi-ritenutaallafonte
+3 0,24USD 0,878196 -0,18EUR
+Dividendi-ritenutaallafonte(%) Dividendi-ritenutaitaliana Dividendi-ritenutaitaliana(%) CorporateActions-Dividendi
+30% -0,11EUR 26% 0,62EUR
+Transactiondescription ISIN
+IDEvento9344029 US9311421039
+Contrattazione D-WaveQuantumInc. Vendi-11@17,27USD 144,39 -
+Valorenegoziato Commissione Impostanazionalesulleplusvalenze Costodiconversionevaluta
+166,83EUR -0,88EUR -21,56EUR -0,41
+Costototale Tassodiconversione IDcontrattazione ISIN
+-1,29EUR 0,878166 6285093418 US26740W1099
+21-mag-2025 -47,97 14,66
+Operazionesulcapitale Webuild Dividendoincontanti 5,99 -
+Quantitàidonea Dividendoperazione Tassodiconversione Dividendi-ritenutaallafonte
+100 0,08EUR 1,000000 -2,11EUR
+Dividendi-ritenutaallafonte(%) CorporateActions-Dividendi Transactiondescription ISIN
+26% 8,10EUR IDEvento9359579 IT0003865570
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina50di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 51 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione EutelsatCommunications Acquista15@3,45EUR -53,96 -
+Commissione Tassazionetransazionifinanziarie(Francia) Valorenegoziato Costototale
+-2,00EUR -0,21EUR -51,75EUR -2,21EUR
+Tassodiconversione IDcontrattazione ISIN
+1,000000 6279686017 FR0010221234
+20-mag-2025 -86,49 62,63
+Contrattazione OculusInc. Acquista2000@0,06CAD -86,49 -
+Valorenegoziato Commissione Costodiconversionevaluta Costototale
+-70,47EUR -16,02EUR -0,22 -16,20EUR
+Tassodiconversione IDcontrattazione ISIN
+0,640631 6278795415 US67575Y1091
+16-mag-2025 -151,36 149,12
+Contrattazione AlphabetInc.ClassA Acquista1@167,96USD -151,36 -
+Valorenegoziato Commissione Costodiconversionevaluta Costototale
+-150,46EUR -0,90EUR -0,39 -1,28EUR
+Tassodiconversione IDcontrattazione ISIN
+0,895805 6276024933 US02079K3059
+13-mag-2025 -273,63 300,48
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina51di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 52 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione QualcommInc. Acquista2@151,69USD -273,63 -
+Valorenegoziato Commissione Costodiconversionevaluta Costototale
+-272,73EUR -0,90EUR -0,68 -1,58EUR
+Tassodiconversione IDcontrattazione ISIN
+0,898962 6271119880 US7475251036
+05-mag-2025 -320,49 574,11
+Contrattazione NVIDIACorp. Acquista1@113,82USD -101,34 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,88EUR -100,46EUR -0,25 -1,13EUR
+Tassodiconversione IDcontrattazione ISIN
+0,882630 6260989541 US67066G1040
+Contrattazione PalantirTechnologiesInc. Acquista2@123,64USD -219,15 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,88EUR -218,27EUR -0,54 -1,42EUR
+Tassodiconversione IDcontrattazione ISIN
+0,882700 6260933487 US69608A1088
+02-mag-2025 -88,46 894,60
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina52di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 53 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione XPengInc.-ADR Acquista5@19,83USD -88,46 -
+Valorenegoziato Commissione Costodiconversionevaluta Costototale
+-87,58EUR -0,88EUR -0,22 -1,10EUR
+Tassodiconversione IDcontrattazione ISIN
+0,883322 6259409654 US98422D1054
+25-apr-2025 -467,24 983,06
+Contrattazione iSharesCoreMSCIWorldUCITSETF Acquista5@93,05EUR -467,24 -
+Commissione Valorenegoziato Costototale Tassodiconversione
+-2,00EUR -465,24EUR -2,00EUR 1,000000
+IDcontrattazione ISIN
+6251406534 IE00B4L5Y983
+23-apr-2025 1.427,72 1.450,30
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina53di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 54 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Operazionesulcapitale OracleCorp. Dividendoincontanti 0,68 -
+Quantitàidonea Dividendoperazione Tassodiconversione Dividendi-ritenutaallafonte
+3 0,50USD 0,878306 -0,40EUR
+Dividendi-ritenutaallafonte(%) CorporateActions-Dividendi Dividendi-ritenutaitaliana Dividendi-ritenutaitaliana(%)
+30% 1,32EUR -0,24EUR 26%
+Transactiondescription ISIN
+IDEvento9356668 US68389X1054
+Contrattazione XPengInc.-ADR Acquista4@20,50USD -72,96 -
+Valorenegoziato Commissione Costodiconversionevaluta Costototale
+-72,08EUR -0,88EUR -0,18 -1,06EUR
+Tassodiconversione IDcontrattazione ISIN
+0,879032 6249241556 US98422D1054
+Trasferimentodiliquidità Deposito 1.500,00 -
+Commento DepositType Tassodiconversione Importoincontanti
+/OCMT/EUR1500,/19807401 External 1,000000 1.500,00EUR
+10-apr-2025 -6,82 22,58
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina54di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 55 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+TransazioniinContanti Impostadibollosuldepositotitoli -3,41 -
+Commento
+Tassodiconversione Impostadibollosuldepositotitoli
+RiaddebitoimpostadibollodossiertitoliQ1
+1,000000 -3,41EUR
+2025
+TransazioniinContanti Impostadibollosuldepositotitoli -3,41 -
+Commento
+Tassodiconversione Impostadibollosuldepositotitoli
+StornoimpostadibollodossiertitoliQ1
+1,000000 -3,41EUR
+2025
+09-apr-2025 3,41 29,40
+TransazioniinContanti Impostadibollosuldepositotitoli 3,41 -
+Tassodiconversione Impostadibollosuldepositotitoli Commento
+1,000000 3,41EUR ImpostadibollodossiertitoliQ12025
+07-apr-2025 0,34 25,99
+Operazionesulcapitale **SeeWMT:xnas(WalmartInc.) Dividendoincontanti 0,34 -
+Quantitàidonea Dividendoperazione Tassodiconversione Dividendi-ritenutaallafonte
+3 0,23USD 0,912425 -0,19EUR
+Dividendi-ritenutaallafonte(%) CorporateActions-Dividendi Dividendi-ritenutaitaliana Dividendi-ritenutaitaliana(%)
+30% 0,65EUR -0,12EUR 26%
+Transactiondescription ISIN
+IDEvento9344031 US9311421039
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina55di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 56 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+02-apr-2025 -235,50 25,65
+Contrattazione FirstTrustNasdaqCyberSecurityUCTISETF Acquista5@36,96EUR -186,78 -
+Commissione Valorenegoziato Costototale Tassodiconversione
+-2,00EUR -184,78EUR -2,00EUR 1,000000
+IDcontrattazione ISIN
+6221487152 IE00BF16M727
+Operazionesulcapitale NVIDIACorp. Dividendoincontanti 0,03 -
+Quantitàidonea Dividendoperazione Tassodiconversione CorporateActions-Dividendi
+9 0,01USD 0,927420 0,08EUR
+Dividendi-ritenutaitaliana Dividendi-ritenutaitaliana(%) Dividendi-ritenutaallafonte Dividendi-ritenutaallafonte(%)
+-0,02EUR 26% -0,03EUR 30%
+Transactiondescription ISIN
+IDEvento9349595 US67066G1040
+Contrattazione CanopyGrowthCorp. Acquista50@1,41CAD -48,75 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-3,23EUR -45,52EUR -0,13 -3,35EUR
+Tassodiconversione IDcontrattazione ISIN
+0,645610 6221541714 CA1380357048
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina56di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 57 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+01-apr-2025 -189,24 261,15
+Operazionesulcapitale NovoNordiskBA/S Dividendoincontanti 1,15 -
+Quantitàidonea Dividendoperazione Tassodiconversione CorporateActions-Dividendi
+2 7,90DKK 0,134023 2,12EUR
+Dividendi-ritenutaitaliana Dividendi-ritenutaitaliana(%) Dividendi-ritenutaallafonte Dividendi-ritenutaallafonte(%)
+-0,40EUR 26% -0,57EUR 27%
+Transactiondescription ISIN
+IDEvento9349472 DK0062498333
+Contrattazione AdvancedMicroDevicesInc. Acquista2@102,09USD -190,39 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,93EUR -189,46EUR -0,48 -1,41EUR
+Tassodiconversione IDcontrattazione ISIN
+0,927894 6220000484 US0079031078
+31-mar-2025 -351,61 450,39
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina57di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 58 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Operazionesulcapitale BroadcomInc. Dividendoincontanti 0,84 -
+Quantitàidonea Dividendoperazione Tassodiconversione Dividendi-ritenutaitaliana
+3 0,59USD 0,923693 -0,30EUR
+Dividendi-ritenutaitaliana(%) Dividendi-ritenutaallafonte Dividendi-ritenutaallafonte(%) CorporateActions-Dividendi
+26% -0,49EUR 30% 1,63EUR
+Transactiondescription ISIN
+IDEvento9355834 US11135F1012
+Contrattazione D-WaveQuantumInc. Acquista10@7,53USD -70,81 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,93EUR -69,88EUR -0,17 -1,10EUR
+Tassodiconversione IDcontrattazione ISIN
+0,928034 6217960456 US26740W1099
+Contrattazione BroadcomInc. Acquista1@163,39USD -152,60 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,93EUR -151,67EUR -0,37 -1,30EUR
+Tassodiconversione IDcontrattazione ISIN
+0,928295 6217936666 US11135F1012
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina58di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 59 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione OracleCorp. Acquista1@138,04USD -129,04 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,93EUR -128,11EUR -0,31 -1,24EUR
+Tassodiconversione IDcontrattazione ISIN
+0,928099 6217935213 US68389X1054
+27-mar-2025 -132,58 802,00
+Contrattazione RealbotixCorp Acquista600@0,33CAD -132,58 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-5,85EUR -126,73EUR -0,33 -6,16EUR
+Tassodiconversione IDcontrattazione ISIN
+0,649906 6214331538 CA75604K1075
+24-mar-2025 616,38 934,58
+Trasferimentodiliquidità Deposito 1.000,00 -
+Commento DepositType Tassodiconversione Importoincontanti
+/OCMT/EUR1000,/19807401 External 1,000000 1.000,00EUR
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina59di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 60 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione XtrackersAI&BigDataUCITSETF Acquista3@127,21EUR -383,62 -
+Valorenegoziato Commissione Costototale Tassodiconversione
+-381,62EUR -2,00EUR -2,00EUR 1,000000
+IDcontrattazione ISIN
+6210024595 IE00BGV5VN51
+20-mar-2025 149,07 329,00
+Contrattazione D-WaveQuantumInc. Vendi-19@9,20USD 149,07 -
+Commissione Valorenegoziato CommissionidiBorsa Impostanazionalesulleplusvalenze
+-0,92EUR 160,80EUR -0,01EUR -10,80EUR
+Costodiconversionevaluta Costototale Tassodiconversione IDcontrattazione
+-0,40 -1,33EUR 0,919885 6208216342
+ISIN
+US26740W1099
+18-mar-2025 79,49 170,25
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina60di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 61 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione XPengInc.-ADR Vendi-4@22,30USD 79,49 -
+Commissione Valorenegoziato CommissionidiBorsa Impostanazionalesulleplusvalenze
+-0,91EUR 81,53EUR -0,01EUR -1,12EUR
+Costodiconversionevaluta Costototale Tassodiconversione IDcontrattazione
+-0,19 -1,12EUR 0,913979 6205175161
+ISIN
+US98422D1054
+13-mar-2025 0,39 89,64
+Operazionesulcapitale MicrosoftCorp. Dividendoincontanti 0,39 -
+Quantitàidonea Dividendoperazione Tassodiconversione Dividendi-ritenutaitaliana
+1 0,83USD 0,919031 -0,14EUR
+Dividendi-ritenutaitaliana(%) Dividendi-ritenutaallafonte Dividendi-ritenutaallafonte(%) CorporateActions-Dividendi
+26% -0,23EUR 30% 0,76EUR
+Transactiondescription ISIN
+IDEvento9309364 US5949181045
+12-mar-2025 -294,61 89,25
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina61di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 62 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione TeslaInc. Acquista1@247,01USD -228,27 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,92EUR -227,35EUR -0,57 -1,49EUR
+Tassodiconversione IDcontrattazione ISIN
+0,920395 6199356527 US88160R1014
+Contrattazione EutelsatCommunications Acquista10@6,42EUR -66,34 -
+Commissione Valorenegoziato Tassazionetransazionifinanziarie(Francia) Costototale
+-2,00EUR -64,15EUR -0,19EUR -2,19EUR
+Tassodiconversione IDcontrattazione ISIN
+1,000000 6199042863 FR0010221234
+10-mar-2025 -530,67 383,86
+Contrattazione BroadcomInc. Acquista1@189,68USD -176,26 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,92EUR -175,34EUR -0,44 -1,36EUR
+Tassodiconversione IDcontrattazione ISIN
+0,924385 6195099478 US11135F1012
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina62di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 63 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione IntelCorp. Acquista10@20,21USD -187,74 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,92EUR -186,82EUR -0,47 -1,39EUR
+Tassodiconversione IDcontrattazione ISIN
+0,924385 6195099836 US4581401001
+Contrattazione QuantumComputingInc Acquista20@4,89USD -91,33 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,92EUR -90,41EUR -0,22 -1,14EUR
+Tassodiconversione IDcontrattazione ISIN
+0,924450 6195095782 US74766W1080
+Contrattazione RealbotixCorp Acquista300@0,38CAD -75,34 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-3,21EUR -72,13EUR -0,19 -3,39EUR
+Tassodiconversione IDcontrattazione ISIN
+0,641194 6195087746 CA75604K1075
+07-mar-2025 894,09 914,53
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina63di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 64 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione UnitedStatesAntimonyCorp. Acquista80@1,42USD -105,91 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,93EUR -104,98EUR -0,27 -1,19EUR
+Tassodiconversione IDcontrattazione ISIN
+0,925197 6193751067 US9115491030
+Trasferimentodiliquidità Deposito 1.000,00 -
+Commento DepositType Tassodiconversione Importoincontanti
+19807401/BN/BGSAXOSIMS.P.A. External 1,000000 1.000,00EUR
+03-mar-2025 -88,63 20,44
+Contrattazione Leonardo Acquista2@43,27EUR -88,63 -
+Commissione Valorenegoziato Tassazionetransazionifinanziarie(Italia) Costototale
+-2,00EUR -86,54EUR -0,09EUR -2,09EUR
+Tassodiconversione IDcontrattazione ISIN
+1,000000 6183044343 IT0003856405
+28-feb-2025 -298,94 109,07
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina64di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 65 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione CanopyGrowthCorp. Acquista50@2,02CAD -70,83 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-3,34EUR -67,49EUR -0,18 -3,51EUR
+Tassodiconversione IDcontrattazione ISIN
+0,668246 6181558114 CA1380357048
+Contrattazione NVIDIACorp. Acquista2@117,94USD -228,11 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,96EUR -227,15EUR -0,57 -1,53EUR
+Tassodiconversione IDcontrattazione ISIN
+0,962981 6181107129 US67066G1040
+27-feb-2025 -106,53 408,01
+Contrattazione KULRTechnologyGroupInc Acquista70@1,57USD -106,53 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,96EUR -105,57EUR -0,26 -1,22EUR
+Tassodiconversione IDcontrattazione ISIN
+0,960616 6179303119 US50125G3074
+26-feb-2025 -340,72 514,54
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina65di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 66 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione RealbotixCorp Acquista300@0,41CAD -85,27 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-3,33EUR -81,94EUR -0,21 -3,53EUR
+Tassodiconversione IDcontrattazione ISIN
+0,666201 6177780200 CA75604K1075
+Contrattazione PalantirTechnologiesInc. Acquista3@88,70USD -255,45 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,96EUR -254,49EUR -0,65 -1,60EUR
+Tassodiconversione IDcontrattazione ISIN
+0,956360 6178006674 US69608A1088
+25-feb-2025 -686,39 855,26
+Contrattazione DynatraceInc. Acquista3@58,58USD -168,48 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,95EUR -167,53EUR -0,42 -1,37EUR
+Tassodiconversione IDcontrattazione ISIN
+0,953212 6176725023 US2681501092
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina66di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 67 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione Amazon.comInc. Acquista2@212,94USD -406,94 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,95EUR -405,99EUR -1,01 -1,96EUR
+Tassodiconversione IDcontrattazione ISIN
+0,953302 6176713886 US0231351067
+Contrattazione DatadogInc. Acquista1@115,40USD -110,97 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,95EUR -110,02EUR -0,27 -1,22EUR
+Tassodiconversione IDcontrattazione ISIN
+0,953403 6176701589 US23804L1035
+24-feb-2025 1.500,00 1.541,65
+Trasferimentodiliquidità Deposito 1.500,00 -
+Commento DepositType Tassodiconversione Importoincontanti
+/OCMT/EUR1500,/19807401 External 1,000000 1.500,00EUR
+27-gen-2025 -122,48 41,65
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina67di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 68 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione NVIDIACorp. Acquista1@127,47USD -122,48 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,95EUR -121,53EUR -0,30 -1,25EUR
+Tassodiconversione IDcontrattazione ISIN
+0,953408 6141367460 US67066G1040
+23-gen-2025 0,40 164,13
+Operazionesulcapitale OracleCorp. Dividendoincontanti 0,40 -
+Quantitàidonea Dividendoperazione Tassodiconversione Dividendi-ritenutaitaliana
+2 0,40USD 0,960596 -0,14EUR
+Dividendi-ritenutaitaliana(%) Dividendi-ritenutaallafonte Dividendi-ritenutaallafonte(%) CorporateActions-Dividendi
+26% -0,23EUR 30% 0,77EUR
+Transactiondescription ISIN
+IDEvento9311306 US68389X1054
+21-gen-2025 -339,49 163,73
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina68di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 69 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione PDDHoldingsInc-ADR Acquista2@108,00USD -209,28 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,96EUR -208,32EUR -0,52 -1,48EUR
+Tassodiconversione IDcontrattazione ISIN
+0,964465 6135377256 US7223041028
+CDTEnvironmentalTechnologyInvestmentHldngs
+Contrattazione Acquista100@1,34USD -130,21 -
+Ltd
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,96EUR -129,25EUR -0,33 -1,29EUR
+Tassodiconversione IDcontrattazione ISIN
+0,964530 6135386098 KYG2030P1072
+20-gen-2025 -148,19 503,22
+Contrattazione RealbotixCorp Acquista500@0,43CAD -148,19 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-5,05EUR -143,14EUR -0,37 -5,41EUR
+Tassodiconversione IDcontrattazione ISIN
+0,673600 6134648166 CA75604K1075
+14-gen-2025 -164,64 651,41
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina69di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 70 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione CanopyGrowthCorp. Acquista45@3,23CAD -101,95 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-3,39EUR -98,56EUR -0,26 -3,64EUR
+Tassodiconversione IDcontrattazione ISIN
+0,678081 6129329412 CA1380357048
+Contrattazione XPengInc.-ADR Acquista5@12,68USD -62,69 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,97EUR -61,72EUR -0,16 -1,13EUR
+Tassodiconversione IDcontrattazione ISIN
+0,973468 6129325198 US98422D1054
+13-gen-2025 -364,48 816,05
+Contrattazione RealbotixCorp Acquista1000@0,65CAD -453,13 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-10,22EUR -442,91EUR -1,13 -11,33EUR
+Tassodiconversione IDcontrattazione ISIN
+0,681399 6127646430 CA75604K1075
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina70di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 71 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione RealbotixCorp Vendi-1000@0,53CAD 349,07 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-10,17EUR 359,24EUR -0,88 -11,07EUR
+Tassodiconversione IDcontrattazione ISIN
+0,677806 6127414866 CA75604K1075
+Contrattazione NVIDIACorp. Acquista2@132,11USD -260,42 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,98EUR -259,44EUR -0,64 -1,62EUR
+Tassodiconversione IDcontrattazione ISIN
+0,981919 6127678729 US67066G1040
+10-gen-2025 -379,44 1.180,53
+Contrattazione RealbotixCorp Acquista1000@0,36CAD -254,86 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-10,19EUR -244,67EUR -0,63 -10,80EUR
+Tassodiconversione IDcontrattazione ISIN
+0,679635 6125033893 CA75604K1075
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina71di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 72 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione D-WaveQuantumInc. Acquista20@6,32USD -124,58 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,98EUR -123,60EUR -0,31 -1,29EUR
+Tassodiconversione IDcontrattazione ISIN
+0,977818 6125081670 US26740W1099
+09-gen-2025 -101,32 1.559,97
+Contrattazione OculusInc. Acquista1500@0,09CAD -101,32 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-15,20EUR -86,12EUR -0,26 -15,42EUR
+Tassodiconversione IDcontrattazione ISIN
+0,675439 6124090562 US67575Y1091
+08-gen-2025 133,98 1.661,29
+Contrattazione D-WaveQuantumInc. Vendi-22@6,33USD 133,98 -
+Commissione Valorenegoziato CommissionidiBorsa Costodiconversionevaluta
+-0,97EUR 134,96EUR -0,01EUR -0,34
+Costototale Tassodiconversione IDcontrattazione ISIN
+-1,32EUR 0,969116 6122813144 US26740W1099
+07-gen-2025 1.452,39 1.527,31
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina72di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 73 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione PayPalHoldingsInc. Acquista3@89,53USD -259,96 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,96EUR -259,00EUR -0,65 -1,61EUR
+Tassodiconversione IDcontrattazione ISIN
+0,964285 6121059018 US70450Y1038
+Contrattazione OculusInc. Acquista3500@0,12CAD -287,65 -
+Valorenegoziato Commissione Costodiconversionevaluta Costototale
+-270,83EUR -16,82EUR -0,71 -17,49EUR
+Tassodiconversione IDcontrattazione ISIN
+0,672873 6121057078 US67575Y1091
+Trasferimentodiliquidità Deposito 2.000,00 -
+Commento DepositType Tassodiconversione Importoincontanti
+19807401/BN/BGSAXOSIMS.P.A. External 1,000000 2.000,00EUR
+06-gen-2025 -967,16 74,92
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina73di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 74 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione NVIDIACorp. Acquista2@148,66USD -288,02 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,97EUR -287,05EUR -0,72 -1,68EUR
+Tassodiconversione IDcontrattazione ISIN
+0,965473 6119493874 US67066G1040
+Operazionesulcapitale **SeeWMT:xnas(WalmartInc.) Dividendoincontanti 0,31 -
+Quantitàidonea Dividendoperazione Tassodiconversione Dividendi-ritenutaallafonte
+3 0,21USD 0,969448 -0,18EUR
+Dividendi-ritenutaallafonte(%) Dividendi-ritenutaitaliana Dividendi-ritenutaitaliana(%) CorporateActions-Dividendi
+30% -0,11EUR 26% 0,60EUR
+Transactiondescription ISIN
+IDEvento9189007 US9311421039
+Contrattazione MicrosoftCorp. Acquista1@428,06USD -414,25 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,97EUR -413,28EUR -1,04 -2,00EUR
+Tassodiconversione IDcontrattazione ISIN
+0,965483 6119498757 US5949181045
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina74di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 75 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione NioInc.-ADR Acquista20@4,82USD -94,10 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,97EUR -93,13EUR -0,24 -1,20EUR
+Tassodiconversione IDcontrattazione ISIN
+0,966094 6119518991 US62914V1061
+Contrattazione NovoNordiskBA/S Acquista2@631,50DKK -171,10 -
+Valorenegoziato Commissione Costodiconversionevaluta Costototale
+-169,76EUR -1,34EUR -0,43 -1,77EUR
+Tassodiconversione IDcontrattazione ISIN
+0,134407 6118789802 DK0062498333
+03-gen-2025 -1,07 1.042,08
+TransazioniinContanti Impostadibollosuldepositotitoli -1,07 -
+Tassodiconversione Impostadibollosuldepositotitoli Commento
+1,000000 -1,07EUR ImpostadibollodossiertitoliQ42024
+24-dic-2024 1.000,00 1.043,15
+Trasferimentodiliquidità Deposito 1.000,00 -
+Commento DepositType Tassodiconversione Importoincontanti
+19807401/BN/BGSAXOSIMS.P.A. External 1,000000 1.000,00EUR
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina75di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 76 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+23-dic-2024 -1.174,03 43,15
+Contrattazione D-WaveQuantumInc. Acquista20@7,60USD -147,33 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,96EUR -146,37EUR -0,36 -1,32EUR
+Tassodiconversione IDcontrattazione ISIN
+0,962971 6110487283 US26740W1099
+Contrattazione NVIDIACorp. Acquista2@136,25USD -263,59 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,96EUR -262,63EUR -0,66 -1,62EUR
+Tassodiconversione IDcontrattazione ISIN
+0,963763 6110102761 US67066G1040
+Contrattazione QuantumComputingInc Acquista10@17,49USD -169,58 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,96EUR -168,62EUR -0,42 -1,38EUR
+Tassodiconversione IDcontrattazione ISIN
+0,964069 6110173764 US74766W1080
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina76di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 77 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione DatadogInc. Acquista1@149,43USD -145,03 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,96EUR -144,07EUR -0,35 -1,31EUR
+Tassodiconversione IDcontrattazione ISIN
+0,964159 6110162880 US23804L1035
+Contrattazione BroadcomInc. Acquista2@232,47USD -448,50 -
+Valorenegoziato Commissione Costodiconversionevaluta Costototale
+-447,54EUR -0,96EUR -1,12 -2,08EUR
+Tassodiconversione IDcontrattazione ISIN
+0,962570 6110494114 US11135F1012
+19-dic-2024 921,73 1.295,68
+Contrattazione QuantumComputingInc Vendi-19@21,26USD 346,62 -
+Commissione Valorenegoziato CommissionidiBorsa Impostanazionalesulleplusvalenze
+-0,96EUR 387,51EUR -0,02EUR -39,91EUR
+Costodiconversionevaluta Costototale Tassodiconversione IDcontrattazione
+-0,97 -1,95EUR 0,959321 6106690494
+ISIN
+US74766W1080
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina77di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 78 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione D-WaveQuantumInc. Vendi-38@8,21USD 259,64 -
+Commissione Valorenegoziato CommissionidiBorsa Impostanazionalesulleplusvalenze
+-0,96EUR 299,20EUR -0,01EUR -38,59EUR
+Costodiconversionevaluta Costototale Tassodiconversione IDcontrattazione
+-0,75 -1,72EUR 0,959046 6106726018
+ISIN
+US26740W1099
+Contrattazione StrategyInc. Vendi-1@328,85USD 315,47 -
+Commissione Valorenegoziato CommissionidiBorsa Costodiconversionevaluta
+-0,96EUR 316,44EUR -0,01EUR -0,79
+Costototale Tassodiconversione IDcontrattazione ISIN
+-1,76EUR 0,962248 6107229377 US5949724083
+18-dic-2024 -325,00 295,45
+Contrattazione OracleCorp. Acquista2@169,53USD -325,00 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,96EUR -324,04EUR -0,82 -1,77EUR
+Tassodiconversione IDcontrattazione ISIN
+0,955703 6105077662 US68389X1054
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina78di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 79 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+16-dic-2024 -212,70 620,45
+Contrattazione QuantumComputingInc Acquista20@11,10USD -212,70 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,95EUR -211,75EUR -0,53 -1,48EUR
+Tassodiconversione IDcontrattazione ISIN
+0,953914 6103343334 US74766W1080
+13-dic-2024 -157,71 833,15
+Contrattazione D-WaveQuantumInc. Acquista40@4,10USD -157,71 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,96EUR -156,75EUR -0,40 -1,35EUR
+Tassodiconversione IDcontrattazione ISIN
+0,955773 6101689715 US26740W1099
+10-dic-2024 -346,44 990,86
+Contrattazione StrategyInc. Acquista1@362,00USD -346,44 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,95EUR -345,49EUR -0,86 -1,81EUR
+Tassodiconversione IDcontrattazione ISIN
+0,954385 6097919360 US5949724083
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina79di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 80 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+09-dic-2024 652,10 1.385,86
+Contrattazione D-WaveQuantumInc. Vendi-155@4,80USD 652,10 -
+Commissione Valorenegoziato CommissionidiBorsa Impostanazionalesulleplusvalenze
+-0,94EUR 701,63EUR -0,03EUR -48,56EUR
+Costodiconversionevaluta Costototale Tassodiconversione IDcontrattazione
+-1,75 -2,73EUR 0,943051 6096103488
+ISIN
+US26740W1099
+06-dic-2024 659,09 685,20
+Trasferimentodiliquidità Deposito 1.000,00 -
+Commento DepositType Tassodiconversione Importoincontanti
+19807401/BN/BGSAXOSIMS.P.A. External 1,000000 1.000,00EUR
+Contrattazione QuantumScapeCorp. Acquista20@4,93USD -94,48 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,95EUR -93,53EUR -0,23 -1,18EUR
+Tassodiconversione IDcontrattazione ISIN
+0,949282 6095185899 US74767V1098
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina80di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 81 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione D-WaveQuantumInc. Acquista65@3,98USD -246,43 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,95EUR -245,48EUR -0,62 -1,57EUR
+Tassodiconversione IDcontrattazione ISIN
+0,948881 6094761127 US26740W1099
+04-dic-2024 -267,50 26,11
+Contrattazione D-WaveQuantumInc. Acquista40@3,11USD -119,80 -
+Valorenegoziato Commissione Costodiconversionevaluta Costototale
+-118,84EUR -0,96EUR -0,31 -1,26EUR
+Tassodiconversione IDcontrattazione ISIN
+0,955292 6091931724 US26740W1099
+Contrattazione D-WaveQuantumInc. Acquista50@3,07USD -147,70 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,96EUR -146,74EUR -0,38 -1,33EUR
+Tassodiconversione IDcontrattazione ISIN
+0,955944 6091845011 US26740W1099
+02-dic-2024 -439,33 293,61
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina81di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 82 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Contrattazione JobyAviationIncorporation Acquista20@8,97USD -172,34 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,96EUR -171,38EUR -0,44 -1,39EUR
+Tassodiconversione IDcontrattazione ISIN
+0,955292 6089040401 KYG651631007
+Contrattazione **SeeWMT:xnas(WalmartInc.) Acquista3@92,82USD -266,99 -
+Commissione Valorenegoziato Costodiconversionevaluta Costototale
+-0,96EUR -266,03EUR -0,67 -1,62EUR
+Tassodiconversione IDcontrattazione ISIN
+0,955377 6089026981 US9311421039
+28-nov-2024 -267,06 732,94
+Contrattazione Webuild Acquista100@2,65EUR -267,06 -
+Commissione Valorenegoziato Tassazionetransazionifinanziarie(Italia) Costototale
+-2,00EUR -264,80EUR -0,26EUR -2,26EUR
+Tassodiconversione IDcontrattazione ISIN
+1,000000 6086567859 IT0003865570
+26-nov-2024 1.000,00 1.000,00
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina82di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+--- PAGE 83 ---
+Transazioni, EUR
+Periododirendicontazione
+26-nov-2024a19-dic-2025
+Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+Trasferimentodiliquidità Deposito 1.000,00 -
+Commento DepositType Tassodiconversione Importoincontanti
+19807401/BN/BGSAXOSIMS.P.A. External 1,000000 1.000,00EUR
+Impostadibolloassoltainmodovirtualeexart15delDPRn.642/1972suautorizzazionen.188188/2024del12/06/2024rilasciatadall’UfficioTerritorialediMilano2
+BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+/Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+Pagina83di83 Conto/i:65500/100461E00 Generatail:19-dic-2025

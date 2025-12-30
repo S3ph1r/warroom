@@ -33,7 +33,7 @@
             ? items || []
             : (items || []).filter((item) => item?.source === selectedSource);
 
-    const API_BASE = "http://127.0.0.1:8000";
+    const API_BASE = ""; // Use relative path through proxy
 
     async function loadData() {
         try {

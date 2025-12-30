@@ -96,6 +96,17 @@
                             </div>
                         </th>
                         <th
+                            class="px-1.5 py-1 font-medium tracking-tight cursor-pointer hover:text-skin-text transition-colors"
+                            on:click={() => toggleSort("currency")}
+                        >
+                            <div class="flex items-center gap-0.5">
+                                Cur
+                                {#if sortKey === "currency"}
+                                    {sortDir === 1 ? "↑" : "↓"}
+                                {/if}
+                            </div>
+                        </th>
+                        <th
                             class="px-1.5 py-1 font-medium tracking-tight text-right cursor-pointer hover:text-skin-text transition-colors"
                             on:click={() => toggleSort("quantity")}
                         >
@@ -222,6 +233,13 @@
                                 class="px-1.5 py-1 text-skin-muted text-[10px] whitespace-nowrap"
                             >
                                 {h.broker.replace("_", " ")}
+                            </td>
+
+                            <!-- Currency -->
+                            <td
+                                class="px-1.5 py-1 text-skin-muted text-[10px] whitespace-nowrap font-mono"
+                            >
+                                {h.currency || "?"}
                             </td>
 
                             <!-- Quantity -->

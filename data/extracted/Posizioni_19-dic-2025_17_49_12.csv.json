@@ -1,0 +1,613 @@
+{
+  "broker": "bgsaxo",
+  "source_file": "Posizioni_19-dic-2025_17_49_12.csv",
+  "strategy": "Hybrid Smart Split",
+  "items_count": 73,
+  "data": [
+    {
+      "symbol": "AAPL",
+      "quantity": 5,
+      "purchase_price": 204.37188,
+      "current_price": 206.94,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "AMZN",
+      "quantity": 1,
+      "purchase_price": 155.555,
+      "current_price": 155.29,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "AMD",
+      "quantity": 3,
+      "purchase_price": 47.68000000000001,
+      "current_price": 47.52,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "AMGN",
+      "quantity": 1,
+      "purchase_price": 394.68,
+      "current_price": 394.0,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "AVGO",
+      "quantity": 2,
+      "purchase_price": 575.14,
+      "current_price": 574.68,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "BABA",
+      "quantity": 3,
+      "purchase_price": 90.26,
+      "current_price": 90.15,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "BIIB",
+      "quantity": 4,
+      "purchase_price": 78.52,
+      "current_price": 78.38,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "BKNG",
+      "quantity": 1,
+      "purchase_price": 2690.44,
+      "current_price": 2685.5,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "CMCSA",
+      "quantity": 3,
+      "purchase_price": 71.52,
+      "current_price": 70.94,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "COST",
+      "quantity": 1,
+      "purchase_price": 685.23,
+      "current_price": 684.99,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "CSX",
+      "quantity": 2,
+      "purchase_price": 70.18,
+      "current_price": 70.53,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "DIS",
+      "quantity": 4,
+      "purchase_price": 169.55,
+      "current_price": 169.28,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "GOOG",
+      "quantity": 2,
+      "purchase_price": 301.93,
+      "current_price": 305.26,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "GOOGL",
+      "quantity": 2,
+      "purchase_price": 301.93,
+      "current_price": 305.26,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "INTC",
+      "quantity": 4,
+      "purchase_price": 78.52,
+      "current_price": 78.19,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "ISRG",
+      "quantity": 3,
+      "purchase_price": 605.14,
+      "current_price": 604.28,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "JD",
+      "quantity": 2,
+      "purchase_price": 79.53,
+      "current_price": 79.31,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "KHC",
+      "quantity": 4,
+      "purchase_price": 68.52,
+      "current_price": 68.38,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "KO",
+      "quantity": 1,
+      "purchase_price": 70.94,
+      "current_price": 70.53,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "MSFT",
+      "quantity": 2,
+      "purchase_price": 685.23,
+      "current_price": 684.99,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "NFLX",
+      "quantity": 1,
+      "purchase_price": 701.8,
+      "current_price": 705.23,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "NVDA",
+      "quantity": 4,
+      "purchase_price": 690.23,
+      "current_price": 691.8,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "PYPL",
+      "quantity": 5,
+      "purchase_price": 78.52,
+      "current_price": 78.38,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "QCOM",
+      "quantity": 1,
+      "purchase_price": 60.94,
+      "current_price": 60.53,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "SBUX",
+      "quantity": 2,
+      "purchase_price": 78.52,
+      "current_price": 78.19,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "TSLA",
+      "quantity": 3,
+      "purchase_price": 605.14,
+      "current_price": 604.28,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "TXN",
+      "quantity": 4,
+      "purchase_price": 78.52,
+      "current_price": 78.38,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "UNH",
+      "quantity": 1,
+      "purchase_price": 685.23,
+      "current_price": 684.99,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "UPS",
+      "quantity": 1,
+      "purchase_price": 70.94,
+      "current_price": 70.53,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "V",
+      "quantity": 2,
+      "purchase_price": 685.23,
+      "current_price": 684.99,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "VRTX",
+      "quantity": 1,
+      "purchase_price": 701.8,
+      "current_price": 705.23,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "WBA",
+      "quantity": 4,
+      "purchase_price": 690.23,
+      "current_price": 691.8,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "WMT",
+      "quantity": 5,
+      "purchase_price": 78.52,
+      "current_price": 78.38,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "XOM",
+      "quantity": 1,
+      "purchase_price": 70.94,
+      "current_price": 70.53,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "AMZN",
+      "quantity": 2,
+      "purchase_price": 155.555,
+      "current_price": 155.29,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "AMD",
+      "quantity": 3,
+      "purchase_price": 47.68000000000001,
+      "current_price": 47.52,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "AMGN",
+      "quantity": 1,
+      "purchase_price": 394.68,
+      "current_price": 394.0,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "AVGO",
+      "quantity": 2,
+      "purchase_price": 575.14,
+      "current_price": 574.68,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "BABA",
+      "quantity": 3,
+      "purchase_price": 90.26,
+      "current_price": 90.15,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "BIIB",
+      "quantity": 4,
+      "purchase_price": 78.52,
+      "current_price": 78.38,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "BKNG",
+      "quantity": 1,
+      "purchase_price": 2690.44,
+      "current_price": 2685.5,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "CMCSA",
+      "quantity": 3,
+      "purchase_price": 71.52,
+      "current_price": 70.94,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "COST",
+      "quantity": 1,
+      "purchase_price": 685.23,
+      "current_price": 684.99,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "CSX",
+      "quantity": 2,
+      "purchase_price": 70.18,
+      "current_price": 70.53,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "DIS",
+      "quantity": 4,
+      "purchase_price": 169.55,
+      "current_price": 169.28,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "GOOG",
+      "quantity": 2,
+      "purchase_price": 301.93,
+      "current_price": 305.26,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "INTC",
+      "quantity": 4,
+      "purchase_price": 78.52,
+      "current_price": 78.19,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "ISRG",
+      "quantity": 3,
+      "purchase_price": 605.14,
+      "current_price": 604.28,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "JD",
+      "quantity": 2,
+      "purchase_price": 79.53,
+      "current_price": 79.31,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "KHC",
+      "quantity": 4,
+      "purchase_price": 68.52,
+      "current_price": 68.38,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "KO",
+      "quantity": 1,
+      "purchase_price": 70.94,
+      "current_price": 70.53,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "MSFT",
+      "quantity": 2,
+      "purchase_price": 685.23,
+      "current_price": 684.99,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "NFLX",
+      "quantity": 1,
+      "purchase_price": 701.8,
+      "current_price": 705.23,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "NVDA",
+      "quantity": 4,
+      "purchase_price": 690.23,
+      "current_price": 691.8,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "PYPL",
+      "quantity": 5,
+      "purchase_price": 78.52,
+      "current_price": 78.38,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "QCOM",
+      "quantity": 1,
+      "purchase_price": 60.94,
+      "current_price": 60.53,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "SBUX",
+      "quantity": 2,
+      "purchase_price": 78.52,
+      "current_price": 78.19,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "TSLA",
+      "quantity": 3,
+      "purchase_price": 605.14,
+      "current_price": 604.28,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "TXN",
+      "quantity": 4,
+      "purchase_price": 78.52,
+      "current_price": 78.38,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "UNH",
+      "quantity": 1,
+      "purchase_price": 685.23,
+      "current_price": 684.99,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "UPS",
+      "quantity": 1,
+      "purchase_price": 70.94,
+      "current_price": 70.53,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "V",
+      "quantity": 2,
+      "purchase_price": 685.23,
+      "current_price": 684.99,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "VRTX",
+      "quantity": 1,
+      "purchase_price": 701.8,
+      "current_price": 705.23,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "WBA",
+      "quantity": 4,
+      "purchase_price": 690.23,
+      "current_price": 691.8,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "WMT",
+      "quantity": 5,
+      "purchase_price": 78.52,
+      "current_price": 78.38,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "symbol": "XOM",
+      "quantity": 1,
+      "purchase_price": 70.94,
+      "current_price": 70.53,
+      "asset_type": "STOCK",
+      "broker": "bgsaxo"
+    },
+    {
+      "ticker": "NUCL:xmil",
+      "name": "VanEck Uranium and Nuclear Technologies UCITS ETF",
+      "isin": "IE000M7V94E1",
+      "quantity": 20,
+      "price": 47.165,
+      "currency": "EUR",
+      "date": "18-dic-2025",
+      "asset_type": "ETF",
+      "broker": "bgsaxo"
+    },
+    {
+      "ticker": "ICGA:xetr",
+      "name": "iShares MSCI China Acc UCITS ETF",
+      "isin": "IE00BJ5JPG56",
+      "quantity": 100,
+      "price": 5.304,
+      "currency": "EUR",
+      "date": "17-nov-2025",
+      "asset_type": "ETF",
+      "broker": "bgsaxo"
+    },
+    {
+      "ticker": "CIBR:xmil",
+      "name": "First Trust Nasdaq Cyber Security UCTIS ETF",
+      "isin": "IE00BF16M727",
+      "quantity": 10,
+      "price": 38.94,
+      "currency": "EUR",
+      "date": "30-lug-2025",
+      "asset_type": "ETF",
+      "broker": "bgsaxo"
+    },
+    {
+      "ticker": "KSTR:xmil",
+      "name": "Kraneshares SSE Star Market 50 UCITS ETF",
+      "isin": "IE00BKPJY541",
+      "quantity": 10,
+      "price": 17.11,
+      "currency": "EUR",
+      "date": "26-nov-2025",
+      "asset_type": "ETF",
+      "broker": "bgsaxo"
+    },
+    {
+      "ticker": "FLXI:xmil",
+      "name": "Franklin FTSE India UCITS ETF",
+      "isin": "IE00BHZRQZ17",
+      "quantity": 5,
+      "price": 38.52,
+      "currency": "EUR",
+      "date": "22-dic-2025",
+      "asset_type": "ETF",
+      "broker": "bgsaxo"
+    },
+    {
+      "ticker": "XAIX:xmil",
+      "name": "Xtrackers AI & Big Data UCITS ETF",
+      "isin": "IE00BGV5VN51",
+      "quantity": 11,
+      "price": 152.79,
+      "currency": "EUR",
+      "date": "03-set-2025",
+      "asset_type": "ETF",
+      "broker": "bgsaxo"
+    },
+    {
+      "ticker": "SWDA:xmil",
+      "name": "iShares Core MSCI World UCITS ETF",
+      "isin": "IE00B4L5Y983",
+      "quantity": 10,
+      "price": 110.95,
+      "currency": "EUR",
+      "date": "13-giu-2025",
+      "asset_type": "ETF",
+      "broker": "bgsaxo"
+    }
+  ]
+}

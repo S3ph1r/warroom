@@ -1,5 +1,0 @@
-{
-  "key": "Il database contiene i dati di transazione di Polkadot (DOT) dal 9 gennaio 2023 al 19 gennaio 2024. I dati includono il simbolo, tipo e quantità di token trasferiti per ogni transazione, nonché la data della transazione.\n\nI dati sono suddivisi in due sezioni: \"Simbolo\" e \"Tipo\". La sezione \"Simbolo\" contiene i simboli dei token trasferiti, mentre la sezione \"Tipo\" indica il tipo di transazione (ad esempio, \"Ricompensa per lo staking\").\n\nLa quantità di token trasferiti varia da 0,00001 a 0,89691. La maggior parte delle transazioni riguarda la ricompensa per lo staking, ma ci sono anche altre tipologie di transazione.\n\nI dati possono essere utilizzati per analizzare le attività di trading e le tendenze dei prezzi di Polkadot (DOT) nel periodo considerato.",
-  "_source_file": "D:\\Download\\Revolut\\crypto-account-statement_2022-07-04_2025-12-20_it-it_1c330c.pdf",
-  "_processed_at": "2025-12-26T14:44:50.419420"
-}

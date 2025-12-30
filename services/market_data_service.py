@@ -55,20 +55,28 @@ def get_asset_details(ticker: str) -> Dict:
     If ticker looks like an ISIN, attempts to resolve it via search first.
     """
     try:
-        # Check if input is likely an ISIN (2 letters + 9 alphanumeric + 1 digit)
-        # Yahoo often returns ISIN as symbol in search results, but yf.Ticker needs the exchange-suffix ticker
+        from services.price_service_v5 import clean_ticker, isin_to_yahoo_ticker
+        
+        # 0. Clean the ticker first
+        ticker = clean_ticker(ticker)
+
+        # 1. Check if input is likely an ISIN
         if re.match(r'^[A-Z]{2}[A-Z0-9]{9}\d$', ticker):
-            candidates = search_market_symbol(ticker)
-            if candidates:
-                # Pick the first candidate that looks like a valid ticker (contains dot or is different from ISIN)
-                best_match = candidates[0]['ticker']
-                for c in candidates:
-                    # Prefer a ticker that is NOT the ISIN itself if possible, or has an exchange suffix
-                    if c['ticker'] != ticker:
-                        best_match = c['ticker']
-                        break
-                print(f"Resolved ISIN {ticker} to Ticker {best_match}")
-                ticker = best_match
+            # Try to resolve via OpenFIGI/Logic first
+            resolved = isin_to_yahoo_ticker(ticker, ticker)
+            if resolved and resolved != ticker:
+                ticker = resolved
+            else:
+                # Fallback to Yahoo Search for ISIN
+                candidates = search_market_symbol(ticker)
+                if candidates:
+                    # Pick the first candidate that looks like a valid ticker
+                    best_match = candidates[0]['ticker']
+                    for c in candidates:
+                        if c['ticker'] != ticker:
+                            best_match = c['ticker']
+                            break
+                    ticker = best_match
 
         t = yf.Ticker(ticker)
         

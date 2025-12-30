@@ -437,3 +437,50 @@ def get_latest_snapshot() -> Optional[Dict]:
         }
     finally:
         db.close()
+
+def get_invested_capital_history() -> List[Dict]:
+    """
+    Calculate Cumulative Net Invested Capital over time based on Transactions.
+    Model: "Market Exposure" -> Buy (Add) / Sell (Subtract).
+    Returns list of {date, invested} sorted by date.
+    """
+    db = SessionLocal()
+    try:
+        from db.models import Transaction
+        
+        # Fetch all BUY/SELL transactions sorted by time
+        txs = db.execute(
+            select(Transaction)
+            .where(Transaction.operation.in_(["BUY", "SELL"]))
+            .order_by(Transaction.timestamp.asc())
+        ).scalars().all()
+        
+        history = []
+        cumulative_invested = Decimal("0")
+        
+        # Group by Date to reduce points? No, let's do daily resolution
+        daily_invested = {} # date -> cumulative amount
+        
+        for t in txs:
+            amt = t.total_amount # absolute value
+            
+            if t.operation == "BUY":
+                cumulative_invested += amt
+            elif t.operation == "SELL":
+                cumulative_invested -= amt
+            
+            # Store end-of-day state
+            d_str = str(t.timestamp.date())
+            daily_invested[d_str] = float(cumulative_invested)
+            
+        # Convert to list
+        for d, val in daily_invested.items():
+            history.append({"date": d, "invested": val})
+            
+        return history
+        
+    except Exception as e:
+        logger.error(f"Error calculating invested history: {e}")
+        return []
+    finally:
+        db.close()

@@ -1,369 +1,343 @@
 """
-Parse BG Saxo Transactions PDF and insert into database.
-Extracts: trades (buy/sell), dividends, deposits, and final cash balance.
-Uses PyMuPDF (fitz) for text extraction.
+BG SAXO Transaction PDF Parser - Pure Python
+Generated with LLM-assisted structure analysis
+
+Strategy:
+1. Extract ALL text from PDF as single document
+2. Use regex patterns to identify:
+   - Date separators (DD-mmm-YYYY)
+   - Transaction blocks (Contrattazione, Trasferimento)
+   - Detail rows (ISIN, Commissione, etc.)
+3. State machine to track current date and transaction context
 """
-import sys
+
 import re
+from typing import List, Dict, Optional
 from pathlib import Path
 from datetime import datetime
-from decimal import Decimal
-import uuid
+import pdfplumber
+import json
 
-import fitz
-
-sys.path.insert(0, str(Path(__file__).parent.parent))
-
-from db.database import SessionLocal
-from db.models import Transaction, Holding
-
-
-# Month mapping Italian to number
-MONTH_MAP = {
-    'gen': 1, 'feb': 2, 'mar': 3, 'apr': 4, 'mag': 5, 'giu': 6,
-    'lug': 7, 'ago': 8, 'set': 9, 'ott': 10, 'nov': 11, 'dic': 12
+# Italian month mapping
+MONTHS_IT = {
+    'gen': '01', 'feb': '02', 'mar': '03', 'apr': '04',
+    'mag': '05', 'giu': '06', 'lug': '07', 'ago': '08',
+    'set': '09', 'ott': '10', 'nov': '11', 'dic': '12'
 }
 
 
-def parse_italian_date(date_str: str) -> datetime:
-    """Parse Italian date like '18-dic-2025' to datetime."""
-    match = re.match(r'(\d{1,2})-(\w+)-(\d{4})', date_str)
+def parse_italian_date(date_str: str) -> Optional[str]:
+    """Parse Italian date format like '28-nov-2024' to 'YYYY-MM-DD'."""
+    match = re.match(r'(\d{1,2})-([a-z]{3})-(\d{4})', date_str.lower())
     if match:
-        day = int(match.group(1))
-        month = MONTH_MAP.get(match.group(2).lower(), 1)
-        year = int(match.group(3))
-        return datetime(year, month, day)
+        day, month_it, year = match.groups()
+        month = MONTHS_IT.get(month_it, '01')
+        return f"{year}-{month}-{int(day):02d}"
     return None
 
 
-def parse_euro_amount(value: str) -> Decimal:
-    """Parse amount like '-1.170,68' or '1.362,01' to Decimal."""
-    if not value or value == '-':
-        return Decimal('0')
-    # European format: 1.234,56
-    clean = value.replace('.', '').replace(',', '.').strip()
+def parse_amount(amount_str: str) -> float:
+    """Parse Italian formatted amount (1.234,56 -> 1234.56)."""
+    if not amount_str:
+        return 0.0
+    # Remove thousands separator, convert decimal separator
+    clean = amount_str.replace('.', '').replace(',', '.')
     try:
-        return Decimal(clean)
+        return float(clean)
     except:
-        return Decimal('0')
+        return 0.0
 
 
-def parse_bgsaxo_transactions(pdf_path: str):
-    """Parse BG Saxo Transactions PDF."""
-    print("=" * 70)
-    print("📊 PARSING BG SAXO TRANSACTIONS")
-    print("=" * 70)
+def extract_transaction_details(text_block: str) -> Dict:
+    """Extract details from a transaction text block."""
+    details = {
+        'isin': None,
+        'fees': 0.0,
+        'exchange_rate': 1.0,
+        'trade_id': None
+    }
     
-    session = SessionLocal()
+    # ISIN pattern (US..., IT..., IE..., etc.)
+    isin_match = re.search(r'ISIN\s*([A-Z]{2}[A-Z0-9]{10})', text_block)
+    if isin_match:
+        details['isin'] = isin_match.group(1)
+    else:
+        # Try standalone ISIN pattern
+        isin_match = re.search(r'([A-Z]{2}[A-Z0-9]{10})', text_block)
+        if isin_match:
+            details['isin'] = isin_match.group(1)
     
-    # Clear existing BG_SAXO transactions
-    deleted = session.query(Transaction).filter(Transaction.broker == 'BG_SAXO').delete()
-    session.commit()
-    print(f"🗑️  Cleared {deleted} existing BG_SAXO transactions")
+    # Commissione (fees) pattern
+    fee_match = re.search(r'Commissione\s*(-?[\d.,]+)\s*EUR', text_block)
+    if fee_match:
+        details['fees'] = abs(parse_amount(fee_match.group(1)))
     
-    # Extract text from PDF
-    doc = fitz.open(pdf_path)
+    # Exchange rate
+    rate_match = re.search(r'Tassodiconversione\s*([\d.,]+)', text_block)
+    if rate_match:
+        details['exchange_rate'] = parse_amount(rate_match.group(1))
+    
+    # Trade ID
+    id_match = re.search(r'IDcontrattazione\s*(\d+)', text_block)
+    if id_match:
+        details['trade_id'] = id_match.group(1)
+    
+    return details
+
+
+def parse_bgsaxo_transactions_pdf(pdf_path: str) -> List[Dict]:
+    """
+    Parse BG SAXO transactions PDF using pattern-based extraction.
+    
+    Returns a list of transaction dictionaries with:
+    - date, operation, ticker, isin, name, quantity, price, 
+    - total_amount, currency, fees
+    """
+    transactions = []
+    
+    # Extract all text from PDF
     all_text = ""
-    for page in doc:
-        all_text += page.get_text() + "\n"
-    doc.close()
+    with pdfplumber.open(pdf_path) as pdf:
+        for page in pdf.pages:
+            text = page.extract_text() or ""
+            all_text += text + "\n"
     
+    print(f"📄 Extracted {len(all_text)} characters from PDF")
+    
+    # State tracking
+    current_date = None
     lines = all_text.split('\n')
     
-    transactions = []
-    current_date = None
-    current_cash = None
     i = 0
-    
     while i < len(lines):
         line = lines[i].strip()
         
-        # Check for date line (e.g., "18-dic-2025")
-        date_match = re.match(r'^(\d{1,2}-\w+-\d{4})$', line)
+        # Check for date separator (e.g., "28-nov-2024")
+        date_match = re.match(r'^(\d{1,2}-[a-z]{3}-\d{4})', line.lower())
         if date_match:
             current_date = parse_italian_date(date_match.group(1))
-            # Next two lines might be daily totals and cash balance
-            if i + 2 < len(lines):
-                # Check if next lines are numeric (amounts)
-                next1 = lines[i + 1].strip()
-                next2 = lines[i + 2].strip()
-                if re.match(r'^-?[\d.,]+$', next1) and re.match(r'^[\d.,]+$', next2):
-                    current_cash = parse_euro_amount(next2)
-                    i += 3
-                    continue
             i += 1
             continue
         
-        # Check for trade: "Contrattazione" followed by product name
-        if line == 'Contrattazione' and i + 1 < len(lines):
-            product_name = lines[i + 1].strip()
+        # Check for "Contrattazione" (trade)
+        if line.startswith('Contrattazione'):
+            # Collect the transaction block (next ~5 lines for details)
+            block_lines = [line]
+            for j in range(1, 6):
+                if i + j < len(lines):
+                    block_lines.append(lines[i + j])
+            block_text = '\n'.join(block_lines)
             
-            # Find the operation line (Acquista/Vendi X @ Prezzo)
-            j = i + 2
-            operation = None
-            qty = 0
-            price = Decimal('0')
-            currency = 'EUR'
-            amount = Decimal('0')
-            commission = Decimal('0')
-            isin = None
-            trade_id = None
+            # Patterns for BUY: "Acquista2@301,93" or "Acquista 2@301,93"
+            # Patterns for SELL: "Vendi-2@297,89USD" (negative quantity)
             
-            while j < len(lines) and j < i + 25:  # Look within next 25 lines
-                check_line = lines[j].strip()
-                
-                # Operation line: "Acquista 2 @ 301,93" or "Vendi -145 @ 2,90 CAD"
-                op_match = re.match(r'^(Acquista|Vendi)\s+(-?\d+)\s+@\s+([\d.,]+)\s*(\w*)$', check_line)
-                if op_match:
-                    operation = 'BUY' if op_match.group(1) == 'Acquista' else 'SELL'
-                    qty = abs(int(op_match.group(2)))
-                    price = parse_euro_amount(op_match.group(3))
-                    if op_match.group(4):
-                        currency = op_match.group(4)
-                    j += 1
-                    continue
-                
-                # Amount line (negative for buy, positive for sell)
-                amount_match = re.match(r'^(-?[\d.,]+)$', check_line)
-                if amount_match and operation and amount == 0:
-                    amount = parse_euro_amount(amount_match.group(1))
-                    j += 1
-                    continue
-                
-                # Commission line
-                if check_line.startswith('Commissione'):
-                    j += 1
-                    if j < len(lines):
-                        comm_match = re.match(r'^(-?[\d.,]+)\s*EUR$', lines[j].strip())
-                        if comm_match:
-                            commission = abs(parse_euro_amount(comm_match.group(1)))
-                    j += 1
-                    continue
-                
-                # Trade ID
-                if check_line == 'ID contrattazione':
-                    j += 1
-                    if j < len(lines):
-                        trade_id = lines[j].strip()
-                    j += 1
-                    continue
-                
-                # ISIN
-                if check_line == 'ISIN':
-                    j += 1
-                    if j < len(lines):
-                        isin = lines[j].strip()
-                    break  # ISIN is usually last, stop here
-                
-                # New transaction or page break
-                if check_line in ['Contrattazione', 'Operazione sul capitale', 'Trasferimento di liquidità'] or re.match(r'^\d{1,2}-\w+-\d{4}$', check_line):
-                    break
-                
-                j += 1
+            # Try BUY pattern: Acquista followed by qty@price
+            buy_match = re.search(
+                r'Contrattazione\s+(.+?)\s+Acquista\s*(\d+)\s*@\s*([\d.,]+)\s*(USD|EUR|CAD|GBP|DKK|HKD)?',
+                line, re.IGNORECASE
+            )
             
-            if operation and current_date and qty > 0:
-                tx = {
-                    'date': current_date,
-                    'type': 'TRADE',
+            # Try SELL pattern: Vendi followed by -qty@price  
+            sell_match = re.search(
+                r'Contrattazione\s+(.+?)\s+Vendi\s*-?(\d+)\s*@\s*([\d.,]+)\s*(USD|EUR|CAD|GBP|DKK|HKD)?',
+                line, re.IGNORECASE
+            )
+            
+            if buy_match or sell_match:
+                match = buy_match or sell_match
+                operation = 'BUY' if buy_match else 'SELL'
+                
+                asset_name = match.group(1).strip()
+                quantity = float(match.group(2))
+                price = parse_amount(match.group(3))
+                currency = (match.group(4) or 'EUR').upper()
+                
+                # Get additional details from block
+                details = extract_transaction_details(block_text)
+                
+                # Try to extract ticker from asset name
+                ticker = None
+                ticker_match = re.search(r'\*\*See\s*([A-Z]+:[a-z]+)', asset_name)
+                if ticker_match:
+                    ticker = ticker_match.group(1)
+                # Also check for pattern like "**SeeWMT:xnas"
+                ticker_match2 = re.search(r'\*\*See([A-Z]+:[a-z]+)', asset_name)
+                if ticker_match2:
+                    ticker = ticker_match2.group(1)
+                
+                txn = {
+                    'date': current_date or datetime.now().strftime('%Y-%m-%d'),
                     'operation': operation,
-                    'product': product_name[:50],
-                    'qty': qty,
+                    'ticker': ticker,
+                    'isin': details['isin'],
+                    'name': asset_name[:80],
+                    'quantity': quantity,
                     'price': price,
+                    'total_amount': quantity * price,
                     'currency': currency,
-                    'amount': abs(amount),
-                    'commission': commission,
-                    'isin': isin,
-                    'trade_id': trade_id
+                    'fees': details['fees']
                 }
-                transactions.append(tx)
-                print(f"  📝 {current_date.strftime('%Y-%m-%d')} | {operation:<6} | {product_name[:25]:<25} | Qty: {qty:>4} | €{abs(amount):>10.2f}")
+                transactions.append(txn)
             
-            i = j
+            i += 5  # Skip detail lines
             continue
         
-        # Check for dividend: "Operazione sul capitale" + "Dividendo in contanti"
-        if line == 'Operazione sul capitale' and i + 1 < len(lines):
-            product_name = lines[i + 1].strip()
-            
-            j = i + 2
-            is_dividend = False
-            amount = Decimal('0')
-            isin = None
-            
-            while j < len(lines) and j < i + 20:
-                check_line = lines[j].strip()
+        # Check for "VenditaAllachiusura" (sell at close - corporate events)
+        if 'VenditaAllachiusura' in line:
+            sell_match = re.search(r'VenditaAllachiusura\s*-?(\d+)\s*@\s*([\d.,]+)', line)
+            if sell_match:
+                quantity = float(sell_match.group(1))
+                price = parse_amount(sell_match.group(2))
                 
-                if 'Dividendo in contanti' in check_line:
-                    is_dividend = True
-                    j += 1
-                    if j < len(lines):
-                        amount = parse_euro_amount(lines[j].strip())
-                    j += 1
+                # Look for ISIN in same line
+                isin_match = re.search(r'([A-Z]{2}[A-Z0-9]{10})', line)
+                isin = isin_match.group(1) if isin_match else None
+                
+                txn = {
+                    'date': current_date or datetime.now().strftime('%Y-%m-%d'),
+                    'operation': 'SELL',
+                    'ticker': None,
+                    'isin': isin,
+                    'name': 'Corporate Event Sale',
+                    'quantity': quantity,
+                    'price': price,
+                    'total_amount': quantity * price,
+                    'currency': 'EUR',
+                    'fees': 0
+                }
+                transactions.append(txn)
+            i += 1
+            continue
+        
+        # Check for "AcquistoInapertura" (buy at open - corporate events)
+        if 'AcquistoInapertura' in line:
+            buy_match = re.search(r'AcquistoInapertura\s*(\d+)\s*@\s*([\d.,]+)', line)
+            if buy_match:
+                quantity = float(buy_match.group(1))
+                price = parse_amount(buy_match.group(2))
+                
+                isin_match = re.search(r'([A-Z]{2}[A-Z0-9]{10})', line)
+                isin = isin_match.group(1) if isin_match else None
+                
+                txn = {
+                    'date': current_date or datetime.now().strftime('%Y-%m-%d'),
+                    'operation': 'BUY',
+                    'ticker': None,
+                    'isin': isin,
+                    'name': 'Corporate Event Buy',
+                    'quantity': quantity,
+                    'price': price,
+                    'total_amount': quantity * price,
+                    'currency': 'EUR',
+                    'fees': 0
+                }
+                transactions.append(txn)
+            i += 1
+            continue
+        
+        # Check for "Trasferimento di liquidità" (cash transfer)
+        if 'Trasferimento' in line and 'liquidit' in line.lower():
+            # Next line should have operation type
+            if i + 1 < len(lines):
+                next_line = lines[i + 1].strip()
+                
+                if 'Deposito' in next_line:
+                    operation = 'DEPOSIT'
+                elif 'Prelievo' in next_line:
+                    operation = 'WITHDRAW'
+                else:
+                    i += 1
                     continue
                 
-                if check_line == 'ISIN':
-                    j += 1
-                    if j < len(lines):
-                        isin = lines[j].strip()
-                    break
+                # Look for amount
+                amount_match = re.search(r'([\d.,]+)\s*EUR', next_line)
+                if not amount_match:
+                    # Try subsequent lines
+                    for j in range(2, 5):
+                        if i + j < len(lines):
+                            amount_match = re.search(r'([\d.,]+)\s*EUR', lines[i + j])
+                            if amount_match:
+                                break
                 
-                if check_line in ['Contrattazione', 'Operazione sul capitale', 'Trasferimento di liquidità'] or re.match(r'^\d{1,2}-\w+-\d{4}$', check_line):
-                    break
-                
-                j += 1
+                if amount_match:
+                    amount = parse_amount(amount_match.group(1))
+                    txn = {
+                        'date': current_date or datetime.now().strftime('%Y-%m-%d'),
+                        'operation': operation,
+                        'ticker': 'CASH:EUR',
+                        'isin': None,
+                        'name': f'Cash {operation.title()}',
+                        'quantity': 1,
+                        'price': amount,
+                        'total_amount': amount,
+                        'currency': 'EUR',
+                        'fees': 0
+                    }
+                    transactions.append(txn)
             
-            if is_dividend and current_date and amount > 0:
-                tx = {
-                    'date': current_date,
-                    'type': 'DIVIDEND',
-                    'operation': 'DIVIDEND',
-                    'product': product_name[:50],
-                    'qty': 0,
-                    'price': Decimal('0'),
-                    'currency': 'EUR',
-                    'amount': amount,
-                    'commission': Decimal('0'),
-                    'isin': isin,
-                    'trade_id': None
-                }
-                transactions.append(tx)
-                print(f"  💰 {current_date.strftime('%Y-%m-%d')} | DIV    | {product_name[:25]:<25} | €{amount:>10.2f}")
-            
-            i = j
+            i += 3
             continue
         
-        # Check for deposit: "Trasferimento di liquidità" + "Deposito"
-        if line == 'Trasferimento di liquidità' and i + 1 < len(lines):
-            next_line = lines[i + 1].strip()
-            
-            if next_line == 'Deposito':
-                j = i + 2
-                amount = Decimal('0')
-                
-                while j < len(lines) and j < i + 10:
-                    check_line = lines[j].strip()
-                    amount_match = re.match(r'^([\d.,]+)$', check_line)
-                    if amount_match:
-                        amount = parse_euro_amount(amount_match.group(1))
-                        break
-                    j += 1
-                
-                if current_date and amount > 0:
-                    tx = {
-                        'date': current_date,
-                        'type': 'DEPOSIT',
-                        'operation': 'DEPOSIT',
-                        'product': 'Cash Deposit',
-                        'qty': 0,
-                        'price': Decimal('1'),
-                        'currency': 'EUR',
-                        'amount': amount,
-                        'commission': Decimal('0'),
-                        'isin': None,
-                        'trade_id': None
-                    }
-                    transactions.append(tx)
-                    print(f"  💵 {current_date.strftime('%Y-%m-%d')} | DEPOSIT | €{amount:>10.2f}")
-                
-                i = j + 1
-                continue
+        # Check for "Dividendo" (dividend)
+        if 'Dividendo' in line:
+            # Extract dividend details
+            amount_match = re.search(r'([\d.,]+)\s*(USD|EUR)', line)
+            if amount_match:
+                amount = parse_amount(amount_match.group(1))
+                currency = amount_match.group(2)
+                txn = {
+                    'date': current_date or datetime.now().strftime('%Y-%m-%d'),
+                    'operation': 'DIVIDEND',
+                    'ticker': None,
+                    'isin': None,
+                    'name': 'Dividend',
+                    'quantity': 1,
+                    'price': amount,
+                    'total_amount': amount,
+                    'currency': currency,
+                    'fees': 0
+                }
+                transactions.append(txn)
+            i += 1
+            continue
         
         i += 1
     
-    # Insert transactions into database
-    print(f"\n📥 Inserting {len(transactions)} transactions...")
+    return transactions
+
+
+def main():
+    pdf_path = Path(r"G:\Il mio Drive\WAR_ROOM_DATA\inbox\bgsaxo\Transactions_19807401_2024-11-26_2025-12-19.pdf")
     
-    trades = 0
-    dividends = 0
-    deposits = 0
+    if not pdf_path.exists():
+        print(f"❌ PDF not found: {pdf_path}")
+        return
     
-    for tx in transactions:
-        try:
-            # Ensure ticker is never NULL
-            ticker = tx.get('isin') or tx['product'][:12].upper().replace(' ', '_')
-            # For deposits and dividends without ISIN, use operation type as ticker
-            if tx['type'] == 'DEPOSIT':
-                ticker = 'EUR_CASH'
-            elif tx['type'] == 'DIVIDEND' and not tx.get('isin'):
-                ticker = tx['product'][:12].upper().replace(' ', '_')
-            
-            transaction = Transaction(
-                id=uuid.uuid4(),
-                broker='BG_SAXO',
-                ticker=ticker,
-                isin=tx.get('isin'),
-                operation=tx['operation'],
-                quantity=Decimal(str(tx['qty'])) if tx['qty'] > 0 else tx['amount'],
-                price=tx['price'] if tx['price'] > 0 else Decimal('1'),
-                total_amount=tx['amount'],
-                currency=tx['currency'] or 'EUR',
-                fees=tx['commission'],
-                timestamp=tx['date'],
-                source_document=Path(pdf_path).name,
-                notes=tx['product'][:100]
-            )
-            session.add(transaction)
-            session.commit()  # Commit each transaction individually
-            
-            if tx['type'] == 'TRADE':
-                trades += 1
-            elif tx['type'] == 'DIVIDEND':
-                dividends += 1
-            elif tx['type'] == 'DEPOSIT':
-                deposits += 1
-                
-        except Exception as e:
-            session.rollback()
-            print(f"  ⚠️ Error inserting {tx['product'][:20]}: {str(e)[:50]}")
+    print(f"🔍 Parsing: {pdf_path.name}")
+    print()
     
-    # Add/update cash holding
-    if current_cash is not None and current_cash > 0:
-        print(f"\n💶 Final cash balance: €{current_cash:.2f}")
-        
-        # Check if CASH holding exists
-        cash_holding = session.query(Holding).filter(
-            Holding.broker == 'BG_SAXO',
-            Holding.ticker == 'CASH'
-        ).first()
-        
-        if cash_holding:
-            cash_holding.quantity = current_cash
-            cash_holding.current_value = current_cash
-        else:
-            cash_holding = Holding(
-                id=uuid.uuid4(),
-                broker='BG_SAXO',
-                ticker='CASH',
-                name='Cash (EUR)',
-                asset_type='CASH',
-                quantity=current_cash,
-                current_value=current_cash,
-                current_price=Decimal('1'),
-                purchase_price=Decimal('1'),
-                currency='EUR',
-                source_document=Path(pdf_path).name,
-                last_updated=datetime.now()
-            )
-            session.add(cash_holding)
-        
-        session.commit()
+    transactions = parse_bgsaxo_transactions_pdf(str(pdf_path))
     
-    session.close()
+    print(f"\n📊 Extracted {len(transactions)} transactions")
     
-    print(f"\n" + "=" * 70)
-    print(f"📊 SUMMARY")
-    print(f"=" * 70)
-    print(f"  Trades:    {trades}")
-    print(f"  Dividends: {dividends}")
-    print(f"  Deposits:  {deposits}")
-    print(f"  TOTAL:     {len(transactions)}")
-    if current_cash:
-        print(f"  Cash:      €{current_cash:.2f}")
-    print(f"=" * 70)
+    # Operations breakdown
+    from collections import Counter
+    ops = Counter(t['operation'] for t in transactions)
+    print("\nOperations:")
+    for op, count in ops.most_common():
+        print(f"  {op}: {count}")
     
-    return len(transactions)
+    # Sample transactions
+    print("\nSample transactions:")
+    for t in transactions[:10]:
+        print(f"  {t['date']}: {t['operation']} {t['quantity']} x {t['ticker'] or t['name'][:20]}")
+    
+    # Save to JSON
+    out_path = Path(__file__).parent.parent / "data" / "extracted" / "BG_SAXO_Transactions_Python.json"
+    with open(out_path, 'w', encoding='utf-8') as f:
+        json.dump({'transactions': transactions}, f, indent=2, ensure_ascii=False)
+    print(f"\n💾 Saved to: {out_path}")
 
 
 if __name__ == "__main__":
-    pdf_path = r'D:\Download\BGSAXO\Transactions_19807401_2024-11-26_2025-12-19.pdf'
-    parse_bgsaxo_transactions(pdf_path)
+    main()

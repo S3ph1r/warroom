@@ -7,6 +7,13 @@ from pathlib import Path
 from datetime import datetime
 from decimal import Decimal, InvalidOperation
 
+# Add project root to path for utils
+project_root = Path(__file__).resolve().parent.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
+from utils.parsing import robust_parse_decimal
+
 class BGSaxoDynamicParser:
     def __init__(self, pdf_path, rules_path=None):
         self.pdf_path = Path(pdf_path)
@@ -31,13 +38,8 @@ class BGSaxoDynamicParser:
         return re.compile(pattern, re.IGNORECASE)
 
     def parse_number(self, value):
-        """Parse European number format (1.234,56)."""
-        if not value: return Decimal(0)
-        clean = str(value).replace('.', '').replace(',', '.')
-        try:
-            return Decimal(clean)
-        except:
-            return Decimal(0)
+        """Use the centralized robust numeric parser."""
+        return robust_parse_decimal(value)
 
     def parse(self):
         print(f"[INFO] Parsing {self.pdf_path.name} using rules from {self.rules_path.name}")

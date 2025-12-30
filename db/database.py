@@ -31,8 +31,8 @@ def get_db():
 def init_db():
     """Initialize database - create all tables"""
     from db.models import (
-        Transaction, AssetRegistry, MarketIntelligence,
-        AIScenario, PortfolioSnapshot, Alert, CSVImportLog
+        Holding, Transaction, ImportLog,
+        CouncilSession, PortfolioSnapshot, PriceAlert
     )
     Base.metadata.create_all(bind=engine)
     print("✅ Database tables created successfully!")

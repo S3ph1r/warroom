@@ -13,7 +13,7 @@ flowchart TD
     classDef db fill:#bfb,stroke:#333,stroke-width:2px;
     classDef file fill:#bbf,stroke:#333;
 
-    Start(("🚀 START<br/>run_bgsaxo.bat")) --> Script[/"🐍 run_bgsaxo_pipeline.py"/]:::script
+    Start(("🚀 START<br/>run_bgsaxo.bat")) --> Script[/"🐍 ingest_bgsaxo_full.py"/]:::script
     Script --> Detect{{"🔍 Files Found?"}}:::decision
     
     Detect -- No --> End(("❌ Stop"))
@@ -53,7 +53,7 @@ flowchart TD
 
 | Step | Action | Script | Output |
 |------|--------|--------|--------|
-| 1 | **Detect Files** | `run_bgsaxo_pipeline.py` | Latest CSV & PDF paths |
+| 1 | **Detect Files** | `ingest_bgsaxo_full.py` | Latest CSV & PDF paths |
 | 2 | **Check Rules** | (auto) | If `.rules.json` missing → Step 3 |
 | 3 | **LLM Discovery** | `analyze_csv_structure.py` / `analyze_pdf_structure.py` | `.rules.json` (Regex config) |
 | 4 | **Parse CSV** | `parse_bgsaxo_csv.py` | Holdings data (Python dict) |
@@ -66,9 +66,10 @@ flowchart TD
 ## Key Design Decisions
 
 1. **LLM is used ONLY for rule discovery** (one-time per file type), not for runtime extraction.
-2. **Parsing is 100% deterministic** via Python/Regex, ensuring consistency and speed.
-3. **Block-based PDF parsing** handles multi-line transaction records accurately.
-4. **ISIN regex is universal** (`[A-Z]{2}[A-Z0-9]{9}\d`) to capture all countries.
+2. **Parsing is 100% deterministic** via Python/Regex and a **unified robust numeric parser** (`utils/parsing.py`), ensuring consistency and speed.
+3. **Standardized Naming**: All orchestrators follow `ingest_<broker>_full.py`.
+4. **Block-based PDF parsing** handles multi-line transaction records accurately.
+5. **ISIN regex is universal** ([A-Z]{2}[A-Z0-9]{9}\d) to capture all countries.
 
 ---
 

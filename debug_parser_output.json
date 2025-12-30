@@ -1,0 +1,1578 @@
+{
+  "schemas": [
+    {
+      "type": "TRADING",
+      "start_keyword": "Contrattazione",
+      "fields": {
+        "ticker": {
+          "line_offset": 0,
+          "regex": "(?<=Contrattazione\\s)(?P<ticker>.*?)(?=\\s(Acquista|Vendi)|$)"
+        },
+        "isin": {
+          "line_offset": 1,
+          "regex": "^\\s*(?P<isin>[A-Z]{2}[A-Z0-9]{9}\\d)"
+        },
+        "compressed_data": {
+          "line_offset": 0,
+          "regex": "(Acquista|Vendi)(?P<quantity>\\d+)@(?P<price>[0-9,]+)"
+        }
+      }
+    },
+    {
+      "type": "DIVIDEND",
+      "start_keyword": "Dividendo",
+      "fields": {
+        "ticker": {
+          "line_offset": 0,
+          "regex": "(?<=Dividendo\\s)(?P<ticker>.*?)(?=\\sAcquista|\\sVendi|$)"
+        },
+        "isin": {
+          "line_offset": 1,
+          "regex": "^\\s*(?P<isin>[A-Z]{2}[A-Z0-9]{9}\\d)"
+        },
+        "compressed_data": {
+          "line_offset": 0,
+          "regex": "(Acquista|Vendi)(?P<quantity>\\d+)@(?P<price>[0-9,]+)"
+        }
+      }
+    },
+    {
+      "type": "TRANSFER",
+      "start_keyword": "Bonifico",
+      "fields": {
+        "ticker": {
+          "line_offset": 0,
+          "regex": "(?<=Bonifico\\s)(?P<ticker>.*?)(?=\\sAcquista|\\sVendi|$)"
+        },
+        "isin": {},
+        "compressed_data": {}
+      }
+    }
+  ],
+  "transactions": [
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione AlphabetInc.ClassA Acquista2@301,93 Pending -",
+      "date": "18-dic-2025",
+      "quantity": "2",
+      "price": "301,93",
+      "ticker": "AlphabetInc.ClassA"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione ServiceNowInc. Acquista1@155,29USD -133,51 -",
+      "date": "18-dic-2025",
+      "quantity": "1",
+      "price": "155,29",
+      "ticker": "ServiceNowInc.",
+      "isin": "US81762P1021"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione CRISPRTherapeuticsLtd Acquista3@55,88USD -144,22 -",
+      "date": "18-dic-2025",
+      "quantity": "3",
+      "price": "55,88",
+      "ticker": "CRISPRTherapeuticsLtd",
+      "isin": "CH0334081137"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione CanopyGrowthCorp. Vendi-145@2,90CAD 256,83 -",
+      "date": "18-dic-2025",
+      "ticker": "CanopyGrowthCorp.",
+      "isin": "CA1380357048"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione TeradyneInc. Acquista1@190,26USD -163,53 -",
+      "date": "18-dic-2025",
+      "quantity": "1",
+      "price": "190,26",
+      "ticker": "TeradyneInc.",
+      "isin": "US8807701029"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione VikingTherapeuticsInc. Acquista5@34,74USD -149,42 -",
+      "date": "18-dic-2025",
+      "quantity": "5",
+      "price": "34,74",
+      "ticker": "VikingTherapeuticsInc.",
+      "isin": "US92686J1060"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione ASTSpaceMobileInc. Acquista2@65,86USD -113,52 -",
+      "date": "18-dic-2025",
+      "quantity": "2",
+      "price": "65,86",
+      "ticker": "ASTSpaceMobileInc.",
+      "isin": "US00217D1000"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione Acquista4@44,10EUR -178,38 -",
+      "date": "18-dic-2025",
+      "quantity": "4",
+      "price": "44,10",
+      "ticker": "Acquista4@44,10EUR -178,38 -",
+      "isin": "IE000M7V94E1"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione FranklinFTSEIndiaUCITSETF Acquista5@37,83EUR -191,15 -",
+      "date": "18-dic-2025",
+      "quantity": "5",
+      "price": "37,83",
+      "ticker": "FranklinFTSEIndiaUCITSETF",
+      "isin": "IE00BHZRQZ17"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione PaloAltoNetworksInc. Acquista1@186,23USD -160,13 -",
+      "date": "18-dic-2025",
+      "quantity": "1",
+      "price": "186,23",
+      "ticker": "PaloAltoNetworksInc.",
+      "isin": "US6974351057"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione ChevronCorp. Acquista1@148,85USD -127,98 -",
+      "date": "18-dic-2025",
+      "quantity": "1",
+      "price": "148,85",
+      "ticker": "ChevronCorp.",
+      "isin": "US1667641005"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione OkloInc. Acquista1@76,92USD -66,63 -",
+      "date": "17-dic-2025",
+      "quantity": "1",
+      "price": "76,92",
+      "ticker": "OkloInc.",
+      "isin": "US02156V1098"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione UnitedStatesAntimonyCorp. Acquista28@4,74USD -114,08 -",
+      "date": "17-dic-2025",
+      "quantity": "28",
+      "price": "4,74",
+      "ticker": "UnitedStatesAntimonyCorp.",
+      "isin": "US9115491030"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione WalmartInc. Acquista2@116,23USD -199,15 -",
+      "date": "17-dic-2025",
+      "quantity": "2",
+      "price": "116,23",
+      "ticker": "WalmartInc.",
+      "isin": "US9311421039"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione AlphabetInc.ClassA Vendi-2@297,89USD 504,65 -",
+      "date": "16-dic-2025",
+      "ticker": "AlphabetInc.ClassA",
+      "isin": "US02079K3059"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione SolidPowerInc. Vendi-19@4,52USD 71,85 -",
+      "date": "15-dic-2025",
+      "ticker": "SolidPowerInc.",
+      "isin": "US83422N1054"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione Amplifon Acquista7@13,98EUR -99,92 -",
+      "date": "15-dic-2025",
+      "quantity": "7",
+      "price": "13,98",
+      "ticker": "Amplifon",
+      "isin": "IT0004056880"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione BroadcomInc. Vendi-2@353,00USD 598,19 -",
+      "date": "15-dic-2025",
+      "ticker": "BroadcomInc.",
+      "isin": "US11135F1012"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione ToyotaMotorCorp.-ADR Acquista2@215,81USD -369,06 -",
+      "date": "15-dic-2025",
+      "quantity": "2",
+      "price": "215,81",
+      "ticker": "ToyotaMotorCorp.-ADR",
+      "isin": "US8923313071"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione NovoNordiskBA/S Acquista4@319,10DKK -172,66 -",
+      "date": "11-dic-2025",
+      "quantity": "4",
+      "price": "319,10",
+      "ticker": "NovoNordiskBA/S",
+      "isin": "DK0062498333"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione OculusInc. Vendi-7000@0,05CAD 178,74 -",
+      "date": "05-dic-2025",
+      "ticker": "OculusInc.",
+      "isin": "US67575Y1091"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione CRISPRTherapeuticsLtd Acquista2@56,26USD -97,74 -",
+      "date": "04-dic-2025",
+      "quantity": "2",
+      "price": "56,26",
+      "ticker": "CRISPRTherapeuticsLtd",
+      "isin": "CH0334081137"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione NVIDIACorp. Acquista2@183,57USD -316,60 -",
+      "date": "28-nov-2025",
+      "quantity": "2",
+      "price": "183,57",
+      "ticker": "NVIDIACorp.",
+      "isin": "US67066G1040"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione QorvoInc. Acquista2@85,55USD -149,09 -",
+      "date": "28-nov-2025",
+      "quantity": "2",
+      "price": "85,55",
+      "ticker": "QorvoInc.",
+      "isin": "US74736K1016"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione D-WaveQuantumInc. Acquista5@22,75USD -99,42 -",
+      "date": "28-nov-2025",
+      "quantity": "5",
+      "price": "22,75",
+      "ticker": "D-WaveQuantumInc.",
+      "isin": "US26740W1099"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione AlibabaGroupHoldingLtd-ADR Acquista2@134,60EUR -272,20 -",
+      "date": "25-nov-2025",
+      "quantity": "2",
+      "price": "134,60",
+      "ticker": "AlibabaGroupHoldingLtd-ADR",
+      "isin": "US01609W1027"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione NVIDIACorp. Vendi-7@174,63USD 1.054,41 -",
+      "date": "24-nov-2025",
+      "ticker": "NVIDIACorp.",
+      "isin": "US67066G1040"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione KULRTechnologyGroupInc Acquista30@2,34USD -61,83 -",
+      "date": "24-nov-2025",
+      "quantity": "30",
+      "price": "2,34",
+      "ticker": "KULRTechnologyGroupInc",
+      "isin": "US50125G3074"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione Acquista200@0,38USD -66,64 -",
+      "date": "24-nov-2025",
+      "quantity": "200",
+      "price": "0,38",
+      "ticker": "Acquista200@0,38USD -66,64 -",
+      "isin": "KYG2030P1072"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione ZhejiangSanhuaIntelligentControlsCoLtd Acquista100@31,94HKD -359,71 -",
+      "date": "24-nov-2025",
+      "quantity": "100",
+      "price": "31,94",
+      "ticker": "ZhejiangSanhuaIntelligentControlsCoLtd",
+      "isin": "CNE100006Z79"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione RealbotixCorp Acquista100@0,40CAD -27,45 -",
+      "date": "24-nov-2025",
+      "quantity": "100",
+      "price": "0,40",
+      "ticker": "RealbotixCorp",
+      "isin": "CA75604K1075"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione KranesharesSSEStarMarket50UCITSETF Acquista10@16,97EUR -171,68 -",
+      "date": "20-nov-2025",
+      "quantity": "10",
+      "price": "16,97",
+      "ticker": "KranesharesSSEStarMarket50UCITSETF",
+      "isin": "IE00BKPJY541"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione Acquista6@49,00EUR -296,00 -",
+      "date": "20-nov-2025",
+      "quantity": "6",
+      "price": "49,00",
+      "ticker": "Acquista6@49,00EUR -296,00 -",
+      "isin": "IE000M7V94E1"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione JobyAviationIncorporation Vendi-20@13,00USD 210,68 -",
+      "date": "19-nov-2025",
+      "ticker": "JobyAviationIncorporation",
+      "isin": "KYG651631007"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione VoyagerTechnologiesInc. Acquista10@18,15USD -158,33 -",
+      "date": "19-nov-2025",
+      "quantity": "10",
+      "price": "18,15",
+      "ticker": "VoyagerTechnologiesInc.",
+      "isin": "US92892B1035"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione NVIDIACorp. Acquista2@186,90USD -325,09 -",
+      "date": "14-nov-2025",
+      "quantity": "2",
+      "price": "186,90",
+      "ticker": "NVIDIACorp.",
+      "isin": "US67066G1040"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione Acquista200@0,35USD -61,28 -",
+      "date": "14-nov-2025",
+      "quantity": "200",
+      "price": "0,35",
+      "ticker": "Acquista200@0,35USD -61,28 -",
+      "isin": "KYG2030P1072"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione DatadogInc. Vendi-2@179,31USD 294,26 -",
+      "date": "13-nov-2025",
+      "ticker": "DatadogInc.",
+      "isin": "US23804L1035"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione iSharesMSCIChinaAccUCITSETF Acquista100@5,66EUR -568,90 -",
+      "date": "12-nov-2025",
+      "quantity": "100",
+      "price": "5,66",
+      "ticker": "iSharesMSCIChinaAccUCITSETF",
+      "isin": "IE00BJ5JPG56"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione AlibabaGroupHoldingLtd-ADR Vendi-2@159,50USD 257,54 -",
+      "date": "11-nov-2025",
+      "ticker": "AlibabaGroupHoldingLtd-ADR",
+      "isin": "US01609W1027"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione Baidu.comInc.-ADR Acquista3@132,92USD -345,44 -",
+      "date": "10-nov-2025",
+      "quantity": "3",
+      "price": "132,92",
+      "ticker": "Baidu.comInc.-ADR",
+      "isin": "US0567521085"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione NVIDIACorp. Acquista3@195,00USD -507,95 -",
+      "date": "10-nov-2025",
+      "quantity": "3",
+      "price": "195,00",
+      "ticker": "NVIDIACorp.",
+      "isin": "US67066G1040"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione D-WaveQuantumInc. Acquista5@29,86USD -130,33 -",
+      "date": "10-nov-2025",
+      "quantity": "5",
+      "price": "29,86",
+      "ticker": "D-WaveQuantumInc.",
+      "isin": "US26740W1099"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione AristaNetworksInc. Acquista2@137,50USD -239,24 -",
+      "date": "10-nov-2025",
+      "quantity": "2",
+      "price": "137,50",
+      "ticker": "AristaNetworksInc.",
+      "isin": "US0404132054"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione VoyagerTechnologiesInc. Acquista10@24,11USD -209,87 -",
+      "date": "10-nov-2025",
+      "quantity": "10",
+      "price": "24,11",
+      "ticker": "VoyagerTechnologiesInc.",
+      "isin": "US92892B1035"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione Acquista3@52,13EUR -158,39 -",
+      "date": "10-nov-2025",
+      "quantity": "3",
+      "price": "52,13",
+      "ticker": "Acquista3@52,13EUR -158,39 -",
+      "isin": "IE000M7V94E1"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione OracleCorp. Acquista2@246,49USD -428,22 -",
+      "date": "10-nov-2025",
+      "quantity": "2",
+      "price": "246,49",
+      "ticker": "OracleCorp.",
+      "isin": "US68389X1054"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione TSMC-ADR Acquista1@295,00USD -256,59 -",
+      "date": "10-nov-2025",
+      "quantity": "1",
+      "price": "295,00",
+      "ticker": "TSMC-ADR",
+      "isin": "US8740391003"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione BYDCompanyLtd-ADR Acquista20@13,12USD -228,32 -",
+      "date": "07-nov-2025",
+      "quantity": "20",
+      "price": "13,12",
+      "ticker": "BYDCompanyLtd-ADR",
+      "isin": "US05606L1008"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione MicrosoftCorp. Vendi-1@493,83USD 421,65 -",
+      "date": "07-nov-2025",
+      "ticker": "MicrosoftCorp.",
+      "isin": "US5949181045"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione TeslaInc. Vendi-1@424,83USD 329,69 -",
+      "date": "06-nov-2025",
+      "ticker": "TeslaInc.",
+      "isin": "US88160R1014"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione PalantirTechnologiesInc. Vendi-4@178,83USD 594,77 -",
+      "date": "06-nov-2025",
+      "ticker": "PalantirTechnologiesInc.",
+      "isin": "US69608A1088"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione KULRTechnologyGroupInc Acquista22@3,06USD -59,32 -",
+      "date": "06-nov-2025",
+      "quantity": "22",
+      "price": "3,06",
+      "ticker": "KULRTechnologyGroupInc",
+      "isin": "US50125G3074"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione XPengInc.-ADR Acquista5@24,33USD -106,60 -",
+      "date": "06-nov-2025",
+      "quantity": "5",
+      "price": "24,33",
+      "ticker": "XPengInc.-ADR",
+      "isin": "US98422D1054"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione NVIDIACorp. Vendi-8@193,03USD 1.251,54 -",
+      "date": "06-nov-2025",
+      "ticker": "NVIDIACorp.",
+      "isin": "US67066G1040"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione SolidPowerInc. Vendi-130@8,08USD 772,38 -",
+      "date": "04-nov-2025",
+      "ticker": "SolidPowerInc.",
+      "isin": "US83422N1054"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione KULRTechnologyGroupInc Acquista20@3,38USD -59,91 -",
+      "date": "04-nov-2025",
+      "quantity": "20",
+      "price": "3,38",
+      "ticker": "KULRTechnologyGroupInc",
+      "isin": "US50125G3074"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione BroadcomInc. Vendi-2@351,94USD 585,13 -",
+      "date": "03-nov-2025",
+      "ticker": "BroadcomInc.",
+      "isin": "US11135F1012"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione Acquista7@57,51EUR -404,57 -",
+      "date": "03-nov-2025",
+      "quantity": "7",
+      "price": "57,51",
+      "ticker": "Acquista7@57,51EUR -404,57 -",
+      "isin": "IE000M7V94E1"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione SubstrateArtificialIntelligenceSA Acquista1300@0,09EUR -122,00 -",
+      "date": "03-nov-2025",
+      "quantity": "1300",
+      "price": "0,09",
+      "ticker": "SubstrateArtificialIntelligenceSA",
+      "isin": "ES0105650008"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione ArmHoldingsLimited-ADR Acquista1@169,83USD -148,75 -",
+      "date": "31-ott-2025",
+      "quantity": "1",
+      "price": "169,83",
+      "ticker": "ArmHoldingsLimited-ADR",
+      "isin": "US0420682058"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione D-WaveQuantumInc. Acquista5@36,04USD -157,32 -",
+      "date": "31-ott-2025",
+      "quantity": "5",
+      "price": "36,04",
+      "ticker": "D-WaveQuantumInc.",
+      "isin": "US26740W1099"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione VNETGroupInc.-ADR Acquista10@10,37USD -90,88 -",
+      "date": "30-ott-2025",
+      "quantity": "10",
+      "price": "10,37",
+      "ticker": "VNETGroupInc.-ADR",
+      "isin": "US90138A1034"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione Baidu.comInc.-ADR Acquista2@122,95USD -213,94 -",
+      "date": "29-ott-2025",
+      "quantity": "2",
+      "price": "122,95",
+      "ticker": "Baidu.comInc.-ADR",
+      "isin": "US0567521085"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione AlphabetInc.ClassA Acquista1@271,91USD -234,59 -",
+      "date": "29-ott-2025",
+      "quantity": "1",
+      "price": "271,91",
+      "ticker": "AlphabetInc.ClassA",
+      "isin": "US02079K3059"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione AristaNetworksInc. Acquista2@160,20USD -276,41 -",
+      "date": "27-ott-2025",
+      "quantity": "2",
+      "price": "160,20",
+      "ticker": "AristaNetworksInc.",
+      "isin": "US0404132054"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione RealbotixCorp Acquista200@0,46CAD -59,12 -",
+      "date": "22-ott-2025",
+      "quantity": "200",
+      "price": "0,46",
+      "ticker": "RealbotixCorp",
+      "isin": "CA75604K1075"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione D-WaveQuantumInc. Vendi-10@28,98USD 217,55 -",
+      "date": "22-ott-2025",
+      "ticker": "D-WaveQuantumInc.",
+      "isin": "US26740W1099"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione RealbotixCorp Vendi-2000@0,51CAD 605,25 -",
+      "date": "21-ott-2025",
+      "ticker": "RealbotixCorp",
+      "isin": "CA75604K1075"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione OracleCorp. Vendi-3@274,33USD 651,01 -",
+      "date": "16-ott-2025",
+      "ticker": "OracleCorp.",
+      "isin": "US68389X1054"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione NioInc.-ADR Vendi-50@6,29USD 268,34 -",
+      "date": "13-ott-2025",
+      "ticker": "NioInc.-ADR",
+      "isin": "US62914V1061"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione VoyagerTechnologiesInc. Acquista10@32,17USD -279,64 -",
+      "date": "13-ott-2025",
+      "quantity": "10",
+      "price": "32,17",
+      "ticker": "VoyagerTechnologiesInc.",
+      "isin": "US92892B1035"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione NokiaOyj Acquista40@4,56EUR -185,31 -",
+      "date": "13-ott-2025",
+      "quantity": "40",
+      "price": "4,56",
+      "ticker": "NokiaOyj",
+      "isin": "FI0009000681"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione PalantirTechnologiesInc. Acquista4@176,84USD -613,84 -",
+      "date": "13-ott-2025",
+      "quantity": "4",
+      "price": "176,84",
+      "ticker": "PalantirTechnologiesInc.",
+      "isin": "US69608A1088"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione BroadcomInc. Acquista2@351,16USD -609,48 -",
+      "date": "10-ott-2025",
+      "quantity": "2",
+      "price": "351,16",
+      "ticker": "BroadcomInc.",
+      "isin": "US11135F1012"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione NovoNordiskBA/S Acquista2@375,70DKK -102,22 -",
+      "date": "10-ott-2025",
+      "quantity": "2",
+      "price": "375,70",
+      "ticker": "NovoNordiskBA/S",
+      "isin": "DK0062498333"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione Amazon.comInc. Acquista2@226,08USD -392,77 -",
+      "date": "10-ott-2025",
+      "quantity": "2",
+      "price": "226,08",
+      "ticker": "Amazon.comInc.",
+      "isin": "US0231351067"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione PalantirTechnologiesInc. Vendi-4@175,37USD 561,33 -",
+      "date": "10-ott-2025",
+      "ticker": "PalantirTechnologiesInc.",
+      "isin": "US69608A1088"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione NokiaOyj Acquista40@4,54EUR -184,71 -",
+      "date": "10-ott-2025",
+      "quantity": "40",
+      "price": "4,54",
+      "ticker": "NokiaOyj",
+      "isin": "FI0009000681"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione BroadcomInc. Vendi-3@324,94USD 779,05 -",
+      "date": "10-ott-2025",
+      "ticker": "BroadcomInc.",
+      "isin": "US11135F1012"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione RealbotixCorp Vendi-700@0,60CAD 240,96 -",
+      "date": "10-ott-2025",
+      "ticker": "RealbotixCorp",
+      "isin": "CA75604K1075"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione UnitedStatesAntimonyCorp. Acquista10@12,00USD -104,88 -",
+      "date": "18-set-2025",
+      "quantity": "10",
+      "price": "12,00",
+      "ticker": "UnitedStatesAntimonyCorp.",
+      "isin": "US9115491030"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione UnitedStatesAntimonyCorp. Acquista7@5,55USD -33,97 -",
+      "date": "18-set-2025",
+      "quantity": "7",
+      "price": "5,55",
+      "ticker": "UnitedStatesAntimonyCorp.",
+      "isin": "US9115491030"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione IntelCorp. Acquista20@31,78USD -541,54 -",
+      "date": "17-set-2025",
+      "quantity": "20",
+      "price": "31,78",
+      "ticker": "IntelCorp.",
+      "isin": "US4581401001"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione NioInc.-ADR Acquista30@7,23USD -184,37 -",
+      "date": "17-set-2025",
+      "quantity": "30",
+      "price": "7,23",
+      "ticker": "NioInc.-ADR",
+      "isin": "US62914V1061"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione PalantirTechnologiesInc. Acquista3@164,44USD -418,20 -",
+      "date": "16-set-2025",
+      "quantity": "3",
+      "price": "164,44",
+      "ticker": "PalantirTechnologiesInc.",
+      "isin": "US69608A1088"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione MetaPlatformsInc. Acquista1@769,70USD -653,46 -",
+      "date": "02-set-2025",
+      "quantity": "1",
+      "price": "769,70",
+      "ticker": "MetaPlatformsInc.",
+      "isin": "US30303M1027"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione OracleCorp. Acquista1@221,39USD -191,56 -",
+      "date": "02-set-2025",
+      "quantity": "1",
+      "price": "221,39",
+      "ticker": "OracleCorp.",
+      "isin": "US68389X1054"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione BroadcomInc. Acquista1@288,34USD -249,22 -",
+      "date": "01-set-2025",
+      "quantity": "1",
+      "price": "288,34",
+      "ticker": "BroadcomInc.",
+      "isin": "US11135F1012"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione XtrackersAI&BigDataUCITSETF Acquista4@139,01EUR -558,02 -",
+      "date": "01-ago-2025",
+      "quantity": "4",
+      "price": "139,01",
+      "ticker": "XtrackersAI&BigDataUCITSETF",
+      "isin": "IE00BGV5VN51"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione FerrariNV Acquista1@374,60EUR -376,60 -",
+      "date": "31-lug-2025",
+      "quantity": "1",
+      "price": "374,60",
+      "ticker": "FerrariNV",
+      "isin": "NL0011585146"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione AlibabaGroupHoldingLtd-ADR Acquista2@117,82USD -207,95 -",
+      "date": "30-lug-2025",
+      "quantity": "2",
+      "price": "117,82",
+      "ticker": "AlibabaGroupHoldingLtd-ADR",
+      "isin": "US01609W1027"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione SolidPowerInc. Acquista50@3,27USD -143,71 -",
+      "date": "29-lug-2025",
+      "quantity": "50",
+      "price": "3,27",
+      "ticker": "SolidPowerInc.",
+      "isin": "US83422N1054"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione QuantumComputingInc Vendi-21@15,39USD 255,15 -",
+      "date": "28-lug-2025",
+      "ticker": "QuantumComputingInc",
+      "isin": "US74766W1080"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione FirstTrustNasdaqCyberSecurityUCTISETF Acquista5@40,29EUR -203,47 -",
+      "date": "28-lug-2025",
+      "quantity": "5",
+      "price": "40,29",
+      "ticker": "FirstTrustNasdaqCyberSecurityUCTISETF",
+      "isin": "IE00BF16M727"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione SolidPowerInc. Acquista50@4,56USD -197,26 -",
+      "date": "14-lug-2025",
+      "quantity": "50",
+      "price": "4,56",
+      "ticker": "SolidPowerInc.",
+      "isin": "US83422N1054"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione SolidPowerInc. Acquista50@2,43USD -105,17 -",
+      "date": "14-lug-2025",
+      "quantity": "50",
+      "price": "2,43",
+      "ticker": "SolidPowerInc.",
+      "isin": "US83422N1054"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione D-WaveQuantumInc. Acquista10@15,02USD -129,83 -",
+      "date": "07-lug-2025",
+      "quantity": "10",
+      "price": "15,02",
+      "ticker": "D-WaveQuantumInc.",
+      "isin": "US26740W1099"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione XtrackersAI&BigDataUCITSETF Acquista4@137,31EUR -551,25 -",
+      "date": "01-lug-2025",
+      "quantity": "4",
+      "price": "137,31",
+      "ticker": "XtrackersAI&BigDataUCITSETF",
+      "isin": "IE00BGV5VN51"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione UnitedStatesAntimonyCorp. Vendi-75@2,09USD 123,90 -",
+      "date": "01-lug-2025",
+      "ticker": "UnitedStatesAntimonyCorp.",
+      "isin": "US9115491030"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione AdvancedMicroDevicesInc. Vendi-2@137,00USD 220,37 -",
+      "date": "11-giu-2025",
+      "ticker": "AdvancedMicroDevicesInc.",
+      "isin": "US0079031078"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione iSharesCoreMSCIWorldUCITSETF Acquista5@100,74EUR -505,69 -",
+      "date": "27-mag-2025",
+      "quantity": "5",
+      "price": "100,74",
+      "ticker": "iSharesCoreMSCIWorldUCITSETF",
+      "isin": "IE00B4L5Y983"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione D-WaveQuantumInc. Vendi-11@17,27USD 144,39 -",
+      "date": "21-mag-2025",
+      "ticker": "D-WaveQuantumInc.",
+      "isin": "US26740W1099"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione EutelsatCommunications Acquista15@3,45EUR -53,96 -",
+      "date": "20-mag-2025",
+      "quantity": "15",
+      "price": "3,45",
+      "ticker": "EutelsatCommunications",
+      "isin": "FR0010221234"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione OculusInc. Acquista2000@0,06CAD -86,49 -",
+      "date": "16-mag-2025",
+      "quantity": "2000",
+      "price": "0,06",
+      "ticker": "OculusInc.",
+      "isin": "US67575Y1091"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione AlphabetInc.ClassA Acquista1@167,96USD -151,36 -",
+      "date": "13-mag-2025",
+      "quantity": "1",
+      "price": "167,96",
+      "ticker": "AlphabetInc.ClassA",
+      "isin": "US02079K3059"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione QualcommInc. Acquista2@151,69USD -273,63 -",
+      "date": "05-mag-2025",
+      "quantity": "2",
+      "price": "151,69",
+      "ticker": "QualcommInc.",
+      "isin": "US7475251036"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione NVIDIACorp. Acquista1@113,82USD -101,34 -",
+      "date": "05-mag-2025",
+      "quantity": "1",
+      "price": "113,82",
+      "ticker": "NVIDIACorp.",
+      "isin": "US67066G1040"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione PalantirTechnologiesInc. Acquista2@123,64USD -219,15 -",
+      "date": "02-mag-2025",
+      "quantity": "2",
+      "price": "123,64",
+      "ticker": "PalantirTechnologiesInc.",
+      "isin": "US69608A1088"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione XPengInc.-ADR Acquista5@19,83USD -88,46 -",
+      "date": "25-apr-2025",
+      "quantity": "5",
+      "price": "19,83",
+      "ticker": "XPengInc.-ADR",
+      "isin": "US98422D1054"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione iSharesCoreMSCIWorldUCITSETF Acquista5@93,05EUR -467,24 -",
+      "date": "23-apr-2025",
+      "quantity": "5",
+      "price": "93,05",
+      "ticker": "iSharesCoreMSCIWorldUCITSETF",
+      "isin": "IE00B4L5Y983"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione XPengInc.-ADR Acquista4@20,50USD -72,96 -",
+      "date": "02-apr-2025",
+      "quantity": "4",
+      "price": "20,50",
+      "ticker": "XPengInc.-ADR",
+      "isin": "US98422D1054"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione FirstTrustNasdaqCyberSecurityUCTISETF Acquista5@36,96EUR -186,78 -",
+      "date": "02-apr-2025",
+      "quantity": "5",
+      "price": "36,96",
+      "ticker": "FirstTrustNasdaqCyberSecurityUCTISETF",
+      "isin": "IE00BF16M727"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione CanopyGrowthCorp. Acquista50@1,41CAD -48,75 -",
+      "date": "01-apr-2025",
+      "quantity": "50",
+      "price": "1,41",
+      "ticker": "CanopyGrowthCorp.",
+      "isin": "CA1380357048"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione AdvancedMicroDevicesInc. Acquista2@102,09USD -190,39 -",
+      "date": "31-mar-2025",
+      "quantity": "2",
+      "price": "102,09",
+      "ticker": "AdvancedMicroDevicesInc.",
+      "isin": "US0079031078"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione D-WaveQuantumInc. Acquista10@7,53USD -70,81 -",
+      "date": "31-mar-2025",
+      "quantity": "10",
+      "price": "7,53",
+      "ticker": "D-WaveQuantumInc.",
+      "isin": "US26740W1099"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione BroadcomInc. Acquista1@163,39USD -152,60 -",
+      "date": "31-mar-2025",
+      "quantity": "1",
+      "price": "163,39",
+      "ticker": "BroadcomInc.",
+      "isin": "US11135F1012"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione OracleCorp. Acquista1@138,04USD -129,04 -",
+      "date": "27-mar-2025",
+      "quantity": "1",
+      "price": "138,04",
+      "ticker": "OracleCorp.",
+      "isin": "US68389X1054"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione RealbotixCorp Acquista600@0,33CAD -132,58 -",
+      "date": "24-mar-2025",
+      "quantity": "600",
+      "price": "0,33",
+      "ticker": "RealbotixCorp",
+      "isin": "CA75604K1075"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione XtrackersAI&BigDataUCITSETF Acquista3@127,21EUR -383,62 -",
+      "date": "20-mar-2025",
+      "quantity": "3",
+      "price": "127,21",
+      "ticker": "XtrackersAI&BigDataUCITSETF",
+      "isin": "IE00BGV5VN51"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione D-WaveQuantumInc. Vendi-19@9,20USD 149,07 -",
+      "date": "18-mar-2025",
+      "ticker": "D-WaveQuantumInc.",
+      "isin": "US26740W1099"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione XPengInc.-ADR Vendi-4@22,30USD 79,49 -",
+      "date": "12-mar-2025",
+      "ticker": "XPengInc.-ADR",
+      "isin": "US98422D1054"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione TeslaInc. Acquista1@247,01USD -228,27 -",
+      "date": "12-mar-2025",
+      "quantity": "1",
+      "price": "247,01",
+      "ticker": "TeslaInc.",
+      "isin": "US88160R1014"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione EutelsatCommunications Acquista10@6,42EUR -66,34 -",
+      "date": "10-mar-2025",
+      "quantity": "10",
+      "price": "6,42",
+      "ticker": "EutelsatCommunications",
+      "isin": "FR0010221234"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione BroadcomInc. Acquista1@189,68USD -176,26 -",
+      "date": "10-mar-2025",
+      "quantity": "1",
+      "price": "189,68",
+      "ticker": "BroadcomInc.",
+      "isin": "US11135F1012"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione IntelCorp. Acquista10@20,21USD -187,74 -",
+      "date": "10-mar-2025",
+      "quantity": "10",
+      "price": "20,21",
+      "ticker": "IntelCorp.",
+      "isin": "US4581401001"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione QuantumComputingInc Acquista20@4,89USD -91,33 -",
+      "date": "10-mar-2025",
+      "quantity": "20",
+      "price": "4,89",
+      "ticker": "QuantumComputingInc",
+      "isin": "US74766W1080"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione RealbotixCorp Acquista300@0,38CAD -75,34 -",
+      "date": "07-mar-2025",
+      "quantity": "300",
+      "price": "0,38",
+      "ticker": "RealbotixCorp",
+      "isin": "CA75604K1075"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione UnitedStatesAntimonyCorp. Acquista80@1,42USD -105,91 -",
+      "date": "03-mar-2025",
+      "quantity": "80",
+      "price": "1,42",
+      "ticker": "UnitedStatesAntimonyCorp.",
+      "isin": "US9115491030"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione Leonardo Acquista2@43,27EUR -88,63 -",
+      "date": "28-feb-2025",
+      "quantity": "2",
+      "price": "43,27",
+      "ticker": "Leonardo",
+      "isin": "IT0003856405"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione CanopyGrowthCorp. Acquista50@2,02CAD -70,83 -",
+      "date": "28-feb-2025",
+      "quantity": "50",
+      "price": "2,02",
+      "ticker": "CanopyGrowthCorp.",
+      "isin": "CA1380357048"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione NVIDIACorp. Acquista2@117,94USD -228,11 -",
+      "date": "27-feb-2025",
+      "quantity": "2",
+      "price": "117,94",
+      "ticker": "NVIDIACorp.",
+      "isin": "US67066G1040"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione KULRTechnologyGroupInc Acquista70@1,57USD -106,53 -",
+      "date": "26-feb-2025",
+      "quantity": "70",
+      "price": "1,57",
+      "ticker": "KULRTechnologyGroupInc",
+      "isin": "US50125G3074"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione RealbotixCorp Acquista300@0,41CAD -85,27 -",
+      "date": "26-feb-2025",
+      "quantity": "300",
+      "price": "0,41",
+      "ticker": "RealbotixCorp",
+      "isin": "CA75604K1075"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione PalantirTechnologiesInc. Acquista3@88,70USD -255,45 -",
+      "date": "25-feb-2025",
+      "quantity": "3",
+      "price": "88,70",
+      "ticker": "PalantirTechnologiesInc.",
+      "isin": "US69608A1088"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione DynatraceInc. Acquista3@58,58USD -168,48 -",
+      "date": "25-feb-2025",
+      "quantity": "3",
+      "price": "58,58",
+      "ticker": "DynatraceInc.",
+      "isin": "US2681501092"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione Amazon.comInc. Acquista2@212,94USD -406,94 -",
+      "date": "25-feb-2025",
+      "quantity": "2",
+      "price": "212,94",
+      "ticker": "Amazon.comInc.",
+      "isin": "US0231351067"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione DatadogInc. Acquista1@115,40USD -110,97 -",
+      "date": "27-gen-2025",
+      "quantity": "1",
+      "price": "115,40",
+      "ticker": "DatadogInc.",
+      "isin": "US23804L1035"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione NVIDIACorp. Acquista1@127,47USD -122,48 -",
+      "date": "21-gen-2025",
+      "quantity": "1",
+      "price": "127,47",
+      "ticker": "NVIDIACorp.",
+      "isin": "US67066G1040"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione PDDHoldingsInc-ADR Acquista2@108,00USD -209,28 -",
+      "date": "21-gen-2025",
+      "quantity": "2",
+      "price": "108,00",
+      "ticker": "PDDHoldingsInc-ADR",
+      "isin": "US7223041028"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione Acquista100@1,34USD -130,21 -",
+      "date": "20-gen-2025",
+      "quantity": "100",
+      "price": "1,34",
+      "ticker": "Acquista100@1,34USD -130,21 -",
+      "isin": "KYG2030P1072"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione RealbotixCorp Acquista500@0,43CAD -148,19 -",
+      "date": "14-gen-2025",
+      "quantity": "500",
+      "price": "0,43",
+      "ticker": "RealbotixCorp",
+      "isin": "CA75604K1075"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione CanopyGrowthCorp. Acquista45@3,23CAD -101,95 -",
+      "date": "14-gen-2025",
+      "quantity": "45",
+      "price": "3,23",
+      "ticker": "CanopyGrowthCorp.",
+      "isin": "CA1380357048"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione XPengInc.-ADR Acquista5@12,68USD -62,69 -",
+      "date": "13-gen-2025",
+      "quantity": "5",
+      "price": "12,68",
+      "ticker": "XPengInc.-ADR",
+      "isin": "US98422D1054"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione RealbotixCorp Acquista1000@0,65CAD -453,13 -",
+      "date": "13-gen-2025",
+      "quantity": "1000",
+      "price": "0,65",
+      "ticker": "RealbotixCorp",
+      "isin": "CA75604K1075"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione RealbotixCorp Vendi-1000@0,53CAD 349,07 -",
+      "date": "13-gen-2025",
+      "ticker": "RealbotixCorp",
+      "isin": "CA75604K1075"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione NVIDIACorp. Acquista2@132,11USD -260,42 -",
+      "date": "10-gen-2025",
+      "quantity": "2",
+      "price": "132,11",
+      "ticker": "NVIDIACorp.",
+      "isin": "US67066G1040"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione RealbotixCorp Acquista1000@0,36CAD -254,86 -",
+      "date": "10-gen-2025",
+      "quantity": "1000",
+      "price": "0,36",
+      "ticker": "RealbotixCorp",
+      "isin": "CA75604K1075"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione D-WaveQuantumInc. Acquista20@6,32USD -124,58 -",
+      "date": "09-gen-2025",
+      "quantity": "20",
+      "price": "6,32",
+      "ticker": "D-WaveQuantumInc.",
+      "isin": "US26740W1099"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione OculusInc. Acquista1500@0,09CAD -101,32 -",
+      "date": "08-gen-2025",
+      "quantity": "1500",
+      "price": "0,09",
+      "ticker": "OculusInc.",
+      "isin": "US67575Y1091"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione D-WaveQuantumInc. Vendi-22@6,33USD 133,98 -",
+      "date": "07-gen-2025",
+      "ticker": "D-WaveQuantumInc.",
+      "isin": "US26740W1099"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione PayPalHoldingsInc. Acquista3@89,53USD -259,96 -",
+      "date": "07-gen-2025",
+      "quantity": "3",
+      "price": "89,53",
+      "ticker": "PayPalHoldingsInc.",
+      "isin": "US70450Y1038"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione OculusInc. Acquista3500@0,12CAD -287,65 -",
+      "date": "06-gen-2025",
+      "quantity": "3500",
+      "price": "0,12",
+      "ticker": "OculusInc.",
+      "isin": "US67575Y1091"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione NVIDIACorp. Acquista2@148,66USD -288,02 -",
+      "date": "06-gen-2025",
+      "quantity": "2",
+      "price": "148,66",
+      "ticker": "NVIDIACorp.",
+      "isin": "US67066G1040"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione MicrosoftCorp. Acquista1@428,06USD -414,25 -",
+      "date": "06-gen-2025",
+      "quantity": "1",
+      "price": "428,06",
+      "ticker": "MicrosoftCorp.",
+      "isin": "US5949181045"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione NioInc.-ADR Acquista20@4,82USD -94,10 -",
+      "date": "06-gen-2025",
+      "quantity": "20",
+      "price": "4,82",
+      "ticker": "NioInc.-ADR",
+      "isin": "US62914V1061"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione NovoNordiskBA/S Acquista2@631,50DKK -171,10 -",
+      "date": "23-dic-2024",
+      "quantity": "2",
+      "price": "631,50",
+      "ticker": "NovoNordiskBA/S",
+      "isin": "DK0062498333"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione D-WaveQuantumInc. Acquista20@7,60USD -147,33 -",
+      "date": "23-dic-2024",
+      "quantity": "20",
+      "price": "7,60",
+      "ticker": "D-WaveQuantumInc.",
+      "isin": "US26740W1099"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione NVIDIACorp. Acquista2@136,25USD -263,59 -",
+      "date": "23-dic-2024",
+      "quantity": "2",
+      "price": "136,25",
+      "ticker": "NVIDIACorp.",
+      "isin": "US67066G1040"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione QuantumComputingInc Acquista10@17,49USD -169,58 -",
+      "date": "23-dic-2024",
+      "quantity": "10",
+      "price": "17,49",
+      "ticker": "QuantumComputingInc",
+      "isin": "US74766W1080"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione DatadogInc. Acquista1@149,43USD -145,03 -",
+      "date": "23-dic-2024",
+      "quantity": "1",
+      "price": "149,43",
+      "ticker": "DatadogInc.",
+      "isin": "US23804L1035"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione BroadcomInc. Acquista2@232,47USD -448,50 -",
+      "date": "19-dic-2024",
+      "quantity": "2",
+      "price": "232,47",
+      "ticker": "BroadcomInc.",
+      "isin": "US11135F1012"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione QuantumComputingInc Vendi-19@21,26USD 346,62 -",
+      "date": "19-dic-2024",
+      "ticker": "QuantumComputingInc",
+      "isin": "US74766W1080"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione D-WaveQuantumInc. Vendi-38@8,21USD 259,64 -",
+      "date": "19-dic-2024",
+      "ticker": "D-WaveQuantumInc.",
+      "isin": "US26740W1099"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione StrategyInc. Vendi-1@328,85USD 315,47 -",
+      "date": "18-dic-2024",
+      "ticker": "StrategyInc.",
+      "isin": "US5949724083"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione OracleCorp. Acquista2@169,53USD -325,00 -",
+      "date": "16-dic-2024",
+      "quantity": "2",
+      "price": "169,53",
+      "ticker": "OracleCorp.",
+      "isin": "US68389X1054"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione QuantumComputingInc Acquista20@11,10USD -212,70 -",
+      "date": "13-dic-2024",
+      "quantity": "20",
+      "price": "11,10",
+      "ticker": "QuantumComputingInc",
+      "isin": "US74766W1080"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione D-WaveQuantumInc. Acquista40@4,10USD -157,71 -",
+      "date": "10-dic-2024",
+      "quantity": "40",
+      "price": "4,10",
+      "ticker": "D-WaveQuantumInc.",
+      "isin": "US26740W1099"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione StrategyInc. Acquista1@362,00USD -346,44 -",
+      "date": "09-dic-2024",
+      "quantity": "1",
+      "price": "362,00",
+      "ticker": "StrategyInc.",
+      "isin": "US5949724083"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione D-WaveQuantumInc. Vendi-155@4,80USD 652,10 -",
+      "date": "06-dic-2024",
+      "ticker": "D-WaveQuantumInc.",
+      "isin": "US26740W1099"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione QuantumScapeCorp. Acquista20@4,93USD -94,48 -",
+      "date": "06-dic-2024",
+      "quantity": "20",
+      "price": "4,93",
+      "ticker": "QuantumScapeCorp.",
+      "isin": "US74767V1098"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione D-WaveQuantumInc. Acquista65@3,98USD -246,43 -",
+      "date": "04-dic-2024",
+      "quantity": "65",
+      "price": "3,98",
+      "ticker": "D-WaveQuantumInc.",
+      "isin": "US26740W1099"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione D-WaveQuantumInc. Acquista40@3,11USD -119,80 -",
+      "date": "04-dic-2024",
+      "quantity": "40",
+      "price": "3,11",
+      "ticker": "D-WaveQuantumInc.",
+      "isin": "US26740W1099"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione D-WaveQuantumInc. Acquista50@3,07USD -147,70 -",
+      "date": "02-dic-2024",
+      "quantity": "50",
+      "price": "3,07",
+      "ticker": "D-WaveQuantumInc.",
+      "isin": "US26740W1099"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione JobyAviationIncorporation Acquista20@8,97USD -172,34 -",
+      "date": "02-dic-2024",
+      "quantity": "20",
+      "price": "8,97",
+      "ticker": "JobyAviationIncorporation",
+      "isin": "KYG651631007"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione **SeeWMT:xnas(WalmartInc.) Acquista3@92,82USD -266,99 -",
+      "date": "28-nov-2024",
+      "quantity": "3",
+      "price": "92,82",
+      "ticker": "**SeeWMT:xnas(WalmartInc.)",
+      "isin": "US9311421039"
+    },
+    {
+      "type": "TRADING",
+      "raw_anchor": "Contrattazione Webuild Acquista100@2,65EUR -267,06 -",
+      "date": "26-nov-2024",
+      "quantity": "100",
+      "price": "2,65",
+      "ticker": "Webuild",
+      "isin": "IT0003865570"
+    }
+  ]
+}

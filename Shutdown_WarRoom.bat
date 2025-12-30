@@ -21,14 +21,12 @@ taskkill /F /FI "WINDOWTITLE eq WarRoom_Frontend*" /T >nul 2>&1
 if %errorlevel%==0 ( echo    - Frontend Stopped. ) else ( echo    - Frontend already clean. )
 
 echo [3/4] 🔪 Killing Backend (Python/Uvicorn)...
-:: Kill the Python process
-taskkill /F /IM uvicorn.exe /T >nul 2>&1
-:: Kill the specific window (cmd.exe holding it open)
+:: Kill via Window Title
 taskkill /F /FI "WINDOWTITLE eq WarRoom_Backend*" /T >nul 2>&1
 
-:: Robust Port 8000 Kill using PowerShell
-powershell -Command "Get-NetTCPConnection -LocalPort 8000 -ErrorAction SilentlyContinue | Select-Object -ExpandProperty OwningProcess | Select-Object -Unique | ForEach-Object { Stop-Process -Id $_ -Force -ErrorAction SilentlyContinue }"
-echo    - Cleanup of port 8000 complete.
+:: Robust Port 8201 Kill using PowerShell (kills the actual process listening)
+powershell -Command "Get-NetTCPConnection -LocalPort 8201 -ErrorAction SilentlyContinue | Select-Object -ExpandProperty OwningProcess | Select-Object -Unique | ForEach-Object { Stop-Process -Id $_ -Force -ErrorAction SilentlyContinue }"
+echo    - Cleanup of port 8201 complete.
 
 echo [4/4] 🦙 Stopping Ollama...
 :: Ollama in WSL is tricky to kill from CMD, usually we leave it or kill via wsl

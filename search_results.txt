@@ -1,0 +1,377 @@
+Total pages: 83
+
+--- PAGE 10 contains 'Deposito' ---
+
+[Context around line 16]:
+  L13: Tassodiconversione IDcontrattazione ISIN
+  L14: 0,616359 6511202189 US67575Y1091
+  L15: 10-dic-2025 2.000,23 2.160,90
+  L16: Trasferimentodiliquidità Deposito 2.000,00 -
+  L17: Commento DepositType Tassodiconversione Importoincontanti
+  L18: /OCMT/EUR2000,/19807401 External 1,000000 2.000,00EUR
+  L19: BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+  L20: /Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+  L21: Pagina10di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+
+--- PAGE 22 contains 'Deposito' ---
+
+[Context around line 11]:
+  L8: -1,78EUR 0,861972 6471911729 US88160R1014
+  L9: 06-nov-2025 2.453,89 3.371,43
+  L10: Operazionesulcapitale Baidu.comInc.-ADR Altroevento -0,03 -
+  L11: DepositoryCharges Transactiondescription ISIN
+  L12: -0,03EUR IDEvento9441077 US0567521085
+  L13: Operazionesulcapitale NokiaOyj Dividendoincontanti 1,15 -
+  L14: Quantitàidonea Dividendoperazione Tassodiconversione Dividendi-ritenutaallafonte
+  L15: 80 0,03EUR 1,000000 -0,84EUR
+  L16: Dividendi-ritenutaallafonte(%) Dividendi-ritenutaitaliana Dividendi-ritenutaitaliana(%) CorporateActions-Dividendi
+  L17: 35% -0,41EUR 26% 2,40EUR
+  L18: Transactiondescription ISIN
+
+--- PAGE 31 contains 'Deposito' ---
+
+[Context around line 15]:
+  L12: Tassodiconversione IDcontrattazione ISIN
+  L13: 0,866574 6438781962 US11135F1012
+  L14: 10-ott-2025 1.788,20 1.911,45
+  L15: TransazioniinContanti Impostadibollosuldepositotitoli -8,56 -
+  L16: Tassodiconversione Impostadibollosuldepositotitoli Commento
+  L17: 1,000000 -8,56EUR Impostadibollodossiertitoli-Q32025
+  L18: BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+  L19: /Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+  L20: Pagina31di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+
+[Context around line 16]:
+  L13: 0,866574 6438781962 US11135F1012
+  L14: 10-ott-2025 1.788,20 1.911,45
+  L15: TransazioniinContanti Impostadibollosuldepositotitoli -8,56 -
+  L16: Tassodiconversione Impostadibollosuldepositotitoli Commento
+  L17: 1,000000 -8,56EUR Impostadibollodossiertitoli-Q32025
+  L18: BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+  L19: /Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+  L20: Pagina31di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+
+--- PAGE 32 contains 'Deposito' ---
+
+[Context around line 19]:
+  L16: 602,57EUR -0,86EUR -40,38EUR -1,51
+  L17: Costototale Tassodiconversione IDcontrattazione ISIN
+  L18: -2,37EUR 0,858982 6437644437 US69608A1088
+  L19: Trasferimentodiliquidità Deposito 1.000,00 -
+  L20: Commento DepositType Tassodiconversione Importoincontanti
+  L21: /OCMT/EUR1000,/19807401 External 1,000000 1.000,00EUR
+  L22: BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+  L23: /Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+  L24: Pagina32di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+
+--- PAGE 34 contains 'Deposito' ---
+
+[Context around line 11]:
+  L8: 0,866727 6436286499 US9115491030
+  L9: 06-ott-2025 -0,17 14,06
+  L10: Operazionesulcapitale XPengInc.-ADR Altroevento -0,17 -
+  L11: DepositoryCharges Transactiondescription ISIN
+  L12: -0,17EUR IDEvento9398674 US98422D1054
+  L13: 02-ott-2025 0,05 14,23
+  L14: Operazionesulcapitale NVIDIACorp. Dividendoincontanti 0,05 -
+  L15: Quantitàidonea Dividendoperazione Tassodiconversione CorporateActions-Dividendi
+  L16: 10 0,01USD 0,852025 0,09EUR
+  L17: Dividendi-ritenutaallafonte Dividendi-ritenutaallafonte(%) Dividendi-ritenutaitaliana Dividendi-ritenutaitaliana(%)
+  L18: -0,02EUR 15% -0,02EUR 26%
+
+--- PAGE 37 contains 'Deposito' ---
+
+[Context around line 4]:
+  L1: Periododirendicontazione
+  L2: 26-nov-2024a19-dic-2025
+  L3: Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+  L4: Trasferimentodiliquidità Deposito 500,00 -
+  L5: Commento DepositType Tassodiconversione Importoincontanti
+  L6: /OCMT/EUR500,/19807401 External 1,000000 500,00EUR
+  L7: 17-set-2025 -602,57 86,86
+  L8: Contrattazione NioInc.-ADR Acquista30@7,23USD -184,37 -
+  L9: Commissione Valorenegoziato Costodiconversionevaluta Costototale
+  L10: -0,85EUR -183,52EUR -0,46 -1,30EUR
+  L11: Tassodiconversione IDcontrattazione ISIN
+
+[Context around line 20]:
+  L17: 0,846002 6405329691 US69608A1088
+  L18: 16-set-2025 -653,49 689,43
+  L19: Operazionesulcapitale PDDHoldingsInc-ADR Altroevento -0,03 -
+  L20: DepositoryCharges Transactiondescription ISIN
+  L21: -0,03EUR IDEvento9427180 US7223041028
+  L22: BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+  L23: /Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+  L24: Pagina37di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+
+--- PAGE 41 contains 'Deposito' ---
+
+[Context around line 4]:
+  L1: Periododirendicontazione
+  L2: 26-nov-2024a19-dic-2025
+  L3: Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+  L4: Trasferimentodiliquidità Deposito 2.000,00 -
+  L5: Commento DepositType Tassodiconversione Importoincontanti
+  L6: /OCMT/EUR2000,/19807401 External 1,000000 2.000,00EUR
+  L7: 19-ago-2025 0,54 340,77
+  L8: Operazionesulcapitale NovoNordiskBA/S Dividendoincontanti 0,54 -
+  L9: Quantitàidonea Dividendoperazione Tassodiconversione Dividendi-ritenutaitaliana
+  L10: 2 3,75DKK 0,133977 -0,19EUR
+  L11: Dividendi-ritenutaitaliana(%) Dividendi-ritenutaallafonte Dividendi-ritenutaallafonte(%) CorporateActions-Dividendi
+
+--- PAGE 44 contains 'Deposito' ---
+
+[Context around line 16]:
+  L13: Tassodiconversione IDcontrattazione ISIN
+  L14: 0,858632 6334981274 US26740W1099
+  L15: 10-lug-2025 -5,44 1.448,27
+  L16: TransazioniinContanti Impostadibollosuldepositotitoli -5,44 -
+  L17: Tassodiconversione Impostadibollosuldepositotitoli Commento
+  L18: 1,000000 -5,44EUR ImpostadibollodossiertitoliQ22025
+  L19: 07-lug-2025 -551,25 1.453,71
+  L20: BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+  L21: /Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+  L22: Pagina44di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+
+[Context around line 17]:
+  L14: 0,858632 6334981274 US26740W1099
+  L15: 10-lug-2025 -5,44 1.448,27
+  L16: TransazioniinContanti Impostadibollosuldepositotitoli -5,44 -
+  L17: Tassodiconversione Impostadibollosuldepositotitoli Commento
+  L18: 1,000000 -5,44EUR ImpostadibollodossiertitoliQ22025
+  L19: 07-lug-2025 -551,25 1.453,71
+  L20: BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+  L21: /Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+  L22: Pagina44di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+
+--- PAGE 49 contains 'Deposito' ---
+
+[Context around line 18]:
+  L15: IDcontrattazione ISIN
+  L16: 6301506862 IE00B4L5Y983
+  L17: 10-giu-2025 2.000,00 2.159,38
+  L18: Trasferimentodiliquidità Deposito 2.000,00 -
+  L19: Commento DepositType Tassodiconversione Importoincontanti
+  L20: /OCMT/EUR2000,/19807401 External 1,000000 2.000,00EUR
+  L21: 27-mag-2025 144,72 180,94
+  L22: BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+  L23: /Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+  L24: Pagina49di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+
+--- PAGE 54 contains 'Deposito' ---
+
+[Context around line 16]:
+  L13: -72,08EUR -0,88EUR -0,18 -1,06EUR
+  L14: Tassodiconversione IDcontrattazione ISIN
+  L15: 0,879032 6249241556 US98422D1054
+  L16: Trasferimentodiliquidità Deposito 1.500,00 -
+  L17: Commento DepositType Tassodiconversione Importoincontanti
+  L18: /OCMT/EUR1500,/19807401 External 1,000000 1.500,00EUR
+  L19: 10-apr-2025 -6,82 22,58
+  L20: BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+  L21: /Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+  L22: Pagina54di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+
+--- PAGE 55 contains 'Deposito' ---
+
+[Context around line 4]:
+  L1: Periododirendicontazione
+  L2: 26-nov-2024a19-dic-2025
+  L3: Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+  L4: TransazioniinContanti Impostadibollosuldepositotitoli -3,41 -
+  L5: Commento
+  L6: Tassodiconversione Impostadibollosuldepositotitoli
+  L7: RiaddebitoimpostadibollodossiertitoliQ1
+  L8: 1,000000 -3,41EUR
+  L9: 2025
+  L10: TransazioniinContanti Impostadibollosuldepositotitoli -3,41 -
+  L11: Commento
+
+[Context around line 6]:
+  L3: Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+  L4: TransazioniinContanti Impostadibollosuldepositotitoli -3,41 -
+  L5: Commento
+  L6: Tassodiconversione Impostadibollosuldepositotitoli
+  L7: RiaddebitoimpostadibollodossiertitoliQ1
+  L8: 1,000000 -3,41EUR
+  L9: 2025
+  L10: TransazioniinContanti Impostadibollosuldepositotitoli -3,41 -
+  L11: Commento
+  L12: Tassodiconversione Impostadibollosuldepositotitoli
+  L13: StornoimpostadibollodossiertitoliQ1
+
+[Context around line 10]:
+  L7: RiaddebitoimpostadibollodossiertitoliQ1
+  L8: 1,000000 -3,41EUR
+  L9: 2025
+  L10: TransazioniinContanti Impostadibollosuldepositotitoli -3,41 -
+  L11: Commento
+  L12: Tassodiconversione Impostadibollosuldepositotitoli
+  L13: StornoimpostadibollodossiertitoliQ1
+  L14: 1,000000 -3,41EUR
+  L15: 2025
+  L16: 09-apr-2025 3,41 29,40
+  L17: TransazioniinContanti Impostadibollosuldepositotitoli 3,41 -
+
+[Context around line 12]:
+  L9: 2025
+  L10: TransazioniinContanti Impostadibollosuldepositotitoli -3,41 -
+  L11: Commento
+  L12: Tassodiconversione Impostadibollosuldepositotitoli
+  L13: StornoimpostadibollodossiertitoliQ1
+  L14: 1,000000 -3,41EUR
+  L15: 2025
+  L16: 09-apr-2025 3,41 29,40
+  L17: TransazioniinContanti Impostadibollosuldepositotitoli 3,41 -
+  L18: Tassodiconversione Impostadibollosuldepositotitoli Commento
+  L19: 1,000000 3,41EUR ImpostadibollodossiertitoliQ12025
+
+[Context around line 17]:
+  L14: 1,000000 -3,41EUR
+  L15: 2025
+  L16: 09-apr-2025 3,41 29,40
+  L17: TransazioniinContanti Impostadibollosuldepositotitoli 3,41 -
+  L18: Tassodiconversione Impostadibollosuldepositotitoli Commento
+  L19: 1,000000 3,41EUR ImpostadibollodossiertitoliQ12025
+  L20: 07-apr-2025 0,34 25,99
+  L21: Operazionesulcapitale **SeeWMT:xnas(WalmartInc.) Dividendoincontanti 0,34 -
+  L22: Quantitàidonea Dividendoperazione Tassodiconversione Dividendi-ritenutaallafonte
+  L23: 3 0,23USD 0,912425 -0,19EUR
+  L24: Dividendi-ritenutaallafonte(%) CorporateActions-Dividendi Dividendi-ritenutaitaliana Dividendi-ritenutaitaliana(%)
+
+[Context around line 18]:
+  L15: 2025
+  L16: 09-apr-2025 3,41 29,40
+  L17: TransazioniinContanti Impostadibollosuldepositotitoli 3,41 -
+  L18: Tassodiconversione Impostadibollosuldepositotitoli Commento
+  L19: 1,000000 3,41EUR ImpostadibollodossiertitoliQ12025
+  L20: 07-apr-2025 0,34 25,99
+  L21: Operazionesulcapitale **SeeWMT:xnas(WalmartInc.) Dividendoincontanti 0,34 -
+  L22: Quantitàidonea Dividendoperazione Tassodiconversione Dividendi-ritenutaallafonte
+  L23: 3 0,23USD 0,912425 -0,19EUR
+  L24: Dividendi-ritenutaallafonte(%) CorporateActions-Dividendi Dividendi-ritenutaitaliana Dividendi-ritenutaitaliana(%)
+  L25: 30% 0,65EUR -0,12EUR 26%
+
+--- PAGE 59 contains 'Deposito' ---
+
+[Context around line 16]:
+  L13: Tassodiconversione IDcontrattazione ISIN
+  L14: 0,649906 6214331538 CA75604K1075
+  L15: 24-mar-2025 616,38 934,58
+  L16: Trasferimentodiliquidità Deposito 1.000,00 -
+  L17: Commento DepositType Tassodiconversione Importoincontanti
+  L18: /OCMT/EUR1000,/19807401 External 1,000000 1.000,00EUR
+  L19: BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+  L20: /Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+  L21: Pagina59di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+
+--- PAGE 64 contains 'Deposito' ---
+
+[Context around line 9]:
+  L6: -0,93EUR -104,98EUR -0,27 -1,19EUR
+  L7: Tassodiconversione IDcontrattazione ISIN
+  L8: 0,925197 6193751067 US9115491030
+  L9: Trasferimentodiliquidità Deposito 1.000,00 -
+  L10: Commento DepositType Tassodiconversione Importoincontanti
+  L11: 19807401/BN/BGSAXOSIMS.P.A. External 1,000000 1.000,00EUR
+  L12: 03-mar-2025 -88,63 20,44
+  L13: Contrattazione Leonardo Acquista2@43,27EUR -88,63 -
+  L14: Commissione Valorenegoziato Tassazionetransazionifinanziarie(Italia) Costototale
+  L15: -2,00EUR -86,54EUR -0,09EUR -2,09EUR
+  L16: Tassodiconversione IDcontrattazione ISIN
+
+--- PAGE 67 contains 'Deposito' ---
+
+[Context around line 15]:
+  L12: Tassodiconversione IDcontrattazione ISIN
+  L13: 0,953403 6176701589 US23804L1035
+  L14: 24-feb-2025 1.500,00 1.541,65
+  L15: Trasferimentodiliquidità Deposito 1.500,00 -
+  L16: Commento DepositType Tassodiconversione Importoincontanti
+  L17: /OCMT/EUR1500,/19807401 External 1,000000 1.500,00EUR
+  L18: 27-gen-2025 -122,48 41,65
+  L19: BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+  L20: /Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+  L21: Pagina67di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+
+--- PAGE 73 contains 'Deposito' ---
+
+[Context around line 14]:
+  L11: -270,83EUR -16,82EUR -0,71 -17,49EUR
+  L12: Tassodiconversione IDcontrattazione ISIN
+  L13: 0,672873 6121057078 US67575Y1091
+  L14: Trasferimentodiliquidità Deposito 2.000,00 -
+  L15: Commento DepositType Tassodiconversione Importoincontanti
+  L16: 19807401/BN/BGSAXOSIMS.P.A. External 1,000000 2.000,00EUR
+  L17: 06-gen-2025 -967,16 74,92
+  L18: BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+  L19: /Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+  L20: Pagina73di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+
+--- PAGE 75 contains 'Deposito' ---
+
+[Context around line 15]:
+  L12: Tassodiconversione IDcontrattazione ISIN
+  L13: 0,134407 6118789802 DK0062498333
+  L14: 03-gen-2025 -1,07 1.042,08
+  L15: TransazioniinContanti Impostadibollosuldepositotitoli -1,07 -
+  L16: Tassodiconversione Impostadibollosuldepositotitoli Commento
+  L17: 1,000000 -1,07EUR ImpostadibollodossiertitoliQ42024
+  L18: 24-dic-2024 1.000,00 1.043,15
+  L19: Trasferimentodiliquidità Deposito 1.000,00 -
+  L20: Commento DepositType Tassodiconversione Importoincontanti
+  L21: 19807401/BN/BGSAXOSIMS.P.A. External 1,000000 1.000,00EUR
+  L22: BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+
+[Context around line 16]:
+  L13: 0,134407 6118789802 DK0062498333
+  L14: 03-gen-2025 -1,07 1.042,08
+  L15: TransazioniinContanti Impostadibollosuldepositotitoli -1,07 -
+  L16: Tassodiconversione Impostadibollosuldepositotitoli Commento
+  L17: 1,000000 -1,07EUR ImpostadibollodossiertitoliQ42024
+  L18: 24-dic-2024 1.000,00 1.043,15
+  L19: Trasferimentodiliquidità Deposito 1.000,00 -
+  L20: Commento DepositType Tassodiconversione Importoincontanti
+  L21: 19807401/BN/BGSAXOSIMS.P.A. External 1,000000 1.000,00EUR
+  L22: BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+  L23: /Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+
+[Context around line 19]:
+  L16: Tassodiconversione Impostadibollosuldepositotitoli Commento
+  L17: 1,000000 -1,07EUR ImpostadibollodossiertitoliQ42024
+  L18: 24-dic-2024 1.000,00 1.043,15
+  L19: Trasferimentodiliquidità Deposito 1.000,00 -
+  L20: Commento DepositType Tassodiconversione Importoincontanti
+  L21: 19807401/BN/BGSAXOSIMS.P.A. External 1,000000 1.000,00EUR
+  L22: BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+  L23: /Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+  L24: Pagina75di83 Conto/i:65500/100461E00 Generatail:19-dic-2025
+
+--- PAGE 80 contains 'Deposito' ---
+
+[Context around line 13]:
+  L10: ISIN
+  L11: US26740W1099
+  L12: 06-dic-2024 659,09 685,20
+  L13: Trasferimentodiliquidità Deposito 1.000,00 -
+  L14: Commento DepositType Tassodiconversione Importoincontanti
+  L15: 19807401/BN/BGSAXOSIMS.P.A. External 1,000000 1.000,00EUR
+  L16: Contrattazione QuantumScapeCorp. Acquista20@4,93USD -94,48 -
+  L17: Commissione Valorenegoziato Costodiconversionevaluta Costototale
+  L18: -0,95EUR -93,53EUR -0,23 -1,18EUR
+  L19: Tassodiconversione IDcontrattazione ISIN
+  L20: 0,949282 6095185899 US74767V1098
+
+--- PAGE 83 contains 'Deposito' ---
+
+[Context around line 4]:
+  L1: Periododirendicontazione
+  L2: 26-nov-2024a19-dic-2025
+  L3: Tipo Nomeprodotto Tipo Importocontabilizzato Contanti
+  L4: Trasferimentodiliquidità Deposito 1.000,00 -
+  L5: Commento DepositType Tassodiconversione Importoincontanti
+  L6: 19807401/BN/BGSAXOSIMS.P.A. External 1,000000 1.000,00EUR
+  L7: Impostadibolloassoltainmodovirtualeexart15delDPRn.642/1972suautorizzazionen.188188/2024del12/06/2024rilasciatadall’UfficioTerritorialediMilano2
+  L8: BGSAXOSIM-B2C1Cash/CorsoEuropa22 /20122Milan/Italy RobertoGuareschi Periododirendicontazione
+  L9: /Email:supporto@bgsaxo.it Valuta:EUR 26-nov-2024-19-dic-2025
+  L10: Pagina83di83 Conto/i:65500/100461E00 Generatail:19-dic-2025

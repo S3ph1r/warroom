@@ -957,6 +957,15 @@ def get_latest_snapshot_endpoint():
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+@app.get("/api/analytics/invested-history")
+def get_invested_history_endpoint():
+    """Get historical net invested capital."""
+    try:
+        from services.analytics_service import get_invested_capital_history
+        return get_invested_capital_history()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
 
 # --- REPORTS ---
 

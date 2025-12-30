@@ -88,39 +88,77 @@ def ingest_file(session: Session, broker: str, filepath: str):
     return count
 
 def rebuild_holdings(session: Session):
-    print("Rebuilding Holdings from Transactions (Python Logic)...")
+    """
+    Rebuild Holdings from Transactions.
+    BUY operations ADD quantity, SELL operations SUBTRACT quantity.
+    Only holdings with positive net quantity are created.
+    """
+    print("Rebuilding Holdings from Transactions...")
     
     # Clear Holdings
     session.execute(text("TRUNCATE TABLE holdings"))
     
-    # Query Aggregates
-    # We query all transactions and aggregate in memory to ensure full control
-    # or use simple Group By query
-    rows = session.execute(text("SELECT broker, ticker, SUM(quantity) as net_qty, MAX(isin) as isin FROM transactions GROUP BY broker, ticker HAVING SUM(quantity) <> 0")).fetchall()
+    # Query with proper BUY/SELL sign handling
+    # BUY, DEPOSIT, TRANSFER_IN, STAKING_REWARD, DIVIDEND -> positive
+    # SELL, WITHDRAW, TRANSFER_OUT -> negative
+    query = text("""
+        SELECT 
+            broker, 
+            ticker, 
+            SUM(
+                CASE 
+                    WHEN UPPER(operation) IN ('BUY', 'DEPOSIT', 'TRANSFER_IN', 'STAKING_REWARD', 
+                                               'DIVIDEND', 'INTEREST', 'REWARD', 'AIRDROP', 
+                                               'CASHBACK', 'EXCHANGE_IN') THEN quantity
+                    WHEN UPPER(operation) IN ('SELL', 'WITHDRAW', 'TRANSFER_OUT', 'EXCHANGE_OUT',
+                                               'FEE', 'TAX') THEN -quantity
+                    ELSE quantity  -- Default: treat as positive (BUY-like)
+                END
+            ) as net_qty, 
+            MAX(isin) as isin
+        FROM transactions 
+        GROUP BY broker, ticker 
+        HAVING SUM(
+            CASE 
+                WHEN UPPER(operation) IN ('BUY', 'DEPOSIT', 'TRANSFER_IN', 'STAKING_REWARD', 
+                                           'DIVIDEND', 'INTEREST', 'REWARD', 'AIRDROP', 
+                                           'CASHBACK', 'EXCHANGE_IN') THEN quantity
+                WHEN UPPER(operation) IN ('SELL', 'WITHDRAW', 'TRANSFER_OUT', 'EXCHANGE_OUT',
+                                           'FEE', 'TAX') THEN -quantity
+                ELSE quantity
+            END
+        ) > 0
+    """)
+    
+    rows = session.execute(query).fetchall()
     
     count = 0
     for r in rows:
         broker = r[0]
         ticker = r[1]
-        qty = Decimal(r[2])
+        qty = Decimal(str(r[2]))
         isin = r[3]
+        
+        # Skip if quantity is zero or negative (fully sold)
+        if qty <= 0:
+            continue
         
         # Create Holding
         h = Holding(
             broker=broker,
             ticker=ticker,
             isin=isin,
-            name=ticker, # Standardize later
+            name=ticker,  # Will be enriched later
             asset_type="UNKNOWN",
             quantity=qty,
             current_value=Decimal("0"),
-            currency="EUR" # Default
+            currency="EUR"
         )
         session.add(h)
         count += 1
         
     session.commit()
-    print(f"Created {count} Holdings.")
+    print(f"Created {count} Holdings (positive quantities only).")
 
 def main():
     print("=== UNIVERSAL INGESTION START ===")
