@@ -1,0 +1,46 @@
+from pathlib import Path
+import sys
+from decimal import Decimal
+import pandas as pd
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from db.database import SessionLocal
+from db.models import Holding
+
+pd.set_option('display.max_rows', None)
+pd.set_option('display.max_columns', None)
+pd.set_option('display.width', 1000)
+
+def show_holdings():
+    db = SessionLocal()
+    holdings = db.query(Holding).filter(Holding.broker == "REVOLUT").all()
+    
+    data = []
+    for h in holdings:
+        data.append({
+            "Ticker": h.ticker,
+            "Name": h.name,
+            "Type": h.asset_type,
+            "Qty": float(h.quantity),
+            "AvgPrice": float(h.purchase_price) if h.purchase_price else 0.0,
+            "Value (EUR)": float(h.current_value),
+            "Currency": h.currency
+        })
+    
+    db.close()
+    
+    if not data:
+        print("No holdings found for REVOLUT.")
+        return
+
+    df = pd.DataFrame(data)
+    # Sort by Value desc
+    df = df.sort_values(by="Value (EUR)", ascending=False)
+    
+    print(f"\n=== REVOLUT HOLDINGS ({len(df)}) ===")
+    print(df.to_string(index=False))
+    print(f"\nTOTAL VALUE: €{df['Value (EUR)'].sum():,.2f}")
+
+if __name__ == "__main__":
+    show_holdings()

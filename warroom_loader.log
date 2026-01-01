@@ -1,0 +1,242 @@
+2026-01-01 15:07:41,497 | INFO | ============================================================
+2026-01-01 15:07:41,498 | INFO | 💾 SMART LOADER - Phase 4
+2026-01-01 15:07:41,498 | INFO | ============================================================
+2026-01-01 15:07:41,502 | INFO | 📂 Loading 611 rows from extraction_results.json...
+2026-01-01 15:07:45,626 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2019-12-28', 'symbol': '', 'description': 'CASH TOP-UP', 'operation': 'DEPOSIT', 'quantity': 0.0, 'price': 0.0, 'amount': 50.0, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2019-12-28T00:49:41.265169Z', 'symbol': '', 'operation_type': 'CASH TOP-UP', 'quantity': '', 'price': '', 'total_amount': 'USD 50', 'currency': 'USD', 'balance': '1.1235'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:07:49,716 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2022-07-19', 'symbol': 'XPOA', 'description': 'BUY - MARKET', 'operation': 'BUY', 'quantity': 3.00902708, 'price': 9.97, 'amount': 30.0, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2022-07-19T13:31:37.671484Z', 'symbol': 'XPOA', 'operation_type': 'BUY - MARKET', 'quantity': '3.00902708', 'price': 'USD 9.97', 'total_amount': 'USD 30', 'currency': 'USD', 'balance': '1.0247'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:07:53,815 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2022-07-25', 'symbol': '', 'description': 'CASH TOP-UP', 'operation': 'DEPOSIT', 'quantity': 0.0, 'price': 0.0, 'amount': 250.0, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2022-07-25T17:33:49.017719Z', 'symbol': '', 'operation_type': 'CASH TOP-UP', 'quantity': '', 'price': '', 'total_amount': 'USD 250', 'currency': 'USD', 'balance': '1.0227'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:07:57,895 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2022-07-25', 'symbol': 'AMZN', 'description': 'BUY - MARKET', 'operation': 'BUY', 'quantity': 2.0, 'price': 121.14, 'amount': 243.3, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2022-07-25T17:34:32.364501Z', 'symbol': 'AMZN', 'operation_type': 'BUY - MARKET', 'quantity': '2', 'price': 'USD 121.14', 'total_amount': 'USD 243.30', 'currency': 'USD', 'balance': '1.0227'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:08:01,942 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2022-07-31', 'symbol': '', 'description': 'CASH TOP-UP', 'operation': 'DEPOSIT', 'quantity': 0.0, 'price': 0.0, 'amount': 250.0, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2022-07-31T10:57:12.952103Z', 'symbol': '', 'operation_type': 'CASH TOP-UP', 'quantity': '', 'price': '', 'total_amount': 'USD 250', 'currency': 'USD', 'balance': '1.0232'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:08:06,007 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2022-08-01', 'symbol': 'INTC', 'description': 'BUY - LIMIT', 'operation': 'BUY', 'quantity': 5.0, 'price': 36.07, 'amount': 180.35, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2022-08-01T13:30:07.834882Z', 'symbol': 'INTC', 'operation_type': 'BUY - LIMIT', 'quantity': '5', 'price': 'USD 36.07', 'total_amount': 'USD 180.35', 'currency': 'USD', 'balance': '1.0254'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:08:10,091 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2022-08-02', 'symbol': '', 'description': 'CASH TOP-UP', 'operation': 'DEPOSIT', 'quantity': 0.0, 'price': 0.0, 'amount': 230.0, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2022-08-02T09:27:47.166086Z', 'symbol': '', 'operation_type': 'CASH TOP-UP', 'quantity': '', 'price': '', 'total_amount': 'USD 230', 'currency': 'USD', 'balance': '1.0242'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:08:14,178 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2022-08-02', 'symbol': '', 'description': 'CUSTODY FEE', 'operation': 'FEE', 'quantity': 0.0, 'price': 0.0, 'amount': -0.03, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2022-08-02T20:37:46.684263Z', 'symbol': '', 'operation_type': 'CUSTODY FEE', 'quantity': '', 'price': '', 'total_amount': 'USD -0.03', 'currency': 'USD', 'balance': '1.0170'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:08:18,282 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2022-08-03', 'symbol': 'NIO', 'description': 'BUY - LIMIT', 'operation': 'BUY', 'quantity': 4.0, 'price': 19.5, 'amount': 79.02, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2022-08-03T14:00:00.242729Z', 'symbol': 'NIO', 'operation_type': 'BUY - LIMIT', 'quantity': '4', 'price': 'USD 19.50', 'total_amount': 'USD 79.02', 'currency': 'USD', 'balance': '1.0173'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:08:22,349 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2022-08-04', 'symbol': 'GOOGL', 'description': 'BUY - LIMIT', 'operation': 'BUY', 'quantity': 2.0, 'price': 117.58, 'amount': 236.17, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2022-08-04T13:30:13.882907Z', 'symbol': 'GOOGL', 'operation_type': 'BUY - LIMIT', 'quantity': '2', 'price': 'USD 117.58', 'total_amount': 'USD 236.17', 'currency': 'USD', 'balance': '1.0187'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:08:26,433 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2022-08-09', 'symbol': 'XPOA', 'description': 'MERGER - STOCK', 'operation': 'SELL', 'quantity': -3.00902708, 'price': 0.0, 'amount': 0.0, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2022-08-09T05:53:55.190771Z', 'symbol': 'XPOA', 'operation_type': 'MERGER - STOCK', 'quantity': '-3.00902708', 'price': '', 'total_amount': 'USD 0', 'currency': 'USD', 'balance': '1.0204'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:08:30,517 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2022-08-09', 'symbol': 'QBTS', 'description': 'MERGER - STOCK', 'operation': 'BUY', 'quantity': 4.37552557, 'price': 0.0, 'amount': 0.0, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2022-08-09T05:53:55.196873Z', 'symbol': 'QBTS', 'operation_type': 'MERGER - STOCK', 'quantity': '4.37552557', 'price': '', 'total_amount': 'USD 0', 'currency': 'USD', 'balance': '1.0204'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:08:34,591 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2022-09-02', 'symbol': '', 'description': 'CUSTODY FEE', 'operation': 'FEE', 'quantity': 0.0, 'price': 0.0, 'amount': -0.07, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2022-09-02T04:18:35.771153Z', 'symbol': '', 'operation_type': 'CUSTODY FEE', 'quantity': '', 'price': '', 'total_amount': 'USD -0.07', 'currency': 'USD', 'balance': '0.9970'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:08:38,690 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2022-09-02', 'symbol': 'INTC', 'description': 'DIVIDEND', 'operation': 'DIVIDEND', 'quantity': 0.0, 'price': 0.0, 'amount': 1.56, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2022-09-02T06:07:51.598797Z', 'symbol': 'INTC', 'operation_type': 'DIVIDEND', 'quantity': '', 'price': '', 'total_amount': 'USD 1.56', 'currency': 'USD', 'balance': '0.9975'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:08:42,781 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2022-09-05', 'symbol': '', 'description': 'CASH TOP-UP', 'operation': 'DEPOSIT', 'quantity': 0.0, 'price': 0.0, 'amount': 200.0, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2022-09-05T05:33:05.433841Z', 'symbol': '', 'operation_type': 'CASH TOP-UP', 'quantity': '', 'price': '', 'total_amount': 'USD 200', 'currency': 'USD', 'balance': '0.9894'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:08:46,889 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2022-09-07', 'symbol': 'BP', 'description': 'BUY - LIMIT', 'operation': 'BUY', 'quantity': 5.0, 'price': 30.48, 'amount': 152.4, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2022-09-07T13:30:04.499036Z', 'symbol': 'BP', 'operation_type': 'BUY - LIMIT', 'quantity': '5', 'price': 'USD 30.48', 'total_amount': 'USD 152.40', 'currency': 'USD', 'balance': '0.9907'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:08:50,973 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2022-09-12', 'symbol': 'QBTS', 'description': 'BUY - MARKET', 'operation': 'BUY', 'quantity': 7.0, 'price': 7.21, 'amount': 51.48, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2022-09-12T16:23:30.747375Z', 'symbol': 'QBTS', 'operation_type': 'BUY - MARKET', 'quantity': '7', 'price': 'USD 7.21', 'total_amount': 'USD 51.48', 'currency': 'USD', 'balance': '1.0135'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:08:55,061 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2022-09-22', 'symbol': '', 'description': 'CASH TOP-UP', 'operation': 'DEPOSIT', 'quantity': 0.0, 'price': 0.0, 'amount': 300.0, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2022-09-22T14:46:40.653920Z', 'symbol': '', 'operation_type': 'CASH TOP-UP', 'quantity': '', 'price': '', 'total_amount': 'USD 300', 'currency': 'USD', 'balance': '0.9824'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:08:59,162 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2022-10-04', 'symbol': '', 'description': 'CUSTODY FEE', 'operation': 'FEE', 'quantity': 0.0, 'price': 0.0, 'amount': -0.08, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2022-10-04T07:56:24.398460Z', 'symbol': '', 'operation_type': 'CUSTODY FEE', 'quantity': '', 'price': '', 'total_amount': 'USD -0.08', 'currency': 'USD', 'balance': '0.9877'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:09:03,278 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2022-10-06', 'symbol': 'MAXN', 'description': 'BUY - LIMIT', 'operation': 'BUY', 'quantity': 5.0, 'price': 24.5, 'amount': 122.5, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2022-10-06T14:22:35.073932Z', 'symbol': 'MAXN', 'operation_type': 'BUY - LIMIT', 'quantity': '5', 'price': 'USD 24.50', 'total_amount': 'USD 122.50', 'currency': 'USD', 'balance': '0.9840'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:09:07,378 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2022-10-10', 'symbol': 'NIO', 'description': 'BUY - LIMIT', 'operation': 'BUY', 'quantity': 13.0, 'price': 13.66, 'amount': 178.54, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2022-10-10T13:30:07.837015Z', 'symbol': 'NIO', 'operation_type': 'BUY - LIMIT', 'quantity': '13', 'price': 'USD 13.66', 'total_amount': 'USD 178.54', 'currency': 'USD', 'balance': '0.9708'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:09:11,499 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2022-10-16', 'symbol': '', 'description': 'CASH TOP-UP', 'operation': 'DEPOSIT', 'quantity': 0.0, 'price': 0.0, 'amount': 97.2, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2022-10-16T15:05:10.404073Z', 'symbol': '', 'operation_type': 'CASH TOP-UP', 'quantity': '', 'price': '', 'total_amount': 'USD 97.20', 'currency': 'USD', 'balance': '0.9726'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:09:15,572 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2022-10-21', 'symbol': 'QBTS', 'description': 'BUY - LIMIT', 'operation': 'BUY', 'quantity': 20.0, 'price': 4.8, 'amount': 96.97, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2022-10-21T19:13:04.583736Z', 'symbol': 'QBTS', 'operation_type': 'BUY - LIMIT', 'quantity': '20', 'price': 'USD 4.80', 'total_amount': 'USD 96.97', 'currency': 'USD', 'balance': '0.9873'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:09:19,656 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2022-11-02', 'symbol': '', 'description': 'CUSTODY FEE', 'operation': 'FEE', 'quantity': 0.0, 'price': 0.0, 'amount': -0.1, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2022-11-02T04:23:13.627123Z', 'symbol': '', 'operation_type': 'CUSTODY FEE', 'quantity': '', 'price': '', 'total_amount': 'USD -0.10', 'currency': 'USD', 'balance': '0.9889'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:09:23,729 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2022-11-27', 'symbol': '', 'description': 'CASH TOP-UP', 'operation': 'DEPOSIT', 'quantity': 0.0, 'price': 0.0, 'amount': 10.0, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2022-11-27T20:00:22.275024Z', 'symbol': '', 'operation_type': 'CASH TOP-UP', 'quantity': '', 'price': '', 'total_amount': 'USD 10', 'currency': 'USD', 'balance': '1.0400'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:09:27,791 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2022-11-28', 'symbol': 'QBTS', 'description': 'BUY - LIMIT', 'operation': 'BUY', 'quantity': 3.0, 'price': 2.5, 'amount': 7.5, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2022-11-28T15:21:24.839124Z', 'symbol': 'QBTS', 'operation_type': 'BUY - LIMIT', 'quantity': '3', 'price': 'USD 2.50', 'total_amount': 'USD 7.50', 'currency': 'USD', 'balance': '1.0432'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:09:31,864 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2022-12-02', 'symbol': 'INTC', 'description': 'DIVIDEND', 'operation': 'DIVIDEND', 'quantity': 0.0, 'price': 0.0, 'amount': 1.56, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2022-12-02T06:16:50.776644Z', 'symbol': 'INTC', 'operation_type': 'DIVIDEND', 'quantity': '', 'price': '', 'total_amount': 'USD 1.56', 'currency': 'USD', 'balance': '1.0529'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:09:35,941 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2022-12-02', 'symbol': '', 'description': 'CUSTODY FEE', 'operation': 'FEE', 'quantity': 0.0, 'price': 0.0, 'amount': -0.11, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2022-12-02T09:53:21.239437Z', 'symbol': '', 'operation_type': 'CUSTODY FEE', 'quantity': '', 'price': '', 'total_amount': 'USD -0.11', 'currency': 'USD', 'balance': '1.0531'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:09:39,993 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2022-12-14', 'symbol': '', 'description': 'CUSTODY FEE', 'operation': 'FEE', 'quantity': 0.0, 'price': 0.0, 'amount': -0.11, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2022-12-14T04:40:48.251602Z', 'symbol': '', 'operation_type': 'CUSTODY FEE', 'quantity': '', 'price': '', 'total_amount': 'USD -0.11', 'currency': 'USD', 'balance': '1.0631'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:09:44,082 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2022-12-14', 'symbol': '', 'description': 'CUSTODY FEE REVERSAL', 'operation': 'FEE', 'quantity': 0.0, 'price': 0.0, 'amount': 0.11, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2022-12-14T15:31:20.347252Z', 'symbol': '', 'operation_type': 'CUSTODY FEE REVERSAL', 'quantity': '', 'price': '', 'total_amount': 'USD 0.11', 'currency': 'USD', 'balance': '1.0658'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:09:48,171 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2022-12-21', 'symbol': 'BP', 'description': 'DIVIDEND', 'operation': 'DIVIDEND', 'quantity': 0.0, 'price': 0.0, 'amount': 1.78, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2022-12-21T06:22:23.408213Z', 'symbol': 'BP', 'operation_type': 'DIVIDEND', 'quantity': '', 'price': '', 'total_amount': 'USD 1.78', 'currency': 'USD', 'balance': '1.0622'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:09:52,252 | ERROR | ❌ Error inserting row: {'broker': 'REVOLUT', 'date': '2022-12-22', 'symbol': '', 'description': 'CASH TOP-UP', 'operation': 'DEPOSIT', 'quantity': 0.0, 'price': 0.0, 'amount': 100.0, 'fees': 0.0, 'currency': 'USD', 'asset_type': 'STOCK', 'source_file': 'trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx', 'raw_data': "{'date': '2022-12-22T06:41:08.773084Z', 'symbol': '', 'operation_type': 'CASH TOP-UP', 'quantity': '', 'price': '', 'total_amount': 'USD 100', 'currency': 'USD', 'balance': '1.0658'}"} | Error: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-01-01 15:16:49,567 | INFO | ============================================================
+2026-01-01 15:16:49,568 | INFO | 💾 SMART LOADER - Phase 4
+2026-01-01 15:16:49,568 | INFO | ============================================================
+2026-01-01 15:16:49,575 | INFO | 📂 Loading 611 rows from extraction_results.json...
+2026-01-01 15:16:51,262 | INFO | 💾 Transactions Loaded: 611 new, 0 skipped.
+2026-01-01 15:16:51,263 | INFO | 
+🔄 REBUILDING HOLDINGS FROM HISTORY...
+2026-01-01 15:16:51,269 | INFO | Target Brokers: ['REVOLUT', 'TRADE_REPUBLIC', 'BG_SAXO']
+2026-01-01 15:16:51,269 | INFO |    🔨 Rebuilding REVOLUT...
+2026-01-01 15:16:51,348 | INFO |    ✅ Recreated 11 holdings for REVOLUT.
+2026-01-01 15:16:51,350 | INFO |    🔨 Rebuilding TRADE_REPUBLIC...
+2026-01-01 15:16:51,368 | INFO |    ✅ Recreated 5 holdings for TRADE_REPUBLIC.
+2026-01-01 15:16:51,369 | INFO |    🔨 Rebuilding BG_SAXO...
+2026-01-01 15:16:51,393 | INFO |    ✅ Recreated 12 holdings for BG_SAXO.
+2026-01-01 15:16:51,394 | INFO | ============================================================
+2026-01-01 15:16:51,395 | INFO | ✅ DONE.
+2026-01-01 16:17:21,577 | INFO | ============================================================
+2026-01-01 16:17:21,607 | INFO | 💾 SMART LOADER - Phase 4
+2026-01-01 16:17:21,607 | INFO | ============================================================
+2026-01-01 16:17:21,608 | INFO | 📂 Loading 24 rows from extraction_results.json...
+2026-01-01 16:38:23,891 | INFO | ============================================================
+2026-01-01 16:38:23,892 | INFO | 💾 SMART LOADER - Phase 4
+2026-01-01 16:38:23,893 | INFO | ============================================================
+2026-01-01 16:38:23,894 | INFO | 📂 Loading 26 rows from extraction_results.json...
+2026-01-01 16:40:35,859 | INFO | ============================================================
+2026-01-01 16:40:35,861 | INFO | 💾 SMART LOADER - Phase 4
+2026-01-01 16:40:35,862 | INFO | ============================================================
+2026-01-01 16:40:35,865 | INFO | 📂 Loading 26 rows from extraction_results.json...
+2026-01-01 16:57:18,323 | INFO | ============================================================
+2026-01-01 16:57:18,324 | INFO | 💾 SMART LOADER - Phase 4
+2026-01-01 16:57:18,324 | INFO | ============================================================
+2026-01-01 16:57:18,325 | INFO | 📂 Loading 10 rows from extraction_results.json...
+2026-01-01 16:57:18,481 | INFO | 💾 Transactions Loaded: 10 new, 0 skipped.
+2026-01-01 16:57:18,481 | INFO | 
+🔄 REBUILDING HOLDINGS FROM HISTORY...
+2026-01-01 16:57:18,489 | INFO | Target Brokers: ['REVOLUT', 'TRADE_REPUBLIC', 'BG_SAXO', 'SCALABLE']
+2026-01-01 16:57:18,490 | INFO |    🔨 Rebuilding REVOLUT...
+2026-01-01 16:57:18,564 | INFO |    ✅ Recreated 11 holdings for REVOLUT.
+2026-01-01 16:57:18,567 | INFO |    🔨 Rebuilding TRADE_REPUBLIC...
+2026-01-01 16:57:18,587 | INFO |    ✅ Recreated 5 holdings for TRADE_REPUBLIC.
+2026-01-01 16:57:18,588 | INFO |    🔨 Rebuilding BG_SAXO...
+2026-01-01 16:57:18,619 | INFO |    ✅ Recreated 12 holdings for BG_SAXO.
+2026-01-01 16:57:18,621 | INFO |    🔨 Rebuilding SCALABLE...
+2026-01-01 16:57:18,640 | INFO |    ✅ Recreated 5 holdings for SCALABLE.
+2026-01-01 16:57:18,640 | INFO | ============================================================
+2026-01-01 16:57:18,641 | INFO | ✅ DONE.

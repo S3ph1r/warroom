@@ -132,13 +132,15 @@ warroom/
 - ✅ **Multi-Currency Engine v2**:
     - Robust `GBp` (Pence) handling for LSE stocks
     - Auto-conversion for USD, HKD, DKK, CHF -> EUR
-- ✅ **Universal Ingestion System 2.0 (New) 🤖**:
-    - **One-Click Ingestion**: "Reset DB & Reload" button directly in Dashboard.
-    - **5 Brokers Connected**: Full support for BG Saxo, Scalable, Revolut (Stocks+Crypto), Trade Republic, Binance.
-    - **Hybrid Parsing**: Mistral LLM for Unstructured PDFs + Deterministic scripts for CSVs.
-    - **Report & Compare**: Generates detailed comparison reports (Old vs New DB) to verify data integrity.
-    - **Clean Data**: Standardized Tickers/Names, verified history, and calculated P&L.
-    - **Auto-Reconciliation**: Rebuilds portfolio state from thousands of historical transactions.
+- ✅ **Universal Ingestion System 3.0 (Smart & Agnostic) 🤖**: 
+    - **Fully Automated Pipeline**: Orchestrator → Classifier → Extractor → Loader.
+    - **Smarter Classification**: Text-First strategy for native PDFs (80 files in 8 mins) with Vision fallback for scans.
+    - **Hybrid Extraction**: High-precision extraction of `quantity`, `price`, and `total_amount` using local LLMs (Qwen/Mistral).
+    - **Universal Normalization**: Broker-agnostic `OPERATION_MAP` handles BUY, SELL, DIVIDEND, FEE, TRANSFER_IN across all platforms.
+    - **Validated Brokers**: Full end-to-end support for **Revolut** and **Scalable Capital**, plus legacy support for Trade Republic, BG Saxo, and IBKR.
+    - **Unified Traceability**: Centralized logging in `warroom_ingestion.log` for debugging the entire pipeline.
+    - **Atomic DB Loading**: History-based holdings calculation with WAC (Weighted Average Cost) and Cash balance tracking.
+    - **Ready for Binance**: System architecture designed to handle Crypto assets out-of-the-box.
 
 ## 🔒 Security
 

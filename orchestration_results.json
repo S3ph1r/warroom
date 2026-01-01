@@ -1,0 +1,1264 @@
+{
+  "processed": [
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20241207 Monthly account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "document_type": "STOCKS",
+      "asset_type": "STOCK",
+      "classification": {
+        "document_type": "STOCKS",
+        "asset_type": "STOCK",
+        "should_process": true,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document contains individual trade executions for stocks such as TESLA INC. and TENCENT HLDGS HD.",
+        "has_text_layer": true
+      },
+      "fingerprint": "27e303cf08ad",
+      "is_pdf": true
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20250214 Corporate actions Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "document_type": "STOCKS",
+      "asset_type": "ETF",
+      "classification": {
+        "document_type": "STOCKS",
+        "asset_type": "ETF",
+        "should_process": true,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document details a dividend payment for an ETF (iShsV-S&P 500 Energ.Sect.U.ETF), which involves individual trade execution or dividend distribution.",
+        "has_text_layer": true
+      },
+      "fingerprint": "a555fe88d7ae",
+      "is_pdf": true
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20251009 Corporate actions Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "document_type": "STOCKS",
+      "asset_type": "STOCK",
+      "classification": {
+        "document_type": "STOCKS",
+        "asset_type": "STOCK",
+        "should_process": true,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document details a transaction involving the removal and entry of units into/by a securities account for BYD Co. Ltd., indicating individual trade execution.",
+        "has_text_layer": true
+      },
+      "fingerprint": "ee91e7feb4ec",
+      "is_pdf": true
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20251010 Corporate actions Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "document_type": "STOCKS",
+      "asset_type": "STOCK",
+      "classification": {
+        "document_type": "STOCKS",
+        "asset_type": "STOCK",
+        "should_process": true,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document contains details of a stock transaction (split cancellation) for BYD Co. Ltd., including ISIN and WKN codes, quantities, and exchange rate.",
+        "has_text_layer": true
+      },
+      "fingerprint": "5ff19112d780",
+      "is_pdf": true
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20251212 Transfer in - Transfer out Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "document_type": "STOCKS",
+      "asset_type": "ETF",
+      "classification": {
+        "document_type": "STOCKS",
+        "asset_type": "ETF",
+        "should_process": true,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document contains individual trade executions for ETFs.",
+        "has_text_layer": true
+      },
+      "fingerprint": "36f5978bf8a2",
+      "is_pdf": true
+    }
+  ],
+  "skipped": [
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20221213 Monthly account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a periodic account statement showing balance movements and a direct debit transaction. It does not contain individual trade executions or dividends.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20230107 Monthly account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is an account statement that includes a direct debit and purchases of ETFs but does not detail individual trade executions or dividends. It primarily summarizes the account balance and transactions.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20230107 Statement of accounts Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a statement of account for the period from November 16, 2022 to December 31, 2022. It does not contain individual trade executions or dividends but rather summarizes the account status and charges.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20230204 Monthly account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a periodic account statement that summarizes the balance and transactions without detailed trade executions or dividends.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20230225 Account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "ETF",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "ETF",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a securities account summary providing an overview of the holdings in ETFs and their market values as of a specific date. It does not contain individual trade executions or dividend details.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20230306 Monthly account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a periodic account statement that does not contain any individual trade executions or dividends. It only shows the balance summary.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20230414 Monthly account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "ETF",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "ETF",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is an account statement that includes a dividend payment but does not detail individual trade executions. It summarizes the account balance and provides information on a specific ETF dividend.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20230414 Statement of accounts Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a statement for an account with no trade executions or dividends listed; it's a summary of the period without detailed transactions.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20230504 General meeting Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "STOCKS",
+      "asset_type": "STOCK",
+      "classification": {
+        "document_type": "STOCKS",
+        "asset_type": "STOCK",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is an invitation to a general meeting of shareholders and does not contain individual trade executions or dividends.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20230504 Monthly account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a periodic account statement that does not contain any individual trade executions or dividends. It only shows the balance summary.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20230519 Report fiscale Scalable Capital.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "UNKNOWN",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "UNKNOWN",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a fiscal report for tax purposes and does not contain individual trade executions or dividends. It provides an overview of transactions and investment results but is intended to assist in completing the taxpayer's declaration.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20230603 Monthly account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a periodic account statement that summarizes the balance and transactions in EUR without detailed trade executions.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20230707 Monthly account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "ETF",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "ETF",
+        "should_process": true,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document contains a dividend payment for an ETF (IS MSCI BRAZ.U.ETF USD D), which indicates individual trade execution or dividend details.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20230707 Statement of accounts Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a statement of account for the period from March 31 to June 30, 2023. It does not contain individual trade executions or dividends but rather summarizes the account status and charges.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20230714 Informazioni sui costi ex-post Scalable Capital.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "UNKNOWN",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "UNKNOWN",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document appears to be an ex-post cost information report for a financial account. It does not contain individual trade executions or dividends but rather summarizes costs and expenses over a period.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20230804 Monthly account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a periodic account statement that does not contain any individual trade executions or dividends. It only provides the account balance summary.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20230906 Monthly account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a periodic account statement that does not contain any individual trade executions or dividends. It only provides the account balance summary.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20230930 Statement of accounts Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a statement of account for the period from June 30 to September 30, 2023. It does not contain individual trade executions or dividends but rather summarizes the account status and interest/charges.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20231007 Monthly account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a periodic account statement that summarizes the account balance and includes a minor transaction related to dividends. It does not contain detailed trade executions.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20231104 Monthly account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a periodic account statement that does not contain any individual trade executions or dividends. It only shows the balance summary.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20231201 Aggiornamento della privacy policy Scalable Capital.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "UNKNOWN",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "UNKNOWN",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a privacy policy update notification and does not contain any trade executions or dividend information.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20231206 Monthly account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a periodic account statement summarizing the balance and minor transactions (coupons/dividends) without detailed trade executions.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20240112 Monthly account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a periodic account statement that includes a debit for a direct debit and an entry for a purchase but does not detail individual trade executions or dividends. It primarily serves as a balance summary.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20240206 Monthly account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR, ETF, STOCK",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR, ETF, STOCK",
+        "should_process": true,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document contains individual trade executions (purchase of stocks) and dividend payments.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20240306 Monthly account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a periodic account statement that does not contain any individual trade executions or dividends. It only provides a balance summary.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20240306 Statement of accounts Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a statement of account for the period from 2023-09-30 to 2023-12-31, indicating no closing entries have been posted. It does not contain individual trade executions or dividends.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20240323 Tax certificate Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a tax certificate for capital gains and does not contain individual trade executions or dividends.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20240507 Report fiscale Scalable Capital.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "UNKNOWN",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "UNKNOWN",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a tax report for the fiscal year 2023 and does not contain individual trade executions or dividends. It provides an overview of transactions, income, and other financial activities but is intended to assist in completing the taxpayer's declaration.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20240512 Income statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "UNKNOWN",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "UNKNOWN",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a tax statement for the period from 2023-01-01 to 2023-12-31 and does not contain individual trade executions or dividends.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20240607 Monthly account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a periodic account statement that does not contain any individual trade executions or dividends. It only shows the balance summary.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20240710 Monthly account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is an account statement that includes dividend details but does not contain individual trade executions. It primarily summarizes the account balance and transactions.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20240806 Monthly account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a periodic account statement that includes a direct debit and purchase of stocks but does not focus on individual trade executions or dividends. It primarily summarizes the account balance and transactions.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20240913 Monthly account statement Baader Bank (1).pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a periodic account statement that includes a direct debit and purchase transactions but does not detail individual trade executions or dividends in sufficient depth to require processing for those specific actions.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20241002 Statement of accounts Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a statement indicating no closing entries for the specified period and does not contain individual trade executions or dividends.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20241011 Monthly account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document contains a periodic account statement with individual transactions including stocks and dividends but primarily serves as an overview of the account balance and movements rather than detailed trade executions.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20241106 Monthly account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "STOCK",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "STOCK",
+        "should_process": true,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document contains individual trade executions (purchase of RIVIAN AUTOMOT.A) and dividend details (Coupons/Dividends from NVIDIA CORP.).",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20241119 Securities announcement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "ETF",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "ETF",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document informs about changes in a fund managed by an asset management company but does not contain individual trade executions or dividends.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20250402 Monthly account statement Broker Scalable Capital.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a monthly balance summary for an account with no trade executions or dividends listed.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20250402 Statement of accounts Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a statement of account for the period from 2024-12-31 to 2025-03-31, indicating no closing entries have been posted. It does not contain individual trade executions or dividends.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20250403 Securities Account Statement Broker Scalable Capital.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a monthly balance summary for an account with no individual trade executions or dividends listed.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20250416 German tax certificate Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a tax certificate for capital gains and does not contain individual trade executions or dividends.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20250417 Monthly account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a periodic account statement that summarizes the balance and includes a dividend entry but does not detail individual trade executions.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20250423 Change in interest rate Scalable Capital.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is an account notification regarding a change in overdraft interest rates and does not contain individual trade executions or dividends.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20250423 Report fiscale Scalable Capital.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "UNKNOWN",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "UNKNOWN",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a fiscal report for tax purposes and does not contain individual trade executions or dividends. It provides an overview of transactions, income generated, and interest/dividends received but is intended to assist with the completion of the taxpayer's declaration.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20250505 Monthly account statement Broker Scalable Capital.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a monthly balance summary for an account with no trade executions or dividends listed.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20250602 Monthly account statement Broker Scalable Capital.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "STOCK",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "STOCK",
+        "should_process": true,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document contains individual trade executions for stocks such as Xiaomi, Tencent Holdings, Alibaba Group Holding, and Midea Group Co.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20250605 Monthly account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "STOCK",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "STOCK",
+        "should_process": true,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document contains a detailed transaction for the purchase of Baidu Inc. stocks and an order fee, indicating individual trade execution.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20250703 Monthly account statement Broker Scalable Capital.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a monthly account statement summarizing transactions and balances without detailed trade executions or dividend payments.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20250703 Periodic balance statement Broker Scalable Capital.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a monthly balance summary for an account with Scalable Capital GmbH. It includes interest and tax details but does not contain individual trade executions or dividends.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20250704 Statement of accounts Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a statement indicating no closing entries have been posted for the specified period and does not contain individual trade executions or dividends.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20250712 Monthly account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "STOCK, ETF, EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "STOCK, ETF, EUR",
+        "should_process": true,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document contains detailed entries for dividends and coupons from individual stocks and an ETF, indicating specific trade executions or dividend payments.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20250804 Monthly account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document contains account balance and transaction details but does not include individual trade executions or dividends.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20250804 Monthly account statement Broker Scalable Capital.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": true,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document contains individual dividend distributions and interest received.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20250805 Securities Account Statement Broker Scalable Capital.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "STOCK",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "STOCK",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a monthly balance summary of stock holdings without individual trade executions or dividends.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20250807 Monthly account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a periodic account statement that does not contain any individual trade executions or dividends. It only provides the account balance summary.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20250902 Monthly account statement Broker Scalable Capital.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a monthly balance summary for an account with no individual trade executions or dividends listed.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20250904 Monthly account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a periodic account statement that includes balance details and a minor transaction (coupons/dividends), but it does not contain detailed trade executions.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20251002 Monthly account statement Broker Scalable Capital.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a monthly balance summary for an account with no individual trade executions or dividends listed.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20251002 Periodic balance statement Broker Scalable Capital.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a monthly balance summary for an account with Scalable Capital Bank GmbH. It includes details about the interest earned and taxes, but does not contain individual trade executions or dividends.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20251002 Securities account statement Broker Scalable Capital.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "STOCK",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "STOCK",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a monthly balance summary of stock holdings without individual trade executions or dividends.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20251002 Statement of accounts Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a statement indicating no closing entries for the specified period and does not contain individual trade executions or dividends.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20251009 Monthly account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a periodic account statement that summarizes the balance and includes a dividend entry but does not detail individual trade executions.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20251018 MIFID II quarterly report Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "STOCKS",
+      "asset_type": "STOCK",
+      "classification": {
+        "document_type": "STOCKS",
+        "asset_type": "STOCK",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a quarterly statement summarizing holdings and market values of equities for the client. It does not contain individual trade executions or dividend details.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20251105 Monthly account statement Broker Scalable Capital.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a monthly balance summary for an account with interest received and does not contain individual trade executions or dividends.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20251106 Monthly account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a periodic account statement that does not contain any individual trade executions or dividends. It only shows the balance summary.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20251203 Monthly account statement Broker Scalable Capital.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is an account statement summarizing transactions and balances for a period. It includes dividend distributions but does not detail individual trade executions.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20251204 Monthly account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a periodic account statement that does not contain any individual trade executions or dividends. It only shows the balance summary.",
+        "has_text_layer": true
+      }
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20251212 Statement of accounts Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "reason": "No trading data detected",
+      "document_type": "ACCOUNT",
+      "asset_type": "EUR",
+      "classification": {
+        "document_type": "ACCOUNT",
+        "asset_type": "EUR",
+        "should_process": false,
+        "confidence": "HIGH",
+        "extraction_strategy": "TEXT_LLM",
+        "strategy_reason": "Native PDF Text Layer",
+        "content_summary": "The document is a statement indicating no closing entries have been posted for the specified period and does not contain individual trade executions or dividends.",
+        "has_text_layer": true
+      }
+    }
+  ],
+  "errors": [
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20240214 Account statement Baader Bank.pdf",
+      "broker": "SCALABLE",
+      "error": "'list' object has no attribute 'get'"
+    },
+    {
+      "file": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable\\20251219 Financial status Scalable Capital.pdf",
+      "broker": "SCALABLE",
+      "error": "'list' object has no attribute 'get'"
+    }
+  ]
+}

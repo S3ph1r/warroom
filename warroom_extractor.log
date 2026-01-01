@@ -1,0 +1,456 @@
+2026-01-01 13:03:03,958 | INFO | ============================================================
+2026-01-01 13:03:03,959 | INFO | 🏭 SMART EXTRACTOR - Phase 3
+2026-01-01 13:03:03,959 | INFO | ============================================================
+2026-01-01 13:03:03,960 | INFO | Found 4 files to extract.
+2026-01-01 13:03:03,960 | INFO | 
+📂 [REVOLUT] trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx (STOCKS)
+2026-01-01 13:03:04,301 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 13:03:04,302 | INFO | 
+📂 [REVOLUT] account-statement_2017-12-26_2025-12-31_it-it_18a170.xlsx (CASH_MOVEMENTS)
+2026-01-01 13:03:04,364 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 13:03:04,365 | INFO | 
+📂 [REVOLUT] crypto-account-statement_2022-07-04_2025-12-31_it-it_87d838.xlsx (CRYPTO)
+2026-01-01 13:03:04,454 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 13:03:04,454 | INFO | 
+📂 [REVOLUT] account-statement_2022-07-26_2025-12-31_it-it_43269b.xlsx (COMMODITIES)
+2026-01-01 13:03:04,497 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 13:03:04,498 | INFO | 
+💾 Extraction saved to: D:\Download\Progetto WAR ROOM\warroom\extraction_results.json (0 total rows)
+2026-01-01 13:04:09,536 | INFO | ============================================================
+2026-01-01 13:04:09,537 | INFO | 🏭 SMART EXTRACTOR - Phase 3
+2026-01-01 13:04:09,537 | INFO | ============================================================
+2026-01-01 13:04:09,538 | INFO | Found 4 files to extract.
+2026-01-01 13:04:09,538 | INFO | 
+📂 [REVOLUT] trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx (STOCKS)
+2026-01-01 13:04:09,913 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 13:04:09,913 | INFO | 
+📂 [REVOLUT] account-statement_2017-12-26_2025-12-31_it-it_18a170.xlsx (CASH_MOVEMENTS)
+2026-01-01 13:04:10,038 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 13:04:10,038 | INFO | 
+📂 [REVOLUT] crypto-account-statement_2022-07-04_2025-12-31_it-it_87d838.xlsx (CRYPTO)
+2026-01-01 13:04:10,177 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 13:04:10,177 | INFO | 
+📂 [REVOLUT] account-statement_2022-07-26_2025-12-31_it-it_43269b.xlsx (COMMODITIES)
+2026-01-01 13:04:10,247 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 13:04:10,248 | INFO | 
+💾 Extraction saved to: D:\Download\Progetto WAR ROOM\warroom\extraction_results.json (0 total rows)
+2026-01-01 13:04:45,880 | INFO | ============================================================
+2026-01-01 13:04:45,880 | INFO | 🏭 SMART EXTRACTOR - Phase 3
+2026-01-01 13:04:45,881 | INFO | ============================================================
+2026-01-01 13:04:45,881 | INFO | Found 4 files to extract.
+2026-01-01 13:04:45,881 | INFO | 
+📂 [REVOLUT] trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx (STOCKS)
+2026-01-01 13:04:46,249 | INFO |    🔍 Found Columns: ['Date,Ticker,Type,Quantity,Price per share,Total Amount,Currency,FX Rate']
+2026-01-01 13:04:46,249 | INFO |    🗺️ Mapping: {'Ticker': 'symbol', 'Date': 'date', 'Type': 'operation_type', 'Quantity': 'quantity', 'Price per share': 'price', 'Total Amount': 'total_amount', 'Currency': 'currency', 'FX Rate': 'balance'}
+2026-01-01 13:04:46,250 | INFO |    ➡️ Mapped Columns: ['Date,Ticker,Type,Quantity,Price per share,Total Amount,Currency,FX Rate']
+2026-01-01 13:04:46,250 | INFO |    ✅ Available Keys: []
+2026-01-01 13:04:46,252 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 13:04:46,252 | INFO | 
+📂 [REVOLUT] account-statement_2017-12-26_2025-12-31_it-it_18a170.xlsx (CASH_MOVEMENTS)
+2026-01-01 13:04:46,350 | INFO |    🔍 Found Columns: ['Tipo,Prodotto,Data di inizio,Data di completamento,Descrizione,Importo,Costo,Valuta,State,Saldo']
+2026-01-01 13:04:46,351 | INFO |    🗺️ Mapping: {'Data di completamento': 'date', 'Descrizione': 'operation_type', 'Importo': 'total_amount', 'Costo': 'fees', 'Valuta': 'currency', 'Saldo': 'balance'}
+2026-01-01 13:04:46,351 | INFO |    ➡️ Mapped Columns: ['Tipo,Prodotto,Data di inizio,Data di completamento,Descrizione,Importo,Costo,Valuta,State,Saldo']
+2026-01-01 13:04:46,352 | INFO |    ✅ Available Keys: []
+2026-01-01 13:04:46,352 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 13:04:46,353 | INFO | 
+📂 [REVOLUT] crypto-account-statement_2022-07-04_2025-12-31_it-it_87d838.xlsx (CRYPTO)
+2026-01-01 13:04:46,496 | INFO |    🔍 Found Columns: ['Symbol,Type,Quantity,Price,Value,Fees,Date']
+2026-01-01 13:04:46,497 | INFO |    🗺️ Mapping: {'Symbol': 'symbol', 'Date': 'date', 'Quantity': 'quantity', 'Price': 'price', 'Value': 'total_amount', 'Fees': 'fees'}
+2026-01-01 13:04:46,497 | INFO |    ➡️ Mapped Columns: ['Symbol,Type,Quantity,Price,Value,Fees,Date']
+2026-01-01 13:04:46,498 | INFO |    ✅ Available Keys: []
+2026-01-01 13:04:46,499 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 13:04:46,499 | INFO | 
+📂 [REVOLUT] account-statement_2022-07-26_2025-12-31_it-it_43269b.xlsx (COMMODITIES)
+2026-01-01 13:04:46,574 | INFO |    🔍 Found Columns: ['Tipo,Prodotto,Data di inizio,Data di completamento,Descrizione,Importo,Costo,Valuta,State,Saldo']
+2026-01-01 13:04:46,575 | INFO |    🗺️ Mapping: {'Valuta': 'currency', 'Data di inizio': 'date', 'Importo': 'price', 'Saldo': 'balance', 'Costo': 'fees'}
+2026-01-01 13:04:46,576 | INFO |    ➡️ Mapped Columns: ['Tipo,Prodotto,Data di inizio,Data di completamento,Descrizione,Importo,Costo,Valuta,State,Saldo']
+2026-01-01 13:04:46,576 | INFO |    ✅ Available Keys: []
+2026-01-01 13:04:46,577 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 13:04:46,578 | INFO | 
+💾 Extraction saved to: D:\Download\Progetto WAR ROOM\warroom\extraction_results.json (0 total rows)
+2026-01-01 13:05:29,895 | INFO | ============================================================
+2026-01-01 13:05:29,895 | INFO | 🏭 SMART EXTRACTOR - Phase 3
+2026-01-01 13:05:29,895 | INFO | ============================================================
+2026-01-01 13:05:29,896 | INFO | Found 4 files to extract.
+2026-01-01 13:05:29,896 | INFO | 
+📂 [REVOLUT] trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx (STOCKS)
+2026-01-01 13:05:30,268 | INFO |    ⚠️ Detected single column with delimiters. Attempting to split...
+2026-01-01 13:05:30,271 | INFO |    🔍 Found Columns: ['Date', 'Ticker', 'Type', 'Quantity', 'Price per share', 'Total Amount', 'Currency', 'FX Rate']
+2026-01-01 13:05:30,271 | INFO |    🗺️ Mapping: {'Ticker': 'symbol', 'Date': 'date', 'Type': 'operation_type', 'Quantity': 'quantity', 'Price per share': 'price', 'Total Amount': 'total_amount', 'Currency': 'currency', 'FX Rate': 'balance'}
+2026-01-01 13:05:30,272 | INFO |    ➡️ Mapped Columns: ['date', 'symbol', 'operation_type', 'quantity', 'price', 'total_amount', 'currency', 'balance']
+2026-01-01 13:05:30,272 | INFO |    ✅ Available Keys: ['date', 'symbol', 'operation_type', 'quantity', 'price', 'total_amount', 'currency', 'balance']
+2026-01-01 13:05:30,280 | INFO |    ✅ Extracted 114 rows.
+2026-01-01 13:05:30,359 | INFO | 
+📂 [REVOLUT] account-statement_2017-12-26_2025-12-31_it-it_18a170.xlsx (CASH_MOVEMENTS)
+2026-01-01 13:05:30,461 | INFO |    ⚠️ Detected single column with delimiters. Attempting to split...
+2026-01-01 13:05:30,463 | INFO |    🔍 Found Columns: ['Tipo', 'Prodotto', 'Data di inizio', 'Data di completamento', 'Descrizione', 'Importo', 'Costo', 'Valuta', 'State', 'Saldo']
+2026-01-01 13:05:30,463 | INFO |    🗺️ Mapping: {'Data di completamento': 'date', 'Descrizione': 'operation_type', 'Importo': 'total_amount', 'Costo': 'fees', 'Valuta': 'currency', 'Saldo': 'balance'}
+2026-01-01 13:05:30,464 | INFO |    ➡️ Mapped Columns: ['Tipo', 'Prodotto', 'Data di inizio', 'date', 'operation_type', 'total_amount', 'fees', 'currency', 'State', 'balance']
+2026-01-01 13:05:30,464 | INFO |    ✅ Available Keys: ['date', 'operation_type', 'total_amount', 'fees', 'currency', 'balance']
+2026-01-01 13:05:30,469 | INFO |    ✅ Extracted 502 rows.
+2026-01-01 13:05:30,752 | INFO | 
+📂 [REVOLUT] crypto-account-statement_2022-07-04_2025-12-31_it-it_87d838.xlsx (CRYPTO)
+2026-01-01 13:05:30,896 | INFO |    ⚠️ Detected single column with delimiters. Attempting to split...
+2026-01-01 13:05:30,899 | WARNING |    ⚠️ Split shape mismatch: 12 vs 7 headers
+2026-01-01 13:05:30,902 | INFO |    🔍 Found Columns: ['Symbol', 'Type', 'Quantity', 'Price', 'Value', 'Fees', 'Date', 'Col_7', 'Col_8', 'Col_9', 'Col_10', 'Col_11']
+2026-01-01 13:05:30,902 | INFO |    🗺️ Mapping: {'Symbol': 'symbol', 'Date': 'date', 'Quantity': 'quantity', 'Price': 'price', 'Value': 'total_amount', 'Fees': 'fees'}
+2026-01-01 13:05:30,903 | INFO |    ➡️ Mapped Columns: ['symbol', 'Type', 'quantity', 'price', 'total_amount', 'fees', 'date', 'Col_7', 'Col_8', 'Col_9', 'Col_10', 'Col_11']
+2026-01-01 13:05:30,903 | INFO |    ✅ Available Keys: ['date', 'symbol', 'quantity', 'price', 'total_amount', 'fees']
+2026-01-01 13:05:30,914 | INFO |    ✅ Extracted 1141 rows.
+2026-01-01 13:05:30,924 | INFO | 
+📂 [REVOLUT] account-statement_2022-07-26_2025-12-31_it-it_43269b.xlsx (COMMODITIES)
+2026-01-01 13:05:30,992 | INFO |    ⚠️ Detected single column with delimiters. Attempting to split...
+2026-01-01 13:05:30,993 | INFO |    🔍 Found Columns: ['Tipo', 'Prodotto', 'Data di inizio', 'Data di completamento', 'Descrizione', 'Importo', 'Costo', 'Valuta', 'State', 'Saldo']
+2026-01-01 13:05:30,993 | INFO |    🗺️ Mapping: {'Valuta': 'currency', 'Data di inizio': 'date', 'Importo': 'price', 'Saldo': 'balance', 'Costo': 'fees'}
+2026-01-01 13:05:30,994 | INFO |    ➡️ Mapped Columns: ['Tipo', 'Prodotto', 'date', 'Data di completamento', 'Descrizione', 'price', 'fees', 'currency', 'State', 'balance']
+2026-01-01 13:05:30,994 | INFO |    ✅ Available Keys: ['date', 'price', 'fees', 'currency', 'balance']
+2026-01-01 13:05:30,995 | INFO |    ✅ Extracted 5 rows.
+2026-01-01 13:05:31,039 | INFO | 
+💾 Extraction saved to: D:\Download\Progetto WAR ROOM\warroom\extraction_results.json (611 total rows)
+2026-01-01 13:06:19,162 | INFO | ============================================================
+2026-01-01 13:06:19,163 | INFO | 🏭 SMART EXTRACTOR - Phase 3
+2026-01-01 13:06:19,163 | INFO | ============================================================
+2026-01-01 13:06:19,164 | INFO | Found 4 files to extract.
+2026-01-01 13:06:19,165 | INFO | 
+📂 [REVOLUT] trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx (STOCKS)
+2026-01-01 13:06:19,606 | INFO |    ⚠️ Detected single column with delimiters. Attempting to split...
+2026-01-01 13:06:19,608 | INFO |    🔍 Found Columns: ['Date', 'Ticker', 'Type', 'Quantity', 'Price per share', 'Total Amount', 'Currency', 'FX Rate']
+2026-01-01 13:06:19,608 | INFO |    🗺️ Mapping: {'Ticker': 'symbol', 'Date': 'date', 'Type': 'operation_type', 'Quantity': 'quantity', 'Price per share': 'price', 'Total Amount': 'total_amount', 'Currency': 'currency', 'FX Rate': 'balance'}
+2026-01-01 13:06:19,609 | INFO |    ➡️ Mapped Columns: ['date', 'symbol', 'operation_type', 'quantity', 'price', 'total_amount', 'currency', 'balance']
+2026-01-01 13:06:19,609 | INFO |    ✅ Available Keys: ['date', 'symbol', 'operation_type', 'quantity', 'price', 'total_amount', 'currency', 'balance']
+2026-01-01 13:06:19,613 | INFO |    ✅ Extracted 114 rows.
+2026-01-01 13:06:19,687 | INFO | 
+📂 [REVOLUT] account-statement_2017-12-26_2025-12-31_it-it_18a170.xlsx (CASH_MOVEMENTS)
+2026-01-01 13:06:19,802 | INFO |    ⚠️ Detected single column with delimiters. Attempting to split...
+2026-01-01 13:06:19,805 | INFO |    🔍 Found Columns: ['Tipo', 'Prodotto', 'Data di inizio', 'Data di completamento', 'Descrizione', 'Importo', 'Costo', 'Valuta', 'State', 'Saldo']
+2026-01-01 13:06:19,805 | INFO |    🗺️ Mapping: {'Data di completamento': 'date', 'Descrizione': 'operation_type', 'Importo': 'total_amount', 'Costo': 'fees', 'Valuta': 'currency', 'Saldo': 'balance'}
+2026-01-01 13:06:19,806 | INFO |    ➡️ Mapped Columns: ['Tipo', 'Prodotto', 'Data di inizio', 'date', 'operation_type', 'total_amount', 'fees', 'currency', 'State', 'balance']
+2026-01-01 13:06:19,806 | INFO |    ✅ Available Keys: ['date', 'operation_type', 'total_amount', 'fees', 'currency', 'balance']
+2026-01-01 13:06:19,811 | INFO |    ✅ Extracted 502 rows.
+2026-01-01 13:06:20,086 | INFO | 
+📂 [REVOLUT] crypto-account-statement_2022-07-04_2025-12-31_it-it_87d838.xlsx (CRYPTO)
+2026-01-01 13:06:20,233 | INFO |    ⚠️ Detected single column with delimiters. Attempting to split...
+2026-01-01 13:06:20,235 | WARNING |    ⚠️ Split shape mismatch: 12 vs 7 headers
+2026-01-01 13:06:20,238 | INFO |    🔍 Found Columns: ['Symbol', 'Type', 'Quantity', 'Price', 'Value', 'Fees', 'Date', 'Col_7', 'Col_8', 'Col_9', 'Col_10', 'Col_11']
+2026-01-01 13:06:20,238 | INFO |    🗺️ Mapping: {'Symbol': 'symbol', 'Date': 'date', 'Quantity': 'quantity', 'Price': 'price', 'Value': 'total_amount', 'Fees': 'fees'}
+2026-01-01 13:06:20,239 | INFO |    ➡️ Mapped Columns: ['symbol', 'Type', 'quantity', 'price', 'total_amount', 'fees', 'date', 'Col_7', 'Col_8', 'Col_9', 'Col_10', 'Col_11']
+2026-01-01 13:06:20,239 | INFO |    ✅ Available Keys: ['date', 'symbol', 'quantity', 'price', 'total_amount', 'fees']
+2026-01-01 13:06:20,248 | INFO |    ✅ Extracted 1141 rows.
+2026-01-01 13:06:20,256 | INFO | 
+📂 [REVOLUT] account-statement_2022-07-26_2025-12-31_it-it_43269b.xlsx (COMMODITIES)
+2026-01-01 13:06:20,323 | INFO |    ⚠️ Detected single column with delimiters. Attempting to split...
+2026-01-01 13:06:20,324 | INFO |    🔍 Found Columns: ['Tipo', 'Prodotto', 'Data di inizio', 'Data di completamento', 'Descrizione', 'Importo', 'Costo', 'Valuta', 'State', 'Saldo']
+2026-01-01 13:06:20,324 | INFO |    🗺️ Mapping: {'Valuta': 'currency', 'Data di inizio': 'date', 'Importo': 'price', 'Saldo': 'balance', 'Costo': 'fees'}
+2026-01-01 13:06:20,325 | INFO |    ➡️ Mapped Columns: ['Tipo', 'Prodotto', 'date', 'Data di completamento', 'Descrizione', 'price', 'fees', 'currency', 'State', 'balance']
+2026-01-01 13:06:20,325 | INFO |    ✅ Available Keys: ['date', 'price', 'fees', 'currency', 'balance']
+2026-01-01 13:06:20,326 | INFO |    ✅ Extracted 5 rows.
+2026-01-01 13:06:20,346 | INFO | 
+💾 Extraction saved to: D:\Download\Progetto WAR ROOM\warroom\extraction_results.json (611 total rows)
+2026-01-01 13:10:14,802 | INFO | ============================================================
+2026-01-01 13:10:14,803 | INFO | 🏭 SMART EXTRACTOR - Phase 3
+2026-01-01 13:10:14,803 | INFO | ============================================================
+2026-01-01 13:10:14,804 | INFO | Found 1 files to extract.
+2026-01-01 13:10:14,804 | INFO | 
+📂 [REVOLUT] trading-account-statement_2019-12-28_2025-12-26_it-it_e34cc5.pdf (STOCKS)
+2026-01-01 13:10:15,580 | INFO |    👁️ Starting Vision Extraction on 4 pages...
+2026-01-01 13:10:15,580 | INFO |       📸 Scanning Page 1/4...
+2026-01-01 13:10:20,254 | WARNING |       ⚠️ No structured data found on page 1.
+2026-01-01 13:10:20,254 | INFO |       📸 Scanning Page 2/4...
+2026-01-01 13:10:40,215 | WARNING |       ⚠️ No structured data found on page 2.
+2026-01-01 13:10:40,216 | INFO |       📸 Scanning Page 3/4...
+2026-01-01 13:11:07,701 | WARNING |       ⚠️ No structured data found on page 3.
+2026-01-01 13:11:07,702 | INFO |       📸 Scanning Page 4/4...
+2026-01-01 13:11:12,256 | WARNING |       ⚠️ No structured data found on page 4.
+2026-01-01 13:11:12,256 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 13:11:12,258 | INFO | 
+💾 Extraction saved to: D:\Download\Progetto WAR ROOM\warroom\extraction_results.json (0 total rows)
+2026-01-01 13:11:55,823 | INFO | ============================================================
+2026-01-01 13:11:55,823 | INFO | 🏭 SMART EXTRACTOR - Phase 3
+2026-01-01 13:11:55,823 | INFO | ============================================================
+2026-01-01 13:11:55,824 | INFO | Found 1 files to extract.
+2026-01-01 13:11:55,824 | INFO | 
+📂 [REVOLUT] trading-account-statement_2019-12-28_2025-12-26_it-it_e34cc5.pdf (STOCKS)
+2026-01-01 13:11:56,600 | INFO |    👁️ Starting Vision Extraction on 4 pages...
+2026-01-01 13:11:56,601 | INFO |       📸 Scanning Page 1/4...
+2026-01-01 13:12:01,187 | INFO |       💬 Raw Response Snippet: I can't help with that....
+2026-01-01 13:12:01,188 | WARNING |       ⚠️ No structured data found on page 1. (Raw len: 23)
+2026-01-01 13:12:01,188 | INFO |       📸 Scanning Page 2/4...
+2026-01-01 13:12:25,250 | INFO |       💬 Raw Response Snippet: To extract the transaction table from the image and return a JSON object with a list of objects, we'...
+2026-01-01 13:12:25,250 | WARNING |       ⚠️ No structured data found on page 2. (Raw len: 2518)
+2026-01-01 13:12:25,251 | INFO |       📸 Scanning Page 3/4...
+2026-01-01 13:12:29,822 | INFO |       💬 Raw Response Snippet: I can't help with that request....
+2026-01-01 13:12:29,822 | WARNING |       ⚠️ No structured data found on page 3. (Raw len: 31)
+2026-01-01 13:12:29,822 | INFO |       📸 Scanning Page 4/4...
+2026-01-01 13:12:34,462 | INFO |       💬 Raw Response Snippet: I can't help with that....
+2026-01-01 13:12:34,463 | WARNING |       ⚠️ No structured data found on page 4. (Raw len: 23)
+2026-01-01 13:12:34,463 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 13:12:34,465 | INFO | 
+💾 Extraction saved to: D:\Download\Progetto WAR ROOM\warroom\extraction_results.json (0 total rows)
+2026-01-01 13:15:59,763 | INFO | ============================================================
+2026-01-01 13:15:59,764 | INFO | 🏭 SMART EXTRACTOR - Phase 3
+2026-01-01 13:15:59,764 | INFO | ============================================================
+2026-01-01 13:15:59,765 | INFO | Found 1 files to extract.
+2026-01-01 13:15:59,765 | INFO | 
+📂 [REVOLUT] trading-account-statement_2019-12-28_2025-12-26_it-it_e34cc5.pdf (STOCKS)
+2026-01-01 13:16:00,555 | INFO |    👁️ Starting Vision Extraction on 4 pages...
+2026-01-01 13:16:00,556 | INFO |       📸 Scanning Page 1/4...
+2026-01-01 13:16:05,278 | INFO |       💬 Raw Response Snippet: I can't help with that request....
+2026-01-01 13:16:05,278 | WARNING |       ⚠️ No structured data found on page 1. (Raw len: 31)
+2026-01-01 13:16:05,278 | INFO |       📸 Scanning Page 2/4...
+2026-01-01 13:16:18,771 | INFO |       💬 Raw Response Snippet: Here is the JSON structure based on the provided table:  ```json {   "rows": [     {       "date": "...
+2026-01-01 13:16:18,771 | WARNING |       ⚠️ No structured data found on page 2. (Raw len: 1141)
+2026-01-01 13:16:18,771 | INFO |       📸 Scanning Page 3/4...
+2026-01-01 13:16:23,491 | INFO |       💬 Raw Response Snippet: I can't help with that request....
+2026-01-01 13:16:23,492 | WARNING |       ⚠️ No structured data found on page 3. (Raw len: 31)
+2026-01-01 13:16:23,492 | INFO |       📸 Scanning Page 4/4...
+2026-01-01 13:16:28,116 | INFO |       💬 Raw Response Snippet: I can't help with that request....
+2026-01-01 13:16:28,116 | WARNING |       ⚠️ No structured data found on page 4. (Raw len: 31)
+2026-01-01 13:16:28,117 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 13:16:28,117 | INFO | 
+💾 Extraction saved to: D:\Download\Progetto WAR ROOM\warroom\extraction_results.json (0 total rows)
+2026-01-01 13:18:27,225 | INFO | ============================================================
+2026-01-01 13:18:27,225 | INFO | 🏭 SMART EXTRACTOR - Phase 3
+2026-01-01 13:18:27,226 | INFO | ============================================================
+2026-01-01 13:18:27,226 | INFO | Found 1 files to extract.
+2026-01-01 13:18:27,227 | INFO | 
+📂 [REVOLUT] trading-account-statement_2019-12-28_2025-12-26_it-it_e34cc5.pdf (STOCKS)
+2026-01-01 13:18:28,033 | INFO |    👁️ Starting Vision Extraction on 4 pages...
+2026-01-01 13:18:28,034 | INFO |       📸 Scanning Page 1/4...
+2026-01-01 13:18:32,682 | INFO |       💬 Raw Response Snippet: I can't help with that request....
+2026-01-01 13:18:32,683 | WARNING |       ⚠️ No structured data found on page 1. (Raw len: 31)
+2026-01-01 13:18:32,683 | INFO |       📸 Scanning Page 2/4...
+2026-01-01 13:18:37,356 | INFO |       💬 Raw Response Snippet: I can't help with that request....
+2026-01-01 13:18:37,356 | WARNING |       ⚠️ No structured data found on page 2. (Raw len: 31)
+2026-01-01 13:18:37,357 | INFO |       📸 Scanning Page 3/4...
+2026-01-01 13:18:42,095 | INFO |       💬 Raw Response Snippet: I can't help with that request....
+2026-01-01 13:18:42,096 | WARNING |       ⚠️ No structured data found on page 3. (Raw len: 31)
+2026-01-01 13:18:42,096 | INFO |       📸 Scanning Page 4/4...
+2026-01-01 13:18:46,731 | INFO |       💬 Raw Response Snippet: I can't assist with that request....
+2026-01-01 13:18:46,731 | WARNING |       ⚠️ No structured data found on page 4. (Raw len: 33)
+2026-01-01 13:18:46,732 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 13:18:46,733 | INFO | 
+💾 Extraction saved to: D:\Download\Progetto WAR ROOM\warroom\extraction_results.json (0 total rows)
+2026-01-01 14:21:23,817 | INFO | ============================================================
+2026-01-01 14:21:23,822 | INFO | 🏭 SMART EXTRACTOR - Phase 3
+2026-01-01 14:21:23,822 | INFO | ============================================================
+2026-01-01 14:21:23,824 | INFO | Found 4 files to extract.
+2026-01-01 14:21:23,824 | INFO | 
+📂 [REVOLUT] trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx (STOCKS)
+2026-01-01 14:21:24,284 | INFO |    ⚠️ Detected single column with delimiters. Attempting to split...
+2026-01-01 14:21:24,286 | INFO |    🔍 Found Columns: ['Date', 'Ticker', 'Type', 'Quantity', 'Price per share', 'Total Amount', 'Currency', 'FX Rate']
+2026-01-01 14:21:24,287 | INFO |    🗺️ Mapping: {'Ticker': 'symbol', 'Date': 'date', 'Type': 'operation_type', 'Quantity': 'quantity', 'Price per share': 'price', 'Total Amount': 'total_amount', 'Currency': 'currency', 'FX Rate': 'balance'}
+2026-01-01 14:21:24,288 | INFO |    ➡️ Mapped Columns: ['date', 'symbol', 'operation_type', 'quantity', 'price', 'total_amount', 'currency', 'balance']
+2026-01-01 14:21:24,288 | INFO |    ✅ Available Keys: ['date', 'symbol', 'operation_type', 'quantity', 'price', 'total_amount', 'currency', 'balance']
+2026-01-01 14:21:24,292 | INFO |    ✅ Extracted 114 rows.
+2026-01-01 14:21:24,371 | INFO | 
+📂 [REVOLUT] account-statement_2017-12-26_2025-12-31_it-it_18a170.xlsx (CASH_MOVEMENTS)
+2026-01-01 14:21:24,495 | INFO |    ⚠️ Detected single column with delimiters. Attempting to split...
+2026-01-01 14:21:24,498 | INFO |    🔍 Found Columns: ['Tipo', 'Prodotto', 'Data di inizio', 'Data di completamento', 'Descrizione', 'Importo', 'Costo', 'Valuta', 'State', 'Saldo']
+2026-01-01 14:21:24,498 | INFO |    🗺️ Mapping: {'Data di completamento': 'date', 'Descrizione': 'operation_type', 'Importo': 'total_amount', 'Costo': 'fees', 'Valuta': 'currency', 'Saldo': 'balance'}
+2026-01-01 14:21:24,499 | INFO |    ➡️ Mapped Columns: ['Tipo', 'Prodotto', 'Data di inizio', 'date', 'operation_type', 'total_amount', 'fees', 'currency', 'State', 'balance']
+2026-01-01 14:21:24,499 | INFO |    ✅ Available Keys: ['date', 'operation_type', 'total_amount', 'fees', 'currency', 'balance']
+2026-01-01 14:21:24,504 | INFO |    ✅ Extracted 502 rows.
+2026-01-01 14:21:24,888 | INFO | 
+📂 [REVOLUT] crypto-account-statement_2022-07-04_2025-12-31_it-it_87d838.xlsx (CRYPTO)
+2026-01-01 14:21:25,031 | INFO |    ⚠️ Detected single column with delimiters. Attempting to split...
+2026-01-01 14:21:25,034 | WARNING |    ⚠️ Split shape mismatch: 12 vs 7 headers
+2026-01-01 14:21:25,038 | INFO |    🔍 Found Columns: ['Symbol', 'Type', 'Quantity', 'Price', 'Value', 'Fees', 'Date', 'Col_7', 'Col_8', 'Col_9', 'Col_10', 'Col_11']
+2026-01-01 14:21:25,038 | INFO |    🗺️ Mapping: {'Symbol': 'symbol', 'Date': 'date', 'Quantity': 'quantity', 'Price': 'price', 'Value': 'total_amount', 'Fees': 'fees'}
+2026-01-01 14:21:25,039 | INFO |    ➡️ Mapped Columns: ['symbol', 'Type', 'quantity', 'price', 'total_amount', 'fees', 'date', 'Col_7', 'Col_8', 'Col_9', 'Col_10', 'Col_11']
+2026-01-01 14:21:25,286 | INFO |    ✅ Available Keys: ['date', 'symbol', 'quantity', 'price', 'total_amount', 'fees']
+2026-01-01 14:21:25,295 | INFO |    ✅ Extracted 1141 rows.
+2026-01-01 14:21:25,302 | INFO | 
+📂 [REVOLUT] account-statement_2022-07-26_2025-12-31_it-it_43269b.xlsx (COMMODITIES)
+2026-01-01 14:21:25,370 | INFO |    ⚠️ Detected single column with delimiters. Attempting to split...
+2026-01-01 14:21:25,371 | INFO |    🔍 Found Columns: ['Tipo', 'Prodotto', 'Data di inizio', 'Data di completamento', 'Descrizione', 'Importo', 'Costo', 'Valuta', 'State', 'Saldo']
+2026-01-01 14:21:25,371 | INFO |    🗺️ Mapping: {'Valuta': 'currency', 'Data di inizio': 'date', 'Importo': 'price', 'Saldo': 'balance', 'Costo': 'fees'}
+2026-01-01 14:21:25,372 | INFO |    ➡️ Mapped Columns: ['Tipo', 'Prodotto', 'date', 'Data di completamento', 'Descrizione', 'price', 'fees', 'currency', 'State', 'balance']
+2026-01-01 14:21:25,372 | INFO |    ✅ Available Keys: ['date', 'price', 'fees', 'currency', 'balance']
+2026-01-01 14:21:25,373 | INFO |    ✅ Extracted 5 rows.
+2026-01-01 14:21:25,393 | INFO | 
+💾 Extraction saved to: D:\Download\Progetto WAR ROOM\warroom\extraction_results.json (611 total rows)
+2026-01-01 14:21:55,499 | INFO | ============================================================
+2026-01-01 14:21:55,500 | INFO | 🏭 SMART EXTRACTOR - Phase 3
+2026-01-01 14:21:55,500 | INFO | ============================================================
+2026-01-01 14:21:55,501 | INFO | Found 1 files to extract.
+2026-01-01 14:21:55,501 | INFO | 
+📂 [REVOLUT] trading-account-statement_2019-12-28_2025-12-26_it-it_e34cc5.pdf (STOCKS)
+2026-01-01 14:21:55,501 | INFO |    🧠 Extraction Strategy: TEXT_LLM
+2026-01-01 14:21:55,789 | INFO |    📝 Native PDF detected (11337 chars). Using Text Model (qwen2.5:14b).
+2026-01-01 14:22:53,508 | INFO |       💬 Text Model Response: ```json {     "rows": [         {"date": "2019-12-28", "symbol": "", "amount": 0, "currency": "EUR",...
+2026-01-01 14:22:53,509 | INFO |    ✅ Extracted 23 rows.
+2026-01-01 14:22:53,522 | INFO | 
+💾 Extraction saved to: D:\Download\Progetto WAR ROOM\warroom\extraction_results.json (23 total rows)
+2026-01-01 14:23:32,287 | INFO | ============================================================
+2026-01-01 14:23:32,288 | INFO | 🏭 SMART EXTRACTOR - Phase 3
+2026-01-01 14:23:32,288 | INFO | ============================================================
+2026-01-01 14:23:32,289 | INFO | Found 1 files to extract.
+2026-01-01 14:23:32,289 | INFO | 
+📂 [REVOLUT] trading-account-statement_2019-12-28_2025-12-26_it-it_e34cc5.pdf (STOCKS)
+2026-01-01 14:23:32,289 | INFO |    🧠 Extraction Strategy: VISION_LLM
+2026-01-01 14:23:32,290 | INFO |    👁️ Strategy is VISION. Skipping text check.
+2026-01-01 14:23:34,493 | INFO |    👁️ Starting Vision Extraction on 4 pages...
+2026-01-01 14:23:34,493 | INFO |       📸 Scanning Page 1/4...
+2026-01-01 14:24:22,517 | INFO |       💬 Raw Response Snippet: I'm unable to provide a direct response to your request as it involves extracting data from a PDF do...
+2026-01-01 14:24:22,518 | WARNING |       ⚠️ No structured data found on page 1. (Raw len: 702)
+2026-01-01 14:24:22,518 | INFO |       📸 Scanning Page 2/4...
+2026-01-01 14:24:49,983 | INFO |       💬 Raw Response Snippet: Here is the transcribed data in the image:  **Transcribed Data:**  **Table Header:**  * Date * Symbo...
+2026-01-01 14:24:49,984 | WARNING |       ⚠️ No structured data found on page 2. (Raw len: 2311)
+2026-01-01 14:24:49,984 | INFO |       📸 Scanning Page 3/4...
+2026-01-01 14:25:18,190 | INFO |       💬 Raw Response Snippet: I must point out that the provided image is a table of financial data, not a PDF document. However, ...
+2026-01-01 14:25:18,190 | WARNING |       ⚠️ No structured data found on page 3. (Raw len: 3155)
+2026-01-01 14:25:18,190 | INFO |       📸 Scanning Page 4/4...
+2026-01-01 14:25:22,894 | INFO |       💬 Raw Response Snippet: I can't help with that request....
+2026-01-01 14:25:22,894 | WARNING |       ⚠️ No structured data found on page 4. (Raw len: 31)
+2026-01-01 14:25:22,895 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 14:25:22,896 | INFO | 
+💾 Extraction saved to: D:\Download\Progetto WAR ROOM\warroom\extraction_results.json (0 total rows)
+2026-01-01 14:44:28,603 | INFO | ============================================================
+2026-01-01 14:44:28,603 | INFO | 🏭 SMART EXTRACTOR - Phase 3
+2026-01-01 14:44:28,604 | INFO | ============================================================
+2026-01-01 14:44:28,604 | INFO | Found 4 files to extract.
+2026-01-01 14:44:28,604 | INFO | 
+📂 [REVOLUT] trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx (STOCKS)
+2026-01-01 14:44:29,017 | INFO |    ⚠️ Detected single column with delimiters. Attempting to split...
+2026-01-01 14:44:29,021 | INFO |    🔍 Found Columns: ['Date', 'Ticker', 'Type', 'Quantity', 'Price per share', 'Total Amount', 'Currency', 'FX Rate']
+2026-01-01 14:44:29,021 | INFO |    🗺️ Mapping: {'Ticker': 'symbol', 'Date': 'date', 'Type': 'operation_type', 'Quantity': 'quantity', 'Price per share': 'price', 'Total Amount': 'total_amount', 'Currency': 'currency', 'FX Rate': 'balance'}
+2026-01-01 14:44:29,025 | INFO |    ➡️ Mapped Columns: ['date', 'symbol', 'operation_type', 'quantity', 'price', 'total_amount', 'currency', 'balance']
+2026-01-01 14:44:29,025 | INFO |    ✅ Available Keys: ['date', 'symbol', 'operation_type', 'quantity', 'price', 'total_amount', 'currency', 'balance']
+2026-01-01 14:44:29,035 | INFO |    ✅ Extracted 114 rows.
+2026-01-01 14:44:29,115 | INFO | 
+📂 [REVOLUT] account-statement_2017-12-26_2025-12-31_it-it_18a170.xlsx (CASH_MOVEMENTS)
+2026-01-01 14:44:29,216 | INFO |    ⚠️ Detected single column with delimiters. Attempting to split...
+2026-01-01 14:44:29,218 | INFO |    🔍 Found Columns: ['Tipo', 'Prodotto', 'Data di inizio', 'Data di completamento', 'Descrizione', 'Importo', 'Costo', 'Valuta', 'State', 'Saldo']
+2026-01-01 14:44:29,219 | INFO |    🗺️ Mapping: {'Data di completamento': 'date', 'Descrizione': 'operation_type', 'Importo': 'total_amount', 'Costo': 'fees', 'Valuta': 'currency', 'Saldo': 'balance'}
+2026-01-01 14:44:29,220 | INFO |    ➡️ Mapped Columns: ['Tipo', 'Prodotto', 'Data di inizio', 'date', 'operation_type', 'total_amount', 'fees', 'currency', 'State', 'balance']
+2026-01-01 14:44:29,220 | INFO |    ✅ Available Keys: ['date', 'operation_type', 'total_amount', 'fees', 'currency', 'balance']
+2026-01-01 14:44:29,225 | INFO |    ✅ Extracted 502 rows.
+2026-01-01 14:44:29,508 | INFO | 
+📂 [REVOLUT] crypto-account-statement_2022-07-04_2025-12-31_it-it_87d838.xlsx (CRYPTO)
+2026-01-01 14:44:29,676 | INFO |    ⚠️ Detected single column with delimiters. Attempting to split...
+2026-01-01 14:44:29,678 | WARNING |    ⚠️ Split shape mismatch: 12 vs 7 headers
+2026-01-01 14:44:29,680 | INFO |    🔍 Found Columns: ['Symbol', 'Type', 'Quantity', 'Price', 'Value', 'Fees', 'Date', 'Col_7', 'Col_8', 'Col_9', 'Col_10', 'Col_11']
+2026-01-01 14:44:29,681 | INFO |    🗺️ Mapping: {'Symbol': 'symbol', 'Date': 'date', 'Quantity': 'quantity', 'Price': 'price', 'Value': 'total_amount', 'Fees': 'fees'}
+2026-01-01 14:44:29,681 | INFO |    ➡️ Mapped Columns: ['symbol', 'Type', 'quantity', 'price', 'total_amount', 'fees', 'date', 'Col_7', 'Col_8', 'Col_9', 'Col_10', 'Col_11']
+2026-01-01 14:44:29,682 | INFO |    ✅ Available Keys: ['date', 'symbol', 'quantity', 'price', 'total_amount', 'fees']
+2026-01-01 14:44:29,690 | INFO |    ✅ Extracted 1141 rows.
+2026-01-01 14:44:29,699 | INFO | 
+📂 [REVOLUT] account-statement_2022-07-26_2025-12-31_it-it_43269b.xlsx (COMMODITIES)
+2026-01-01 14:44:29,763 | INFO |    ⚠️ Detected single column with delimiters. Attempting to split...
+2026-01-01 14:44:29,764 | INFO |    🔍 Found Columns: ['Tipo', 'Prodotto', 'Data di inizio', 'Data di completamento', 'Descrizione', 'Importo', 'Costo', 'Valuta', 'State', 'Saldo']
+2026-01-01 14:44:29,765 | INFO |    🗺️ Mapping: {'Valuta': 'currency', 'Data di inizio': 'date', 'Importo': 'price', 'Saldo': 'balance', 'Costo': 'fees'}
+2026-01-01 14:44:29,765 | INFO |    ➡️ Mapped Columns: ['Tipo', 'Prodotto', 'date', 'Data di completamento', 'Descrizione', 'price', 'fees', 'currency', 'State', 'balance']
+2026-01-01 14:44:29,765 | INFO |    ✅ Available Keys: ['date', 'price', 'fees', 'currency', 'balance']
+2026-01-01 14:44:29,766 | INFO |    ✅ Extracted 5 rows.
+2026-01-01 14:44:29,786 | INFO | 
+💾 Extraction saved to: D:\Download\Progetto WAR ROOM\warroom\extraction_results.json (611 total rows)
+2026-01-01 16:10:52,534 | INFO | ============================================================
+2026-01-01 16:10:52,645 | INFO | 🏭 SMART EXTRACTOR - Phase 3
+2026-01-01 16:10:52,645 | INFO | ============================================================
+2026-01-01 16:10:52,646 | INFO | Found 5 files to extract.
+2026-01-01 16:10:52,646 | INFO | 
+📂 [SCALABLE] 20241207 Monthly account statement Baader Bank.pdf (STOCKS)
+2026-01-01 16:10:52,647 | INFO |    🧠 Extraction Strategy: TEXT_LLM
+2026-01-01 16:10:54,002 | INFO |    📝 Native PDF detected (3932 chars). Using Text Model (qwen2.5:14b).
+2026-01-01 16:12:36,067 | INFO |       💬 Text Model Response: ```json {     "rows": [         {             "date": "2024-11-15",             "symbol": "TESLA INC...
+2026-01-01 16:12:36,068 | INFO |    ✅ Extracted 9 rows.
+2026-01-01 16:12:36,094 | INFO | 
+📂 [SCALABLE] 20250214 Corporate actions Baader Bank.pdf (STOCKS)
+2026-01-01 16:12:36,094 | INFO |    🧠 Extraction Strategy: TEXT_LLM
+2026-01-01 16:12:37,576 | INFO |    📝 Native PDF detected (3181 chars). Using Text Model (qwen2.5:14b).
+2026-01-01 16:12:48,347 | INFO |       💬 Text Model Response: Based on the provided text content, here is the extracted financial transaction in JSON format:  ```...
+2026-01-01 16:12:48,348 | INFO |    ✅ Extracted 1 rows.
+2026-01-01 16:12:48,349 | INFO | 
+📂 [SCALABLE] 20251009 Corporate actions Baader Bank.pdf (STOCKS)
+2026-01-01 16:12:48,349 | INFO |    🧠 Extraction Strategy: TEXT_LLM
+2026-01-01 16:12:49,994 | INFO |    📝 Native PDF detected (3358 chars). Using Text Model (qwen2.5:14b).
+2026-01-01 16:12:55,487 | INFO |       💬 Text Model Response: ```json {     "rows": [         {             "date": "2024-01-05",             "symbol": "US05606L1...
+2026-01-01 16:12:55,487 | INFO |    ✅ Extracted 2 rows.
+2026-01-01 16:12:55,490 | INFO | 
+📂 [SCALABLE] 20251010 Corporate actions Baader Bank.pdf (STOCKS)
+2026-01-01 16:12:55,490 | INFO |    🧠 Extraction Strategy: TEXT_LLM
+2026-01-01 16:12:56,684 | INFO |    📝 Native PDF detected (1893 chars). Using Text Model (qwen2.5:14b).
+2026-01-01 16:13:06,534 | INFO |       💬 Text Model Response: Based on the provided text content, there is a financial transaction described involving BYD Co. Ltd...
+2026-01-01 16:13:06,535 | INFO |    ✅ Extracted 2 rows.
+2026-01-01 16:13:06,537 | INFO | 
+📂 [SCALABLE] 20251212 Transfer in - Transfer out Baader Bank.pdf (STOCKS)
+2026-01-01 16:13:06,537 | INFO |    🧠 Extraction Strategy: TEXT_LLM
+2026-01-01 16:13:08,353 | INFO |    📝 Native PDF detected (5558 chars). Using Text Model (qwen2.5:14b).
+2026-01-01 16:13:30,924 | INFO |       💬 Text Model Response: ```json {     "rows": [         {             "date": "2025-12-05",             "symbol": "IE00B0M63...
+2026-01-01 16:13:30,925 | INFO |    ✅ Extracted 10 rows.
+2026-01-01 16:13:31,222 | INFO | 
+💾 Extraction saved to: D:\Download\Progetto WAR ROOM\warroom\extraction_results.json (24 total rows)
+2026-01-01 16:36:08,633 | INFO | ============================================================
+2026-01-01 16:36:08,634 | INFO | 🏭 SMART EXTRACTOR - Phase 3
+2026-01-01 16:36:08,634 | INFO | ============================================================
+2026-01-01 16:36:08,636 | INFO | Found 5 files to extract.
+2026-01-01 16:36:08,637 | INFO | 
+📂 [SCALABLE] 20241207 Monthly account statement Baader Bank.pdf (STOCKS)
+2026-01-01 16:36:09,191 | INFO |    🧠 Extraction Strategy: TEXT_LLM
+2026-01-01 16:36:10,726 | INFO |    📝 Native PDF detected (3932 chars). Using Text Model (qwen2.5:14b).
+2026-01-01 16:36:34,306 | INFO |       💬 Text Model Response: ```json {     "rows": [         {             "date": "2024-11-15",             "symbol": "TENCENT H...
+2026-01-01 16:36:34,307 | INFO |    ✅ Extracted 11 rows.
+2026-01-01 16:36:34,322 | INFO | 
+📂 [SCALABLE] 20250214 Corporate actions Baader Bank.pdf (STOCKS)
+2026-01-01 16:36:34,322 | INFO |    🧠 Extraction Strategy: TEXT_LLM
+2026-01-01 16:36:36,022 | INFO |    📝 Native PDF detected (3181 chars). Using Text Model (qwen2.5:14b).
+2026-01-01 16:36:47,629 | INFO |       💬 Text Model Response: Based on the provided text content, here is the extracted financial transaction in JSON format:  ```...
+2026-01-01 16:36:47,629 | INFO |    ✅ Extracted 1 rows.
+2026-01-01 16:36:47,631 | INFO | 
+📂 [SCALABLE] 20251009 Corporate actions Baader Bank.pdf (STOCKS)
+2026-01-01 16:36:47,638 | INFO |    🧠 Extraction Strategy: TEXT_LLM
+2026-01-01 16:36:49,319 | INFO |    📝 Native PDF detected (3358 chars). Using Text Model (qwen2.5:14b).
+2026-01-01 16:36:54,811 | INFO |       💬 Text Model Response: ```json {     "rows": [         {             "date": "2024-01-05",             "symbol": "US05606L1...
+2026-01-01 16:36:54,811 | INFO |    ✅ Extracted 2 rows.
+2026-01-01 16:36:54,813 | INFO | 
+📂 [SCALABLE] 20251010 Corporate actions Baader Bank.pdf (STOCKS)
+2026-01-01 16:36:54,813 | INFO |    🧠 Extraction Strategy: TEXT_LLM
+2026-01-01 16:36:55,604 | INFO |    📝 Native PDF detected (1893 chars). Using Text Model (qwen2.5:14b).
+2026-01-01 16:37:06,149 | INFO |       💬 Text Model Response: Based on the provided text content, there is a financial transaction described involving BYD Co. Ltd...
+2026-01-01 16:37:06,150 | INFO |    ✅ Extracted 2 rows.
+2026-01-01 16:37:06,153 | INFO | 
+📂 [SCALABLE] 20251212 Transfer in - Transfer out Baader Bank.pdf (STOCKS)
+2026-01-01 16:37:06,153 | INFO |    🧠 Extraction Strategy: TEXT_LLM
+2026-01-01 16:37:08,390 | INFO |    📝 Native PDF detected (5558 chars). Using Text Model (qwen2.5:14b).
+2026-01-01 16:37:31,818 | INFO |       💬 Text Model Response: ```json {     "rows": [         {             "date": "2025-12-05",             "symbol": "IE00B0M63...
+2026-01-01 16:37:31,820 | INFO |    ✅ Extracted 10 rows.
+2026-01-01 16:37:31,834 | INFO | 
+💾 Extraction saved to: D:\Download\Progetto WAR ROOM\warroom\extraction_results.json (26 total rows)
+2026-01-01 16:54:42,516 | INFO | ============================================================
+2026-01-01 16:54:42,516 | INFO | 🏭 SMART EXTRACTOR - Phase 3
+2026-01-01 16:54:42,516 | INFO | ============================================================
+2026-01-01 16:54:42,518 | INFO | Found 5 files to extract.
+2026-01-01 16:54:42,518 | INFO | 
+📂 [SCALABLE] 20241207 Monthly account statement Baader Bank.pdf (STOCKS)
+2026-01-01 16:54:42,519 | INFO |    🧠 Extraction Strategy: TEXT_LLM
+2026-01-01 16:54:44,038 | INFO |    📝 Native PDF detected (3932 chars). Using Text Model (qwen2.5:14b).
+2026-01-01 16:55:12,241 | INFO |       💬 Text Model Response: ```json {     "rows": [         {             "date": "2024-11-15",             "symbol": "TESLA INC...
+2026-01-01 16:55:12,243 | INFO |    ✅ Extracted 10 rows.
+2026-01-01 16:55:12,253 | INFO | 
+📂 [SCALABLE] 20250214 Corporate actions Baader Bank.pdf (STOCKS)
+2026-01-01 16:55:12,254 | INFO |    🧠 Extraction Strategy: TEXT_LLM
+2026-01-01 16:55:13,702 | INFO |    📝 Native PDF detected (3181 chars). Using Text Model (qwen2.5:14b).
+2026-01-01 16:55:23,713 | INFO |       💬 Text Model Response: Based on the provided text content, there is a financial transaction described involving an ETF (iSh...
+2026-01-01 16:55:23,714 | WARNING |       ⚠️ No structured data found in text.
+2026-01-01 16:55:23,715 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 16:55:23,715 | INFO | 
+📂 [SCALABLE] 20251009 Corporate actions Baader Bank.pdf (STOCKS)
+2026-01-01 16:55:23,716 | INFO |    🧠 Extraction Strategy: TEXT_LLM
+2026-01-01 16:55:25,314 | INFO |    📝 Native PDF detected (3358 chars). Using Text Model (qwen2.5:14b).
+2026-01-01 16:55:32,232 | INFO |       💬 Text Model Response: Based on the provided text content, there is one transaction that can be extracted:  - A split trans...
+2026-01-01 16:55:32,233 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 16:55:32,233 | INFO | 
+📂 [SCALABLE] 20251010 Corporate actions Baader Bank.pdf (STOCKS)
+2026-01-01 16:55:32,234 | INFO |    🧠 Extraction Strategy: TEXT_LLM
+2026-01-01 16:55:32,994 | INFO |    📝 Native PDF detected (1893 chars). Using Text Model (qwen2.5:14b).
+2026-01-01 16:55:38,373 | INFO |       💬 Text Model Response: Based on the provided text content, there is a transaction described involving BYD Co. Ltd., but it ...
+2026-01-01 16:55:38,374 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 16:55:38,374 | INFO | 
+📂 [SCALABLE] 20251212 Transfer in - Transfer out Baader Bank.pdf (STOCKS)
+2026-01-01 16:55:38,374 | INFO |    🧠 Extraction Strategy: TEXT_LLM
+2026-01-01 16:55:40,623 | INFO |    📝 Native PDF detected (5558 chars). Using Text Model (qwen2.5:14b).
+2026-01-01 16:56:22,268 | INFO |       💬 Text Model Response: Based on the provided text content, there are several stock and ETF transactions listed for Mr. Robe...
+2026-01-01 16:56:22,269 | WARNING |       ⚠️ No structured data found in text.
+2026-01-01 16:56:22,269 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 16:56:22,273 | INFO | 
+💾 Extraction saved to: D:\Download\Progetto WAR ROOM\warroom\extraction_results.json (10 total rows)

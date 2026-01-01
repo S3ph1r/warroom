@@ -1,0 +1,635 @@
+{
+  "last_scan": "2026-01-01T17:10:51.767549",
+  "brokers": {
+    "REVOLUT": {
+      "source_folder": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\revolut",
+      "documents": {
+        "1e9a1dbd52ce": {
+          "files": [
+            "account-statement_2017-12-26_2025-12-26_it-it_3726b9.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T12:50:30.563651"
+        },
+        "a3b6c38bd670": {
+          "files": [
+            "trading-account-statement_2019-12-28_2025-12-26_it-it_e34cc5.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "Redundant: Excel version exists",
+          "skipped_at": "2026-01-01T14:41:19.636480"
+        },
+        "c61c5b79a44c": {
+          "files": [
+            "trading-pnl-statement_2019-12-28_2025-12-20_it-it_d7438d.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "Redundant: Excel version exists",
+          "skipped_at": "2026-01-01T14:41:19.918184"
+        },
+        "be8861d923da": {
+          "files": [
+            "crypto-account-statement_2022-07-04_2025-12-20_it-it_1c330c.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "Redundant: Excel version exists",
+          "skipped_at": "2026-01-01T14:41:20.264667"
+        },
+        "29b5940ce174": {
+          "files": [
+            "trading-account-statement_2022-07-04_2025-12-20_it-it_3fb91a.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "Redundant: Excel version exists",
+          "skipped_at": "2026-01-01T12:50:45.384029"
+        },
+        "955c751fedfb": {
+          "files": [
+            "account-statement_2022-07-26_2025-12-20_it-it_6b3811.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "Redundant: Excel version exists",
+          "skipped_at": "2026-01-01T14:41:20.499133"
+        }
+      }
+    },
+    "BGSAXO": {
+      "source_folder": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\bgsaxo",
+      "documents": {}
+    },
+    "SCALABLE": {
+      "source_folder": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\scalable",
+      "documents": {
+        "23111df24e9d": {
+          "files": [
+            "20221213 Monthly account statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:05:30.821622"
+        },
+        "3a136d633493": {
+          "files": [
+            "20230414 Statement of accounts Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:06:06.970741"
+        },
+        "82838115e133": {
+          "files": [
+            "20230603 Monthly account statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:06:25.813234"
+        },
+        "83d047f66a0b": {
+          "files": [
+            "20230707 Monthly account statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:06:30.374198"
+        },
+        "d65f0c477a2e": {
+          "files": [
+            "20230707 Statement of accounts Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:06:35.471757"
+        },
+        "74f793e4fee1": {
+          "files": [
+            "20230930 Statement of accounts Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:06:53.390861"
+        },
+        "055bc4cdf8b3": {
+          "files": [
+            "20231201 Aggiornamento della privacy policy Scalable Capital.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:07:05.043402"
+        },
+        "59e2675b8801": {
+          "files": [
+            "20231206 Monthly account statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:07:09.577942"
+        },
+        "8fae7c57efc0": {
+          "files": [
+            "20240112 Monthly account statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:07:14.723712"
+        },
+        "96dccdc8fbe1": {
+          "files": [
+            "20240206 Monthly account statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:07:19.130021"
+        },
+        "8e0fa829234d": {
+          "files": [
+            "20240306 Statement of accounts Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:07:34.061006"
+        },
+        "70bdbd42c725": {
+          "files": [
+            "20240913 Monthly account statement Baader Bank (1).pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:08:11.921008"
+        },
+        "ae03d1930b0d": {
+          "files": [
+            "20241002 Statement of accounts Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:08:16.365738"
+        },
+        "a0f20b83bb20": {
+          "files": [
+            "20241011 Monthly account statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:08:21.222224"
+        },
+        "fb2a4cfb2127": {
+          "files": [
+            "20250402 Monthly account statement Broker Scalable Capital.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:08:42.868488"
+        },
+        "0bedc64838d4": {
+          "files": [
+            "20250402 Statement of accounts Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:08:48.236349"
+        },
+        "913d1f181970": {
+          "files": [
+            "20250403 Securities Account Statement Broker Scalable Capital.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:08:50.737850"
+        },
+        "3df3f0c5fb25": {
+          "files": [
+            "20250423 Change in interest rate Scalable Capital.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:09:02.699337"
+        },
+        "0668bfecac61": {
+          "files": [
+            "20250505 Monthly account statement Broker Scalable Capital.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:09:10.046334"
+        },
+        "914d6c7318a6": {
+          "files": [
+            "20250703 Periodic balance statement Broker Scalable Capital.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:09:25.080685"
+        },
+        "ccd98ef2fee7": {
+          "files": [
+            "20250704 Statement of accounts Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:09:29.585464"
+        },
+        "a46ec97058d5": {
+          "files": [
+            "20250804 Monthly account statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:09:39.671680"
+        },
+        "b0d3fec1bbac": {
+          "files": [
+            "20250902 Monthly account statement Broker Scalable Capital.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:09:52.895845"
+        },
+        "56726e152ed6": {
+          "files": [
+            "20251002 Monthly account statement Broker Scalable Capital.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:10:00.750771"
+        },
+        "9682d0135773": {
+          "files": [
+            "20251002 Periodic balance statement Broker Scalable Capital.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:10:04.548125"
+        },
+        "6ae8e2200be3": {
+          "files": [
+            "20251002 Statement of accounts Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:10:11.914291"
+        },
+        "a280d7d6fffd": {
+          "files": [
+            "20251203 Monthly account statement Broker Scalable Capital.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:10:42.673111"
+        },
+        "f75579d80b30": {
+          "files": [
+            "20251204 Monthly account statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:10:46.989547"
+        },
+        "efe8ebaae865": {
+          "files": [
+            "20251212 Statement of accounts Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:10:51.767533"
+        },
+        "cea309be7539": {
+          "files": [
+            "20230107 Monthly account statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:05:36.954484"
+        },
+        "ee7863e424b8": {
+          "files": [
+            "20230107 Statement of accounts Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:05:42.352908"
+        },
+        "77c6f88d2f38": {
+          "files": [
+            "20230204 Monthly account statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:05:46.770459"
+        },
+        "74dc6138640d": {
+          "files": [
+            "20230225 Account statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:05:53.852168"
+        },
+        "deb3779edf15": {
+          "files": [
+            "20230306 Monthly account statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:05:57.914846"
+        },
+        "9addebb992aa": {
+          "files": [
+            "20230414 Monthly account statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:06:02.443053"
+        },
+        "8b19b91b5745": {
+          "files": [
+            "20230504 General meeting Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:06:13.322701"
+        },
+        "42de612f23be": {
+          "files": [
+            "20230504 Monthly account statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:06:17.572806"
+        },
+        "8c8593314e5c": {
+          "files": [
+            "20230519 Report fiscale Scalable Capital.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:06:21.764734"
+        },
+        "e82fdab92ae2": {
+          "files": [
+            "20230714 Informazioni sui costi ex-post Scalable Capital.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:06:39.345426"
+        },
+        "2834ea9e4a92": {
+          "files": [
+            "20230804 Monthly account statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:06:43.674519"
+        },
+        "4ee5dca030ba": {
+          "files": [
+            "20230906 Monthly account statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:06:47.995542"
+        },
+        "f8a369394605": {
+          "files": [
+            "20231007 Monthly account statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:06:57.880321"
+        },
+        "bd5dc3d9c91f": {
+          "files": [
+            "20231104 Monthly account statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:07:02.377440"
+        },
+        "f91628f01288": {
+          "files": [
+            "20240306 Monthly account statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:07:28.545695"
+        },
+        "10ec8215291f": {
+          "files": [
+            "20240323 Tax certificate Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:07:39.093125"
+        },
+        "20ffd294d0d9": {
+          "files": [
+            "20240507 Report fiscale Scalable Capital.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:07:43.615060"
+        },
+        "59d904e0255e": {
+          "files": [
+            "20240512 Income statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:07:50.415817"
+        },
+        "50373dc24628": {
+          "files": [
+            "20240607 Monthly account statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:07:54.754573"
+        },
+        "801d13e445e0": {
+          "files": [
+            "20240710 Monthly account statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:07:59.257473"
+        },
+        "fdd70bc936ed": {
+          "files": [
+            "20240806 Monthly account statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:08:05.481584"
+        },
+        "2ed30b9f5eb6": {
+          "files": [
+            "20241106 Monthly account statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:08:26.190023"
+        },
+        "7995fda09a24": {
+          "files": [
+            "20241119 Securities announcement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:08:30.806313"
+        },
+        "6874e26b0987": {
+          "files": [
+            "20250416 German tax certificate Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:08:55.470609"
+        },
+        "1c555c026c44": {
+          "files": [
+            "20250417 Monthly account statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:08:59.767638"
+        },
+        "111083a6e38e": {
+          "files": [
+            "20250423 Report fiscale Scalable Capital.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:09:07.437767"
+        },
+        "85330c8e9df9": {
+          "files": [
+            "20250602 Monthly account statement Broker Scalable Capital.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:09:13.643272"
+        },
+        "f263e0564755": {
+          "files": [
+            "20250605 Monthly account statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:09:18.135254"
+        },
+        "6aa5da9bdf60": {
+          "files": [
+            "20250703 Monthly account statement Broker Scalable Capital.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:09:21.519010"
+        },
+        "b8914af6bebd": {
+          "files": [
+            "20250712 Monthly account statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:09:34.304078"
+        },
+        "a1649cc28d99": {
+          "files": [
+            "20250804 Monthly account statement Broker Scalable Capital.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:09:42.569470"
+        },
+        "58a1c43041c0": {
+          "files": [
+            "20250805 Securities Account Statement Broker Scalable Capital.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:09:45.454218"
+        },
+        "301691888a33": {
+          "files": [
+            "20250807 Monthly account statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:09:49.647142"
+        },
+        "b535e56f066d": {
+          "files": [
+            "20250904 Monthly account statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:09:57.528050"
+        },
+        "31fc185b109f": {
+          "files": [
+            "20251002 Securities account statement Broker Scalable Capital.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:10:07.629821"
+        },
+        "10a53f4786ad": {
+          "files": [
+            "20251009 Monthly account statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:10:20.997965"
+        },
+        "e0d80d14a7b5": {
+          "files": [
+            "20251018 MIFID II quarterly report Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:10:31.251082"
+        },
+        "f0d7b66c0cc6": {
+          "files": [
+            "20251105 Monthly account statement Broker Scalable Capital.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:10:34.678769"
+        },
+        "e8ae2b50141c": {
+          "files": [
+            "20251106 Monthly account statement Baader Bank.pdf"
+          ],
+          "status": "SKIPPED",
+          "reason": "No trading data detected",
+          "skipped_at": "2026-01-01T17:10:38.997358"
+        }
+      }
+    },
+    "BINANCE": {
+      "source_folder": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\binance",
+      "documents": {}
+    },
+    "COINBASE": {
+      "source_folder": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\coinbase",
+      "documents": {}
+    },
+    "TRADEREPUBLIC": {
+      "source_folder": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\traderepublic",
+      "documents": {}
+    },
+    "IBKR": {
+      "source_folder": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\ibkr",
+      "documents": {}
+    },
+    "FINECO": {
+      "source_folder": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\fineco",
+      "documents": {}
+    },
+    "CRYPTOCOM": {
+      "source_folder": "g:\\Il mio Drive\\WAR_ROOM_DATA\\inbox\\cryptocom",
+      "documents": {}
+    }
+  }
+}
