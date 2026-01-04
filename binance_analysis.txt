@@ -1,0 +1,84 @@
+﻿
+======================================================================
+­ƒôé 2024_03_11_17_07_58.pdf (25885 bytes)
+======================================================================
+PDF Pages: 6
+
+--- PAGE 1 (first 800 chars) ---
+Milano, 5 marzo 2024
+Rendiconto attivit├á al 31-12-2023
+UID: 10773818
+Imposta di bollo assolta in modo virtuale ai sensi dellÔÇÖarticolo 15 del d.P.R. n. 642/1972 ÔÇô Autorizzazione n. 414039/2023 dellÔÇÖAgenzia delle Entrate - Direzione Provinciale I di Milano - Ufficio Territoriale di Milano 5.
+1 / 6
+Binance Italy S.r.l. - Codice Fiscale e P. Iva 05215280750 - Sede legale: Corso Europa 15, 20122 Milano (MI) - Capitale Sociale Ôé¼50.000,00 i.v. - iscritta alla sezione speciale del Registro OAM dei Cambiavalute dedicata agli 
+Operatori in Valute Virtuali con numero di iscrizione PSV5 a decorrere dal 27/05/2022 - Socio Unico Binance Holdings (IE) Limited, con sede legale presso South Bank House, Barrow Street, Dublino, Irlanda 
+ 
+Salva un albero! Stampa solo se davvero necessario.
+  Keywords detected: ['HOLDINGS_SNAPSHOT']
+
+======================================================================
+­ƒôé 2024_07_08_21_50_39.csv (8203 bytes)
+======================================================================
+CSV Standard Read:
+  Rows: 64 | Columns: ['id', 'datetime_tz_CET', 'type', 'label', 'market_model_type', 'order_type', 'sent_amount', 'sent_currency', 'sent_value_EUR', 'sent_address', 'received_amount', 'received_currency', 'received_value_EUR', 'received_address', 'fee_amount', 'fee_currency', 'fee_value_EUR']
+  Sample: {'id': '07ff7007ff9d9ba95960b52487e1528b', 'datetime_tz_CET': '2023-01-01-01:00:00', 'type': 'Receive', 'label': 'Reward', 'market_model_type': 'EARN', 'order_type': nan, 'sent_amount': 0.0, 'sent_currency': nan, 'sent_value_EUR': 0.0, 'sent_address': nan, 'received_amount': 0.02125152, 'received_currency': 'IOTA', 'received_value_EUR': 0.0034250528, 'received_address': nan, 'fee_amount': 0.0, 'fee_currency': nan, 'fee_value_EUR': 0.0}
+
+======================================================================
+­ƒôé 2024_07_25_20_52_08.pdf (36256 bytes)
+======================================================================
+PDF Pages: 6
+
+--- PAGE 1 (first 800 chars) ---
+Binance Italy S.r.l. - Codice Fiscale e P. Iva 05215280750 - Sede legale: Corso Europa 15, 20122 Milano (MI) - Capitale Sociale Ôé¼50.000,00 i.v. - iscritta 
+alla sezione speciale del Registro dei Cambiavalute dedicata agli Operatori in Valute Virtuali con numero di iscrizione PSV5 a decorrere dal 27/05/2022 - 
+Socio Unico Binance Holdings (IE) Limited, con sede legale presso South Bank House, Barrow Street, Dublino, Irlanda
+Pag. 
+1
+di 
+6
+Spettabile
+ROBERTO GUARESCHI
+N/A
+N/A
+IT
+Milano, 25-07-2024
+Oggetto: Certificazione relativa alle cessioni ed alle altre operazioni suscettibili di produrre redditi diversi
+Ai sensi dellÔÇÖArt. 10 del Decreto-legge 461/1997 si trasmette a ROBERTO GUARESCHI, nato a PARMA (PR) il 08-01-1976, 
+codice fiscale GRSRRT76A08G337I, la certificazione relativa alle cessi
+  Keywords detected: ['HOLDINGS_SNAPSHOT']
+
+======================================================================
+­ƒôé 2025_05_17_19_26_07.csv (172259 bytes)
+======================================================================
+CSV Standard Read:
+  Rows: 1349 | Columns: ['id', 'datetime_tz_CET', 'type', 'label', 'market_model_type', 'order_type', 'sent_amount', 'sent_currency', 'sent_value_EUR', 'sent_address', 'received_amount', 'received_currency', 'received_value_EUR', 'received_address', 'fee_amount', 'fee_currency', 'fee_value_EUR']
+  Sample: {'id': 'c2e887c199c85777c0637de525505f12', 'datetime_tz_CET': '2024-01-01-01:00:00', 'type': 'Receive', 'label': 'Reward', 'market_model_type': 'EARN', 'order_type': nan, 'sent_amount': 0.0, 'sent_currency': nan, 'sent_value_EUR': 0.0, 'sent_address': nan, 'received_amount': 0.0004996, 'received_currency': 'IOTA', 'received_value_EUR': 0.0001402388, 'received_address': nan, 'fee_amount': 0.0, 'fee_currency': nan, 'fee_value_EUR': 0.0}
+
+======================================================================
+­ƒôé 2025_05_19_16_31_54.pdf (494620 bytes)
+======================================================================
+PDF Pages: 94
+
+--- PAGE 1 (first 800 chars) ---
+Binance Italy S.r.l. - Codice Fiscale e P. Iva 05215280750 - Sede legale: Corso Europa 15, 20122 Milano (MI) - Capitale Sociale Ôé¼50.000,00 i.v. - iscritta 
+alla sezione speciale del Registro dei Cambiavalute dedicata agli Operatori in Valute Virtuali con numero di iscrizione PSV5 a decorrere dal 27/05/2022 - 
+Socio Unico Binance Holdings (IE) Limited, con sede legale presso South Bank House, Barrow Street, Dublino, Irlanda
+Pag. 
+1
+di 
+94
+Spettabile
+ROBERTO GUARESCHI
+Via Armstrong 9
+Parma 
+IT
+Milano, 19-05-2025
+Oggetto: Certificazione relativa alle cessioni ed alle altre operazioni suscettibili di produrre redditi diversi
+Ai sensi dellÔÇÖArt. 10 del Decreto-legge 461/1997 si trasmette a ROBERTO GUARESCHI, nato a PARMA (PR) il 08-01-1976, 
+codice fiscale GRSRRT76A08G337I, la certificazione rel
+  Keywords detected: ['HOLDINGS_SNAPSHOT']
+
+======================================================================
+­ƒôé AccountStatementPeriod_10773818_20251216-20251217_d9522f326b11499f84f5e85f77195e60.pdf (1063182 bytes)
+======================================================================
+  ERROR: File has not been decrypted

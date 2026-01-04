@@ -153,7 +153,7 @@ MANUAL_TICKER_MAP = {
     'NVIDIA CORP.': 'NVDA',
     'NVIDIA Corp.': 'NVDA',
     
-    # Chinese ADRs
+    # Chinese ADRs and Stocks
     'AHLA': 'BABA',           # BG Saxo Alibaba alias
     'ALIBABA GROUP HLDG L': 'BABA',
     'TENCENT HLDGS HD-': 'TCEHY',
@@ -161,6 +161,15 @@ MANUAL_TICKER_MAP = {
     'BAIDU INC. O.N.': 'BIDU',
     'BYD CO. LTD ADR/2 YC': 'BYDDY',
     'BYD COMPANY LTD - AD': 'BYDDY',
+    # Scalable/Baader Mapping (ISIN/Name -> Correct Yahoo Ticker for Price)
+    'KYG070341048': 'B1C.DE',    # Baidu (Xetra EUR)
+    'Baidu Inc. O.N': 'B1C.DE',
+    'KYG875721634': 'NNNd.DE',   # Tencent (Xetra EUR)
+    'Tencent Hldgs': 'NNNd.DE',
+    'US2972842007': 'ESLOY',     # EssilorLuxottica ADR (US)
+    'EssilorLuxottica /O.': 'ESLOY',
+    'CNE100006M58': '000333.SZ', # Midea Group (Shenzhen)
+    'CNE100006M58': 'M0CL.F',    # Midea (Frankfurt) - trying this for EUR direct
     
     # European stocks
     'NOVOB': 'NOVO-B.CO',     # Novo Nordisk
@@ -717,6 +726,28 @@ def get_live_values_for_holdings(holdings: list) -> dict:
             
         else:
             live_price, source, is_live, day_change_pct = get_price(ticker, isin, asset_type, purchase_price)
+            
+            # ---------------------------------------------------------
+            # SMART ADR LOGIC
+            # Handle case where we hold an ADR (e.g. Ratio 0.5) but pricing finds the Underlying (Full Price).
+            # Heuristic: If ISIN is US/KY (typical ADR) but Price Source is a foreign market ticker (.PA, .DE, .MI...)
+            # ---------------------------------------------------------
+            adr_ratio = h.get('adr_ratio')
+            if adr_ratio and adr_ratio > 0 and adr_ratio != 1.0:
+                 # Check specific ISIN prefixes common for ADRs
+                 is_adr_isin = isin and (isin.startswith('US') or isin.startswith('KY'))
+                 
+                 # Check if resolved ticker looks like a foreign market listing
+                 # Extract ticker from "Yahoo:EL.PA" or "AlphaVantage:BMW.DE"
+                 source_ticker = source.split(':')[-1] if ':' in source else ''
+                 
+                 foreign_suffixes = ['.PA', '.DE', '.MI', '.L', '.AS', '.HK', '.T', '.CO', '.HE', '.ST', '.OL', '.MC', '.SW']
+                 is_foreign_source = any(source_ticker.endswith(s) for s in foreign_suffixes)
+                 
+                 # If we are pricing an ADR using its foreign underlying -> Apply Ratio
+                 if is_adr_isin and is_foreign_source:
+                     # logger.info(f"📉 Applying ADR Ratio {adr_ratio} to {ticker} ({source_ticker}). Original: {live_price}")
+                     live_price = live_price * Decimal(str(adr_ratio))
             
             # If fallback (DB Price), convert to EUR (as get_price handles live but not fallback conversion)
             if 'FALLBACK' in source and fx_rate != 1:

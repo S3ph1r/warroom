@@ -153,10 +153,46 @@
             data = await res.json();
             await tick();
             renderCharts();
+
+            // Auto-Poll if stale
+            checkStalenessAndPoll();
         } catch (e) {
             error = e.message;
         }
     }
+
+    let pollInterval;
+
+    function checkStalenessAndPoll() {
+        if (!data || !data.last_updated) return;
+
+        const lastUpdate = new Date(data.last_updated);
+        const now = new Date();
+        const diffMinutes = (now - lastUpdate) / 1000 / 60;
+
+        // If data is older than 2 minutes, verify if background refresh is done by polling
+        if (diffMinutes > 2) {
+            if (!pollInterval) {
+                console.log("⏳ Data is stale, starting auto-poll...");
+                pollInterval = setInterval(async () => {
+                    console.log("🔄 Polling for fresh data...");
+                    await fetchData();
+                }, 5000); // Check every 5 seconds
+            }
+        } else {
+            // Data is fresh, stop polling
+            if (pollInterval) {
+                console.log("✅ Data is fresh! Stopping poll.");
+                clearInterval(pollInterval);
+                pollInterval = null;
+            }
+        }
+    }
+
+    import { onDestroy } from "svelte";
+    onDestroy(() => {
+        if (pollInterval) clearInterval(pollInterval);
+    });
 
     function exportCSV() {
         window.open(`${API_BASE}/api/portfolio/export-csv`, "_blank");
@@ -513,9 +549,16 @@
                     class="flex items-center gap-2 text-xs text-skin-muted bg-skin-card px-2 py-1 rounded border border-skin-border"
                 >
                     <div
-                        class="w-1.5 h-1.5 rounded-full bg-skin-pos animate-pulse"
+                        class="w-1.5 h-1.5 rounded-full {data.last_updated &&
+                        new Date() - new Date(data.last_updated) < 120000
+                            ? 'bg-skin-pos animate-pulse'
+                            : 'bg-yellow-500'}"
                     ></div>
-                    Live
+                    <span class="font-mono">
+                        {data.last_updated
+                            ? data.last_updated.split(" ")[1].slice(0, 5)
+                            : "Live"}
+                    </span>
                 </div>
             </div>
         </div>

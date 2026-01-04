@@ -1,0 +1,30 @@
+﻿=== ANALYZING CSV: U22156212.TRANSACTIONS.1Y.csv ===
+First 10 lines (Raw):
+Statement,Header,Nome del campo,Valore del cmapo
+Statement,Data,Title,Transaction History
+Statement,Data,Period,"Dicembre 18, 2024 - Dicembre 18, 2025"
+Statement,Data,WhenGenerated,"2025-12-19, 15:08:41 EST"
+Summary,Header,Nome del campo,Valore del cmapo
+Summary,Data,Valuta di base,EUR
+Summary,Data,Liquidit├á iniziale,0.0
+Summary,Data,Variazione,133.09913328585293
+Summary,Data,Liquidit├á finale,133.09913328585293
+Transaction History,Header,Date,Account,Description,Transaction Type,Symbol,Quantity,Price,Gross Amount ,Commission,Net Amount
+
+
+=== ANALYZING PDF: Rendiconto di attivit├á.pdf ===
+Pages: 2
+--- Page 1 Text ---
+Informazioni
+1. In genere le transazioni di borsa vengono regolate alla data di negoziazione pi├╣ un giorno lavorativo (T+1). Anche le opzioni, i futures e le transazioni di fondi comuni di investimento aperti
+statunitensi vengono regolati alla data di negoziazione pi├╣ un giorno lavorativo. Presso alcune borse e per altri tipi di transazioni ├¿ possibile che i periodi di regolamento siano pi├╣ o meno
+lunghi. Il valore della liquidit├á regolata ´¼ünale ri´¼éette il valore della liquidit├á effettivamente soggetta a regolamento.
+2. I requisiti di margine iniziale e di mantenimento sono disponibili nella ´¼ünestra Conto nella Trader Workstation.
+3. Le quantit├á precedute dal segno ""-"" indicano transazioni di vendita. Le altre transazioni sono di acquisto.
+4. For shares traded on US markets, Interactive Brokers Ireland Limited (IBIE) acts as agent in executing the fractional portion of your order. In certain circumstances, IBIE routes that portion to
+an a´¼âliate, which may execute it either as princip
+
+--- Key Sections Found? ---
+Posizioni aperte (Open Positions): True
+Operazioni (Trades): False
+Depositi (Deposits): False

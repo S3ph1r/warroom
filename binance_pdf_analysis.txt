@@ -1,0 +1,96 @@
+﻿=== AccountStatementPeriod_10773818_20251216-20251217_d9522f326b11499f84f5e85f77195e60.pdf ===
+File is encrypted. Attempting decrypt...
+Pages: 25
+
+============================================================
+PAGE 1
+============================================================
+ACCOUNT STATEMENT
+Report Date
+2025/12/19
+Report Period
+December 16, 2025 - December 17, 2025 Summary for your account in this period
+Entity Name: ROBERTO GUARESCHI
+Account ID: 10773818
+Account Type: Normal Account
+Account Manager: --
+Account Email: guareschi.roberto@gmail.com
+Your opening total account value: 3,937.02 USD
+Change value:
+ -111.48 USD
+Total Account Value: 3,825.54 USD
+Welcome to your new Binance statement !
+Set up your scheduler in Report Center to automatically receive this report daily in your emails!
+This document has been issued at the request of the customer/user. Please be advised that Binance and its affiliates shall not be responsible or liable in any way for however the information herein is used by the customer/user and/or any third party with whom the information is shared with. It is 
+the responsibility of the customer/user to check that all information and records contained herein are accurate.
+
+============================================================
+PAGE 2
+============================================================
+CONSOLIDATED  
+SUMMARY
+ACCOUNT  
+SUMMARY
+ACCOUNT  
+DETAILS
+Total Account Value
+3,825.54 USD
+Beginning Value / Change
+3,937.02 USD / -111.48 USD
+Report Period: December 16, 2025 - December 17, 2025
+Report Date: 2025/12/19
+Account ID: 10773818
+Registration Date: 2017-09-21
+Wallet Balance
+Funding
+0.00 USD
+Beginning Value: 0.00 USD
+Change: 0.00 USD
+Spot & Margin
+1,266.39 USD
+Beginning Value: 1,312.14 USD
+Change: -45.75 USD
+Futures
+0.00 USD
+Beginning Value: 0.00 USD
+Change: 0.00 USD
+Options
+0.00 USD
+Beginning Value: 0.00 USD
+Change: 0.00 USD
+Earn
+2,559.15 USD
+Beginning Value: 2,624.88 USD
+Change: -65.74 USD
+Asset Allocation Your Consolidated Top 10 Assets
+Symbol Quantity (Beginning Value / Change) Price (Beginning Value / Change) Value (Beginning Value / Change) (USD)
+BNB BNB 1.326349 1.326344 / 0.000005
+ $843.070000 $875.540000 / $-32.470000
+ $1,118.21 $1,161.27 / $-43.06
+USDC USDC 855.711637 855.593130 / 0.118507
+ $1.000100 $1.000000 / $0.000100
+ $855.80 $855.59 / $0.20
+ETH Ethereum 0.218
+
+[!] POTENTIAL HOLDINGS SNAPSHOT DETECTED
+
+============================================================
+PAGE 3
+============================================================
+CONSOLIDATED  
+SUMMARY
+ACCOUNT  
+SUMMARY
+ACCOUNT  
+DETAILS
+FUNDING SPOT & MARGIN FUTURES OPTION EARN
+Total Funding Account Value
+0.00 USD
+Beginning Value / Change
+0.00 USD / 0.00 USD
+Report Period: December 16, 2025 - December 17, 2025
+Report Date: 2025/12/19
+Account ID: 10773818
+Funding Top 10 Holdings
+Symbol Quantity (Beginning Value / Change) Price (Beginning Value / Change) Value (Beginning Value / Change) (USD)
+

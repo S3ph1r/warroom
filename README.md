@@ -104,6 +104,7 @@ warroom/
     - **Smart Fallback**: Uses video description if transcripts are missing (no more skipped content).
     - **Localization**: Titles and Summaries automatically translated to **Italian**.
 - ✅ **v5 Dashboard (Svelte/FastAPI)**: 
+    - **Turbo Mode (Stale-While-Revalidate)**: Instant zero-latency load using cached snapshots, with background refresh and auto-polling updates.
     - **6-Tile Grid**: Assets automatically categorized (Stocks, ETFs, Bonds, Crypto, Commodities, Cash).
     - **Interactive Filtering**: Real-time broker filter bar (IBKR, BG SAXO, etc.) that updates all asset tiles.
     - **Advanced Metrics**: Daily P&L (€ and %) integrated into KPI tiles and broker breakdown.
@@ -137,7 +138,9 @@ warroom/
     - **Smarter Classification**: Text-First strategy for native PDFs (80 files in 8 mins) with Vision fallback for scans.
     - **Hybrid Extraction**: High-precision extraction of `quantity`, `price`, and `total_amount` using local LLMs (Qwen/Mistral).
     - **Universal Normalization**: Broker-agnostic `OPERATION_MAP` handles BUY, SELL, DIVIDEND, FEE, TRANSFER_IN across all platforms.
-    - **Validated Brokers**: Full end-to-end support for **Revolut** and **Scalable Capital**, plus legacy support for Trade Republic, BG Saxo, and IBKR.
+    - **BG Saxo Refinement**: Automatic Ticker/Market splitting (`INTC:xnas` → `INTC` | `xnas`) for cleaner data.
+    - **Scalable Capital Refinement**: Intelligent Asset Type detection (Stock vs ETF) and ISIN-based pricing.
+    - **Validated Brokers**: Full end-to-end support for **Revolut**, **Scalable Capital**, **BG Saxo**, and **IBKR**.
     - **Unified Traceability**: Centralized logging in `warroom_ingestion.log` for debugging the entire pipeline.
     - **Atomic DB Loading**: History-based holdings calculation with WAC (Weighted Average Cost) and Cash balance tracking.
     - **Ready for Binance**: System architecture designed to handle Crypto assets out-of-the-box.

@@ -1,0 +1,62 @@
+﻿Exhaustive Search for Xiaomi (ISIN: KYG9830T1067) in 90 files...
+
+>>> FOUND in 20260102 Securities account statement Broker Scalable Capital a7mZgU.pdf (Page 2)
+  US90353T1007
+  CNE100006M58
+  US05606L1008
+  120.0 Xiaomi
+  KYG9830T1067
+
+>>> FOUND in 20251002 Securities account statement Broker Scalable Capital uhzy3V.pdf (Page 2)
+  CNE100006M58
+  30.0 Xiaomi
+  KYG9830T1067
+
+>>> FOUND in 20250805 Securities Account Statement Broker Scalable Capital qzi98v.pdf (Page 2)
+  CNE100006M58
+  30.0 Xiaomi
+  KYG9830T1067
+
+>>> FOUND in 20250602 Monthly account statement Broker Scalable Capital oYfK5H.pdf (Page 1)
+  30.00 pz. Xiaomi (KYG9830T1067)
+  5.00 pz. T encent Holdings (KYG875721634)
+  20.00 pz. Alibaba Group Hldg (KYG017191142)
+
+>>> FOUND in 20251018 MIFID II quarterly report Baader Bank ppN24P.pdf (Page 1)
+  Quantity
+  Units
+  Units
+  Units
+  KYG9830T1067
+  Xiaomi Corp.
+  Units
+  US05606L1008
+
+>>> FOUND in 20251001 Informazioni sui costi ex-post Scalable Capital jVnnrt.pdf (Page 3)
+  KYG9830T1067 1.98 EUR 0.00 EUR 0.00 EUR 0.00 EUR - 1.00 EUR 2.98 EUR
+
+>>> FOUND in 20250512 Monthly account statement Baader Bank nodP6k.pdf (Page 1)
+  IBAN: DE04 7003 3100 2896 1050 00
+  ISIN KYG9830T1067
+  STK              90    -
+  ISIN KYG9830T1067
+  STK              30
+  ISIN KYG9830T1067
+  STK              50
+
+>>> FOUND in 20250423 Report fiscale Scalable Capital 5DaTqg.pdf (Page 19)
+  KYG9830T1067  Quantit├á 40,00 (30.12.2024 - 31.12.2024) 2 094 1 170,50 170,48 2 0,00
+  KYG9830T1067  Quantit├á 60,00 (27.12.2024 - 31.12.2024) 2 094 1 236,49 255,72 5 0,01
+  US05606L1008  Quantit├á 2,00 (09.01.2024 - 31.12.2024) 2 094 1 98,40 132,50 358 0,26
+
+>>> FOUND in 20250315 Account statement Baader Bank iUJkmx.pdf (Page 1)
+  Quantity
+  Units
+  0100
+  Units
+  100
+  Units
+  KYG9830T1067
+  Xiaomi Corp.
+  Units
+  US05606L1008

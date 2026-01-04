@@ -1,0 +1,6 @@
+﻿Date         | Op       | Qty        | File
+--------------------------------------------------------------------------------
+2025-04-01   | SELL     | 90         | 20250512 Monthly account statement Baader Bank nodP6k.pdf
+2025-04-23   | BUY      | 30         | 20250512 Monthly account statement Baader Bank nodP6k.pdf
+2025-04-25   | BUY      | 50         | 20250512 Monthly account statement Baader Bank nodP6k.pdf
+31.05.2025   | BUY      | 30.00      | 20250602 Monthly account statement Broker Scalable Capital oYfK5H.pdf

@@ -1,29 +1,31 @@
 @echo off
-setlocal enabledelayedexpansion
+chcp 65001 >nul
+setlocal EnableDelayedExpansion
 
-:: ==================================================
-::    TRADE REPUBLIC: END-TO-END INGESTION
-:: ==================================================
+echo ============================================================
+echo    TRADE REPUBLIC INGESTION - FRESH START
+echo ============================================================
+echo.
 
-:: CONFIG
-set "PDF_FILE=d:\Download\Trade Repubblic\Estratto conto.pdf"
-set "SCRIPTS_DIR=scripts"
+cd /d "D:\Download\Progetto WAR ROOM\warroom"
+set PYTHONPATH=.
 
-echo ==================================================
-echo      TRADE REPUBLIC END-TO-END INGESTION
-echo ==================================================
-echo Target: "%PDF_FILE%"
+echo [1/3] Pulizia DB (Holdings e Transactions TRADEREPUBLIC)...
+python -c "from db.database import SessionLocal; from db.models import Holding, Transaction; s = SessionLocal(); h = s.query(Holding).filter(Holding.broker == 'TRADEREPUBLIC').delete(); t = s.query(Transaction).filter(Transaction.broker == 'TRADEREPUBLIC').delete(); s.commit(); print(f'       Rimossi {h} holdings, {t} transactions'); s.close()"
 
-:: MASTER ORCHESTRATOR
-python "%SCRIPTS_DIR%\ingest_tr_full.py" "%PDF_FILE%"
+echo.
+echo [2/3] Ingestion dati da PDF...
+python scripts/ingest_traderepublic_v2.py
 
-if %ERRORLEVEL% NEQ 0 (
-    echo.
-    echo ❌ PIPELINE FAILED with error code %ERRORLEVEL%
-) else (
-    echo.
-    echo ==================================================
-    echo      PIPELINE COMPLETED SUCCESSFULLY
-    echo ==================================================
-)
+echo.
+echo [3/3] Report finale...
+echo.
+echo ============================================================
+echo    RIEPILOGO TRADE REPUBLIC
+echo ============================================================
+python -c "from db.database import SessionLocal; from db.models import Holding, Transaction; from sqlalchemy import func; s = SessionLocal(); h = s.query(Holding).filter(Holding.broker == 'TRADEREPUBLIC').count(); t = s.query(Transaction).filter(Transaction.broker == 'TRADEREPUBLIC').count(); print(f'   Holdings:     {h}'); print(f'   Transactions: {t}'); print(); ops = s.query(Transaction.operation, func.count(Transaction.id)).filter(Transaction.broker == 'TRADEREPUBLIC').group_by(Transaction.operation).all(); print('   Breakdown:'); [print(f'     - {op}: {cnt}') for op, cnt in sorted(ops)]; s.close()"
+echo ============================================================
+
+echo.
+echo Ingestion TRADE REPUBLIC completata!
 pause

@@ -75,6 +75,17 @@
                         </th>
                         <th
                             class="px-1.5 py-1 font-medium tracking-tight cursor-pointer hover:text-skin-text transition-colors"
+                            on:click={() => toggleSort("isin")}
+                        >
+                            <div class="flex items-center gap-0.5">
+                                ISIN
+                                {#if sortKey === "isin"}
+                                    {sortDir === 1 ? "↑" : "↓"}
+                                {/if}
+                            </div>
+                        </th>
+                        <th
+                            class="px-1.5 py-1 font-medium tracking-tight cursor-pointer hover:text-skin-text transition-colors"
                             on:click={() => toggleSort("name")}
                         >
                             <div class="flex items-center gap-0.5">
@@ -218,6 +229,14 @@
                                 class="px-1.5 py-1 font-semibold text-skin-text font-mono text-[10px] whitespace-nowrap"
                             >
                                 {h.ticker}
+                            </td>
+
+                            <!-- ISIN -->
+                            <td
+                                class="px-1.5 py-1 text-skin-muted font-mono text-[9px] whitespace-nowrap select-all"
+                                title={h.isin}
+                            >
+                                {h.isin || "-"}
                             </td>
 
                             <!-- Name (Description) -->

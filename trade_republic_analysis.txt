@@ -1,0 +1,268 @@
+﻿=== Estratto conto.pdf ===
+Pages: 5
+
+============================================================
+PAGE 1
+============================================================
+TRADE REPUBLIC BANK GMBH, BRANCH ITALY   SPACES GAE AULENTI, PIAZZA GAE AULENTI 1, TORRE B 20154 MILANO (MI)
+DATA 01 set 2024 - 18 dic 2025
+IBAN IT69C0367401600000284397311
+BIC TRBKITMMXXX
+ROBERTO GUARESCHI
+Armstrong 9
+43124 Parma
+Trade Republic Bank GmbH, Branch Italy
+Spaces Gae Aulenti, Piazza Gae Aulenti 1, Torre B
+20154 Milano (MI)
+12254730968 Camera di Commercio di MILANO
+www.traderepublic.it
+P. IVA DE307510626
+Sede centrale di Trade Republic Bank GmbH
+Brunnenstrasse 19-21, 10119 Berlino, Germania
+Registro commerciale HRB 244347 B, tribunale
+locale di Charlottenburg, Germania
+Direttore Generale
+Andreas Torner
+Gernot Mittendorfer
+Christian Hecker
+Thomas Pischke
+Generato il 19 dic 2025, 19:43:36 Pagina   1 da 5
+ESTRATTO CONTO RIASSUNTIVO
+PRODOTTO SALDO INIZIALE IN ENTRATA IN USCITA SALDO FINALE
+Conto corrente 0,00┬áÔé¼ 6.750,62┬áÔé¼ 6.742,72┬áÔé¼ 7,90┬áÔé¼
+TRANSAZIONI SUL CONTO
+DATA TIPO DESCRIZIONE IN ENTRATA IN USCITA SALDO
+19 set 
+2024 Bonifico Google Pay Top up 1.000,00┬áÔé¼ 1.000,00┬áÔé¼
+19 set 
+2024 Commercio Buy trade NL0010273215 ASML HOLDING EO -,09, quantity: 1 742,50┬áÔé¼ 257,50┬áÔé¼
+19 set 
+2024 Commercio Buy trade IE000M7V94E1 VanEck UCITS ETFs plc - VanEck Uranium and 
+Nuclear Technologies UCITS ETF, quantity: 5 128,15┬áÔé¼ 129,35┬áÔé¼
+23 set 
+2024 Commercio Buy trade DE0005313704 CARL ZEISS MEDITEC AG, quantity: 1 58,80┬áÔé¼ 70,55┬áÔé¼
+23 set 
+2024 Commercio Buy trade KYG017191142 ALIBABA GROUP HLDG LTD, quantity: 6 61,48┬áÔé¼ 9,07┬áÔé¼
+01 ott 
+2024 Interessi Your interest payment 0,05┬áÔé¼ 9,12┬áÔé¼
+17 ott 
+2024 Bonifico Deposito accettato: IT48J0301503200000000388927 a 
+DE12502109007022778212 500,00┬áÔé¼ 509,12┬áÔé¼
+18 ott 
+2024 Commercio Buy trade NL0011585146 FERRARI N.V., quantity: 1 444,50┬áÔé¼ 64,62┬áÔé¼
+21 ott 
+2024 Commercio Buy trade KYG9830T1067 XIAOMI CORP. CL.B, quantity: 20 58,29┬áÔé¼ 6,33┬áÔé¼
+01 nov 
+2024 Interessi Your interest payment 0,09┬áÔé¼ 6,42┬áÔé¼
+07 nov 
+2024 Rendimento Cash Dividend for ISIN NL0010273215 1,29┬áÔé¼ 7,71┬áÔé¼
+
+============================================================
+PAGE 2
+============================================================
+TRADE REPUBLIC BANK GMBH, BRANCH ITALY  SPACES GAE AULENTI, PIAZZA GAE AULENTI 1, TORRE B 20154 MILANO (MI)
+Trade Republic Bank GmbH, Branch Italy
+Spaces Gae Aulenti, Piazza Gae Aulenti 1, Torre B
+20154 Milano (MI)
+12254730968 Camera di Commercio di MILANO
+www.traderepublic.it
+P. IVA DE307510626
+Sede centrale di Trade Republic Bank GmbH
+Brunnenstrasse 19-21, 10119 Berlino, Germania
+Registro commerciale HRB 244347 B, tribunale
+locale di Charlottenburg, Germania
+Direttore Generale
+Andreas Torner
+Gernot Mittendorfer
+Christian Hecker
+Thomas Pischke
+Generato il 19 dic 2025, 19:43:36 Pagina   2 da 5
+DATA TIPO DESCRIZIONE IN ENTRATA IN USCITA SALDO
+14 nov 
+2024 Bonifico Deposito accettato: IT48J0301503200000000388927 a 
+DE12502109007022778212 2.500,00┬áÔé¼ 2.507,71┬áÔé¼
+14 nov 
+2024 Commercio Buy trade NL0010273215 ASML HOLDING EO -,09, quantity: 1 671,80┬áÔé¼ 1.835,91┬áÔé¼
+14 nov 
+2024 Commercio Buy trade KYG9830T1067 XIAOMI CORP. CL.B, quantity: 80 274,08┬áÔé¼ 1.561,83┬áÔé¼
+14 nov 
+2024 Commercio Buy trade US68389X1054 ORACLE CORP. DL-,01, quantity: 2 359,16┬áÔé¼ 1.202,67┬áÔé¼
+14 nov 
+2024 Commercio Buy trade KYG017191142 ALIBABA GROUP HLDG LTD, quantity: 14 151,95┬áÔé¼ 1.050,72┬áÔé¼
+19 nov 
+2024 Commercio Buy trade US68389X1054 ORACLE CORP. DL-,01, quantity: 2 357,36┬áÔé¼ 693,36┬áÔé¼
+20 nov 
+2024 Commercio Buy trade KYG017191142 ALIBABA GROUP HLDG LTD, quantity: 30 309,52┬áÔé¼ 383,84┬áÔé¼
+20 nov 
+2024 Commercio Buy trade KYG9830T1067 XIAOMI CORP. CL.B, quantity: 30 102,97┬áÔé¼ 280,87┬áÔé¼
+21 nov 
+2024 Commercio Buy trade IE00BYZK4552 iShares IV plc - iShares Automation & Robotics UCITS 
+ETF USD (Acc), quantity: 20 269,36┬áÔé¼ 11,51┬áÔé¼
+01 dic 
+2024 Interessi Your interest payment 0,57┬áÔé¼ 12,08┬áÔé¼
+01 gen 
+2025 Interessi Your interest payment 0,03┬áÔé¼ 12,11┬áÔé¼
+07 gen 
+2025 Commercio Sell trade KYG9830T1067 XIAOMI CORP. CL.B, quantity: 130 538,50┬áÔé¼ 550,61┬áÔé¼
+13 gen 
+2025 Commercio Buy trade US68389X1054 ORACLE CORP. DL-,01, quantity: 2 301,76┬áÔé¼ 248,85┬áÔé¼
+22 gen 
+2025 Commercio Buy trade DE0005313704 CARL ZEISS MEDITEC AG, quantity: 2 99,48┬áÔé¼ 149,37┬áÔé¼
+23 gen 
+2025 Rendimento Cash Dividend for ISIN US68389X1054 1,30┬áÔé¼ 150,67┬áÔé¼
+01 feb 
+2025 Interessi Your interest payment 0,59┬áÔé¼ 151,26┬áÔé¼
+19 feb 
+2025 Rendimento Cash Dividend for ISIN NL0010273215 2,58┬áÔé¼ 153,84┬áÔé¼
+
+============================================================
+PAGE 3
+============================================================
+TRADE REPUBLIC BANK GMBH, BRANCH ITALY  SPACES GAE AULENTI, PIAZZA GAE AULENTI 1, TORRE B 20154 MILANO (MI)
+Trade Republic Bank GmbH, Branch Italy
+Spaces Gae Aulenti, Piazza Gae Aulenti 1, Torre B
+20154 Milano (MI)
+12254730968 Camera di Commercio di MILANO
+www.traderepublic.it
+P. IVA DE307510626
+Sede centrale di Trade Republic Bank GmbH
+Brunnenstrasse 19-21, 10119 Berlino, Germania
+Registro commerciale HRB 244347 B, tribunale
+locale di Charlottenburg, Germania
+Direttore Generale
+Andreas Torner
+Gernot Mittendorfer
+Christian Hecker
+Thomas Pischke
+Generato il 19 dic 2025, 19:43:36 Pagina   3 da 5
+DATA TIPO DESCRIZIONE IN ENTRATA IN USCITA SALDO
+24 feb 
+2025 Commercio Sell trade IE000M7V94E1 VanEck UCITS ETFs plc - VanEck Uranium and 
+Nuclear Technologies UCITS ETF, quantity: 5 144,00┬áÔé¼ 297,84┬áÔé¼
+01 mar 
+2025 Interessi Your interest payment 0,38┬áÔé¼ 298,22┬áÔé¼
+06 mar 
+2025 Commercio Buy trade FR0000121329 THALES S.A. EO 3, quantity: 1 255,16┬áÔé¼ 43,06┬áÔé¼
+31 mar 
+2025 Rendimento Cash Dividend for ISIN DE0005313704 1,33┬áÔé¼ 44,39┬áÔé¼
+31 mar 
+2025 Interessi Your interest payment 0,14┬áÔé¼ 44,53┬áÔé¼
+22 apr 
+2025 Imposte Tax Optimisation 0,38┬áÔé¼ 44,15┬áÔé¼
+23 apr 
+2025 Rendimento Cash Dividend for ISIN US68389X1054 1,64┬áÔé¼ 45,79┬áÔé¼
+01 mag 
+2025 Interessi Your interest payment 0,07┬áÔé¼ 45,86┬áÔé¼
+06 mag 
+2025 Rendimento Cash Dividend for ISIN NL0011585146 1,30┬áÔé¼ 47,16┬áÔé¼
+06 mag 
+2025 Rendimento Cash Dividend for ISIN NL0010273215 2,32┬áÔé¼ 49,48┬áÔé¼
+23 mag 
+2025 Rendimento Cash Dividend for ISIN FR0000121329 1,84┬áÔé¼ 51,32┬áÔé¼
+01 giu 
+2025 Interessi Your interest payment 0,07┬áÔé¼ 51,39┬áÔé¼
+01 lug 
+2025 Interessi Interest payment 0,07┬áÔé¼ 51,46┬áÔé¼
+03 lug 
+2025 Rendimento Cash Dividend for ISIN KYG017191142 7,87┬áÔé¼ 59,33┬áÔé¼
+07 lug 
+2025 Rendimento Cash Dividend for ISIN DE0005313704 1,33┬áÔé¼ 58,00┬áÔé¼
+07 lug 
+2025 Rendimento Cash Dividend for ISIN DE0005313704 0,98┬áÔé¼ 58,98┬áÔé¼
+24 lug 
+2025 Rendimento Cash Dividend for ISIN US68389X1054 1,62┬áÔé¼ 60,60┬áÔé¼
+
+============================================================
+PAGE 4
+============================================================
+TRADE REPUBLIC BANK GMBH, BRANCH ITALY  SPACES GAE AULENTI, PIAZZA GAE AULENTI 1, TORRE B 20154 MILANO (MI)
+Trade Republic Bank GmbH, Branch Italy
+Spaces Gae Aulenti, Piazza Gae Aulenti 1, Torre B
+20154 Milano (MI)
+12254730968 Camera di Commercio di MILANO
+www.traderepublic.it
+P. IVA DE307510626
+Sede centrale di Trade Republic Bank GmbH
+Brunnenstrasse 19-21, 10119 Berlino, Germania
+Registro commerciale HRB 244347 B, tribunale
+locale di Charlottenburg, Germania
+Direttore Generale
+Andreas Torner
+Gernot Mittendorfer
+Christian Hecker
+Thomas Pischke
+Generato il 19 dic 2025, 19:43:36 Pagina   4 da 5
+DATA TIPO DESCRIZIONE IN ENTRATA IN USCITA SALDO
+29 lug 
+2025 Imposte Tax Optimisation 2,06┬áÔé¼ 58,54┬áÔé¼
+01 ago 
+2025 Interessi Interest payment 0,07┬áÔé¼ 58,61┬áÔé¼
+06 ago 
+2025 Rendimento Cash Dividend for ISIN NL0010273215 2,01┬áÔé¼ 60,62┬áÔé¼
+01 set 
+2025 Interessi Interest payment 0,07┬áÔé¼ 60,69┬áÔé¼
+01 ott 
+2025 Interessi Interest payment 0,07┬áÔé¼ 60,76┬áÔé¼
+07 ott 
+2025 Imposte Stamp Duty Tax (Portfolio) 2,63┬áÔé¼ 58,13┬áÔé¼
+21 ott 
+2025 Commercio Sell trade US68389X1054 ORACLE CORP. DL-,01, quantity: 6 1.374,01┬áÔé¼ 1.432,14┬áÔé¼
+23 ott 
+2025 Bonifico Outgoing transfer for Roberto Guareschi 1.200,00┬áÔé¼ 232,14┬áÔé¼
+23 ott 
+2025 Rendimento Cash Dividend for ISIN US68389X1054 1,63┬áÔé¼ 233,77┬áÔé¼
+01 nov 
+2025 Interessi Interest payment 0,19┬áÔé¼ 233,96┬áÔé¼
+06 nov 
+2025 Rendimento Cash Dividend for ISIN NL0010273215 2,01┬áÔé¼ 235,97┬áÔé¼
+21 nov 
+2025 Commercio Sell trade KYG017191142 ALIBABA GROUP HLDG LTD, quantity: 45 661,02┬áÔé¼ 896,99┬áÔé¼
+24 nov 
+2025 Bonifico Outgoing transfer for Roberto Guareschi 890,00┬áÔé¼ 6,99┬áÔé¼
+01 dic 
+2025 Interessi Interest payment 0,30┬áÔé¼ 7,29┬áÔé¼
+04 dic 
+2025 Rendimento Cash Dividend for ISIN FR0000121329 0,61┬áÔé¼ 7,90┬áÔé¼
+PANORAMICA DEL SALDO
+al 18 dic 2025
+
+============================================================
+PAGE 5
+============================================================
+TRADE REPUBLIC BANK GMBH, BRANCH ITALY  SPACES GAE AULENTI, PIAZZA GAE AULENTI 1, TORRE B 20154 MILANO (MI)
+Trade Republic Bank GmbH, Branch Italy
+Spaces Gae Aulenti, Piazza Gae Aulenti 1, Torre B
+20154 Milano (MI)
+12254730968 Camera di Commercio di MILANO
+www.traderepublic.it
+P. IVA DE307510626
+Sede centrale di Trade Republic Bank GmbH
+Brunnenstrasse 19-21, 10119 Berlino, Germania
+Registro commerciale HRB 244347 B, tribunale
+locale di Charlottenburg, Germania
+Direttore Generale
+Andreas Torner
+Gernot Mittendorfer
+Christian Hecker
+Thomas Pischke
+Generato il 19 dic 2025, 19:43:36 Pagina   5 da 5
+CONTI FIDUCIARI SALDO
+Citibank 7,90┬áÔé¼
+FONDI DEL MERCATO MONETARIO ISIN UNIT├Ç PREZZO PER UNIT├Ç VALORE DI MERCATO IN EURO
+Deutsche Managed Euro Fund IE0008643037 0,00 1,00┬áÔé¼ 0,00┬áÔé¼
+PANORAMICA TRANSAZIONI
+DATA TIPO FONDI DEL MERCATO MONETARIO UNIT├Ç PREZZO UNITARIO IMPORTO
+23 ott 2025 Acquisto Deutsche Managed Euro Fund
+IE0008643037 432,14 1,00┬áÔé¼ 432,14┬áÔé¼
+24 ott 2025 Vendita Deutsche Managed Euro Fund
+IE0008643037 432,14 1,00┬áÔé¼ 432,14┬áÔé¼
+NOTE SULL'ESTRATTO CONTO
+Si prega di controllare l'estratto conto, in quanto le contestazioni devono essere fatte valere/presenti immediatamente. Si prega di notare 
+che il saldo del conto indicato non tiene conto della data di valuta delle singole prenotazioni o transazioni, vale a dire che l'importo 
+indicato o l'importo nominale non corrisponde necessariamente al saldo del conto rilevante per il calcolo degli interessi. Un estratto 
+conto si considera approvato se non si sollevano contestazioni entro 6 settimane. Per rispettare il termine ├¿ sufficiente inviare un reclamo 
+tramite il nostro servizio clienti (chat). Tutte le chat sono soggette a controlli indipendenti da parte dell'Internal Audit (ÔÇ£Revisione 
+InternaÔÇØ). In relazione ai contratti sottostanti, questo estratto conto ├¿ considerato una fattura ai sensi della legge tedesca sull'IVA (UStG) 
+in base al numero di conto indicato. I depositi presso banche fiduciarie sono coperti dalla garanzia di deposito della banca fiduciaria fino a 
+100.000 euro. Le quote di fondi monetari qualificati (QMMF) sono protette nell'improbabile caso di insolvenza di Trade Republic. Ulteriori 
+informazioni sulla protezione dei vostri fondi sono disponibili sul sito https://support.traderepublic.com.

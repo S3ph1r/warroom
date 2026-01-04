@@ -17,7 +17,13 @@ def call_ollama(prompt, context="", model=DEFAULT_MODEL, temperature=0.0):
     """
     Generic Ollama client with logging and basic error handling.
     """
-    logger.info(f"\n[{context}] 📤 PROMPT TO {model} ({len(prompt)} chars)...")
+    # Visualize the Prompt
+    separator = "=" * 60
+    logger.info(f"\n{separator}")
+    logger.info(f"📤 PROMPT TO {model} [{context}]")
+    logger.info(f"{separator}")
+    logger.info(prompt)
+    logger.info(f"{separator}\n")
 
     try:
         resp = requests.post(

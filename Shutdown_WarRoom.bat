@@ -10,29 +10,28 @@ echo.
 :: 1. Navigate to Project Root (Quoted for safety with spaces)
 cd /d "%~dp0"
 
-echo [1/4] 🛑 Stopping Docker Services...
-docker-compose down
-
-echo [2/4] 🔪 Killing User Interfaces (Node/Frontend)...
-:: Kill via process name
+echo [2/4] 🛑 Killing User Interfaces (Vite/Frontend)...
+:: Kill processes by window title prefix using PowerShell
+powershell -Command "Get-Process | Where-Object { $_.MainWindowTitle -like 'WarRoom_Frontend*' } | ForEach-Object { Stop-Process -Id $_.Id -Force -ErrorAction SilentlyContinue }"
 taskkill /F /IM node.exe /T >nul 2>&1
-:: Kill via Window Title
-taskkill /F /FI "WINDOWTITLE eq WarRoom_Frontend*" /T >nul 2>&1
-if %errorlevel%==0 ( echo    - Frontend Stopped. ) else ( echo    - Frontend already clean. )
+echo    - Frontend cleanup attempted.
 
-echo [3/4] 🔪 Killing Backend (Python/Uvicorn)...
-:: Kill via Window Title
-taskkill /F /FI "WINDOWTITLE eq WarRoom_Backend*" /T >nul 2>&1
-
+echo [3/4] 🛑 Killing Backend (FastAPI/Uvicorn)...
+:: Kill processes by window title prefix using PowerShell
+powershell -Command "Get-Process | Where-Object { $_.MainWindowTitle -like 'WarRoom_Backend*' } | ForEach-Object { Stop-Process -Id $_.Id -Force -ErrorAction SilentlyContinue }"
 :: Robust Port 8201 Kill using PowerShell (kills the actual process listening)
 powershell -Command "Get-NetTCPConnection -LocalPort 8201 -ErrorAction SilentlyContinue | Select-Object -ExpandProperty OwningProcess | Select-Object -Unique | ForEach-Object { Stop-Process -Id $_ -Force -ErrorAction SilentlyContinue }"
-echo    - Cleanup of port 8201 complete.
+echo    - Backend cleanup attempted.
 
 echo [4/4] 🦙 Stopping Ollama...
-:: Ollama in WSL is tricky to kill from CMD, usually we leave it or kill via wsl
-:: Force kill any lingering ollama processes in WSL
+:: Kill Native Windows Ollama (Process and Tray App)
+taskkill /F /IM "ollama app.exe" /T >nul 2>&1
+taskkill /F /IM "ollama.exe" /T >nul 2>&1
+if %errorlevel%==0 ( echo    - Native Ollama Stopped. )
+
+:: Force kill any lingering ollama processes in WSL (Backup)
 wsl -e bash -c "pkill -9 ollama || killall -9 ollama" >nul 2>&1
-if %errorlevel%==0 ( echo    - Ollama Stopped. ) else ( echo    - Ollama clean. )
+if %errorlevel%==0 ( echo    - WSL Ollama Stopped. ) else ( echo    - Ollama clean. )
 
 echo.
 echo ===================================================

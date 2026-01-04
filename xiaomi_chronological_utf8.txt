@@ -1,0 +1,164 @@
+﻿Searching for KYG9830T1067 (Xiaomi) chronologically...
+
+
+>>> 20250315 Account statement Baader Bank iUJkmx.pdf
+  [Page 1]
+    EUR
+    ISIN:
+    KYG9830T1067
+    Xiaomi Corp.
+    Registered Shares Cl.B o.N.
+    Safekeeping:
+    Domestic
+  [Page 1]
+    ISIN:
+    KYG9830T1067
+    Xiaomi Corp.
+    Registered Shares Cl.B o.N.
+    Safekeeping:
+    Domestic
+    Place of Custody:
+
+>>> 20250423 Report fiscale Scalable Capital 5DaTqg.pdf
+  [Page 19]
+    KYG875721634  Quantit├á 3,00 (19.11.2024 - 31.12.2024) 2 094 1 146,85 154,64 43 0,04
+    KYG875721634  Quantit├á 7,00 (01.01.2024 - 31.12.2024) 2 094 1 239,86 360,82 366 0,72
+    KYG9830T1067  Quantit├á 40,00 (30.12.2024 - 31.12.2024) 2 094 1 170,50 170,48 2 0,00
+    KYG9830T1067  Quantit├á 60,00 (27.12.2024 - 31.12.2024) 2 094 1 236,49 255,72 5 0,01
+    US05606L1008  Quantit├á 2,00 (09.01.2024 - 31.12.2024) 2 094 1 98,40 132,50 358 0,26
+    US26740W1099  Quantit├á 5,00 (20.11.2024 - 31.12.2024) 2 094 1 6,97 45,39 42 0,01
+    US26740W1099  Quantit├á 20,00 (24.12.2024 - 31.12.2024) 2 094 1 143,40 181,54 8 0,01
+  [Page 19]
+    KYG875721634  Quantit├á 7,00 (01.01.2024 - 31.12.2024) 2 094 1 239,86 360,82 366 0,72
+    KYG9830T1067  Quantit├á 40,00 (30.12.2024 - 31.12.2024) 2 094 1 170,50 170,48 2 0,00
+    KYG9830T1067  Quantit├á 60,00 (27.12.2024 - 31.12.2024) 2 094 1 236,49 255,72 5 0,01
+    US05606L1008  Quantit├á 2,00 (09.01.2024 - 31.12.2024) 2 094 1 98,40 132,50 358 0,26
+    US26740W1099  Quantit├á 5,00 (20.11.2024 - 31.12.2024) 2 094 1 6,97 45,39 42 0,01
+    US26740W1099  Quantit├á 20,00 (24.12.2024 - 31.12.2024) 2 094 1 143,40 181,54 8 0,01
+    US26740W1099  Quantit├á 30,00 (16.12.2024 - 23.12.2024) 2 094 1 121,77 232,56 8 0,01
+
+>>> 20250512 Monthly account statement Baader Bank nodP6k.pdf
+  [Page 1]
+    Sale
+    XIAOMI CORP. CL.B
+    ISIN KYG9830T1067
+    STK              90    -
+    Case No.: WWUM 00462397012
+    2025-04-03
+    2025-04-03
+  [Page 1]
+    -
+    XIAOMI CORP. CL.B
+    ISIN KYG9830T1067
+    STK              30
+    Case No.: WWUM 00475258155
+    2025-04-23
+    2025-04-23
+  [Page 1]
+    -
+    XIAOMI CORP. CL.B
+    ISIN KYG9830T1067
+    STK              50
+    Case No.: WWUM 00476931793
+    Balance:
+    80.12
+
+>>> 20250512 Monthly account statement Baader Bank nodP6k.pdf
+  [Page 1]
+    Sale
+    XIAOMI CORP. CL.B
+    ISIN KYG9830T1067
+    STK              90    -
+    Case No.: WWUM 00462397012
+    2025-04-03
+    2025-04-03
+  [Page 1]
+    -
+    XIAOMI CORP. CL.B
+    ISIN KYG9830T1067
+    STK              30
+    Case No.: WWUM 00475258155
+    2025-04-23
+    2025-04-23
+  [Page 1]
+    -
+    XIAOMI CORP. CL.B
+    ISIN KYG9830T1067
+    STK              50
+    Case No.: WWUM 00476931793
+    Balance:
+    80.12
+
+>>> 20250602 Monthly account statement Broker Scalable Capital oYfK5H.pdf
+  [Page 1]
+    07.05.2025 09.05.2025 Commissione di negoziazione -0.99 EUR
+    07.05.2025 09.05.2025 Acquisto di uno strumento finanziario
+    30.00 pz. Xiaomi (KYG9830T1067)
+    -171.75 EUR
+    07.05.2025 09.05.2025 Acquisto di uno strumento finanziario
+    5.00 pz. T encent Holdings (KYG875721634)
+    -275.45 EUR
+
+>>> 20250602 Monthly account statement Broker Scalable Capital oYfK5H.pdf
+  [Page 1]
+    07.05.2025 09.05.2025 Commissione di negoziazione -0.99 EUR
+    07.05.2025 09.05.2025 Acquisto di uno strumento finanziario
+    30.00 pz. Xiaomi (KYG9830T1067)
+    -171.75 EUR
+    07.05.2025 09.05.2025 Acquisto di uno strumento finanziario
+    5.00 pz. T encent Holdings (KYG875721634)
+    -275.45 EUR
+
+>>> 20250805 Securities Account Statement Broker Scalable Capital qzi98v.pdf
+  [Page 2]
+    LU
+    160.00 EUR
+    30.0 Xiaomi
+    KYG9830T1067
+    Custodia non collettiva
+    LU
+    198.60 EUR
+  [Page 2]
+    160.00 EUR
+    30.0 Xiaomi
+    KYG9830T1067
+    Custodia non collettiva
+    LU
+    198.60 EUR
+    20.0 Alibaba Group Hldg
+
+>>> 20251002 Securities account statement Broker Scalable Capital uhzy3V.pdf
+  [Page 2]
+    LU
+    363.40 EUR
+    30.0 Xiaomi
+    KYG9830T1067
+    Custodia non collettiva
+    LU
+    178.20 EUR
+  [Page 2]
+    363.40 EUR
+    30.0 Xiaomi
+    KYG9830T1067
+    Custodia non collettiva
+    LU
+    178.20 EUR
+    T otale 1,225.30 EUR
+
+>>> 20260102 Securities account statement Broker Scalable Capital a7mZgU.pdf
+  [Page 2]
+    LU
+    127.20 EUR
+    120.0 Xiaomi
+    KYG9830T1067
+    Custodia non collettiva
+    LU
+    519.60 EUR
+  [Page 2]
+    127.20 EUR
+    120.0 Xiaomi
+    KYG9830T1067
+    Custodia non collettiva
+    LU
+    519.60 EUR
+    6.0 EssilorLuxottica

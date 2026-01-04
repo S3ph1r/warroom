@@ -1,0 +1,49 @@
+﻿=== ANALYZING CSV: U22156212.TRANSACTIONS.1Y.csv ===
+First 10 lines (Raw):
+Statement,Header,Nome del campo,Valore del cmapo
+Statement,Data,Title,Transaction History
+Statement,Data,Period,"Dicembre 18, 2024 - Dicembre 18, 2025"
+Statement,Data,WhenGenerated,"2025-12-19, 15:08:41 EST"
+Summary,Header,Nome del campo,Valore del cmapo
+Summary,Data,Valuta di base,EUR
+Summary,Data,LiquiditÓ iniziale,0.0
+Summary,Data,Variazione,133.09913328585293
+Summary,Data,LiquiditÓ finale,133.09913328585293
+Transaction History,Header,Date,Account,Description,Transaction Type,Symbol,Quantity,Price,Gross Amount ,Commission,Net Amount
+
+
+=== ANALYZING PDF: Rendiconto di attivitÓ.pdf ===
+Pages: 2
+--- Page 1 Text ---
+python : Traceback (most recent call last):
+In riga:1 car:24
++ ... v:PYTHONPATH = "."; python scripts/analyze_ibkr_files.py 2>&1 | Out-F ...
++                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::S 
+   tring) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "D:\Download\Progetto WAR ROOM\warroom\scripts\analyze_ibkr_files.py", 
+line 30, in <module>
+    print(reader.pages[0].extract_text()[:1000])
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roberto\AppData\Local\Programs\Python\Python314\Lib\encodings\cp1
+252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\ufb01' in position 
+447: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Download\Progetto WAR ROOM\warroom\scripts\analyze_ibkr_files.py", 
+line 43, in <module>
+    print(f"\u274c Error reading PDF: {e}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roberto\AppData\Local\Programs\Python\Python314\Lib\encodings\cp1
+252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 
+0: character maps to <undefined>

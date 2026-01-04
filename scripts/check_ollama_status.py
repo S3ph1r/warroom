@@ -11,7 +11,7 @@ def check_ollama():
     print(f"\n{Fore.CYAN}[*] Verifying AI Engine (Ollama) Connectivity...{Style.RESET_ALL}")
     
     # Check Environment
-    host = os.getenv("OLLAMA_HOST", "127.0.0.1")
+    host = os.getenv("OLLAMA_HOST", "localhost")
     port = "11434"
     url = f"http://{host}:{port}/api/tags"
     

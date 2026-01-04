@@ -1,0 +1,290 @@
+﻿--- DUMPING: 20250315 Account statement Baader Bank iUJkmx.pdf (5 pages) ---
+
+--- PAGE 1 ---
+Mr.
+Roberto Guareschi
+Via Louis Armstrong 9
+43124 Provincia Di Parma
+ITALY
+Scalable Capital GmbHSeitzstrasse 8e80538 Munich service@scalable.capital
+Munich
+2025-03-02
+Roberto Guareschi
+Client ID: 2896105    Portfolio: 1
+Sec. Account No.: 2896105001
+Transaction No.: 4
+Reference No.: 726042526
+Baader Bank AG   Weihenstephaner Stra├ƒe 4   85716 Unterschlei├ƒheimT  00800 00 586336*   F  +49 89 5150 2442    service@baaderbank.de
+WD801JE-057.053
+ Scalable Capital GmbH ÔÇó Managing Directors: Erik Podzuweit, Florian Prucker, Martin Krebs, Dirk Urmoneit, Dirk Franzmeyer ÔÇó Supervisory Board: Patrick Olson (Chairman) ÔÇó HRB 217778, District Court Munich ÔÇó VAT No. DE300434774 ÔÇó www.scalable.capital Publisher and responsible for the content is Baader Bank Aktiengesellschaft ÔÇó Weihenstephaner Strasse 4 ÔÇó 85716 Unterschleissheim ÔÇó GermanyManagement Board: Nico Baader (CEO), Oliver Riedel (Deputy CEO) ÔÇó Chairman of the Supervisory Board: Dr. Louis Hagen ÔÇó Commercial Register HRB 121537 ÔÇó Principal Office: Unterschleissheim ÔÇó TaxNo: 143/107/04009 ÔÇó VAT ID: DE114123893 ÔÇó LEI: 529900JFOPPEDUR61H13 ÔÇó T 00800 00 586336* ÔÇó service@baaderbank.de * Toll-free from (inter-) national landline networks. Charges may apply from other networks.
+Securities Account Summary as of 2024-12-31
+Quantity
+Description
+Price
+Market Value in Account CCY 
+Equities and similar
+3
+251.19
+A3EU6F
+Units
+EUR
+ISIN:
+DK0062498333
+Novo-Nordisk AS
+Navne-Aktier B  DK 0,1
+Safekeeping:
+Collective Custody
+Place of Custody:
+WKN:
+EUR 83.730
+Depository:
+0100
+Germany
+10
+518.41
+A1138D
+Units
+EUR
+ISIN:
+KYG875721634
+Tencent Holdings Ltd.
+Reg. Shares HD -,00002
+Safekeeping:
+Domestic
+Place of Custody:
+WKN:
+EUR 51.84101953
+Depository:
+2689
+Hongkong
+100
+426.23
+A2JNY1
+Units
+EUR
+ISIN:
+KYG9830T1067
+Xiaomi Corp.
+Registered Shares Cl.B o.N.
+Safekeeping:
+Domestic
+Place of Custody:
+WKN:
+EUR 4.262346355
+Depository:
+2689
+Hongkong
+2
+133.00
+A0X9JE
+Units
+EUR
+ISIN:
+US05606L1008
+BYD Co. Ltd.
+Reg.Shs H (ADRs)/2 YC 1
+Safekeeping:
+Domestic
+Place of Custody:
+WKN:
+EUR 66.500
+Depository:
+2679
+United States of America
+Page 1/5
+
+--- PAGE 2 ---
+WD801JE-057.053
+ Scalable Capital GmbH ÔÇó Managing Directors: Erik Podzuweit, Florian Prucker, Martin Krebs, Dirk Urmoneit, Dirk Franzmeyer ÔÇó Supervisory Board: Patrick Olson (Chairman) ÔÇó HRB 217778, District Court Munich ÔÇó VAT No. DE300434774 ÔÇó www.scalable.capital Publisher and responsible for the content is Baader Bank Aktiengesellschaft ÔÇó Weihenstephaner Strasse 4 ÔÇó 85716 Unterschleissheim ÔÇó GermanyManagement Board: Nico Baader (CEO), Oliver Riedel (Deputy CEO) ÔÇó Chairman of the Supervisory Board: Dr. Louis Hagen ÔÇó Commercial Register HRB 121537 ÔÇó Principal Office: Unterschleissheim ÔÇó TaxNo: 143/107/04009 ÔÇó VAT ID: DE114123893 ÔÇó LEI: 529900JFOPPEDUR61H13 ÔÇó T 00800 00 586336* ÔÇó service@baaderbank.de * Toll-free from (inter-) national landline networks. Charges may apply from other networks.
+ Securities Account Summary as of 2024-12-31
+Continued:
+Quantity
+Description
+Price
+Market Value in Account CCY 
+Continued: Equities and similar
+25
+225.90
+A3DSV9
+Units
+EUR
+ISIN:
+US26740W1099
+D-Wave Quantum Inc.
+Reg.Shares DL-,0001
+Safekeeping:
+Domestic
+Place of Custody:
+WKN:
+EUR 9.036
+Depository:
+2679
+United States of America
+6
+702.00
+A0YGMG
+Units
+EUR
+ISIN:
+US2972842007
+EssilorLuxottica S.A.
+Act. Port. (Sp. ADRs) 1/2/o.N.
+Safekeeping:
+Domestic
+Place of Custody:
+WKN:
+EUR 117.000
+Depository:
+2679
+United States of America
+4
+1,604.34
+A1CX3T
+Units
+EUR
+ISIN:
+US88160R1014
+Tesla Inc.
+Registered Shares DL-,001
+Safekeeping:
+Collective Custody
+Place of Custody:
+WKN:
+EUR 401.085095
+Depository:
+0100
+Germany
+1
+58.39
+A2PHHG
+Units
+EUR
+ISIN:
+US90353T1007
+Uber Technologies Inc.
+Registered Shares DL-,00001
+Safekeeping:
+Collective Custody
+Place of Custody:
+WKN:
+EUR 58.3932853
+Depository:
+0100
+Germany
+Quantity
+Description
+Price
+Market Value in Account CCY 
+Investment Funds
+EUR
+53.44
+3
+A0HGWA
+Units
+ISIN:
+IE00B0M63516
+iShs MSCI Brazil U.ETF USD(D)
+Registered Shares o.N.
+Safekeeping:
+Domestic
+Place of Custody:
+WKN:
+EUR 17.812
+Depository:
+1419
+Luxembourg
+EUR
+81.90
+10
+A142NX
+Units
+ISIN:
+IE00B42NKQ00
+iShsV-S&P 500 Energ.Sect.U.ETF
+Registered Shares USD (Acc) oN
+Safekeeping:
+Domestic
+Place of Custody:
+WKN:
+EUR 8.190
+Depository:
+1419
+Luxembourg
+Page 2/5
+
+--- PAGE 3 ---
+WD801JE-057.053
+ Scalable Capital GmbH ÔÇó Managing Directors: Erik Podzuweit, Florian Prucker, Martin Krebs, Dirk Urmoneit, Dirk Franzmeyer ÔÇó Supervisory Board: Patrick Olson (Chairman) ÔÇó HRB 217778, District Court Munich ÔÇó VAT No. DE300434774 ÔÇó www.scalable.capital Publisher and responsible for the content is Baader Bank Aktiengesellschaft ÔÇó Weihenstephaner Strasse 4 ÔÇó 85716 Unterschleissheim ÔÇó GermanyManagement Board: Nico Baader (CEO), Oliver Riedel (Deputy CEO) ÔÇó Chairman of the Supervisory Board: Dr. Louis Hagen ÔÇó Commercial Register HRB 121537 ÔÇó Principal Office: Unterschleissheim ÔÇó TaxNo: 143/107/04009 ÔÇó VAT ID: DE114123893 ÔÇó LEI: 529900JFOPPEDUR61H13 ÔÇó T 00800 00 586336* ÔÇó service@baaderbank.de * Toll-free from (inter-) national landline networks. Charges may apply from other networks.
+ Securities Account Summary as of 2024-12-31
+Continued:
+Quantity
+Description
+Price
+Market Value in Account CCY 
+Continued: Investment Funds
+EUR
+71.26
+17
+A2QMAL
+Units
+ISIN:
+IE00BMYDM794
+L&G ETF-Hydrogen Economy
+Reg. Shs USD Acc. oN
+Safekeeping:
+Domestic
+Place of Custody:
+WKN:
+EUR 4.191998257
+Depository:
+1419
+Luxembourg
+Summary per Asset Class:
+Asset Class
+Weight in %
+Market Value in Account CCY 
+Total Market Value
+EUR
+4,126.06
+Equities
+94.99
+3,919.46
+EUR
+Funds
+5.01
+206.60
+EUR
+Please pay attention to the following notes on the assessment of your portfolio of financial instruments:-If no price information is provided, either an annual closing price or another price for the financial instruments could not be determined or the financial instruments are not listed. We do not offer any warranty as to the correctness of the prices.-The market value is always stated in the agreed-upon account currency. For prices quoted in foreign currencies, the market values have been calculated based on the exchange rate applicable on the reporting date.-Prices may be indicated in a currency other than the currency in which the securities have been purchased, if there is no longer any trading or price fixing in this currency.-The price on the domestic exchange is basically decisive for foreign assets which are quoted neither in the regulated market nor in the inofficial market.-The market value is not shown for derivate items.We request that you check your Securities Account Summary and immediately raise objections in writing to the internal audit department of Baader Bank AG, Weihenstephaner Strasse 4, 85716 Unterschleissheim, in compliance with the General Terms and Conditions of Business.
+This document has been generated electronically and will not be signed.
+Page 3/5
+
+--- PAGE 4 ---
+Mr.
+Roberto Guareschi
+Via Louis Armstrong 9
+43124 Provincia Di Parma
+ITALY
+Scalable Capital GmbHSeitzstrasse 8e80538 Munich service@scalable.capital
+Munich
+2025-03-02
+Roberto Guareschi
+Client ID: 2896105    Portfolio: 1
+Sec. Account No.: 2896105001
+Transaction No.: 4
+Reference No.: 726042526
+WD801JE-057.053
+ Scalable Capital GmbH ÔÇó Managing Directors: Erik Podzuweit, Florian Prucker, Martin Krebs, Dirk Urmoneit, Dirk Franzmeyer ÔÇó Supervisory Board: Patrick Olson (Chairman) ÔÇó HRB 217778, District Court Munich ÔÇó VAT No. DE300434774 ÔÇó www.scalable.capital Publisher and responsible for the content is Baader Bank Aktiengesellschaft ÔÇó Weihenstephaner Strasse 4 ÔÇó 85716 Unterschleissheim ÔÇó GermanyManagement Board: Nico Baader (CEO), Oliver Riedel (Deputy CEO) ÔÇó Chairman of the Supervisory Board: Dr. Louis Hagen ÔÇó Commercial Register HRB 121537 ÔÇó Principal Office: Unterschleissheim ÔÇó TaxNo: 143/107/04009 ÔÇó VAT ID: DE114123893 ÔÇó LEI: 529900JFOPPEDUR61H13 ÔÇó T 00800 00 586336* ÔÇó service@baaderbank.de * Toll-free from (inter-) national landline networks. Charges may apply from other networks.
+Annual securities account summary
+Dear Mr. Guareschi,
+Please find attached today your securities account summary as at 31 December 2024. This gives you an overview of your portfolio of financial instruments at Baader Bank.Please note our information at the end of the securities account summary regarding the valuation of your portfolio.In addition, we have the following information for you and would like to ask you for your assistance:1.Have there been any changes to your data?In order to be able to guarantee proper processing of business transactions with you in the future, it is necessary that we have your up-to-date data. Please give us prompt notification if there have been any changes during the past year to the mandatory data provided by you (name, address, contact data, economic beneficiary, type and purpose of the business relationship, powers of representation).You are welcome to contact us in this context using the contact details provided. 2.Deviations between securities account summary and financial status as at 31-12-2024If you, as client of Baader Bank, receive a monthly financial status, the data on portfolio content and prices may differ between the securities account summary and the financial status as at 31-12-2024. The financial status only takes into account the data available at the end of December 2024 , while the securities account summary also retroactively takes into account postings made in 2025 and year-end prices provided.
+Page 4/5
+
+--- PAGE 5 ---
+WD801JE-057.053
+ Scalable Capital GmbH ÔÇó Managing Directors: Erik Podzuweit, Florian Prucker, Martin Krebs, Dirk Urmoneit, Dirk Franzmeyer ÔÇó Supervisory Board: Patrick Olson (Chairman) ÔÇó HRB 217778, District Court Munich ÔÇó VAT No. DE300434774 ÔÇó www.scalable.capital Publisher and responsible for the content is Baader Bank Aktiengesellschaft ÔÇó Weihenstephaner Strasse 4 ÔÇó 85716 Unterschleissheim ÔÇó GermanyManagement Board: Nico Baader (CEO), Oliver Riedel (Deputy CEO) ÔÇó Chairman of the Supervisory Board: Dr. Louis Hagen ÔÇó Commercial Register HRB 121537 ÔÇó Principal Office: Unterschleissheim ÔÇó TaxNo: 143/107/04009 ÔÇó VAT ID: DE114123893 ÔÇó LEI: 529900JFOPPEDUR61H13 ÔÇó T 00800 00 586336* ÔÇó service@baaderbank.de * Toll-free from (inter-) national landline networks. Charges may apply from other networks.
+ Annual securities account summary
+Continued:
+ 3.Tax certificate 2024The annual tax certificate for the calendar year 2024 is expected to be provided by mid of April 2025. The statement of income will be provided approximately two weeks after the annual tax certificate has been issued.If there are no special agreements, the documents will be made available to you electronically in the Baader Bank web portal.
+Best regardsYour Scalable Capital Team
+This document has been generated electronically and will not be signed.
+Page 5/5

@@ -116,6 +116,10 @@ class PortfolioService:
                 "currency": h.currency,
                 "source_document": h.source_document,
                 "last_updated": h.last_updated.isoformat() if h.last_updated else None,
+                "share_class": h.share_class,
+                "adr_ratio": h.adr_ratio,
+                "nominal_value": h.nominal_value,
+                "market": h.market,
             }
             for h in holdings
         ]

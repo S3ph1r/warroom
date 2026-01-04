@@ -1,0 +1,29 @@
+﻿--- FOND SECTION: Posizioni aperte ---
+Posizioni aperte
+Saldi valute forex
+Dettaglio eseguiti
+Versamenti e prelievi
+Informazioni sullo strumento finanziario
+Codici
+Note/Note legali
+Convert Your Cash Balances to EUR
+19/12/25, 21:09 Rendiconto di attivit├á
+https://www.interactivebrokers.ie/AccountManagement/AmAuthentication?action=RpTransactionHistory#!#a3cdbe75-c13d-419f-a93b-817cf0bf8470 1/2
+Informazioni sui titoli a reddito fisso
+1. Le funzioni call per obbligazioni o azioni privilegiate possono in´¼éuire sul rendimento. Per i titoli privi di cedola, interesse composto e moltiplicatore, non ci sono pagamenti periodici e i titoli
+possono essere callable al di sotto del valore di scadenza senza preavviso al titolare a meno che non siano registrati. Per i titoli garantiti da asset, il rendimento effettivo pu├▓ variare a
+seconda della velocit├á con cui il titolo sottostante viene prepagato. Per ulteriori informazioni sul rendimento delle obbligazioni, si prega di contattare l'Help Desk IB all'indirizzo:
+ibkr.com/help. Se questo titolo di debito non ├¿ valutato da un organismo di rating statistico riconosciuto a livello nazionale, pu├▓ rappresentare un alto rischio di insolvenza. Dovresti
+consultare un consulente indipendente per determinare se le obbligazioni prive di rating sono appropriate per il tuo portafoglio alla luce dei tuoi obiettivi e della tua situazione ´¼ünanziaria. Le
+commissioni addebitate dai centri di trading obbligazionario sono incluse nel costo delle transazioni obbligazionarie.
+Informazioni legali
+1. Please promptly report any inaccuracy or discrepancy in this statement, or in your account, to Interactive Brokers Ireland Limited ("IBIE"). You can contact us by telephone or electronically
+through the IBIE website at, www.interactivebrokers.ie. If you report an error by telephone, you should re-con´¼ürm such oral communication in writing in order to protect your rights, including
+your rights under the Investor Compensation Scheme.
+2. Unless otherwise noted, IBIE acted as agent in the execution of the above transactions. IBIE may execute your trades through a´¼âliates or third-party brokers who are members of the
+relevant exchange or market center. Please see the IBIE CAKID Bank Account List at www.ibkr.ie/cakid for custody details.
+3. IBIE acts as agent or riskless principal in foreign currency exchange transactions and CFDs. Such transactions are executed against an IBIE a´¼âliate, which acts as principal in such
+transactions and may have a long or short position and may have pro´¼üted or lost in connection with the transaction.
+4. IBIE routes orders in US products through its US a´¼âliate, IBLLC. IBLLC accepts liquidity rebates or other order ´¼éow payments from Alternative Trading Systems, market makers and
+exchanges for certain orders in US stocks. IBLLC receives payment for some US option orders pursuant to exchange-mandated marketing fee programs or other arrangements.
+5. Ti invitiamo ad avvisare il prima possibile IB-IE nel caso di cambiamenti relativi ai tuoi obiettivi d'investimen

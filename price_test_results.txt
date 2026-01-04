@@ -1,0 +1,49 @@
+﻿python : $WTC-EUR: possibly delisted; no price 
+data found  (1d 2017-09-21 -> 2017-09-22) 
+(Yahoo error = "Data doesn't exist for 
+startDate = 1505952000, endDate = 1506038400")
+In riga:1 car:24
++ ... THONPATH = "."; python 
+scripts/test_historical_prices.py 2>&1 | Out-F 
+...
++                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ($ 
+   WTC-EUR: possi... = 1506038400"):String) [  
+  ], RemoteException
+    + FullyQualifiedErrorId : NativeCommandErr 
+   or
+ 
+
+1 Failed download:
+['WTC-EUR']: possibly delisted; no price data 
+found  (1d 2017-09-21 -> 2017-09-22) (Yahoo 
+error = "Data doesn't exist for startDate = 
+1505952000, endDate = 1506038400")
+
+--- Testing BTC-EUR on 2017-09-21 ---
+Ô£à Found data:
+Price             Close
+Ticker          BTC-EUR
+Date                   
+2017-09-21  3040.053711
+   Price: 3040.0537109375 EUR
+
+--- Testing ETH-EUR on 2020-01-15 ---
+Ô£à Found data:
+Price            Close
+Ticker         ETH-EUR
+Date                  
+2020-01-15  149.039108
+   Price: 149.0391082763672 EUR
+
+--- Testing BNB-EUR on 2021-05-19 ---
+Ô£à Found data:
+Price            Close
+Ticker         BNB-EUR
+Date                  
+2021-05-19  278.561646
+   Price: 278.5616455078125 EUR
+
+--- Testing WTC-EUR on 2017-09-21 ---
+ÔØî No data found for WTC-EUR

@@ -1,0 +1,166 @@
+﻿BROKER             | ASSET      | TICKER               | ISIN           |          QTY
+-------------------------------------------------------------------------------------
+--- BGSAXO ---
+BGSAXO             | ETF        | CIBR:xmil            | IE00BF16M727   |    10.000000
+BGSAXO             | ETF        | FLXI:xmil            | IE00BHZRQZ17   |     5.000000
+BGSAXO             | ETF        | ICGA:xetr            | IE00BJ5JPG56   |   100.000000
+BGSAXO             | ETF        | KSTR:xmil            | IE00BKPJY541   |    10.000000
+BGSAXO             | ETF        | NUCL:xmil            | IE000M7V94E1   |    20.000000
+BGSAXO             | ETF        | SWDA:xmil            | IE00B4L5Y983   |    10.000000
+BGSAXO             | ETF        | XAIX:xmil            | IE00BGV5VN51   |    11.000000
+BGSAXO             | STOCK      | 02050:xhkg           | CNE100006Z79   |   100.000000
+BGSAXO             | STOCK      | AHLA:xetr            | US01609W1027   |     2.000000
+BGSAXO             | STOCK      | AMP:xmil             | IT0004056880   |     7.000000
+BGSAXO             | STOCK      | AMZN:xnas            | US0231351067   |     4.000000
+BGSAXO             | STOCK      | ANET:xnys            | US0404132054   |     4.000000
+BGSAXO             | STOCK      | ARM:xnas             | US0420682058   |     1.000000
+BGSAXO             | STOCK      | ASTS:xnas            | US00217D1000   |     2.000000
+BGSAXO             | STOCK      | BIDU:xnas            | US0567521085   |     5.000000
+BGSAXO             | STOCK      | BWXT:xnys            | US05605H1005   |     1.000000
+BGSAXO             | STOCK      | BYDDY:xnas           | US05606L1008   |    20.000000
+BGSAXO             | STOCK      | CCO:xtse             | CA13321L1085   |     2.000000
+BGSAXO             | STOCK      | CRSP:xnas            | CH0334081137   |     5.000000
+BGSAXO             | STOCK      | CVX:xnys             | US1667641005   |     1.000000
+BGSAXO             | STOCK      | DT:xnys              | US2681501092   |     3.000000
+BGSAXO             | STOCK      | ETL:xpar             | FR0010221234   |    45.000000
+BGSAXO             | STOCK      | GOOGL:xnas           | US02079K3059   |     2.000000
+BGSAXO             | STOCK      | INTC:xnas            | US4581401001   |    30.000000
+BGSAXO             | STOCK      | KULR:xase            | US50125G3074   |    80.000000
+BGSAXO             | STOCK      | LDO:xmil             | IT0003856405   |     2.000000
+BGSAXO             | STOCK      | META:xnas            | US30303M1027   |     1.000000
+BGSAXO             | STOCK      | NOKIA:xhel           | FI0009000681   |    80.000000
+BGSAXO             | STOCK      | NOVOb:xcse           | DK0062498333   |     8.000000
+BGSAXO             | STOCK      | NOW:xnys             | US81762P1021   |     1.000000
+BGSAXO             | STOCK      | NVDA:xnas            | US67066G1040   |     2.000000
+BGSAXO             | STOCK      | OKLO:xnys            | US02156V1098   |     1.000000
+BGSAXO             | STOCK      | ORCL:xnys            | US68389X1054   |     3.000000
+BGSAXO             | STOCK      | PANW:xnas            | US6974351057   |     1.000000
+BGSAXO             | STOCK      | PDD:xnas             | US7223041028   |     2.000000
+BGSAXO             | STOCK      | PYPL:xnas            | US70450Y1038   |     3.000000
+BGSAXO             | STOCK      | QBTS:xnys            | US26740W1099   |    15.000000
+BGSAXO             | STOCK      | QCOM:xnas            | US7475251036   |     2.000000
+BGSAXO             | STOCK      | QRVO:xnas            | US74736K1016   |     2.000000
+BGSAXO             | STOCK      | QS:xnas              | US74767V1098   |    20.000000
+BGSAXO             | STOCK      | QUBT:xnas            | US74766W1080   |    10.000000
+BGSAXO             | STOCK      | RACE:xmil            | NL0011585146   |     1.000000
+BGSAXO             | STOCK      | SAI:xmce             | ES0105650008   |  1300.000000
+BGSAXO             | STOCK      | SLDP:xnas            | US83422N1054   |     1.000000
+BGSAXO             | STOCK      | TER:xnas             | US8807701029   |     1.000000
+BGSAXO             | STOCK      | TM:xnys              | US8923313071   |     2.000000
+BGSAXO             | STOCK      | TSM:xnys             | US8740391003   |     1.000000
+BGSAXO             | STOCK      | UAMY:xase            | US9115491030   |    50.000000
+BGSAXO             | STOCK      | VKTX:xnas            | US92686J1060   |     5.000000
+BGSAXO             | STOCK      | VNET:xnas            | US90138A1034   |    10.000000
+BGSAXO             | STOCK      | VOYG:xnys            | US92892B1035   |    30.000000
+BGSAXO             | STOCK      | WBD:xmil             | IT0003865570   |   100.000000
+BGSAXO             | STOCK      | WMT:xnas             | US9311421039   |     5.000000
+BGSAXO             | STOCK      | XBOT:xtsx            | CA75604K1075   |   300.000000
+BGSAXO             | STOCK      | XPEV:xnys            | US98422D1054   |    15.000000
+--- BINANCE ---
+BINANCE            | CRYPTO     | 0G                   | ---            |     0.238302
+BINANCE            | CRYPTO     | 2Z                   | ---            |     2.748313
+BINANCE            | CRYPTO     | ACE                  | ---            |     0.000011
+BINANCE            | CRYPTO     | ADD                  | ---            |     9.500100
+BINANCE            | CRYPTO     | ALLO                 | ---            |     1.207862
+BINANCE            | CRYPTO     | AT                   | ---            |     1.613263
+BINANCE            | CRYPTO     | ATD                  | ---            |    19.000200
+BINANCE            | CRYPTO     | AVNT                 | ---            |     0.786999
+BINANCE            | CRYPTO     | BARD                 | ---            |     0.795688
+BINANCE            | CRYPTO     | BCX                  | ---            |     1.678700
+BINANCE            | CRYPTO     | BNSOL                | ---            |     0.000361
+BINANCE            | CRYPTO     | BTC                  | ---            |     0.005000
+BINANCE            | CRYPTO     | C                    | ---            |     1.530180
+BINANCE            | CRYPTO     | DOLO                 | ---            |     1.175109
+BINANCE            | CRYPTO     | DYM                  | ---            |     0.000044
+BINANCE            | CRYPTO     | EDEN                 | ---            |     1.180295
+BINANCE            | CRYPTO     | ENSO                 | ---            |     0.138604
+BINANCE            | CRYPTO     | EON                  | ---            |    19.000200
+BINANCE            | CRYPTO     | EOP                  | ---            |    19.000200
+BINANCE            | CRYPTO     | ERA                  | ---            |     1.534127
+BINANCE            | CRYPTO     | ETH                  | ---            |     0.218404
+BINANCE            | CRYPTO     | EUL                  | ---            |     0.042626
+BINANCE            | CRYPTO     | EUR                  | ---            |     5.908910
+BINANCE            | CRYPTO     | FET                  | ---            |   111.166600
+BINANCE            | CRYPTO     | FF                   | ---            |    11.934726
+BINANCE            | CRYPTO     | HBAR                 | ---            |   794.494000
+BINANCE            | CRYPTO     | HEMI                 | ---            |     7.925470
+BINANCE            | CRYPTO     | HOLO                 | ---            |     2.440467
+BINANCE            | CRYPTO     | HOME                 | ---            |    15.239881
+BINANCE            | CRYPTO     | HUMA                 | ---            |    14.753230
+BINANCE            | CRYPTO     | IO                   | ---            |     1.273320
+BINANCE            | CRYPTO     | IOTA                 | ---            |   807.074312
+BINANCE            | CRYPTO     | KITE                 | ---            |     9.537293
+BINANCE            | CRYPTO     | LA                   | ---            |     1.154548
+BINANCE            | CRYPTO     | LAYER                | ---            |     1.401291
+BINANCE            | CRYPTO     | LINEA                | ---            |    57.599474
+BINANCE            | CRYPTO     | MEETONE              | ---            |     9.500100
+BINANCE            | CRYPTO     | MIRA                 | ---            |     1.582895
+BINANCE            | CRYPTO     | MITO                 | ---            |     1.175114
+BINANCE            | CRYPTO     | MMT                  | ---            |     0.606188
+BINANCE            | CRYPTO     | MORPHO               | ---            |     0.508118
+BINANCE            | CRYPTO     | NEWT                 | ---            |     0.960082
+BINANCE            | CRYPTO     | OM                   | ---            |     0.000010
+BINANCE            | CRYPTO     | OPEN                 | ---            |     0.788880
+BINANCE            | CRYPTO     | PEPE                 | ---            | 15415.870000
+BINANCE            | CRYPTO     | PIXEL                | ---            |     1.744839
+BINANCE            | CRYPTO     | PLUME                | ---            |    11.766187
+BINANCE            | CRYPTO     | RESOLV               | ---            |     1.517783
+BINANCE            | CRYPTO     | SAHARA               | ---            |     9.596438
+BINANCE            | CRYPTO     | SAPIEN               | ---            |     1.209578
+BINANCE            | CRYPTO     | SBTC                 | ---            |     0.000168
+BINANCE            | CRYPTO     | SHELL                | ---            |     1.968073
+BINANCE            | CRYPTO     | SIGN                 | ---            |     0.000095
+BINANCE            | CRYPTO     | SOMI                 | ---            |     2.344926
+BINANCE            | CRYPTO     | SOPH                 | ---            |    11.215392
+BINANCE            | CRYPTO     | SPK                  | ---            |    15.339774
+BINANCE            | CRYPTO     | TON                  | ---            |    10.375328
+BINANCE            | CRYPTO     | TOWNS                | ---            |    24.358736
+BINANCE            | CRYPTO     | TREE                 | ---            |     0.996130
+BINANCE            | CRYPTO     | TURTLE               | ---            |     0.804035
+BINANCE            | CRYPTO     | W                    | ---            |     1.136775
+BINANCE            | CRYPTO     | WAL                  | ---            |     2.540260
+BINANCE            | CRYPTO     | XPL                  | ---            |     5.974996
+BINANCE            | CRYPTO     | YB                   | ---            |     0.795308
+BINANCE            | CRYPTO     | ZBT                  | ---            |     1.201816
+BINANCE            | CRYPTO     | ZKC                  | ---            |     1.185578
+--- IBKR ---
+IBKR               | CURRENCY   | EUR                  | ---            |   128.784322
+IBKR               | STOCK      | 3CP                  | ---            |    50.000000
+IBKR               | STOCK      | RGTI                 | ---            |     3.000000
+--- REVOLUT ---
+REVOLUT            | COMMODITY  | XAG                  | ---            |     3.387456
+REVOLUT            | COMMODITY  | XAU                  | ---            |     0.193980
+REVOLUT            | CRYPTO     | 1INCH                | ---            |     4.968716
+REVOLUT            | CRYPTO     | AVAX                 | ---            |     0.038601
+REVOLUT            | CRYPTO     | BTC                  | ---            |     0.001390
+REVOLUT            | CRYPTO     | DOT                  | ---            |    15.580059
+REVOLUT            | CRYPTO     | ETH                  | ---            |     0.009166
+REVOLUT            | CRYPTO     | MANA                 | ---            |     6.896549
+REVOLUT            | CRYPTO     | MATIC                | ---            |     2.777284
+REVOLUT            | CRYPTO     | POL                  | ---            |   136.643234
+REVOLUT            | CRYPTO     | SAND                 | ---            |     2.241045
+REVOLUT            | CRYPTO     | SOL                  | ---            |     0.045190
+REVOLUT            | CRYPTO     | XLM                  | ---            |     8.715731
+REVOLUT            | STOCK      | BIDU                 | US0567521085   |     3.000000
+REVOLUT            | STOCK      | BP                   | US0556221044   |     5.000000
+REVOLUT            | STOCK      | GOOGL                | US02079K3059   |     2.000000
+--- SCALABLE_CAPITAL ---
+SCALABLE_CAPITAL   | STOCK      | BAIDU INC. O.N.      | KYG070341048   |     8.000000
+SCALABLE_CAPITAL   | STOCK      | BYD CO. LTD ADR/2 YC | US05606L1008   |     3.000000
+SCALABLE_CAPITAL   | STOCK      | D-WAVE QUANTUM DL-,0 | US26740W1099   |     2.000000
+SCALABLE_CAPITAL   | STOCK      | ESSILORLUXOTTICA 1/2 | US2972842007   |     4.000000
+SCALABLE_CAPITAL   | STOCK      | IS MSCI BRAZ.U.ETF U | IE00B0M63516   |     3.000000
+SCALABLE_CAPITAL   | STOCK      | ISHSII-MSCI TURKEY D | IE00B1FZS574   |     3.000000
+SCALABLE_CAPITAL   | STOCK      | ISHSV-S+P500ENER.SEC | IE00B42NKQ00   |    10.000000
+SCALABLE_CAPITAL   | STOCK      | NOVO-NORDISK AS B DK | DK0062498333   |    -3.000000
+SCALABLE_CAPITAL   | STOCK      | NVIDIA CORP. DL-,001 | US67066G1040   |    12.000000
+SCALABLE_CAPITAL   | STOCK      | RIVIAN AUTOMOT.A DL- | US76954A1034   |     5.000000
+SCALABLE_CAPITAL   | STOCK      | TENCENT HLDGS HD-,00 | KYG875721634   |    13.000000
+SCALABLE_CAPITAL   | STOCK      | TESLA INC. DL -,001  | US88160R1014   |    12.000000
+SCALABLE_CAPITAL   | STOCK      | UBER TECH. DL-,00001 | US90353T1007   |     6.000000
+--- TRADEREPUBLIC ---
+TRADEREPUBLIC      | STOCK      | DE0005313704         | DE0005313704   |     3.000000
+TRADEREPUBLIC      | STOCK      | FR0000121329         | FR0000121329   |     1.000000
+TRADEREPUBLIC      | STOCK      | KYG017191142         | KYG017191142   |     5.000000
+TRADEREPUBLIC      | STOCK      | NL0010273215         | NL0010273215   |     2.000000
+TRADEREPUBLIC      | STOCK      | NL0011585146         | NL0011585146   |     1.000000

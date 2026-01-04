@@ -1,0 +1,243 @@
+2026-01-01 17:11:35,489 | INFO | ============================================================
+2026-01-01 17:11:35,490 | INFO | 🏭 SMART EXTRACTOR - Phase 3
+2026-01-01 17:11:35,490 | INFO | ============================================================
+2026-01-01 17:11:35,492 | INFO | Found 5 files to extract.
+2026-01-01 17:11:35,492 | INFO | 
+📂 [SCALABLE] 20241207 Monthly account statement Baader Bank.pdf (STOCKS)
+2026-01-01 17:11:35,493 | INFO |    🧠 Extraction Strategy: TEXT_LLM
+2026-01-01 17:11:36,948 | INFO |    📝 Native PDF detected (3932 chars). Using Text Model (qwen2.5:14b).
+2026-01-01 17:14:10,196 | INFO |       💬 Text Model Response: ```json {     "rows": [         {             "date": "2024-11-15",             "symbol": "TESLA INC...
+2026-01-01 17:14:10,729 | INFO |    ✅ Extracted 10 rows.
+2026-01-01 17:14:10,826 | INFO | 
+📂 [SCALABLE] 20250214 Corporate actions Baader Bank.pdf (STOCKS)
+2026-01-01 17:14:10,827 | INFO |    🧠 Extraction Strategy: TEXT_LLM
+2026-01-01 17:14:12,310 | INFO |    📝 Native PDF detected (3181 chars). Using Text Model (qwen2.5:14b).
+2026-01-01 17:14:24,470 | INFO |       💬 Text Model Response: Based on the provided text content, there is a financial transaction described involving an ETF (iSh...
+2026-01-01 17:14:24,471 | WARNING |       ⚠️ No structured data found in text.
+2026-01-01 17:14:24,471 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 17:14:24,471 | INFO | 
+📂 [SCALABLE] 20251009 Corporate actions Baader Bank.pdf (STOCKS)
+2026-01-01 17:14:24,471 | INFO |    🧠 Extraction Strategy: TEXT_LLM
+2026-01-01 17:14:26,270 | INFO |    📝 Native PDF detected (3358 chars). Using Text Model (qwen2.5:14b).
+2026-01-01 17:14:33,650 | INFO |       💬 Text Model Response: Based on the provided text content, there is one transaction that can be extracted:  - A split trans...
+2026-01-01 17:14:33,650 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 17:14:33,650 | INFO | 
+📂 [SCALABLE] 20251010 Corporate actions Baader Bank.pdf (STOCKS)
+2026-01-01 17:14:33,651 | INFO |    🧠 Extraction Strategy: TEXT_LLM
+2026-01-01 17:14:34,314 | INFO |    📝 Native PDF detected (1893 chars). Using Text Model (qwen2.5:14b).
+2026-01-01 17:14:39,817 | INFO |       💬 Text Model Response: Based on the provided text content, there is a transaction described involving BYD Co. Ltd., but it ...
+2026-01-01 17:14:39,818 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 17:14:39,818 | INFO | 
+📂 [SCALABLE] 20251212 Transfer in - Transfer out Baader Bank.pdf (STOCKS)
+2026-01-01 17:14:39,818 | INFO |    🧠 Extraction Strategy: TEXT_LLM
+2026-01-01 17:14:42,007 | INFO |    📝 Native PDF detected (5558 chars). Using Text Model (qwen2.5:14b).
+2026-01-01 17:15:26,444 | INFO |       💬 Text Model Response: Based on the provided text content, there are several stock and ETF transactions listed for Mr. Robe...
+2026-01-01 17:15:26,445 | WARNING |       ⚠️ No structured data found in text.
+2026-01-01 17:15:26,446 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 17:15:26,470 | INFO | 
+💾 Extraction saved to: D:\Download\Progetto WAR ROOM\warroom\extraction_results.json (10 total rows)
+2026-01-01 17:15:50,683 | INFO | ============================================================
+2026-01-01 17:15:50,683 | INFO | 💾 SMART LOADER - Phase 4
+2026-01-01 17:15:50,683 | INFO | ============================================================
+2026-01-01 17:15:50,684 | INFO | 📂 Loading 10 rows from extraction_results.json...
+2026-01-01 17:15:51,454 | INFO | 💾 Transactions Loaded: 10 new, 0 skipped.
+2026-01-01 17:15:51,455 | INFO | 
+🔄 REBUILDING HOLDINGS FROM HISTORY...
+2026-01-01 17:15:51,464 | INFO | Target Brokers: ['REVOLUT', 'TRADE_REPUBLIC', 'BG_SAXO', 'SCALABLE']
+2026-01-01 17:15:51,465 | INFO |    🔨 Rebuilding REVOLUT...
+2026-01-01 17:15:51,610 | INFO |    ✅ Recreated 11 holdings for REVOLUT.
+2026-01-01 17:15:51,612 | INFO |    🔨 Rebuilding TRADE_REPUBLIC...
+2026-01-01 17:15:51,757 | INFO |    ✅ Recreated 5 holdings for TRADE_REPUBLIC.
+2026-01-01 17:15:51,758 | INFO |    🔨 Rebuilding BG_SAXO...
+2026-01-01 17:15:51,816 | INFO |    ✅ Recreated 12 holdings for BG_SAXO.
+2026-01-01 17:15:51,817 | INFO |    🔨 Rebuilding SCALABLE...
+2026-01-01 17:15:51,876 | INFO |    ✅ Recreated 5 holdings for SCALABLE.
+2026-01-01 17:15:51,877 | INFO | ============================================================
+2026-01-01 17:15:51,877 | INFO | ✅ DONE.
+2026-01-01 17:33:38,759 | INFO | ============================================================
+2026-01-01 17:33:38,777 | INFO | 🏭 SMART EXTRACTOR - Phase 3
+2026-01-01 17:33:38,777 | INFO | ============================================================
+2026-01-01 17:33:38,778 | INFO | Found 2 files to extract.
+2026-01-01 17:33:38,779 | INFO | 
+📂 [BINANCE] 2024_07_08_21_50_39.csv (CRYPTO)
+2026-01-01 17:33:38,991 | INFO |    🔍 Found Columns: ['id', 'datetime_tz_CET', 'type', 'label', 'market_model_type', 'order_type', 'sent_amount', 'sent_currency', 'sent_value_EUR', 'sent_address', 'received_amount', 'received_currency', 'received_value_EUR', 'received_address', 'fee_amount', 'fee_currency', 'fee_value_EUR']
+2026-01-01 17:33:38,991 | INFO |    🗺️ Mapping: {'received_currency': 'symbol', 'datetime_tz_CET': 'date', 'type': 'operation_type', 'received_value_EUR': 'total_amount', 'fee_value_EUR': 'fees'}
+2026-01-01 17:33:38,998 | INFO |    ➡️ Mapped Columns: ['id', 'date', 'operation_type', 'label', 'market_model_type', 'order_type', 'sent_amount', 'sent_currency', 'sent_value_EUR', 'sent_address', 'received_amount', 'symbol', 'total_amount', 'received_address', 'fee_amount', 'fee_currency', 'fees']
+2026-01-01 17:33:38,999 | INFO |    ✅ Available Keys: ['date', 'symbol', 'operation_type', 'total_amount', 'fees']
+2026-01-01 17:33:39,039 | INFO |    ✅ Extracted 64 rows.
+2026-01-01 17:33:39,086 | INFO | 
+📂 [BINANCE] 2025_05_17_19_26_07.csv (CRYPTO)
+2026-01-01 17:33:39,249 | INFO |    🔍 Found Columns: ['id', 'datetime_tz_CET', 'type', 'label', 'market_model_type', 'order_type', 'sent_amount', 'sent_currency', 'sent_value_EUR', 'sent_address', 'received_amount', 'received_currency', 'received_value_EUR', 'received_address', 'fee_amount', 'fee_currency', 'fee_value_EUR']
+2026-01-01 17:33:39,250 | INFO |    🗺️ Mapping: {'datetime_tz_CET': 'date', 'type': 'operation_type', 'fee_amount': 'fees'}
+2026-01-01 17:33:39,251 | INFO |    ➡️ Mapped Columns: ['id', 'date', 'operation_type', 'label', 'market_model_type', 'order_type', 'sent_amount', 'sent_currency', 'sent_value_EUR', 'sent_address', 'received_amount', 'received_currency', 'received_value_EUR', 'received_address', 'fees', 'fee_currency', 'fee_value_EUR']
+2026-01-01 17:33:39,252 | INFO |    ✅ Available Keys: ['date', 'operation_type', 'fees']
+2026-01-01 17:33:39,257 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 17:33:39,260 | INFO | 
+💾 Extraction saved to: D:\Download\Progetto WAR ROOM\warroom\extraction_results.json (64 total rows)
+2026-01-01 17:34:02,416 | INFO | ============================================================
+2026-01-01 17:34:02,417 | INFO | 💾 SMART LOADER - Phase 4
+2026-01-01 17:34:02,417 | INFO | ============================================================
+2026-01-01 17:34:02,419 | INFO | 📂 Loading 64 rows from extraction_results.json...
+2026-01-01 17:34:02,964 | INFO | 💾 Transactions Loaded: 64 new, 0 skipped.
+2026-01-01 17:34:02,964 | INFO | 
+🔄 REBUILDING HOLDINGS FROM HISTORY...
+2026-01-01 17:34:02,972 | INFO | Target Brokers: ['REVOLUT', 'TRADE_REPUBLIC', 'BINANCE', 'BG_SAXO', 'SCALABLE']
+2026-01-01 17:34:02,972 | INFO |    🔨 Rebuilding REVOLUT...
+2026-01-01 17:34:03,027 | INFO |    ✅ Recreated 11 holdings for REVOLUT.
+2026-01-01 17:34:03,029 | INFO |    🔨 Rebuilding TRADE_REPUBLIC...
+2026-01-01 17:34:03,048 | INFO |    ✅ Recreated 5 holdings for TRADE_REPUBLIC.
+2026-01-01 17:34:03,048 | INFO |    🔨 Rebuilding BINANCE...
+2026-01-01 17:34:03,066 | INFO |    ✅ Recreated 1 holdings for BINANCE.
+2026-01-01 17:34:03,066 | INFO |    🔨 Rebuilding BG_SAXO...
+2026-01-01 17:34:03,093 | INFO |    ✅ Recreated 12 holdings for BG_SAXO.
+2026-01-01 17:34:03,094 | INFO |    🔨 Rebuilding SCALABLE...
+2026-01-01 17:34:03,111 | INFO |    ✅ Recreated 5 holdings for SCALABLE.
+2026-01-01 17:34:03,112 | INFO | ============================================================
+2026-01-01 17:34:03,112 | INFO | ✅ DONE.
+2026-01-01 18:04:45,876 | INFO | ============================================================
+2026-01-01 18:04:45,890 | INFO | 🏭 SMART EXTRACTOR - Phase 3
+2026-01-01 18:04:45,890 | INFO | ============================================================
+2026-01-01 18:04:45,916 | INFO | Found 1 files to extract.
+2026-01-01 18:04:45,917 | INFO | 
+📂 [IBKR] Rendiconto di attività.pdf (STOCKS)
+2026-01-01 18:04:45,917 | INFO |    🧠 Extraction Strategy: TEXT_LLM
+2026-01-01 18:04:48,293 | INFO |    📝 Native PDF detected (10515 chars). Using Text Model (qwen2.5:14b).
+2026-01-01 18:07:05,260 | INFO |       💬 Text Model Response: Based on the provided text content, there are no explicit financial transaction details listed that ...
+2026-01-01 18:07:05,262 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 18:07:05,800 | INFO | 
+💾 Extraction saved to: D:\Download\Progetto WAR ROOM\warroom\extraction_results.json (0 total rows)
+2026-01-01 19:17:27,693 | INFO | ============================================================
+2026-01-01 19:17:27,712 | INFO | 🏭 SMART EXTRACTOR - Phase 3
+2026-01-01 19:17:27,713 | INFO | ============================================================
+2026-01-01 19:17:27,716 | INFO | Found 2 files to extract.
+2026-01-01 19:17:27,716 | INFO | 
+📂 [IBKR] U22156212.TRANSACTIONS.1Y.csv (CASH_MOVEMENTS)
+2026-01-01 19:17:27,741 | ERROR |    ❌ Header detection failed: Error tokenizing data. C error: Expected 4 fields in line 10, saw 12
+
+2026-01-01 19:17:27,741 | WARNING |    ⚠️ Could not load Excel table (Headers not found: ['null', 'Data', 'null', 'null', 'null', 'Liquidità finale', 'null', 'null', 'Liquidità iniziale'])
+2026-01-01 19:17:27,742 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 19:17:27,742 | INFO | 
+📂 [IBKR] Rendiconto di attività.pdf (STOCKS)
+2026-01-01 19:17:27,743 | INFO |    🧠 Extraction Strategy: TEXT_LLM
+2026-01-01 19:17:28,525 | INFO |    📝 Native PDF detected (10515 chars). Using Text Model (qwen2.5:14b-instruct-q6_K).
+2026-01-01 19:17:36,365 | INFO |       💬 Text Model Response: Based on the provided text content, there are no explicit sections like "Transaction History," "Trad...
+2026-01-01 19:17:36,365 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 19:17:36,366 | INFO | 
+💾 Extraction saved to: D:\Download\Progetto WAR ROOM\warroom\extraction_results.json (0 total rows)
+2026-01-01 19:19:50,942 | INFO | ============================================================
+2026-01-01 19:19:50,943 | INFO | 🏭 SMART EXTRACTOR - Phase 3
+2026-01-01 19:19:50,943 | INFO | ============================================================
+2026-01-01 19:19:50,944 | INFO | Found 2 files to extract.
+2026-01-01 19:19:50,944 | INFO | 
+📂 [IBKR] U22156212.TRANSACTIONS.1Y.csv (STOCKS)
+2026-01-01 19:19:50,956 | ERROR |    ❌ Header detection failed: Error tokenizing data. C error: Expected 4 fields in line 10, saw 12
+
+2026-01-01 19:19:50,956 | WARNING |    ⚠️ Could not load Excel table (Headers not found: ['Symbol', 'Date', 'Transaction Type', 'Quantity', 'Price', 'Gross Amount', 'Commission', 'Net Amount'])
+2026-01-01 19:19:50,957 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 19:19:50,957 | INFO | 
+📂 [IBKR] Rendiconto di attività.pdf (STOCKS)
+2026-01-01 19:19:50,957 | INFO |    🧠 Extraction Strategy: TEXT_LLM
+2026-01-01 19:19:51,733 | INFO |    📝 Native PDF detected (10515 chars). Using Text Model (qwen2.5:14b-instruct-q6_K).
+2026-01-01 19:19:58,628 | INFO |       💬 Text Model Response: Based on the provided text content, there are no explicit sections like "Transaction History," "Trad...
+2026-01-01 19:19:58,629 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 19:19:58,641 | INFO | 
+💾 Extraction saved to: D:\Download\Progetto WAR ROOM\warroom\extraction_results.json (0 total rows)
+2026-01-01 19:21:30,178 | INFO | ============================================================
+2026-01-01 19:21:30,179 | INFO | 🏭 SMART EXTRACTOR - Phase 3
+2026-01-01 19:21:30,179 | INFO | ============================================================
+2026-01-01 19:21:30,180 | INFO | Found 2 files to extract.
+2026-01-01 19:21:30,181 | INFO | 
+📂 [IBKR] U22156212.TRANSACTIONS.1Y.csv (STOCKS)
+2026-01-01 19:21:30,216 | ERROR |    ❌ Header detection failed: Error tokenizing data. C error: Expected 4 fields in line 10, saw 12
+
+2026-01-01 19:21:30,217 | WARNING |    ⚠️ Could not load Excel table (Headers not found: ['Symbol', 'Date', 'Transaction Type', 'Quantity', 'Price', 'Gross Amount', 'Commission', 'Net Amount'])
+2026-01-01 19:21:30,217 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 19:21:30,217 | INFO | 
+📂 [IBKR] Rendiconto di attività.pdf (STOCKS)
+2026-01-01 19:21:30,217 | INFO |    🧠 Extraction Strategy: TEXT_LLM
+2026-01-01 19:21:31,100 | INFO |    📝 Native PDF detected (10515 chars). Using Text Model (qwen2.5:14b-instruct-q6_K).
+2026-01-01 19:21:36,117 | INFO |       💬 Text Model Response: Based on the provided text content, there are no explicit sections like "Transaction History," "Trad...
+2026-01-01 19:21:36,118 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 19:21:36,119 | INFO | 
+💾 Extraction saved to: D:\Download\Progetto WAR ROOM\warroom\extraction_results.json (0 total rows)
+2026-01-01 19:22:23,062 | INFO | ============================================================
+2026-01-01 19:22:23,063 | INFO | 🏭 SMART EXTRACTOR - Phase 3
+2026-01-01 19:22:23,063 | INFO | ============================================================
+2026-01-01 19:22:23,064 | INFO | Found 2 files to extract.
+2026-01-01 19:22:23,064 | INFO | 
+📂 [IBKR] U22156212.TRANSACTIONS.1Y.csv (STOCKS)
+2026-01-01 19:22:23,093 | ERROR |    ❌ Header detection failed: Error tokenizing data. C error: Expected 4 fields in line 10, saw 12
+
+2026-01-01 19:22:23,094 | WARNING |    ⚠️ Could not load Excel table (Headers not found: ['Symbol', 'Date', 'Transaction Type', 'Quantity', 'Price', 'Gross Amount', 'Commission', 'Net Amount'])
+2026-01-01 19:22:23,094 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 19:22:23,095 | INFO | 
+📂 [IBKR] Rendiconto di attività.pdf (STOCKS)
+2026-01-01 19:22:23,095 | INFO |    🧠 Extraction Strategy: TEXT_LLM
+2026-01-01 19:22:23,888 | INFO |    📝 Native PDF detected (10515 chars). Using Text Model (qwen2.5:14b-instruct-q6_K).
+2026-01-01 19:22:28,811 | INFO |       💬 Text Model Response: Based on the provided text content, there are no explicit sections like "Transaction History," "Trad...
+2026-01-01 19:22:28,812 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 19:22:28,813 | INFO | 
+💾 Extraction saved to: D:\Download\Progetto WAR ROOM\warroom\extraction_results.json (0 total rows)
+2026-01-01 19:23:33,287 | INFO | ============================================================
+2026-01-01 19:23:33,290 | INFO | 🏭 SMART EXTRACTOR - Phase 3
+2026-01-01 19:23:33,293 | INFO | ============================================================
+2026-01-01 19:23:33,296 | INFO | Found 2 files to extract.
+2026-01-01 19:23:33,297 | INFO | 
+📂 [IBKR] U22156212.TRANSACTIONS.1Y.csv (STOCKS)
+2026-01-01 19:23:33,323 | INFO |    🔍 Header matching: max_matches=0/8 | Best index=-1
+2026-01-01 19:23:33,326 | WARNING |    ⚠️ Could not find header. Expected columns: {'commission', 'gross amount', 'price', 'net amount', 'date', 'quantity', 'symbol', 'transaction type'}
+2026-01-01 19:23:33,455 | ERROR |    ❌ Header detection failed: Error tokenizing data. C error: Expected 4 fields in line 10, saw 12
+
+2026-01-01 19:23:33,456 | WARNING |    ⚠️ Could not load Excel table (Headers not found: ['Symbol', 'Date', 'Transaction Type', 'Quantity', 'Price', 'Gross Amount', 'Commission', 'Net Amount'])
+2026-01-01 19:23:33,456 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 19:23:33,457 | INFO | 
+📂 [IBKR] Rendiconto di attività.pdf (STOCKS)
+2026-01-01 19:23:33,457 | INFO |    🧠 Extraction Strategy: TEXT_LLM
+2026-01-01 19:23:34,221 | INFO |    📝 Native PDF detected (10515 chars). Using Text Model (qwen2.5:14b-instruct-q6_K).
+2026-01-01 19:23:39,246 | INFO |       💬 Text Model Response: Based on the provided text content, there are no explicit sections like "Transaction History," "Trad...
+2026-01-01 19:23:39,247 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 19:23:39,247 | INFO | 
+💾 Extraction saved to: D:\Download\Progetto WAR ROOM\warroom\extraction_results.json (0 total rows)
+2026-01-01 19:24:28,678 | INFO | ============================================================
+2026-01-01 19:24:28,679 | INFO | 🏭 SMART EXTRACTOR - Phase 3
+2026-01-01 19:24:28,679 | INFO | ============================================================
+2026-01-01 19:24:28,680 | INFO | Found 2 files to extract.
+2026-01-01 19:24:28,681 | INFO | 
+📂 [IBKR] U22156212.TRANSACTIONS.1Y.csv (STOCKS)
+2026-01-01 19:24:28,691 | INFO |    🔍 CSV Header scan: max_matches=8/8 | Best index=9
+2026-01-01 19:24:28,710 | INFO |    🔍 Found Columns: ['Transaction History', 'Header', 'Date', 'Account', 'Description', 'Transaction Type', 'Symbol', 'Quantity', 'Price', 'Gross Amount ', 'Commission', 'Net Amount']
+2026-01-01 19:24:28,710 | INFO |    🗺️ Mapping: {'Symbol': 'symbol', 'Date': 'date', 'Transaction Type': 'operation_type', 'Quantity': 'quantity', 'Price': 'price', 'Gross Amount': 'total_amount', 'Commission': 'fees', 'Net Amount': 'balance'}
+2026-01-01 19:24:28,714 | INFO |    ➡️ Mapped Columns: ['Transaction History', 'Header', 'date', 'Account', 'Description', 'operation_type', 'symbol', 'quantity', 'price', 'total_amount', 'fees', 'balance']
+2026-01-01 19:24:28,716 | INFO |    ✅ Available Keys: ['date', 'symbol', 'operation_type', 'quantity', 'price', 'total_amount', 'fees', 'balance']
+2026-01-01 19:24:28,728 | INFO |    📊 Raw Rows sampled (first 5): [{'date': '2025-12-18', 'symbol': '-', 'operation_type': 'Adjustment', 'quantity': '-', 'price': '-', 'total_amount': -1.0094219941470897, 'fees': '-', 'balance': -1.0094219941470897}, {'date': '2025-10-22', 'symbol': 'UAMY', 'operation_type': 'Sell', 'quantity': '-10.0', 'price': '12.06', 'total_amount': 103.87278, 'fees': '-0.8629192440000001', 'balance': 103.009860756}, {'date': '2025-10-22', 'symbol': 'EUR.USD', 'operation_type': 'Forex Trade Component', 'quantity': '-0.87', 'price': '1.15846', 'total_amount': -0.0019300097399999, 'fees': '-', 'balance': -0.0019300097399999}, {'date': '2025-10-22', 'symbol': 'EUR.USD', 'operation_type': 'Forex Trade Component', 'quantity': '0.00514996', 'price': '1.16121276', 'total_amount': -7.862599999989769e-07, 'fees': '-', 'balance': -7.862599999989769e-07}, {'date': '2025-10-07', 'symbol': 'RGTI', 'operation_type': 'Buy', 'quantity': '3.0', 'price': '42.09', 'total_amount': -108.3131433, 'fees': '-0.85784661414', 'balance': -109.17098991414}]
+2026-01-01 19:24:28,730 | INFO |    ✅ Extracted 17 rows.
+2026-01-01 19:24:28,761 | INFO | 
+📂 [IBKR] Rendiconto di attività.pdf (STOCKS)
+2026-01-01 19:24:28,761 | INFO |    🧠 Extraction Strategy: TEXT_LLM
+2026-01-01 19:24:29,642 | INFO |    📝 Native PDF detected (10515 chars). Using Text Model (qwen2.5:14b-instruct-q6_K).
+2026-01-01 19:24:34,736 | INFO |       💬 Text Model Response: Based on the provided text content, there are no explicit sections like "Transaction History," "Trad...
+2026-01-01 19:24:34,737 | WARNING |    ⚠️ No rows extracted.
+2026-01-01 19:24:34,753 | INFO | 
+💾 Extraction saved to: D:\Download\Progetto WAR ROOM\warroom\extraction_results.json (17 total rows)
+2026-01-01 19:25:22,345 | INFO | ============================================================
+2026-01-01 19:25:22,663 | INFO | 💾 SMART LOADER - Phase 4
+2026-01-01 19:25:22,664 | INFO | ============================================================
+2026-01-01 19:25:22,665 | INFO | 📂 Loading 17 rows from extraction_results.json...
+2026-01-01 19:25:22,950 | INFO | 💾 Transactions Loaded: 17 new, 0 skipped.
+2026-01-01 19:25:22,950 | INFO | 
+🔄 REBUILDING HOLDINGS FROM HISTORY...
+2026-01-01 19:25:22,960 | INFO | Target Brokers: ['REVOLUT', 'TRADE_REPUBLIC', 'BINANCE', 'IBKR', 'BG_SAXO', 'SCALABLE']
+2026-01-01 19:25:22,961 | INFO |    🔨 Rebuilding REVOLUT...
+2026-01-01 19:25:23,014 | INFO |    ✅ Recreated 11 holdings for REVOLUT.
+2026-01-01 19:25:23,016 | INFO |    🔨 Rebuilding TRADE_REPUBLIC...
+2026-01-01 19:25:23,033 | INFO |    ✅ Recreated 5 holdings for TRADE_REPUBLIC.
+2026-01-01 19:25:23,033 | INFO |    🔨 Rebuilding BINANCE...
+2026-01-01 19:25:23,054 | INFO |    ✅ Recreated 1 holdings for BINANCE.
+2026-01-01 19:25:23,054 | INFO |    🔨 Rebuilding IBKR...
+2026-01-01 19:25:23,069 | INFO |    ✅ Recreated 5 holdings for IBKR.
+2026-01-01 19:25:23,070 | INFO |    🔨 Rebuilding BG_SAXO...
+2026-01-01 19:25:23,092 | INFO |    ✅ Recreated 12 holdings for BG_SAXO.
+2026-01-01 19:25:23,093 | INFO |    🔨 Rebuilding SCALABLE...
+2026-01-01 19:25:23,110 | INFO |    ✅ Recreated 5 holdings for SCALABLE.
+2026-01-01 19:25:23,110 | INFO | ============================================================
+2026-01-01 19:25:23,110 | INFO | ✅ DONE.

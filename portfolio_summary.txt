@@ -1,0 +1,51 @@
+﻿================================================================================
+­ƒôè PORTFOLIO SUMMARY (Broker by Broker)
+================================================================================
+
+­ƒö╣ REVOLUT
+   Holdings: 16
+   Total Value: 1,169.92 EUR
+   Breakdown:
+     - STOCK       : 1,169.81 EUR
+     - CRYPTO      : 0.00 EUR
+     - COMMODITY   : 0.11 EUR
+
+­ƒö╣ BGSAXO
+   Holdings: 55
+   Total Value: 18,460.47 EUR
+   Breakdown:
+     - STOCK       : 13,394.73 EUR
+     - ETF         : 5,065.74 EUR
+
+­ƒö╣ TRADE_REPUBLIC: NO DATA
+
+­ƒö╣ BINANCE
+   Holdings: 66
+   Total Value: 0.00 EUR
+   Breakdown:
+     - CRYPTO      : 0.00 EUR
+
+­ƒö╣ IBKR
+   Holdings: 3
+   Total Value: 128.78 EUR
+   Breakdown:
+     - CURRENCY    : 128.78 EUR
+     - STOCK       : 0.00 EUR
+
+­ƒö╣ SCALABLE_CAPITAL
+   Holdings: 13
+   Total Value: 0.00 EUR
+   Breakdown:
+     - STOCK       : 0.00 EUR
+
+================================================================================
+­ƒîì GRAND TOTAL
+================================================================================
+   Total Holdings: 153
+   Total Value:    19,759.17 EUR
+   Global Breakdown:
+     - STOCK       : 14,564.54 EUR
+     - CRYPTO      : 0.00 EUR
+     - COMMODITY   : 0.11 EUR
+     - ETF         : 5,065.74 EUR
+     - CURRENCY    : 128.78 EUR

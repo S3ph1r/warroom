@@ -1,0 +1,140 @@
+﻿=== AccountStatementPeriod_10773818_20250101-20260101_3b3ecab973f4498a995fbb70a755a181.pdf ===
+File is encrypted. Attempting decrypt...
+Pages: 21
+
+============================================================
+PAGE 1
+============================================================
+ACCOUNT STATEMENT
+Report Date
+2026/01/03
+Report Period
+January 01, 2025 - January 01, 2026 Summary for your account in this period
+Entity Name: ROBERTO GUARESCHI
+Account ID: 10773818
+Account Type: Normal Account
+Account Manager: --
+Account Email: guareschi.roberto@gmail.com
+Your opening total account value: 5,513.96 USD
+Change value:
+ -5,513.96 USD
+Total Account Value: -- USD
+Welcome to your new Binance statement !
+Set up your scheduler in Report Center to automatically receive this report daily in your emails!
+This document has been issued at the request of the customer/user. Please be advised that Binance and its affiliates shall not be responsible or liable in any way for however the information herein is used by the customer/user and/or any third party with whom the information is shared with. It is 
+the responsibility of the customer/user to check that all information and records contained herein are accurate.
+
+============================================================
+PAGE 2
+============================================================
+CONSOLIDATED  
+SUMMARY
+ACCOUNT  
+SUMMARY
+ACCOUNT  
+DETAILS
+Total Account Value
+-- USD
+Beginning Value / Change
+5,513.96 USD / -5,513.96 USD
+Report Period: January 01, 2025 - January 01, 2026
+Report Date: 2026/01/03
+Account ID: 10773818
+Registration Date: 2017-09-21
+Wallet Balance
+Funding
+-- USD
+Beginning Value: 0.01 USD
+Change: -0.01 USD
+Spot & Margin
+-- USD
+Beginning Value: 4,816.10 USD
+Change: -4,816.10 USD
+Futures
+-- USD
+Beginning Value: 0.00 USD
+Change: 0.00 USD
+Options
+-- USD
+Beginning Value: 0.00 USD
+Change: 0.00 USD
+Earn
+-- USD
+Beginning Value: 697.86 USD
+Change: -697.86 USD
+Asset Allocation Your Consolidated Top 10 Assets
+Symbol Quantity (Beginning Value / Change) Price (Beginning Value / Change) Value (Beginning Value / Change) (USD)
+
+
+[!] DETECTED 'TOP 10' LIMITATION
+
+============================================================
+PAGE 3
+============================================================
+CONSOLIDATED  
+SUMMARY
+ACCOUNT  
+SUMMARY
+ACCOUNT  
+DETAILS
+FUNDING SPOT & MARGIN FUTURES OPTION EARN
+Total Funding Account Value
+-- USD
+Beginning Value / Change
+0.01 USD / -0.01 USD
+Report Period: January 01, 2025 - January 01, 2026
+Report Date: 2026/01/03
+Account ID: 10773818
+Funding Top 10 Holdings
+Symbol Quantity (Beginning Value / Change) Price (Beginning Value / Change) Value (Beginning Value / Change) (USD)
+
+
+[!] DETECTED 'TOP 10' LIMITATION
+
+============================================================
+PAGE 4
+============================================================
+CONSOLIDATED  
+SUMMARY
+ACCOUNT  
+SUMMARY
+ACCOUNT  
+DETAILS
+FUNDING SPOT & MARGIN FUTURES OPTION EARN
+Total Spot Account Value
+-- USD
+Beginning Value / Change
+4,816.10 USD / -4,816.10 USD
+Report Period: January 01, 2025 - January 01, 2026
+Report Date: 2026/01/03
+Account ID: 10773818
+Spot Top 10 Holdings
+Symbol Quantity (Beginning Value / Change) Price (Beginning Value / Change) Value (Beginning Value / Change) (USD)
+
+
+[!] DETECTED 'TOP 10' LIMITATION
+
+============================================================
+PAGE 5
+============================================================
+CONSOLIDATED  
+SUMMARY
+ACCOUNT  
+SUMMARY
+ACCOUNT  
+DETAILS
+FUNDING SPOT & MARGIN FUTURES OPTION EARN
+Total Margin Account Value
+-- USD
+Beginning Value / Change
+0.00 USD / 0.00 USD
+Report Period: January 01, 2025 - January 01, 2026
+Report Date: 2026/01/03
+Account ID: 10773818
+Margin Top 10 Holdings
+Cross Margin
+Wallet Balance -- USD Beginning Value 0.00 USD Change Value 0.00 USD
+Symbol Quantity (Beginning Value / Change) Price (Beginning Value / Change) Value (Beginning Value / Change) (USD)
+
+
+[!] DETECTED 'TOP 10' LIMITATION

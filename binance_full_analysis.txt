@@ -1,0 +1,47 @@
+﻿python : C:\Users\Roberto\AppData\Local\Program
+s\Python\Python314\Lib\site-packages\openpyxl\s
+tyles\stylesheet.py:237: UserWarning: Workbook 
+contains no default style, apply openpyxl's 
+default
+In riga:1 car:24
++ ... ONPATH = "."; python 
+scripts/analyze_binance_full_csv.py 2>&1 | 
+Out-F ...
++                   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (C 
+   :\Users\Robert...npyxl's default:String) [  
+  ], RemoteException
+    + FullyQualifiedErrorId : NativeCommandErr 
+   or
+ 
+  warn("Workbook contains no default style, 
+apply openpyxl's default")
+=== ANALYZING: ea91c32a-e883-11f0-932a-0e89d0e894f3-1.csv ===
+First 5 lines:
+"User_ID","UTC_Time","Account","Operation","Coin","Change","Remark"
+"10773818","2017-09-21 03:43:33","Spot","Deposit","BTC","0.02790000",""
+"10773818","2017-09-21 03:51:50","Spot","Sell","BTC","-0.00678620",""
+"10773818","2017-09-21 03:51:50","Spot","Buy","WTC","20.00000000",""
+"10773818","2017-09-21 03:51:50","Spot","Fee","WTC","-0.02000000",""
+
+DataFrame Info:
+Rows: 4589
+Columns: ['User_ID', 'UTC_Time', 'Account', 'Operation', 'Coin', 'Change', 'Remark']
+
+Sample Data (First 3 rows):
+    User_ID             UTC_Time Account Operation Coin     Change Remark
+0  10773818  2017-09-21 03:43:33    Spot   Deposit  BTC   0.027900    NaN
+1  10773818  2017-09-21 03:51:50    Spot      Sell  BTC  -0.006786    NaN
+2  10773818  2017-09-21 03:51:50    Spot       Buy  WTC  20.000000    NaN
+
+Date Range (UTC_Time): 2017-09-21 03:43:33 to 2026-01-02 07:00:26
+
+
+=== ANALYZING: Binance-Report-storico-dei-depositi-2026-01-03.xlsx ===
+Rows: 13
+Columns: ['Data (UTC+0)', 'Crypto', 'Rete', 'Importo', 'Indirizzo', 'TXID', 'Stato']
+        Data (UTC+0) Crypto Rete   Importo                                         Indirizzo                                                                                      TXID      Stato
+0  24-10-05 18:49:01    SOL  SOL  0.497963      7gLV2B2gatNAat91zvdSMyQZ6jhJRVNXgDirgg1Y8XdX  3R6S8KjsTSeXqTAeDUxBirWueVTP6Sr2Kb8BKf9KncK2ntJW67nomicaqMQoP59B8eC338VqBKRF5kdkfU6GW18K  Completed
+1  24-10-05 18:36:46   USDT  SOL  7.782007      7gLV2B2gatNAat91zvdSMyQZ6jhJRVNXgDirgg1Y8XdX  4uUy8ZHtPkjYXQDSpfELYPM1Lf9oVtHw8UeKh2wcgxDb8vfiVfBcrahAmuVRWjA8SR2oDoE9SRSt7b24x8dH33WQ  Completed
+2  24-10-05 18:00:01    TON  TON  9.979960  EQD5mxRgCuRNLxKxeOjG6r14iSroLF5FtomPnet-sgP5xNJb                          aaa81563e6b1e4f62e6ff05bab6ccabd9cadf1b4d2fe751e02d5d8c9d9ecc276  Completed

@@ -472,16 +472,65 @@ def get_asset_details_endpoint(ticker: str):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+# Global state for refresh cooldown
+LAST_REFRESH_TRIGGER = datetime.min
+REFRESH_COOLDOWN = timedelta(seconds=60) # Don't refresh more than once a minute
+
+def trigger_background_refresh():
+    """Helper to start refresh in a separate thread."""
+    global LAST_REFRESH_TRIGGER
+    
+    # Check cooldown
+    if datetime.now() - LAST_REFRESH_TRIGGER < REFRESH_COOLDOWN:
+        logger.info("⏳ Refresh skipped (cooldown active)")
+        return
+
+    logger.info("⚡ Triggering background portfolio refresh...")
+    LAST_REFRESH_TRIGGER = datetime.now()
+    
+    def run_refresh():
+        try:
+            build_portfolio_data()
+            logger.info("✅ Background refresh finished.")
+        except Exception as e:
+            logger.error(f"❌ Background refresh failed: {e}")
+            
+    thread = threading.Thread(target=run_refresh, daemon=True)
+    thread.start()
+
 @app.get("/api/portfolio")
 def get_portfolio():
     try:
-        # Try to load instantaneous snapshot
+        # 1. Try to load existing snapshot (FAST!)
         data = _load_snapshot(PORTFOLIO_SNAPSHOT)
-        if data:
-            return data
-        # Fallback to build
-        return build_portfolio_data()
+        
+        # 2. Check if we need to refresh in background
+        should_refresh = False
+        if not data:
+            # First run ever: Blocking build (slow but necessary)
+            logger.info("First run: Building portfolio synchronously...")
+            return build_portfolio_data()
+        
+        # Check staleness
+        last_updated_str = data.get("last_updated")
+        if last_updated_str:
+            try:
+                last_updated = datetime.strptime(last_updated_str, "%Y-%m-%d %H:%M:%S")
+                # If data is older than 2 minutes, trigger refresh
+                if datetime.now() - last_updated > timedelta(minutes=2):
+                    should_refresh = True
+            except ValueError:
+                should_refresh = True
+        else:
+             should_refresh = True
+             
+        if should_refresh:
+            trigger_background_refresh()
+            
+        return data
+        
     except Exception as e:
+        logger.error(f"Portfolio Error: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.post("/api/refresh")

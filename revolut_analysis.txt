@@ -1,0 +1,48 @@
+﻿
+======================================================================
+­ƒôé TRADING (Stocks)
+   File: trading-account-statement_2019-12-28_2025-12-31_it-it_28f506.xlsx
+======================================================================
+Rows: 114 | Columns: 1
+
+COLUMNS: ['Date,Ticker,Type,Quantity,Price per share,Total Amount,Currency,FX Rate']
+
+FIRST 2 ROWS:
+  Row 0: {'Date,Ticker,Type,Quantity,Price per share,Total Amount,Currency,FX Rate': '2019-12-28T00:49:41.265169Z,,CASH TOP-UP,,,USD 50,USD,1.1235'}
+  Row 1: {'Date,Ticker,Type,Quantity,Price per share,Total Amount,Currency,FX Rate': '2022-07-19T13:31:37.671484Z,XPOA,BUY - MARKET,3.00902708,USD 9.97,USD 30,USD,1.0247'}
+
+======================================================================
+­ƒôé CRYPTO
+   File: crypto-account-statement_2022-07-04_2025-12-31_it-it_87d838.xlsx
+======================================================================
+Rows: 1141 | Columns: 1
+
+COLUMNS: ['Symbol,Type,Quantity,Price,Value,Fees,Date']
+
+FIRST 2 ROWS:
+  Row 0: {'Symbol,Type,Quantity,Price,Value,Fees,Date': 'XLM,Acquisto,"431,3846815","0,11├óÔÇÜ┬¼","49,00├óÔÇÜ┬¼","0,98├óÔÇÜ┬¼","22 lug 2022, 14:54:25"'}
+  Row 1: {'Symbol,Type,Quantity,Price,Value,Fees,Date': 'MANA,Acquisto,"53,38960605","0,84├óÔÇÜ┬¼","45,00├óÔÇÜ┬¼","0,98├óÔÇÜ┬¼","26 lug 2022, 18:47:33"'}
+
+======================================================================
+­ƒôé ACCOUNT (Main)
+   File: account-statement_2017-12-26_2025-12-31_it-it_18a170.xlsx
+======================================================================
+Rows: 502 | Columns: 1
+
+COLUMNS: ['Tipo,Prodotto,Data di inizio,Data di completamento,Descrizione,Importo,Costo,Valuta,State,Saldo']
+
+FIRST 2 ROWS:
+  Row 0: {'Tipo,Prodotto,Data di inizio,Data di completamento,Descrizione,Importo,Costo,Valuta,State,Saldo': 'Ricarica,Attuale,2017-12-28 08:02:46,2017-12-28 08:02:46,Pagamento da GUARESCHI ROBERTO,50.00,0.00,EUR,COMPLETATO,50.00'}
+  Row 1: {'Tipo,Prodotto,Data di inizio,Data di completamento,Descrizione,Importo,Costo,Valuta,State,Saldo': 'Commissione,Attuale,2017-12-28 15:38:40,2017-12-28 15:38:40,Extra Revolut Card,-6.00,0.00,EUR,COMPLETATO,44.00'}
+
+======================================================================
+­ƒôé ACCOUNT (Commodities)
+   File: account-statement_2022-07-26_2025-12-31_it-it_43269b.xlsx
+======================================================================
+Rows: 5 | Columns: 1
+
+COLUMNS: ['Tipo,Prodotto,Data di inizio,Data di completamento,Descrizione,Importo,Costo,Valuta,State,Saldo']
+
+FIRST 2 ROWS:
+  Row 0: {'Tipo,Prodotto,Data di inizio,Data di completamento,Descrizione,Importo,Costo,Valuta,State,Saldo': 'Cambia valuta,Attuale,2022-07-26 18:56:20,2022-07-26 18:56:20,Conversione in XAU,0.058737,0.000881,XAU,COMPLETATO,0.057856'}
+  Row 1: {'Tipo,Prodotto,Data di inizio,Data di completamento,Descrizione,Importo,Costo,Valuta,State,Saldo': 'Cambia valuta,Attuale,2022-10-05 21:06:12,2022-10-05 21:06:12,Conversione in XAU,0.086083,0.001292,XAU,COMPLETATO,0.142647'}

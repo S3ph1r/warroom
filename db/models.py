@@ -8,7 +8,7 @@ from decimal import Decimal
 from typing import Optional
 from sqlalchemy import (
     String, Text, Integer, DECIMAL, Date, 
-    DateTime, Index, JSON
+    DateTime, Index, JSON, Float
 )
 from sqlalchemy.dialects.postgresql import UUID, JSONB
 from sqlalchemy.orm import Mapped, mapped_column
@@ -57,6 +57,12 @@ class Holding(Base):
     source_document: Mapped[Optional[str]] = mapped_column(String(255))  # File name
     notes: Mapped[Optional[str]] = mapped_column(Text)
     
+    # Asset metadata (propagated from Transactions for valuation)
+    share_class: Mapped[Optional[str]] = mapped_column(String(10))
+    adr_ratio: Mapped[Optional[float]] = mapped_column(Float)
+    nominal_value: Mapped[Optional[str]] = mapped_column(String(20))
+    market: Mapped[Optional[str]] = mapped_column(String(10))
+    
     # Metadata
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
@@ -97,6 +103,11 @@ class Transaction(Base):
     currency: Mapped[str] = mapped_column(String(3), default="EUR")
     fees: Mapped[Decimal] = mapped_column(DECIMAL(18, 2), default=Decimal("0"))
     
+    # New fields for enhanced tracking
+    realized_pnl: Mapped[Optional[Decimal]] = mapped_column(DECIMAL(18, 2))  # Realized P&L from this trade
+    fx_cost: Mapped[Optional[Decimal]] = mapped_column(DECIMAL(18, 2))  # FX conversion cost
+
+    
     # Timestamp
     timestamp: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False, index=True)
     
@@ -106,6 +117,13 @@ class Transaction(Base):
     
     # Metadata
     notes: Mapped[Optional[str]] = mapped_column(Text)
+    
+    # Asset metadata (primarily for stocks with complex structures)
+    share_class: Mapped[Optional[str]] = mapped_column(String(10))  # "A", "B", "CL.B", etc.
+    adr_ratio: Mapped[Optional[float]] = mapped_column(Float)  # 2.0 for ADR/2, 0.5 for 1/2
+    nominal_value: Mapped[Optional[str]] = mapped_column(String(20))  # "0.001", "0.00", etc.
+    market: Mapped[Optional[str]] = mapped_column(String(10))  # "DK", "US", "YC", etc.
+    
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
     
     __table_args__ = (

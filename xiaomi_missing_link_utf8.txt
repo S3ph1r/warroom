@@ -1,0 +1,179 @@
+﻿Searching for Xiaomi movements in 90 files...
+
+--- HIT in 20260102 Securities account statement Broker Scalable Capital a7mZgU.pdf ---
+[Line 67] 120.0 Xiaomi
+  Custodia non collettiva
+  LU
+  127.20 EUR
+  KYG9830T1067
+  Custodia non collettiva
+  LU
+  519.60 EUR
+[Line 68] KYG9830T1067
+  LU
+  127.20 EUR
+  120.0 Xiaomi
+  Custodia non collettiva
+  LU
+  519.60 EUR
+  6.0 EssilorLuxottica
+
+--- HIT in 20251002 Securities account statement Broker Scalable Capital uhzy3V.pdf ---
+[Line 48] 30.0 Xiaomi
+  Custodia non collettiva
+  LU
+  363.40 EUR
+  KYG9830T1067
+  Custodia non collettiva
+  LU
+  178.20 EUR
+[Line 49] KYG9830T1067
+  LU
+  363.40 EUR
+  30.0 Xiaomi
+  Custodia non collettiva
+  LU
+  178.20 EUR
+  T otale 1,225.30 EUR
+
+--- HIT in 20250805 Securities Account Statement Broker Scalable Capital qzi98v.pdf ---
+[Line 38] 30.0 Xiaomi
+  Custodia non collettiva
+  LU
+  160.00 EUR
+  KYG9830T1067
+  Custodia non collettiva
+  LU
+  198.60 EUR
+[Line 39] KYG9830T1067
+  LU
+  160.00 EUR
+  30.0 Xiaomi
+  Custodia non collettiva
+  LU
+  198.60 EUR
+  20.0 Alibaba Group Hldg
+
+--- HIT in 20250602 Monthly account statement Broker Scalable Capital oYfK5H.pdf ---
+[Line 15] 30.00 pz. Xiaomi (KYG9830T1067)
+  07.05.2025 07.05.2025 Bonifico +1,000.00 EUR
+  07.05.2025 09.05.2025 Commissione di negoziazione -0.99 EUR
+  07.05.2025 09.05.2025 Acquisto di uno strumento finanziario
+  -171.75 EUR
+  07.05.2025 09.05.2025 Acquisto di uno strumento finanziario
+  5.00 pz. T encent Holdings (KYG875721634)
+  -275.45 EUR
+
+--- HIT in 20251018 MIFID II quarterly report Baader Bank ppN24P.pdf ---
+[Line 62] KYG9830T1067
+  Units
+  EUR
+  ISIN:
+  Xiaomi Corp.
+  Registered Shares Cl.B o.N.
+  Safekeeping:
+  Domestic
+[Line 63] Xiaomi Corp.
+  EUR
+  ISIN:
+  KYG9830T1067
+  Registered Shares Cl.B o.N.
+  Safekeeping:
+  Domestic
+  Place of Custody:
+
+--- HIT in 20251001 Informazioni sui costi ex-post Scalable Capital jVnnrt.pdf ---
+[Line 107] KYG9830T1067 1.98 EUR 0.00 EUR 0.00 EUR 0.00 EUR - 1.00 EUR 2.98 EUR
+  L&G ETF-HYDROGEN ECONOMY 0.99 EUR 0.00 EUR 0.00 EUR 0.25 EUR - 0.50 EUR 1.74 EUR
+  IE00BMYDM794
+  KYG875721634 0.99 EUR 0.00 EUR 0.00 EUR 0.00 EUR - 0.50 EUR 1.49 EUR
+  Scalable Capital Bank GmbH
+  Seitzstra├ƒe 8e
+  80538 M├╝nchen
+  HRB 217778
+
+--- HIT in 20250512 Monthly account statement Baader Bank nodP6k.pdf ---
+[Line 34] ISIN KYG9830T1067
+  486.63
+  Sale
+  XIAOMI CORP. CL.B
+  STK              90    -
+  Case No.: WWUM 00462397012
+  2025-04-03
+  2025-04-03
+[Line 51] ISIN KYG9830T1067
+  143.16
+  -
+  XIAOMI CORP. CL.B
+  STK              30
+  Case No.: WWUM 00475258155
+  2025-04-23
+  2025-04-23
+[Line 68] ISIN KYG9830T1067
+  271.15
+  -
+  XIAOMI CORP. CL.B
+  STK              50
+  Case No.: WWUM 00476931793
+  Balance:
+  80.12
+
+--- HIT in 20250423 Report fiscale Scalable Capital 5DaTqg.pdf ---
+[Line 575] Distribuzione 27.12.2024 EUR 7,00 0,0100 0,00 0,00 0,07 0,01 1,000000 0,07 0,00 26,00%
+  Stati Uniti DÔÇÖAmerica (Codice = 069)
+  US67066G1040 - NVIDIA Corp
+  Distribuzione 03.10.2024 EUR 5,00 0,0100 0,00 0,00 0,05 0,01 1,000000 0,05 0,00 26,00%
+  Pagina 15 di 29
+  5B78Ndj6xTkqNPPty239AE
+  01.01.2024 - 31.12.2024
+  EUR
+[Line 598] Distribuzione 27.12.2024 EUR 3,00 0,0367 0,00 0,00 0,11 0,00 1,000000 0,11 0,00 26,00%
+  Distribuzione 27.03.2024 EUR 3,00 0,2400 0,00 0,00 0,72 0,00 1,000000 0,72 0,00 26,00%
+  Distribuzione 26.06.2024 EUR 3,00 0,5167 0,00 0,00 1,55 0,00 1,000000 1,55 0,00 26,00%
+  Distribuzione 25.09.2024 EUR 3,00 0,3500 0,00 0,00 1,05 0,00 1,000000 1,05 0,00 26,00%
+  IE00B1FZS574 - iShares MSCI Turkey UCITS ETF USD (Dist)
+  Acquisto 22.12.2022 EUR 3,00 17,6240 0,99 0,00 52,87 0,00 1,000000 52,87 0,99
+  Vendita 03.04.2024 EUR 3,00 17,9500 0,99 0,00 53,85 0,00 1,000000 53,85 0,99
+  Guadagni / Perdite 0,98 26,00%
+[Line 657] KYG9830T1067  Quantit├á 40,00 (30.12.2024 - 31.12.2024) 2 094 1 170,50 170,48 2 0,00
+  DK0062498333  Quantit├á 3,00 (24.12.2024 - 31.12.2024) 2 094 1 246,57 250,83 8 0,01
+  KYG875721634  Quantit├á 3,00 (19.11.2024 - 31.12.2024) 2 094 1 146,85 154,64 43 0,04
+  KYG875721634  Quantit├á 7,00 (01.01.2024 - 31.12.2024) 2 094 1 239,86 360,82 366 0,72
+  KYG9830T1067  Quantit├á 60,00 (27.12.2024 - 31.12.2024) 2 094 1 236,49 255,72 5 0,01
+  US05606L1008  Quantit├á 2,00 (09.01.2024 - 31.12.2024) 2 094 1 98,40 132,50 358 0,26
+  US26740W1099  Quantit├á 5,00 (20.11.2024 - 31.12.2024) 2 094 1 6,97 45,39 42 0,01
+  US26740W1099  Quantit├á 20,00 (24.12.2024 - 31.12.2024) 2 094 1 143,40 181,54 8 0,01
+[Line 658] KYG9830T1067  Quantit├á 60,00 (27.12.2024 - 31.12.2024) 2 094 1 236,49 255,72 5 0,01
+  KYG875721634  Quantit├á 3,00 (19.11.2024 - 31.12.2024) 2 094 1 146,85 154,64 43 0,04
+  KYG875721634  Quantit├á 7,00 (01.01.2024 - 31.12.2024) 2 094 1 239,86 360,82 366 0,72
+  KYG9830T1067  Quantit├á 40,00 (30.12.2024 - 31.12.2024) 2 094 1 170,50 170,48 2 0,00
+  US05606L1008  Quantit├á 2,00 (09.01.2024 - 31.12.2024) 2 094 1 98,40 132,50 358 0,26
+  US26740W1099  Quantit├á 5,00 (20.11.2024 - 31.12.2024) 2 094 1 6,97 45,39 42 0,01
+  US26740W1099  Quantit├á 20,00 (24.12.2024 - 31.12.2024) 2 094 1 143,40 181,54 8 0,01
+  US26740W1099  Quantit├á 30,00 (16.12.2024 - 23.12.2024) 2 094 1 121,77 232,56 8 0,01
+[Line 665] US2972842007  Quantit├á 4,00 (27.12.2024 - 31.12.2024) 2 094 1 464,00 470,00 5 0,01
+  US26740W1099  Quantit├á 30,00 (16.12.2024 - 23.12.2024) 2 094 1 121,77 232,56 8 0,01
+  US26740W1099  Quantit├á 30,00 (20.11.2024 - 23.12.2024) 2 094 1 41,82 232,56 34 0,04
+  US2972842007  Quantit├á 2,00 (20.08.2024 - 31.12.2024) 2 094 1 214,00 235,00 134 0,17
+  US67066G1040  Quantit├á 2,00 (20.11.2024 - 18.12.2024) 2 094 1 265,68 248,84 29 0,04
+  US67066G1040  Quantit├á 5,00 (12.08.2024 - 18.12.2024) 2 094 1 472,50 622,10 129 0,44
+  US76954A1034  Quantit├á 3,00 (10.10.2024 - 13.12.2024) 2 094 1 28,95 37,80 65 0,01
+  US88160R1014  Quantit├á 2,00 (25.07.2024 - 31.12.2024) 2 094 1 460,30 810,00 160 0,71
+
+--- HIT in 20250315 Account statement Baader Bank iUJkmx.pdf ---
+[Line 62] KYG9830T1067
+  Units
+  EUR
+  ISIN:
+  Xiaomi Corp.
+  Registered Shares Cl.B o.N.
+  Safekeeping:
+  Domestic
+[Line 63] Xiaomi Corp.
+  EUR
+  ISIN:
+  KYG9830T1067
+  Registered Shares Cl.B o.N.
+  Safekeeping:
+  Domestic
+  Place of Custody:

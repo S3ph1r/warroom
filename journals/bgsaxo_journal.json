@@ -1,0 +1,26 @@
+{
+  "broker": "BGSAXO",
+  "files": {
+    "Posizioni_19-dic-2025_17_49_12.csv": {
+      "fingerprint": "50f3a8830e25",
+      "document_type": "STOCKS",
+      "document_category": "HOLDINGS",
+      "processing_strategy": "EXTRACT_HOLDINGS",
+      "asset_type": "STOCK",
+      "status": "classified",
+      "should_process": true,
+      "updated_at": "2026-01-02T18:18:31.439461"
+    },
+    "Transactions_19807401_2024-11-26_2025-12-19.pdf": {
+      "fingerprint": "31af659dbd93",
+      "document_type": "STOCKS",
+      "document_category": "TRANSACTIONS",
+      "processing_strategy": "EXTRACT_TRANSACTIONS",
+      "asset_type": "STOCK",
+      "status": "classified",
+      "should_process": true,
+      "updated_at": "2026-01-02T18:18:46.851211"
+    }
+  },
+  "last_updated": "2026-01-02T18:18:46.851224"
+}
