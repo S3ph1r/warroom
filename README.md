@@ -143,7 +143,11 @@ warroom/
     - **Validated Brokers**: Full end-to-end support for **Revolut**, **Scalable Capital**, **BG Saxo**, and **IBKR**.
     - **Unified Traceability**: Centralized logging in `warroom_ingestion.log` for debugging the entire pipeline.
     - **Atomic DB Loading**: History-based holdings calculation with WAC (Weighted Average Cost) and Cash balance tracking.
-    - **Ready for Binance**: System architecture designed to handle Crypto assets out-of-the-box.
+    - **Advanced Binance Integration**: 
+        - **Historic Pricing**: Parallel fetching of historical prices (50 threads) for accurate WAC calculation.
+        - **Full Asset Support**: Seamlessly handles Spot, Earn, Staking, Airdrops, and Rewards.
+        - **Smart Reconciliation**: Merges Spot and Earn balances for a unified view of asset ownership.
+    - **Robust Persistence**: Atomic file writing to prevent data corruption during high-concurrency updates.
 
 ## 🔒 Security
 

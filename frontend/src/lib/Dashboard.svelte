@@ -66,6 +66,7 @@
                     (["DEPOSIT", "WITHDRAW"].includes(mode)
                         ? data.currency
                         : ""),
+                isin: data.isin || "",
                 asset_type: data.asset_type || "STOCK",
                 quantity: parseFloat(data.quantity),
                 price: parseFloat(data.price || 1),
@@ -162,6 +163,7 @@
     }
 
     let pollInterval;
+    let autoRefreshInterval;
 
     function checkStalenessAndPoll() {
         if (!data || !data.last_updated) return;
@@ -192,6 +194,7 @@
     import { onDestroy } from "svelte";
     onDestroy(() => {
         if (pollInterval) clearInterval(pollInterval);
+        if (autoRefreshInterval) clearInterval(autoRefreshInterval);
     });
 
     function exportCSV() {
@@ -463,6 +466,29 @@
         ),
         cash: filteredHoldings.filter((h) => h.asset_type === "CASH"),
     };
+
+    // Auto-refresh: Initialize on component mount
+
+    onMount(() => {
+        // Initial fetch
+        fetchData();
+
+        // Setup periodic refresh (60 seconds)
+        autoRefreshInterval = setInterval(() => {
+            console.log("🔄 Auto-refresh: Fetching updated prices...");
+            fetchData();
+        }, 60000); // 60 seconds
+
+        return () => {
+            // Cleanup on unmount
+            if (autoRefreshInterval) clearInterval(autoRefreshInterval);
+        };
+    });
+
+    // Manual refresh trigger from parent
+    $: if (refreshTrigger > 0) {
+        fetchData();
+    }
 </script>
 
 {#if error}

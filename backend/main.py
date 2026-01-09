@@ -218,8 +218,16 @@ PORTFOLIO_SNAPSHOT = PROJECT_ROOT / "data" / "portfolio_snapshot.json"
 INTELLIGENCE_SNAPSHOT = PROJECT_ROOT / "data" / "intelligence_snapshot.json"
 
 def _save_snapshot(path: Path, data: dict):
-    with open(path, 'w') as f:
-        json.dump(data, f)
+    # Atomic write to prevent corruption
+    temp_path = path.with_suffix('.tmp')
+    try:
+        with open(temp_path, 'w') as f:
+            json.dump(data, f)
+        temp_path.replace(path)
+    except Exception as e:
+        logger.error(f"Failed to save snapshot {path}: {e}")
+        if temp_path.exists():
+            temp_path.unlink()
 
 def _load_snapshot(path: Path):
     if path.exists():
@@ -425,6 +433,7 @@ class TransactionRequest(BaseModel):
     mode: str # BUY, SELL, DEPOSIT, WITHDRAW
     broker: str
     ticker: Optional[str] = None
+    isin: Optional[str] = None
     asset_type: Optional[str] = "STOCK"
     quantity: float
     price: Optional[float] = 0.0

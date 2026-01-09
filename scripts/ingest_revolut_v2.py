@@ -194,8 +194,15 @@ def extract_transactions_from_trading_excel(filepath: Path) -> list:
         # Handle CASH TOP-UP and DIVIDEND
         if "DIVIDEND" in tx_type:
             operation = "DIVIDEND"
-        elif "TOP-UP" in tx_type or "CASH" in tx_type:
-            operation = "DEPOSIT"
+        elif "WITHDRAW" in tx_type:
+             operation = "WITHDRAW"
+        elif "TOP-UP" in tx_type:
+             operation = "DEPOSIT"
+        
+        # Ensure total_amount is negative for BUY/WITHDRAW explicitly if not already
+        # Revolut Excel usually has negative amounts for debits, but let's verify.
+        # Check inspection: Column is 'Total Amount'.
+        # Assuming signed values in Excel.
         
         transactions.append({
             "ticker": ticker,
@@ -203,7 +210,8 @@ def extract_transactions_from_trading_excel(filepath: Path) -> list:
             "operation": operation,
             "quantity": safe_decimal(row.get('Quantity', 0)),
             "price": safe_decimal(row.get('Price per share', 0)),
-            "total_amount": safe_decimal(row.get('Total Amount', 0)),
+            "total_amount": safe_decimal(row.get('Total Amount', row.get('Amount', df.get('Value', 0)))), # Fallback to Amount or Value
+            "balance": safe_decimal(row.get('Balance', 0)), # Capture Balance for cash calc
             "currency": str(row.get('Currency', 'USD')).strip()[:3],
             "timestamp": parse_date(row.get('Date')),
             "asset_type": "STOCK"
@@ -398,6 +406,34 @@ def calculate_holdings_from_transactions(transactions: list, asset_types: list) 
 
 
 
+def calculate_usd_cash(transactions: list) -> dict:
+    """Calculate USD Cash balance from latest Stock transaction."""
+    stock_tx = [t for t in transactions if t.get("asset_type") == "STOCK" and t.get("balance") is not None]
+    
+    if not stock_tx:
+        return None
+        
+    # Sort by timestamp ascending
+    stock_tx.sort(key=lambda x: x["timestamp"])
+    
+    # Get last balance
+    last_tx = stock_tx[-1]
+    last_balance = last_tx["balance"]
+    
+    print(f"   💰 USD Cash (Trading) found: {last_balance} USD (from {last_tx['timestamp'].date()})")
+    
+    if last_balance > 0:
+        return {
+            "ticker": "USD",
+            "isin": None,
+            "name": "Revolut Trading Cash (USD)",
+            "quantity": last_balance,
+            "price": Decimal("1"), # It's cash
+            "asset_type": "CASH",
+            "currency": "USD"
+        }
+    return None
+
 # ============================================================
 # MAIN INGESTION
 # ============================================================
@@ -451,6 +487,11 @@ def run_ingestion():
         all_holdings.extend(crypto_holdings)
         print(f"   Calculated {len(crypto_holdings)} crypto/commodity holdings")
         
+        # Calculate USD Cash
+        usd_cash = calculate_usd_cash(all_transactions)
+        if usd_cash:
+            all_holdings.append(usd_cash)
+        
         # 5. Load all holdings into database
         holdings_count = load_holdings(all_holdings, session)
 
@@ -472,6 +513,12 @@ def run_ingestion():
         print(f"   Holdings: {holdings_count}")
         print(f"   Transactions: {tx_count}")
         print("=" * 60)
+        
+        # Invalidate cache
+        cache_path = Path(__file__).parent.parent / "data" / "portfolio_snapshot.json"
+        if cache_path.exists():
+            cache_path.unlink()
+            print("🔄 Portfolio cache invalidated (Dashboard will refresh)")
         
     except Exception as e:
         session.rollback()

@@ -22,15 +22,22 @@ import requests
 import time
 import uuid
 import sys
+print("DEBUG: Script started...")
+import io
+
+# sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 from pathlib import Path
+print("DEBUG: Imports 1 done")
 from datetime import datetime
 from decimal import Decimal
 from collections import defaultdict
+print("DEBUG: Imports 2 done")
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from db.database import SessionLocal
 from db.models import Holding, Transaction, ImportLog
+print("DEBUG: DB Imports done")
 
 # Configuration
 BROKER = "BINANCE"
@@ -40,6 +47,12 @@ CSV_PATTERN = "ea91c32a*.csv" # Or just *.csv but being specific is safer if man
 # Binance API
 API_URL = "https://api.binance.com/api/v3/klines"
 PRICE_CACHE = {}
+INVALID_PAIRS = set() # Cache for 400 Bad Request (Invalid Symbol)
+
+# Optimize Connection: Global Session with Keep-Alive and Thread Pool
+session = requests.Session()
+adapter = requests.adapters.HTTPAdapter(pool_connections=50, pool_maxsize=50)
+session.mount('https://', adapter)
 
 def get_binance_price(symbol: str, date_obj: datetime) -> float:
     """Fetch historical daily close price from Binance API."""
@@ -53,10 +66,12 @@ def get_binance_price(symbol: str, date_obj: datetime) -> float:
     pairs_to_try = [f"{symbol}EUR", f"{symbol}USDT"]
     
     timestamp_ms = int(date_obj.timestamp() * 1000)
-    
     final_price = 0.0
     
     for pair in pairs_to_try:
+        if pair in INVALID_PAIRS:
+            continue
+            
         try:
             params = {
                 "symbol": pair,
@@ -64,10 +79,14 @@ def get_binance_price(symbol: str, date_obj: datetime) -> float:
                 "startTime": timestamp_ms,
                 "limit": 1
             }
-            # Add small delay to respect rate limits (1200 req/min is plenty, but safety first)
-            time.sleep(0.1) 
+            # Use global session for keep-alive
+            resp = session.get(API_URL, params=params, timeout=5)
             
-            resp = requests.get(API_URL, params=params, timeout=5)
+            if resp.status_code == 400:
+                # Invalid symbol, cache it entirely for this pair
+                INVALID_PAIRS.add(pair)
+                continue
+                
             data = resp.json()
             
             if isinstance(data, list) and len(data) > 0:
@@ -75,10 +94,6 @@ def get_binance_price(symbol: str, date_obj: datetime) -> float:
                 close_price = float(data[0][4])
                 
                 if "USDT" in pair:
-                    # Very rough approximation: 1 USDT ~= 0.92 EUR (avg). 
-                    # Perfect accuracy would require fetching EURUSDT for that day too.
-                    # For now, let's assume 1:1 USD/EUR parity for simplicity or fix constant
-                    # Better: Fetch EURUSDT? No, let's use 0.92 as distinct placeholder
                     final_price = close_price * 0.92 
                 else:
                     final_price = close_price
@@ -89,8 +104,8 @@ def get_binance_price(symbol: str, date_obj: datetime) -> float:
             pass
     
     PRICE_CACHE[cache_key] = final_price
-    if final_price == 0.0:
-        print(f"   ⚠️ Price not found for {symbol} on {date_str}")
+    # if final_price == 0.0:
+    #     print(f"   ⚠️ Price not found for {symbol} on {date_str}")
         
     return final_price
 
@@ -99,6 +114,10 @@ def normalize_operation(op_raw: str, coin: str) -> str:
     """Map Binance CSV operations to standard types."""
     op = op_raw.strip().lower()
     
+    # Prioritize Transfers (Subscription/Redemption) to avoid capturing them as "Earn" rewards
+    if "subscription" in op or "redemption" in op:
+        return "TRANSFER"
+        
     if "deposit" in op:
         return "DEPOSIT"
     if "withdraw" in op:
@@ -111,6 +130,8 @@ def normalize_operation(op_raw: str, coin: str) -> str:
         return "FEE"
     if "distribution" in op or "reward" in op or "mining" in op or "interest" in op or "earn" in op:
         return "STAKING_REWARD"
+    if "airdrop" in op:
+        return "AIRDROP" 
     if "convert" in op or "swap" in op or "switch" in op:
         return "SWAP"
     if "small assets exchange" in op:
@@ -155,13 +176,55 @@ def ingest_binance():
         print(f"🗑️ Cleared {deleted_h} holdings, {deleted_t} transactions")
         
         transactions = []
-        holdings_map = defaultdict(Decimal) # Coin -> Quantity
+        transactions = []
+        holdings_map = {} # Coin -> {'qty': Decimal, 'total_cost': Decimal}
         
         # 4. Process Rows
-        print("\n🔄 Processing transactions & fetching prices...")
+        print("\n🔄 Scanning for unique (Coin, Date) pairs...")
+        unique_pairs = set()
+        for _, row in df.iterrows():
+            coin = str(row['Coin']).upper().strip()
+            if coin == 'NAN': continue
+            try:
+                dt_str = str(row['UTC_Time'])
+                dt = datetime.strptime(dt_str, "%Y-%m-%d %H:%M:%S")
+                date_str = dt.strftime("%Y-%m-%d")
+                
+                op_raw = str(row['Operation'])
+                op = normalize_operation(op_raw, coin)
+                
+                # Only fetch for relevant ops
+                if op in ['BUY', 'SELL', 'SWAP', 'STAKING_REWARD', 'AIRDROP', 'DEPOSIT', 'WITHDRAW']:
+                     unique_pairs.add((coin, date_str, dt))
+            except:
+                continue
+                
+        print(f"   Found {len(unique_pairs)} unique prices to fetch.")
         
-        # Columns: User_ID, UTC_Time, Account, Operation, Coin, Change, Remark
+        # --- PRE-FETCH PRICES IN PARALLEL ---
+        from concurrent.futures import ThreadPoolExecutor, as_completed
         
+        def fetch_wrapper(args):
+            coin, d_str, dt_obj = args
+            # Check cache first
+            if f"{coin}_{d_str}" in PRICE_CACHE:
+                return
+            get_binance_price(coin, dt_obj)
+            
+        print("   🚀 Pre-fetching prices (Parallel)...")
+        with ThreadPoolExecutor(max_workers=50) as executor:
+            # list of tasks
+            tasks = [executor.submit(fetch_wrapper, p) for p in unique_pairs]
+            
+            done_count = 0
+            for _ in as_completed(tasks):
+                done_count += 1
+                if done_count % 100 == 0:
+                    sys.stdout.write(f"\r      Fetching: {done_count}/{len(unique_pairs)}")
+                    sys.stdout.flush()
+        print("\n   ✅ Pre-fetch complete.")
+
+        print("\n🔄 Processing transactions...")
         processed_count = 0
         
         for _, row in df.iterrows():
@@ -179,15 +242,45 @@ def ingest_binance():
             op_raw = str(row['Operation'])
             op = normalize_operation(op_raw, coin)
             
-            # --- Update Holdings Map ---
-            holdings_map[coin] += qty
-            
-            # --- Price Enrichment (SKIPPED in Fast Mode) ---
-            # We set price=0.0 initially to allow instant ingestion.
-            # Use enrich_binance_prices.py to fetch historical data later.
-            
+            # --- Price Enrichment ---
+            # Fetch historical price immediately for WAC calculation
             price_eur = Decimal("0")
-            total_amount_eur = Decimal("0")
+            if op in ['BUY', 'SELL', 'SWAP', 'STAKING_REWARD', 'AIRDROP', 'DEPOSIT', 'WITHDRAW']:
+                 # Only fetch if meaningful for value (or if we want full history)
+                 raw_price = get_binance_price(coin, dt)
+                 price_eur = Decimal(f"{raw_price:.8f}")
+            
+            total_amount_eur = abs(qty) * price_eur
+            
+            # --- Update Holdings Map & WAC ---
+            # Initialize if new
+            if coin not in holdings_map:
+                holdings_map[coin] = {'qty': Decimal('0'), 'total_cost': Decimal('0')}
+            
+            # WAC Logic:
+            # If Inflow (Buy, Deposit, Airdrop, Reward, Swap In): Add to Cost Basis
+            # If Outflow (Sell, Withdraw, Swap Out): Reduce Cost Basis proportionally
+            
+            if op == 'TRANSFER':
+                # Ignore Internal Transfers (Subscription/Redemption) for Holdings calculation
+                # to maintain a "Total Owned" view (Spot + Earn) from the Transaction History.
+                pass
+            elif qty > 0:
+                # Inflow
+                holdings_map[coin]['qty'] += qty
+                holdings_map[coin]['total_cost'] += total_amount_eur
+            elif qty < 0:
+                # Outflow
+                if holdings_map[coin]['qty'] > 0:
+                     # Calculate current AVG price
+                     avg_price = holdings_map[coin]['total_cost'] / holdings_map[coin]['qty']
+                     # Reduce cost by qty * avg_price
+                     cost_reduction = abs(qty) * avg_price
+                     holdings_map[coin]['qty'] += qty # qty is negative, so it subtracts
+                     holdings_map[coin]['total_cost'] -= cost_reduction
+                else:
+                     holdings_map[coin]['qty'] += qty
+                     # Cost stays 0 or goes negative? Let's keep cost 0 if empty
             
             tx = Transaction(
                 id=uuid.uuid4(),
@@ -207,7 +300,7 @@ def ingest_binance():
             transactions.append(tx)
             
             processed_count += 1
-            if processed_count % 1000 == 0:
+            if processed_count % 50 == 0:
                 print(f"   Processed {processed_count} / {len(df)}...")
         
         # 5. Bulk Insert Transactions
@@ -217,12 +310,18 @@ def ingest_binance():
         # 6. Save Holdings
         print("\n💰 Saving holdings...")
         holdings_objs = []
-        for coin, qty in holdings_map.items():
-            if abs(qty) <= Decimal("0.00000001"): # Ignore dust/zero
+        for coin, data in holdings_map.items():
+            qty = data['qty']
+            total_cost = data['total_cost']
+            
+            if qty <= Decimal("0.00000001"): # Ignore dust/zero
                 continue
                 
+            # Average Buy Price
+            avg_buy_price = total_cost / qty if qty > 0 else Decimal("0")
+                
             # Get latest price for holding valuation
-            current_price = get_binance_price(coin, datetime.now())
+            current_price = Decimal(f"{get_binance_price(coin, datetime.now()):.8f}")
             
             h = Holding(
                 id=uuid.uuid4(),
@@ -232,9 +331,9 @@ def ingest_binance():
                 name=f"{coin} Crypto Asset",
                 asset_type="CRYPTO",
                 quantity=qty,
-                purchase_price=Decimal("0"), # WAC hard to calc with partial data, left 0
-                current_price=Decimal(f"{current_price:.8f}"),
-                current_value=qty * Decimal(f"{current_price:.8f}"),
+                purchase_price=avg_buy_price,
+                current_price=current_price,
+                current_value=qty * current_price,
                 currency="EUR",
                 source_document="Calculated from Full History",
                 last_updated=datetime.now()
@@ -260,6 +359,12 @@ def ingest_binance():
         print("\n✅ BINANCE INGESTION COMPLETE")
         print(f"   Holdings: {len(holdings_objs)}")
         print(f"   Transactions: {len(transactions)}")
+        
+        # Invalidate cache
+        cache_path = Path(__file__).parent.parent / "data" / "portfolio_snapshot.json"
+        if cache_path.exists():
+            cache_path.unlink()
+            print("🔄 Portfolio cache invalidated (Dashboard will refresh)")
         
     except Exception as e:
         session.rollback()
