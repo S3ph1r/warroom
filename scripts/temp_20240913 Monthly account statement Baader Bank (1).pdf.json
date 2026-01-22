@@ -1,0 +1,70 @@
+{
+  "source": "D:\\Download\\SCALABLE CAPITAL\\20240913 Monthly account statement Baader Bank (1).pdf",
+  "last_processed_page": 1,
+  "total_pages": 2,
+  "transactions": [
+    {
+      "date": "2024-08-12",
+      "type": "BUY",
+      "asset": "NVIDIA CORP.",
+      "isin": "US67066G1040",
+      "quantity": 5,
+      "amount": -472.5,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-08-12",
+      "type": "BUY",
+      "asset": "TESLA INC.",
+      "isin": "US88160R1014",
+      "quantity": 2,
+      "amount": -365.52,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-08-12",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-08-15",
+      "type": "DIVIDEND",
+      "asset": "BYD CO. LTD ADR/2 YC 1",
+      "isin": "US05606L1008",
+      "quantity": 2,
+      "amount": 33366523,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-08-20",
+      "type": "BUY",
+      "asset": "ESSILORLUXOTTICA 1/2/O.N.",
+      "isin": "US2972842007",
+      "quantity": -2,
+      "amount": -214.64,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-08-28",
+      "type": "BUY",
+      "asset": "UBER TECH. DL-,00001",
+      "isin": "US90353T1007",
+      "quantity": -1,
+      "amount": -64.59,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-08-30",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    }
+  ]
+}

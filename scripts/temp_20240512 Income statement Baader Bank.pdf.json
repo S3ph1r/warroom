@@ -1,0 +1,61 @@
+{
+  "source": "D:\\Download\\SCALABLE CAPITAL\\20240512 Income statement Baader Bank.pdf",
+  "last_processed_page": 7,
+  "total_pages": 8,
+  "transactions": [
+    {
+      "date": "2023-03-29",
+      "type": "DIVIDEND",
+      "asset": "iShs MSCI Brazil U.ETF USD(D)",
+      "isin": "IE00B0M63516/EUR",
+      "quantity": 0,
+      "amount": 0.36,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-06-28",
+      "type": "DIVIDEND",
+      "asset": "iShs MSCI Brazil U.ETF USD(D)",
+      "isin": "IE00B0M63516/EUR",
+      "quantity": 0,
+      "amount": 0.96,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-09-27",
+      "type": "DIVIDEND",
+      "asset": "iShs MSCI Brazil U.ETF USD(D)",
+      "isin": "IE00B0M63516/EUR",
+      "quantity": 0,
+      "amount": 1.01,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-12-29",
+      "type": "DIVIDEND",
+      "asset": "iShs MSCI Brazil U.ETF USD(D)",
+      "isin": "IE00B0M63516/EUR",
+      "quantity": 0,
+      "amount": 0.8,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-05-30",
+      "type": "DIVIDEND",
+      "asset": "iShsII-MSCI Turkey UCITS ETF",
+      "isin": "IE00B1FZS574/EUR",
+      "quantity": 0,
+      "amount": 1.21,
+      "currency": "EUR"
+    },
+    {
+      "date": "2023-11-29",
+      "type": "DIVIDEND",
+      "asset": "iShsII-MSCI Turkey UCITS ETF",
+      "isin": "IE00B1FZS574/EUR",
+      "quantity": 0,
+      "amount": 0.32,
+      "currency": "EUR"
+    }
+  ]
+}

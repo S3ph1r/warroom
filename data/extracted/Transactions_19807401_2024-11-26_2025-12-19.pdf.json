@@ -1,0 +1,104 @@
+{
+  "broker": "bgsaxo",
+  "source_file": "Transactions_19807401_2024-11-26_2025-12-19.pdf",
+  "document_type": "TRANSACTIONS",
+  "items_count": 12,
+  "data": [
+    {
+      "date": "19-dic-2025",
+      "type": "Contrattazione",
+      "product_name": "Alphabet Inc. Class A",
+      "operation": "Acquista",
+      "raw_start": "Contrattazione Alphabet Inc. Class A Acquista 2 @ 301,93 Pending -",
+      "isin": null
+    },
+    {
+      "date": "18-dic-2025",
+      "type": "Contrattazione",
+      "product_name": "ServiceNow Inc.",
+      "operation": "Acquista",
+      "raw_start": "Contrattazione ServiceNow Inc. Acquista 1 @ 155,29 USD -133,51 -",
+      "isin": "US81762P1021"
+    },
+    {
+      "date": "18-dic-2025",
+      "type": "Contrattazione",
+      "product_name": "CRISPR Therapeutics Ltd",
+      "operation": "Acquista",
+      "raw_start": "Contrattazione CRISPR Therapeutics Ltd Acquista 3 @ 55,88 USD -144,22 -",
+      "isin": "CH0334081137"
+    },
+    {
+      "date": "26-nov-2024",
+      "type": "Operazione sul capitale",
+      "product_name": "Qualcomm Inc.",
+      "operation": "Dividendo",
+      "raw_start": "Operazione sul capitale Qualcomm Inc. Dividendo in contanti 0,96 -",
+      "isin": "US7475251036"
+    },
+    {
+      "date": "26-nov-2024",
+      "type": "Contrattazione",
+      "product_name": "Canopy Growth Corp.",
+      "operation": "Vendi",
+      "raw_start": "Contrattazione Canopy Growth Corp. Vendi-145 @ 2,90 CAD 256,83 -",
+      "isin": "CA1380357048"
+    },
+    {
+      "date": "26-nov-2024",
+      "type": "Contrattazione",
+      "product_name": "TeradyneInc.",
+      "operation": "Acquista",
+      "raw_start": "Contrattazione TeradyneInc. Acquista 1 @ 190,26 USD -163,53 -",
+      "isin": "US8807701029"
+    },
+    {
+      "date": "26-nov-2024",
+      "type": "Contrattazione",
+      "product_name": "Viking Therapeutics Inc.",
+      "operation": "Acquista",
+      "raw_start": "Contrattazione Viking Therapeutics Inc. Acquista 5 @ 34,74 USD -149,42 -",
+      "isin": "US92686J1060"
+    },
+    {
+      "date": "26-nov-2024",
+      "type": "Contrattazione",
+      "product_name": "AST SpaceMobile Inc.",
+      "operation": "Acquista",
+      "raw_start": "Contrattazione AST SpaceMobile Inc. Acquista 2 @ 65,86 USD -113,52 -",
+      "isin": "IE000M7V94E1"
+    },
+    {
+      "date": "26-nov-2024",
+      "type": "Contrattazione",
+      "product_name": "Joby Aviation Incorporation",
+      "operation": "Acquista",
+      "raw_start": "Contrattazione Joby Aviation Incorporation Acquista 20 @ 8,97 USD -172,34 -",
+      "isin": "KYG651631007"
+    },
+    {
+      "date": "26-nov-2024",
+      "type": "Contrattazione",
+      "product_name": "**See WMT:xnas(WalmartInc.)",
+      "operation": "Acquista",
+      "raw_start": "Contrattazione **See WMT:xnas(WalmartInc.) Acquista 3 @ 92,82 USD -266,99 -",
+      "isin": "US9311421039"
+    },
+    {
+      "date": "28-nov-2024",
+      "type": "Contrattazione",
+      "product_name": "Webuild",
+      "operation": "Acquista",
+      "raw_start": "Contrattazione Webuild Acquista 100 @ 2,65 EUR -267,06 -",
+      "isin": "IT0003865570"
+    },
+    {
+      "date": "26-nov-2024",
+      "type": "Deposito",
+      "product_name": "Cash Deposit",
+      "operation": "Deposito",
+      "raw_start": "Trasferimentodi liquidit\u00e0 Deposito 1.000,00 -",
+      "isin": null
+    }
+  ]
+}

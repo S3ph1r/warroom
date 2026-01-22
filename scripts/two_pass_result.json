@@ -1,0 +1,28 @@
+{
+  "holdings": [
+    {
+      "name": "XPeng",
+      "ticker": "XPEV",
+      "isin": "US98422D1054",
+      "quantity": 15,
+      "purchase_price": 21.032,
+      "currency": "USD"
+    },
+    {
+      "name": "Alibaba Group",
+      "ticker": "AHLA",
+      "isin": "US01609W1027",
+      "quantity": 2,
+      "purchase_price": 134.6,
+      "currency": "EUR"
+    },
+    {
+      "name": "Baidu",
+      "ticker": "BIDU",
+      "isin": "US0567521085",
+      "quantity": 5,
+      "purchase_price": 128.932,
+      "currency": "USD"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "youtube_channels": [
+    {
+      "handle": "@choramedia",
+      "filter_keyword": "Black Box",
+      "name": "Black Box",
+      "strategy": "STRATEGY_HYBRID"
+    },
+    {
+      "handle": "@choramedia",
+      "filter_keyword": "Altri Orienti",
+      "name": "Altri Orienti (Deprecated)",
+      "strategy": "STRATEGY_METADATA_ONLY"
+    },
+    {
+      "handle": "@BloombergTechnology",
+      "filter_keyword": null,
+      "name": "Bloomberg Tech",
+      "strategy": "STRATEGY_HYBRID"
+    },
+    {
+      "handle": "@simopieranni",
+      "filter_keyword": null,
+      "name": "Altri Orienti",
+      "strategy": "STRATEGY_METADATA_ONLY"
+    },
+    {
+      "handle": "UCZp2KqGRkO1goEAaxX5Huyg",
+      "strategy": "STRATEGY_METADATA_ONLY",
+      "name": "Marco Casario",
+      "filter_keyword": null
+    }
+  ],
+  "rss_feeds": [
+    [
+      "https://finance.yahoo.com/news/rssindex",
+      "Yahoo Finance (General)"
+    ],
+    [
+      "https://feeds.feedburner.com/TechCrunch/",
+      "TechCrunch (Tech Alpha)"
+    ],
+    [
+      "https://news.ycombinator.com/rss",
+      "Hacker News (Tech Frontier)"
+    ],
+    [
+      "https://www.coindesk.com/arc/outboundfeeds/rss/",
+      "CoinDesk (Crypto)"
+    ],
+    [
+      "http://feeds.bbci.co.uk/news/world/rss.xml",
+      "BBC World (Geopolitics)"
+    ],
+    [
+      "https://www.reddit.com/r/wallstreetbets/.rss?limit=10",
+      "Reddit: WSB"
+    ]
+  ]
+}

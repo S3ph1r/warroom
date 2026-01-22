@@ -1,0 +1,195 @@
+page,date,type,operation,name,quantity,price,currency,amount
+2,2025-12-19,Contrattazione,BUY,AlphabetInc.ClassA,2.0,301.93,EUR,0.0
+2,2025-12-18,Contrattazione,BUY,ServiceNowInc.,1.0,155.29,USD,133.51
+2,2025-12-18,Contrattazione,BUY,CRISPRTherapeuticsLtd,3.0,55.88,USD,144.22
+3,2024-11-26,Contrattazione,SELL,CanopyGrowthCorp.,145.0,2.9,CAD,256.83
+3,2024-11-26,Contrattazione,BUY,TeradyneInc.,1.0,190.26,USD,163.53
+4,2024-11-26,Contrattazione,BUY,VikingTherapeuticsInc.,5.0,34.74,USD,149.42
+4,2024-11-26,Contrattazione,BUY,ASTSpaceMobileInc.,2.0,65.86,USD,113.52
+5,2024-11-26,Contrattazione,BUY,FranklinFTSEIndiaUCITSETF,5.0,37.83,EUR,191.15
+5,2024-11-26,Contrattazione,BUY,PaloAltoNetworksInc.,1.0,186.23,USD,160.13
+5,2024-11-26,Contrattazione,BUY,ChevronCorp.,1.0,148.85,USD,127.98
+6,2024-11-26,Contrattazione,BUY,OkloInc.,1.0,76.92,USD,66.63
+6,2024-11-26,CorporateEvent,SELL,Corporate Event,3.0,0.0,EUR,0.0
+6,2025-12-17,Contrattazione,BUY,UnitedStatesAntimonyCorp.,28.0,4.74,USD,114.08
+7,2024-11-26,Contrattazione,BUY,WalmartInc.,2.0,116.23,USD,199.15
+7,2024-11-26,Contrattazione,SELL,AlphabetInc.ClassA,2.0,297.89,USD,504.65
+7,2024-11-26,CorporateEvent,BUY,Corporate Event,4.0,1.35,EUR,0.0
+8,2024-11-26,Contrattazione,SELL,SolidPowerInc.,19.0,4.52,USD,71.85
+8,2024-11-26,CorporateEvent,SELL,Corporate Event,22.0,0.0,EUR,0.0
+8,2024-11-26,CorporateEvent,BUY,Corporate Event,16.0,1.35,EUR,0.0
+8,2025-12-15,Contrattazione,BUY,Amplifon,7.0,13.98,EUR,99.92
+9,2024-11-26,Contrattazione,SELL,BroadcomInc.,2.0,353.0,USD,598.19
+9,2024-11-26,Contrattazione,BUY,ToyotaMotorCorp.-ADR,2.0,215.81,USD,369.06
+10,2024-11-26,Contrattazione,BUY,NovoNordiskBA/S,4.0,319.1,DKK,172.66
+10,2025-12-11,Contrattazione,SELL,OculusInc.,7000.0,0.05,CAD,178.74
+10,2025-12-10,Trasferimento,DEPOSIT,Cash Deposit,1.0,2000.0,EUR,2000.0
+11,2025-12-09,CorporateEvent,SELL,Corporate Event,3.0,92.82,EUR,0.0
+11,2025-12-09,CorporateEvent,BUY,Corporate Event,3.0,92.82,EUR,0.0
+12,2024-11-26,Contrattazione,BUY,CRISPRTherapeuticsLtd,2.0,56.26,USD,97.74
+12,2025-12-04,Contrattazione,BUY,NVIDIACorp.,2.0,183.57,USD,316.6
+12,2025-11-28,Contrattazione,BUY,QorvoInc.,2.0,85.55,USD,149.09
+13,2024-11-26,Contrattazione,BUY,D-WaveQuantumInc.,5.0,22.75,USD,99.42
+13,2024-11-26,Contrattazione,BUY,AlibabaGroupHoldingLtd-ADR,2.0,134.6,EUR,272.2
+13,2025-11-26,CorporateEvent,SELL,Corporate Event,25.0,4.64,EUR,0.0
+13,2025-11-26,CorporateEvent,BUY,Corporate Event,25.0,3.61,EUR,0.0
+13,2025-11-26,CorporateEvent,BUY,Corporate Event,25.0,1.02,EUR,0.0
+14,2025-11-25,Contrattazione,SELL,NVIDIACorp.,7.0,174.63,USD,1054.41
+14,2025-11-24,Contrattazione,BUY,KULRTechnologyGroupInc,30.0,2.34,USD,61.83
+15,2024-11-26,Contrattazione,BUY,ZhejiangSanhuaIntelligentControlsCoLtd,100.0,31.94,HKD,359.71
+15,2024-11-26,Contrattazione,BUY,RealbotixCorp,100.0,0.4,CAD,27.45
+15,2024-11-26,Contrattazione,BUY,KranesharesSSEStarMarket50UCITSETF,10.0,16.97,EUR,171.68
+16,2024-11-26,Contrattazione,SELL,JobyAviationIncorporation,20.0,13.0,USD,210.68
+16,2025-11-19,Contrattazione,BUY,VoyagerTechnologiesInc.,10.0,18.15,USD,158.33
+17,2024-11-26,Contrattazione,BUY,NVIDIACorp.,2.0,186.9,USD,325.09
+17,2025-11-14,Contrattazione,SELL,DatadogInc.,2.0,179.31,USD,294.26
+18,2024-11-26,Contrattazione,BUY,iSharesMSCIChinaAccUCITSETF,100.0,5.66,EUR,568.9
+18,2025-11-12,Contrattazione,SELL,AlibabaGroupHoldingLtd-ADR,2.0,159.5,USD,257.54
+18,2025-11-11,Contrattazione,BUY,Baidu.comInc.-ADR,3.0,132.92,USD,345.44
+19,2024-11-26,Contrattazione,BUY,NVIDIACorp.,3.0,195.0,USD,507.95
+19,2024-11-26,Contrattazione,BUY,D-WaveQuantumInc.,5.0,29.86,USD,130.33
+19,2024-11-26,Contrattazione,BUY,AristaNetworksInc.,2.0,137.5,USD,239.24
+20,2024-11-26,Contrattazione,BUY,VoyagerTechnologiesInc.,10.0,24.11,USD,209.87
+20,2024-11-26,Contrattazione,BUY,OracleCorp.,2.0,246.49,USD,428.22
+21,2024-11-26,Contrattazione,BUY,TSMC-ADR,1.0,295.0,USD,256.59
+21,2024-11-26,Contrattazione,BUY,BYDCompanyLtd-ADR,20.0,13.12,USD,228.32
+21,2025-11-07,Contrattazione,SELL,MicrosoftCorp.,1.0,493.83,USD,421.65
+22,2024-11-26,Contrattazione,SELL,TeslaInc.,1.0,424.83,USD,329.69
+23,2024-11-26,Contrattazione,SELL,PalantirTechnologiesInc.,4.0,178.83,USD,594.77
+23,2024-11-26,Contrattazione,BUY,KULRTechnologyGroupInc,22.0,3.06,USD,59.32
+23,2024-11-26,Contrattazione,BUY,XPengInc.-ADR,5.0,24.33,USD,106.6
+24,2024-11-26,Contrattazione,SELL,NVIDIACorp.,8.0,193.03,USD,1251.54
+24,2024-11-26,Contrattazione,SELL,SolidPowerInc.,130.0,8.08,USD,772.38
+24,2025-11-04,Contrattazione,BUY,KULRTechnologyGroupInc,20.0,3.38,USD,59.91
+25,2024-11-26,Contrattazione,SELL,BroadcomInc.,2.0,351.94,USD,585.13
+25,2025-11-03,Contrattazione,BUY,SubstrateArtificialIntelligenceSA,1300.0,0.09,EUR,122.0
+26,2024-11-26,Contrattazione,BUY,ArmHoldingsLimited-ADR,1.0,169.83,USD,148.75
+26,2025-10-31,Contrattazione,BUY,D-WaveQuantumInc.,5.0,36.04,USD,157.32
+26,2025-10-31,Contrattazione,BUY,VNETGroupInc.-ADR,10.0,10.37,USD,90.88
+27,2024-11-26,Contrattazione,BUY,Baidu.comInc.-ADR,2.0,122.95,USD,213.94
+27,2025-10-29,Contrattazione,BUY,AlphabetInc.ClassA,1.0,271.91,USD,234.59
+27,2025-10-29,Contrattazione,BUY,AristaNetworksInc.,2.0,160.2,USD,276.41
+28,2024-11-26,Contrattazione,BUY,RealbotixCorp,200.0,0.46,CAD,59.12
+29,2024-11-26,Contrattazione,SELL,D-WaveQuantumInc.,10.0,28.98,USD,217.55
+29,2024-11-26,Contrattazione,SELL,RealbotixCorp,2000.0,0.51,CAD,605.25
+29,2025-10-21,Contrattazione,SELL,OracleCorp.,3.0,274.33,USD,651.01
+30,2024-11-26,Contrattazione,SELL,NioInc.-ADR,50.0,6.29,USD,268.34
+30,2025-10-13,Contrattazione,BUY,VoyagerTechnologiesInc.,10.0,32.17,USD,279.64
+30,2025-10-13,Contrattazione,BUY,NokiaOyj,40.0,4.56,EUR,185.31
+31,2024-11-26,Contrattazione,BUY,PalantirTechnologiesInc.,4.0,176.84,USD,613.84
+31,2024-11-26,Contrattazione,BUY,BroadcomInc.,2.0,351.16,USD,609.48
+32,2024-11-26,Contrattazione,BUY,NovoNordiskBA/S,2.0,375.7,DKK,102.22
+32,2024-11-26,Contrattazione,BUY,Amazon.comInc.,2.0,226.08,USD,392.77
+32,2024-11-26,Contrattazione,SELL,PalantirTechnologiesInc.,4.0,175.37,USD,561.33
+32,2024-11-26,Trasferimento,DEPOSIT,Cash Deposit,1.0,1000.0,EUR,1000.0
+33,2024-11-26,Contrattazione,BUY,NokiaOyj,40.0,4.54,EUR,184.71
+33,2024-11-26,Contrattazione,SELL,BroadcomInc.,3.0,324.94,USD,779.05
+33,2024-11-26,Contrattazione,SELL,RealbotixCorp,700.0,0.6,CAD,240.96
+34,2024-11-26,Contrattazione,BUY,UnitedStatesAntimonyCorp.,10.0,12.0,USD,104.88
+36,2025-09-18,Contrattazione,BUY,UnitedStatesAntimonyCorp.,7.0,5.55,USD,33.97
+36,2025-09-18,Contrattazione,BUY,IntelCorp.,20.0,31.78,USD,541.54
+37,2024-11-26,Trasferimento,DEPOSIT,Cash Deposit,1.0,500.0,EUR,500.0
+37,2025-09-17,Contrattazione,BUY,NioInc.-ADR,30.0,7.23,USD,184.37
+37,2025-09-17,Contrattazione,BUY,PalantirTechnologiesInc.,3.0,164.44,USD,418.2
+38,2024-11-26,Contrattazione,BUY,MetaPlatformsInc.,1.0,769.7,USD,653.46
+40,2024-11-26,Contrattazione,BUY,OracleCorp.,1.0,221.39,USD,191.56
+40,2024-11-26,Contrattazione,BUY,BroadcomInc.,1.0,288.34,USD,249.22
+40,2025-09-01,Contrattazione,BUY,XtrackersAI&BigDataUCITSETF,4.0,139.01,EUR,558.02
+41,2024-11-26,Trasferimento,DEPOSIT,Cash Deposit,1.0,2000.0,EUR,2000.0
+41,2025-08-01,Contrattazione,BUY,FerrariNV,1.0,374.6,EUR,376.6
+42,2024-11-26,Contrattazione,BUY,AlibabaGroupHoldingLtd-ADR,2.0,117.82,USD,207.95
+42,2025-07-30,Contrattazione,BUY,SolidPowerInc.,50.0,3.27,USD,143.71
+42,2025-07-29,Contrattazione,SELL,QuantumComputingInc,21.0,15.39,USD,255.15
+43,2024-11-26,Contrattazione,BUY,FirstTrustNasdaqCyberSecurityUCTISETF,5.0,40.29,EUR,203.47
+43,2024-11-26,Contrattazione,BUY,SolidPowerInc.,50.0,4.56,USD,197.26
+44,2025-07-14,Contrattazione,BUY,SolidPowerInc.,50.0,2.43,USD,105.17
+44,2025-07-14,Contrattazione,BUY,D-WaveQuantumInc.,10.0,15.02,USD,129.83
+45,2024-11-26,Contrattazione,BUY,XtrackersAI&BigDataUCITSETF,4.0,137.31,EUR,551.25
+46,2024-11-26,Contrattazione,SELL,UnitedStatesAntimonyCorp.,75.0,2.09,USD,123.9
+46,2024-11-26,Contrattazione,SELL,AdvancedMicroDevicesInc.,2.0,137.0,USD,220.37
+48,2025-06-23,CorporateEvent,SELL,Corporate Event,70.0,1.57,EUR,0.0
+48,2025-06-23,CorporateEvent,BUY,Corporate Event,8.0,12.56,EUR,0.0
+49,2025-06-11,Contrattazione,BUY,iSharesCoreMSCIWorldUCITSETF,5.0,100.74,EUR,505.69
+49,2025-06-10,Trasferimento,DEPOSIT,Cash Deposit,1.0,2000.0,EUR,2000.0
+50,2024-11-26,Contrattazione,SELL,D-WaveQuantumInc.,11.0,17.27,USD,144.39
+51,2024-11-26,Contrattazione,BUY,EutelsatCommunications,15.0,3.45,EUR,53.96
+51,2025-05-20,Contrattazione,BUY,OculusInc.,2000.0,0.06,CAD,86.49
+51,2025-05-16,Contrattazione,BUY,AlphabetInc.ClassA,1.0,167.96,USD,151.36
+52,2024-11-26,Contrattazione,BUY,QualcommInc.,2.0,151.69,USD,273.63
+52,2025-05-05,Contrattazione,BUY,NVIDIACorp.,1.0,113.82,USD,101.34
+52,2025-05-05,Contrattazione,BUY,PalantirTechnologiesInc.,2.0,123.64,USD,219.15
+53,2024-11-26,Contrattazione,BUY,XPengInc.-ADR,5.0,19.83,USD,88.46
+53,2025-04-25,Contrattazione,BUY,iSharesCoreMSCIWorldUCITSETF,5.0,93.05,EUR,467.24
+54,2024-11-26,Contrattazione,BUY,XPengInc.-ADR,4.0,20.5,USD,72.96
+54,2024-11-26,Trasferimento,DEPOSIT,Cash Deposit,1.0,1500.0,EUR,1500.0
+56,2025-04-02,Contrattazione,BUY,FirstTrustNasdaqCyberSecurityUCTISETF,5.0,36.96,EUR,186.78
+56,2025-04-02,Contrattazione,BUY,CanopyGrowthCorp.,50.0,1.41,CAD,48.75
+57,2025-04-01,Contrattazione,BUY,AdvancedMicroDevicesInc.,2.0,102.09,USD,190.39
+58,2024-11-26,Contrattazione,BUY,D-WaveQuantumInc.,10.0,7.53,USD,70.81
+58,2024-11-26,Contrattazione,BUY,BroadcomInc.,1.0,163.39,USD,152.6
+59,2024-11-26,Contrattazione,BUY,OracleCorp.,1.0,138.04,USD,129.04
+59,2025-03-27,Contrattazione,BUY,RealbotixCorp,600.0,0.33,CAD,132.58
+59,2025-03-24,Trasferimento,DEPOSIT,Cash Deposit,1.0,1000.0,EUR,1000.0
+60,2024-11-26,Contrattazione,BUY,XtrackersAI&BigDataUCITSETF,3.0,127.21,EUR,383.62
+60,2025-03-20,Contrattazione,SELL,D-WaveQuantumInc.,19.0,9.2,USD,149.07
+61,2024-11-26,Contrattazione,SELL,XPengInc.-ADR,4.0,22.3,USD,79.49
+62,2024-11-26,Contrattazione,BUY,TeslaInc.,1.0,247.01,USD,228.27
+62,2024-11-26,Contrattazione,BUY,EutelsatCommunications,10.0,6.42,EUR,66.34
+62,2025-03-10,Contrattazione,BUY,BroadcomInc.,1.0,189.68,USD,176.26
+63,2024-11-26,Contrattazione,BUY,IntelCorp.,10.0,20.21,USD,187.74
+63,2024-11-26,Contrattazione,BUY,QuantumComputingInc,20.0,4.89,USD,91.33
+63,2024-11-26,Contrattazione,BUY,RealbotixCorp,300.0,0.38,CAD,75.34
+64,2024-11-26,Contrattazione,BUY,UnitedStatesAntimonyCorp.,80.0,1.42,USD,105.91
+64,2024-11-26,Trasferimento,DEPOSIT,Cash Deposit,1.0,1000.0,EUR,1000.0
+64,2025-03-03,Contrattazione,BUY,Leonardo,2.0,43.27,EUR,88.63
+65,2024-11-26,Contrattazione,BUY,CanopyGrowthCorp.,50.0,2.02,CAD,70.83
+65,2024-11-26,Contrattazione,BUY,NVIDIACorp.,2.0,117.94,USD,228.11
+65,2025-02-27,Contrattazione,BUY,KULRTechnologyGroupInc,70.0,1.57,USD,106.53
+66,2024-11-26,Contrattazione,BUY,RealbotixCorp,300.0,0.41,CAD,85.27
+66,2024-11-26,Contrattazione,BUY,PalantirTechnologiesInc.,3.0,88.7,USD,255.45
+66,2025-02-25,Contrattazione,BUY,DynatraceInc.,3.0,58.58,USD,168.48
+67,2024-11-26,Contrattazione,BUY,Amazon.comInc.,2.0,212.94,USD,406.94
+67,2024-11-26,Contrattazione,BUY,DatadogInc.,1.0,115.4,USD,110.97
+67,2025-02-24,Trasferimento,DEPOSIT,Cash Deposit,1.0,1500.0,EUR,1500.0
+68,2024-11-26,Contrattazione,BUY,NVIDIACorp.,1.0,127.47,USD,122.48
+69,2024-11-26,Contrattazione,BUY,PDDHoldingsInc-ADR,2.0,108.0,USD,209.28
+69,2025-01-20,Contrattazione,BUY,RealbotixCorp,500.0,0.43,CAD,148.19
+70,2024-11-26,Contrattazione,BUY,CanopyGrowthCorp.,45.0,3.23,CAD,101.95
+70,2024-11-26,Contrattazione,BUY,XPengInc.-ADR,5.0,12.68,USD,62.69
+70,2025-01-13,Contrattazione,BUY,RealbotixCorp,1000.0,0.65,CAD,453.13
+71,2024-11-26,Contrattazione,SELL,RealbotixCorp,1000.0,0.53,CAD,349.07
+71,2024-11-26,Contrattazione,BUY,NVIDIACorp.,2.0,132.11,USD,260.42
+71,2025-01-10,Contrattazione,BUY,RealbotixCorp,1000.0,0.36,CAD,254.86
+72,2024-11-26,Contrattazione,BUY,D-WaveQuantumInc.,20.0,6.32,USD,124.58
+72,2025-01-09,Contrattazione,BUY,OculusInc.,1500.0,0.09,CAD,101.32
+72,2025-01-08,Contrattazione,SELL,D-WaveQuantumInc.,22.0,6.33,USD,133.98
+73,2024-11-26,Contrattazione,BUY,PayPalHoldingsInc.,3.0,89.53,USD,259.96
+73,2024-11-26,Contrattazione,BUY,OculusInc.,3500.0,0.12,CAD,287.65
+73,2024-11-26,Trasferimento,DEPOSIT,Cash Deposit,1.0,2000.0,EUR,2000.0
+74,2024-11-26,Contrattazione,BUY,NVIDIACorp.,2.0,148.66,USD,288.02
+74,2024-11-26,Contrattazione,BUY,MicrosoftCorp.,1.0,428.06,USD,414.25
+75,2024-11-26,Contrattazione,BUY,NioInc.-ADR,20.0,4.82,USD,94.1
+75,2024-11-26,Contrattazione,BUY,NovoNordiskBA/S,2.0,631.5,DKK,171.1
+75,2024-12-24,Trasferimento,DEPOSIT,Cash Deposit,1.0,1000.0,EUR,1000.0
+76,2024-12-23,Contrattazione,BUY,D-WaveQuantumInc.,20.0,7.6,USD,147.33
+76,2024-12-23,Contrattazione,BUY,NVIDIACorp.,2.0,136.25,USD,263.59
+76,2024-12-23,Contrattazione,BUY,QuantumComputingInc,10.0,17.49,USD,169.58
+77,2024-11-26,Contrattazione,BUY,DatadogInc.,1.0,149.43,USD,145.03
+77,2024-11-26,Contrattazione,BUY,BroadcomInc.,2.0,232.47,USD,448.5
+77,2024-12-19,Contrattazione,SELL,QuantumComputingInc,19.0,21.26,USD,346.62
+78,2024-11-26,Contrattazione,SELL,D-WaveQuantumInc.,38.0,8.21,USD,259.64
+78,2024-11-26,Contrattazione,SELL,StrategyInc.,1.0,328.85,USD,315.47
+78,2024-12-18,Contrattazione,BUY,OracleCorp.,2.0,169.53,USD,325.0
+79,2024-12-16,Contrattazione,BUY,QuantumComputingInc,20.0,11.1,USD,212.7
+79,2024-12-13,Contrattazione,BUY,D-WaveQuantumInc.,40.0,4.1,USD,157.71
+79,2024-12-10,Contrattazione,BUY,StrategyInc.,1.0,362.0,USD,346.44
+80,2024-12-09,Contrattazione,SELL,D-WaveQuantumInc.,155.0,4.8,USD,652.1
+80,2024-12-06,Trasferimento,DEPOSIT,Cash Deposit,1.0,1000.0,EUR,1000.0
+80,2024-12-06,Contrattazione,BUY,QuantumScapeCorp.,20.0,4.93,USD,94.48
+81,2024-11-26,Contrattazione,BUY,D-WaveQuantumInc.,65.0,3.98,USD,246.43
+81,2024-12-04,Contrattazione,BUY,D-WaveQuantumInc.,40.0,3.11,USD,119.8
+81,2024-12-04,Contrattazione,BUY,D-WaveQuantumInc.,50.0,3.07,USD,147.7
+82,2024-11-26,Contrattazione,BUY,JobyAviationIncorporation,20.0,8.97,USD,172.34
+82,2024-11-26,Contrattazione,BUY,**SeeWMT:xnas(WalmartInc.),3.0,92.82,USD,266.99
+82,2024-11-28,Contrattazione,BUY,Webuild,100.0,2.65,EUR,267.06
+83,2024-11-26,Trasferimento,DEPOSIT,Cash Deposit,1.0,1000.0,EUR,1000.0

@@ -1,0 +1,70 @@
+{
+  "source": "D:\\Download\\SCALABLE CAPITAL\\20250602 Monthly account statement Broker Scalable Capital.pdf",
+  "last_processed_page": 2,
+  "total_pages": 3,
+  "transactions": [
+    {
+      "date": "2025-05-07",
+      "type": "BUY",
+      "asset": "Xiaomi (KYG9830T1067)",
+      "isin": "",
+      "quantity": -30,
+      "amount": -171.75,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-05-07",
+      "type": "BUY",
+      "asset": "Tencent Holdings (KYG875721634)",
+      "isin": "",
+      "quantity": -5,
+      "amount": -275.45,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-05-07",
+      "type": "BUY",
+      "asset": "Alibaba Group Hldg (KYG017191142)",
+      "isin": "",
+      "quantity": -20,
+      "amount": -273.36,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-05-07",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-05-07",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-05-14",
+      "type": "BUY",
+      "asset": "Midea Group Co",
+      "isin": "CNE100006M58",
+      "quantity": -20,
+      "amount": -179.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-05-14",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    }
+  ]
+}

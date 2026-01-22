@@ -1,0 +1,44 @@
+# =============================================
+# WAR ROOM - Docker Compose Configuration (Homelab)
+# =============================================
+# Run with: docker-compose up -d
+# Network: Uses external homelab-net
+# =============================================
+
+services:
+  # ChromaDB - Vector Database for RAG
+  chromadb:
+    image: chromadb/chroma:latest
+    container_name: warroom-chromadb
+    ports:
+      - "8001:8000"
+    restart: unless-stopped
+
+  # Backend API (FastAPI)
+  api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: warroom-api
+    ports:
+      - "8090:8000"
+    env_file:
+      - ./backend/.env
+    restart: unless-stopped
+    depends_on:
+      - chromadb
+
+  # Frontend Dashboard (Svelte + Vite)
+  dashboard:
+    build: ./frontend
+    container_name: warroom-dashboard
+    ports:
+      - "5174:5173"
+    restart: unless-stopped
+    depends_on:
+      - api
+
+networks:
+  default:
+    name: homelab-net
+    external: true

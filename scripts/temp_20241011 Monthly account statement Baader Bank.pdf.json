@@ -1,0 +1,34 @@
+{
+  "source": "D:\\Download\\SCALABLE CAPITAL\\20241011 Monthly account statement Baader Bank.pdf",
+  "last_processed_page": 0,
+  "total_pages": 1,
+  "transactions": [
+    {
+      "date": "2024-09-19",
+      "type": "SELL",
+      "asset": "ZALANDO SE",
+      "isin": "DE000ZAL1111",
+      "quantity": -1,
+      "amount": 14.94,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-09-19",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-09-26",
+      "type": "DIVIDEND",
+      "asset": "iShares MSCI Brazil UCITS ETF USD",
+      "isin": "IE00B0M63516",
+      "quantity": 0,
+      "amount": 1.05,
+      "currency": "EUR"
+    }
+  ]
+}

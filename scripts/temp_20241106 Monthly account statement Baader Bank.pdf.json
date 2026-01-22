@@ -1,0 +1,34 @@
+{
+  "source": "D:\\Download\\SCALABLE CAPITAL\\20241106 Monthly account statement Baader Bank.pdf",
+  "last_processed_page": 0,
+  "total_pages": 1,
+  "transactions": [
+    {
+      "date": "2024-10-08",
+      "type": "BUY",
+      "asset": "NVIDIA CORP.",
+      "isin": "US67066G1040",
+      "quantity": -5,
+      "amount": 39.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-10-10",
+      "type": "BUY",
+      "asset": "RIVIAN AUTOMOT.A",
+      "isin": "US76954A1034",
+      "quantity": -3,
+      "amount": 28.95,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-10-10",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 0.99,
+      "currency": "EUR"
+    }
+  ]
+}

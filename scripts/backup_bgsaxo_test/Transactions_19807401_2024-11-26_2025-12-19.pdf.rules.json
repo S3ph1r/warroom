@@ -1,0 +1,18 @@
+{
+  "transaction_start_regex": "^Contrattazione|^Acquisto|^Vendita",
+  "date_trigger_regex": "\\d{2}-[a-z]{3}-\\d{4}",
+  "field_extractors": {
+    "type_classifier": {
+      "regex": "(^Contrattazione)|(^Acquisto)|(^Vendita)"
+    },
+    "product_name": {
+      "regex": "[A-Za-z]+(?:[A-Za-z0-9]*[a-zA-Z]+)*"
+    },
+    "isin": {
+      "regex": "(US[A-Z0-9]{9})|(IT[A-Z0-9]{11})"
+    },
+    "amount": {
+      "regex": "\\b\\d+(?:\\.\\d+)?\\b"
+    }
+  }
+}

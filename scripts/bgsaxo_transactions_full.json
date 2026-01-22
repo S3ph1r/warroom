@@ -1,0 +1,2338 @@
+{
+  "source": "D:\\Download\\BGSAXO\\Transactions_19807401_2025-01-01_2025-12-19.pdf",
+  "last_processed_page": 74,
+  "total_pages": 75,
+  "transactions": [
+    {
+      "date": "2025-12-18",
+      "type": "BUY",
+      "asset": "Alphabet Inc. Class A",
+      "isin": "",
+      "quantity": -2,
+      "amount": 603.86,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-18",
+      "type": "BUY",
+      "asset": "ServiceNow Inc.",
+      "isin": "",
+      "quantity": -1,
+      "amount": 133.51,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-18",
+      "type": "BUY",
+      "asset": "CRISPR Therapeutics Ltd",
+      "isin": "",
+      "quantity": -3,
+      "amount": 432.66,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "SELL",
+      "asset": "Canopy Growth Corp.",
+      "isin": "CA1380357048",
+      "quantity": -145,
+      "amount": 256.83,
+      "currency": "CAD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "Teradyne Inc.",
+      "isin": "US8807701029",
+      "quantity": 1,
+      "amount": -163.53,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "Viking Therapeutics Inc.",
+      "isin": "US92686J1060",
+      "quantity": -5,
+      "amount": -149.42,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "AST SpaceMobile Inc.",
+      "isin": "US00217D1000",
+      "quantity": -2,
+      "amount": -113.52,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "VanEck Uranium and Nuclear Technologies UCITS ETF",
+      "isin": "IE000M7V94E1",
+      "quantity": -4,
+      "amount": -178.38,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "Franklin FTSE India UCITS ETF",
+      "isin": "IE00BHZRQZ17",
+      "quantity": -5,
+      "amount": -189.15,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "Palo Alto Networks Inc.",
+      "isin": "US6974351057",
+      "quantity": -1,
+      "amount": -159.27,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "Chevron Corp.",
+      "isin": "US1667641005",
+      "quantity": -1,
+      "amount": -127.13,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-17",
+      "type": "BUY",
+      "asset": "United States Antimony Corp.",
+      "isin": "US9115491030",
+      "quantity": -28,
+      "amount": -114.08,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-17",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -1.13,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-16",
+      "type": "BUY",
+      "asset": "Eutelsat Communications",
+      "isin": "FR0014012K95",
+      "quantity": 4,
+      "amount": 5.7,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-15",
+      "type": "BUY",
+      "asset": "Eutelsat Communications",
+      "isin": "FR0014012K95",
+      "quantity": 16,
+      "amount": -43.22,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-15",
+      "type": "BUY",
+      "asset": "Amplifon",
+      "isin": "IT0004056880",
+      "quantity": 7,
+      "amount": -99.92,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "Toyota Motor Corp. - ADR",
+      "isin": "US8923313071",
+      "quantity": 2,
+      "amount": -368.21,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "SELL",
+      "asset": "Broadcom Inc.",
+      "isin": "US02079K3059",
+      "quantity": -2,
+      "amount": 598.19,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "DIVIDEND",
+      "asset": "Alphabet Inc. Class A",
+      "isin": "US02079K3059",
+      "quantity": 0,
+      "amount": 0.36,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-11",
+      "type": "BUY",
+      "asset": "Novo Nordisk B A/S",
+      "isin": "DK0062498333",
+      "quantity": -4,
+      "amount": -172.66,
+      "currency": "DKK"
+    },
+    {
+      "date": "2025-12-10",
+      "type": "SELL",
+      "asset": "Oculus Inc.",
+      "isin": "US67575Y1091",
+      "quantity": 7000,
+      "amount": 194.15,
+      "currency": "CAD"
+    },
+    {
+      "date": "2025-12-10",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 2000.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-09",
+      "type": "BUY",
+      "asset": "Walmart Inc.",
+      "isin": "US70450Y1038",
+      "quantity": 3,
+      "amount": -286.46,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-09",
+      "type": "SELL",
+      "asset": "Walmart Inc.",
+      "isin": "US70450Y1038",
+      "quantity": -3,
+      "amount": 286.46,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-05",
+      "type": "BUY",
+      "asset": "Walmart Inc.",
+      "isin": "US9311421039",
+      "quantity": 3,
+      "amount": -286.46,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-04",
+      "type": "BUY",
+      "asset": "CRISPR Therapeutics Ltd",
+      "isin": "CH0334081137",
+      "quantity": -2,
+      "amount": -96.88,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-04",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -1.1,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-28",
+      "type": "BUY",
+      "asset": "NVIDIA Corp.",
+      "isin": "US67066G1040",
+      "quantity": -2,
+      "amount": -315.74,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-11-28",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -1.64,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-14",
+      "type": "BUY",
+      "asset": "Qorvo Inc.",
+      "isin": "US74736K1016",
+      "quantity": -2,
+      "amount": -148.22,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-11-14",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -1.24,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-26",
+      "type": "BUY",
+      "asset": "D-Wave Quantum Inc.",
+      "isin": "US26740W1099",
+      "quantity": -5,
+      "amount": -98.55,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-11-26",
+      "type": "BUY",
+      "asset": "Alibaba Group Holding Ltd - ADR",
+      "isin": "US01609W1027",
+      "quantity": -2,
+      "amount": -269.2,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-26",
+      "type": "BUY",
+      "asset": "Eutelsat Communications",
+      "isin": "FR0010221234",
+      "quantity": 25,
+      "amount": 90.75,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-26",
+      "type": "SELL",
+      "asset": "Eutelsat Communications",
+      "isin": "FR0010221234",
+      "quantity": 25,
+      "amount": -116.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-26",
+      "type": "BUY",
+      "asset": "Eutelsat Communications-Rights",
+      "isin": "FR0010221234",
+      "quantity": 25,
+      "amount": 25.5,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-25",
+      "type": "SELL",
+      "asset": "NVIDIA Corp.",
+      "isin": "US67066G1040",
+      "quantity": -7,
+      "amount": 1095.72,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-11-24",
+      "type": "BUY",
+      "asset": "KULR Technology Group Inc.",
+      "isin": "US50125G3074",
+      "quantity": 30,
+      "amount": -687.31,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-11-24",
+      "type": "BUY",
+      "asset": "CDT Environmental Technology Investment Holdings Ltd.",
+      "isin": "KYG2030P1072",
+      "quantity": 200,
+      "amount": -66.64,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "Zhejiang Sanhua Intelligent Controls Co Ltd",
+      "isin": "CNE100006Z79",
+      "quantity": -100,
+      "amount": -359.71,
+      "currency": "HKD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "Realbotix Corp",
+      "isin": "CA75604K1075",
+      "quantity": -100,
+      "amount": -27.45,
+      "currency": "CAD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "Kraneshares SSE Star Market 50 UCITS ETF",
+      "isin": "IE00BKPJY541",
+      "quantity": -10,
+      "amount": -171.68,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "VanEck Uranium and Nuclear Technologies UCITS ETF",
+      "isin": "IE000M7V94E1",
+      "quantity": 6,
+      "amount": -296.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "SELL",
+      "asset": "Joby Aviation Incorporation",
+      "isin": "KYG651631007",
+      "quantity": -20,
+      "amount": 210.68,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "Voyager Technologies Inc.",
+      "isin": "US92892B1035",
+      "quantity": 10,
+      "amount": -158.33,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-11-14",
+      "type": "BUY",
+      "asset": "NVIDIA Corp.",
+      "isin": "US67066G1040",
+      "quantity": -2,
+      "amount": -325.09,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-11-14",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.87,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-14",
+      "type": "BUY",
+      "asset": "CDT Environmental Technology Investment Hldngs Ltd",
+      "isin": "KYG2030P1072",
+      "quantity": -200,
+      "amount": -61.28,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-11-14",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.86,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-13",
+      "type": "SELL",
+      "asset": "Datadog Inc.",
+      "isin": "US23804L1035",
+      "quantity": 2,
+      "amount": 294.26,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-11-13",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.86,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-13",
+      "type": "TAX",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -12.38,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-12",
+      "type": "BUY",
+      "asset": "iShares MSCI China Acc UCITS ETF",
+      "isin": "IE00BJ5JPG56",
+      "quantity": 100,
+      "amount": -568.9,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-12",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -3,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-12",
+      "type": "BUY",
+      "asset": "Alibaba Group Holding Ltd - ADR",
+      "isin": "US01609W1027",
+      "quantity": -2,
+      "amount": 257.54,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-11-12",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.86,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-12",
+      "type": "BUY",
+      "asset": "Baidu.com Inc. - ADR",
+      "isin": "US0567521085",
+      "quantity": 3,
+      "amount": -345.44,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-11-12",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.86,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "NVIDIA Corp.",
+      "isin": "US67066G1040",
+      "quantity": -3,
+      "amount": -507.95,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "D-Wave Quantum Inc.",
+      "isin": "US26740W1099",
+      "quantity": -5,
+      "amount": -130.33,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "Arista Networks Inc.",
+      "isin": "US0404132054",
+      "quantity": -2,
+      "amount": -239.24,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "Voyager Technologies Inc.",
+      "isin": "US92892B1035",
+      "quantity": -10,
+      "amount": -209.87,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "VanEck Uranium and Nuclear Technologies UCITS ETF",
+      "isin": "IE000M7V94E1",
+      "quantity": -3,
+      "amount": -158.39,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "Oracle Corp.",
+      "isin": "US68389X1054",
+      "quantity": -2,
+      "amount": -428.22,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "TSMC - ADR",
+      "isin": "US8740391003",
+      "quantity": -1,
+      "amount": -256.59,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "BYD Company Ltd - ADR",
+      "isin": "US05606L1008",
+      "quantity": -20,
+      "amount": -228.32,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "SELL",
+      "asset": "Microsoft Corp.",
+      "isin": "US5949181045",
+      "quantity": 1,
+      "amount": 421.65,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-11-06",
+      "type": "SELL",
+      "asset": "Tesla Inc.",
+      "isin": "US88160R1014",
+      "quantity": -1,
+      "amount": 329.69,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-11-06",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -1.78,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-06",
+      "type": "DIVIDEND",
+      "asset": "Baidu.com Inc.",
+      "isin": "US0567521085",
+      "quantity": 0,
+      "amount": -0.03,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-06",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.47,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-06",
+      "type": "DIVIDEND",
+      "asset": "Nokia Oyj",
+      "isin": "FI0009000681",
+      "quantity": 0,
+      "amount": 2.4,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "SELL",
+      "asset": "Palantir Technologies Inc.",
+      "isin": "US69608A1088",
+      "quantity": -4,
+      "amount": 594.77,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "KULR Technology Group Inc.",
+      "isin": "US50125G3074",
+      "quantity": 22,
+      "amount": -58.45,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "XPeng Inc.",
+      "isin": "US98422D1054",
+      "quantity": 5,
+      "amount": -105.73,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "SELL",
+      "asset": "NVIDIA Corp.",
+      "isin": "US67066G1040",
+      "quantity": -8,
+      "amount": 1.33686,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "SELL",
+      "asset": "Solid Power Inc.",
+      "isin": "US83422N1054",
+      "quantity": -130,
+      "amount": 908.77,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-11-04",
+      "type": "BUY",
+      "asset": "KULR Technology Group Inc.",
+      "isin": "US50125G3074",
+      "quantity": 20,
+      "amount": -59.04,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-11-03",
+      "type": "SELL",
+      "asset": "Broadcom Inc.",
+      "isin": "US11135F1012",
+      "quantity": -2,
+      "amount": 585.13,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-11-03",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.87,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-03",
+      "type": "BUY",
+      "asset": "VanEck Uranium and Nuclear Technologies UCITS ETF",
+      "isin": "IE000M7V94E1",
+      "quantity": 7,
+      "amount": -404.57,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-03",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -2.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-03",
+      "type": "BUY",
+      "asset": "Substrate Artificial Intelligence SA",
+      "isin": "ES0105650008",
+      "quantity": 1300,
+      "amount": -122.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-11-03",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -5.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-10-31",
+      "type": "BUY",
+      "asset": "Arm Holdings Limited - ADR",
+      "isin": "US0420682058",
+      "quantity": -1,
+      "amount": -147.88,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-10-31",
+      "type": "BUY",
+      "asset": "D-Wave Quantum Inc.",
+      "isin": "US26740W1099",
+      "quantity": -5,
+      "amount": -156.45,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-10-31",
+      "type": "BUY",
+      "asset": "VNET Group Inc. - ADR",
+      "isin": "US90138A1034",
+      "quantity": -10,
+      "amount": -90.01,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-10-29",
+      "type": "BUY",
+      "asset": "Baidu.com Inc. - ADR",
+      "isin": "US0567521085",
+      "quantity": -2,
+      "amount": -213.94,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-10-29",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.87,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-10-29",
+      "type": "BUY",
+      "asset": "Alphabet Inc. Class A",
+      "isin": "US02079K3059",
+      "quantity": -1,
+      "amount": -234.59,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-10-29",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.86,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-10-29",
+      "type": "BUY",
+      "asset": "Arista Networks Inc.",
+      "isin": "US0404132054",
+      "quantity": -2,
+      "amount": -276.41,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-10-29",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.86,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-10-23",
+      "type": "DIVIDEND",
+      "asset": "Oracle Corp.",
+      "isin": "US68389X1054",
+      "quantity": 0,
+      "amount": 1.72,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-10-22",
+      "type": "BUY",
+      "asset": "Realbotix Corp",
+      "isin": "CA75604K1075",
+      "quantity": -200,
+      "amount": -59.12,
+      "currency": "CAD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "SELL",
+      "asset": "D-Wave Quantum Inc.",
+      "isin": "US26740W1099",
+      "quantity": -10,
+      "amount": 217.55,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "SELL",
+      "asset": "Realbotix Corp",
+      "isin": "CA75604K1075",
+      "quantity": -2000,
+      "amount": 605.25,
+      "currency": "CAD"
+    },
+    {
+      "date": "2025-10-21",
+      "type": "SELL",
+      "asset": "Oracle Corp.",
+      "isin": "US68389X1054",
+      "quantity": -3,
+      "amount": 651.01,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-10-13",
+      "type": "BUY",
+      "asset": "Voyager Technologies Inc.",
+      "isin": "US92892B1035",
+      "quantity": -10,
+      "amount": 279.64,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-10-13",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.87,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-10-13",
+      "type": "BUY",
+      "asset": "Nokia Oyj",
+      "isin": "FI0009000681",
+      "quantity": -40,
+      "amount": 185.31,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-10-13",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -3.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-10-04",
+      "type": "BUY",
+      "asset": "Palantir Technologies Inc.",
+      "isin": "US69608A1088",
+      "quantity": -4,
+      "amount": -613.84,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-10-04",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -2.39,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-10-04",
+      "type": "BUY",
+      "asset": "Broadcom Inc.",
+      "isin": "US11135F1012",
+      "quantity": -2,
+      "amount": -609.48,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-10-04",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -2.39,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "Novo Nordisk B A/S",
+      "isin": "DK0062498333",
+      "quantity": -2,
+      "amount": -102.22,
+      "currency": "DKK"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "Amazon.com Inc.",
+      "isin": "US0231351067",
+      "quantity": -2,
+      "amount": -392.77,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "SELL",
+      "asset": "Palantir Technologies Inc.",
+      "isin": "US69608A1088",
+      "quantity": 4,
+      "amount": 602.57,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 1000.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "Nokia Oyj",
+      "isin": "FI0009000681",
+      "quantity": -40,
+      "amount": -184.71,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "SELL",
+      "asset": "Broadcom Inc.",
+      "isin": "US11135F1012",
+      "quantity": 3,
+      "amount": 779.05,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "SELL",
+      "asset": "Realbotix Corp",
+      "isin": "CA75604K1075",
+      "quantity": -700,
+      "amount": 240.96,
+      "currency": "CAD"
+    },
+    {
+      "date": "2025-10-06",
+      "type": "BUY",
+      "asset": "United States Antimony Corp.",
+      "isin": "US9115491030",
+      "quantity": -10,
+      "amount": -104.88,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-10-02",
+      "type": "DIVIDEND",
+      "asset": "XPeng Inc.",
+      "isin": "US98422D1054",
+      "quantity": 0,
+      "amount": 0.09,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-09-30",
+      "type": "BUY",
+      "asset": "NVIDIA Corp.",
+      "isin": "US67066G1040",
+      "quantity": -1,
+      "amount": 1.59,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "DIVIDEND",
+      "asset": "Broadcom Inc.",
+      "isin": "US11135F1012",
+      "quantity": 5,
+      "amount": 2.51,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "DIVIDEND",
+      "asset": "Meta Platforms Inc.",
+      "isin": "US30303M1027",
+      "quantity": 1,
+      "amount": 0.45,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "DIVIDEND",
+      "asset": "Qualcomm Inc.",
+      "isin": "US7475251036",
+      "quantity": 2,
+      "amount": 1.52,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-09-18",
+      "type": "BUY",
+      "asset": "United States Antimony Corp.",
+      "isin": "US9115491030",
+      "quantity": -7,
+      "amount": -33.97,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "Intel Corp.",
+      "isin": "US4581401001",
+      "quantity": -20,
+      "amount": -541.54,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-07-17",
+      "type": "BUY",
+      "asset": "Nio Inc. - ADR",
+      "isin": "US62914V1061",
+      "quantity": "-30",
+      "amount": "-184.37",
+      "currency": "USD"
+    },
+    {
+      "date": "2025-07-17",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": "",
+      "amount": "-0.85",
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-09-16",
+      "type": "BUY",
+      "asset": "Palantir Technologies Inc.",
+      "isin": "US69608A1088",
+      "quantity": "-3",
+      "amount": "-418.20",
+      "currency": "USD"
+    },
+    {
+      "date": "2025-09-16",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": "",
+      "amount": "-0.85",
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-09-15",
+      "type": "BUY",
+      "asset": "Alphabet Inc. Class A",
+      "isin": "US02079K3059",
+      "quantity": -1,
+      "amount": 1.34292,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-09-11",
+      "type": "DIVIDEND",
+      "asset": "Alphabet Inc.",
+      "isin": "US02079K3059",
+      "quantity": 0,
+      "amount": 0.46,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-09-02",
+      "type": "DIVIDEND",
+      "asset": "Walmart Inc.",
+      "isin": "US9311421039",
+      "quantity": -3,
+      "amount": 0.61,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-09-02",
+      "type": "DIVIDEND",
+      "asset": "Microsoft Corp.",
+      "isin": "US5949181045",
+      "quantity": 1,
+      "amount": 0.71,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-01",
+      "type": "BUY",
+      "asset": "Oracle Corp.",
+      "isin": "US68389X1054",
+      "quantity": -1,
+      "amount": -191.56,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-01-01",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.86,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-01",
+      "type": "CONVERSION_FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.47,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-09-01",
+      "type": "BUY",
+      "asset": "Broadcom Inc.",
+      "isin": "US11135F1012",
+      "quantity": -1,
+      "amount": -249.22,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-09-01",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.86,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-09-01",
+      "type": "CONVERSION_FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.62,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-09-01",
+      "type": "BUY",
+      "asset": "Xtrackers AI & Big Data UCITS ETF",
+      "isin": "IE00BGV5VN51",
+      "quantity": -4,
+      "amount": -558.02,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-09-01",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -2.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-08-19",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 2000.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-08-19",
+      "type": "DIVIDEND",
+      "asset": "Novo Nordisk B A/S",
+      "isin": "DK0062498333",
+      "quantity": 2,
+      "amount": 0.54,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-07-31",
+      "type": "BUY",
+      "asset": "Ferrari NV",
+      "isin": "NL0011585146",
+      "quantity": -1,
+      "amount": 376.6,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-07-30",
+      "type": "BUY",
+      "asset": "Alibaba Group Holding Ltd - ADR",
+      "isin": "US01609W1027",
+      "quantity": -2,
+      "amount": -207.95,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-07-30",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.88,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-07-30",
+      "type": "CONVERSION_FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.52,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-07-30",
+      "type": "TOTAL_COST",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -1.4,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-07-30",
+      "type": "BUY",
+      "asset": "Solid Power Inc.",
+      "isin": "US83422N1054",
+      "quantity": -50,
+      "amount": -143.71,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-07-30",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.87,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-07-30",
+      "type": "CONVERSION_FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.35,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-07-30",
+      "type": "TOTAL_COST",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -1.22,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-07-29",
+      "type": "SELL",
+      "asset": "Quantum Computing Inc",
+      "isin": "US74766W1080",
+      "quantity": 21,
+      "amount": 255.15,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-07-29",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.87,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-07-29",
+      "type": "CAPITAL_GAINS_TAX",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -23.61,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-07-29",
+      "type": "CONVERSION_FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.7,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-07-29",
+      "type": "TOTAL_COST",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -1.57,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "First Trust Nasdaq Cyber Security UCTIS ETF",
+      "isin": "IE00BF16M727",
+      "quantity": -5,
+      "amount": -203.47,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "Solid Power Inc.",
+      "isin": "US83422N1054",
+      "quantity": -50,
+      "amount": -197.26,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-07-24",
+      "type": "DIVIDEND",
+      "asset": "Oracle Corp.",
+      "isin": "US68389X1054",
+      "quantity": 0,
+      "amount": 1.28,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-07-14",
+      "type": "BUY",
+      "asset": "Solid Power Inc.",
+      "isin": "US83422N1054",
+      "quantity": -50,
+      "amount": -105.17,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-07-10",
+      "type": "BUY",
+      "asset": "D-Wave Quantum Inc.",
+      "isin": "US26740W1099",
+      "quantity": -10,
+      "amount": -129.83,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-07-03",
+      "type": "BUY",
+      "asset": "Xtrackers AI & Big Data UCITS ETF",
+      "isin": "IE00BGV5VN51",
+      "quantity": -4,
+      "amount": -551.25,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-07-03",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -2.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-07-01",
+      "type": "DIVIDEND",
+      "asset": "NVIDIA Corp.",
+      "isin": "US67066G1040",
+      "quantity": 0,
+      "amount": 3.44,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "SELL",
+      "asset": "United States Antimony Corp.",
+      "isin": "US9115491030",
+      "quantity": -75,
+      "amount": 123.9,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "SELL",
+      "asset": "Advanced Micro Devices Inc.",
+      "isin": "US0079031078",
+      "quantity": -2,
+      "amount": 220.37,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-06-30",
+      "type": "DIVIDEND",
+      "asset": "Broadcom Inc.",
+      "isin": "US11135F1012",
+      "quantity": 4,
+      "amount": 2.01,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-06-27",
+      "type": "DIVIDEND",
+      "asset": "Qualcomm Inc.",
+      "isin": "US50125G3074",
+      "quantity": 0,
+      "amount": 0.96,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-06-26",
+      "type": "DIVIDEND",
+      "asset": "Leonardo",
+      "isin": "US7475251036",
+      "quantity": 0,
+      "amount": 0.77,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "DIVIDEND",
+      "asset": "Alphabet Inc. Class A",
+      "isin": "US02079K3059",
+      "quantity": 0,
+      "amount": 0.18,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "DIVIDEND",
+      "asset": "KULR Technology Group Inc",
+      "isin": "US50125G3074",
+      "quantity": 0,
+      "amount": -0.03,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "DIVIDEND",
+      "asset": "Microsoft Corp.",
+      "isin": "US5949181045",
+      "quantity": 1,
+      "amount": 0.72,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-06-11",
+      "type": "BUY",
+      "asset": "iShares Core MSCI World UCITS ETF",
+      "isin": "IE00B4L5Y983",
+      "quantity": -5,
+      "amount": -505.69,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-05-27",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 2000.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "DIVIDEND",
+      "asset": "Walmart Inc.",
+      "isin": "US9311421039",
+      "quantity": 0,
+      "amount": -0.62,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "DIVIDEND",
+      "asset": "Webuild",
+      "isin": "IT0003865570",
+      "quantity": 0,
+      "amount": -8.1,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-05-20",
+      "type": "BUY",
+      "asset": "Eutelsat Communications",
+      "isin": "FR0010221234",
+      "quantity": -15,
+      "amount": -51.75,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-05-16",
+      "type": "BUY",
+      "asset": "Oculus Inc.",
+      "isin": "US67575Y1091",
+      "quantity": -2000,
+      "amount": -70.47,
+      "currency": "CAD"
+    },
+    {
+      "date": "2025-05-13",
+      "type": "BUY",
+      "asset": "Alphabet Inc. Class A",
+      "isin": "US02079K3059",
+      "quantity": -1,
+      "amount": -150.46,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-01-05",
+      "type": "BUY",
+      "asset": "Qualcomm Inc.",
+      "isin": "US7475251036",
+      "quantity": -2,
+      "amount": 273.63,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-05-05",
+      "type": "BUY",
+      "asset": "NVIDIA Corp.",
+      "isin": "US67066G1040",
+      "quantity": -1,
+      "amount": 101.34,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-05-02",
+      "type": "BUY",
+      "asset": "Palantir Technologies Inc.",
+      "isin": "US69608A1088",
+      "quantity": -2,
+      "amount": 219.15,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-04-25",
+      "type": "BUY",
+      "asset": "XPeng Inc. - ADR",
+      "isin": "US98422D1054",
+      "quantity": -5,
+      "amount": -87.58,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-04-23",
+      "type": "BUY",
+      "asset": "iShares Core MSCI World UCITS ETF",
+      "isin": "IE00B4L5Y983",
+      "quantity": -5,
+      "amount": -467.24,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "DIVIDEND",
+      "asset": "Oracle Corp.",
+      "isin": "US68389X1054",
+      "quantity": 3,
+      "amount": 1.32,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "XPeng Inc.",
+      "isin": "US68389X1054",
+      "quantity": -4,
+      "amount": -72.96,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-04-10",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 1500.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -3.41,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "DIVIDEND",
+      "asset": "Walmart Inc.",
+      "isin": "US9311421039",
+      "quantity": 0,
+      "amount": 0.65,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-04-09",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -3.41,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-04-07",
+      "type": "DIVIDEND",
+      "asset": "Walmart Inc.",
+      "isin": "US9311421039",
+      "quantity": 0,
+      "amount": 0.65,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-04-02",
+      "type": "BUY",
+      "asset": "First Trust Nasdaq Cyber Security UCTIS ETF",
+      "isin": "IE00BF16M727",
+      "quantity": -5,
+      "amount": -186.78,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "DIVIDEND",
+      "asset": "NVIDIA Corp.",
+      "isin": "US67066G1040",
+      "quantity": 9,
+      "amount": 0.08,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "Canopy Growth Corp.",
+      "isin": "CA1380357048",
+      "quantity": -50,
+      "amount": -48.75,
+      "currency": "CAD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "DIVIDEND",
+      "asset": "Novo Nordisk B A/S",
+      "isin": "DK0062498333",
+      "quantity": 2,
+      "amount": 2.12,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "DIVIDEND",
+      "asset": "Novo Nordisk B A/S",
+      "isin": "DK0062498333",
+      "quantity": 0,
+      "amount": -0.4,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "DIVIDEND",
+      "asset": "Novo Nordisk B A/S",
+      "isin": "DK0062498333",
+      "quantity": 0,
+      "amount": -0.57,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "Advanced Micro Devices Inc.",
+      "isin": "US0079031078",
+      "quantity": -2,
+      "amount": -190.39,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.93,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "D-Wave Quantum Inc.",
+      "isin": "US26740W1099",
+      "quantity": -10,
+      "amount": -70.81,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "Broadcom Inc.",
+      "isin": "US11135F1012",
+      "quantity": -1,
+      "amount": -163.39,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "DIVIDEND",
+      "asset": "Broadcom Inc.",
+      "isin": "US11135F1012",
+      "quantity": 0,
+      "amount": 0.84,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-03-27",
+      "type": "BUY",
+      "asset": "Oracle Corp.",
+      "isin": "US68389X1054",
+      "quantity": -1,
+      "amount": -129.04,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-03-27",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.93,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-03-24",
+      "type": "BUY",
+      "asset": "Realbotix Corp.",
+      "isin": "CA75604K1075",
+      "quantity": -600,
+      "amount": -132.58,
+      "currency": "CAD"
+    },
+    {
+      "date": "2025-03-24",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -5.85,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 1000.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-03-20",
+      "type": "BUY",
+      "asset": "Xtrackers AI & Big Data UCITS ETF",
+      "isin": "IE00BGV5VN51",
+      "quantity": 3,
+      "amount": -383.62,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-03-18",
+      "type": "SELL",
+      "asset": "D-Wave Quantum Inc.",
+      "isin": "US26740W1099",
+      "quantity": -19,
+      "amount": 160.8,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "SELL",
+      "asset": "XPeng Inc. - ADR",
+      "isin": "US98422D1054",
+      "quantity": -4,
+      "amount": 79.49,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -1.12,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "DIVIDEND",
+      "asset": "Microsoft Corp.",
+      "isin": "US5949181045",
+      "quantity": 1,
+      "amount": 0.76,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-03-10",
+      "type": "BUY",
+      "asset": "Tesla Inc.",
+      "isin": "US88160R1014",
+      "quantity": -1,
+      "amount": -227.35,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-03-10",
+      "type": "BUY",
+      "asset": "Eutelsat Communications",
+      "isin": "FR0010221234",
+      "quantity": -10,
+      "amount": -64.15,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-03-10",
+      "type": "BUY",
+      "asset": "Broadcom Inc.",
+      "isin": "US11135F1012",
+      "quantity": -1,
+      "amount": -175.34,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "Intel Corp.",
+      "isin": "US4581401001",
+      "quantity": -10,
+      "amount": -187.74,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "Quantum Computing Inc.",
+      "isin": "US74766W1080",
+      "quantity": -20,
+      "amount": -91.33,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "Realbotix Corp.",
+      "isin": "CA75604K1075",
+      "quantity": -300,
+      "amount": -75.34,
+      "currency": "CAD"
+    },
+    {
+      "date": "2025-03-01",
+      "type": "BUY",
+      "asset": "United States Antimony Corp.",
+      "isin": "US9115491030",
+      "quantity": -80,
+      "amount": -105.91,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-03-03",
+      "type": "BUY",
+      "asset": "Leonardo",
+      "isin": "IT0003856405",
+      "quantity": -2,
+      "amount": -88.63,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-02-28",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 1000.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "Canopy Growth Corp.",
+      "isin": "CA1380357048",
+      "quantity": -50,
+      "amount": -67.49,
+      "currency": "CAD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "NVIDIA Corp.",
+      "isin": "US67066G1040",
+      "quantity": -2,
+      "amount": -227.15,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "KULR Technology Group Inc.",
+      "isin": "US50125G3074",
+      "quantity": -70,
+      "amount": -105.57,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-01-01",
+      "type": "BUY",
+      "asset": "Realbotix Corp",
+      "isin": "CA75604K1075",
+      "quantity": -300,
+      "amount": -85.27,
+      "currency": "CAD"
+    },
+    {
+      "date": "2025-02-25",
+      "type": "BUY",
+      "asset": "Palantir Technologies Inc.",
+      "isin": "US69608A1088",
+      "quantity": -3,
+      "amount": -255.45,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-02-25",
+      "type": "BUY",
+      "asset": "Dynatrace Inc.",
+      "isin": "US2681501092",
+      "quantity": -3,
+      "amount": -168.48,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "Amazon.com Inc.",
+      "isin": "US0231351067",
+      "quantity": -2,
+      "amount": 406.94,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "Datadog Inc.",
+      "isin": "US23804L1035",
+      "quantity": -1,
+      "amount": 110.97,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-02-24",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 1500.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-27",
+      "type": "WITHDRAWAL",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -122.48,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "NVIDIA Corp.",
+      "isin": "US67066G1040",
+      "quantity": -1,
+      "amount": -122.48,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -1.25,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-23",
+      "type": "DIVIDEND",
+      "asset": "Oracle Corp.",
+      "isin": "",
+      "quantity": 0,
+      "amount": 0.77,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-23",
+      "type": "DIVIDEND",
+      "asset": "Oracle Corp.",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.14,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-23",
+      "type": "DIVIDEND",
+      "asset": "Oracle Corp.",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.23,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-21",
+      "type": "SELL",
+      "asset": "Oracle Corp.",
+      "isin": "US68389X1054",
+      "quantity": -2,
+      "amount": -339.49,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "PDD Holdings Inc - ADR",
+      "isin": "US7223041028",
+      "quantity": -2,
+      "amount": -209.28,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "CDT Environmental Technology Investment Hldngs Ltd",
+      "isin": "KYG2030P1072",
+      "quantity": -100,
+      "amount": -130.21,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-01-20",
+      "type": "BUY",
+      "asset": "Realbotix Corp",
+      "isin": "CA75604K1075",
+      "quantity": -500,
+      "amount": -148.19,
+      "currency": "CAD"
+    },
+    {
+      "date": "2025-12-13",
+      "type": "BUY",
+      "asset": "Canopy Growth Corp.",
+      "isin": "CA1380357048",
+      "quantity": -45,
+      "amount": -98.56,
+      "currency": "CAD"
+    },
+    {
+      "date": "2025-12-13",
+      "type": "BUY",
+      "asset": "XPeng Inc.",
+      "isin": "US98422D1054",
+      "quantity": -5,
+      "amount": -61.72,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-13",
+      "type": "BUY",
+      "asset": "Realbotix Corp.",
+      "isin": "CA75604K1075",
+      "quantity": -1000,
+      "amount": -442.91,
+      "currency": "CAD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "SELL",
+      "asset": "Realbotix Corp.",
+      "isin": "CA75604K1075",
+      "quantity": -1000,
+      "amount": 349.07,
+      "currency": "CAD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -10.17,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "NVIDIA Corp.",
+      "isin": "US67066G1040",
+      "quantity": 2,
+      "amount": -260.42,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.98,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-10",
+      "type": "BUY",
+      "asset": "Realbotix Corp.",
+      "isin": "CA75604K1075",
+      "quantity": -1000,
+      "amount": -254.86,
+      "currency": "CAD"
+    },
+    {
+      "date": "2025-01-10",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -10.19,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-09",
+      "type": "BUY",
+      "asset": "D-Wave Quantum Inc.",
+      "isin": "US26740W1099",
+      "quantity": -20,
+      "amount": -124.58,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-01-09",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.98,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-01-09",
+      "type": "BUY",
+      "asset": "Oculus Inc.",
+      "isin": "US67575Y1091",
+      "quantity": -1500,
+      "amount": -86.12,
+      "currency": "CAD"
+    },
+    {
+      "date": "2025-01-08",
+      "type": "SELL",
+      "asset": "D-Wave Quantum Inc.",
+      "isin": "US26740W1099",
+      "quantity": 22,
+      "amount": 134.96,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-01-08",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.01,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "PayPal Holdings Inc.",
+      "isin": "US70450Y1038",
+      "quantity": -3,
+      "amount": 259.96,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "Oculus Inc.",
+      "isin": "US67575Y1091",
+      "quantity": -3500,
+      "amount": 287.65,
+      "currency": "CAD"
+    },
+    {
+      "date": "2025-01-06",
+      "type": "DEPOSIT",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": 2000.0,
+      "currency": "EUR"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "NVIDIA Corp.",
+      "isin": "US67066G1040",
+      "quantity": -2,
+      "amount": -287.05,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "Microsoft Corp.",
+      "isin": "US5949181045",
+      "quantity": -1,
+      "amount": -413.28,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "Nio Inc. - ADR",
+      "isin": "US62914V1061",
+      "quantity": 20,
+      "amount": -93.13,
+      "currency": "USD"
+    },
+    {
+      "date": "2025-12-19",
+      "type": "BUY",
+      "asset": "Novo Nordisk B A/S",
+      "isin": "DK0062498333",
+      "quantity": 2,
+      "amount": -169.76,
+      "currency": "DKK"
+    },
+    {
+      "date": "2025-01-03",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -1.07,
+      "currency": "EUR"
+    }
+  ]
+}

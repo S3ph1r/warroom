@@ -1,0 +1,115 @@
+{
+  "timestamp": "TEST_TIMESTAMP",
+  "portfolio_summary": {
+    "total_value_masked": "CONFIDENTIAL",
+    "allocation": {
+      "CASH": 5.3,
+      "STOCK": 67.95,
+      "CRYPTO": 7.98,
+      "ETF": 16.05,
+      "COMMODITY": 2.71
+    },
+    "currency_exposure": {
+      "EUR": 60.64,
+      "USD": 36.98,
+      "DKK": 1.01,
+      "CAD": 0.2,
+      "HKD": 1.16
+    },
+    "top_holdings": [
+      {
+        "ticker": "XAIX",
+        "name": "Xtrackers AI & Big Data UCITS ETF",
+        "type": "ETF",
+        "weight_pct": 5.14
+      },
+      {
+        "ticker": "ASML",
+        "name": "ASML",
+        "type": "STOCK",
+        "weight_pct": 4.32
+      },
+      {
+        "ticker": "SWDA",
+        "name": "iShares Core MSCI World UCITS ETF",
+        "type": "ETF",
+        "weight_pct": 3.39
+      },
+      {
+        "ticker": "BNB",
+        "name": "BNB",
+        "type": "CRYPTO",
+        "weight_pct": 2.95
+      },
+      {
+        "ticker": "INTC",
+        "name": "Intel Corp.",
+        "type": "STOCK",
+        "weight_pct": 2.92
+      },
+      {
+        "ticker": "NUCL",
+        "name": "VanEck Uranium and Nuclear Technologies UCITS ETF",
+        "type": "ETF",
+        "weight_pct": 2.88
+      },
+      {
+        "ticker": "CASH",
+        "name": "Cash (EUR)",
+        "type": "CASH",
+        "weight_pct": 2.58
+      },
+      {
+        "ticker": "US2972842007",
+        "name": "EssilorLuxottica",
+        "type": "STOCK",
+        "weight_pct": 2.53
+      },
+      {
+        "ticker": "AMZN",
+        "name": "Amazon.com Inc.",
+        "type": "STOCK",
+        "weight_pct": 2.38
+      },
+      {
+        "ticker": "USDC",
+        "name": "USDC",
+        "type": "CASH",
+        "weight_pct": 2.23
+      },
+      {
+        "ticker": "XAU",
+        "name": "Gold (XAU)",
+        "type": "COMMODITY",
+        "weight_pct": 2.14
+      },
+      {
+        "ticker": "VOYG",
+        "name": "Voyager Technologies Inc.",
+        "type": "STOCK",
+        "weight_pct": 2.09
+      },
+      {
+        "ticker": "KYG875721634",
+        "name": "Tencent Holdings",
+        "type": "STOCK",
+        "weight_pct": 2.03
+      },
+      {
+        "ticker": "PLTR",
+        "name": "Palantir Technologies Inc.",
+        "type": "STOCK",
+        "weight_pct": 1.98
+      },
+      {
+        "ticker": "GOOGL",
+        "name": "Alphabet (Class A)",
+        "type": "STOCK",
+        "weight_pct": 1.81
+      }
+    ],
+    "note": "Values are percentage weights of Total Portfolio."
+  },
+  "market_briefing": "Cari investitori,\n\nIn questo Daily Market Briefing vi fornisco una sintesi dei principali eventi del mercato.\n\nLe notizie geopolitiche sono al centro dell'attenzione con i presunti pistoleri di Bondi che hanno ricevuto addestramento in Australia e hanno fatto dichiarazioni davanti a bandiere dell'Islamic State, il che potrebbe avere implicazioni geopolitiche significativi. Inoltre, le proteste iniziate nelle universit\u00e0 di Bangladesh si sono trasformate in proteste popolari con oltre cento morti, il che potrebbe avere conseguenze a livello globale.\n\nSul fronte dei mercati finanziari, un CIO che gestisce $20 miliardi suggerisce che una parte del mercato dei titoli di stato rappresenta un'opportunit\u00e0 importante per gli investitori, mentre Cathie Wood ha ridotto la sua posizione in una societ\u00e0 di $11,2 milioni. Questi eventi potrebbero avere effetti significativi sul mercato globale.\n\nIl mondo delle criptovalute \u00e8 sotto i riflettori con il confronto tra Bitcoin e Dogecoin su Yahoo Finance del 20 dicembre 2025, mentre il prezzo del Bitcoin si \u00e8 stabilizzato vicino ai $89.000 e l'oro ha raggiunto un nuovo record.\n\nInfine, la Nato critica la Cina per il suo sostegno alla guerra in Ucraina, con possibili conseguenze sulle relazioni internazionali e sulla stabilit\u00e0 globale.\n\nRicordiamo che i mercati possono essere influenzati da numerosi fattori, quindi \u00e8 importante seguire le notizie di mercato attentamente e rimanere informati sui potenziali rischi e opportunit\u00e0.\n\nA presto,\nIl vostro Market Intelligence Officer",
+  "user_specific_query": "Should I sell Bitcoin?"
+}

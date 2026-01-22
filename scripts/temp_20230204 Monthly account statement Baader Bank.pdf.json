@@ -1,0 +1,16 @@
+{
+  "source": "D:\\Download\\SCALABLE CAPITAL\\20230204 Monthly account statement Baader Bank.pdf",
+  "last_processed_page": 0,
+  "total_pages": 1,
+  "transactions": [
+    {
+      "date": "2023-01-04",
+      "type": "BUY",
+      "asset": "ZALANDO SE",
+      "isin": "DE000ZAL1111",
+      "quantity": -1,
+      "amount": 37.04,
+      "currency": "EUR"
+    }
+  ]
+}

@@ -1,0 +1,751 @@
+[
+  {
+    "asset": "XAG",
+    "name": "Silver (XAG)",
+    "isin": null,
+    "quantity": 3.353581,
+    "broker": "REVOLUT"
+  },
+  {
+    "asset": "3CP",
+    "name": "XIAOMI CORP-CLASS B",
+    "isin": null,
+    "quantity": 50.0,
+    "broker": "IBKR"
+  },
+  {
+    "asset": "RGTI",
+    "name": "RIGETTI COMPUTING INC",
+    "isin": null,
+    "quantity": 3.0,
+    "broker": "IBKR"
+  },
+  {
+    "asset": "CASH",
+    "name": "Cash (EUR)",
+    "isin": null,
+    "quantity": 133.09913329,
+    "broker": "IBKR"
+  },
+  {
+    "asset": "XAU",
+    "name": "Gold (XAU)",
+    "isin": null,
+    "quantity": 0.19123,
+    "broker": "REVOLUT"
+  },
+  {
+    "asset": "IE00BMYDM794",
+    "name": "L&G Hydrogen Economy (Acc)",
+    "isin": "IE00BMYDM794",
+    "quantity": 17.0,
+    "broker": "SCALABLE"
+  },
+  {
+    "asset": "CNE100006M58",
+    "name": "Midea Group Co",
+    "isin": "CNE100006M58",
+    "quantity": 20.0,
+    "broker": "SCALABLE"
+  },
+  {
+    "asset": "KYG017191142",
+    "name": "Alibaba Group Hldg",
+    "isin": "KYG017191142",
+    "quantity": 20.0,
+    "broker": "SCALABLE"
+  },
+  {
+    "asset": "KYG9830T1067",
+    "name": "Xiaomi",
+    "isin": "KYG9830T1067",
+    "quantity": 120.0,
+    "broker": "SCALABLE"
+  },
+  {
+    "asset": "CASH",
+    "name": "Cash (EUR)",
+    "isin": null,
+    "quantity": 17.56,
+    "broker": "SCALABLE"
+  },
+  {
+    "asset": "IE00B42NKQ00",
+    "name": "iShares S&P 500 Energy Sector (Acc)",
+    "isin": "IE00B42NKQ00",
+    "quantity": 10.0,
+    "broker": "SCALABLE"
+  },
+  {
+    "asset": "US26740W1099",
+    "name": "D-Wave Quantum",
+    "isin": "US26740W1099",
+    "quantity": 25.0,
+    "broker": "SCALABLE"
+  },
+  {
+    "asset": "KYG875721634",
+    "name": "Tencent Holdings",
+    "isin": "KYG875721634",
+    "quantity": 10.0,
+    "broker": "SCALABLE"
+  },
+  {
+    "asset": "IE00B0M63516",
+    "name": "iShares MSCI Brazil (Dist)",
+    "isin": "IE00B0M63516",
+    "quantity": 3.0,
+    "broker": "SCALABLE"
+  },
+  {
+    "asset": "KYG070341048",
+    "name": "Baidu A",
+    "isin": "KYG070341048",
+    "quantity": 17.0,
+    "broker": "SCALABLE"
+  },
+  {
+    "asset": "US88160R1014",
+    "name": "Tesla",
+    "isin": "US88160R1014",
+    "quantity": 1.0,
+    "broker": "SCALABLE"
+  },
+  {
+    "asset": "US90353T1007",
+    "name": "Uber Technologies",
+    "isin": "US90353T1007",
+    "quantity": 5.0,
+    "broker": "SCALABLE"
+  },
+  {
+    "asset": "US2972842007",
+    "name": "EssilorLuxottica",
+    "isin": "US2972842007",
+    "quantity": 6.0,
+    "broker": "SCALABLE"
+  },
+  {
+    "asset": "US05606L1008",
+    "name": "BYD Co. ADR",
+    "isin": "US05606L1008",
+    "quantity": 12.0,
+    "broker": "SCALABLE"
+  },
+  {
+    "asset": "ETH",
+    "name": "ETH",
+    "isin": null,
+    "quantity": 0.21840415,
+    "broker": "BINANCE"
+  },
+  {
+    "asset": "BTC",
+    "name": "BTC",
+    "isin": null,
+    "quantity": 0.005,
+    "broker": "BINANCE"
+  },
+  {
+    "asset": "ETL",
+    "name": "Eutelsat Communications",
+    "isin": "FR0010221234",
+    "quantity": 45.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "PYPL",
+    "name": "PayPal Holdings Inc.",
+    "isin": "US70450Y1038",
+    "quantity": 3.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "ARM",
+    "name": "Arm Holdings Limited - ADR",
+    "isin": "US0420682058",
+    "quantity": 1.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "NOVOB",
+    "name": "Novo Nordisk B A/S",
+    "isin": "DK0062498333",
+    "quantity": 8.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "DT",
+    "name": "Dynatrace Inc.",
+    "isin": "US2681501092",
+    "quantity": 3.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "CDTG",
+    "name": "CDT Environmental Technology Investment Hldngs Ltd",
+    "isin": "KYG2030P1072",
+    "quantity": 500.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "UAMY",
+    "name": "United States Antimony Corp.",
+    "isin": "US9115491030",
+    "quantity": 50.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "XBOT",
+    "name": "Realbotix Corp",
+    "isin": "CA75604K1075",
+    "quantity": 300.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "KULR",
+    "name": "KULR Technology Group Inc",
+    "isin": "US50125G3074",
+    "quantity": 80.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "VNET",
+    "name": "VNET Group Inc. - ADR",
+    "isin": "US90138A1034",
+    "quantity": 10.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "HBAR",
+    "name": "HBAR",
+    "isin": null,
+    "quantity": 794.494,
+    "broker": "BINANCE"
+  },
+  {
+    "asset": "IOTA",
+    "name": "IOTA",
+    "isin": null,
+    "quantity": 807.07431186,
+    "broker": "BINANCE"
+  },
+  {
+    "asset": "FET",
+    "name": "FET",
+    "isin": null,
+    "quantity": 111.16659955,
+    "broker": "BINANCE"
+  },
+  {
+    "asset": "TON",
+    "name": "TON",
+    "isin": null,
+    "quantity": 10.3753279,
+    "broker": "BINANCE"
+  },
+  {
+    "asset": "EUR",
+    "name": "EUR",
+    "isin": null,
+    "quantity": 5.90890955,
+    "broker": "BINANCE"
+  },
+  {
+    "asset": "FF",
+    "name": "FF",
+    "isin": null,
+    "quantity": 11.93472616,
+    "broker": "BINANCE"
+  },
+  {
+    "asset": "BNB",
+    "name": "BNB",
+    "isin": null,
+    "quantity": 1.32636288,
+    "broker": "BINANCE"
+  },
+  {
+    "asset": "USDC",
+    "name": "USDC",
+    "isin": null,
+    "quantity": 856.07331611,
+    "broker": "BINANCE"
+  },
+  {
+    "asset": "XRP",
+    "name": "XRP",
+    "isin": null,
+    "quantity": 157.56655958,
+    "broker": "BINANCE"
+  },
+  {
+    "asset": "SOL",
+    "name": "SOL",
+    "isin": null,
+    "quantity": 2.05578801,
+    "broker": "BINANCE"
+  },
+  {
+    "asset": "TRX",
+    "name": "TRX",
+    "isin": null,
+    "quantity": 127.74608762,
+    "broker": "BINANCE"
+  },
+  {
+    "asset": "ENA",
+    "name": "ENA",
+    "isin": null,
+    "quantity": 12.95572156,
+    "broker": "BINANCE"
+  },
+  {
+    "asset": "BIDU",
+    "name": "Baidu",
+    "isin": "US0567521085",
+    "quantity": 3.0,
+    "broker": "REVOLUT"
+  },
+  {
+    "asset": "EUR",
+    "name": "Cash (EUR)",
+    "isin": null,
+    "quantity": 0.0,
+    "broker": "TRADE_REPUBLIC"
+  },
+  {
+    "asset": "USD",
+    "name": "Cash (USD)",
+    "isin": null,
+    "quantity": -447.46572998,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "ASML",
+    "name": "ASML",
+    "isin": null,
+    "quantity": 0.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "AHLA",
+    "name": "Alibaba Group Holding Ltd - ADR",
+    "isin": "US01609W1027",
+    "quantity": 2.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "RACE",
+    "name": "Ferrari NV",
+    "isin": "NL0011585146",
+    "quantity": 1.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "META",
+    "name": "Meta Platforms Inc.",
+    "isin": "US30303M1027",
+    "quantity": 1.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "ANET",
+    "name": "Arista Networks Inc.",
+    "isin": "US0404132054",
+    "quantity": 4.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "ORCL",
+    "name": "Oracle Corp.",
+    "isin": "US68389X1054",
+    "quantity": 3.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "SAI",
+    "name": "Substrate Artificial Intelligence SA",
+    "isin": "ES0105650008",
+    "quantity": 1300.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "QBTS",
+    "name": "D-Wave Quantum Inc.",
+    "isin": "US26740W1099",
+    "quantity": 15.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "BYDDY",
+    "name": "BYD Company Ltd - ADR",
+    "isin": "US05606L1008",
+    "quantity": 20.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "XPEV",
+    "name": "XPeng Inc. - ADR",
+    "isin": "US98422D1054",
+    "quantity": 15.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "BIDU",
+    "name": "Baidu.com Inc. - ADR",
+    "isin": "US0567521085",
+    "quantity": 5.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "NVDA",
+    "name": "NVIDIA Corp.",
+    "isin": "US67066G1040",
+    "quantity": 2.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "AMP",
+    "name": "Amplifon",
+    "isin": "IT0004056880",
+    "quantity": 7.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "TSM",
+    "name": "TSMC - ADR",
+    "isin": "US8740391003",
+    "quantity": 1.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "CVX",
+    "name": "Chevron Corp.",
+    "isin": "US1667641005",
+    "quantity": 1.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "NOW",
+    "name": "ServiceNow Inc.",
+    "isin": "US81762P1021",
+    "quantity": 1.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "QRVO",
+    "name": "Qorvo Inc.",
+    "isin": "US74736K1016",
+    "quantity": 2.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "PANW",
+    "name": "Palo Alto Networks Inc.",
+    "isin": "US6974351057",
+    "quantity": 1.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "CRSP",
+    "name": "CRISPR Therapeutics Ltd",
+    "isin": "CH0334081137",
+    "quantity": 5.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "GOOGL",
+    "name": "Alphabet Inc. Class A",
+    "isin": "US02079K3059",
+    "quantity": 2.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "TM",
+    "name": "Toyota Motor Corp. - ADR",
+    "isin": "US8923313071",
+    "quantity": 2.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "TER",
+    "name": "Teradyne Inc.",
+    "isin": "US8807701029",
+    "quantity": 1.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "VKTX",
+    "name": "Viking Therapeutics Inc.",
+    "isin": "US92686J1060",
+    "quantity": 5.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "PDD",
+    "name": "PDD Holdings Inc - ADR",
+    "isin": "US7223041028",
+    "quantity": 2.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "AMZN",
+    "name": "Amazon.com Inc.",
+    "isin": "US0231351067",
+    "quantity": 4.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "VOYG",
+    "name": "Voyager Technologies Inc.",
+    "isin": "US92892B1035",
+    "quantity": 30.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "02050",
+    "name": "Zhejiang Sanhua Intelligent Controls Co Ltd",
+    "isin": "CNE100006Z79",
+    "quantity": 100.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "OKLO",
+    "name": "Oklo Inc.",
+    "isin": "US02156V1098",
+    "quantity": 1.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "ASTS",
+    "name": "AST SpaceMobile Inc.",
+    "isin": "US00217D1000",
+    "quantity": 2.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "WMT",
+    "name": "Walmart Inc.",
+    "isin": "US9311421039",
+    "quantity": 5.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "LDO",
+    "name": "Leonardo",
+    "isin": "IT0003856405",
+    "quantity": 2.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "QCOM",
+    "name": "Qualcomm Inc.",
+    "isin": "US7475251036",
+    "quantity": 2.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "QUBT",
+    "name": "Quantum Computing Inc",
+    "isin": "US74766W1080",
+    "quantity": 10.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "NOKIA",
+    "name": "Nokia Oyj",
+    "isin": "FI0009000681",
+    "quantity": 80.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "PLTR",
+    "name": "Palantir Technologies Inc.",
+    "isin": "US69608A1088",
+    "quantity": 4.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "WBD",
+    "name": "Webuild",
+    "isin": "IT0003865570",
+    "quantity": 100.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "INTC",
+    "name": "Intel Corp.",
+    "isin": "US4581401001",
+    "quantity": 30.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "SLDP",
+    "name": "Solid Power Inc.",
+    "isin": "US83422N1054",
+    "quantity": 1.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "QS",
+    "name": "QuantumScape Corp.",
+    "isin": "US74767V1098",
+    "quantity": 20.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "NUCL",
+    "name": "VanEck Uranium and Nuclear Technologies UCITS ETF",
+    "isin": "IE000M7V94E1",
+    "quantity": 20.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "ICGA",
+    "name": "iShares MSCI China Acc UCITS ETF",
+    "isin": "IE00BJ5JPG56",
+    "quantity": 100.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "CIBR",
+    "name": "First Trust Nasdaq Cyber Security UCTIS ETF",
+    "isin": "IE00BF16M727",
+    "quantity": 10.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "KSTR",
+    "name": "Kraneshares SSE Star Market 50 UCITS ETF",
+    "isin": "IE00BKPJY541",
+    "quantity": 10.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "FLXI",
+    "name": "Franklin FTSE India UCITS ETF",
+    "isin": "IE00BHZRQZ17",
+    "quantity": 5.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "XAIX",
+    "name": "Xtrackers AI & Big Data UCITS ETF",
+    "isin": "IE00BGV5VN51",
+    "quantity": 11.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "SWDA",
+    "name": "iShares Core MSCI World UCITS ETF",
+    "isin": "IE00B4L5Y983",
+    "quantity": 10.0,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "GOOGL",
+    "name": "Alphabet (Class A)",
+    "isin": "US02079K3059",
+    "quantity": 2.0,
+    "broker": "REVOLUT"
+  },
+  {
+    "asset": "BP",
+    "name": "BP",
+    "isin": "US0556221044",
+    "quantity": 5.0,
+    "broker": "REVOLUT"
+  },
+  {
+    "asset": "USD_CASH",
+    "name": "Cash (USD)",
+    "isin": null,
+    "quantity": 2.72,
+    "broker": "REVOLUT"
+  },
+  {
+    "asset": "CASH",
+    "name": "Cash (EUR)",
+    "isin": null,
+    "quantity": 845.18,
+    "broker": "BG_SAXO"
+  },
+  {
+    "asset": "DOT",
+    "name": "Polkadot",
+    "isin": null,
+    "quantity": 5.35463688,
+    "broker": "REVOLUT"
+  },
+  {
+    "asset": "SOL",
+    "name": "Solana",
+    "isin": null,
+    "quantity": 0.045149,
+    "broker": "REVOLUT"
+  },
+  {
+    "asset": "POL",
+    "name": "POL (ex-MATIC)",
+    "isin": null,
+    "quantity": 136.6432338,
+    "broker": "REVOLUT"
+  },
+  {
+    "asset": "1INCH",
+    "name": "1inch Network",
+    "isin": null,
+    "quantity": 4.96871634,
+    "broker": "REVOLUT"
+  },
+  {
+    "asset": "AVAX",
+    "name": "Avalanche",
+    "isin": null,
+    "quantity": 0.03860133,
+    "broker": "REVOLUT"
+  },
+  {
+    "asset": "RACE",
+    "name": "RACE",
+    "isin": "NL0011585146",
+    "quantity": 1.0,
+    "broker": "TRADE_REPUBLIC"
+  },
+  {
+    "asset": "BABA",
+    "name": "BABA",
+    "isin": "KYG017191142",
+    "quantity": 5.0,
+    "broker": "TRADE_REPUBLIC"
+  },
+  {
+    "asset": "ASML",
+    "name": "ASML",
+    "isin": "NL0010273215",
+    "quantity": 2.0,
+    "broker": "TRADE_REPUBLIC"
+  },
+  {
+    "asset": "HO",
+    "name": "HO",
+    "isin": "FR0000121329",
+    "quantity": 1.0,
+    "broker": "TRADE_REPUBLIC"
+  },
+  {
+    "asset": "RBOT",
+    "name": "RBOT",
+    "isin": "IE00BYZK4552",
+    "quantity": 20.0,
+    "broker": "TRADE_REPUBLIC"
+  },
+  {
+    "asset": "AFX",
+    "name": "AFX",
+    "isin": "DE0005313704",
+    "quantity": 3.0,
+    "broker": "TRADE_REPUBLIC"
+  }
+]

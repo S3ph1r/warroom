@@ -1,0 +1,43 @@
+{
+  "source": "D:\\Download\\SCALABLE CAPITAL\\20240206 Monthly account statement Baader Bank.pdf",
+  "last_processed_page": 0,
+  "total_pages": 1,
+  "transactions": [
+    {
+      "date": "2024-01-02",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-01-05",
+      "type": "DIVIDEND",
+      "asset": "iShares MSCI Brazil UCITS ETF USD",
+      "isin": "IE00B0M63516",
+      "quantity": 0,
+      "amount": 0.8,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-01-09",
+      "type": "BUY",
+      "asset": "BYD Co., Ltd.",
+      "isin": "US05606L1008",
+      "quantity": 2,
+      "amount": -98.4,
+      "currency": "EUR"
+    },
+    {
+      "date": "2024-01-09",
+      "type": "FEE",
+      "asset": "",
+      "isin": "",
+      "quantity": 0,
+      "amount": -0.99,
+      "currency": "EUR"
+    }
+  ]
+}

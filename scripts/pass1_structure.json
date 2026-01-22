@@ -1,0 +1,22 @@
+{
+  "document_structure": {
+    "header_row": 0,
+    "data_start_row": 1,
+    "summary_rows": [],
+    "rows_per_asset": 1
+  },
+  "column_analysis": {
+    "name_column": "Strumento",
+    "ticker_column": "Ticker",
+    "isin_column": "ISIN",
+    "quantity_column": "Quantità",
+    "purchase_price_column": "Prezzo di apertura",
+    "currency_column": "Valuta"
+  },
+  "validation": {
+    "first_asset_name": "Long",
+    "first_asset_ticker": "-0.4691775557263644",
+    "first_asset_isin": "FR0010221234",
+    "first_asset_qty": 2.89107972
+  }
+}

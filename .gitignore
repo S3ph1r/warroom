@@ -1,0 +1,40 @@
+node_modules/
+frontend/node_modules/
+frontend/dist/
+__pycache__/
+*.pyc
+venv/
+.env
+.DS_Store
+.gemini/
+.idea/
+.vscode/
+
+# Data
+data/*.json
+data/*.txt
+data/*.csv
+!data/sources.json
+!data/README.md
+
+# Logs
+*.log
+warroom_extractor.log
+warroom_loader.log
+warroom_orchestrator.log
+
+# Temporary/Analysis files
+*analysis.txt
+*results.txt
+*check.txt
+*peek.txt
+*dump.txt
+*output.txt
+*history.txt
+transcript_*.txt
+*.txt
+*.bat
+
+# Large tools
+tools/poppler-*/
+deployment_secrets.json
